@@ -1,16 +1,10 @@
 package fr.alasdiablo.janoeo;
 
-import fr.alasdiablo.janoeo.blocks.JANOEOBlocks;
-import fr.alasdiablo.janoeo.blocks.nether.NetherIronOre;
+import fr.alasdiablo.janoeo.holder.RegistryHolder;
 import fr.alasdiablo.janoeo.proxy.ClientProxy;
 import fr.alasdiablo.janoeo.proxy.IProxy;
 import fr.alasdiablo.janoeo.proxy.ServerProxy;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -19,7 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-@Mod("janoeo")
+@Mod(RegistryHolder.MODID)
 public class JANOEO {
 
     public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
