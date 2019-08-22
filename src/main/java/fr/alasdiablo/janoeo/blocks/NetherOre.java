@@ -3,6 +3,7 @@ package fr.alasdiablo.janoeo.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.common.ToolType;
 
 public class NetherOre extends Block {
 
@@ -11,6 +12,7 @@ public class NetherOre extends Block {
                 .sound(SoundType.STONE)
                 .hardnessAndResistance(3f)
                 .harvestLevel(2)
+                .harvestTool(ToolType.PICKAXE)
         );
         this.setRegistryName(registryName);
     }
