@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.holder;
 
+import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.blocks.end.*;
 import fr.alasdiablo.janoeo.blocks.nether.*;
 import net.minecraft.block.Block;
@@ -87,31 +88,32 @@ public class BlocksHolder {
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
+            Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoGroup);
             /*------------------------------------+
             |                                     |
             |         Nether Ore register         |
             |                                     |
             +-------------------------------------*/
-            event.getRegistry().register(new BlockItem(BlocksHolder.COAL_NETHER_ORE, new Item.Properties()).setRegistryName(RegistryHolder.COAL_NETHER_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DIAMOND_NETHER_ORE, new Item.Properties()).setRegistryName(RegistryHolder.DIAMOND_NETHER_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.EMERALD_NETHER_ORE, new Item.Properties()).setRegistryName(RegistryHolder.EMERALD_NETHER_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.GOLD_NETHER_ORE, new Item.Properties()).setRegistryName(RegistryHolder.GOLD_NETHER_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.IRON_NETHER_ORE, new Item.Properties()).setRegistryName(RegistryHolder.IRON_NETHER_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.LAPIS_NETHER_ORE, new Item.Properties()).setRegistryName(RegistryHolder.LAPIS_NETHER_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.REDSTONE_NETHER_ORE, new Item.Properties()).setRegistryName(RegistryHolder.REDSTONE_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.COAL_NETHER_ORE, properties).setRegistryName(RegistryHolder.COAL_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DIAMOND_NETHER_ORE, properties).setRegistryName(RegistryHolder.DIAMOND_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.EMERALD_NETHER_ORE, properties).setRegistryName(RegistryHolder.EMERALD_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.GOLD_NETHER_ORE, properties).setRegistryName(RegistryHolder.GOLD_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.IRON_NETHER_ORE, properties).setRegistryName(RegistryHolder.IRON_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.LAPIS_NETHER_ORE, properties).setRegistryName(RegistryHolder.LAPIS_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.REDSTONE_NETHER_ORE, properties).setRegistryName(RegistryHolder.REDSTONE_NETHER_ORE));
 
             /*------------------------------------+
             |                                     |
             |          End Ore register           |
             |                                     |
             +-------------------------------------*/
-            event.getRegistry().register(new BlockItem(BlocksHolder.COAL_END_ORE, new Item.Properties()).setRegistryName(RegistryHolder.COAL_END_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DIAMOND_END_ORE, new Item.Properties()).setRegistryName(RegistryHolder.DIAMOND_END_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.EMERALD_END_ORE, new Item.Properties()).setRegistryName(RegistryHolder.EMERALD_END_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.GOLD_END_ORE, new Item.Properties()).setRegistryName(RegistryHolder.GOLD_END_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.IRON_END_ORE, new Item.Properties()).setRegistryName(RegistryHolder.IRON_END_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.LAPIS_END_ORE, new Item.Properties()).setRegistryName(RegistryHolder.LAPIS_END_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.REDSTONE_END_ORE, new Item.Properties()).setRegistryName(RegistryHolder.REDSTONE_END_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.COAL_END_ORE, properties).setRegistryName(RegistryHolder.COAL_END_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DIAMOND_END_ORE, properties).setRegistryName(RegistryHolder.DIAMOND_END_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.EMERALD_END_ORE, properties).setRegistryName(RegistryHolder.EMERALD_END_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.GOLD_END_ORE, properties).setRegistryName(RegistryHolder.GOLD_END_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.IRON_END_ORE, properties).setRegistryName(RegistryHolder.IRON_END_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.LAPIS_END_ORE, properties).setRegistryName(RegistryHolder.LAPIS_END_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.REDSTONE_END_ORE, properties).setRegistryName(RegistryHolder.REDSTONE_END_ORE));
         }
     }
 }

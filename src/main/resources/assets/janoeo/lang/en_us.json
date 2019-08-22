@@ -12,5 +12,6 @@
   "block.janoeo.gold_end_ore": "End Gold Ore",
   "block.janoeo.iron_end_ore": "End Iron Ore",
   "block.janoeo.lapis_end_ore": "End Lapis Ore",
-  "block.janoeo.redstone_end_ore": "End Redstone Ore"
+  "block.janoeo.redstone_end_ore": "End Redstone Ore",
+  "itemGroup.janoeo.group": "JANOEO"
 }
