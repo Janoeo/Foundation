@@ -1,6 +1,10 @@
 package fr.alasdiablo.janoeo.holder;
 
 import fr.alasdiablo.janoeo.JANOEO;
+import fr.alasdiablo.janoeo.blocks.BasicEndOre;
+import fr.alasdiablo.janoeo.blocks.BasicNetherOre;
+import fr.alasdiablo.janoeo.blocks.EndOre;
+import fr.alasdiablo.janoeo.blocks.NetherOre;
 import fr.alasdiablo.janoeo.blocks.end.*;
 import fr.alasdiablo.janoeo.blocks.nether.*;
 import net.minecraft.block.Block;
@@ -11,6 +15,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+/**
+ * class with all block
+ */
 @SuppressWarnings("unused")
 public class BlocksHolder {
 
@@ -20,19 +27,19 @@ public class BlocksHolder {
     |                                     |
     +-------------------------------------*/
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.COAL_NETHER_ORE)
-    public static NetherCoalOre COAL_NETHER_ORE;
+    public static Block COAL_NETHER_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DIAMOND_NETHER_ORE)
-    public static NetherDiamondOre DIAMOND_NETHER_ORE;
+    public static Block DIAMOND_NETHER_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.EMERALD_NETHER_ORE)
-    public static NetherEmeraldOre EMERALD_NETHER_ORE;
+    public static Block EMERALD_NETHER_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.GOLD_NETHER_ORE)
-    public static NetherGoldOre GOLD_NETHER_ORE;
+    public static Block GOLD_NETHER_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.IRON_NETHER_ORE)
-    public static NetherIronOre IRON_NETHER_ORE;
+    public static Block IRON_NETHER_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.LAPIS_NETHER_ORE)
-    public static NetherLapisOre LAPIS_NETHER_ORE;
+    public static Block LAPIS_NETHER_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.REDSTONE_NETHER_ORE)
-    public static NetherRedstoneOre REDSTONE_NETHER_ORE;
+    public static Block REDSTONE_NETHER_ORE;
 
     /*------------------------------------+
     |                                     |
@@ -40,21 +47,24 @@ public class BlocksHolder {
     |                                     |
     +-------------------------------------*/
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.COAL_END_ORE)
-    public static EndCoalOre COAL_END_ORE;
+    public static Block COAL_END_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DIAMOND_END_ORE)
-    public static EndDiamondOre DIAMOND_END_ORE;
+    public static Block DIAMOND_END_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.EMERALD_END_ORE)
-    public static EndEmeraldOre EMERALD_END_ORE;
+    public static Block EMERALD_END_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.GOLD_END_ORE)
-    public static EndGoldOre GOLD_END_ORE;
+    public static Block GOLD_END_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.IRON_END_ORE)
-    public static EndIronOre IRON_END_ORE;
+    public static Block IRON_END_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.LAPIS_END_ORE)
-    public static EndLapisOre LAPIS_END_ORE;
+    public static Block LAPIS_END_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.REDSTONE_END_ORE)
-    public static EndRedstoneOre REDSTONE_END_ORE;
+    public static Block REDSTONE_END_ORE;
 
 
+    /**
+     * Class for handler the registry in minecraft
+     */
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
@@ -64,12 +74,12 @@ public class BlocksHolder {
             |         Nether Ore register         |
             |                                     |
             +-------------------------------------*/
-            event.getRegistry().register(new NetherCoalOre(RegistryHolder.COAL_NETHER_ORE));
-            event.getRegistry().register(new NetherDiamondOre(RegistryHolder.DIAMOND_NETHER_ORE));
-            event.getRegistry().register(new NetherEmeraldOre(RegistryHolder.EMERALD_NETHER_ORE));
-            event.getRegistry().register(new NetherGoldOre(RegistryHolder.GOLD_NETHER_ORE));
-            event.getRegistry().register(new NetherIronOre(RegistryHolder.IRON_NETHER_ORE));
-            event.getRegistry().register(new NetherLapisOre(RegistryHolder.LAPIS_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(RegistryHolder.COAL_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(RegistryHolder.DIAMOND_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(RegistryHolder.EMERALD_NETHER_ORE));
+            event.getRegistry().register(new BasicNetherOre(RegistryHolder.GOLD_NETHER_ORE));
+            event.getRegistry().register(new BasicNetherOre(RegistryHolder.IRON_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(RegistryHolder.LAPIS_NETHER_ORE));
             event.getRegistry().register(new NetherRedstoneOre(RegistryHolder.REDSTONE_NETHER_ORE));
 
             /*------------------------------------+
@@ -77,12 +87,12 @@ public class BlocksHolder {
             |          End Ore register           |
             |                                     |
             +-------------------------------------*/
-            event.getRegistry().register(new EndCoalOre(RegistryHolder.COAL_END_ORE));
-            event.getRegistry().register(new EndDiamondOre(RegistryHolder.DIAMOND_END_ORE));
-            event.getRegistry().register(new EndEmeraldOre(RegistryHolder.EMERALD_END_ORE));
-            event.getRegistry().register(new EndGoldOre(RegistryHolder.GOLD_END_ORE));
-            event.getRegistry().register(new EndIronOre(RegistryHolder.IRON_END_ORE));
-            event.getRegistry().register(new EndLapisOre(RegistryHolder.LAPIS_END_ORE));
+            event.getRegistry().register(new EndOre(RegistryHolder.COAL_END_ORE));
+            event.getRegistry().register(new EndOre(RegistryHolder.DIAMOND_END_ORE));
+            event.getRegistry().register(new EndOre(RegistryHolder.EMERALD_END_ORE));
+            event.getRegistry().register(new BasicEndOre(RegistryHolder.GOLD_END_ORE));
+            event.getRegistry().register(new BasicEndOre(RegistryHolder.IRON_END_ORE));
+            event.getRegistry().register(new EndOre(RegistryHolder.LAPIS_END_ORE));
             event.getRegistry().register(new EndRedstoneOre(RegistryHolder.REDSTONE_END_ORE));
         }
 

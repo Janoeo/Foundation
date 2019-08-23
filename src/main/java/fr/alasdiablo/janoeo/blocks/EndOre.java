@@ -1,11 +1,15 @@
 package fr.alasdiablo.janoeo.blocks;
 
-import net.minecraft.block.Block;
+import fr.alasdiablo.janoeo.holder.BlocksHolder;
+import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.common.ToolType;
 
-public class EndOre extends Block {
+import java.util.Random;
+
+public class EndOre extends OreBlock {
 
     public EndOre(String registryName) {
         super(Properties.create(Material.ROCK)
@@ -15,5 +19,20 @@ public class EndOre extends Block {
                 .harvestTool(ToolType.PICKAXE)
         );
         this.setRegistryName(registryName);
+    }
+
+    @Override
+    protected int func_220281_a(Random random) {
+        if (this == BlocksHolder.COAL_END_ORE) {
+            return MathHelper.nextInt(random, 0, 2);
+        } else if (this == BlocksHolder.DIAMOND_END_ORE) {
+            return MathHelper.nextInt(random, 3, 7);
+        } else if (this == BlocksHolder.EMERALD_END_ORE) {
+            return MathHelper.nextInt(random, 3, 7);
+        } else if (this == BlocksHolder.LAPIS_END_ORE) {
+            return MathHelper.nextInt(random, 2, 5);
+        } else {
+            return super.func_220281_a(random);
+        }
     }
 }

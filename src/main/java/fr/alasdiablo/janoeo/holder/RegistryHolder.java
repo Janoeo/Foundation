@@ -1,5 +1,8 @@
 package fr.alasdiablo.janoeo.holder;
 
+/**
+ * class with all registry name
+ */
 public class RegistryHolder {
 
     public static final String MODID = "janoeo";

@@ -1,12 +1,13 @@
-package fr.alasdiablo.janoeo.blocks.nether;
+package fr.alasdiablo.janoeo.blocks;
 
-import net.minecraft.block.RedstoneOreBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
 
-public class NetherRedstoneOre extends RedstoneOreBlock {
-    public NetherRedstoneOre(String registryName) {
+public class BasicNetherOre extends Block {
+
+    public BasicNetherOre(String registryName) {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)
                 .hardnessAndResistance(3f)

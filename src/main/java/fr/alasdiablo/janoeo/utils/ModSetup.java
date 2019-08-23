@@ -14,15 +14,28 @@ import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.registries.ForgeRegistries;
 
+/**
+ * Mod setup class
+ */
 public class ModSetup {
 
+    /**
+     * Mod creative tab
+     */
     public ItemGroup janoeoGroup = new ItemGroup("janoeo.group") {
+        /**
+         * icon getter for the creative tab
+         * @return An itemstack corresponding at the icon
+         */
         @Override
         public ItemStack createIcon() {
             return new ItemStack(BlocksHolder.COAL_NETHER_ORE);
         }
     };
 
+    /**
+     * Mod setup init
+     */
     public void init() {
         for(Biome biome : ForgeRegistries.BIOMES) {
             /*------------------------------------+
@@ -50,7 +63,6 @@ public class ModSetup {
             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.END_STONE.getDefaultState(), BlocksHolder.IRON_END_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(40, 20, 0, 70)));
             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.END_STONE.getDefaultState(), BlocksHolder.LAPIS_END_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(20, 20, 0, 70)));
             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.END_STONE.getDefaultState(), BlocksHolder.REDSTONE_END_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(32, 20, 0, 70)));
-
         }
     }
 }

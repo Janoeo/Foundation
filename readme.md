@@ -1,23 +1,26 @@
-# Just Another Nether/Overworld/End Ores
+# What is this mod?
 
-## What is this mod ?
+This mod adds some ores in the Overworld, the Nether, and the End.
 
-this mod add more ore in the Overworld, to Nether and in the End.
+# Roadmap
 
-## Future plan ?
+- generating the ores in the End. *Done*
+- adding tag on each block.
+- adding more ore (like copper, tin, or many other)
 
-For the moment i attempted to add the ore generation in to the end
-and after this i start adding more ore like copper, tin and many other.
+# Why did you make this mod?
 
-## I can give idea for the mod ?
+I just wanted to make a useful mod for other people.
 
-Yes, i want to make this mod the most useful for everyone.
+# Can I use this in a modpack?
 
-## I can use it in a mod pack
+Yes you can, just remember to put the name of the mod in the description of your modpack!
 
-Yes of course, just add my mod in the description of your mod pack.
+# Download:
 
-## Some screenshot
+- [Curseforge](https://www.curseforge.com/minecraft/mc-mods/janoeo)
+
+# Some screenshots:
 
 ![img1](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-22_15.29.40.png)
 ![img2](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-22_15.30.17.png)
