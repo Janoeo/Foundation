@@ -19,6 +19,7 @@ Yes you can, just remember to put the name of the mod in the description of your
 # Download:
 
 - [Curseforge](https://www.curseforge.com/minecraft/mc-mods/janoeo)
+- [Planet Minecraft](https://www.planetminecraft.com/mod/janoeo-just-another-nether-overworld-end-ores/)
 
 # Some screenshots:
 
