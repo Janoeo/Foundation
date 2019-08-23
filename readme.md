@@ -25,4 +25,8 @@ Yes you can, just remember to put the name of the mod in the description of your
 ![img1](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-22_15.29.40.png)
 ![img2](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-22_15.30.17.png)
 
+# Credit:
+
+- [Mesabloo](https://github.com/Mesabloo) for rewriting the description.
+
 #### sorry for my bad english.
