@@ -16,5 +16,7 @@
   "itemGroup.janoeo.ore.group": "JANOEO - Ore",
   "block.janoeo.copper_ore": "Copper Ore",
   "block.janoeo.tin_ore": "Tin Ore",
-  "itemGroup.janoeo.item.group": "JANOEO - Item"
+  "itemGroup.janoeo.item.group": "JANOEO - Resource",
+  "item.janoeo.copper_ingot": "Copper Ingot",
+  "item.janoeo.tin_ingot": "Tin Ingot"
 }

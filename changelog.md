@@ -1,5 +1,7 @@
 ### 1.3
 + add copper and tin ore
++ add copper and tin ingot
++ add a new item group for the non-ore
 ### 1.2
 + fix missing xp drop
 + fix end/nether redstone ore
