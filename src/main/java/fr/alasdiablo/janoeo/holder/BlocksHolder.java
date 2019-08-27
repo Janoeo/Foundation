@@ -1,10 +1,7 @@
 package fr.alasdiablo.janoeo.holder;
 
 import fr.alasdiablo.janoeo.JANOEO;
-import fr.alasdiablo.janoeo.blocks.BasicEndOre;
-import fr.alasdiablo.janoeo.blocks.BasicNetherOre;
-import fr.alasdiablo.janoeo.blocks.EndOre;
-import fr.alasdiablo.janoeo.blocks.NetherOre;
+import fr.alasdiablo.janoeo.blocks.*;
 import fr.alasdiablo.janoeo.blocks.end.*;
 import fr.alasdiablo.janoeo.blocks.nether.*;
 import net.minecraft.block.Block;
@@ -20,6 +17,16 @@ import net.minecraftforge.registries.ObjectHolder;
  */
 @SuppressWarnings("unused")
 public class BlocksHolder {
+
+    /*------------------------------------+
+    |                                     |
+    |         Overworld Ore List          |
+    |                                     |
+    +-------------------------------------*/
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.COPPER_ORE)
+    public static Block COPPER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.TIN_ORE)
+    public static Block TIN_ORE;
 
     /*------------------------------------+
     |                                     |
@@ -71,6 +78,14 @@ public class BlocksHolder {
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             /*------------------------------------+
             |                                     |
+            |         Overworld Ore List          |
+            |                                     |
+            +-------------------------------------*/
+            event.getRegistry().register(new BasicOre(RegistryHolder.COPPER_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.TIN_ORE));
+
+            /*------------------------------------+
+            |                                     |
             |         Nether Ore register         |
             |                                     |
             +-------------------------------------*/
@@ -99,6 +114,15 @@ public class BlocksHolder {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoGroup);
+            /*------------------------------------+
+            |                                     |
+            |         Overworld Ore List          |
+            |                                     |
+            +-------------------------------------*/
+            event.getRegistry().register(new BlockItem(BlocksHolder.COPPER_ORE, properties).setRegistryName(RegistryHolder.COPPER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.TIN_ORE, properties).setRegistryName(RegistryHolder.TIN_ORE));
+
+
             /*------------------------------------+
             |                                     |
             |         Nether Ore register         |
