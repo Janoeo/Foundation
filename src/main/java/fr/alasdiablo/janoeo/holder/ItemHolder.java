@@ -7,6 +7,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+/**
+ * class with all item
+ */
 @SuppressWarnings("unused")
 public class ItemHolder {
 

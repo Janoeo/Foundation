@@ -76,7 +76,7 @@ public class ModSetup {
 
             /*------------------------------------+
             |                                     |
-            |       Nether Ore Generation         |
+            |         End Ore Generation          |
             |                                     |
             +-------------------------------------*/
             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.END_STONE.getDefaultState(), BlocksHolder.COAL_END_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(68, 20, 0, 70)));
