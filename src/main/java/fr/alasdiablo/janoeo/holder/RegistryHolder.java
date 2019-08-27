@@ -22,4 +22,6 @@ public class RegistryHolder {
     static final String REDSTONE_END_ORE = "redstone_end_ore";
     static final String COPPER_ORE = "copper_ore";
     static final String TIN_ORE = "tin_ore";
+    static final String COPPER_INGOT = "copper_ingot";
+    static final String TIN_INGOT = "tin_ingot";
 }

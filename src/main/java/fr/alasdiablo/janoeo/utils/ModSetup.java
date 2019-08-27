@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.utils;
 
 import fr.alasdiablo.janoeo.holder.BlocksHolder;
+import fr.alasdiablo.janoeo.holder.ItemHolder;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -20,9 +21,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModSetup {
 
     /**
-     * Mod creative tab
+     * Mod creative tab for ore block
      */
-    public ItemGroup janoeoGroup = new ItemGroup("janoeo.group") {
+    public ItemGroup janoeoOreGroup = new ItemGroup("janoeo.ore.group") {
         /**
          * icon getter for the creative tab
          * @return An itemstack corresponding at the icon
@@ -34,10 +35,32 @@ public class ModSetup {
     };
 
     /**
+     * Mod creative tab for item
+     */
+    public ItemGroup janoeoItemGroup = new ItemGroup("janoeo.item.group") {
+        /**
+         * icon getter for the creative tab
+         * @return An itemstack corresponding at the icon
+         */
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ItemHolder.COPPER_INGOT);
+        }
+    };
+
+    /**
      * Mod setup init
      */
     public void init() {
         for(Biome biome : ForgeRegistries.BIOMES) {
+            /*------------------------------------+
+            |                                     |
+            |       Overworld Ore Generation         |
+            |                                     |
+            +-------------------------------------*/
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, BlocksHolder.COPPER_ORE.getDefaultState(), 8), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 63)));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, BlocksHolder.TIN_ORE.getDefaultState(), 8), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 63)));
+
             /*------------------------------------+
             |                                     |
             |       Nether Ore Generation         |

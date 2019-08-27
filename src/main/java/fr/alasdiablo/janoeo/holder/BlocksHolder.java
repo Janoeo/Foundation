@@ -78,7 +78,7 @@ public class BlocksHolder {
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             /*------------------------------------+
             |                                     |
-            |         Overworld Ore List          |
+            |       Overworld Ore register        |
             |                                     |
             +-------------------------------------*/
             event.getRegistry().register(new BasicOre(RegistryHolder.COPPER_ORE));
@@ -113,10 +113,10 @@ public class BlocksHolder {
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoGroup);
+            Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoOreGroup);
             /*------------------------------------+
             |                                     |
-            |         Overworld Ore List          |
+            |       Overworld Ore register        |
             |                                     |
             +-------------------------------------*/
             event.getRegistry().register(new BlockItem(BlocksHolder.COPPER_ORE, properties).setRegistryName(RegistryHolder.COPPER_ORE));
