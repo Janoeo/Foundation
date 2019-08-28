@@ -27,6 +27,24 @@ public class BlocksHolder {
     public static Block COPPER_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.TIN_ORE)
     public static Block TIN_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_COAL_ORE)
+    public static Block DENSE_COAL_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_COPPER_ORE)
+    public static Block DENSE_COPPER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_DIAMOND_ORE)
+    public static Block DENSE_DIAMOND_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_EMERALD_ORE)
+    public static Block DENSE_EMERALD_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_GOLD_ORE)
+    public static Block DENSE_GOLD_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_IRON_ORE)
+    public static Block DENSE_IRON_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_LAPIS_ORE)
+    public static Block DENSE_LAPIS_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_REDSTONE_ORE)
+    public static Block DENSE_REDSTONE_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_TIN_ORE)
+    public static Block DENSE_TIN_ORE;
 
     /*------------------------------------+
     |                                     |
@@ -83,6 +101,15 @@ public class BlocksHolder {
             +-------------------------------------*/
             event.getRegistry().register(new BasicOre(RegistryHolder.COPPER_ORE));
             event.getRegistry().register(new BasicOre(RegistryHolder.TIN_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_COAL_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_COPPER_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_DIAMOND_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_EMERALD_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_GOLD_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_IRON_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_LAPIS_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_REDSTONE_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_TIN_ORE));
 
             /*------------------------------------+
             |                                     |
@@ -121,7 +148,15 @@ public class BlocksHolder {
             +-------------------------------------*/
             event.getRegistry().register(new BlockItem(BlocksHolder.COPPER_ORE, properties).setRegistryName(RegistryHolder.COPPER_ORE));
             event.getRegistry().register(new BlockItem(BlocksHolder.TIN_ORE, properties).setRegistryName(RegistryHolder.TIN_ORE));
-
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_COAL_ORE, properties).setRegistryName(RegistryHolder.DENSE_COAL_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_COPPER_ORE, properties).setRegistryName(RegistryHolder.DENSE_COPPER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_DIAMOND_ORE, properties).setRegistryName(RegistryHolder.DENSE_DIAMOND_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_EMERALD_ORE, properties).setRegistryName(RegistryHolder.DENSE_EMERALD_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_GOLD_ORE, properties).setRegistryName(RegistryHolder.DENSE_GOLD_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_IRON_ORE, properties).setRegistryName(RegistryHolder.DENSE_IRON_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_LAPIS_ORE, properties).setRegistryName(RegistryHolder.DENSE_LAPIS_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_REDSTONE_ORE, properties).setRegistryName(RegistryHolder.DENSE_REDSTONE_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_TIN_ORE, properties).setRegistryName(RegistryHolder.DENSE_TIN_ORE));
 
             /*------------------------------------+
             |                                     |

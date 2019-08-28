@@ -18,5 +18,14 @@
   "block.janoeo.tin_ore": "Tin Ore",
   "itemGroup.janoeo.item.group": "JANOEO - Resource",
   "item.janoeo.copper_ingot": "Copper Ingot",
-  "item.janoeo.tin_ingot": "Tin Ingot"
+  "item.janoeo.tin_ingot": "Tin Ingot",
+  "block.janoeo.dense_coal_ore": "Dense Coal Ore",
+  "block.janoeo.dense_copper_ore": "Dense Copper Ore",
+  "block.janoeo.dense_diamond_ore": "Dense Diamond Ore",
+  "block.janoeo.dense_emerald_ore": "Dense Emerald Ore",
+  "block.janoeo.dense_gold_ore": "Dense Gold Ore",
+  "block.janoeo.dense_iron_ore": "Dense Iron Ore",
+  "block.janoeo.dense_lapis_ore": "Dense Lapis Ore",
+  "block.janoeo.dense_redstone_ore": "Dense Redstone Ore",
+  "block.janoeo.dense_tin_ore": "Dense Tin Ore"
 }

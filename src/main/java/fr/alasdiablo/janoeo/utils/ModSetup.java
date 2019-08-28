@@ -6,6 +6,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
@@ -52,6 +53,13 @@ public class ModSetup {
      * Mod setup init
      */
     public void init() {
+
+        Biomes.MOUNTAINS.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.EMERALD_ORE.getDefaultState(), BlocksHolder.DENSE_EMERALD_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(640, 4, 0, 32)));
+        Biomes.WOODED_MOUNTAINS.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.EMERALD_ORE.getDefaultState(), BlocksHolder.DENSE_EMERALD_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(640, 4, 0, 32)));
+        Biomes.GRAVELLY_MOUNTAINS.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.EMERALD_ORE.getDefaultState(), BlocksHolder.DENSE_EMERALD_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(640, 4, 0, 32)));
+        Biomes.MODIFIED_GRAVELLY_MOUNTAINS.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.EMERALD_ORE.getDefaultState(), BlocksHolder.DENSE_EMERALD_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(640, 4, 0, 32)));
+        Biomes.MOUNTAIN_EDGE.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.EMERALD_ORE.getDefaultState(), BlocksHolder.DENSE_EMERALD_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(640, 4, 0, 32)));
+
         for(Biome biome : ForgeRegistries.BIOMES) {
             /*------------------------------------+
             |                                     |
@@ -60,6 +68,14 @@ public class ModSetup {
             +-------------------------------------*/
             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, BlocksHolder.COPPER_ORE.getDefaultState(), 8), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 63)));
             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, BlocksHolder.TIN_ORE.getDefaultState(), 8), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 63)));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.COAL_ORE.getDefaultState(), BlocksHolder.DENSE_COAL_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(2600, 1, 0, 130)));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(BlocksHolder.COPPER_ORE.getDefaultState(), BlocksHolder.DENSE_COPPER_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(1260, 1, 0, 63)));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(BlocksHolder.TIN_ORE.getDefaultState(), BlocksHolder.DENSE_TIN_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(320, 1, 0, 16)));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.GOLD_ORE.getDefaultState(), BlocksHolder.DENSE_GOLD_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(640, 1, 0, 32)));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.IRON_ORE.getDefaultState(), BlocksHolder.DENSE_IRON_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(1260, 1, 0, 63)));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.LAPIS_ORE.getDefaultState(), BlocksHolder.DENSE_LAPIS_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(640, 1, 0, 32)));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.REDSTONE_ORE.getDefaultState(), BlocksHolder.DENSE_REDSTONE_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(320, 1, 0, 16)));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.DIAMOND_ORE.getDefaultState(), BlocksHolder.DENSE_DIAMOND_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(320, 1, 0, 16)));
 
             /*------------------------------------+
             |                                     |

@@ -24,4 +24,13 @@ public class RegistryHolder {
     static final String TIN_ORE = "tin_ore";
     static final String COPPER_INGOT = "copper_ingot";
     static final String TIN_INGOT = "tin_ingot";
+    static final String DENSE_COAL_ORE = "dense_coal_ore";
+    static final String DENSE_COPPER_ORE = "dense_copper_ore";
+    static final String DENSE_DIAMOND_ORE = "dense_diamond_ore";
+    static final String DENSE_EMERALD_ORE = "dense_emerald_ore";
+    static final String DENSE_GOLD_ORE = "dense_gold_ore";
+    static final String DENSE_IRON_ORE = "dense_iron_ore";
+    static final String DENSE_LAPIS_ORE = "dense_lapis_ore";
+    static final String DENSE_REDSTONE_ORE = "dense_redstone_ore";
+    static final String DENSE_TIN_ORE = "dense_tin_ore";
 }

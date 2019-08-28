@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.blocks;
 
 import fr.alasdiablo.janoeo.holder.BlocksHolder;
+import net.minecraft.block.GlassBlock;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

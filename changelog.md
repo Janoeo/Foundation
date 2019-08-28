@@ -1,3 +1,5 @@
+### 1.4
++ add dense ore in overworld
 ### 1.3
 + add copper and tin ore
 + add copper and tin ingot
