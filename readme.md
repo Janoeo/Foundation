@@ -5,7 +5,8 @@ This mod adds some ores in the Overworld, the Nether, and the End.
 # Roadmap
 
 - generating the ores in the End. *Done*
-- adding tag on each block.
+- adding tag on each block. *Done*
+- adding dense ore. *Done*
 - adding more ore (like copper, tin, or many other)
 
 # Why did you make this mod?
@@ -31,5 +32,3 @@ Yes you can, just remember to put the name of the mod in the description of your
 # Credit:
 
 - [Mesabloo](https://github.com/Mesabloo) for rewriting the description.
-
-#### sorry for my bad english.
