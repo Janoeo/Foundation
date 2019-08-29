@@ -23,8 +23,10 @@ Yes you can, just remember to put the name of the mod in the description of your
 
 # Some screenshots:
 
-![img1](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-22_15.29.40.png)
+![img1](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.11.02.png)
 ![img2](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-22_15.30.17.png)
+![img2](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.17.12.png)
+![img2](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.13.38.png)
 
 # Credit:
 
