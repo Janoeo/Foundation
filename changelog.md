@@ -1,3 +1,5 @@
+### 1.5
++ add a config file
 ### 1.4
 + add dense ore in overworld
 ### 1.3

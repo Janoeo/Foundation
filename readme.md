@@ -7,6 +7,8 @@ This mod adds some ores in the Overworld, the Nether, and the End.
 - generating the ores in the End. *Done*
 - adding tag on each block. *Done*
 - adding dense ore. *Done*
+- adding a config file. *Done*
+- make a showcase in french for show the mod possibility.
 - adding more ore (like copper, tin, or many other)
 
 # Why did you make this mod?

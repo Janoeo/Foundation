@@ -1,12 +1,11 @@
 package fr.alasdiablo.janoeo;
 
 import fr.alasdiablo.janoeo.holder.RegistryHolder;
-import fr.alasdiablo.janoeo.utils.ClientProxy;
-import fr.alasdiablo.janoeo.utils.IProxy;
-import fr.alasdiablo.janoeo.utils.ModSetup;
-import fr.alasdiablo.janoeo.utils.ServerProxy;
+import fr.alasdiablo.janoeo.utils.*;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -37,6 +36,7 @@ public class JANOEO {
      * Mod constructor
      */
     public JANOEO() {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, JANOEOConfig.CONFIG_SPEC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
     }
 
