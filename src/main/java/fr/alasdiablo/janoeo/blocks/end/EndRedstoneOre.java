@@ -9,6 +9,8 @@ public class EndRedstoneOre extends RedstoneOreBlock {
     public EndRedstoneOre(String registryName) {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)
+                .tickRandomly()
+                .lightValue(9)
                 .hardnessAndResistance(4f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)

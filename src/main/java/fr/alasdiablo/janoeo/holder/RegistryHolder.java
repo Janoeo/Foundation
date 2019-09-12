@@ -33,4 +33,12 @@ public class RegistryHolder {
     static final String DENSE_LAPIS_ORE = "dense_lapis_ore";
     static final String DENSE_REDSTONE_ORE = "dense_redstone_ore";
     static final String DENSE_TIN_ORE = "dense_tin_ore";
+    static final String DENSE_QUARTZ_NETHER_ORE = "dense_quartz_nether_ore";
+    static final String DENSE_COAL_NETHER_ORE = "dense_coal_nether_ore";
+    static final String DENSE_DIAMOND_NETHER_ORE = "dense_diamond_nether_ore";
+    static final String DENSE_EMERALD_NETHER_ORE = "dense_emerald_nether_ore";
+    static final String DENSE_GOLD_NETHER_ORE = "dense_gold_nether_ore";
+    static final String DENSE_IRON_NETHER_ORE = "dense_iron_nether_ore";
+    static final String DENSE_LAPIS_NETHER_ORE = "dense_lapis_nether_ore";
+    static final String DENSE_REDSTONE_NETHER_ORE = "dense_redstone_nether_ore";
 }

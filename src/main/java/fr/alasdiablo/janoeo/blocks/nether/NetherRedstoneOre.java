@@ -9,6 +9,8 @@ public class NetherRedstoneOre extends RedstoneOreBlock {
     public NetherRedstoneOre(String registryName) {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)
+                .tickRandomly()
+                .lightValue(9)
                 .hardnessAndResistance(3f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)

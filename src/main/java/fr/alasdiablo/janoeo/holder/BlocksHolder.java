@@ -5,6 +5,7 @@ import fr.alasdiablo.janoeo.blocks.*;
 import fr.alasdiablo.janoeo.blocks.end.*;
 import fr.alasdiablo.janoeo.blocks.nether.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -65,6 +66,22 @@ public class BlocksHolder {
     public static Block LAPIS_NETHER_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.REDSTONE_NETHER_ORE)
     public static Block REDSTONE_NETHER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_QUARTZ_NETHER_ORE)
+    public static Block DENSE_QUARTZ_NETHER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_COAL_NETHER_ORE)
+    public static Block DENSE_COAL_NETHER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_DIAMOND_NETHER_ORE)
+    public static Block DENSE_DIAMOND_NETHER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_EMERALD_NETHER_ORE)
+    public static Block DENSE_EMERALD_NETHER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_GOLD_NETHER_ORE)
+    public static Block DENSE_GOLD_NETHER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_IRON_NETHER_ORE)
+    public static Block DENSE_IRON_NETHER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_LAPIS_NETHER_ORE)
+    public static Block DENSE_LAPIS_NETHER_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_REDSTONE_NETHER_ORE)
+    public static Block DENSE_REDSTONE_NETHER_ORE;
 
     /*------------------------------------+
     |                                     |
@@ -123,6 +140,14 @@ public class BlocksHolder {
             event.getRegistry().register(new BasicNetherOre(RegistryHolder.IRON_NETHER_ORE));
             event.getRegistry().register(new NetherOre(RegistryHolder.LAPIS_NETHER_ORE));
             event.getRegistry().register(new NetherRedstoneOre(RegistryHolder.REDSTONE_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(RegistryHolder.DENSE_QUARTZ_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(RegistryHolder.DENSE_COAL_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(RegistryHolder.DENSE_DIAMOND_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(RegistryHolder.DENSE_EMERALD_NETHER_ORE));
+            event.getRegistry().register(new BasicNetherOre(RegistryHolder.DENSE_GOLD_NETHER_ORE));
+            event.getRegistry().register(new BasicNetherOre(RegistryHolder.DENSE_IRON_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(RegistryHolder.DENSE_LAPIS_NETHER_ORE));
+            event.getRegistry().register(new NetherRedstoneOre(RegistryHolder.DENSE_REDSTONE_NETHER_ORE));
 
             /*------------------------------------+
             |                                     |
@@ -170,6 +195,14 @@ public class BlocksHolder {
             event.getRegistry().register(new BlockItem(BlocksHolder.IRON_NETHER_ORE, properties).setRegistryName(RegistryHolder.IRON_NETHER_ORE));
             event.getRegistry().register(new BlockItem(BlocksHolder.LAPIS_NETHER_ORE, properties).setRegistryName(RegistryHolder.LAPIS_NETHER_ORE));
             event.getRegistry().register(new BlockItem(BlocksHolder.REDSTONE_NETHER_ORE, properties).setRegistryName(RegistryHolder.REDSTONE_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_QUARTZ_NETHER_ORE, properties).setRegistryName(RegistryHolder.DENSE_QUARTZ_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_COAL_NETHER_ORE, properties).setRegistryName(RegistryHolder.DENSE_COAL_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_DIAMOND_NETHER_ORE, properties).setRegistryName(RegistryHolder.DENSE_DIAMOND_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_EMERALD_NETHER_ORE, properties).setRegistryName(RegistryHolder.DENSE_EMERALD_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_GOLD_NETHER_ORE, properties).setRegistryName(RegistryHolder.DENSE_GOLD_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_IRON_NETHER_ORE, properties).setRegistryName(RegistryHolder.DENSE_IRON_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_LAPIS_NETHER_ORE, properties).setRegistryName(RegistryHolder.DENSE_LAPIS_NETHER_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_REDSTONE_NETHER_ORE, properties).setRegistryName(RegistryHolder.DENSE_REDSTONE_NETHER_ORE));
 
             /*------------------------------------+
             |                                     |
