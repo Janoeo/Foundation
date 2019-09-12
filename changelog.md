@@ -1,6 +1,6 @@
-### 1.3
+### 1.6
 + update mcp to 20190912
-+ dense phase 2, dense ore in the nether
++ dense ore phase 2, dense ore in the nether
 + fix end/nether redstone ore do not stop lit
 ### 1.5
 + add a config file
