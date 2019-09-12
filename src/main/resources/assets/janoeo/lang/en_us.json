@@ -27,5 +27,13 @@
   "block.janoeo.dense_iron_ore": "Dense Iron Ore",
   "block.janoeo.dense_lapis_ore": "Dense Lapis Ore",
   "block.janoeo.dense_redstone_ore": "Dense Redstone Ore",
-  "block.janoeo.dense_tin_ore": "Dense Tin Ore"
+  "block.janoeo.dense_tin_ore": "Dense Tin Ore",
+  "block.janoeo.dense_coal_nether_ore": "Dense Nether Coal Ore",
+  "block.janoeo.dense_quartz_nether_ore": "Dense Nether Quartz Ore",
+  "block.janoeo.dense_diamond_nether_ore": "Dense Nether Diamond Ore",
+  "block.janoeo.dense_emerald_nether_ore": "Dense Nether Emerald Ore",
+  "block.janoeo.dense_gold_nether_ore": "Dense Nether Gold Ore",
+  "block.janoeo.dense_iron_nether_ore": "Dense Nether Iron Ore",
+  "block.janoeo.dense_lapis_nether_ore": "Dense Nether Lapis Ore",
+  "block.janoeo.dense_redstone_nether_ore": "Dense Nether Redstone Ore"
 }
