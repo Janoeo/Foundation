@@ -1,3 +1,6 @@
+### 1.7
++ update forge from 1.14.4-28.0.55 to 1.14.4-28.1.1
++ update mcp from 20190912 to 20190915
 ### 1.6
 + update mcp to 20190912
 + dense ore phase 2, dense ore in the nether
