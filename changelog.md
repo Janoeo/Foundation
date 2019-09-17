@@ -1,4 +1,5 @@
 ### 1.7
++ fix dense redstone ore
 + update forge from 1.14.4-28.0.55 to 1.14.4-28.1.1
 + update mcp from 20190912 to 20190915
 ### 1.6

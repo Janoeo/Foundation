@@ -18,11 +18,6 @@ import org.apache.logging.log4j.Logger;
 public class JANOEO {
 
     /**
-     * Sided proxy
-     */
-    public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
-
-    /**
      * Mod setup
      */
     public static ModSetup setup = new ModSetup();
@@ -46,6 +41,5 @@ public class JANOEO {
      */
     private void setup(final FMLCommonSetupEvent event) {
         setup.init();
-        proxy.init();
     }
 }
