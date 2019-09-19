@@ -50,6 +50,8 @@ public class BlocksHolder {
     public static Block DENSE_TIN_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.ALUMINIUM_ORE)
     public static Block ALUMINIUM_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.URANIUM_ORE)
+    public static Block URANIUM_ORE;
 
     /*------------------------------------+
     |                                     |

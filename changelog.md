@@ -1,4 +1,6 @@
 ### 1.7
++ add aluminium ore
++ add data generator (change nothing for the client and server, only use for mod compilation and mod data generation)
 + fix dense redstone ore
 + update forge from 1.14.4-28.0.55 to 1.14.4-28.1.1
 + update mcp from 20190912 to 20190915
