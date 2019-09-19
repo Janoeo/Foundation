@@ -41,4 +41,6 @@ public class RegistryHolder {
     static final String DENSE_IRON_NETHER_ORE = "dense_iron_nether_ore";
     static final String DENSE_LAPIS_NETHER_ORE = "dense_lapis_nether_ore";
     static final String DENSE_REDSTONE_NETHER_ORE = "dense_redstone_nether_ore";
+    static final String ALUMINIUM_ORE = "aluminium_ore";
+    static final String URANIUM_ORE = "uranium_ore";
 }

@@ -48,6 +48,8 @@ public class BlocksHolder {
     public static Block DENSE_REDSTONE_ORE;
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.DENSE_TIN_ORE)
     public static Block DENSE_TIN_ORE;
+    @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.ALUMINIUM_ORE)
+    public static Block ALUMINIUM_ORE;
 
     /*------------------------------------+
     |                                     |
@@ -129,6 +131,7 @@ public class BlocksHolder {
             event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_LAPIS_ORE));
             event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_REDSTONE_ORE));
             event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_TIN_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.ALUMINIUM_ORE));
 
             /*------------------------------------+
             |                                     |
@@ -184,6 +187,7 @@ public class BlocksHolder {
             event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_LAPIS_ORE, properties).setRegistryName(RegistryHolder.DENSE_LAPIS_ORE));
             event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_REDSTONE_ORE, properties).setRegistryName(RegistryHolder.DENSE_REDSTONE_ORE));
             event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_TIN_ORE, properties).setRegistryName(RegistryHolder.DENSE_TIN_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.ALUMINIUM_ORE, properties).setRegistryName(RegistryHolder.ALUMINIUM_ORE));
 
             /*------------------------------------+
             |                                     |
