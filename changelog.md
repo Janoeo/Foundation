@@ -1,4 +1,6 @@
 ### 1.7
++ add french localization
++ add uranium ore
 + add aluminium ore
 + add data generator (change nothing for the client and server, only use for mod compilation and mod data generation)
 + fix dense redstone ore

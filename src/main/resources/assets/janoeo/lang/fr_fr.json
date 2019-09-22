@@ -36,6 +36,6 @@
   "block.janoeo.dense_iron_nether_ore": "Minerai de fer du nether dense",
   "block.janoeo.dense_lapis_nether_ore": "Minerai de lapis du nether dense",
   "block.janoeo.dense_redstone_nether_ore": "Minerai de redstone du nether dense",
-  "item.janoeo.aluminium_ingot": "Minerai d'aluminium",
-  "item.janoeo.uranium_ingot": "Minerai d'uranium"
+  "block.janoeo.aluminium_ore": "Minerai d'aluminium",
+  "block.janoeo.uranium_ore": "Minerai d'uranium"
 }
