@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:diamond_end_smelting"
+    ]
+  },
+  "criteria": {
+    "has_end_diamond_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:diamond_end_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:diamond_end_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_end_diamond_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

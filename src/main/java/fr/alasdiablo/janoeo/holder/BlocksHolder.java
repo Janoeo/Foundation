@@ -134,6 +134,7 @@ public class BlocksHolder {
             event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_REDSTONE_ORE));
             event.getRegistry().register(new BasicOre(RegistryHolder.DENSE_TIN_ORE));
             event.getRegistry().register(new BasicOre(RegistryHolder.ALUMINIUM_ORE));
+            event.getRegistry().register(new BasicOre(RegistryHolder.URANIUM_ORE));
 
             /*------------------------------------+
             |                                     |
@@ -190,6 +191,7 @@ public class BlocksHolder {
             event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_REDSTONE_ORE, properties).setRegistryName(RegistryHolder.DENSE_REDSTONE_ORE));
             event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_TIN_ORE, properties).setRegistryName(RegistryHolder.DENSE_TIN_ORE));
             event.getRegistry().register(new BlockItem(BlocksHolder.ALUMINIUM_ORE, properties).setRegistryName(RegistryHolder.ALUMINIUM_ORE));
+            event.getRegistry().register(new BlockItem(BlocksHolder.URANIUM_ORE, properties).setRegistryName(RegistryHolder.URANIUM_ORE));
 
             /*------------------------------------+
             |                                     |

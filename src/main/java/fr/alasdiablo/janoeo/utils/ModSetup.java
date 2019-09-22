@@ -69,6 +69,9 @@ public class ModSetup {
             if (config.EXTRA_ORE_GEN.get()) {
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, BlocksHolder.COPPER_ORE.getDefaultState(), 8), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 63)));
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, BlocksHolder.TIN_ORE.getDefaultState(), 8), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 63)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, BlocksHolder.ALUMINIUM_ORE.getDefaultState(), 12), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 63)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, BlocksHolder.URANIUM_ORE.getDefaultState(), 4), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 32)));
+
                 if (config.DENSE_ORE_GEN.get()) {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(BlocksHolder.COPPER_ORE.getDefaultState(), BlocksHolder.DENSE_COPPER_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(1260, 1, 0, 63)));
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(BlocksHolder.TIN_ORE.getDefaultState(), BlocksHolder.DENSE_TIN_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(1260, 1, 0, 63)));

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:iron_end_blasting"
+    ]
+  },
+  "criteria": {
+    "has_end_iron_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:iron_end_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:iron_end_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_end_iron_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

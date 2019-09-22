@@ -9,7 +9,8 @@
     "#forge:ores/lapis",
     "#forge:ores/redstone",
     "#forge:ores/copper",
-    "#forge:ores/tin"
-
+    "#forge:ores/tin",
+    "#forge:ores/aluminium",
+    "#forge:ores/uranium"
   ]
 }

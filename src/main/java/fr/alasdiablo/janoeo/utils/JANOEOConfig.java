@@ -3,24 +3,58 @@ package fr.alasdiablo.janoeo.utils;
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
+/**
+ * Janoeo config files
+ */
 public class JANOEOConfig {
 
+    /**
+     * Janoeo config spec
+     */
     public static final ForgeConfigSpec CONFIG_SPEC;
+    /**
+     * Janoeo config
+     */
     public static final Config CONFIG;
 
+    /**
+     * Janoeo static constructor
+     */
     static {
         Pair<Config, ForgeConfigSpec> configPair = new ForgeConfigSpec.Builder().configure(Config::new);
         CONFIG_SPEC = configPair.getRight();
         CONFIG = configPair.getLeft();
     }
 
+    /**
+     * Janoeo config builder
+     */
     public static class Config {
 
+        /**
+         * Nether ore generation config value
+         */
         public final ForgeConfigSpec.BooleanValue NETHER_ORE_GEN;
+
+        /**
+         * End ore generation config value
+         */
         public final ForgeConfigSpec.BooleanValue END_ORE_GEN;
+
+        /**
+         * dense ore generation config value
+         */
         public final ForgeConfigSpec.BooleanValue DENSE_ORE_GEN;
+
+        /**
+         * extra ore generation config value
+         */
         public final ForgeConfigSpec.BooleanValue EXTRA_ORE_GEN;
 
+        /**
+         * build the config file
+         * @param builder
+         */
         public Config(ForgeConfigSpec.Builder builder) {
             builder.comment("Common config for janoeo")
                     .push("janoeo");

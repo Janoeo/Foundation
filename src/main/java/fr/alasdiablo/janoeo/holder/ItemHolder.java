@@ -18,6 +18,9 @@ public class ItemHolder {
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.TIN_INGOT)
     public static Item TIN_INGOT;
 
+    /**
+     * item registerer
+     */
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:redstone_end_smelting"
+    ]
+  },
+  "criteria": {
+    "has_end_redstone_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:redstone_end_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:redstone_end_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_end_redstone_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

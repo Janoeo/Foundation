@@ -11,112 +11,144 @@ import net.minecraft.item.crafting.Ingredient;
 
 import java.util.function.Consumer;
 
+/**
+ * Janoeo recipes data generator
+ */
 public class Recipes extends RecipeProvider {
 
+    /**
+     * constructor
+     * @param generatorIn data generator instance
+     */
     public Recipes(DataGenerator generatorIn) {
         super(generatorIn);
     }
 
+    /**
+     * load all recipes
+     */
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-        // coal
-        // smelting
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.COAL_END_ORE), Items.COAL, 0.1f, 200)
-                .addCriterion("has_end_coal_ore", this.hasItem(BlocksHolder.COAL_END_ORE)).build(consumer);
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.COAL_NETHER_ORE), Items.COAL, 0.1f, 200)
-                .addCriterion("has_nether_coal_ore", this.hasItem(BlocksHolder.COAL_NETHER_ORE)).build(consumer);
-        // blasting
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.COAL_END_ORE), Items.COAL, 0.1f, 100)
-                .addCriterion("has_end_coal_ore", this.hasItem(BlocksHolder.COAL_END_ORE)).build(consumer);
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.COAL_NETHER_ORE), Items.COAL, 0.1f, 100)
-                .addCriterion("has_nether_coal_ore", this.hasItem(BlocksHolder.COAL_NETHER_ORE)).build(consumer);
-
-        //copper
-        // smelting
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.COPPER_ORE), ItemHolder.COPPER_INGOT, 0.1f, 200)
-                .addCriterion("has_copper_ore", this.hasItem(BlocksHolder.COPPER_ORE)).build(consumer);
-        // blasting
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.COPPER_ORE), ItemHolder.COPPER_INGOT, 0.1f, 100)
-                .addCriterion("has_copper_ore", this.hasItem(BlocksHolder.COPPER_ORE)).build(consumer);
-
-        //diamond
-        // smelting
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.DIAMOND_END_ORE), Items.DIAMOND, 0.1f, 200)
-                .addCriterion("has_end_diamond_ore", this.hasItem(BlocksHolder.DIAMOND_END_ORE)).build(consumer);
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.DIAMOND_NETHER_ORE), Items.DIAMOND, 0.1f, 200)
-                .addCriterion("has_nether_diamond_ore", this.hasItem(BlocksHolder.DIAMOND_NETHER_ORE)).build(consumer);
-        // blasting
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.DIAMOND_END_ORE), Items.DIAMOND, 0.1f, 200)
-                .addCriterion("has_end_diamond_ore", this.hasItem(BlocksHolder.DIAMOND_END_ORE)).build(consumer);
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.DIAMOND_NETHER_ORE), Items.DIAMOND, 0.1f, 200)
-                .addCriterion("has_nether_diamond_ore", this.hasItem(BlocksHolder.DIAMOND_NETHER_ORE)).build(consumer);
-
-        //emerald
-        // smelting
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.EMERALD_END_ORE), Items.EMERALD, 0.1f, 200)
-                .addCriterion("has_end_emerald_ore", this.hasItem(BlocksHolder.EMERALD_END_ORE)).build(consumer);
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.EMERALD_NETHER_ORE), Items.EMERALD, 0.1f, 200)
-                .addCriterion("has_nether_emerald_ore", this.hasItem(BlocksHolder.EMERALD_NETHER_ORE)).build(consumer);
-        // blasting
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.EMERALD_END_ORE), Items.EMERALD, 0.1f, 200)
-                .addCriterion("has_end_emerald_ore", this.hasItem(BlocksHolder.EMERALD_END_ORE)).build(consumer);
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.EMERALD_NETHER_ORE), Items.EMERALD, 0.1f, 200)
-                .addCriterion("has_nether_emerald_ore", this.hasItem(BlocksHolder.EMERALD_NETHER_ORE)).build(consumer);
-
-        //gold
-        // smelting
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.GOLD_END_ORE), Items.GOLD_INGOT, 0.1f, 200)
-                .addCriterion("has_end_gold_ore", this.hasItem(BlocksHolder.GOLD_END_ORE)).build(consumer);
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.GOLD_NETHER_ORE), Items.GOLD_INGOT, 0.1f, 200)
-                .addCriterion("has_nether_gold_ore", this.hasItem(BlocksHolder.GOLD_NETHER_ORE)).build(consumer);
-        // blasting
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.GOLD_END_ORE), Items.GOLD_INGOT, 0.1f, 200)
-                .addCriterion("has_end_gold_ore", this.hasItem(BlocksHolder.GOLD_END_ORE)).build(consumer);
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.GOLD_NETHER_ORE), Items.GOLD_INGOT, 0.1f, 200)
-                .addCriterion("has_nether_gold_ore", this.hasItem(BlocksHolder.GOLD_NETHER_ORE)).build(consumer);
-
-        //iron
-        // smelting
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.IRON_END_ORE), Items.IRON_INGOT, 0.1f, 200)
-                .addCriterion("has_end_iron_ore", this.hasItem(BlocksHolder.IRON_END_ORE)).build(consumer);
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.IRON_NETHER_ORE), Items.IRON_INGOT, 0.1f, 200)
-                .addCriterion("has_nether_iron_ore", this.hasItem(BlocksHolder.IRON_NETHER_ORE)).build(consumer);
-        // blasting
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.IRON_END_ORE), Items.IRON_INGOT, 0.1f, 200)
-                .addCriterion("has_end_iron_ore", this.hasItem(BlocksHolder.IRON_END_ORE)).build(consumer);
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.IRON_NETHER_ORE), Items.IRON_INGOT, 0.1f, 200)
-                .addCriterion("has_nether_iron_ore", this.hasItem(BlocksHolder.IRON_NETHER_ORE)).build(consumer);
-
-        //lapis
-        // smelting
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.LAPIS_END_ORE), Items.LAPIS_LAZULI, 0.1f, 200)
-                .addCriterion("has_end_lapis_ore", this.hasItem(BlocksHolder.LAPIS_END_ORE)).build(consumer);
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.LAPIS_NETHER_ORE), Items.LAPIS_LAZULI, 0.1f, 200)
-                .addCriterion("has_nether_lapis_ore", this.hasItem(BlocksHolder.LAPIS_NETHER_ORE)).build(consumer);
-        // blasting
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.LAPIS_END_ORE), Items.LAPIS_LAZULI, 0.1f, 200)
-                .addCriterion("has_end_lapis_ore", this.hasItem(BlocksHolder.LAPIS_END_ORE)).build(consumer);
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.LAPIS_NETHER_ORE), Items.LAPIS_LAZULI, 0.1f, 200)
-                .addCriterion("has_nether_lapis_ore", this.hasItem(BlocksHolder.LAPIS_NETHER_ORE)).build(consumer);
-
-        //redstone
-        // smelting
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.REDSTONE_END_ORE), Items.REDSTONE, 0.1f, 200)
-                .addCriterion("has_end_redstone_ore", this.hasItem(BlocksHolder.REDSTONE_END_ORE)).build(consumer);
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.REDSTONE_NETHER_ORE), Items.REDSTONE, 0.1f, 200)
-                .addCriterion("has_nether_redstone_ore", this.hasItem(BlocksHolder.REDSTONE_NETHER_ORE)).build(consumer);
-        // blasting
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.REDSTONE_END_ORE), Items.REDSTONE, 0.1f, 200)
-                .addCriterion("has_end_redstone_ore", this.hasItem(BlocksHolder.REDSTONE_END_ORE)).build(consumer);
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.REDSTONE_NETHER_ORE), Items.REDSTONE, 0.1f, 200)
-                .addCriterion("has_nether_redstone_ore", this.hasItem(BlocksHolder.REDSTONE_NETHER_ORE)).build(consumer);
-
-        //copper
-        // smelting
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.TIN_ORE), ItemHolder.TIN_INGOT, 0.1f, 200)
-                .addCriterion("has_tin_ore", this.hasItem(BlocksHolder.TIN_ORE)).build(consumer);
-        // blasting
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.TIN_ORE), ItemHolder.TIN_INGOT, 0.1f, 100)
-                .addCriterion("has_tin_ore", this.hasItem(BlocksHolder.TIN_ORE)).build(consumer);
+        this.endOreSmelting(consumer);
+        this.endOreBlasting(consumer);
+        this.extraOreSmelting(consumer);
+        this.extraOreBlasting(consumer);
+        this.netherOreSmelting(consumer);
+        this.netherOreSmelting(consumer);
     }
+
+    private void endOreSmelting(Consumer<IFinishedRecipe> consumer) {
+        // coal
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.COAL_END_ORE), Items.COAL, 0.1f, 200)
+                .addCriterion("has_end_coal_ore", this.hasItem(BlocksHolder.COAL_END_ORE)).build(consumer, "coal_end_smelting");
+        // diamond
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.DIAMOND_END_ORE), Items.DIAMOND, 0.1f, 200)
+                .addCriterion("has_end_diamond_ore", this.hasItem(BlocksHolder.DIAMOND_END_ORE)).build(consumer, "diamond_end_smelting");
+        // emerald
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.EMERALD_END_ORE), Items.EMERALD, 0.1f, 200)
+                .addCriterion("has_end_emerald_ore", this.hasItem(BlocksHolder.EMERALD_END_ORE)).build(consumer, "emerald_end_smelting");
+        // gold
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.GOLD_END_ORE), Items.GOLD_INGOT, 0.1f, 200)
+                .addCriterion("has_end_gold_ore", this.hasItem(BlocksHolder.GOLD_END_ORE)).build(consumer, "gold_end_smelting");
+        // iron
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.IRON_END_ORE), Items.IRON_INGOT, 0.1f, 200)
+                .addCriterion("has_end_iron_ore", this.hasItem(BlocksHolder.IRON_END_ORE)).build(consumer, "iron_end_smelting");
+        // lapis
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.LAPIS_END_ORE), Items.LAPIS_LAZULI, 0.1f, 200)
+                .addCriterion("has_end_lapis_ore", this.hasItem(BlocksHolder.LAPIS_END_ORE)).build(consumer, "lapis_end_smelting");
+        // redstone
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.REDSTONE_END_ORE), Items.REDSTONE, 0.1f, 200)
+                .addCriterion("has_end_redstone_ore", this.hasItem(BlocksHolder.REDSTONE_END_ORE)).build(consumer, "redstone_end_smelting");
+    }
+
+    private void endOreBlasting(Consumer<IFinishedRecipe> consumer) {
+        // coal
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.COAL_END_ORE), Items.COAL, 0.1f, 100)
+                .addCriterion("has_end_coal_ore", this.hasItem(BlocksHolder.COAL_END_ORE)).build(consumer, "coal_end_blasting");
+        // diamond
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.DIAMOND_END_ORE), Items.DIAMOND, 0.1f, 200)
+                .addCriterion("has_end_diamond_ore", this.hasItem(BlocksHolder.DIAMOND_END_ORE)).build(consumer, "diamond_end_blasting");
+        // emerald
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.EMERALD_END_ORE), Items.EMERALD, 0.1f, 200)
+                .addCriterion("has_end_emerald_ore", this.hasItem(BlocksHolder.EMERALD_END_ORE)).build(consumer, "emerald_end_blasting");
+        // gold
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.GOLD_END_ORE), Items.GOLD_INGOT, 0.1f, 200)
+                .addCriterion("has_end_gold_ore", this.hasItem(BlocksHolder.GOLD_END_ORE)).build(consumer, "gold_end_blasting");
+        // iron
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.IRON_END_ORE), Items.IRON_INGOT, 0.1f, 200)
+                .addCriterion("has_end_iron_ore", this.hasItem(BlocksHolder.IRON_END_ORE)).build(consumer, "iron_end_blasting");
+        // lapis
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.LAPIS_END_ORE), Items.LAPIS_LAZULI, 0.1f, 200)
+                .addCriterion("has_end_lapis_ore", this.hasItem(BlocksHolder.LAPIS_END_ORE)).build(consumer, "lapis_end_blasting");
+        // redstone
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.REDSTONE_END_ORE), Items.REDSTONE, 0.1f, 200)
+                .addCriterion("has_end_redstone_ore", this.hasItem(BlocksHolder.REDSTONE_END_ORE)).build(consumer, "redstone_end_blasting");
+    }
+
+    private void extraOreSmelting(Consumer<IFinishedRecipe> consumer) {
+        // copper
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.COPPER_ORE), ItemHolder.COPPER_INGOT, 0.1f, 200)
+                .addCriterion("has_copper_ore", this.hasItem(BlocksHolder.COPPER_ORE)).build(consumer, "copper_smelting");
+        // tin
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.TIN_ORE), ItemHolder.TIN_INGOT, 0.1f, 200)
+                .addCriterion("has_tin_ore", this.hasItem(BlocksHolder.TIN_ORE)).build(consumer, "tin_smelting");
+    }
+
+    private void extraOreBlasting(Consumer<IFinishedRecipe> consumer) {
+        // copper
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.COPPER_ORE), ItemHolder.COPPER_INGOT, 0.1f, 100)
+                .addCriterion("has_copper_ore", this.hasItem(BlocksHolder.COPPER_ORE)).build(consumer, "copper_blasting");
+        // tin
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.TIN_ORE), ItemHolder.TIN_INGOT, 0.1f, 100)
+                .addCriterion("has_tin_ore", this.hasItem(BlocksHolder.TIN_ORE)).build(consumer, "tin_blasting");
+    }
+
+    private void netherOreSmelting(Consumer<IFinishedRecipe> consumer) {
+        // coal
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.COAL_NETHER_ORE), Items.COAL, 0.1f, 200)
+                .addCriterion("has_nether_coal_ore", this.hasItem(BlocksHolder.COAL_NETHER_ORE)).build(consumer, "coal_nether_smelting");
+        // diamond
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.DIAMOND_NETHER_ORE), Items.DIAMOND, 0.1f, 200)
+                .addCriterion("has_nether_diamond_ore", this.hasItem(BlocksHolder.DIAMOND_NETHER_ORE)).build(consumer, "diamond_nether_smelting");
+        // emerald
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.EMERALD_NETHER_ORE), Items.EMERALD, 0.1f, 200)
+                .addCriterion("has_nether_emerald_ore", this.hasItem(BlocksHolder.EMERALD_NETHER_ORE)).build(consumer, "emerald_nether_smelting");
+        // gold
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.GOLD_NETHER_ORE), Items.GOLD_INGOT, 0.1f, 200)
+                .addCriterion("has_nether_gold_ore", this.hasItem(BlocksHolder.GOLD_NETHER_ORE)).build(consumer, "gold_nether_smelting");
+        // iron
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.IRON_NETHER_ORE), Items.IRON_INGOT, 0.1f, 200)
+                .addCriterion("has_nether_iron_ore", this.hasItem(BlocksHolder.IRON_NETHER_ORE)).build(consumer, "iron_nether_smelting");
+        // lapis
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.LAPIS_NETHER_ORE), Items.LAPIS_LAZULI, 0.1f, 200)
+                .addCriterion("has_nether_lapis_ore", this.hasItem(BlocksHolder.LAPIS_NETHER_ORE)).build(consumer, "lapis_nether_smelting");
+        // redstone
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.REDSTONE_NETHER_ORE), Items.REDSTONE, 0.1f, 200)
+                .addCriterion("has_nether_redstone_ore", this.hasItem(BlocksHolder.REDSTONE_NETHER_ORE)).build(consumer, "redstone_nether_smelting");
+    }
+
+    private void netherOreBlasting(Consumer<IFinishedRecipe> consumer) {
+        // coal
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.COAL_NETHER_ORE), Items.COAL, 0.1f, 100)
+                .addCriterion("has_nether_coal_ore", this.hasItem(BlocksHolder.COAL_NETHER_ORE)).build(consumer, "coal_nether_blasting");
+        // diamond
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.DIAMOND_NETHER_ORE), Items.DIAMOND, 0.1f, 200)
+                .addCriterion("has_nether_diamond_ore", this.hasItem(BlocksHolder.DIAMOND_NETHER_ORE)).build(consumer, "diamond_nether_blasting");
+        // emerald
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.EMERALD_NETHER_ORE), Items.EMERALD, 0.1f, 200)
+                .addCriterion("has_nether_emerald_ore", this.hasItem(BlocksHolder.EMERALD_NETHER_ORE)).build(consumer, "emerald_nether_blasting");
+        // gold
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.GOLD_NETHER_ORE), Items.GOLD_INGOT, 0.1f, 200)
+                .addCriterion("has_nether_gold_ore", this.hasItem(BlocksHolder.GOLD_NETHER_ORE)).build(consumer, "gold_nether_blasting");
+        // iron
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.IRON_NETHER_ORE), Items.IRON_INGOT, 0.1f, 200)
+                .addCriterion("has_nether_iron_ore", this.hasItem(BlocksHolder.IRON_NETHER_ORE)).build(consumer, "iron_nether_blasting");
+        // lapis
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.LAPIS_NETHER_ORE), Items.LAPIS_LAZULI, 0.1f, 200)
+                .addCriterion("has_nether_lapis_ore", this.hasItem(BlocksHolder.LAPIS_NETHER_ORE)).build(consumer, "lapis_nether_blasting");
+        // redstone
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.REDSTONE_NETHER_ORE), Items.REDSTONE, 0.1f, 200)
+                .addCriterion("has_nether_redstone_ore", this.hasItem(BlocksHolder.REDSTONE_NETHER_ORE)).build(consumer, "redstone_nether_blasting");
+    }
+
 }

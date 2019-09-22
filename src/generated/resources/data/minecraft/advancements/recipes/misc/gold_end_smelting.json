@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:gold_end_smelting"
+    ]
+  },
+  "criteria": {
+    "has_end_gold_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:gold_end_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:gold_end_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_end_gold_ore",
+      "has_the_recipe"
+    ]
+  ]
+}
