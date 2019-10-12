@@ -18,6 +18,8 @@ public class ItemHolder {
     @ObjectHolder(RegistryHolder.MODID + ":" + RegistryHolder.TIN_INGOT)
     public static Item TIN_INGOT;
 
+    // TODO add more ingot, nugget
+
     /**
      * item registerer
      */

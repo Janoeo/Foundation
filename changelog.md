@@ -1,3 +1,6 @@
+### 1.8
++ add lead and silver ore
++ fix missing loot table
 ### 1.7
 + add french localization
 + add uranium ore

@@ -7,11 +7,11 @@ import net.minecraftforge.common.ToolType;
 
 public class BasicOre extends Block {
 
-    public BasicOre(String registryName) {
+    public BasicOre(String registryName, int harvestLevel) {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)
                 .hardnessAndResistance(3f)
-                .harvestLevel(1)
+                .harvestLevel(harvestLevel)
                 .harvestTool(ToolType.PICKAXE)
         );
         this.setRegistryName(registryName);
