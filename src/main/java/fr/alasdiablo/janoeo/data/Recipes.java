@@ -34,7 +34,7 @@ public class Recipes extends RecipeProvider {
         this.extraOreSmelting(consumer);
         this.extraOreBlasting(consumer);
         this.netherOreSmelting(consumer);
-        this.netherOreSmelting(consumer);
+        this.netherOreBlasting(consumer);
     }
 
     private void endOreSmelting(Consumer<IFinishedRecipe> consumer) {
