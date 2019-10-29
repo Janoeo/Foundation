@@ -45,4 +45,8 @@ public class RegistryHolder {
     static final String URANIUM_ORE                 = "uranium_ore";
     static final String SILVER_ORE                  = "silver_ore";
     static final String LEAD_ORE                    = "lead_ore";
+    static final String ALUMINIUM_INGOT             = "aluminium_ingot";
+    static final String LEAD_INGOT                  = "lead_ingot";
+    static final String SILVER_INGOT                = "silver_ingot";
+    static final String URANIUM_INGOT               = "uranium_ingot";
 }

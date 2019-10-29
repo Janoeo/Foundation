@@ -39,5 +39,9 @@
   "block.janoeo.aluminium_ore": "Aluminium Ore",
   "block.janoeo.uranium_ore": "Uranium Ore",
   "block.janoeo.silver_ore": "Silver Ore",
-  "block.janoeo.lead_ore": "Lead Ore"
+  "block.janoeo.lead_ore": "Lead Ore",
+  "item.janoeo.aluminium_ingot": "Aluminium Ingot",
+  "item.janoeo.lead_ingot": "Lead Ingot",
+  "item.janoeo.silver_ingot": "Silver Ingot",
+  "item.janoeo.uranium_ingot": "Uranium Ingot"
 }

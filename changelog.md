@@ -1,6 +1,14 @@
+### 1.9
++ add lead, silver, uranium and aluminium ingot
+
+### 1.8.1
++ fix uranium ore with bad tags
++ fix missing tag for silver and lead ore
+
 ### 1.8
 + add lead and silver ore
 + fix missing loot table
+
 ### 1.7
 + add french localization
 + add uranium ore
@@ -9,24 +17,31 @@
 + fix dense redstone ore
 + update forge from 1.14.4-28.0.55 to 1.14.4-28.1.1
 + update mcp from 20190912 to 20190915
+
 ### 1.6
 + update mcp to 20190912
 + dense ore phase 2, dense ore in the nether
 + fix end/nether redstone ore do not stop lit
+
 ### 1.5
 + add a config file
+
 ### 1.4
 + add dense ore in overworld
+
 ### 1.3
 + add copper and tin ore
 + add copper and tin ingot
 + add a new item group for the non-ore
+
 ### 1.2
 + fix missing xp drop
 + fix end/nether redstone ore
 + add tags for more compatiblity with other mods
 + rewrite/clean up the source code of the ore block
+
 ### 1.1
 + add end ore generation
+
 ### 1.0
 + initial release
