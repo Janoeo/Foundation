@@ -1,3 +1,7 @@
+### 1.9.1
++ fix fix english variante in tag name (aluminium vs aluminum)
++ fix missing file for ingots tag
+
 ### 1.9
 + add lead, silver, uranium and aluminium ingot
 
