@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "janoeo:aluminium_ore"
+    "#forge:ores/aluminium"
   ]
 }

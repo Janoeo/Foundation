@@ -1,5 +1,9 @@
+### 1.9.2
++ fix english variants in tag name (aluminium vs aluminum) (once again...)
++ fix missing recipes
+
 ### 1.9.1
-+ fix fix english variante in tag name (aluminium vs aluminum)
++ fix english variants in tag name (aluminium vs aluminum)
 + fix missing file for ingots tag
 
 ### 1.9
