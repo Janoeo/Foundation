@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.utils;
 
+import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.holder.BlocksHolder;
 import fr.alasdiablo.janoeo.holder.ItemHolder;
 import net.minecraft.block.Blocks;
@@ -14,8 +15,6 @@ import net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType;
 import net.minecraft.world.gen.feature.ReplaceBlockConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.registries.ForgeRegistries;
 
 /**
@@ -55,7 +54,11 @@ public class ModSetup {
      * Mod setup init
      */
     public void init() {
-        JANOEOConfig.Config config = JANOEOConfig.CONFIG;
+        GlobalConfig.Config config = GlobalConfig.CONFIG;
+
+        ForgeRegistries.BIOMES.forEach(biome -> {
+
+        });
 
         if (config.DENSE_ORE_GEN.get()) {
             Biomes.MOUNTAINS.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(Blocks.EMERALD_ORE.getDefaultState(), BlocksHolder.DENSE_EMERALD_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(640, 4, 0, 32)));

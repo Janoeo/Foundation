@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.utils;
+package fr.alasdiablo.janoeo.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
@@ -6,7 +6,7 @@ import org.apache.commons.lang3.tuple.Pair;
 /**
  * Janoeo config files
  */
-public class JANOEOConfig {
+public class GlobalConfig {
 
     /**
      * Janoeo config spec

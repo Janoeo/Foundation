@@ -1,3 +1,6 @@
+### 2.0
++ internal rework (code)
+
 ### 1.9.2
 + fix english variants in tag name (aluminium vs aluminum) (once again...)
 + fix missing recipes
