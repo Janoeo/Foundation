@@ -2,6 +2,7 @@ package fr.alasdiablo.janoeo;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.NetherConfig;
+import fr.alasdiablo.janoeo.config.OverworldConfig;
 import fr.alasdiablo.janoeo.holder.RegistryHolder;
 import fr.alasdiablo.janoeo.utils.*;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -27,6 +28,7 @@ public class JANOEO {
     public JANOEO() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GlobalConfig.CONFIG_SPEC);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, NetherConfig.CONFIG_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, OverworldConfig.CONFIG_SPEC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
     }
 
