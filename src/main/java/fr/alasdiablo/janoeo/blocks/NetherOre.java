@@ -23,7 +23,7 @@ public class NetherOre extends OreBlock {
     }
 
     @Override
-    protected int func_220281_a(Random random) {
+    protected int getExperience(Random random) {
         if (this == BlocksHolder.COAL_NETHER_ORE) {
             return MathHelper.nextInt(random, 0, 2);
         } else if (this == BlocksHolder.DIAMOND_NETHER_ORE) {
@@ -33,7 +33,7 @@ public class NetherOre extends OreBlock {
         } else if (this == BlocksHolder.LAPIS_NETHER_ORE) {
             return MathHelper.nextInt(random, 2, 5);
         } else {
-            return super.func_220281_a(random);
+            return super.getExperience(random);
         }
     }
 }

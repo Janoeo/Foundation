@@ -15,13 +15,13 @@ public class GlobalConfig {
     /**
      * Janoeo config
      */
-    public static final Config CONFIG;
+    public static final GlobalConfig.Config CONFIG;
 
     /**
      * Janoeo static constructor
      */
     static {
-        Pair<Config, ForgeConfigSpec> configPair = new ForgeConfigSpec.Builder().configure(Config::new);
+        Pair<GlobalConfig.Config, ForgeConfigSpec> configPair = new ForgeConfigSpec.Builder().configure(GlobalConfig.Config::new);
         CONFIG_SPEC = configPair.getRight();
         CONFIG = configPair.getLeft();
     }
@@ -46,6 +46,8 @@ public class GlobalConfig {
          */
         public final ForgeConfigSpec.BooleanValue DENSE_ORE_GEN;
 
+        public final ForgeConfigSpec.BooleanValue NETHER_DENSE_ORE_GEN;
+
         /**
          * extra ore generation config value
          */
@@ -61,7 +63,8 @@ public class GlobalConfig {
 
             NETHER_ORE_GEN = builder.comment("Nether ore generation: disable / enable").define("netherOreGen", true);
             END_ORE_GEN = builder.comment("End ore generation: disable / enable").define("endOreGen", true);
-            DENSE_ORE_GEN = builder.comment("Dense ore generation: disable / enable").define("denseOreGen", true);
+            DENSE_ORE_GEN = builder.comment("Overworld dense ore generation: disable / enable").define("denseOreGen", true);
+            NETHER_DENSE_ORE_GEN = builder.comment("Nether dense ore generation: disable / enable").define("denseOreGen", true);
             EXTRA_ORE_GEN = builder.comment("Extra ore generation: disable / enable").define("extraOreGen", true);
 
             builder.pop();
