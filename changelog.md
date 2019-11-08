@@ -1,3 +1,8 @@
+### 2.1
++ add new mobs mechanism
+    + zombie pigman attack the player if the player break a nether ore
+    + enderman attack the player if the player break a end ore
+
 ### 2.0
 + internal rework (code)
 + add a highly modularity (more option in config file)
