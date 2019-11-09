@@ -1,3 +1,6 @@
+### 2.1.1
++ fix mistake in 3 line of code, causing problem with the ore generation
+
 ### 2.1
 + add new mobs mechanism
     + zombie pigman attack the player if the player break a nether ore

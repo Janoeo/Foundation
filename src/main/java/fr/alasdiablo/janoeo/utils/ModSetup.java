@@ -51,9 +51,9 @@ public class ModSetup {
      */
     public void init() {
         List<IWorldGenerator> generators = new ArrayList<>();
-        generators.add(OverworldOreGenerator::new);
-        generators.add(NetherOreGenerator::new);
-        generators.add(EndOreGenerator::new);
+        generators.add(new OverworldOreGenerator());
+        generators.add(new NetherOreGenerator());
+        generators.add(new EndOreGenerator());
         generators.forEach(IWorldGenerator::startWorldGeneration);
     }
 }
