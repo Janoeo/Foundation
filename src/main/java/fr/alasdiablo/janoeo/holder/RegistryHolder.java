@@ -49,4 +49,7 @@ public class RegistryHolder {
     static final String LEAD_INGOT                  = "lead_ingot";
     static final String SILVER_INGOT                = "silver_ingot";
     static final String URANIUM_INGOT               = "uranium_ingot";
+    public static final String DIAMOND_DUST         = "diamond_dust";
+    public static final String GOLD_DUST            = "gold_dust";
+    public static final String IRON_DUST            = "iron_dust";
 }
