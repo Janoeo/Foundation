@@ -4,7 +4,6 @@ import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.blocks.*;
 import fr.alasdiablo.janoeo.blocks.end.*;
 import fr.alasdiablo.janoeo.blocks.nether.*;
-import fr.alasdiablo.janoeo.blocks.overworld.RedstoneOre;
 import fr.alasdiablo.janoeo.utils.Registries;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -19,42 +18,6 @@ import net.minecraftforge.registries.ObjectHolder;
  */
 @SuppressWarnings("unused")
 public class BlocksHolder {
-
-    /*------------------------------------+
-    |                                     |
-    |         Overworld Ore List          |
-    |                                     |
-    +-------------------------------------*/
-    @ObjectHolder(Registries.MODID + ":" + Registries.COPPER_ORE)
-    public static Block COPPER_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.TIN_ORE)
-    public static Block TIN_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_COAL_ORE)
-    public static Block DENSE_COAL_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_COPPER_ORE)
-    public static Block DENSE_COPPER_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_DIAMOND_ORE)
-    public static Block DENSE_DIAMOND_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_EMERALD_ORE)
-    public static Block DENSE_EMERALD_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_GOLD_ORE)
-    public static Block DENSE_GOLD_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_IRON_ORE)
-    public static Block DENSE_IRON_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_LAPIS_ORE)
-    public static Block DENSE_LAPIS_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_REDSTONE_ORE)
-    public static Block DENSE_REDSTONE_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_TIN_ORE)
-    public static Block DENSE_TIN_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.ALUMINIUM_ORE)
-    public static Block ALUMINIUM_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.URANIUM_ORE)
-    public static Block URANIUM_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.SILVER_ORE)
-    public static Block SILVER_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.LEAD_ORE)
-    public static Block LEAD_ORE;
 
     /*------------------------------------+
     |                                     |
@@ -120,26 +83,6 @@ public class BlocksHolder {
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            /*------------------------------------+
-            |                                     |
-            |       Overworld Ore register        |
-            |                                     |
-            +-------------------------------------*/
-            event.getRegistry().register(new BasicOre(Registries.COPPER_ORE, 1));
-            event.getRegistry().register(new BasicOre(Registries.TIN_ORE, 1));
-            event.getRegistry().register(new BasicOre(Registries.DENSE_COAL_ORE, 1));
-            event.getRegistry().register(new RedstoneOre(Registries.DENSE_COPPER_ORE));
-            event.getRegistry().register(new BasicOre(Registries.DENSE_DIAMOND_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.DENSE_EMERALD_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.DENSE_GOLD_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.DENSE_IRON_ORE, 1));
-            event.getRegistry().register(new BasicOre(Registries.DENSE_LAPIS_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.DENSE_REDSTONE_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.DENSE_TIN_ORE, 1));
-            event.getRegistry().register(new BasicOre(Registries.ALUMINIUM_ORE, 1));
-            event.getRegistry().register(new BasicOre(Registries.URANIUM_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.SILVER_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.LEAD_ORE, 1));
 
             /*------------------------------------+
             |                                     |
@@ -179,26 +122,6 @@ public class BlocksHolder {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoOreGroup);
-            /*------------------------------------+
-            |                                     |
-            |       Overworld Ore register        |
-            |                                     |
-            +-------------------------------------*/
-            event.getRegistry().register(new BlockItem(BlocksHolder.COPPER_ORE, properties).setRegistryName(Registries.COPPER_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.TIN_ORE, properties).setRegistryName(Registries.TIN_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_COAL_ORE, properties).setRegistryName(Registries.DENSE_COAL_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_COPPER_ORE, properties).setRegistryName(Registries.DENSE_COPPER_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_DIAMOND_ORE, properties).setRegistryName(Registries.DENSE_DIAMOND_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_EMERALD_ORE, properties).setRegistryName(Registries.DENSE_EMERALD_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_GOLD_ORE, properties).setRegistryName(Registries.DENSE_GOLD_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_IRON_ORE, properties).setRegistryName(Registries.DENSE_IRON_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_LAPIS_ORE, properties).setRegistryName(Registries.DENSE_LAPIS_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_REDSTONE_ORE, properties).setRegistryName(Registries.DENSE_REDSTONE_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.DENSE_TIN_ORE, properties).setRegistryName(Registries.DENSE_TIN_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.ALUMINIUM_ORE, properties).setRegistryName(Registries.ALUMINIUM_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.URANIUM_ORE, properties).setRegistryName(Registries.URANIUM_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.SILVER_ORE, properties).setRegistryName(Registries.SILVER_ORE));
-            event.getRegistry().register(new BlockItem(BlocksHolder.LEAD_ORE, properties).setRegistryName(Registries.LEAD_ORE));
 
             /*------------------------------------+
             |                                     |
