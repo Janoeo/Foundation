@@ -1,14 +1,13 @@
 package fr.alasdiablo.janoeo.utils;
 
 import fr.alasdiablo.janoeo.holder.BlocksHolder;
-import fr.alasdiablo.janoeo.holder.ItemHolder;
+import fr.alasdiablo.janoeo.ingots.IngotsItems;
 import fr.alasdiablo.janoeo.world.EndOreGenerator;
 import fr.alasdiablo.janoeo.world.IWorldGenerator;
 import fr.alasdiablo.janoeo.world.NetherOreGenerator;
 import fr.alasdiablo.janoeo.world.OverworldOreGenerator;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +41,7 @@ public class ModSetup {
          */
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ItemHolder.COPPER_INGOT);
+            return new ItemStack(IngotsItems.COPPER_INGOT);
         }
     };
 
