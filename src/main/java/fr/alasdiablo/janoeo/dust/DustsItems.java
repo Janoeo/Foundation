@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
+@SuppressWarnings("unused")
 public class DustsItems {
 
     @ObjectHolder(Registries.MODID + ":" + Registries.DIAMOND_DUST)

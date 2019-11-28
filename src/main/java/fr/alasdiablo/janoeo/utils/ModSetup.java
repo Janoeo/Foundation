@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.utils;
 
-import fr.alasdiablo.janoeo.holder.BlocksHolder;
 import fr.alasdiablo.janoeo.ingots.IngotsItems;
+import fr.alasdiablo.janoeo.ore.nether.NetherOresBlocks;
 import fr.alasdiablo.janoeo.world.EndOreGenerator;
 import fr.alasdiablo.janoeo.world.IWorldGenerator;
 import fr.alasdiablo.janoeo.world.NetherOreGenerator;
@@ -27,7 +27,7 @@ public class ModSetup {
          */
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(BlocksHolder.COAL_NETHER_ORE);
+            return new ItemStack(NetherOresBlocks.COAL_NETHER_ORE);
         }
     };
 

@@ -1,13 +1,12 @@
 package fr.alasdiablo.janoeo.blocks;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
-import fr.alasdiablo.janoeo.holder.BlocksHolder;
+import fr.alasdiablo.janoeo.ore.end.EndOresBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.monster.EndermanEntity;
-import net.minecraft.entity.monster.ZombiePigmanEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -33,13 +32,13 @@ public class EndOre extends OreBlock {
 
     @Override
     protected int getExperience(Random random) {
-        if (this == BlocksHolder.COAL_END_ORE) {
+        if (this == EndOresBlocks.COAL_END_ORE) {
             return MathHelper.nextInt(random, 0, 2);
-        } else if (this == BlocksHolder.DIAMOND_END_ORE) {
+        } else if (this == EndOresBlocks.DIAMOND_END_ORE) {
             return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlocksHolder.EMERALD_END_ORE) {
+        } else if (this == EndOresBlocks.EMERALD_END_ORE) {
             return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlocksHolder.LAPIS_END_ORE) {
+        } else if (this == EndOresBlocks.LAPIS_END_ORE) {
             return MathHelper.nextInt(random, 2, 5);
         } else {
             return super.getExperience(random);

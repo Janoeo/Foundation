@@ -11,7 +11,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
-public class OresBlocks {
+@SuppressWarnings("unused")
+public class OverworldOresBlocks {
 
     @ObjectHolder(Registries.MODID + ":" + Registries.COPPER_ORE)
     public static Block COPPER_ORE;
@@ -41,12 +42,12 @@ public class OresBlocks {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoOreGroup);
-            event.getRegistry().register(new BlockItem(OresBlocks.COPPER_ORE, properties).setRegistryName(Registries.COPPER_ORE));
-            event.getRegistry().register(new BlockItem(OresBlocks.TIN_ORE, properties).setRegistryName(Registries.TIN_ORE));
-            event.getRegistry().register(new BlockItem(OresBlocks.ALUMINIUM_ORE, properties).setRegistryName(Registries.ALUMINIUM_ORE));
-            event.getRegistry().register(new BlockItem(OresBlocks.URANIUM_ORE, properties).setRegistryName(Registries.URANIUM_ORE));
-            event.getRegistry().register(new BlockItem(OresBlocks.SILVER_ORE, properties).setRegistryName(Registries.SILVER_ORE));
-            event.getRegistry().register(new BlockItem(OresBlocks.LEAD_ORE, properties).setRegistryName(Registries.LEAD_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.COPPER_ORE, properties).setRegistryName(Registries.COPPER_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.TIN_ORE, properties).setRegistryName(Registries.TIN_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.ALUMINIUM_ORE, properties).setRegistryName(Registries.ALUMINIUM_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.URANIUM_ORE, properties).setRegistryName(Registries.URANIUM_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.SILVER_ORE, properties).setRegistryName(Registries.SILVER_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.LEAD_ORE, properties).setRegistryName(Registries.LEAD_ORE));
         }
     }
 }

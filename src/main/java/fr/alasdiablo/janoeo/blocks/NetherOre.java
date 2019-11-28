@@ -1,14 +1,11 @@
 package fr.alasdiablo.janoeo.blocks;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
-import fr.alasdiablo.janoeo.holder.BlocksHolder;
+import fr.alasdiablo.janoeo.ore.nether.NetherOresBlocks;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.GlassBlock;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.monster.ZombiePigmanEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -35,13 +32,13 @@ public class NetherOre extends OreBlock {
 
     @Override
     protected int getExperience(Random random) {
-        if (this == BlocksHolder.COAL_NETHER_ORE) {
+        if (this == NetherOresBlocks.COAL_NETHER_ORE) {
             return MathHelper.nextInt(random, 0, 2);
-        } else if (this == BlocksHolder.DIAMOND_NETHER_ORE) {
+        } else if (this == NetherOresBlocks.DIAMOND_NETHER_ORE) {
             return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlocksHolder.EMERALD_NETHER_ORE) {
+        } else if (this == NetherOresBlocks.EMERALD_NETHER_ORE) {
             return MathHelper.nextInt(random, 3, 7);
-        } else if (this == BlocksHolder.LAPIS_NETHER_ORE) {
+        } else if (this == NetherOresBlocks.LAPIS_NETHER_ORE) {
             return MathHelper.nextInt(random, 2, 5);
         } else {
             return super.getExperience(random);

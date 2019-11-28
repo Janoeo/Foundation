@@ -12,7 +12,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
-public class DenseOresBlocks {
+@SuppressWarnings("unused")
+public class OverworldDenseOresBlocks {
 
     @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_COAL_ORE)
     public static Block DENSE_COAL_ORE;
@@ -51,15 +52,15 @@ public class DenseOresBlocks {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoOreGroup);
-            event.getRegistry().register(new BlockItem(DenseOresBlocks.DENSE_COAL_ORE, properties).setRegistryName(Registries.DENSE_COAL_ORE));
-            event.getRegistry().register(new BlockItem(DenseOresBlocks.DENSE_COPPER_ORE, properties).setRegistryName(Registries.DENSE_COPPER_ORE));
-            event.getRegistry().register(new BlockItem(DenseOresBlocks.DENSE_DIAMOND_ORE, properties).setRegistryName(Registries.DENSE_DIAMOND_ORE));
-            event.getRegistry().register(new BlockItem(DenseOresBlocks.DENSE_EMERALD_ORE, properties).setRegistryName(Registries.DENSE_EMERALD_ORE));
-            event.getRegistry().register(new BlockItem(DenseOresBlocks.DENSE_GOLD_ORE, properties).setRegistryName(Registries.DENSE_GOLD_ORE));
-            event.getRegistry().register(new BlockItem(DenseOresBlocks.DENSE_IRON_ORE, properties).setRegistryName(Registries.DENSE_IRON_ORE));
-            event.getRegistry().register(new BlockItem(DenseOresBlocks.DENSE_LAPIS_ORE, properties).setRegistryName(Registries.DENSE_LAPIS_ORE));
-            event.getRegistry().register(new BlockItem(DenseOresBlocks.DENSE_REDSTONE_ORE, properties).setRegistryName(Registries.DENSE_REDSTONE_ORE));
-            event.getRegistry().register(new BlockItem(DenseOresBlocks.DENSE_TIN_ORE, properties).setRegistryName(Registries.DENSE_TIN_ORE));
+            event.getRegistry().register(new BlockItem(OverworldDenseOresBlocks.DENSE_COAL_ORE, properties).setRegistryName(Registries.DENSE_COAL_ORE));
+            event.getRegistry().register(new BlockItem(OverworldDenseOresBlocks.DENSE_COPPER_ORE, properties).setRegistryName(Registries.DENSE_COPPER_ORE));
+            event.getRegistry().register(new BlockItem(OverworldDenseOresBlocks.DENSE_DIAMOND_ORE, properties).setRegistryName(Registries.DENSE_DIAMOND_ORE));
+            event.getRegistry().register(new BlockItem(OverworldDenseOresBlocks.DENSE_EMERALD_ORE, properties).setRegistryName(Registries.DENSE_EMERALD_ORE));
+            event.getRegistry().register(new BlockItem(OverworldDenseOresBlocks.DENSE_GOLD_ORE, properties).setRegistryName(Registries.DENSE_GOLD_ORE));
+            event.getRegistry().register(new BlockItem(OverworldDenseOresBlocks.DENSE_IRON_ORE, properties).setRegistryName(Registries.DENSE_IRON_ORE));
+            event.getRegistry().register(new BlockItem(OverworldDenseOresBlocks.DENSE_LAPIS_ORE, properties).setRegistryName(Registries.DENSE_LAPIS_ORE));
+            event.getRegistry().register(new BlockItem(OverworldDenseOresBlocks.DENSE_REDSTONE_ORE, properties).setRegistryName(Registries.DENSE_REDSTONE_ORE));
+            event.getRegistry().register(new BlockItem(OverworldDenseOresBlocks.DENSE_TIN_ORE, properties).setRegistryName(Registries.DENSE_TIN_ORE));
         }
     }
 
