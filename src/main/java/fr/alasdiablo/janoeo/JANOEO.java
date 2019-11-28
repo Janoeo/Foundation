@@ -4,7 +4,7 @@ import fr.alasdiablo.janoeo.config.EndConfig;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.NetherConfig;
 import fr.alasdiablo.janoeo.config.OverworldConfig;
-import fr.alasdiablo.janoeo.holder.RegistryHolder;
+import fr.alasdiablo.janoeo.utils.Registries;
 import fr.alasdiablo.janoeo.utils.*;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -15,7 +15,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 /**
  * Main class of the mods
  */
-@Mod(RegistryHolder.MODID)
+@Mod(Registries.MODID)
 public class JANOEO {
 
     /**

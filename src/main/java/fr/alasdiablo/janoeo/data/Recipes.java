@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.data;
 
 import fr.alasdiablo.janoeo.holder.BlocksHolder;
-import fr.alasdiablo.janoeo.holder.ItemHolder;
+import fr.alasdiablo.janoeo.ingots.IngotsItems;
 import net.minecraft.data.CookingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
@@ -87,43 +87,43 @@ public class Recipes extends RecipeProvider {
 
     private void extraOreSmelting(Consumer<IFinishedRecipe> consumer) {
         // copper
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.COPPER_ORE), ItemHolder.COPPER_INGOT, 0.1f, 200)
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.COPPER_ORE), IngotsItems.COPPER_INGOT, 0.1f, 200)
                 .addCriterion("has_copper_ore", this.hasItem(BlocksHolder.COPPER_ORE)).build(consumer, "copper_smelting");
         // tin
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.TIN_ORE), ItemHolder.TIN_INGOT, 0.1f, 200)
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.TIN_ORE), IngotsItems.TIN_INGOT, 0.1f, 200)
                 .addCriterion("has_tin_ore", this.hasItem(BlocksHolder.TIN_ORE)).build(consumer, "tin_smelting");
         // aluminium
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.ALUMINIUM_ORE), ItemHolder.ALUMINIUM_INGOT, 0.1f, 200)
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.ALUMINIUM_ORE), IngotsItems.ALUMINIUM_INGOT, 0.1f, 200)
                 .addCriterion("has_aluminium_ore", this.hasItem(BlocksHolder.ALUMINIUM_ORE)).build(consumer, "aluminium_smelting");
         // lead
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.LEAD_ORE), ItemHolder.LEAD_INGOT, 0.1f, 200)
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.LEAD_ORE), IngotsItems.LEAD_INGOT, 0.1f, 200)
                 .addCriterion("has_lead_ore", this.hasItem(BlocksHolder.LEAD_ORE)).build(consumer, "lead_smelting");
         // silver
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.SILVER_ORE), ItemHolder.SILVER_INGOT, 0.1f, 200)
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.SILVER_ORE), IngotsItems.SILVER_INGOT, 0.1f, 200)
                 .addCriterion("has_silver_ore", this.hasItem(BlocksHolder.SILVER_ORE)).build(consumer, "silver_smelting");
         // uranium
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.URANIUM_ORE), ItemHolder.URANIUM_INGOT, 0.1f, 200)
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlocksHolder.URANIUM_ORE), IngotsItems.URANIUM_INGOT, 0.1f, 200)
                 .addCriterion("has_uranium_ore", this.hasItem(BlocksHolder.URANIUM_ORE)).build(consumer, "uranium_smelting");
     }
 
     private void extraOreBlasting(Consumer<IFinishedRecipe> consumer) {
         // copper
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.COPPER_ORE), ItemHolder.COPPER_INGOT, 0.1f, 100)
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.COPPER_ORE), IngotsItems.COPPER_INGOT, 0.1f, 100)
                 .addCriterion("has_copper_ore", this.hasItem(BlocksHolder.COPPER_ORE)).build(consumer, "copper_blasting");
         // tin
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.TIN_ORE), ItemHolder.TIN_INGOT, 0.1f, 100)
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.TIN_ORE), IngotsItems.TIN_INGOT, 0.1f, 100)
                 .addCriterion("has_tin_ore", this.hasItem(BlocksHolder.TIN_ORE)).build(consumer, "tin_blasting");
         // aluminium
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.ALUMINIUM_ORE), ItemHolder.ALUMINIUM_INGOT, 0.1f, 100)
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.ALUMINIUM_ORE), IngotsItems.ALUMINIUM_INGOT, 0.1f, 100)
                 .addCriterion("has_aluminium_ore", this.hasItem(BlocksHolder.ALUMINIUM_ORE)).build(consumer, "aluminium_blasting");
         // lead
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.LEAD_ORE), ItemHolder.LEAD_INGOT, 0.1f, 100)
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.LEAD_ORE), IngotsItems.LEAD_INGOT, 0.1f, 100)
                 .addCriterion("has_lead_ore", this.hasItem(BlocksHolder.LEAD_ORE)).build(consumer, "lead_blasting");
         // silver
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.SILVER_ORE), ItemHolder.SILVER_INGOT, 0.1f, 100)
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.SILVER_ORE), IngotsItems.SILVER_INGOT, 0.1f, 100)
                 .addCriterion("has_silver_ore", this.hasItem(BlocksHolder.SILVER_ORE)).build(consumer, "silver_blasting");
         // uranium
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.URANIUM_ORE), ItemHolder.URANIUM_INGOT, 0.1f, 100)
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlocksHolder.URANIUM_ORE), IngotsItems.URANIUM_INGOT, 0.1f, 100)
                 .addCriterion("has_uranium_ore", this.hasItem(BlocksHolder.URANIUM_ORE)).build(consumer, "uranium_blasting");
     }
 
