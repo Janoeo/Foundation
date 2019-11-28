@@ -43,5 +43,8 @@
   "item.janoeo.aluminium_ingot": "Aluminium Ingot",
   "item.janoeo.lead_ingot": "Lead Ingot",
   "item.janoeo.silver_ingot": "Silver Ingot",
-  "item.janoeo.uranium_ingot": "Uranium Ingot"
+  "item.janoeo.uranium_ingot": "Uranium Ingot",
+  "item.janoeo.diamond_dust": "Diamond Dust",
+  "item.janoeo.iron_dust": "Iron Dust",
+  "item.janoeo.gold_dust": "Gold Dust"
 }

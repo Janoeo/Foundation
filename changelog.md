@@ -1,3 +1,10 @@
+### 2.2
++ add dust
+    + diamond
+    + iron
+    + gold
++ continue tu rework the code of the mod
+
 ### 2.1.1
 + fix mistake in 3 line of code, causing problem with the ore generation
 
