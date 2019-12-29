@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.ore.overworld;
+package fr.alasdiablo.janoeo.ores.overworld;
 
 import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.blocks.BasicOre;

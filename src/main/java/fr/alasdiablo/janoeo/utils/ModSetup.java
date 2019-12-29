@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.utils;
 
 import fr.alasdiablo.janoeo.ingots.IngotsItems;
-import fr.alasdiablo.janoeo.ore.nether.NetherOresBlocks;
+import fr.alasdiablo.janoeo.ores.nether.NetherOresBlocks;
 import fr.alasdiablo.janoeo.world.EndOreGenerator;
 import fr.alasdiablo.janoeo.world.IWorldGenerator;
 import fr.alasdiablo.janoeo.world.NetherOreGenerator;

@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.ore.nether;
+package fr.alasdiablo.janoeo.ores.nether;
 
 import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.blocks.BasicNetherOre;

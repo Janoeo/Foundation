@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.ore.overworld;
+package fr.alasdiablo.janoeo.ores.overworld;
 
 import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.blocks.*;
@@ -26,6 +26,10 @@ public class OverworldOresBlocks {
     public static Block SILVER_ORE;
     @ObjectHolder(Registries.MODID + ":" + Registries.LEAD_ORE)
     public static Block LEAD_ORE;
+    @ObjectHolder(Registries.MODID + ":" + Registries.RUBY_ORE)
+    public static Block RUBY_ORE;
+    @ObjectHolder(Registries.MODID + ":" + Registries.SAPPHIRE_ORE)
+    public static Block SAPPHIRE_ORE;
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
@@ -37,6 +41,8 @@ public class OverworldOresBlocks {
             event.getRegistry().register(new BasicOre(Registries.URANIUM_ORE, 2));
             event.getRegistry().register(new BasicOre(Registries.SILVER_ORE, 2));
             event.getRegistry().register(new BasicOre(Registries.LEAD_ORE, 1));
+            event.getRegistry().register(new BasicOre(Registries.RUBY_ORE, 2));
+            event.getRegistry().register(new BasicOre(Registries.SAPPHIRE_ORE, 2));
         }
 
         @SubscribeEvent
@@ -48,6 +54,8 @@ public class OverworldOresBlocks {
             event.getRegistry().register(new BlockItem(OverworldOresBlocks.URANIUM_ORE, properties).setRegistryName(Registries.URANIUM_ORE));
             event.getRegistry().register(new BlockItem(OverworldOresBlocks.SILVER_ORE, properties).setRegistryName(Registries.SILVER_ORE));
             event.getRegistry().register(new BlockItem(OverworldOresBlocks.LEAD_ORE, properties).setRegistryName(Registries.LEAD_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.RUBY_ORE, properties).setRegistryName(Registries.RUBY_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.SAPPHIRE_ORE, properties).setRegistryName(Registries.SAPPHIRE_ORE));
         }
     }
 }

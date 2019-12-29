@@ -52,4 +52,8 @@ public class Registries {
     public static final String DIAMOND_DUST                = "diamond_dust";
     public static final String GOLD_DUST                   = "gold_dust";
     public static final String IRON_DUST                   = "iron_dust";
+    public static final String RUBY_ORE                    = "ruby_ore";
+    public static final String RUBY                        = "ruby";
+    public static final String SAPPHIRE_ORE                = "sapphire_ore";
+    public static final String SAPPHIRE                    = "sapphire";
 }

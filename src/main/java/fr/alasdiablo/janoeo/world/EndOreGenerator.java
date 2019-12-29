@@ -2,7 +2,7 @@ package fr.alasdiablo.janoeo.world;
 
 import fr.alasdiablo.janoeo.config.EndConfig;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
-import fr.alasdiablo.janoeo.ore.end.EndOresBlocks;
+import fr.alasdiablo.janoeo.ores.end.EndOresBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;

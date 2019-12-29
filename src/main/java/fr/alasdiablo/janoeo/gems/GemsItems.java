@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.dust;
+package fr.alasdiablo.janoeo.gems;
 
 import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.utils.Registries;
@@ -9,23 +9,20 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
 @SuppressWarnings("unused")
-public class DustsItems {
+public class GemsItems {
 
-    @ObjectHolder(Registries.MODID + ":" + Registries.DIAMOND_DUST)
-    public static Item DIAMOND_DUST;
-    @ObjectHolder(Registries.MODID + ":" + Registries.GOLD_DUST)
-    public static Item GOLD_DUST;
-    @ObjectHolder(Registries.MODID + ":" + Registries.IRON_DUST)
-    public static Item IRON_DUST;
+    @ObjectHolder(Registries.MODID + ":" + Registries.RUBY)
+    public static Item RUBY;
+    @ObjectHolder(Registries.MODID + ":" + Registries.SAPPHIRE)
+    public static Item SAPPHIRE;
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoItemGroup);
-            event.getRegistry().register(new Item(properties).setRegistryName(Registries.DIAMOND_DUST));
-            event.getRegistry().register(new Item(properties).setRegistryName(Registries.GOLD_DUST));
-            event.getRegistry().register(new Item(properties).setRegistryName(Registries.IRON_DUST));
+            event.getRegistry().register(new Item(properties).setRegistryName(Registries.RUBY));
+            event.getRegistry().register(new Item(properties).setRegistryName(Registries.SAPPHIRE));
         }
     }
 }

@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.blocks;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
-import fr.alasdiablo.janoeo.ore.nether.NetherOresBlocks;
+import fr.alasdiablo.janoeo.ores.nether.NetherOresBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;

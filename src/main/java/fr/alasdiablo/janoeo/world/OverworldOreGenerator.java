@@ -2,8 +2,8 @@ package fr.alasdiablo.janoeo.world;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.OverworldConfig;
-import fr.alasdiablo.janoeo.ore.overworld.OverworldDenseOresBlocks;
-import fr.alasdiablo.janoeo.ore.overworld.OverworldOresBlocks;
+import fr.alasdiablo.janoeo.ores.overworld.OverworldDenseOresBlocks;
+import fr.alasdiablo.janoeo.ores.overworld.OverworldOresBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
@@ -42,6 +42,10 @@ public class OverworldOreGenerator implements IWorldGenerator {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OverworldOresBlocks.LEAD_ORE.getDefaultState(), 12), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 63)));
                 if (overworldConfig.SILVER_ORE.get())
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OverworldOresBlocks.SILVER_ORE.getDefaultState(), 4), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 26)));
+                if (overworldConfig.RUBY_ORE.get())
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OverworldOresBlocks.RUBY_ORE.getDefaultState(), 2), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 26)));
+                if (overworldConfig.SAPPHIRE_ORE.get())
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OverworldOresBlocks.SAPPHIRE_ORE.getDefaultState(), 2), Placement.COUNT_RANGE, new CountRangeConfig(12, 1, 0, 26)));
                 if (globalConfig.DENSE_ORE_GEN.get()) {
                     if (overworldConfig.COPPER_ORE.get() && overworldConfig.DENSE_COPPER_ORE.get())
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Biome.createDecoratedFeature(Feature.EMERALD_ORE, new ReplaceBlockConfig(OverworldOresBlocks.COPPER_ORE.getDefaultState(), OverworldDenseOresBlocks.DENSE_COPPER_ORE.getDefaultState()), Placement.COUNT_RANGE, new CountRangeConfig(1260, 1, 0, 63)));

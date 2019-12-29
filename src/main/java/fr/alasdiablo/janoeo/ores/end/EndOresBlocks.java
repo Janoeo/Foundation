@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.ore.end;
+package fr.alasdiablo.janoeo.ores.end;
 
 import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.blocks.BasicEndOre;
