@@ -22,14 +22,14 @@ displayName="Just Another Nether/Overworld/End Ores" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="http://example.com/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="examplemod.png" #optional
+logoFile="janoeo.png" #optional
 # A text field displayed in the mod UI
-#credits="Thanks for this example mod goes to Java" #optional
+credits="AlasDiablo, lIotaMiu, Safyrus" #optional
 # A text field displayed in the mod UI
-authors="AlasDiablo, lIotaMiu" #optional
+authors="AlasDiablo, lIotaMiu, Safyrus" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Just Another Nether/Overworld/End Ores by AlasDiablo and lIotaMiu
+Just Another Nether/Overworld/End Ores by AlasDiablo, lIotaMiu and Safyrus.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.janoeo]] #optional
