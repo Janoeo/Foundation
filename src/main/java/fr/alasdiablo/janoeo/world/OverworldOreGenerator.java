@@ -2,10 +2,9 @@ package fr.alasdiablo.janoeo.world;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.OverworldConfig;
-import fr.alasdiablo.janoeo.ore.overworld.OverworldDenseOresBlocks;
-import fr.alasdiablo.janoeo.ore.overworld.OverworldOresBlocks;
+import fr.alasdiablo.janoeo.ores.overworld.OverworldDenseOresBlocks;
+import fr.alasdiablo.janoeo.ores.overworld.OverworldOresBlocks;
 import net.minecraft.block.Blocks;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
@@ -42,6 +41,10 @@ public class OverworldOreGenerator implements IWorldGenerator {
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OverworldOresBlocks.LEAD_ORE.getDefaultState(), 12)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(12, 1, 0, 63))));
                 if (overworldConfig.SILVER_ORE.get())
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OverworldOresBlocks.SILVER_ORE.getDefaultState(), 4)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(12, 1, 0, 26))));
+                if (overworldConfig.RUBY_ORE.get())
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OverworldOresBlocks.RUBY_ORE.getDefaultState(), 2)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(12, 1, 0, 26))));
+                if (overworldConfig.SAPPHIRE_ORE.get())
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, OverworldOresBlocks.SAPPHIRE_ORE.getDefaultState(), 2)).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(12, 1, 0, 26))));
                 if (globalConfig.DENSE_ORE_GEN.get()) {
                     if (overworldConfig.COPPER_ORE.get() && overworldConfig.DENSE_COPPER_ORE.get())
                         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE.func_225566_b_(new ReplaceBlockConfig(OverworldOresBlocks.COPPER_ORE.getDefaultState(), OverworldDenseOresBlocks.DENSE_COPPER_ORE.getDefaultState())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(1260, 1, 0, 63))));

@@ -2,13 +2,10 @@ package fr.alasdiablo.janoeo.world;
 
 import fr.alasdiablo.janoeo.config.EndConfig;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
-import fr.alasdiablo.janoeo.ore.end.EndOresBlocks;
+import fr.alasdiablo.janoeo.ores.end.EndOresBlocks;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.pattern.BlockMatcher;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placement.CountConfig;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.registries.ForgeRegistries;

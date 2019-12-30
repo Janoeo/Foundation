@@ -2,11 +2,9 @@ package fr.alasdiablo.janoeo.world;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.NetherConfig;
-import fr.alasdiablo.janoeo.ore.end.EndOresBlocks;
-import fr.alasdiablo.janoeo.ore.nether.NetherDenseOresBlocks;
-import fr.alasdiablo.janoeo.ore.nether.NetherOresBlocks;
+import fr.alasdiablo.janoeo.ores.nether.NetherDenseOresBlocks;
+import fr.alasdiablo.janoeo.ores.nether.NetherOresBlocks;
 import net.minecraft.block.Blocks;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
@@ -42,7 +40,7 @@ public class NetherOreGenerator implements IWorldGenerator {
                 if (netherConfig.DENSE_DIAMOND_NETHER_ORE.get())
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE.func_225566_b_(new ReplaceBlockConfig(NetherOresBlocks.DIAMOND_NETHER_ORE.getDefaultState(), NetherDenseOresBlocks.DENSE_DIAMOND_NETHER_ORE.getDefaultState())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(2560, 1, 0, 128))));
                 if (netherConfig.DENSE_EMERALD_NETHER_ORE.get())
-                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE.func_225566_b_(new ReplaceBlockConfig(EndOresBlocks.EMERALD_END_ORE.getDefaultState(), NetherDenseOresBlocks.DENSE_EMERALD_NETHER_ORE.getDefaultState())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(2560, 1, 0, 128))));
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE.func_225566_b_(new ReplaceBlockConfig(NetherOresBlocks.EMERALD_NETHER_ORE.getDefaultState(), NetherDenseOresBlocks.DENSE_EMERALD_NETHER_ORE.getDefaultState())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(2560, 1, 0, 128))));
                 if (netherConfig.DENSE_GOLD_NETHER_ORE.get())
                     biome.addFeature(GenerationStage.Decoration.UNDERGROUND_DECORATION, Feature.EMERALD_ORE.func_225566_b_(new ReplaceBlockConfig(NetherOresBlocks.GOLD_NETHER_ORE.getDefaultState(), NetherDenseOresBlocks.DENSE_GOLD_NETHER_ORE.getDefaultState())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(2560, 1, 0, 128))));
                 if (netherConfig.DENSE_IRON_NETHER_ORE.get())

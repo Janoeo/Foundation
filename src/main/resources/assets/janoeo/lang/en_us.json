@@ -46,5 +46,9 @@
   "item.janoeo.uranium_ingot": "Uranium Ingot",
   "item.janoeo.diamond_dust": "Diamond Dust",
   "item.janoeo.iron_dust": "Iron Dust",
-  "item.janoeo.gold_dust": "Gold Dust"
+  "item.janoeo.gold_dust": "Gold Dust",
+  "item.janoeo.ruby": "Ruby",
+  "item.janoeo.sapphire": "Sapphire",
+  "block.janoeo.ruby_ore": "Ruby Ore",
+  "block.janoeo.sapphire_ore": "Sapphire Ore"
 }

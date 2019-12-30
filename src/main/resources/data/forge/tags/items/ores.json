@@ -14,6 +14,8 @@
     "#forge:ores/aluminum",
     "#forge:ores/uranium",
     "#forge:ores/silver",
-    "#forge:ores/lead"
+    "#forge:ores/lead",
+    "#forge:ores/ruby",
+    "#forge:ores/sapphire"
   ]
 }

@@ -1,9 +1,10 @@
 package fr.alasdiablo.janoeo.data;
 
-import fr.alasdiablo.janoeo.ore.end.EndOresBlocks;
+import fr.alasdiablo.janoeo.gems.GemsItems;
+import fr.alasdiablo.janoeo.ores.end.EndOresBlocks;
 import fr.alasdiablo.janoeo.ingots.IngotsItems;
-import fr.alasdiablo.janoeo.ore.nether.NetherOresBlocks;
-import fr.alasdiablo.janoeo.ore.overworld.OverworldOresBlocks;
+import fr.alasdiablo.janoeo.ores.nether.NetherOresBlocks;
+import fr.alasdiablo.janoeo.ores.overworld.OverworldOresBlocks;
 import net.minecraft.data.CookingRecipeBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
@@ -106,6 +107,12 @@ public class Recipes extends RecipeProvider {
         // uranium
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(OverworldOresBlocks.URANIUM_ORE), IngotsItems.URANIUM_INGOT, 0.1f, 200)
                 .addCriterion("has_uranium_ore", this.hasItem(OverworldOresBlocks.URANIUM_ORE)).build(consumer, "uranium_smelting");
+        // ruby
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(OverworldOresBlocks.RUBY_ORE), GemsItems.RUBY, 0.1f, 200)
+                .addCriterion("has_ruby_ore", this.hasItem(OverworldOresBlocks.RUBY_ORE)).build(consumer, "ruby_smelting");
+        // sapphire
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(OverworldOresBlocks.SAPPHIRE_ORE), GemsItems.SAPPHIRE, 0.1f, 200)
+                .addCriterion("has_sapphire_ore", this.hasItem(OverworldOresBlocks.SAPPHIRE_ORE)).build(consumer, "sapphire_smelting");
     }
 
     private void extraOreBlasting(Consumer<IFinishedRecipe> consumer) {
@@ -127,6 +134,12 @@ public class Recipes extends RecipeProvider {
         // uranium
         CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(OverworldOresBlocks.URANIUM_ORE), IngotsItems.URANIUM_INGOT, 0.1f, 100)
                 .addCriterion("has_uranium_ore", this.hasItem(OverworldOresBlocks.URANIUM_ORE)).build(consumer, "uranium_blasting");
+        // ruby
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(OverworldOresBlocks.RUBY_ORE), GemsItems.RUBY, 0.1f, 100)
+                .addCriterion("has_ruby_ore", this.hasItem(OverworldOresBlocks.RUBY_ORE)).build(consumer, "ruby_blasting");
+        // sapphire
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(OverworldOresBlocks.SAPPHIRE_ORE), GemsItems.SAPPHIRE, 0.1f, 100)
+                .addCriterion("has_sapphire_ore", this.hasItem(OverworldOresBlocks.SAPPHIRE_ORE)).build(consumer, "sapphire_blasting");
     }
 
     private void netherOreSmelting(Consumer<IFinishedRecipe> consumer) {
