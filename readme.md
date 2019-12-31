@@ -28,6 +28,7 @@ Yes you can, just remember to put the name of the mod in the description of your
 
 - [Curseforge](https://www.curseforge.com/minecraft/mc-mods/janoeo)
 - [Planet Minecraft](https://www.planetminecraft.com/mod/janoeo-just-another-nether-overworld-end-ores/)
+- [NexusMods](https://www.nexusmods.com/minecraft/mods/121/)
 
 # Some screenshots:
 
