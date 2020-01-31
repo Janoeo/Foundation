@@ -1,3 +1,6 @@
+### 3.1.2 (1.15.1-2)
++ fix mod not working in 1.15.2 due to missing information in the meta-inf
+
 ### 3.1.1 (1.15.2)
 + port to 1.15.2
 
