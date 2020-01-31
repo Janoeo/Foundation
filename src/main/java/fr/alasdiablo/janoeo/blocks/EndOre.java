@@ -56,7 +56,7 @@ public class EndOre extends OreBlock {
         if (globalConfig.ENDERMAN_ANGER.get()) {
             int aggroRange = globalConfig.ENDERMAN_ANGER_RANGE.get();
             List<EndermanEntity> list = world.getEntitiesWithinAABB(EndermanEntity.class,
-                    AxisAlignedBB.func_216363_a(MutableBoundingBox.createProper(
+                    AxisAlignedBB.toImmutable(MutableBoundingBox.createProper(
                             x - aggroRange,
                             y - aggroRange,
                             z - aggroRange,

@@ -56,7 +56,7 @@ public class NetherOre extends OreBlock {
         if (globalConfig.ZOMBIE_PIGMAN_ANGER.get()) {
             int aggroRange = globalConfig.ZOMBIE_PIGMAN_ANGER_RANGE.get();
             List<ZombiePigmanEntity> list = world.getEntitiesWithinAABB(ZombiePigmanEntity.class,
-                    AxisAlignedBB.func_216363_a(MutableBoundingBox.createProper(
+                    AxisAlignedBB.toImmutable(MutableBoundingBox.createProper(
                             x - aggroRange,
                             y - aggroRange,
                             z - aggroRange,
