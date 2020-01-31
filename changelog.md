@@ -1,3 +1,6 @@
+### 3.1.1 (1.15.2)
++ port to 1.15.2
+
 ### 2.3(1.14.4) & 3.1(1.15.1)
 + fix bug on dense emerald ore in the nether(not generated)
 + add new ore
