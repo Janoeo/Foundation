@@ -1,6 +1,6 @@
 # Janoeo
-[![Downloads](https://cf.way2muchnoise.eu/full_janoeo_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/janoeo)
-[![Versions](https://cf.way2muchnoise.eu/versions/janoeo.svg)](https://www.curseforge.com/minecraft/mc-mods/janoeo/files)
+[![Downloads](http://cf.way2muchnoise.eu/full_janoeo_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/janoeo)
+[![Versions](http://cf.way2muchnoise.eu/versions/janoeo.svg)](https://www.curseforge.com/minecraft/mc-mods/janoeo/files)
 
 ## What is this mod?
 
