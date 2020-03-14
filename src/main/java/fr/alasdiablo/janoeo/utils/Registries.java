@@ -56,4 +56,5 @@ public class Registries {
     public static final String RUBY                        = "ruby";
     public static final String SAPPHIRE_ORE                = "sapphire_ore";
     public static final String SAPPHIRE                    = "sapphire";
+    public static final String SAPPHIRE_BLOCK              = "sapphire_block";
 }
