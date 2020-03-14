@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.ores.overworld;
 
 import fr.alasdiablo.janoeo.JANOEO;
-import fr.alasdiablo.janoeo.blocks.*;
+import fr.alasdiablo.janoeo.block.*;
 import fr.alasdiablo.janoeo.utils.Registries;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;

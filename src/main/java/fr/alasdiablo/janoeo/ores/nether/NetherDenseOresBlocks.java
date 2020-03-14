@@ -1,9 +1,9 @@
 package fr.alasdiablo.janoeo.ores.nether;
 
 import fr.alasdiablo.janoeo.JANOEO;
-import fr.alasdiablo.janoeo.blocks.BasicNetherOre;
-import fr.alasdiablo.janoeo.blocks.NetherOre;
-import fr.alasdiablo.janoeo.blocks.nether.NetherRedstoneOre;
+import fr.alasdiablo.janoeo.block.BasicNetherOre;
+import fr.alasdiablo.janoeo.block.NetherOre;
+import fr.alasdiablo.janoeo.block.nether.NetherRedstoneOre;
 import fr.alasdiablo.janoeo.utils.Registries;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;

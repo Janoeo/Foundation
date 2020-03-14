@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.blocks;
+package fr.alasdiablo.janoeo.block;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.ores.end.EndOresBlocks;

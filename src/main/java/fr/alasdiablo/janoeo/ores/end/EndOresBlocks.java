@@ -1,9 +1,9 @@
 package fr.alasdiablo.janoeo.ores.end;
 
 import fr.alasdiablo.janoeo.JANOEO;
-import fr.alasdiablo.janoeo.blocks.BasicEndOre;
-import fr.alasdiablo.janoeo.blocks.EndOre;
-import fr.alasdiablo.janoeo.blocks.end.EndRedstoneOre;
+import fr.alasdiablo.janoeo.block.BasicEndOre;
+import fr.alasdiablo.janoeo.block.EndOre;
+import fr.alasdiablo.janoeo.block.end.EndRedstoneOre;
 import fr.alasdiablo.janoeo.utils.Registries;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;

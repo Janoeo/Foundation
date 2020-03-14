@@ -2,6 +2,11 @@
 
 This mod adds some ores in the Overworld, the Nether, and the End.
 
+# License
+
+- The source code is under [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)
+- The texture (and everything related to art) is under [CC BY-SA 3.0 FR](https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en)
+
 # Roadmap
 
 - generating the ores in the End. *Done*
@@ -28,9 +33,5 @@ Yes you can, just remember to put the name of the mod in the description of your
 
 ![img1](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.11.02.png)
 ![img2](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-22_15.30.17.png)
-![img2](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.17.12.png)
-![img2](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.13.38.png)
-
-# Credit:
-
-- [Mesabloo](https://github.com/Mesabloo) for rewriting the description.
+![img3](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.17.12.png)
+![img4](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.13.38.png)
