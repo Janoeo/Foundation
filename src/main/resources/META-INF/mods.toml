@@ -4,9 +4,9 @@ loaderVersion="[30,)"
 modId="janoeo"
 version="${file.jarVersion}"
 displayName="Just Another Nether/Overworld/End Ores"
-authors="AlasDiablo, lIotaMiu"
+authors="AlasDiablo, lIotaMiu, Egame257 and Safyrus"
 description='''
-Just Another Nether/Overworld/End Ores by AlasDiablo and lIotaMiu
+Just Another Nether/Overworld/End Ores by AlasDiablo, lIotaMiu, Egame257 and Safyrus
 '''
 [[dependencies.janoeo]]
     modId="forge"
