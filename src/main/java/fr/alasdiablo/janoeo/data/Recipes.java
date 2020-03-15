@@ -1,14 +1,13 @@
 package fr.alasdiablo.janoeo.data;
 
+import fr.alasdiablo.janoeo.blocks.ModBlocks;
+import fr.alasdiablo.janoeo.dusts.DustsItems;
 import fr.alasdiablo.janoeo.gems.GemsItems;
 import fr.alasdiablo.janoeo.ores.end.EndOresBlocks;
 import fr.alasdiablo.janoeo.ingots.IngotsItems;
 import fr.alasdiablo.janoeo.ores.nether.NetherOresBlocks;
 import fr.alasdiablo.janoeo.ores.overworld.OverworldOresBlocks;
-import net.minecraft.data.CookingRecipeBuilder;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
+import net.minecraft.data.*;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 
@@ -38,7 +37,42 @@ public class Recipes extends RecipeProvider {
         this.extraOreBlasting(consumer);
         this.netherOreSmelting(consumer);
         this.netherOreBlasting(consumer);
+        this.resourceRecipe(consumer);
     }
+    private void resourceRecipe(Consumer<IFinishedRecipe> consumer) {
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(DustsItems.IRON_DUST), Items.IRON_INGOT, 0.1f, 200)
+                .addCriterion("has_iron_dust", this.hasItem(DustsItems.IRON_DUST)).build(consumer, "iron_dust_smelting");
+
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(DustsItems.GOLD_DUST), Items.GOLD_INGOT, 0.1f, 200)
+                .addCriterion("has_gold_dust", this.hasItem(DustsItems.GOLD_DUST)).build(consumer, "gold_dust_smelting");
+
+        ShapelessRecipeBuilder.shapelessRecipe(GemsItems.RUBY, 9)
+                .addIngredient(ModBlocks.RUBY_BLOCK)
+                .addCriterion("has_ruby_block", this.hasItem(ModBlocks.RUBY_BLOCK))
+                .build(consumer, "ruby_from_block");
+
+        ShapelessRecipeBuilder.shapelessRecipe(GemsItems.SAPPHIRE, 9)
+                .addIngredient(ModBlocks.SAPPHIRE_BLOCK)
+                .addCriterion("has_sapphire_block", this.hasItem(ModBlocks.SAPPHIRE_BLOCK))
+                .build(consumer, "sapphire_from_block");
+
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.RUBY_BLOCK)
+                .key('R', GemsItems.RUBY)
+                .patternLine("RRR")
+                .patternLine("RRR")
+                .patternLine("RRR")
+                .addCriterion("has_ruby", this.hasItem(ModBlocks.RUBY_BLOCK))
+                .build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.SAPPHIRE_BLOCK)
+                .key('S', GemsItems.SAPPHIRE)
+                .patternLine("SSS")
+                .patternLine("SSS")
+                .patternLine("SSS")
+                .addCriterion("has_sapphire", this.hasItem(ModBlocks.SAPPHIRE_BLOCK))
+                .build(consumer);
+    }
+
 
     private void endOreSmelting(Consumer<IFinishedRecipe> consumer) {
         // coal

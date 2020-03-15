@@ -39,5 +39,18 @@
   "block.janoeo.aluminium_ore": "Minerai d'aluminium",
   "block.janoeo.uranium_ore": "Minerai d'uranium",
   "block.janoeo.silver_ore": "Minerai d'argent",
-  "block.janoeo.lead_ore": "Minerai de plomb"
+  "block.janoeo.lead_ore": "Minerai de plomb",
+  "item.janoeo.aluminium_ingot": "Lingot d'aluminium",
+  "item.janoeo.lead_ingot": "Lingot de plomb",
+  "item.janoeo.silver_ingot": "Lingot d'argent",
+  "item.janoeo.uranium_ingot": "Lingot d'uranium",
+  "item.janoeo.diamond_dust": "Poudre de diamant",
+  "item.janoeo.iron_dust": "Poudre de fer",
+  "item.janoeo.gold_dust": "Poudre d'or",
+  "item.janoeo.ruby": "Rubis",
+  "item.janoeo.sapphire": "Saphir",
+  "block.janoeo.ruby_ore": "Minerai de rubis",
+  "block.janoeo.sapphire_ore": "Minerai de saphir",
+  "block.janoeo.ruby_block": "Bloc de rubis",
+  "block.janoeo.sapphire_block": "Bloc de saphir"
 }

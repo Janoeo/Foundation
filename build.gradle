@@ -14,7 +14,7 @@ apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 
 
-version = '3.1.2'
+version = '3.2'
 group = 'fr.alasdiablo.janoeo'
 archivesBaseName = 'janoeo'
 
@@ -31,7 +31,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                janoeo {
                     source sourceSets.main
                 }
             }
@@ -45,7 +45,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                janoeo {
                     source sourceSets.main
                 }
             }
@@ -61,7 +61,7 @@ minecraft {
             args '--mod', 'janoeo', '--all', '--output', file('src/generated/resources/')
 
             mods {
-                examplemod {
+                janoeo {
                     source sourceSets.main
                 }
             }

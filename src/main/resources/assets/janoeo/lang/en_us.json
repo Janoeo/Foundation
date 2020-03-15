@@ -50,5 +50,7 @@
   "item.janoeo.ruby": "Ruby",
   "item.janoeo.sapphire": "Sapphire",
   "block.janoeo.ruby_ore": "Ruby Ore",
-  "block.janoeo.sapphire_ore": "Sapphire Ore"
+  "block.janoeo.sapphire_ore": "Sapphire Ore",
+  "block.janoeo.ruby_block": "Ruby Block",
+  "block.janoeo.sapphire_block": "Sapphire Block"
 }
