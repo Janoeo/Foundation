@@ -1,25 +1,25 @@
 # Color Palette
 
-+ Gold color: <span style="color:#ffd700">█ #ffd700</span>
++ Gold color: <p style="color:#ffd700">█ #ffd700</p>
 
-+ Iron color: <span style="color:#cdcdcd">█ #cdcdcd</span>
++ Iron color: <p style="color:#cdcdcd">█ #cdcdcd</p>
 
-+ Tin color: <span style="color:#d3d4d5">█ #d3d4d5</span>
++ Tin color: <p style="color:#d3d4d5">█ #d3d4d5</p>
 
-+ Silver color: <span style="color:#aaa9ad">█ #aaa9ad</span>
++ Silver color: <p style="color:#aaa9ad">█ #aaa9ad</p>
 
-+ Lead color: <span style="color:#92959a">█ #92959a</span>
++ Lead color: <p style="color:#92959a">█ #92959a</p>
 
-+ Uranium color: <span style="color:#a5a500">█ #a5a500</span>
++ Uranium color: <p style="color:#a5a500">█ #a5a500</p>
 
-+ Copper color: <span style="color:#b87333">█ #b87333</span>
++ Copper color: <p style="color:#b87333">█ #b87333</p>
 
-+ Aluminium color: <span style="color:#848789">█ #848789</span>
++ Aluminium color: <p style="color:#848789">█ #848789</p>
 
-+ Nickel color: <span style="color:#b5b6b5">█ #b5b6b5</span>
++ Nickel color: <p style="color:#b5b6b5">█ #b5b6b5</p>
 
-+ Platinum color: <span style="color:#e5e4e2">█ #e5e4e2</span>
++ Platinum color: <p style="color:#e5e4e2">█ #e5e4e2</p>
 
-+ Sapphire color: <span style="color:#0f52ba">█ #0f52ba</span>
++ Sapphire color: <p style="color:#0f52ba">█ #0f52ba</p>
 
-+ Ruby color: <span style="color:#e0115f">█ #e0115f</span>
++ Ruby color: <p style="color:#e0115f">█ #e0115f</p>
