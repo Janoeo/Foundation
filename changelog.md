@@ -1,3 +1,6 @@
+### 3.2.1
++ add tag(hardcoded) to be using with other mod.
+
 ### 3.2 (1.15.2)
 + add storage block
     + ruby
