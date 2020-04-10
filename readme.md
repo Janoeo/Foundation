@@ -19,11 +19,22 @@ This mod adds some ores in the Overworld, the Nether, and the End.
 
 ## Roadmap
 
-- a complet rewirte of the mod with other companion mod.
+- Add more ore
+- Add more dense ore
+- Add more nether ore
+- Add more end ore
 
 ## Why did you make this mod?
 
 I just wanted to make a useful mod for other people.
+
+## Dependencies
+
+#### Recommended
++ [JANOEO Arsenal](https://www.curseforge.com/minecraft/mc-mods/janoeo-arsenal)
+#### Optionals / Compatibles
++ [Iron Chests](https://www.curseforge.com/minecraft/mc-mods/iron-chests)
++ [Mekanism](https://www.curseforge.com/minecraft/mc-mods/mekanism)
 
 ## Can I use this in a modpack?
 
