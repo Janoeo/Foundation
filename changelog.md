@@ -1,3 +1,7 @@
+### 3.3
++ add zinc ore and ingot
++ add amethyst ore and amethyst
+
 ### 3.2.1
 + add tag(hardcoded) to be using with other mod.
 

@@ -30,6 +30,10 @@ public class OverworldOresBlocks {
     public static Block RUBY_ORE;
     @ObjectHolder(Registries.MODID + ":" + Registries.SAPPHIRE_ORE)
     public static Block SAPPHIRE_ORE;
+    @ObjectHolder(Registries.MODID + ":" + Registries.AMETHYST_ORE)
+    public static Block AMETHYST_ORE;
+    @ObjectHolder(Registries.MODID + ":" + Registries.ZINC_ORE)
+    public static Block ZINC_ORE;
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
@@ -43,6 +47,8 @@ public class OverworldOresBlocks {
             event.getRegistry().register(new BasicOre(Registries.LEAD_ORE, 1));
             event.getRegistry().register(new BasicOre(Registries.RUBY_ORE, 2));
             event.getRegistry().register(new BasicOre(Registries.SAPPHIRE_ORE, 2));
+            event.getRegistry().register(new BasicOre(Registries.AMETHYST_ORE, 2));
+            event.getRegistry().register(new BasicOre(Registries.ZINC_ORE, 1));
         }
 
         @SubscribeEvent
@@ -56,6 +62,8 @@ public class OverworldOresBlocks {
             event.getRegistry().register(new BlockItem(OverworldOresBlocks.LEAD_ORE, properties).setRegistryName(Registries.LEAD_ORE));
             event.getRegistry().register(new BlockItem(OverworldOresBlocks.RUBY_ORE, properties).setRegistryName(Registries.RUBY_ORE));
             event.getRegistry().register(new BlockItem(OverworldOresBlocks.SAPPHIRE_ORE, properties).setRegistryName(Registries.SAPPHIRE_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.AMETHYST_ORE, properties).setRegistryName(Registries.AMETHYST_ORE));
+            event.getRegistry().register(new BlockItem(OverworldOresBlocks.ZINC_ORE, properties).setRegistryName(Registries.ZINC_ORE));
         }
     }
 }

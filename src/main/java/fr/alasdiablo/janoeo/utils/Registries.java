@@ -58,4 +58,8 @@ public class Registries {
     public static final String SAPPHIRE_ORE                = "sapphire_ore";
     public static final String SAPPHIRE                    = "sapphire";
     public static final String SAPPHIRE_BLOCK              = "sapphire_block";
+    public static final String AMETHYST_ORE                = "amethyst_ore";
+    public static final String AMETHYST                    = "amethyst";
+    public static final String ZINC_ORE                    = "zinc_ore";
+    public static final String ZINC_INGOT                  = "zinc_ingot";
 }

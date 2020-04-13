@@ -147,6 +147,12 @@ public class Recipes extends RecipeProvider {
         // sapphire
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(OverworldOresBlocks.SAPPHIRE_ORE), GemsItems.SAPPHIRE, 0.1f, 200)
                 .addCriterion("has_sapphire_ore", this.hasItem(OverworldOresBlocks.SAPPHIRE_ORE)).build(consumer, "sapphire_smelting");
+        // amethyst
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(OverworldOresBlocks.AMETHYST_ORE), GemsItems.AMETHYST, 0.1f, 200)
+                .addCriterion("has_amethyst_ore", this.hasItem(OverworldOresBlocks.AMETHYST_ORE)).build(consumer, "amethyst_smelting");
+        // zinc
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(OverworldOresBlocks.ZINC_ORE), IngotsItems.ZINC_INGOT, 0.1f, 200)
+                .addCriterion("has_zinc_ore", this.hasItem(OverworldOresBlocks.ZINC_ORE)).build(consumer, "zinc_smelting");
     }
 
     private void extraOreBlasting(Consumer<IFinishedRecipe> consumer) {
@@ -174,6 +180,12 @@ public class Recipes extends RecipeProvider {
         // sapphire
         CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(OverworldOresBlocks.SAPPHIRE_ORE), GemsItems.SAPPHIRE, 0.1f, 100)
                 .addCriterion("has_sapphire_ore", this.hasItem(OverworldOresBlocks.SAPPHIRE_ORE)).build(consumer, "sapphire_blasting");
+        // amethyst
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(OverworldOresBlocks.AMETHYST_ORE), GemsItems.AMETHYST, 0.1f, 100)
+                .addCriterion("has_amethyst_ore", this.hasItem(OverworldOresBlocks.AMETHYST_ORE)).build(consumer, "amethyst_blasting");
+        // zinc
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(OverworldOresBlocks.ZINC_ORE), IngotsItems.ZINC_INGOT, 0.1f, 100)
+                .addCriterion("has_zinc_ore", this.hasItem(OverworldOresBlocks.ZINC_ORE)).build(consumer, "zinc_blasting");
     }
 
     private void netherOreSmelting(Consumer<IFinishedRecipe> consumer) {

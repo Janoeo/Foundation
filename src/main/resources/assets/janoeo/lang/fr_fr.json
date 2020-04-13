@@ -52,5 +52,9 @@
   "block.janoeo.ruby_ore": "Minerai de rubis",
   "block.janoeo.sapphire_ore": "Minerai de saphir",
   "block.janoeo.ruby_block": "Bloc de rubis",
-  "block.janoeo.sapphire_block": "Bloc de saphir"
+  "block.janoeo.sapphire_block": "Bloc de saphir",
+  "block.janoeo.amethyst_ore": "Minerai d'Améthyste",
+  "item.janoeo.amethyst": "Améthyste",
+  "block.janoeo.zinc_ore": "Minerai de Zinc",
+  "item.janoeo.zinc_ingot": "Lingot de Zinc"
 }

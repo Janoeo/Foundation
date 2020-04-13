@@ -15,6 +15,8 @@ public class GemsItems {
     public static Item RUBY;
     @ObjectHolder(Registries.MODID + ":" + Registries.SAPPHIRE)
     public static Item SAPPHIRE;
+    @ObjectHolder(Registries.MODID + ":" + Registries.AMETHYST)
+    public static Item AMETHYST;
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
@@ -23,6 +25,7 @@ public class GemsItems {
             Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoItemGroup);
             event.getRegistry().register(new Item(properties).setRegistryName(Registries.RUBY));
             event.getRegistry().register(new Item(properties).setRegistryName(Registries.SAPPHIRE));
+            event.getRegistry().register(new Item(properties).setRegistryName(Registries.AMETHYST));
         }
     }
 }

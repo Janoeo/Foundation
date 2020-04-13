@@ -15,11 +15,13 @@ public class ItemsTags {
         public static final Tag<Item> LEAD = tag("ingots/lead");
         public static final Tag<Item> SILVER = tag("ingots/silver");
         public static final Tag<Item> URANIUM = tag("ingots/uranium");
+        public static final Tag<Item> ZINC = tag("ingots/zinc");
     }
 
     public static class Gems {
         public static final Tag<Item> RUBY = tag("gems/ruby");
         public static final Tag<Item> SAPPHIRE = tag("gems/sapphire");
+        public static final Tag<Item> AMETHYST = tag("gems/amethyst");
     }
 
     public static class Dusts {

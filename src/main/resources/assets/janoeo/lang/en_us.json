@@ -52,5 +52,9 @@
   "block.janoeo.ruby_ore": "Ruby Ore",
   "block.janoeo.sapphire_ore": "Sapphire Ore",
   "block.janoeo.ruby_block": "Ruby Block",
-  "block.janoeo.sapphire_block": "Sapphire Block"
+  "block.janoeo.sapphire_block": "Sapphire Block",
+  "block.janoeo.amethyst_ore": "Amethyst Ore",
+  "item.janoeo.amethyst": "Amethyst",
+  "block.janoeo.zinc_ore": "Zinc Ore",
+  "item.janoeo.zinc_ingot": "Zinc Ingot"
 }

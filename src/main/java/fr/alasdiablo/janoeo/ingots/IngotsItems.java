@@ -23,6 +23,8 @@ public class IngotsItems {
     public static Item SILVER_INGOT;
     @ObjectHolder(Registries.MODID + ":" + Registries.URANIUM_INGOT)
     public static Item URANIUM_INGOT;
+    @ObjectHolder(Registries.MODID + ":" + Registries.ZINC_INGOT)
+    public static Item ZINC_INGOT;
 
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -36,6 +38,7 @@ public class IngotsItems {
             event.getRegistry().register(new Item(properties).setRegistryName(Registries.LEAD_INGOT));
             event.getRegistry().register(new Item(properties).setRegistryName(Registries.SILVER_INGOT));
             event.getRegistry().register(new Item(properties).setRegistryName(Registries.URANIUM_INGOT));
+            event.getRegistry().register(new Item(properties).setRegistryName(Registries.ZINC_INGOT));
         }
     }
 }

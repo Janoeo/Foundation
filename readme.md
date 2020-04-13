@@ -34,6 +34,8 @@ I just wanted to make a useful mod for other people.
 + [JANOEO Arsenal](https://www.curseforge.com/minecraft/mc-mods/janoeo-arsenal)
 #### Optionals / Compatibles
 + [Iron Chests](https://www.curseforge.com/minecraft/mc-mods/iron-chests)
++ [Iron Furnaces](https://www.curseforge.com/minecraft/mc-mods/iron-furnaces)
++ [Silent's Mechanisms](https://www.curseforge.com/minecraft/mc-mods/silents-mechanisms)
 + [Mekanism](https://www.curseforge.com/minecraft/mc-mods/mekanism)
 
 ## Can I use this in a modpack?
