@@ -1,3 +1,7 @@
+### 3.4 (WIP)
++ add Safyrus in the creator event
++ add data utils for a better balancing for the armor (and weapon on the future)
+
 ### 3.3
 + add zinc ore and ingot
 + add amethyst ore and amethyst

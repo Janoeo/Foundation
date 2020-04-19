@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.data;
+package fr.alasdiablo.janoeo.recipes;
 
 import fr.alasdiablo.janoeo.blocks.ModBlocks;
 import fr.alasdiablo.janoeo.dusts.DustsItems;
