@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:copper_nether_smelting"
+    ]
+  },
+  "criteria": {
+    "has_nether_copper_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:copper_nether_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:copper_nether_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_copper_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

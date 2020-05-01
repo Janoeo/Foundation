@@ -1,7 +1,6 @@
 package fr.alasdiablo.janoeo.ores.nether;
 
 import fr.alasdiablo.janoeo.JANOEO;
-import fr.alasdiablo.janoeo.block.BasicNetherOre;
 import fr.alasdiablo.janoeo.block.NetherOre;
 import fr.alasdiablo.janoeo.block.nether.NetherRedstoneOre;
 import fr.alasdiablo.janoeo.utils.Registries;
@@ -41,8 +40,8 @@ public class NetherDenseOresBlocks {
             event.getRegistry().register(new NetherOre(Registries.DENSE_COAL_NETHER_ORE));
             event.getRegistry().register(new NetherOre(Registries.DENSE_DIAMOND_NETHER_ORE));
             event.getRegistry().register(new NetherOre(Registries.DENSE_EMERALD_NETHER_ORE));
-            event.getRegistry().register(new BasicNetherOre(Registries.DENSE_GOLD_NETHER_ORE));
-            event.getRegistry().register(new BasicNetherOre(Registries.DENSE_IRON_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(Registries.DENSE_GOLD_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(Registries.DENSE_IRON_NETHER_ORE));
             event.getRegistry().register(new NetherOre(Registries.DENSE_LAPIS_NETHER_ORE));
             event.getRegistry().register(new NetherRedstoneOre(Registries.DENSE_REDSTONE_NETHER_ORE));
         }

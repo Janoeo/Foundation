@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:emerald_ore"
+              "name": "janoeo:emerald_nether_ore"
             },
             {
               "type": "minecraft:item",

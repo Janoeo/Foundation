@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "janoeo:block/dense_iron_nether_ore"
+    "all": "janoeo:block/nether/dense/dense_iron_nether_ore"
   }
 }

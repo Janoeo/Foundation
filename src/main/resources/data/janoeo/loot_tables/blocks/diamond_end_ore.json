@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:diamond_ore"
+              "name": "janoeo:diamond_end_ore"
             },
             {
               "type": "minecraft:item",

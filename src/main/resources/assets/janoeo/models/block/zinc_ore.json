@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "janoeo:block/zinc_ore"
+    "all": "janoeo:block/ore/zinc_ore"
   }
 }

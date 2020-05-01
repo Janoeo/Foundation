@@ -1,7 +1,6 @@
 package fr.alasdiablo.janoeo.ores.end;
 
 import fr.alasdiablo.janoeo.JANOEO;
-import fr.alasdiablo.janoeo.block.BasicEndOre;
 import fr.alasdiablo.janoeo.block.EndOre;
 import fr.alasdiablo.janoeo.block.end.EndRedstoneOre;
 import fr.alasdiablo.janoeo.utils.Registries;
@@ -39,8 +38,8 @@ public class EndOresBlocks {
             event.getRegistry().register(new EndOre(Registries.COAL_END_ORE));
             event.getRegistry().register(new EndOre(Registries.DIAMOND_END_ORE));
             event.getRegistry().register(new EndOre(Registries.EMERALD_END_ORE));
-            event.getRegistry().register(new BasicEndOre(Registries.GOLD_END_ORE));
-            event.getRegistry().register(new BasicEndOre(Registries.IRON_END_ORE));
+            event.getRegistry().register(new EndOre(Registries.GOLD_END_ORE));
+            event.getRegistry().register(new EndOre(Registries.IRON_END_ORE));
             event.getRegistry().register(new EndOre(Registries.LAPIS_END_ORE));
             event.getRegistry().register(new EndRedstoneOre(Registries.REDSTONE_END_ORE));
         }

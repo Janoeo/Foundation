@@ -1,11 +1,13 @@
 package fr.alasdiablo.janoeo.blocks;
 
 import fr.alasdiablo.janoeo.JANOEO;
-import fr.alasdiablo.janoeo.block.BasicBlock;
 import fr.alasdiablo.janoeo.utils.Registries;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -24,8 +26,12 @@ public class ModBlocks {
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            event.getRegistry().register(new BasicBlock(Registries.SAPPHIRE_BLOCK));
-            event.getRegistry().register(new BasicBlock(Registries.RUBY_BLOCK));
+            event.getRegistry().register(new Block(
+                    Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f).harvestTool(ToolType.PICKAXE)
+            ).setRegistryName(Registries.RUBY_BLOCK));
+            event.getRegistry().register(new Block(
+                    Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f).harvestTool(ToolType.PICKAXE)
+            ).setRegistryName(Registries.SAPPHIRE_BLOCK));
         }
 
         @SubscribeEvent

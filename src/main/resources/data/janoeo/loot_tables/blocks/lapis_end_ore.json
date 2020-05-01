@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:lapis_ore"
+              "name": "janoeo:lapis_end_ore"
             },
             {
               "type": "minecraft:item",

@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:coal_ore"
+              "name": "janoeo:coal_end_ore"
             },
             {
               "type": "minecraft:item",

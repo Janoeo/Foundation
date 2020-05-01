@@ -53,6 +53,8 @@ public class GlobalConfig {
          */
         public final ForgeConfigSpec.BooleanValue EXTRA_ORE_GEN;
 
+        public final ForgeConfigSpec.BooleanValue EXTRA_NETHER_ORE_GEN;
+
         public final ForgeConfigSpec.BooleanValue ZOMBIE_PIGMAN_ANGER;
 
         public final ForgeConfigSpec.BooleanValue ENDERMAN_ANGER;
@@ -74,6 +76,7 @@ public class GlobalConfig {
             DENSE_ORE_GEN = builder.comment("Overworld dense ore generation: disable / enable").define("denseOreGen", true);
             NETHER_DENSE_ORE_GEN = builder.comment("Nether dense ore generation: disable / enable").define("denseOreGen", true);
             EXTRA_ORE_GEN = builder.comment("Extra ore generation: disable / enable").define("extraOreGen", true);
+            EXTRA_NETHER_ORE_GEN = builder.comment("Extra nether ore generation: disable / enable").define("extraNetherOreGen", true);
 
             ZOMBIE_PIGMAN_ANGER = builder.comment("Zombie pigman anger on nether ore harvest: disable / enable").define("pigmanAnger", true);
             ENDERMAN_ANGER = builder.comment("Enderman anger on end ore harvest: disable / enable").define("endermanAnger", true);

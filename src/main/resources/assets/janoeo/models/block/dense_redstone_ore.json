@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "janoeo:block/dense_redstone_ore"
+    "all": "janoeo:block/ore/dense/dense_redstone_ore"
   }
 }

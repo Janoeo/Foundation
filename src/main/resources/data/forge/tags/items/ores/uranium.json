@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "janoeo:uranium_ore"
+    "janoeo:uranium_ore",
+    "janoeo:uranium_nether_ore"
   ]
 }

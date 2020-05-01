@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.utils;
 
-import fr.alasdiablo.janoeo.recipes.Recipes;
+import fr.alasdiablo.janoeo.datagen.Recipes;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

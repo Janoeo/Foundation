@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "janoeo:copper_ore"
+    "janoeo:copper_ore",
+    "janoeo:copper_nether_ore"
   ]
 }

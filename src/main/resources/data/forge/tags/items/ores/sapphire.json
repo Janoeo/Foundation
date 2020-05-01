@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "janoeo:sapphire_ore"
+    "janoeo:sapphire_ore",
+    "janoeo:sapphire_nether_ore"
   ]
 }

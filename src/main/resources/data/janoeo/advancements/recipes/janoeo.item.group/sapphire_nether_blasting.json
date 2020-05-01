@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:sapphire_nether_blasting"
+    ]
+  },
+  "criteria": {
+    "has_nether_sapphire_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:sapphire_nether_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:sapphire_nether_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_sapphire_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

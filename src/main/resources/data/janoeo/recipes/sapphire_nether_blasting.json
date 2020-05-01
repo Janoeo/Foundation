@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "janoeo:sapphire_nether_ore"
+  },
+  "result": "janoeo:sapphire",
+  "experience": 0.1,
+  "cookingtime": 100
+}

@@ -53,8 +53,16 @@
   "block.janoeo.sapphire_ore": "Minerai de saphir",
   "block.janoeo.ruby_block": "Bloc de rubis",
   "block.janoeo.sapphire_block": "Bloc de saphir",
-  "block.janoeo.amethyst_ore": "Minerai d'Améthyste",
+  "block.janoeo.amethyst_ore": "Minerai d'améthyste",
   "item.janoeo.amethyst": "Améthyste",
-  "block.janoeo.zinc_ore": "Minerai de Zinc",
-  "item.janoeo.zinc_ingot": "Lingot de Zinc"
+  "block.janoeo.zinc_ore": "Minerai de zinc",
+  "item.janoeo.zinc_ingot": "Lingot de zinc",
+  "block.janoeo.uranium_nether_ore": "Minerai d'uranium du nether",
+  "block.janoeo.sapphire_nether_ore": "Minerai de saphir du nether",
+  "block.janoeo.ruby_nether_ore": "Minerai de rubis du nether",
+  "block.janoeo.silver_nether_ore": "Minerai d'argent du nether",
+  "block.janoeo.aluminium_nether_ore": "Minerai d'aluminium du nether",
+  "block.janoeo.lead_nether_ore": "Minerai de plomb du nether",
+  "block.janoeo.copper_nether_ore": "Minerai de cuivre du nether",
+  "block.janoeo.tin_nether_ore": "Minerai d'étian du nether"
 }

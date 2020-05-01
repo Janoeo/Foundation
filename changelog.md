@@ -1,5 +1,21 @@
-### 3.4 (WIP)
+### 3.4 - Nether Ore and Bug Fixing
 + add Safyrus in the creator event
++ add new ore in the nether
+    + Aluminium
+    + Copper
+    + Lead
+    + Ruby
+    + Sapphire
+    + Silver
+    + Tin
+    + Uranium
++ change loot table for dense ore (buff/nerf)
++ refactor texture folder
++ fix anger Enderman/Pigman missing on some block due to duplicated code
++ fix copper dense ore react as redstone ore and redstone dense ore not react as redstone ore
++ fix cooking time for blasting on some recipes
++ fix bad value in the loot table
++ fix duplicated recipes
 
 ### 3.3
 + add zinc ore and ingot

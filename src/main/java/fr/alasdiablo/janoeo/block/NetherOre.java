@@ -34,14 +34,17 @@ public class NetherOre extends OreBlock {
     protected int getExperience(Random random) {
         if (this == NetherOresBlocks.COAL_NETHER_ORE) {
             return MathHelper.nextInt(random, 0, 2);
-        } else if (this == NetherOresBlocks.DIAMOND_NETHER_ORE) {
-            return MathHelper.nextInt(random, 3, 7);
-        } else if (this == NetherOresBlocks.EMERALD_NETHER_ORE) {
+        } else if (
+                this == NetherOresBlocks.DIAMOND_NETHER_ORE ||
+                this == NetherOresBlocks.EMERALD_NETHER_ORE ||
+                this == NetherOresBlocks.RUBY_NETHER_ORE ||
+                this == NetherOresBlocks.SAPPHIRE_NETHER_ORE
+        ) {
             return MathHelper.nextInt(random, 3, 7);
         } else if (this == NetherOresBlocks.LAPIS_NETHER_ORE) {
             return MathHelper.nextInt(random, 2, 5);
         } else {
-            return super.getExperience(random);
+                return super.getExperience(random);
         }
     }
 

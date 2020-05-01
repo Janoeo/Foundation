@@ -56,5 +56,13 @@
   "block.janoeo.amethyst_ore": "Amethyst Ore",
   "item.janoeo.amethyst": "Amethyst",
   "block.janoeo.zinc_ore": "Zinc Ore",
-  "item.janoeo.zinc_ingot": "Zinc Ingot"
+  "item.janoeo.zinc_ingot": "Zinc Ingot",
+  "block.janoeo.uranium_nether_ore": "Nether Uranium Ore",
+  "block.janoeo.sapphire_nether_ore": "Nether Sapphire Ore",
+  "block.janoeo.ruby_nether_ore": "Nether Ruby Ore",
+  "block.janoeo.silver_nether_ore": "Nether Silver Ore",
+  "block.janoeo.aluminium_nether_ore": "Nether Aluminium Ore",
+  "block.janoeo.lead_nether_ore": "Nether Lead Ore",
+  "block.janoeo.copper_nether_ore": "Nether Copper Ore",
+  "block.janoeo.tin_nether_ore": "Nether Tin Ore"
 }

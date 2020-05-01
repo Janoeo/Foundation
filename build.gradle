@@ -1,65 +1,52 @@
 buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
+        maven { url = 'https://plugins.gradle.org/m2/' }
         jcenter()
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath 'com.wynprice.cursemaven:CurseMaven:2.1.1'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'java-library'
 apply plugin: 'maven-publish'
-
-
+apply plugin: "com.wynprice.cursemaven"
 version = '3.4'
 group = 'fr.alasdiablo.janoeo'
 archivesBaseName = 'janoeo'
-
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
-
 minecraft {
-    mappings channel: 'snapshot', version: '20200314-1.15.1'
+    mappings channel: 'snapshot', version: '20200328-1.15.1'
     runs {
         client {
             workingDirectory project.file('run')
-
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
             property 'forge.logging.console.level', 'debug'
-
             mods {
                 janoeo {
                     source sourceSets.main
                 }
             }
         }
-
         server {
             workingDirectory project.file('run')
-
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
             property 'forge.logging.console.level', 'debug'
-
             mods {
                 janoeo {
                     source sourceSets.main
                 }
             }
         }
-
         data {
             workingDirectory project.file('run')
-
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-
             property 'forge.logging.console.level', 'debug'
-
             args '--mod', 'janoeo', '--all', '--output', file('src/generated/resources/')
-
             mods {
                 janoeo {
                     source sourceSets.main
@@ -71,9 +58,8 @@ minecraft {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.15.2-31.1.0'
-
+    compile fg.deobf('curse.maven:jei:2944279')
 }
-
 jar {
     manifest {
         attributes([
@@ -92,12 +78,10 @@ def reobfArtifact = artifacts.add('default', reobfFile) {
     type 'jar'
     builtBy 'reobfJar'
 }
-
 publishing {
     publications {
         mavenJava(MavenPublication) {
             artifact reobfArtifact
-
         }
     }
     repositories {

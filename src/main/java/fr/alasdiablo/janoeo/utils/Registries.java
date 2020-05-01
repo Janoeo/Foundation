@@ -62,4 +62,12 @@ public class Registries {
     public static final String AMETHYST                    = "amethyst";
     public static final String ZINC_ORE                    = "zinc_ore";
     public static final String ZINC_INGOT                  = "zinc_ingot";
+    public static final String ALUMINIUM_NETHER_ORE        = "aluminium_nether_ore";
+    public static final String LEAD_NETHER_ORE             = "lead_nether_ore";
+    public static final String RUBY_NETHER_ORE             = "ruby_nether_ore";
+    public static final String SAPPHIRE_NETHER_ORE         = "sapphire_nether_ore";
+    public static final String SILVER_NETHER_ORE           = "silver_nether_ore";
+    public static final String URANIUM_NETHER_ORE          = "uranium_nether_ore";
+    public static final String TIN_NETHER_ORE              = "tin_nether_ore";
+    public static final String COPPER_NETHER_ORE           = "copper_nether_ore";
 }

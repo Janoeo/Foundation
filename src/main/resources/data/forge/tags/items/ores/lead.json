@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "janoeo:lead_ore"
+    "janoeo:lead_ore",
+    "janoeo:lead_nether_ore"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "janoeo:block/diamond_nether_ore"
+    "all": "janoeo:block/nether/diamond_nether_ore"
   }
 }

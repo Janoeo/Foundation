@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "janoeo:block/lapis_end_ore"
+    "all": "janoeo:block/end/lapis_end_ore"
   }
 }

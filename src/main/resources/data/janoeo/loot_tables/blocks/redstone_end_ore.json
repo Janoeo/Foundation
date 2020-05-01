@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "minecraft:redstone_ore"
+              "name": "janoeo:redstone_end_ore"
             },
             {
               "type": "minecraft:item",

@@ -39,13 +39,13 @@ public class OverworldDenseOresBlocks {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             event.getRegistry().register(new BasicOre(Registries.DENSE_COAL_ORE, 1));
-            event.getRegistry().register(new RedstoneOre(Registries.DENSE_COPPER_ORE));
+            event.getRegistry().register(new BasicOre(Registries.DENSE_COPPER_ORE, 1));
             event.getRegistry().register(new BasicOre(Registries.DENSE_DIAMOND_ORE, 2));
             event.getRegistry().register(new BasicOre(Registries.DENSE_EMERALD_ORE, 2));
             event.getRegistry().register(new BasicOre(Registries.DENSE_GOLD_ORE, 2));
             event.getRegistry().register(new BasicOre(Registries.DENSE_IRON_ORE, 1));
             event.getRegistry().register(new BasicOre(Registries.DENSE_LAPIS_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.DENSE_REDSTONE_ORE, 2));
+            event.getRegistry().register(new RedstoneOre(Registries.DENSE_REDSTONE_ORE));
             event.getRegistry().register(new BasicOre(Registries.DENSE_TIN_ORE, 1));
         }
 
