@@ -1,3 +1,7 @@
+### 3.5
++ add a new ore world gen (note for modder: extend of OreFeatureConfig to be use with more predicate (more that stone and netherrack))
++ setup new world gen system for the end ore (more and ore in the end !)
+
 ### 3.4 - Nether Ore and Bug Fixing
 + add Safyrus in the creator event
 + add new ore in the nether
