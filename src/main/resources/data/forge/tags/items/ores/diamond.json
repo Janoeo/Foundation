@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "janoeo:diamond_nether_ore",
-    "janoeo:diamond_end_ore"
+    "janoeo:diamond_end_ore",
+    "janeoe:diamond_gravel_ore"
   ]
 }

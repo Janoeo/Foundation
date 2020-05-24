@@ -3,6 +3,7 @@ package fr.alasdiablo.janoeo.datagen;
 import fr.alasdiablo.janoeo.blocks.ModBlocks;
 import fr.alasdiablo.janoeo.dusts.DustsItems;
 import fr.alasdiablo.janoeo.gems.GemsItems;
+import fr.alasdiablo.janoeo.ores.GravelsOresBlocks;
 import fr.alasdiablo.janoeo.ores.end.EndOresBlocks;
 import fr.alasdiablo.janoeo.ingots.IngotsItems;
 import fr.alasdiablo.janoeo.ores.nether.NetherOresBlocks;
@@ -38,13 +39,19 @@ public class Recipes extends RecipeProvider {
         this.netherOreSmelting(consumer);
         this.netherOreBlasting(consumer);
         this.resourceRecipe(consumer);
+        this.gravelOreBlasting(consumer);
+        this.gravelOreSmelting(consumer);
     }
+
     private void resourceRecipe(Consumer<IFinishedRecipe> consumer) {
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(DustsItems.IRON_DUST), Items.IRON_INGOT, 0.1f, 200)
                 .addCriterion("has_iron_dust", this.hasItem(DustsItems.IRON_DUST)).build(consumer, "iron_dust_smelting");
 
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(DustsItems.GOLD_DUST), Items.GOLD_INGOT, 0.1f, 200)
                 .addCriterion("has_gold_dust", this.hasItem(DustsItems.GOLD_DUST)).build(consumer, "gold_dust_smelting");
+
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(DustsItems.DIAMOND_DUST), Items.DIAMOND, 0.1f, 200)
+                .addCriterion("has_diamond_dust", this.hasItem(DustsItems.DIAMOND_DUST)).build(consumer, "diamond_dust_smelting");
 
         ShapelessRecipeBuilder.shapelessRecipe(GemsItems.RUBY, 9)
                 .addIngredient(ModBlocks.RUBY_BLOCK)
@@ -71,6 +78,30 @@ public class Recipes extends RecipeProvider {
                 .patternLine("SSS")
                 .addCriterion("has_sapphire", this.hasItem(ModBlocks.SAPPHIRE_BLOCK))
                 .build(consumer);
+    }
+
+    private void gravelOreSmelting(Consumer<IFinishedRecipe> consumer) {
+        // iron
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(GravelsOresBlocks.IRON_GRAVEL_ORE), Items.IRON_INGOT, 0.1f, 200)
+                .addCriterion("has_gravel_iron_ore", this.hasItem(GravelsOresBlocks.IRON_GRAVEL_ORE)).build(consumer, "iron_gravel_smelting");
+        // gold
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(GravelsOresBlocks.GOLD_GRAVEL_ORE), Items.GOLD_INGOT, 0.1f, 200)
+                .addCriterion("has_gravel_gold_ore", this.hasItem(GravelsOresBlocks.GOLD_GRAVEL_ORE)).build(consumer, "gold_gravel_smelting");
+        // diamond
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(GravelsOresBlocks.DIAMOND_GRAVEL_ORE), Items.DIAMOND, 0.1f, 200)
+                .addCriterion("has_gravel_diamond_ore", this.hasItem(GravelsOresBlocks.DIAMOND_GRAVEL_ORE)).build(consumer, "diamond_gravel_smelting");
+    }
+
+    private void gravelOreBlasting(Consumer<IFinishedRecipe> consumer) {
+        // iron
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(GravelsOresBlocks.IRON_GRAVEL_ORE), Items.IRON_INGOT, 0.1f, 100)
+                .addCriterion("has_gravel_iron_ore", this.hasItem(GravelsOresBlocks.IRON_GRAVEL_ORE)).build(consumer, "iron_gravel_blasting");
+        // gold
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(GravelsOresBlocks.GOLD_GRAVEL_ORE), Items.GOLD_INGOT, 0.1f, 100)
+                .addCriterion("has_gravel_gold_ore", this.hasItem(GravelsOresBlocks.GOLD_GRAVEL_ORE)).build(consumer, "gold_gravel_blasting");
+        // diamond
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(GravelsOresBlocks.DIAMOND_GRAVEL_ORE), Items.DIAMOND, 0.1f, 100)
+                .addCriterion("has_gravel_diamond_ore", this.hasItem(GravelsOresBlocks.DIAMOND_GRAVEL_ORE)).build(consumer, "diamond_gravel_blasting");
     }
 
 

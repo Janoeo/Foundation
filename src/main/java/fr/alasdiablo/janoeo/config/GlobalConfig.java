@@ -41,6 +41,9 @@ public class GlobalConfig {
          */
         public final ForgeConfigSpec.BooleanValue END_ORE_GEN;
 
+
+        public final ForgeConfigSpec.BooleanValue GRAVEL_ORE_GEN;
+
         /**
          * dense ore generation config value
          */
@@ -73,6 +76,7 @@ public class GlobalConfig {
 
             NETHER_ORE_GEN = builder.comment("Nether ore generation: disable / enable").define("netherOreGen", true);
             END_ORE_GEN = builder.comment("End ore generation: disable / enable").define("endOreGen", true);
+            GRAVEL_ORE_GEN = builder.comment("Gravel ore generation: disable / enable").define("gravelOreGen", true);
             DENSE_ORE_GEN = builder.comment("Overworld dense ore generation: disable / enable").define("denseOreGen", true);
             NETHER_DENSE_ORE_GEN = builder.comment("Nether dense ore generation: disable / enable").define("denseOreGen", true);
             EXTRA_ORE_GEN = builder.comment("Extra ore generation: disable / enable").define("extraOreGen", true);

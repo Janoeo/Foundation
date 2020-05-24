@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 apply plugin: "com.wynprice.cursemaven"
-version = '3.5'
+version = '3.6'
 group = 'fr.alasdiablo.janoeo'
 archivesBaseName = 'janoeo'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'

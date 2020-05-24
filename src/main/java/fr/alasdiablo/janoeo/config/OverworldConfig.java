@@ -39,7 +39,7 @@ public class OverworldConfig {
 
 
         public Config(ForgeConfigSpec.Builder builder) {
-            builder.comment("Common config for janoeo").push("janoeo");
+            builder.comment("Overworld Ore config for janoeo").push("janoeo");
 
             COPPER_ORE         = builder.comment("Copper ore generation: disable / enable").define("copperOreGen", true);
             TIN_ORE            = builder.comment("Tin ore generation: disable / enable").define("tinOreGen", true);

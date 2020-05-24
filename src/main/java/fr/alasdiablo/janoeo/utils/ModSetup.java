@@ -2,10 +2,7 @@ package fr.alasdiablo.janoeo.utils;
 
 import fr.alasdiablo.janoeo.ingots.IngotsItems;
 import fr.alasdiablo.janoeo.ores.nether.NetherOresBlocks;
-import fr.alasdiablo.janoeo.world.EndOreGenerator;
-import fr.alasdiablo.janoeo.world.IWorldGenerator;
-import fr.alasdiablo.janoeo.world.NetherOreGenerator;
-import fr.alasdiablo.janoeo.world.OverworldOreGenerator;
+import fr.alasdiablo.janoeo.world.*;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -53,6 +50,7 @@ public class ModSetup {
         generators.add(new OverworldOreGenerator());
         generators.add(new NetherOreGenerator());
         generators.add(new EndOreGenerator());
+        generators.add(new GravelOreGenerator());
         generators.forEach(IWorldGenerator::startWorldGeneration);
     }
 }

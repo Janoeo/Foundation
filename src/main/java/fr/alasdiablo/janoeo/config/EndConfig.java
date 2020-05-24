@@ -27,8 +27,7 @@ public class EndConfig {
 
 
         public Config(ForgeConfigSpec.Builder builder) {
-            builder.comment("Common config for janoeo")
-                    .push("janoeo");
+            builder.comment("End Ore config for janoeo").push("janoeo");
 
             COAL_END_ORE = builder.comment("End coal ore generation: disable / enable").define("endCoalOreGen", true);
             DIAMOND_END_ORE = builder.comment("End diamond ore generation: disable / enable").define("endDiamondOreGen", true);

@@ -1,6 +1,12 @@
+### 3.6
++ add new gravel ore
+    + iron gravel ore
+    + gold gravel ore
+    + diamond gravel ore
+
 ### 3.5
-+ add a new ore world gen (note for modder: extend of OreFeatureConfig to be use with more predicate (more that stone and netherrack))
-+ setup new world gen system for the end ore (more and ore in the end !)
++ add a new ore world gen system(note for modder: extend of OreFeatureConfig to be use with more predicate (more that stone and netherrack))
++ setup new world gen system for the end ore (more ore in the end !)
 
 ### 3.4 - Nether Ore and Bug Fixing
 + add Safyrus in the creator event

@@ -64,5 +64,9 @@
   "block.janoeo.aluminium_nether_ore": "Nether Aluminium Ore",
   "block.janoeo.lead_nether_ore": "Nether Lead Ore",
   "block.janoeo.copper_nether_ore": "Nether Copper Ore",
-  "block.janoeo.tin_nether_ore": "Nether Tin Ore"
+  "block.janoeo.tin_nether_ore": "Nether Tin Ore",
+  "block.janoeo.iron_gravel_ore": "Gravel Iron Ore",
+  "block.janoeo.gold_gravel_ore": "Gravel Gold Ore",
+  "block.janoeo.diamond_gravel_ore": "Gravel Diamond Ore"
+
 }

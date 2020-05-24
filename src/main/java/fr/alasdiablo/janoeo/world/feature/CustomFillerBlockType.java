@@ -14,6 +14,7 @@ public class CustomFillerBlockType {
     public static final CustomFillerBlockType NATURAL_STONE;
     public static final CustomFillerBlockType NETHERRACK;
     public static final CustomFillerBlockType END_STONE;
+    public static final CustomFillerBlockType GRAVEL;
 
     static {
         fillerBlockTypeMap = new HashMap<>();
@@ -27,6 +28,7 @@ public class CustomFillerBlockType {
         });
         NETHERRACK  = createFillerBlockType("netherrack", new BlockMatcher(Blocks.NETHERRACK));
         END_STONE = createFillerBlockType("end_stone", new BlockMatcher(Blocks.END_STONE));
+        GRAVEL = createFillerBlockType("gravel", new BlockMatcher(Blocks.GRAVEL));
     }
 
     private final String name;

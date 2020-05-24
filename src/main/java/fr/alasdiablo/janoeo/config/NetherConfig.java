@@ -57,8 +57,7 @@ public class NetherConfig {
          * @param builder
          */
         public Config(ForgeConfigSpec.Builder builder) {
-            builder.comment("Nether Ore config for janoeo")
-                    .push("janoeo");
+            builder.comment("Nether Ore config for janoeo").push("janoeo");
             ALUMINIUM_NETHER_ORE = builder.comment("Nether aluminium ore generation: disable / enable").define("netherAluminiumOreGen", true);
             COAL_NETHER_ORE = builder.comment("Nether coal ore generation: disable / enable").define("netherCoalOreGen", true);
             DIAMOND_NETHER_ORE = builder.comment("Nether diamond ore generation: disable / enable").define("netherDiamondOreGen", true);
