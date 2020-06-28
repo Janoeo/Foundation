@@ -2,8 +2,8 @@ package fr.alasdiablo.janoeo.events;
 
 import com.google.common.collect.Lists;
 import fr.alasdiablo.janoeo.utils.Registries;
-import net.minecraft.entity.item.FireworkRocketEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.FireworkRocketEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;

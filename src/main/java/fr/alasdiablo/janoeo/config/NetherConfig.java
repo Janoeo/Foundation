@@ -62,7 +62,7 @@ public class NetherConfig {
             COAL_NETHER_ORE = builder.comment("Nether coal ore generation: disable / enable").define("netherCoalOreGen", true);
             DIAMOND_NETHER_ORE = builder.comment("Nether diamond ore generation: disable / enable").define("netherDiamondOreGen", true);
             EMERALD_NETHER_ORE = builder.comment("Nether emerald ore generation: disable / enable").define("netherEmeraldOreGen", true);
-            GOLD_NETHER_ORE = builder.comment("Nether gold ore generation: disable / enable").define("netherGoldOreGen", true);
+            GOLD_NETHER_ORE = builder.comment("Nether gold ore generation: disable / enable").define("netherGoldOreGen", false);
             IRON_NETHER_ORE = builder.comment("Nether iron ore generation: disable / enable").define("netherIronOreGen", true);
             LAPIS_NETHER_ORE = builder.comment("Nether lapis ore generation: disable / enable").define("netherLapisOreGen", true);
             LEAD_NETHER_ORE = builder.comment("Nether lead ore generation: disable / enable").define("netherLeadOreGen", true);

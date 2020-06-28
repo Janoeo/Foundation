@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[32,)"
 [[mods]]
 modId="janoeo"
 version="${file.jarVersion}"
@@ -11,12 +11,12 @@ Just Another Nether/Overworld/End Ores by AlasDiablo, lIotaMiu, Egame257 and Saf
 [[dependencies.janoeo]]
     modId="forge"
     mandatory=true
-    versionRange="[31,)"
+    versionRange="[32,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.janoeo]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15,)"
+    versionRange="[1.16.1,)"
     ordering="NONE"
     side="BOTH"

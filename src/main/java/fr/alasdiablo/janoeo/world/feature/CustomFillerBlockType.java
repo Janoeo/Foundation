@@ -1,40 +1,43 @@
 package fr.alasdiablo.janoeo.world.feature;
 
+import com.mojang.serialization.Codec;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockMatcher;
+import net.minecraft.util.IStringSerializable;
 
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
-public class CustomFillerBlockType {
-    private static final Map<String, CustomFillerBlockType> fillerBlockTypeMap;
-    public static final CustomFillerBlockType NATURAL_STONE;
-    public static final CustomFillerBlockType NETHERRACK;
-    public static final CustomFillerBlockType END_STONE;
-    public static final CustomFillerBlockType GRAVEL;
+public enum CustomFillerBlockType implements IStringSerializable {
+    NATURAL_STONE("natural_stone", (state) -> {
+        if (state == null) {
+            return false;
+        } else {
+            Block block = state.getBlock();
+            return block == Blocks.STONE || block == Blocks.GRANITE || block == Blocks.DIORITE || block == Blocks.ANDESITE;
+        }
+    }),
+    NETHERRACK("netherrack", new BlockMatcher(Blocks.NETHERRACK)),
+    END_STONE("end_stone", new BlockMatcher(Blocks.END_STONE)),
+    GRAVEL("gravel", new BlockMatcher(Blocks.GRAVEL));
 
+    private static final Map<String, CustomFillerBlockType> CUSTOM_FILLER_BLOCK_TYPE_MAP;
+    public static final Codec<CustomFillerBlockType> FILLER_BLOCK_TYPE_CODEC;
     static {
-        fillerBlockTypeMap = new HashMap<>();
-        NATURAL_STONE = createFillerBlockType("natural_stone", (state) -> {
-            if (state == null) {
-                return false;
-            } else {
-                Block block = state.getBlock();
-                return block == Blocks.STONE || block == Blocks.GRANITE || block == Blocks.DIORITE || block == Blocks.ANDESITE;
-            }
-        });
-        NETHERRACK  = createFillerBlockType("netherrack", new BlockMatcher(Blocks.NETHERRACK));
-        END_STONE = createFillerBlockType("end_stone", new BlockMatcher(Blocks.END_STONE));
-        GRAVEL = createFillerBlockType("gravel", new BlockMatcher(Blocks.GRAVEL));
+        CUSTOM_FILLER_BLOCK_TYPE_MAP = Arrays.stream(values()).collect(Collectors.toMap(CustomFillerBlockType::getName, (customFillerBlockType) -> customFillerBlockType));
+        FILLER_BLOCK_TYPE_CODEC = IStringSerializable.func_233023_a_(CustomFillerBlockType::values, CustomFillerBlockType::byName);
     }
+
+
 
     private final String name;
     private final Predicate<BlockState> targetBlockPredicate;
 
-    private CustomFillerBlockType(String nameIn, Predicate<BlockState> predicateIn) {
+    CustomFillerBlockType(String nameIn, Predicate<BlockState> predicateIn) {
         this.name = nameIn;
         this.targetBlockPredicate = predicateIn;
     }
@@ -48,12 +51,11 @@ public class CustomFillerBlockType {
     }
 
     public static CustomFillerBlockType byName(String name) {
-        return fillerBlockTypeMap.get(name);
+        return CUSTOM_FILLER_BLOCK_TYPE_MAP.get(name);
     }
 
-    public static CustomFillerBlockType createFillerBlockType(String nameIn, Predicate<BlockState> predicateIn) {
-        CustomFillerBlockType customFillerBlockType = new CustomFillerBlockType(nameIn, predicateIn);
-        fillerBlockTypeMap.put(customFillerBlockType.name, customFillerBlockType);
-        return customFillerBlockType;
+    @Override
+    public String func_176610_l() {
+        return this.name;
     }
 }

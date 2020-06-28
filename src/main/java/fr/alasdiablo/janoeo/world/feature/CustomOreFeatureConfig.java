@@ -1,13 +1,18 @@
 package fr.alasdiablo.janoeo.world.feature;
 
-import com.google.common.collect.ImmutableMap;
-import com.mojang.datafixers.Dynamic;
-import com.mojang.datafixers.types.DynamicOps;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 
 public class CustomOreFeatureConfig implements IFeatureConfig {
+    public static final Codec<CustomOreFeatureConfig> ORE_FEATURE_CONFIG_CODEC = RecordCodecBuilder.create((oreFeatureConfigInstance) -> oreFeatureConfigInstance.group(
+            CustomFillerBlockType.FILLER_BLOCK_TYPE_CODEC.fieldOf("target").forGetter((oreFeatureConfig) -> oreFeatureConfig.target),
+            BlockState.field_235877_b_.fieldOf("state").forGetter((oreFeatureConfig) -> oreFeatureConfig.state),
+            Codec.INT.fieldOf("size").withDefault(0).forGetter((oreFeatureConfig) -> oreFeatureConfig.size)
+    ).apply(oreFeatureConfigInstance, CustomOreFeatureConfig::new));
+
+
     public final CustomFillerBlockType target;
     public final int size;
     public final BlockState state;
@@ -16,24 +21,5 @@ public class CustomOreFeatureConfig implements IFeatureConfig {
         this.size = size;
         this.state = state;
         this.target = target;
-    }
-
-    @Override
-    public <T> Dynamic<T> serialize(DynamicOps<T> ops) {
-        return new Dynamic<>(ops,
-            ops.createMap(ImmutableMap.of(
-                    ops.createString("size"), ops.createInt(this.size),
-                    ops.createString("target"), ops.createString(this.target.getName()),
-                    ops.createString("state"), BlockState.serialize(ops, this.state).getValue()
-                )
-            )
-        );
-    }
-
-    public static CustomOreFeatureConfig deserialize(Dynamic<?> in) {
-        int i = in.get("size").asInt(0);
-        CustomFillerBlockType fillerblocktype = CustomFillerBlockType.byName(in.get("target").asString(""));
-        BlockState blockstate = in.get("state").map(BlockState::deserialize).orElse(Blocks.AIR.getDefaultState());
-        return new CustomOreFeatureConfig(fillerblocktype, blockstate, i);
     }
 }

@@ -2,6 +2,7 @@ package fr.alasdiablo.janoeo.block.end;
 
 import fr.alasdiablo.janoeo.block.EndOre;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.RedstoneOreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -15,10 +16,10 @@ public class EndRedstoneOre extends RedstoneOreBlock {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)
                 .tickRandomly()
-                .lightValue(9)
                 .hardnessAndResistance(4f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
+                .func_235838_a_((p) -> 9)
         );
         this.setRegistryName(registryName);
     }

@@ -6,7 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.monster.ZombiePigmanEntity;
+import net.minecraft.entity.monster.ZombifiedPiglinEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -58,7 +58,7 @@ public class NetherOre extends OreBlock {
         GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
         if (globalConfig.ZOMBIE_PIGMAN_ANGER.get()) {
             int aggroRange = globalConfig.ZOMBIE_PIGMAN_ANGER_RANGE.get();
-            List<ZombiePigmanEntity> list = world.getEntitiesWithinAABB(ZombiePigmanEntity.class,
+            List<ZombifiedPiglinEntity> list = world.getEntitiesWithinAABB(ZombifiedPiglinEntity.class,
                     AxisAlignedBB.toImmutable(MutableBoundingBox.createProper(
                             x - aggroRange,
                             y - aggroRange,
