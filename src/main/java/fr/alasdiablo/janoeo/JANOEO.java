@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo;
 
 import fr.alasdiablo.janoeo.config.*;
-import fr.alasdiablo.janoeo.utils.Registries;
-import fr.alasdiablo.janoeo.utils.*;
+import fr.alasdiablo.janoeo.util.Registries;
+import fr.alasdiablo.janoeo.util.*;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;

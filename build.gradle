@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '3.6.1'
+version = '4.4.0.42-experimental'
 group = 'fr.alasdiablo.janoeo'
 archivesBaseName = 'Janoeo'
 
@@ -56,7 +56,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.1-32.0.63'
+    minecraft 'net.minecraftforge:forge:1.16.1-32.0.69'
 }
 
 jar {

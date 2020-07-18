@@ -1,5 +1,14 @@
+### 4.4.0.42-experimental
++ change versioning
+    + \<project version>.\<mod version>.\<mod sub version>.\<project build number>
++ internal code rework
++ update xp drop on block
+
+### 3.6.1.1
++ fix issues with tags references (#2)
+
 ### 3.6.1
-+ Port to Minecraft 1.16.1
++ port to Minecraft 1.16.1
 
 ### 3.6
 + add new gravel ore

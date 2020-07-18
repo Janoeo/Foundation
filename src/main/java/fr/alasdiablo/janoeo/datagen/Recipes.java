@@ -1,13 +1,13 @@
 package fr.alasdiablo.janoeo.datagen;
 
-import fr.alasdiablo.janoeo.blocks.ModBlocks;
-import fr.alasdiablo.janoeo.dusts.DustsItems;
-import fr.alasdiablo.janoeo.gems.GemsItems;
-import fr.alasdiablo.janoeo.ores.GravelsOresBlocks;
-import fr.alasdiablo.janoeo.ores.end.EndOresBlocks;
-import fr.alasdiablo.janoeo.ingots.IngotsItems;
-import fr.alasdiablo.janoeo.ores.nether.NetherOresBlocks;
-import fr.alasdiablo.janoeo.ores.overworld.OverworldOresBlocks;
+import fr.alasdiablo.janoeo.block.ModBlocks;
+import fr.alasdiablo.janoeo.item.DustsItems;
+import fr.alasdiablo.janoeo.item.GemsItems;
+import fr.alasdiablo.janoeo.block.GravelsOresBlocks;
+import fr.alasdiablo.janoeo.block.EndOresBlocks;
+import fr.alasdiablo.janoeo.item.IngotsItems;
+import fr.alasdiablo.janoeo.block.NetherOresBlocks;
+import fr.alasdiablo.janoeo.block.OverworldOresBlocks;
 import net.minecraft.data.*;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
