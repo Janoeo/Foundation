@@ -1,5 +1,10 @@
+### 4.4.0.46-experimental
++ rework world ore generation internal code
++ balancing the nether and end ore generation
++ buff on in some biomes
+
 ### 4.4.0.45-experimental
-+ add more possibility in the option
++ add more possibility in the config (#1)
 
 ### 4.4.0.42-experimental
 + change versioning

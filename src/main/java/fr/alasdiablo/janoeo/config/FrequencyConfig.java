@@ -16,44 +16,54 @@ public class FrequencyConfig {
 
     public static class Config {
 
-        public final int countMin = 0, countMax = 4096, worldMin = 1, worldMax = 255;
+        public final int sizeMin = 1, sizeMax = 128, countMin = 0, countMax = 4096, worldMin = 1, worldMax = 255;
 
+        public final ForgeConfigSpec.IntValue COPPER_ORE_SIZE;
         public final ForgeConfigSpec.IntValue COPPER_ORE_COUNT;
         public final ForgeConfigSpec.IntValue COPPER_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue COPPER_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue TIN_ORE_SIZE;
         public final ForgeConfigSpec.IntValue TIN_ORE_COUNT;
         public final ForgeConfigSpec.IntValue TIN_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue TIN_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue ALUMINIUM_ORE_SIZE;
         public final ForgeConfigSpec.IntValue ALUMINIUM_ORE_COUNT;
         public final ForgeConfigSpec.IntValue ALUMINIUM_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue ALUMINIUM_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue URANIUM_ORE_SIZE;
         public final ForgeConfigSpec.IntValue URANIUM_ORE_COUNT;
         public final ForgeConfigSpec.IntValue URANIUM_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue URANIUM_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue LEAD_ORE_SIZE;
         public final ForgeConfigSpec.IntValue LEAD_ORE_COUNT;
         public final ForgeConfigSpec.IntValue LEAD_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue LEAD_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue SILVER_ORE_SIZE;
         public final ForgeConfigSpec.IntValue SILVER_ORE_COUNT;
         public final ForgeConfigSpec.IntValue SILVER_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue SILVER_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue RUBY_ORE_SIZE;
         public final ForgeConfigSpec.IntValue RUBY_ORE_COUNT;
         public final ForgeConfigSpec.IntValue RUBY_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue RUBY_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue SAPPHIRE_ORE_SIZE;
         public final ForgeConfigSpec.IntValue SAPPHIRE_ORE_COUNT;
         public final ForgeConfigSpec.IntValue SAPPHIRE_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue SAPPHIRE_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue AMETHYST_ORE_SIZE;
         public final ForgeConfigSpec.IntValue AMETHYST_ORE_COUNT;
         public final ForgeConfigSpec.IntValue AMETHYST_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue AMETHYST_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue ZINC_ORE_SIZE;
         public final ForgeConfigSpec.IntValue ZINC_ORE_COUNT;
         public final ForgeConfigSpec.IntValue ZINC_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue ZINC_ORE_TOP;
@@ -97,42 +107,52 @@ public class FrequencyConfig {
         public Config(ForgeConfigSpec.Builder builder) {
             builder.comment("Ore frequency and height config for janoeo").push("janoeo");
 
+            COPPER_ORE_SIZE             = builder.defineInRange("overworld.copper_size"             , 8 , sizeMin, sizeMax);
             COPPER_ORE_COUNT            = builder.defineInRange("overworld.copper_count"            , 12, countMin, countMax);
             COPPER_ORE_TOP              = builder.defineInRange("overworld.copper_top"              , 63, worldMin, worldMax);
             COPPER_ORE_BOTTOM           = builder.defineInRange("overworld.copper_bottom"           , 1 , worldMin, worldMax);
 
+            TIN_ORE_SIZE                = builder.defineInRange("overworld.tin_size"                , 8 , sizeMin, sizeMax);
             TIN_ORE_COUNT               = builder.defineInRange("overworld.tin_count"               , 12, countMin, countMax);
             TIN_ORE_TOP                 = builder.defineInRange("overworld.tin_top"                 , 63, worldMin, worldMax);
             TIN_ORE_BOTTOM              = builder.defineInRange("overworld.tin_bottom"              , 1 , worldMin, worldMax);
 
+            ALUMINIUM_ORE_SIZE          = builder.defineInRange("overworld.aluminium_size"          , 12, sizeMin, sizeMax);
             ALUMINIUM_ORE_COUNT         = builder.defineInRange("overworld.aluminium_count"         , 12, countMin, countMax);
             ALUMINIUM_ORE_TOP           = builder.defineInRange("overworld.aluminium_top"           , 63, worldMin, worldMax);
             ALUMINIUM_ORE_BOTTOM        = builder.defineInRange("overworld.aluminium_bottom"        , 1 , worldMin, worldMax);
 
+            URANIUM_ORE_SIZE            = builder.defineInRange("overworld.uranium_size"            , 4 , sizeMin, sizeMax);
             URANIUM_ORE_COUNT           = builder.defineInRange("overworld.uranium_count"           , 12, countMin, countMax);
             URANIUM_ORE_TOP             = builder.defineInRange("overworld.uranium_top"             , 32, worldMin, worldMax);
             URANIUM_ORE_BOTTOM          = builder.defineInRange("overworld.uranium_bottom"          , 1 , worldMin, worldMax);
 
+            LEAD_ORE_SIZE               = builder.defineInRange("overworld.lead_size"               , 12, sizeMin, sizeMax);
             LEAD_ORE_COUNT              = builder.defineInRange("overworld.lead_count"              , 12, countMin, countMax);
             LEAD_ORE_TOP                = builder.defineInRange("overworld.lead_top"                , 63, worldMin, worldMax);
             LEAD_ORE_BOTTOM             = builder.defineInRange("overworld.lead_bottom"             , 1 , worldMin, worldMax);
 
+            SILVER_ORE_SIZE             = builder.defineInRange("overworld.silver_size"             , 4 , sizeMin, sizeMax);
             SILVER_ORE_COUNT            = builder.defineInRange("overworld.silver_count"            , 12, countMin, countMax);
             SILVER_ORE_TOP              = builder.defineInRange("overworld.silver_top"              , 26, worldMin, worldMax);
             SILVER_ORE_BOTTOM           = builder.defineInRange("overworld.silver_bottom"           , 1 , worldMin, worldMax);
 
+            RUBY_ORE_SIZE               = builder.defineInRange("overworld.ruby_size"               , 2 , sizeMin, sizeMax);
             RUBY_ORE_COUNT              = builder.defineInRange("overworld.ruby_count"              , 12, countMin, countMax);
             RUBY_ORE_TOP                = builder.defineInRange("overworld.ruby_top"                , 26, worldMin, worldMax);
             RUBY_ORE_BOTTOM             = builder.defineInRange("overworld.ruby_bottom"             , 1 , worldMin, worldMax);
 
+            SAPPHIRE_ORE_SIZE           = builder.defineInRange("overworld.sapphire_size"           , 2 , sizeMin, sizeMax);
             SAPPHIRE_ORE_COUNT          = builder.defineInRange("overworld.sapphire_count"          , 12, countMin, countMax);
             SAPPHIRE_ORE_TOP            = builder.defineInRange("overworld.sapphire_top"            , 26, worldMin, worldMax);
             SAPPHIRE_ORE_BOTTOM         = builder.defineInRange("overworld.sapphire_bottom"         , 1 , worldMin, worldMax);
 
+            AMETHYST_ORE_SIZE           = builder.defineInRange("overworld.amethyst_size"           , 2 , sizeMin, sizeMax);
             AMETHYST_ORE_COUNT          = builder.defineInRange("overworld.amethyst_count"          , 12, countMin, countMax);
             AMETHYST_ORE_TOP            = builder.defineInRange("overworld.amethyst_top"            , 26, worldMin, worldMax);
             AMETHYST_ORE_BOTTOM         = builder.defineInRange("overworld.amethyst_bottom"         , 1 , worldMin, worldMax);
 
+            ZINC_ORE_SIZE               = builder.defineInRange("overworld.zinc_size"               , 8 , sizeMin, sizeMax);
             ZINC_ORE_COUNT              = builder.defineInRange("overworld.zinc_count"              , 12, countMin, countMax);
             ZINC_ORE_TOP                = builder.defineInRange("overworld.zinc_top"                , 63, worldMin, worldMax);
             ZINC_ORE_BOTTOM             = builder.defineInRange("overworld.zinc_bottom"             , 1 , worldMin, worldMax);
