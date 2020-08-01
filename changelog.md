@@ -1,4 +1,7 @@
 ### 4.4.0.47-experimental
++ fix missing config file
+
+### 4.4.0.47-experimental
 + fix harvest level
 + fix redstone ore always lit
 + add new basalt ore
