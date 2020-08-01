@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "janoeo:emerald_basalt_ore"
+  },
+  "result": "minecraft:emerald",
+  "experience": 0.1,
+  "cookingtime": 100
+}

@@ -23,7 +23,8 @@ public enum CustomFillerBlockType implements IStringSerializable {
     }),
     NETHERRACK("netherrack", new BlockMatcher(Blocks.NETHERRACK)),
     END_STONE("end_stone", new BlockMatcher(Blocks.END_STONE)),
-    GRAVEL("gravel", new BlockMatcher(Blocks.GRAVEL));
+    GRAVEL("gravel", new BlockMatcher(Blocks.GRAVEL)),
+    BASALT("basalt", new BlockMatcher(Blocks.field_235337_cO_));
 
     private static final Map<String, CustomFillerBlockType> CUSTOM_FILLER_BLOCK_TYPE_MAP;
     public static final Codec<CustomFillerBlockType> FILLER_BLOCK_TYPE_CODEC;

@@ -16,8 +16,6 @@ public class FrequencyConfig {
 
     public static class Config {
 
-        public final int sizeMin = 1, sizeMax = 128, countMin = 0, countMax = 4096, worldMin = 1, worldMax = 255;
-
         public final ForgeConfigSpec.IntValue COPPER_ORE_SIZE;
         public final ForgeConfigSpec.IntValue COPPER_ORE_COUNT;
         public final ForgeConfigSpec.IntValue COPPER_ORE_BOTTOM;
@@ -104,8 +102,44 @@ public class FrequencyConfig {
         public final ForgeConfigSpec.IntValue DENSE_DIAMOND_ORE_BOTTOM;
         public final ForgeConfigSpec.IntValue DENSE_DIAMOND_ORE_TOP;
 
+        public final ForgeConfigSpec.IntValue COAL_BASALT_ORE_SIZE;
+        public final ForgeConfigSpec.IntValue COAL_BASALT_ORE_COUNT;
+        public final ForgeConfigSpec.IntValue COAL_BASALT_ORE_BOTTOM;
+        public final ForgeConfigSpec.IntValue COAL_BASALT_ORE_TOP;
+
+        public final ForgeConfigSpec.IntValue GOLD_BASALT_ORE_SIZE;
+        public final ForgeConfigSpec.IntValue GOLD_BASALT_ORE_COUNT;
+        public final ForgeConfigSpec.IntValue GOLD_BASALT_ORE_BOTTOM;
+        public final ForgeConfigSpec.IntValue GOLD_BASALT_ORE_TOP;
+
+        public final ForgeConfigSpec.IntValue DIAMOND_BASALT_ORE_SIZE;
+        public final ForgeConfigSpec.IntValue DIAMOND_BASALT_ORE_COUNT;
+        public final ForgeConfigSpec.IntValue DIAMOND_BASALT_ORE_BOTTOM;
+        public final ForgeConfigSpec.IntValue DIAMOND_BASALT_ORE_TOP;
+
+        public final ForgeConfigSpec.IntValue EMERALD_BASALT_ORE_COUNT;
+        public final ForgeConfigSpec.IntValue EMERALD_BASALT_ORE_BOTTOM;
+        public final ForgeConfigSpec.IntValue EMERALD_BASALT_ORE_TOP;
+
+        public final ForgeConfigSpec.IntValue IRON_BASALT_ORE_SIZE;
+        public final ForgeConfigSpec.IntValue IRON_BASALT_ORE_COUNT;
+        public final ForgeConfigSpec.IntValue IRON_BASALT_ORE_BOTTOM;
+        public final ForgeConfigSpec.IntValue IRON_BASALT_ORE_TOP;
+
+        public final ForgeConfigSpec.IntValue LAPIS_BASALT_ORE_SIZE;
+        public final ForgeConfigSpec.IntValue LAPIS_BASALT_ORE_COUNT;
+        public final ForgeConfigSpec.IntValue LAPIS_BASALT_ORE_BOTTOM;
+        public final ForgeConfigSpec.IntValue LAPIS_BASALT_ORE_TOP;
+
+        public final ForgeConfigSpec.IntValue REDSTONE_BASALT_ORE_SIZE;
+        public final ForgeConfigSpec.IntValue REDSTONE_BASALT_ORE_COUNT;
+        public final ForgeConfigSpec.IntValue REDSTONE_BASALT_ORE_BOTTOM;
+        public final ForgeConfigSpec.IntValue REDSTONE_BASALT_ORE_TOP;
+
         public Config(ForgeConfigSpec.Builder builder) {
             builder.comment("Ore frequency and height config for janoeo").push("janoeo");
+
+            final int sizeMin = 1, sizeMax = 128, countMin = 0, countMax = 4096, worldMin = 1, worldMax = 255;
 
             COPPER_ORE_SIZE             = builder.defineInRange("overworld.copper_size"             , 8 , sizeMin, sizeMax);
             COPPER_ORE_COUNT            = builder.defineInRange("overworld.copper_count"            , 12, countMin, countMax);
@@ -192,6 +226,40 @@ public class FrequencyConfig {
             DENSE_DIAMOND_ORE_COUNT     = builder.defineInRange("overworld.dense.diamond_count"     , 320, countMin, countMax);
             DENSE_DIAMOND_ORE_TOP       = builder.defineInRange("overworld.dense.diamond_top"       , 16 , worldMin, worldMax);
             DENSE_DIAMOND_ORE_BOTTOM    = builder.defineInRange("overworld.dense.diamond_bottom"    , 1  , worldMin, worldMax);
+
+            COAL_BASALT_ORE_SIZE        = builder.defineInRange("nether.basalt.coal_size"           , 12  , sizeMin, sizeMax);
+            COAL_BASALT_ORE_COUNT       = builder.defineInRange("nether.basalt.coal_count"          , 17 , countMin, countMax);
+            COAL_BASALT_ORE_TOP         = builder.defineInRange("nether.basalt.coal_top"            , 127, worldMin, worldMax);
+            COAL_BASALT_ORE_BOTTOM      = builder.defineInRange("nether.basalt.coal_bottom"         , 1  , worldMin, worldMax);
+
+            DIAMOND_BASALT_ORE_SIZE     = builder.defineInRange("nether.basalt.diamond_size"        , 4  , sizeMin, sizeMax);
+            DIAMOND_BASALT_ORE_COUNT    = builder.defineInRange("nether.basalt.diamond_count"       , 5 , countMin, countMax);
+            DIAMOND_BASALT_ORE_TOP      = builder.defineInRange("nether.basalt.diamond_top"         , 127, worldMin, worldMax);
+            DIAMOND_BASALT_ORE_BOTTOM   = builder.defineInRange("nether.basalt.diamond_bottom"      , 1  , worldMin, worldMax);
+
+            EMERALD_BASALT_ORE_COUNT    = builder.defineInRange("nether.basalt.emerald_count"       , 2  , countMin, countMax);
+            EMERALD_BASALT_ORE_TOP      = builder.defineInRange("nether.basalt.emerald_top"         , 127, worldMin, worldMax);
+            EMERALD_BASALT_ORE_BOTTOM   = builder.defineInRange("nether.basalt.emerald_bottom"      , 1  , worldMin, worldMax);
+
+            GOLD_BASALT_ORE_SIZE        = builder.defineInRange("nether.basalt.gold_size"           , 4  , sizeMin, sizeMax);
+            GOLD_BASALT_ORE_COUNT       = builder.defineInRange("nether.basalt.gold_count"          , 8 , countMin, countMax);
+            GOLD_BASALT_ORE_TOP         = builder.defineInRange("nether.basalt.gold_top"            , 127, worldMin, worldMax);
+            GOLD_BASALT_ORE_BOTTOM      = builder.defineInRange("nether.basalt.gold_bottom"         , 1  , worldMin, worldMax);
+
+            IRON_BASALT_ORE_SIZE        = builder.defineInRange("nether.basalt.iron_size"           , 6  , sizeMin, sizeMax);
+            IRON_BASALT_ORE_COUNT       = builder.defineInRange("nether.basalt.iron_count"          , 10 , countMin, countMax);
+            IRON_BASALT_ORE_TOP         = builder.defineInRange("nether.basalt.iron_top"            , 127, worldMin, worldMax);
+            IRON_BASALT_ORE_BOTTOM      = builder.defineInRange("nether.basalt.iron_bottom"         , 1  , worldMin, worldMax);
+
+            LAPIS_BASALT_ORE_SIZE       = builder.defineInRange("nether.basalt.lapis_size"          , 6  , sizeMin, sizeMax);
+            LAPIS_BASALT_ORE_COUNT      = builder.defineInRange("nether.basalt.lapis_count"         , 5 , countMin, countMax);
+            LAPIS_BASALT_ORE_TOP        = builder.defineInRange("nether.basalt.lapis_top"           , 127, worldMin, worldMax);
+            LAPIS_BASALT_ORE_BOTTOM     = builder.defineInRange("nether.basalt.lapis_bottom"        , 1  , worldMin, worldMax);
+
+            REDSTONE_BASALT_ORE_SIZE    = builder.defineInRange("nether.basalt.redstone_size"       , 8  , sizeMin, sizeMax);
+            REDSTONE_BASALT_ORE_COUNT   = builder.defineInRange("nether.basalt.redstone_count"      , 8 , countMin, countMax);
+            REDSTONE_BASALT_ORE_TOP     = builder.defineInRange("nether.basalt.redstone_top"        , 127, worldMin, worldMax);
+            REDSTONE_BASALT_ORE_BOTTOM  = builder.defineInRange("nether.basalt.redstone_bottom"     , 1  , worldMin, worldMax);
 
             builder.pop();
         }

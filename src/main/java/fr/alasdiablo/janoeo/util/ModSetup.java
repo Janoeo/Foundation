@@ -51,6 +51,7 @@ public class ModSetup {
         generators.add(new NetherOreGenerator());
         generators.add(new EndOreGenerator());
         generators.add(new GravelOreGenerator());
+        generators.add(new BasaltOreGenerator());
         generators.forEach(IWorldGenerator::startWorldGeneration);
     }
 }

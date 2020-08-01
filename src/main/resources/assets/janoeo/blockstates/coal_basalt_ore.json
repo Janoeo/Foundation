@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "janoeo:block/coal_basalt_ore",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "janoeo:block/coal_basalt_ore"
+    },
+    "axis=z": {
+      "model": "janoeo:block/coal_basalt_ore",
+      "x": 90
+    }
+  }
+}

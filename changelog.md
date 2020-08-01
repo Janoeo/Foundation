@@ -1,3 +1,15 @@
+### 4.4.0.47-experimental
++ fix harvest level
++ fix redstone ore always lit
++ add new basalt ore
+  + diamond
+  + emerald
+  + coal
+  + gold
+  + iron
+  + lapis
+  + redstone
+
 ### 4.4.0.46-experimental
 + rework world ore generation internal code
 + balancing the nether and end ore generation
