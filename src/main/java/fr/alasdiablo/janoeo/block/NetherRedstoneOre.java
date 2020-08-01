@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.block;
 
+import fr.alasdiablo.janoeo.block.util.RedstoneOreUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RedstoneOreBlock;
 import net.minecraft.block.SoundType;
@@ -18,7 +19,7 @@ public class NetherRedstoneOre extends RedstoneOreBlock implements INetherOre {
                 .func_235861_h_()
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
-                .func_235838_a_((p) -> 9)
+                .func_235838_a_(RedstoneOreUtils.isLit(9))
         );
         this.setRegistryName(registryName);
     }

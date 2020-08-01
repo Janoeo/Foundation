@@ -74,4 +74,12 @@ public class Registries {
     public static final String IRON_GRAVEL_ORE             = "iron_gravel_ore";
     public static final String GOLD_GRAVEL_ORE             = "gold_gravel_ore";
 
+    public static final String COAL_BASALT_ORE             = "coal_basalt_ore";
+    public static final String DIAMOND_BASALT_ORE          = "diamond_basalt_ore";
+    public static final String EMERALD_BASALT_ORE          = "emerald_basalt_ore";
+    public static final String GOLD_BASALT_ORE             = "gold_basalt_ore";
+    public static final String IRON_BASALT_ORE             = "iron_basalt_ore";
+    public static final String LAPIS_BASALT_ORE            = "lapis_basalt_ore";
+    public static final String REDSTONE_BASALT_ORE         = "redstone_basalt_ore";
+
 }
