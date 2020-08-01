@@ -14,6 +14,7 @@ public class EndRedstoneOre extends RedstoneOreBlock implements IEndOre {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)
                 .tickRandomly()
+                .func_235861_h_()
                 .hardnessAndResistance(4f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)

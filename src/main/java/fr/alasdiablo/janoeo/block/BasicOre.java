@@ -13,6 +13,7 @@ public class BasicOre extends OreBlock {
     public BasicOre(String registryName, int harvestLevel) {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)
+                .func_235861_h_()
                 .hardnessAndResistance(3f)
                 .harvestLevel(harvestLevel)
                 .harvestTool(ToolType.PICKAXE)

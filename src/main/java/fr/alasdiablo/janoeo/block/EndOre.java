@@ -17,6 +17,7 @@ public class EndOre extends OreBlock implements IEndOre {
     public EndOre(String registryName) {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)
+                .func_235861_h_()
                 .hardnessAndResistance(4f)
                 .harvestLevel(3)
                 .harvestTool(ToolType.PICKAXE)

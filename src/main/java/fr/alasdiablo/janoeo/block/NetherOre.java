@@ -17,6 +17,7 @@ public class NetherOre extends OreBlock implements INetherOre {
     public NetherOre(String registryName) {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)
+                .func_235861_h_()
                 .hardnessAndResistance(3f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)

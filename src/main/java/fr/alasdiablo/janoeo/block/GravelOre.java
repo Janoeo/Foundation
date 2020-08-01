@@ -18,6 +18,7 @@ public class GravelOre extends FallingBlock {
         super(Properties.create(Material.EARTH)
                 .sound(SoundType.GROUND)
                 .hardnessAndResistance(0.6f)
+                .func_235861_h_()
                 .harvestLevel(2)
                 .harvestTool(ToolType.SHOVEL)
         );

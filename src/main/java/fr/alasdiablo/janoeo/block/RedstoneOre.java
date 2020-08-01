@@ -12,6 +12,7 @@ public class RedstoneOre extends RedstoneOreBlock {
                 .sound(SoundType.STONE)
                 .tickRandomly()
                 .hardnessAndResistance(3f)
+                .func_235861_h_()
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
                 .func_235838_a_((p) -> 9)
