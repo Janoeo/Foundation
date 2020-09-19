@@ -3,8 +3,6 @@ package fr.alasdiablo.janoeo;
 import fr.alasdiablo.janoeo.config.*;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.*;
-import jeresources.entry.WorldGenEntry;
-import jeresources.registry.WorldGenRegistry;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
