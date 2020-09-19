@@ -67,12 +67,5 @@
   "block.janoeo.tin_nether_ore": "Nether Tin Ore",
   "block.janoeo.iron_gravel_ore": "Gravel Iron Ore",
   "block.janoeo.gold_gravel_ore": "Gravel Gold Ore",
-  "block.janoeo.diamond_gravel_ore": "Gravel Diamond Ore",
-  "block.janoeo.coal_basalt_ore": "Basalt Coal Ore",
-  "block.janoeo.diamond_basalt_ore": "Basalt Diamond Ore",
-  "block.janoeo.emerald_basalt_ore": "Basalt Emerald Ore",
-  "block.janoeo.gold_basalt_ore": "Basalt Gold Ore",
-  "block.janoeo.iron_basalt_ore": "Basalt Iron Ore",
-  "block.janoeo.lapis_basalt_ore": "Basalt Lapis Ore",
-  "block.janoeo.redstone_basalt_ore": "Basalt Redstone Ore"
+  "block.janoeo.diamond_gravel_ore": "Gravel Diamond Ore"
 }
