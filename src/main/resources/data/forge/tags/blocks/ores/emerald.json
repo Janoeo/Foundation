@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "janoeo:emerald_nether_ore",
-    "janoeo:emerald_end_ore"
+    "janoeo:emerald_end_ore",
+    "janoeo:emerald_basalt_ore"
   ]
 }

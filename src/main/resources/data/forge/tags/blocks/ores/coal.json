@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "janoeo:coal_nether_ore",
-    "janoeo:coal_end_ore"
+    "janoeo:coal_end_ore",
+    "janoeo:coal_basalt_ore"
   ]
 }

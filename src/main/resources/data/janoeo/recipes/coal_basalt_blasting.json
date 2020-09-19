@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "janoeo:coal_basalt_ore"
+  },
+  "result": "minecraft:coal",
+  "experience": 0.1,
+  "cookingtime": 100
+}

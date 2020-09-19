@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "janoeo:block/nether/basalt/diamond_basalt_ore_top",
+    "side": "janoeo:block/nether/basalt/diamond_basalt_ore_side"
+  }
+}

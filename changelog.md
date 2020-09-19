@@ -1,3 +1,42 @@
+### 4.4.0.49-experimental
++ drop support for 1.16 for now (wait stable release)
++ back port to 1.15.2
+
+### 4.4.0.48-experimental
++ fix missing config file
+
+### 4.4.0.47-experimental
++ fix harvest level
++ fix redstone ore always lit
++ add new basalt ore
+  + diamond
+  + emerald
+  + coal
+  + gold
+  + iron
+  + lapis
+  + redstone
+
+### 4.4.0.46-experimental
++ rework world ore generation internal code
++ balancing the nether and end ore generation
++ buff on in some biomes
+
+### 4.4.0.45-experimental
++ add more possibility in the config (#1)
+
+### 4.4.0.42-experimental
++ change versioning
+    + \<project version>.\<mod version>.\<mod sub version>.\<project build number>
++ internal code rework
++ update xp drop on block
+
+### 3.6.1.1
++ fix issues with tags references (#2)
+
+### 3.6.1
++ port to Minecraft 1.16.1
+
 ### 3.6
 + add new gravel ore
     + iron gravel ore

@@ -17,6 +17,6 @@ Just Another Nether/Overworld/End Ores by AlasDiablo, lIotaMiu, Egame257 and Saf
 [[dependencies.janoeo]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15,)"
+    versionRange="[1.15.1,)"
     ordering="NONE"
     side="BOTH"
