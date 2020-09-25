@@ -1,9 +1,8 @@
 package fr.alasdiablo.janoeo.world.gen.feature;
 
-import fr.alasdiablo.janoeo.block.OverworldDenseOresBlocks;
-import fr.alasdiablo.janoeo.block.OverworldOresBlocks;
+import fr.alasdiablo.janoeo.init.OverworldDenseOresBlocks;
+import fr.alasdiablo.janoeo.init.OverworldOresBlocks;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
-import fr.alasdiablo.janoeo.util.Registries;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -21,14 +20,14 @@ public class OresFeatures {
     private static final FrequencyConfig.Config FREQUENCY_CONFIG = FrequencyConfig.CONFIG;
 
     public static void init() {
-//        createBlockGenFeature(
-//                OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getRegistryName(),
-//                Blocks.EMERALD_ORE.getDefaultState(),
-//                OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getDefaultState(),
-//                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_COUNT.get(),
-//                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_BOTTOM.get(),
-//                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_TOP.get()
-//        );
+        createBlockGenFeature(
+                OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getRegistryName(),
+                Blocks.EMERALD_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_TOP.get()
+        );
 
         createOreGenFeature(
                 OverworldOresBlocks.COPPER_ORE.getRegistryName(),

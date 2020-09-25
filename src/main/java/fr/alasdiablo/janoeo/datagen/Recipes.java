@@ -1,9 +1,7 @@
 package fr.alasdiablo.janoeo.datagen;
 
 import fr.alasdiablo.janoeo.block.*;
-import fr.alasdiablo.janoeo.item.DustsItems;
-import fr.alasdiablo.janoeo.item.GemsItems;
-import fr.alasdiablo.janoeo.item.IngotsItems;
+import fr.alasdiablo.janoeo.init.*;
 import net.minecraft.data.*;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
