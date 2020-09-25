@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.block;
 
+import fr.alasdiablo.janoeo.block.util.RedstoneOreUtils;
 import net.minecraft.block.RedstoneOreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -14,7 +15,7 @@ public class RedstoneOre extends RedstoneOreBlock {
                 .hardnessAndResistance(3f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
-                .lightValue(9)
+                .func_235838_a_(RedstoneOreUtils.isLit(9))
         );
         this.setRegistryName(registryName);
     }

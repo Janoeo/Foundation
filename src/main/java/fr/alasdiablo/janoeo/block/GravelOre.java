@@ -4,6 +4,7 @@ import fr.alasdiablo.janoeo.block.util.ExperienceDrop;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -25,7 +26,7 @@ public class GravelOre extends FallingBlock {
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public int getDustColor(BlockState state) {
+    public int getDustColor(BlockState state, IBlockReader p_189876_2_, BlockPos p_189876_3_) {
         return -8356741;
     }
 

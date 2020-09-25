@@ -2,7 +2,9 @@ package fr.alasdiablo.janoeo.util;
 
 import fr.alasdiablo.janoeo.item.IngotsItems;
 import fr.alasdiablo.janoeo.block.NetherOresBlocks;
+import fr.alasdiablo.janoeo.world.OreGenUtils;
 import fr.alasdiablo.janoeo.world.gen.*;
+import fr.alasdiablo.janoeo.world.gen.feature.OresFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -46,11 +48,6 @@ public class ModSetup {
      * Mod setup init
      */
     public void init() {
-        List<IWorldGenerator> generators = new ArrayList<>();
-        generators.add(new OverworldOreGenerator());
-        generators.add(new NetherOreGenerator());
-        generators.add(new EndOreGenerator());
-        generators.add(new GravelOreGenerator());
-        generators.forEach(IWorldGenerator::startWorldGeneration);
+        OreGenUtils.setupOres();
     }
 }

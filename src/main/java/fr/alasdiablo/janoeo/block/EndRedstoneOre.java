@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.block;
 
+import fr.alasdiablo.janoeo.block.util.RedstoneOreUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RedstoneOreBlock;
 import net.minecraft.block.SoundType;
@@ -17,7 +18,7 @@ public class EndRedstoneOre extends RedstoneOreBlock implements IEndOre {
                 .hardnessAndResistance(4f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
-                .lightValue(9)
+                .func_235838_a_(RedstoneOreUtils.isLit(9))
         );
         this.setRegistryName(registryName);
     }

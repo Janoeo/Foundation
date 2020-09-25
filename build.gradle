@@ -1,19 +1,16 @@
 buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
-        maven { url = 'https://plugins.gradle.org/m2/' }
         jcenter()
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
-        classpath 'com.wynprice.cursemaven:CurseMaven:2.1.1'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
-apply plugin: "com.wynprice.cursemaven"
 
 version = '4.4.0.49-experimental'
 group = 'fr.alasdiablo.janoeo'
@@ -22,7 +19,7 @@ archivesBaseName = 'Janoeo'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
-    mappings channel: 'snapshot', version: '20200918-1.15.1'
+    mappings channel: 'snapshot', version: '20200514-1.16'
     runs {
         client {
             workingDirectory project.file('run')
@@ -71,9 +68,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.15.2-31.2.41'
-    compile fg.deobf('curse.maven:jei:3039710')
-    compile fg.deobf('curse.maven:just-enough-resources-jer:2946240')
+    minecraft 'net.minecraftforge:forge:1.16.3-34.1.0'
 }
 
 jar {
@@ -90,22 +85,12 @@ jar {
     }
 }
 
-jar.finalizedBy('reobfJar') 
-
-task sourcesJar(type: Jar) {
-    classifier = "sources"
-    from sourceSets.main.allJava
-}
-
+jar.finalizedBy('reobfJar')
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId = project.group
-            artifactId = project.archivesBaseName
-            version = project.version
             artifact jar
-            artifact sourcesJar
         }
     }
     repositories {

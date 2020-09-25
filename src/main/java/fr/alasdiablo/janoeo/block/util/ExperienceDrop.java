@@ -29,7 +29,8 @@ public class ExperienceDrop {
                 OverworldDenseOresBlocks.DENSE_IRON_ORE,
                 OverworldDenseOresBlocks.DENSE_TIN_ORE,
                 NetherDenseOresBlocks.DENSE_COAL_NETHER_ORE,
-                NetherDenseOresBlocks.DENSE_IRON_NETHER_ORE
+                NetherDenseOresBlocks.DENSE_IRON_NETHER_ORE,
+                BasaltOresBlocks.COAL_BASALT_ORE
         );
 
         experience_3_7 = Arrays.asList(
@@ -46,7 +47,9 @@ public class ExperienceDrop {
                 OverworldDenseOresBlocks.DENSE_DIAMOND_ORE,
                 OverworldDenseOresBlocks.DENSE_EMERALD_ORE,
                 NetherDenseOresBlocks.DENSE_DIAMOND_NETHER_ORE,
-                NetherDenseOresBlocks.DENSE_EMERALD_NETHER_ORE
+                NetherDenseOresBlocks.DENSE_EMERALD_NETHER_ORE,
+                BasaltOresBlocks.DIAMOND_BASALT_ORE,
+                BasaltOresBlocks.EMERALD_BASALT_ORE
         );
 
         experience_2_5 = Arrays.asList(
@@ -54,7 +57,8 @@ public class ExperienceDrop {
                 EndOresBlocks.LAPIS_END_ORE,
                 OverworldDenseOresBlocks.DENSE_LAPIS_ORE,
                 NetherDenseOresBlocks.DENSE_LAPIS_NETHER_ORE,
-                NetherDenseOresBlocks.DENSE_QUARTZ_NETHER_ORE
+                NetherDenseOresBlocks.DENSE_QUARTZ_NETHER_ORE,
+                BasaltOresBlocks.LAPIS_BASALT_ORE
         );
 
         experience_1_4 = Arrays.asList(
@@ -62,7 +66,8 @@ public class ExperienceDrop {
                 EndOresBlocks.GOLD_END_ORE,
                 NetherOresBlocks.GOLD_NETHER_ORE,
                 OverworldDenseOresBlocks.DENSE_GOLD_ORE,
-                NetherDenseOresBlocks.DENSE_GOLD_NETHER_ORE
+                NetherDenseOresBlocks.DENSE_GOLD_NETHER_ORE,
+                BasaltOresBlocks.GOLD_BASALT_ORE
         );
     }
 

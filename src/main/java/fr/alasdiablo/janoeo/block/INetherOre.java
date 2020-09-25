@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.block;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
-import net.minecraft.entity.monster.ZombiePigmanEntity;
+import net.minecraft.entity.monster.ZombifiedPiglinEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.MutableBoundingBox;
@@ -15,7 +15,7 @@ public interface INetherOre {
         GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
         if (globalConfig.ZOMBIE_PIGMAN_ANGER.get()) {
             int aggroRange = globalConfig.ZOMBIE_PIGMAN_ANGER_RANGE.get();
-            List<ZombiePigmanEntity> list = world.getEntitiesWithinAABB(ZombiePigmanEntity.class,
+            List<ZombifiedPiglinEntity> list = world.getEntitiesWithinAABB(ZombifiedPiglinEntity.class,
                     AxisAlignedBB.toImmutable(MutableBoundingBox.createProper(
                             x - aggroRange,
                             y - aggroRange,

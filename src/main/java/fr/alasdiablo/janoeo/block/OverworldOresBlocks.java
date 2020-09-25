@@ -13,41 +13,40 @@ import net.minecraftforge.registries.ObjectHolder;
 @SuppressWarnings("unused")
 public class OverworldOresBlocks {
 
-    @ObjectHolder(Registries.MODID + ":" + Registries.COPPER_ORE)
-    public static Block COPPER_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.TIN_ORE)
-    public static Block TIN_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.ALUMINIUM_ORE)
-    public static Block ALUMINIUM_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.URANIUM_ORE)
-    public static Block URANIUM_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.SILVER_ORE)
-    public static Block SILVER_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.LEAD_ORE)
-    public static Block LEAD_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.RUBY_ORE)
-    public static Block RUBY_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.SAPPHIRE_ORE)
-    public static Block SAPPHIRE_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.AMETHYST_ORE)
-    public static Block AMETHYST_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.ZINC_ORE)
-    public static Block ZINC_ORE;
+    public static Block COPPER_ORE = new BasicOre(Registries.COPPER_ORE, 1);
+
+    public static Block TIN_ORE = new BasicOre(Registries.TIN_ORE, 1);
+
+    public static Block ALUMINIUM_ORE = new BasicOre(Registries.ALUMINIUM_ORE, 1);
+
+    public static Block URANIUM_ORE = new BasicOre(Registries.URANIUM_ORE, 2);
+
+    public static Block SILVER_ORE = new BasicOre(Registries.SILVER_ORE, 2);
+
+    public static Block LEAD_ORE = new BasicOre(Registries.LEAD_ORE, 1);
+
+    public static Block RUBY_ORE = new BasicOre(Registries.RUBY_ORE, 2);
+
+    public static Block SAPPHIRE_ORE = new BasicOre(Registries.SAPPHIRE_ORE, 2);
+
+    public static Block AMETHYST_ORE = new BasicOre(Registries.AMETHYST_ORE, 2);
+
+    public static Block ZINC_ORE = new BasicOre(Registries.ZINC_ORE, 1);
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            event.getRegistry().register(new BasicOre(Registries.COPPER_ORE, 1));
-            event.getRegistry().register(new BasicOre(Registries.TIN_ORE, 1));
-            event.getRegistry().register(new BasicOre(Registries.ALUMINIUM_ORE, 1));
-            event.getRegistry().register(new BasicOre(Registries.URANIUM_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.SILVER_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.LEAD_ORE, 1));
-            event.getRegistry().register(new BasicOre(Registries.RUBY_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.SAPPHIRE_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.AMETHYST_ORE, 2));
-            event.getRegistry().register(new BasicOre(Registries.ZINC_ORE, 1));
+            event.getRegistry().register(OverworldOresBlocks.COPPER_ORE);
+            event.getRegistry().register(OverworldOresBlocks.TIN_ORE);
+            event.getRegistry().register(OverworldOresBlocks.ALUMINIUM_ORE);
+            event.getRegistry().register(OverworldOresBlocks.URANIUM_ORE);
+            event.getRegistry().register(OverworldOresBlocks.SILVER_ORE);
+            event.getRegistry().register(OverworldOresBlocks.LEAD_ORE);
+            event.getRegistry().register(OverworldOresBlocks.RUBY_ORE);
+            event.getRegistry().register(OverworldOresBlocks.SAPPHIRE_ORE);
+            event.getRegistry().register(OverworldOresBlocks.AMETHYST_ORE);
+            event.getRegistry().register(OverworldOresBlocks.ZINC_ORE);
         }
 
         @SubscribeEvent
