@@ -1,8 +1,6 @@
 package fr.alasdiablo.janoeo;
 
 import fr.alasdiablo.janoeo.config.*;
-import fr.alasdiablo.janoeo.init.OverworldDenseOresBlocks;
-import fr.alasdiablo.janoeo.init.OverworldOresBlocks;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.*;
 import fr.alasdiablo.janoeo.world.gen.feature.OresFeatures;
@@ -36,16 +34,11 @@ public class JANOEO {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FrequencyConfig.CONFIG_SPEC, "janoeo-frequency.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FrequencyConfig.CONFIG_SPEC, "janoeo-basalt.toml");
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::initOreFeature);
-        this.initBlock();
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::bleble);
     }
 
-    private void initBlock() {
-        setup.block();
-    }
-
-    private void initOreFeature(RegistryEvent.NewRegistry e) {
-        setup.oreFeature();
+    private void bleble(RegistryEvent.NewRegistry e) {
+        OresFeatures.init();
     }
 
     /**
@@ -54,6 +47,6 @@ public class JANOEO {
      */
     private void setup(final FMLCommonSetupEvent event) {
         //OresFeatures.init();
-        setup.worldGen();
+        setup.init();
     }
 }

@@ -1,10 +1,14 @@
 package fr.alasdiablo.janoeo.world.gen;
 
+import fr.alasdiablo.janoeo.block.BasaltOresBlocks;
 import fr.alasdiablo.janoeo.config.BasaltConfig;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
+import fr.alasdiablo.janoeo.world.OreGenUtils;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Map;
 

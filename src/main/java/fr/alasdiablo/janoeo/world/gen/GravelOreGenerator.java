@@ -2,9 +2,15 @@ package fr.alasdiablo.janoeo.world.gen;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.GravelConfig;
+import fr.alasdiablo.janoeo.block.GravelsOresBlocks;
+import fr.alasdiablo.janoeo.world.OreGenUtils;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
+import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 public class GravelOreGenerator implements IWorldGenerator {

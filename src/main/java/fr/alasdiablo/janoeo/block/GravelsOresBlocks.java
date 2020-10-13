@@ -1,7 +1,6 @@
-package fr.alasdiablo.janoeo.init;
+package fr.alasdiablo.janoeo.block;
 
 import fr.alasdiablo.janoeo.JANOEO;
-import fr.alasdiablo.janoeo.block.GravelOre;
 import fr.alasdiablo.janoeo.util.Registries;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
