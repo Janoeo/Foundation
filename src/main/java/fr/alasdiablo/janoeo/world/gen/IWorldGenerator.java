@@ -6,5 +6,5 @@ import net.minecraft.world.biome.Biome;
 import java.util.Map;
 
 public interface IWorldGenerator {
-    void startWorldGeneration(Map.Entry<RegistryKey<Biome>, Biome> biome);
+    void startWorldGeneration(Biome biome);
 }

@@ -34,19 +34,18 @@ public class JANOEO {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FrequencyConfig.CONFIG_SPEC, "janoeo-frequency.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FrequencyConfig.CONFIG_SPEC, "janoeo-basalt.toml");
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::bleble);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::initFeatures);
     }
 
-    private void bleble(RegistryEvent.NewRegistry e) {
+    private void initFeatures(RegistryEvent.NewRegistry e) {
         OresFeatures.init();
     }
 
     /**
      * setup function
-     * @param event
+     * @param e
      */
-    private void setup(final FMLCommonSetupEvent event) {
-        //OresFeatures.init();
+    private void setup(final FMLCommonSetupEvent e) {
         setup.init();
     }
 }

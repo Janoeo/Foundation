@@ -2,18 +2,11 @@ package fr.alasdiablo.janoeo.world.gen;
 
 import fr.alasdiablo.janoeo.config.EndConfig;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
-import fr.alasdiablo.janoeo.block.EndOresBlocks;
-import fr.alasdiablo.janoeo.world.OreGenUtils;
-import net.minecraft.block.Blocks;
-import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.Map;
 
 public class EndOreGenerator implements IWorldGenerator {
     @Override
-    public void startWorldGeneration(Map.Entry<RegistryKey<Biome>, Biome> biome) {
+    public void startWorldGeneration(Biome biome) {
         GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
         EndConfig.Config endConfig = EndConfig.CONFIG;
 

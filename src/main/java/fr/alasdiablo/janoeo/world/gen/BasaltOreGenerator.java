@@ -1,20 +1,13 @@
 package fr.alasdiablo.janoeo.world.gen;
 
-import fr.alasdiablo.janoeo.block.BasaltOresBlocks;
 import fr.alasdiablo.janoeo.config.BasaltConfig;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
-import fr.alasdiablo.janoeo.world.OreGenUtils;
-import net.minecraft.block.Blocks;
-import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.Map;
 
 public class BasaltOreGenerator implements IWorldGenerator {
     @Override
-    public void startWorldGeneration(Map.Entry<RegistryKey<Biome>, Biome> biome) {
+    public void startWorldGeneration(Biome biome) {
         GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
         BasaltConfig.Config basaltConfig = BasaltConfig.CONFIG;
         FrequencyConfig.Config frequencyConfig = FrequencyConfig.CONFIG;
