@@ -38,7 +38,8 @@ public class JANOEO {
     }
 
     private void initFeatures(RegistryEvent.NewRegistry e) {
-        OresFeatures.init();
+        OresFeatures.initOverworld();
+        OresFeatures.initNether();
     }
 
     /**

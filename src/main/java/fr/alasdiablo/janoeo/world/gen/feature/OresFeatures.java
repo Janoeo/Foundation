@@ -1,9 +1,8 @@
 package fr.alasdiablo.janoeo.world.gen.feature;
 
-import fr.alasdiablo.janoeo.block.OverworldDenseOresBlocks;
+import fr.alasdiablo.janoeo.block.NetherOresBlocks;
 import fr.alasdiablo.janoeo.block.OverworldOresBlocks;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
-import fr.alasdiablo.janoeo.util.Registries;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -20,16 +19,78 @@ public class OresFeatures {
 
     private static final FrequencyConfig.Config FREQUENCY_CONFIG = FrequencyConfig.CONFIG;
 
-    public static void init() {
-//        createBlockGenFeature(
-//                OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getRegistryName(),
-//                Blocks.EMERALD_ORE.getDefaultState(),
-//                OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getDefaultState(),
-//                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_COUNT.get(),
-//                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_BOTTOM.get(),
-//                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_TOP.get()
-//        );
+    public static void initNether() {
+        createOreGenFeature(
+                NetherOresBlocks.COAL_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.COAL_NETHER_ORE.getDefaultState(),
+                12,
+                17,
+                1,
+                127
+        );
 
+        createOreGenFeature(
+                NetherOresBlocks.DIAMOND_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.DIAMOND_NETHER_ORE.getDefaultState(),
+                4,
+                5,
+                1,
+                127
+        );
+
+        createBlockGenFeature(
+                NetherOresBlocks.EMERALD_NETHER_ORE.getRegistryName(),
+                Blocks.NETHERRACK.getDefaultState(),
+                NetherOresBlocks.EMERALD_NETHER_ORE.getDefaultState(),
+                2,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.GOLD_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.GOLD_NETHER_ORE.getDefaultState(),
+                4,
+                8,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.IRON_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.IRON_NETHER_ORE.getDefaultState(),
+                6,
+                10,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.LAPIS_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.LAPIS_NETHER_ORE.getDefaultState(),
+                6,
+                5,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.REDSTONE_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.REDSTONE_NETHER_ORE.getDefaultState(),
+                8,
+                8,
+                1,
+                127
+        );
+    }
+
+    public static void initOverworld() {
         createOreGenFeature(
                 OverworldOresBlocks.COPPER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241882_a,
