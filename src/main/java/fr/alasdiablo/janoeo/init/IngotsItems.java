@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.item;
+package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.util.Registries;

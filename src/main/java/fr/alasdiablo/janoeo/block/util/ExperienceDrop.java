@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.block.util;
 
-import fr.alasdiablo.janoeo.block.*;
+import fr.alasdiablo.janoeo.init.*;
 import net.minecraft.block.Block;
 import net.minecraft.util.math.MathHelper;
 

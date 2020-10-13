@@ -1,6 +1,8 @@
-package fr.alasdiablo.janoeo.block;
+package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.JANOEO;
+import fr.alasdiablo.janoeo.block.EndOre;
+import fr.alasdiablo.janoeo.block.EndRedstoneOre;
 import fr.alasdiablo.janoeo.util.Registries;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;

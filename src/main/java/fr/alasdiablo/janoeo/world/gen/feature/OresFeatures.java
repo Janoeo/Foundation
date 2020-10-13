@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.world.gen.feature;
 
-import fr.alasdiablo.janoeo.block.NetherOresBlocks;
-import fr.alasdiablo.janoeo.block.OverworldOresBlocks;
+import fr.alasdiablo.janoeo.init.NetherOresBlocks;
+import fr.alasdiablo.janoeo.init.OverworldOresBlocks;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -25,7 +25,7 @@ public class OresFeatures {
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.COAL_NETHER_ORE.getDefaultState(),
                 12,
-                17,
+                68,
                 1,
                 127
         );
@@ -35,7 +35,7 @@ public class OresFeatures {
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.DIAMOND_NETHER_ORE.getDefaultState(),
                 4,
-                5,
+                20,
                 1,
                 127
         );
@@ -44,7 +44,7 @@ public class OresFeatures {
                 NetherOresBlocks.EMERALD_NETHER_ORE.getRegistryName(),
                 Blocks.NETHERRACK.getDefaultState(),
                 NetherOresBlocks.EMERALD_NETHER_ORE.getDefaultState(),
-                2,
+                8,
                 1,
                 127
         );
@@ -54,7 +54,7 @@ public class OresFeatures {
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.GOLD_NETHER_ORE.getDefaultState(),
                 4,
-                8,
+                32,
                 1,
                 127
         );
@@ -64,7 +64,7 @@ public class OresFeatures {
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.IRON_NETHER_ORE.getDefaultState(),
                 6,
-                10,
+                40,
                 1,
                 127
         );
@@ -74,7 +74,7 @@ public class OresFeatures {
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.LAPIS_NETHER_ORE.getDefaultState(),
                 6,
-                5,
+                20,
                 1,
                 127
         );
@@ -84,7 +84,7 @@ public class OresFeatures {
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.REDSTONE_NETHER_ORE.getDefaultState(),
                 8,
-                8,
+                32,
                 1,
                 127
         );

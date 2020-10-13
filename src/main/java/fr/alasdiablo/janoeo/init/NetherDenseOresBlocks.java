@@ -1,9 +1,10 @@
-package fr.alasdiablo.janoeo.block;
+package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.JANOEO;
+import fr.alasdiablo.janoeo.block.NetherOre;
+import fr.alasdiablo.janoeo.block.NetherRedstoneOre;
 import fr.alasdiablo.janoeo.util.Registries;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;

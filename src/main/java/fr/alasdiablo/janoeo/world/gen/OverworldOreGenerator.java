@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.world.gen;
 
-import fr.alasdiablo.janoeo.block.OverworldOresBlocks;
+import fr.alasdiablo.janoeo.init.OverworldOresBlocks;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.OverworldConfig;
 import fr.alasdiablo.janoeo.world.OreGenUtils;
@@ -13,12 +13,6 @@ public class OverworldOreGenerator implements IWorldGenerator {
     public void startWorldGeneration(Biome biome) {
         GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
         OverworldConfig.Config overworldConfig = OverworldConfig.CONFIG;
-
-//        if (globalConfig.DENSE_ORE_GEN.get() && overworldConfig.DENSE_EMERALD_ORE.get()) {
-//            OreGenUtils.addFeatureToBiome(biome,
-//                    WorldGenRegistries.field_243653_e.getOrDefault(OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getRegistryName())
-//            );
-//        }
 
         if (globalConfig.EXTRA_ORE_GEN.get()) {
 

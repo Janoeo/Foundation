@@ -1,15 +1,10 @@
 package fr.alasdiablo.janoeo.util;
 
-import fr.alasdiablo.janoeo.item.IngotsItems;
-import fr.alasdiablo.janoeo.block.NetherOresBlocks;
+import fr.alasdiablo.janoeo.init.IngotsItems;
+import fr.alasdiablo.janoeo.init.NetherOresBlocks;
 import fr.alasdiablo.janoeo.world.OreGenUtils;
-import fr.alasdiablo.janoeo.world.gen.*;
-import fr.alasdiablo.janoeo.world.gen.feature.OresFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Mod setup class
