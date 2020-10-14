@@ -88,6 +88,92 @@ public class OresFeatures {
                 1,
                 127
         );
+
+
+
+        createOreGenFeature(
+                NetherOresBlocks.ALUMINIUM_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.ALUMINIUM_NETHER_ORE.getDefaultState(),
+                6,
+                32,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.LEAD_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.LEAD_NETHER_ORE.getDefaultState(),
+                6,
+                40,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.TIN_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.TIN_NETHER_ORE.getDefaultState(),
+                6,
+                32,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.COPPER_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.COPPER_NETHER_ORE.getDefaultState(),
+                6,
+                40,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.RUBY_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.RUBY_NETHER_ORE.getDefaultState(),
+                4,
+                20,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.SAPPHIRE_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.SAPPHIRE_NETHER_ORE.getDefaultState(),
+                4,
+                20,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.SILVER_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.SILVER_NETHER_ORE.getDefaultState(),
+                4,
+                32,
+                1,
+                127
+        );
+
+        createOreGenFeature(
+                NetherOresBlocks.URANIUM_NETHER_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.field_241883_b,
+                NetherOresBlocks.URANIUM_NETHER_ORE.getDefaultState(),
+                4,
+                32,
+                1,
+                127
+        );
+
+
+
+
     }
 
     public static void initOverworld() {
