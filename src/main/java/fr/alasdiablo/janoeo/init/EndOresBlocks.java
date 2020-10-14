@@ -16,6 +16,8 @@ import net.minecraftforge.registries.ObjectHolder;
 @SuppressWarnings("unused")
 public class EndOresBlocks {
 
+    // TODO: Rework the instantiation system
+
     @ObjectHolder(Registries.MODID + ":" + Registries.COAL_END_ORE)
     public static Block COAL_END_ORE;
     @ObjectHolder(Registries.MODID + ":" + Registries.DIAMOND_END_ORE)

@@ -1,17 +1,20 @@
 package fr.alasdiablo.janoeo.datagen;
 
-import fr.alasdiablo.janoeo.block.*;
+import com.sun.istack.internal.NotNull;
 import fr.alasdiablo.janoeo.init.*;
 import net.minecraft.data.*;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 
+import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
 /**
  * Janoeo recipes data generator
  */
 public class Recipes extends RecipeProvider {
+
+    // TODO: Split this file into multi file for better readability
 
     /**
      * constructor
@@ -24,6 +27,7 @@ public class Recipes extends RecipeProvider {
     /**
      * load all recipes
      */
+    @SuppressWarnings("NullableProblems")
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
         this.endOreSmelting(consumer);
@@ -310,6 +314,7 @@ public class Recipes extends RecipeProvider {
                 .addCriterion("has_nether_copper_ore", hasItem(NetherOresBlocks.COPPER_NETHER_ORE)).build(consumer, "copper_nether_blasting");
     }
 
+    @SuppressWarnings("NullableProblems")
     @Override
     public String getName() {
         return "JANOEO Recipes";

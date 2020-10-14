@@ -11,6 +11,8 @@ import net.minecraftforge.registries.ObjectHolder;
 @SuppressWarnings("unused")
 public class GemsItems {
 
+    // TODO: Rework the instantiation system
+
     @ObjectHolder(Registries.MODID + ":" + Registries.RUBY)
     public static Item RUBY;
     @ObjectHolder(Registries.MODID + ":" + Registries.SAPPHIRE)

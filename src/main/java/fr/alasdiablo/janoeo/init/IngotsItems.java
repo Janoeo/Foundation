@@ -11,6 +11,8 @@ import net.minecraftforge.registries.ObjectHolder;
 @SuppressWarnings("unused")
 public class IngotsItems {
 
+    // TODO: Rework the instantiation system
+
     @ObjectHolder(Registries.MODID + ":" + Registries.COPPER_INGOT)
     public static Item COPPER_INGOT;
     @ObjectHolder(Registries.MODID + ":" + Registries.TIN_INGOT)

@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.block;
+package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.util.Registries;
@@ -15,6 +15,8 @@ import net.minecraftforge.registries.ObjectHolder;
 
 @SuppressWarnings("unused")
 public class ModBlocks {
+
+    // TODO: Rework the instantiation system
 
     @ObjectHolder(Registries.MODID + ":" + Registries.SAPPHIRE_BLOCK)
     public static Block SAPPHIRE_BLOCK;

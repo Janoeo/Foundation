@@ -11,6 +11,8 @@ import net.minecraftforge.registries.ObjectHolder;
 @SuppressWarnings("unused")
 public class DustsItems {
 
+    // TODO: Rework the instantiation system
+
     @ObjectHolder(Registries.MODID + ":" + Registries.DIAMOND_DUST)
     public static Item DIAMOND_DUST;
     @ObjectHolder(Registries.MODID + ":" + Registries.GOLD_DUST)

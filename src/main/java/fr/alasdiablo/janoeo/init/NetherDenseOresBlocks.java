@@ -15,6 +15,8 @@ import net.minecraftforge.registries.ObjectHolder;
 @SuppressWarnings("unused")
 public class NetherDenseOresBlocks {
 
+    // TODO: Rework the instantiation system
+
     @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_QUARTZ_NETHER_ORE)
     public static Block DENSE_QUARTZ_NETHER_ORE;
     @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_COAL_NETHER_ORE)

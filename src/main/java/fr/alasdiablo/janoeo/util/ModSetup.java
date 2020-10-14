@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
  */
 public class ModSetup {
 
+    // TODO: Move this class content into JANOEO.java can be better ?
+
     /**
      * Mod creative tab for ore block
      */

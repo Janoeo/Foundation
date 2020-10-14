@@ -12,6 +12,8 @@ public class BasaltOreGenerator implements IWorldGenerator {
         BasaltConfig.Config basaltConfig = BasaltConfig.CONFIG;
         FrequencyConfig.Config frequencyConfig = FrequencyConfig.CONFIG;
 
+        // TODO: Reimplement Basalt ore generation
+
 //        if (globalConfig.BASALT_ORE_GEN.get()) ForgeRegistries.BIOMES.forEach(biome -> {
 //
 //            if (basaltConfig.COAL_BASALT_ORE.get()) {

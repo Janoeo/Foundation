@@ -14,6 +14,8 @@ import net.minecraftforge.registries.ObjectHolder;
 @SuppressWarnings("unused")
 public class GravelsOresBlocks {
 
+    // TODO: Rework the instantiation system
+
     @ObjectHolder(Registries.MODID + ":" + Registries.DIAMOND_GRAVEL_ORE)
     public static Block DIAMOND_GRAVEL_ORE;
     @ObjectHolder(Registries.MODID + ":" + Registries.IRON_GRAVEL_ORE)

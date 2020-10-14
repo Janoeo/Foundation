@@ -11,6 +11,8 @@ public class GravelOreGenerator implements IWorldGenerator {
         GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
         GravelConfig.Config gravelConfig = GravelConfig.CONFIG;
 
+        // TODO: Reimplement Gravel ore generation
+
 //        final List<Biome> biomeList = Arrays.asList(
 //                Biomes.OCEAN,
 //                Biomes.FROZEN_OCEAN,

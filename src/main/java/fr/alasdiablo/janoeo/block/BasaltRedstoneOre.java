@@ -33,6 +33,8 @@ public class BasaltRedstoneOre extends RedstoneOreBlock {
 
     // Code from RotatedPillarBlock because we can't do dual extends
 
+    @SuppressWarnings({"NullableProblems", "deprecation"})
+    @Override
     public BlockState rotate(BlockState state, Rotation rot) {
         switch(rot) {
             case COUNTERCLOCKWISE_90:
@@ -50,10 +52,12 @@ public class BasaltRedstoneOre extends RedstoneOreBlock {
         }
     }
 
+    @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(AXIS).add(LIT);
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         return this.getDefaultState().with(AXIS, context.getFace().getAxis());
     }

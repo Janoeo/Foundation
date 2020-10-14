@@ -15,6 +15,8 @@ import net.minecraftforge.registries.ObjectHolder;
 @SuppressWarnings("unused")
 public class BasaltOresBlocks {
 
+    // TODO: Rework the instantiation system
+
     @ObjectHolder(Registries.MODID + ":" + Registries.COAL_BASALT_ORE)
     public static Block COAL_BASALT_ORE;
     @ObjectHolder(Registries.MODID + ":" + Registries.DIAMOND_BASALT_ORE)

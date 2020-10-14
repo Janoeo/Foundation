@@ -9,13 +9,11 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-/**
- * Some part of this code is inspire by Applied Energistics 2
- */
 public class OreGenUtils {
 
     private static final IWorldGenerator OVERWORLD_GENERATOR = new OverworldOreGenerator();
@@ -25,25 +23,26 @@ public class OreGenUtils {
     private static final IWorldGenerator BASALT_GENERATOR = new BasaltOreGenerator();
 
     public static void setupOres() {
-
         for (Biome biome : ForgeRegistries.BIOMES) {
-            if (!biome.getCategory().equals(Biome.Category.NETHER) && !biome.getCategory().equals(Biome.Category.THEEND)) {
-                OVERWORLD_GENERATOR.startWorldGeneration(biome);
-                GRAVEL_GENERATOR.startWorldGeneration(biome);
-            }
-            if (biome.getCategory().equals(Biome.Category.NETHER)) {
-                GRAVEL_GENERATOR.startWorldGeneration(biome);
-                NETHER_GENERATOR.startWorldGeneration(biome);
-                BASALT_GENERATOR.startWorldGeneration(biome);
-            }
-            if (biome.getCategory().equals(Biome.Category.THEEND)) {
-                END_GENERATOR.startWorldGeneration(biome);
+            switch (biome.getCategory()) {
+                case NETHER:
+                    GRAVEL_GENERATOR.startWorldGeneration(biome);
+                    NETHER_GENERATOR.startWorldGeneration(biome);
+                    BASALT_GENERATOR.startWorldGeneration(biome);
+                    break;
+                case THEEND:
+                    END_GENERATOR.startWorldGeneration(biome);
+                    break;
+                default:
+                    OVERWORLD_GENERATOR.startWorldGeneration(biome);
+                    GRAVEL_GENERATOR.startWorldGeneration(biome);
+                    break;
             }
         }
     }
 
-    public static void addFeatureToBiome(Biome biome, ConfiguredFeature<?, ?> configuredFeature) {
-        System.out.println("Feature added ! " + configuredFeature.feature.getRegistryName().toString());
+    public static void addFeatureToBiome(Biome biome,@Nullable ConfiguredFeature<?, ?> configuredFeature) {
+        if (configuredFeature == null) throw new NullPointerException("configuredFeature is null");
 
         GenerationStage.Decoration decoration = GenerationStage.Decoration.UNDERGROUND_ORES;
 

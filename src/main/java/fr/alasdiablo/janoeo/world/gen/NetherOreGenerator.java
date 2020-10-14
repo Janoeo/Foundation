@@ -1,6 +1,5 @@
 package fr.alasdiablo.janoeo.world.gen;
 
-import fr.alasdiablo.janoeo.block.NetherOre;
 import fr.alasdiablo.janoeo.init.NetherOresBlocks;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.NetherConfig;

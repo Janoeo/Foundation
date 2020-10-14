@@ -10,6 +10,8 @@ public class EndOreGenerator implements IWorldGenerator {
         GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
         EndConfig.Config endConfig = EndConfig.CONFIG;
 
+        // TODO: Reimplement End ore generation
+
 //        if (globalConfig.END_ORE_GEN.get()) ForgeRegistries.BIOMES.forEach(biome -> {
 //
 //            if (endConfig.COAL_END_ORE.get()) {

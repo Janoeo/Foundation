@@ -5,6 +5,8 @@ import org.apache.commons.lang3.tuple.Pair;
 
 public class FrequencyConfig {
 
+    // TODO: Add all generation here (no more hard coded)
+
     public static final ForgeConfigSpec CONFIG_SPEC;
     public static final Config CONFIG;
 
