@@ -10,7 +10,7 @@ authors="AlasDiablo, lIotaMiu, Egame257 and Safyrus"
 description='''
 Janoeo Project Mod
 Mod content:
-- Lib of Janoeo Project
+- Libraries for Janoeo Project
 - Ore generation
 '''
 [[dependencies.janoeo]]
