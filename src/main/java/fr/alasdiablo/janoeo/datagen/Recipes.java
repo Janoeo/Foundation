@@ -1,12 +1,10 @@
 package fr.alasdiablo.janoeo.datagen;
 
-import com.sun.istack.internal.NotNull;
 import fr.alasdiablo.janoeo.init.*;
 import net.minecraft.data.*;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 
-import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
 /**

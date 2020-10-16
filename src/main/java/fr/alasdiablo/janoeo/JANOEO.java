@@ -40,6 +40,9 @@ public class JANOEO {
     private void initFeatures(RegistryEvent.NewRegistry e) {
         OresFeatures.initOverworld();
         OresFeatures.initNether();
+        OresFeatures.initGravel();
+        OresFeatures.initOceanGravel();
+        OresFeatures.initNetherGravel();
     }
 
     /**

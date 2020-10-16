@@ -2,111 +2,107 @@ package fr.alasdiablo.janoeo.world.gen;
 
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.GravelConfig;
+import fr.alasdiablo.janoeo.init.GravelsOresBlocks;
+import fr.alasdiablo.janoeo.util.Utils;
+import fr.alasdiablo.janoeo.world.OreGenUtils;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 
-public class GravelOreGenerator implements IWorldGenerator {
+public class GravelOreGenerator {
 
-    @Override
-    public void startWorldGeneration(Biome biome) {
-        GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
-        GravelConfig.Config gravelConfig = GravelConfig.CONFIG;
+    private static final GlobalConfig.Config GLOBAL_CONFIG = GlobalConfig.CONFIG;
+    private static final GravelConfig.Config GRAVEL_CONFIG = GravelConfig.CONFIG;
 
-        // TODO: Reimplement Gravel ore generation
+    public static class Overworld implements IWorldGenerator {
 
-//        final List<Biome> biomeList = Arrays.asList(
-//                Biomes.OCEAN,
-//                Biomes.FROZEN_OCEAN,
-//                Biomes.LUKEWARM_OCEAN,
-//                Biomes.WARM_OCEAN,
-//                Biomes.COLD_OCEAN,
-//                Biomes.DEEP_COLD_OCEAN,
-//                Biomes.DEEP_FROZEN_OCEAN,
-//                Biomes.DEEP_LUKEWARM_OCEAN,
-//                Biomes.DEEP_OCEAN,
-//                Biomes.DEEP_WARM_OCEAN,
-//                Biomes.RIVER,
-//                Biomes.FROZEN_RIVER
-//        );
-//
-//
-//        if (globalConfig.GRAVEL_ORE_GEN.get()) {
-//
-//            biomeList.forEach(biome -> {
-//                if (gravelConfig.IRON_GRAVEL_ORE.get()) {
-//                    OreGenUtils.addOreGenOnBiome(
-//                            biome,
-//                            CustomFillerBlockType.GRAVEL,
-//                            GravelsOresBlocks.IRON_GRAVEL_ORE.getDefaultState(),
-//                            8,
-//                            40,
-//                            1,
-//                            64
-//                    );
-//                }
-//
-//                if (gravelConfig.GOLD_GRAVEL_ORE.get()) {
-//                    OreGenUtils.addOreGenOnBiome(
-//                            biome,
-//                            CustomFillerBlockType.GRAVEL,
-//                            GravelsOresBlocks.GOLD_GRAVEL_ORE.getDefaultState(),
-//                            6,
-//                            32,
-//                            1,
-//                            48
-//                    );
-//                }
-//
-//                if (gravelConfig.DIAMOND_GRAVEL_ORE.get()) {
-//                    OreGenUtils.addOreGenOnBiome(
-//                            biome,
-//                            CustomFillerBlockType.GRAVEL,
-//                            GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getDefaultState(),
-//                            4,
-//                            8,
-//                            1,
-//                            38
-//                    );
-//                }
-//            });
-//
-//            ForgeRegistries.BIOMES.forEach(biome -> {
-//
-//                if (gravelConfig.IRON_GRAVEL_ORE.get()) {
-//                    OreGenUtils.addOreGenOnBiome(
-//                            biome,
-//                            CustomFillerBlockType.GRAVEL,
-//                            GravelsOresBlocks.IRON_GRAVEL_ORE.getDefaultState(),
-//                            8,
-//                            48,
-//                            1,
-//                            48
-//                    );
-//                }
-//
-//                if (gravelConfig.GOLD_GRAVEL_ORE.get()) {
-//                    OreGenUtils.addOreGenOnBiome(
-//                            biome,
-//                            CustomFillerBlockType.GRAVEL,
-//                            GravelsOresBlocks.GOLD_GRAVEL_ORE.getDefaultState(),
-//                            6,
-//                            40,
-//                            1,
-//                            28
-//                    );
-//                }
-//
-//                if (gravelConfig.DIAMOND_GRAVEL_ORE.get()) {
-//                    OreGenUtils.addOreGenOnBiome(
-//                            biome,
-//                            CustomFillerBlockType.GRAVEL,
-//                            GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getDefaultState(),
-//                            4,
-//                            32,
-//                            1,
-//                            18
-//                    );
-//                }
-//            });
-//        }
+        @Override
+        public void startWorldGeneration(Biome biome) {
+            if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {
+                if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
+                    OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName())
+                    );
+                }
+                if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
+                    OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName())
+                    );
+                }
+                if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
+                    OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName())
+                    );
+                }
+            }
+        }
+    }
+
+    public static class Nether implements IWorldGenerator {
+
+        @Override
+        public void startWorldGeneration(Biome biome) {
+            if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {
+                if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
+                    OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.field_243653_e.getOrDefault(
+                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "nether")
+                            )
+                    );
+                }
+                if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
+                    OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.field_243653_e.getOrDefault(
+                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "nether")
+                            )
+                    );
+                }
+                if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
+                    OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.field_243653_e.getOrDefault(
+                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "nether")
+                            )
+                    );
+                }
+            }
+        }
+    }
+
+    public static class Ocean implements IWorldGenerator {
+
+        @Override
+        public void startWorldGeneration(Biome biome) {
+            if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {
+                if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
+                    OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.field_243653_e.getOrDefault(
+                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "ocean")
+                            )
+                    );
+                }
+                if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
+                    OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.field_243653_e.getOrDefault(
+                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "ocean")
+                            )
+                    );
+                }
+                if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
+                    OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.field_243653_e.getOrDefault(
+                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "ocean")
+                            )
+                    );
+                }
+            }
+        }
     }
 }

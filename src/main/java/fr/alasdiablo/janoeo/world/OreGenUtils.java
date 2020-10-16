@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.world;
 
 import com.google.common.collect.Lists;
+import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.world.gen.*;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeGenerationSettings;
@@ -19,23 +20,28 @@ public class OreGenUtils {
     private static final IWorldGenerator OVERWORLD_GENERATOR = new OverworldOreGenerator();
     private static final IWorldGenerator NETHER_GENERATOR = new NetherOreGenerator();
     private static final IWorldGenerator END_GENERATOR = new EndOreGenerator();
-    private static final IWorldGenerator GRAVEL_GENERATOR = new GravelOreGenerator();
+    private static final IWorldGenerator OVERWORLD_GRAVEL_GENERATOR = new GravelOreGenerator.Overworld();
+    private static final IWorldGenerator OCEAN_GRAVEL_GENERATOR = new GravelOreGenerator.Ocean();
+    private static final IWorldGenerator NETHER_GRAVEL_GENERATOR = new GravelOreGenerator.Nether();
     private static final IWorldGenerator BASALT_GENERATOR = new BasaltOreGenerator();
 
     public static void setupOres() {
         for (Biome biome : ForgeRegistries.BIOMES) {
             switch (biome.getCategory()) {
                 case NETHER:
-                    GRAVEL_GENERATOR.startWorldGeneration(biome);
+                    NETHER_GRAVEL_GENERATOR.startWorldGeneration(biome);
                     NETHER_GENERATOR.startWorldGeneration(biome);
                     BASALT_GENERATOR.startWorldGeneration(biome);
                     break;
                 case THEEND:
                     END_GENERATOR.startWorldGeneration(biome);
                     break;
+                case OCEAN:
+                    OCEAN_GRAVEL_GENERATOR.startWorldGeneration(biome);
+                    break;
                 default:
                     OVERWORLD_GENERATOR.startWorldGeneration(biome);
-                    GRAVEL_GENERATOR.startWorldGeneration(biome);
+                    OVERWORLD_GRAVEL_GENERATOR.startWorldGeneration(biome);
                     break;
             }
         }

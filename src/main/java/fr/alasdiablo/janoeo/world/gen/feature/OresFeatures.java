@@ -1,8 +1,10 @@
 package fr.alasdiablo.janoeo.world.gen.feature;
 
+import fr.alasdiablo.janoeo.init.GravelsOresBlocks;
 import fr.alasdiablo.janoeo.init.NetherOresBlocks;
 import fr.alasdiablo.janoeo.init.OverworldOresBlocks;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
+import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -11,13 +13,114 @@ import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.ReplaceBlockConfig;
+import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
 import net.minecraft.world.gen.feature.template.RuleTest;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 
 public class OresFeatures {
 
+    public static final class FillerBlockType {
+        public static final RuleTest GRAVEL = new BlockMatchRuleTest(Blocks.GRAVEL);
+    }
+
     private static final FrequencyConfig.Config FREQUENCY_CONFIG = FrequencyConfig.CONFIG;
+
+    public static void initNetherGravel() {
+        createOreGenFeature(
+                Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "nether"),
+                FillerBlockType.GRAVEL,
+                GravelsOresBlocks.IRON_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.NETHER_IRON_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.NETHER_IRON_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.NETHER_IRON_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.NETHER_IRON_GRAVEL_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "nether"),
+                FillerBlockType.GRAVEL,
+                GravelsOresBlocks.GOLD_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.NETHER_GOLD_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.NETHER_GOLD_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.NETHER_GOLD_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.NETHER_GOLD_GRAVEL_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "nether"),
+                FillerBlockType.GRAVEL,
+                GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.NETHER_DIAMOND_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.NETHER_DIAMOND_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.NETHER_DIAMOND_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.NETHER_DIAMOND_GRAVEL_ORE_TOP.get()
+        );
+    }
+
+    public static void initOceanGravel() {
+        createOreGenFeature(
+                Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "ocean"),
+                FillerBlockType.GRAVEL,
+                GravelsOresBlocks.IRON_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.OCEAN_IRON_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.OCEAN_IRON_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.OCEAN_IRON_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.OCEAN_IRON_GRAVEL_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "ocean"),
+                FillerBlockType.GRAVEL,
+                GravelsOresBlocks.GOLD_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.OCEAN_GOLD_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.OCEAN_GOLD_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.OCEAN_GOLD_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.OCEAN_GOLD_GRAVEL_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "ocean"),
+                FillerBlockType.GRAVEL,
+                GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.OCEAN_DIAMOND_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.OCEAN_DIAMOND_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.OCEAN_DIAMOND_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.OCEAN_DIAMOND_GRAVEL_ORE_TOP.get()
+        );
+    }
+
+    public static void initGravel() {
+        createOreGenFeature(
+                GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(),
+                FillerBlockType.GRAVEL,
+                GravelsOresBlocks.IRON_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.IRON_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.IRON_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.IRON_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.IRON_GRAVEL_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(),
+                FillerBlockType.GRAVEL,
+                GravelsOresBlocks.GOLD_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.GOLD_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.GOLD_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.GOLD_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.GOLD_GRAVEL_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(),
+                FillerBlockType.GRAVEL,
+                GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DIAMOND_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.DIAMOND_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DIAMOND_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DIAMOND_GRAVEL_ORE_TOP.get()
+        );
+    }
 
     public static void initNether() {
         createOreGenFeature(

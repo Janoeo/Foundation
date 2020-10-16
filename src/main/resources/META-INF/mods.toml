@@ -4,10 +4,14 @@ license="LGPL-3.0"
 [[mods]]
 modId="janoeo"
 version="${file.jarVersion}"
-displayName="Just Another Nether/Overworld/End Ores"
+displayName="Janoeo"
+updateJSONURL="https://raw.githubusercontent.com/AlasDiablo/JANOEO-Doc/gh-pages/version/janoeo.json"
 authors="AlasDiablo, lIotaMiu, Egame257 and Safyrus"
 description='''
-Just Another Nether/Overworld/End Ores by AlasDiablo, lIotaMiu, Egame257 and Safyrus
+Janoeo Project Mod
+Mod content:
+- Lib of Janoeo Project
+- Ore generation
 '''
 [[dependencies.janoeo]]
     modId="forge"

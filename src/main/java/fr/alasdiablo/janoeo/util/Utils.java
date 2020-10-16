@@ -3,10 +3,17 @@ package fr.alasdiablo.janoeo.util;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
+import javax.annotation.Nullable;
+
 public class Utils {
+
+    public static ResourceLocation setPrefixOnRegistryName(@Nullable ResourceLocation registryName, String prefix) {
+        return registryName == null || prefix == null ? null : new ResourceLocation(registryName.getNamespace(), String.format("%s_%s", prefix, registryName.getPath()));
+    }
 
     /**
      * Utils use to clean registry access on Block registry

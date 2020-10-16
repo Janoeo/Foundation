@@ -1,3 +1,7 @@
+### 4.4.0.55-experimental
++ Reimplement gravel ore gen (with new option)
++ Reimplement basalt ore texture
+
 ### 4.4.0.53-experimental
 + add nether world generation
 
