@@ -127,256 +127,256 @@ public class FrequencyConfig {
 
             // --------------------------------------------- overworld ---------------------------------------------
 
-            COPPER_ORE_SIZE             = builder.defineInRange("overworld.copper_size"             , 8 , sizeMin, sizeMax);
-            COPPER_ORE_COUNT            = builder.defineInRange("overworld.copper_count"            , 12, countMin, countMax);
-            COPPER_ORE_TOP              = builder.defineInRange("overworld.copper_top"              , 63, worldMin, worldMax);
-            COPPER_ORE_BOTTOM           = builder.defineInRange("overworld.copper_bottom"           , 1 , worldMin, worldMax);
+            COPPER_ORE_SIZE             = builder.defineInRange("overworld.copper.size"             , 8 , sizeMin, sizeMax);
+            COPPER_ORE_COUNT            = builder.defineInRange("overworld.copper.count"            , 12, countMin, countMax);
+            COPPER_ORE_TOP              = builder.defineInRange("overworld.copper.top"              , 63, worldMin, worldMax);
+            COPPER_ORE_BOTTOM           = builder.defineInRange("overworld.copper.bottom"           , 1 , worldMin, worldMax);
 
-            TIN_ORE_SIZE                = builder.defineInRange("overworld.tin_size"                , 8 , sizeMin, sizeMax);
-            TIN_ORE_COUNT               = builder.defineInRange("overworld.tin_count"               , 12, countMin, countMax);
-            TIN_ORE_TOP                 = builder.defineInRange("overworld.tin_top"                 , 63, worldMin, worldMax);
-            TIN_ORE_BOTTOM              = builder.defineInRange("overworld.tin_bottom"              , 1 , worldMin, worldMax);
+            TIN_ORE_SIZE                = builder.defineInRange("overworld.tin.size"                , 8 , sizeMin, sizeMax);
+            TIN_ORE_COUNT               = builder.defineInRange("overworld.tin.count"               , 12, countMin, countMax);
+            TIN_ORE_TOP                 = builder.defineInRange("overworld.tin.top"                 , 63, worldMin, worldMax);
+            TIN_ORE_BOTTOM              = builder.defineInRange("overworld.tin.bottom"              , 1 , worldMin, worldMax);
 
-            ALUMINIUM_ORE_SIZE          = builder.defineInRange("overworld.aluminium_size"          , 12, sizeMin, sizeMax);
-            ALUMINIUM_ORE_COUNT         = builder.defineInRange("overworld.aluminium_count"         , 12, countMin, countMax);
-            ALUMINIUM_ORE_TOP           = builder.defineInRange("overworld.aluminium_top"           , 63, worldMin, worldMax);
-            ALUMINIUM_ORE_BOTTOM        = builder.defineInRange("overworld.aluminium_bottom"        , 1 , worldMin, worldMax);
+            ALUMINIUM_ORE_SIZE          = builder.defineInRange("overworld.aluminium.size"          , 12, sizeMin, sizeMax);
+            ALUMINIUM_ORE_COUNT         = builder.defineInRange("overworld.aluminium.count"         , 12, countMin, countMax);
+            ALUMINIUM_ORE_TOP           = builder.defineInRange("overworld.aluminium.top"           , 63, worldMin, worldMax);
+            ALUMINIUM_ORE_BOTTOM        = builder.defineInRange("overworld.aluminium.bottom"        , 1 , worldMin, worldMax);
 
-            URANIUM_ORE_SIZE            = builder.defineInRange("overworld.uranium_size"            , 4 , sizeMin, sizeMax);
-            URANIUM_ORE_COUNT           = builder.defineInRange("overworld.uranium_count"           , 12, countMin, countMax);
-            URANIUM_ORE_TOP             = builder.defineInRange("overworld.uranium_top"             , 32, worldMin, worldMax);
-            URANIUM_ORE_BOTTOM          = builder.defineInRange("overworld.uranium_bottom"          , 1 , worldMin, worldMax);
+            URANIUM_ORE_SIZE            = builder.defineInRange("overworld.uranium.size"            , 4 , sizeMin, sizeMax);
+            URANIUM_ORE_COUNT           = builder.defineInRange("overworld.uranium.count"           , 12, countMin, countMax);
+            URANIUM_ORE_TOP             = builder.defineInRange("overworld.uranium.top"             , 32, worldMin, worldMax);
+            URANIUM_ORE_BOTTOM          = builder.defineInRange("overworld.uranium.bottom"          , 1 , worldMin, worldMax);
 
-            LEAD_ORE_SIZE               = builder.defineInRange("overworld.lead_size"               , 12, sizeMin, sizeMax);
-            LEAD_ORE_COUNT              = builder.defineInRange("overworld.lead_count"              , 12, countMin, countMax);
-            LEAD_ORE_TOP                = builder.defineInRange("overworld.lead_top"                , 63, worldMin, worldMax);
-            LEAD_ORE_BOTTOM             = builder.defineInRange("overworld.lead_bottom"             , 1 , worldMin, worldMax);
+            LEAD_ORE_SIZE               = builder.defineInRange("overworld.lead.size"               , 12, sizeMin, sizeMax);
+            LEAD_ORE_COUNT              = builder.defineInRange("overworld.lead.count"              , 12, countMin, countMax);
+            LEAD_ORE_TOP                = builder.defineInRange("overworld.lead.top"                , 63, worldMin, worldMax);
+            LEAD_ORE_BOTTOM             = builder.defineInRange("overworld.lead.bottom"             , 1 , worldMin, worldMax);
 
-            SILVER_ORE_SIZE             = builder.defineInRange("overworld.silver_size"             , 4 , sizeMin, sizeMax);
-            SILVER_ORE_COUNT            = builder.defineInRange("overworld.silver_count"            , 12, countMin, countMax);
-            SILVER_ORE_TOP              = builder.defineInRange("overworld.silver_top"              , 26, worldMin, worldMax);
-            SILVER_ORE_BOTTOM           = builder.defineInRange("overworld.silver_bottom"           , 1 , worldMin, worldMax);
+            SILVER_ORE_SIZE             = builder.defineInRange("overworld.silver.size"             , 4 , sizeMin, sizeMax);
+            SILVER_ORE_COUNT            = builder.defineInRange("overworld.silver.count"            , 12, countMin, countMax);
+            SILVER_ORE_TOP              = builder.defineInRange("overworld.silver.top"              , 26, worldMin, worldMax);
+            SILVER_ORE_BOTTOM           = builder.defineInRange("overworld.silver.bottom"           , 1 , worldMin, worldMax);
 
-            RUBY_ORE_SIZE               = builder.defineInRange("overworld.ruby_size"               , 2 , sizeMin, sizeMax);
-            RUBY_ORE_COUNT              = builder.defineInRange("overworld.ruby_count"              , 12, countMin, countMax);
-            RUBY_ORE_TOP                = builder.defineInRange("overworld.ruby_top"                , 26, worldMin, worldMax);
-            RUBY_ORE_BOTTOM             = builder.defineInRange("overworld.ruby_bottom"             , 1 , worldMin, worldMax);
+            RUBY_ORE_SIZE               = builder.defineInRange("overworld.ruby.size"               , 2 , sizeMin, sizeMax);
+            RUBY_ORE_COUNT              = builder.defineInRange("overworld.ruby.count"              , 12, countMin, countMax);
+            RUBY_ORE_TOP                = builder.defineInRange("overworld.ruby.top"                , 26, worldMin, worldMax);
+            RUBY_ORE_BOTTOM             = builder.defineInRange("overworld.ruby.bottom"             , 1 , worldMin, worldMax);
 
-            SAPPHIRE_ORE_SIZE           = builder.defineInRange("overworld.sapphire_size"           , 2 , sizeMin, sizeMax);
-            SAPPHIRE_ORE_COUNT          = builder.defineInRange("overworld.sapphire_count"          , 12, countMin, countMax);
-            SAPPHIRE_ORE_TOP            = builder.defineInRange("overworld.sapphire_top"            , 26, worldMin, worldMax);
-            SAPPHIRE_ORE_BOTTOM         = builder.defineInRange("overworld.sapphire_bottom"         , 1 , worldMin, worldMax);
+            SAPPHIRE_ORE_SIZE           = builder.defineInRange("overworld.sapphire.size"           , 2 , sizeMin, sizeMax);
+            SAPPHIRE_ORE_COUNT          = builder.defineInRange("overworld.sapphire.count"          , 12, countMin, countMax);
+            SAPPHIRE_ORE_TOP            = builder.defineInRange("overworld.sapphire.top"            , 26, worldMin, worldMax);
+            SAPPHIRE_ORE_BOTTOM         = builder.defineInRange("overworld.sapphire.bottom"         , 1 , worldMin, worldMax);
 
-            AMETHYST_ORE_SIZE           = builder.defineInRange("overworld.amethyst_size"           , 2 , sizeMin, sizeMax);
-            AMETHYST_ORE_COUNT          = builder.defineInRange("overworld.amethyst_count"          , 12, countMin, countMax);
-            AMETHYST_ORE_TOP            = builder.defineInRange("overworld.amethyst_top"            , 26, worldMin, worldMax);
-            AMETHYST_ORE_BOTTOM         = builder.defineInRange("overworld.amethyst_bottom"         , 1 , worldMin, worldMax);
+            AMETHYST_ORE_SIZE           = builder.defineInRange("overworld.amethyst.size"           , 2 , sizeMin, sizeMax);
+            AMETHYST_ORE_COUNT          = builder.defineInRange("overworld.amethyst.count"          , 12, countMin, countMax);
+            AMETHYST_ORE_TOP            = builder.defineInRange("overworld.amethyst.top"            , 26, worldMin, worldMax);
+            AMETHYST_ORE_BOTTOM         = builder.defineInRange("overworld.amethyst.bottom"         , 1 , worldMin, worldMax);
 
-            ZINC_ORE_SIZE               = builder.defineInRange("overworld.zinc_size"               , 8 , sizeMin, sizeMax);
-            ZINC_ORE_COUNT              = builder.defineInRange("overworld.zinc_count"              , 12, countMin, countMax);
-            ZINC_ORE_TOP                = builder.defineInRange("overworld.zinc_top"                , 63, worldMin, worldMax);
-            ZINC_ORE_BOTTOM             = builder.defineInRange("overworld.zinc_bottom"             , 1 , worldMin, worldMax);
+            ZINC_ORE_SIZE               = builder.defineInRange("overworld.zinc.size"               , 8 , sizeMin, sizeMax);
+            ZINC_ORE_COUNT              = builder.defineInRange("overworld.zinc.count"              , 12, countMin, countMax);
+            ZINC_ORE_TOP                = builder.defineInRange("overworld.zinc.top"                , 63, worldMin, worldMax);
+            ZINC_ORE_BOTTOM             = builder.defineInRange("overworld.zinc.bottom"             , 1 , worldMin, worldMax);
 
             // --------------------------------------------- overworld.gravel ---------------------------------------------
 
-            IRON_GRAVEL_ORE_SIZE             = builder.defineInRange("overworld.gravel.iron_size"             , 8 , sizeMin, sizeMax);
-            IRON_GRAVEL_ORE_COUNT            = builder.defineInRange("overworld.gravel.iron_count"            , 48, countMin, countMax);
-            IRON_GRAVEL_ORE_TOP              = builder.defineInRange("overworld.gravel.iron_top"              , 48, worldMin, worldMax);
-            IRON_GRAVEL_ORE_BOTTOM           = builder.defineInRange("overworld.gravel.iron_bottom"           , 1 , worldMin, worldMax);
+            IRON_GRAVEL_ORE_SIZE             = builder.defineInRange("overworld.gravel.iron.size"             , 8 , sizeMin, sizeMax);
+            IRON_GRAVEL_ORE_COUNT            = builder.defineInRange("overworld.gravel.iron.count"            , 48, countMin, countMax);
+            IRON_GRAVEL_ORE_TOP              = builder.defineInRange("overworld.gravel.iron.top"              , 48, worldMin, worldMax);
+            IRON_GRAVEL_ORE_BOTTOM           = builder.defineInRange("overworld.gravel.iron.bottom"           , 1 , worldMin, worldMax);
 
-            GOLD_GRAVEL_ORE_SIZE             = builder.defineInRange("overworld.gravel.gold_size"             , 6 , sizeMin, sizeMax);
-            GOLD_GRAVEL_ORE_COUNT            = builder.defineInRange("overworld.gravel.gold_count"            , 40, countMin, countMax);
-            GOLD_GRAVEL_ORE_TOP              = builder.defineInRange("overworld.gravel.gold_top"              , 28, worldMin, worldMax);
-            GOLD_GRAVEL_ORE_BOTTOM           = builder.defineInRange("overworld.gravel.gold_bottom"           , 1 , worldMin, worldMax);
+            GOLD_GRAVEL_ORE_SIZE             = builder.defineInRange("overworld.gravel.gold.size"             , 6 , sizeMin, sizeMax);
+            GOLD_GRAVEL_ORE_COUNT            = builder.defineInRange("overworld.gravel.gold.count"            , 40, countMin, countMax);
+            GOLD_GRAVEL_ORE_TOP              = builder.defineInRange("overworld.gravel.gold.top"              , 28, worldMin, worldMax);
+            GOLD_GRAVEL_ORE_BOTTOM           = builder.defineInRange("overworld.gravel.gold.bottom"           , 1 , worldMin, worldMax);
 
-            DIAMOND_GRAVEL_ORE_SIZE             = builder.defineInRange("overworld.gravel.diamond_size"             , 4 , sizeMin, sizeMax);
-            DIAMOND_GRAVEL_ORE_COUNT            = builder.defineInRange("overworld.gravel.diamond_count"            , 32, countMin, countMax);
-            DIAMOND_GRAVEL_ORE_TOP              = builder.defineInRange("overworld.gravel.diamond_top"              , 18, worldMin, worldMax);
-            DIAMOND_GRAVEL_ORE_BOTTOM           = builder.defineInRange("overworld.gravel.diamond_bottom"           , 1 , worldMin, worldMax);
+            DIAMOND_GRAVEL_ORE_SIZE             = builder.defineInRange("overworld.gravel.diamond.size"             , 4 , sizeMin, sizeMax);
+            DIAMOND_GRAVEL_ORE_COUNT            = builder.defineInRange("overworld.gravel.diamond.count"            , 32, countMin, countMax);
+            DIAMOND_GRAVEL_ORE_TOP              = builder.defineInRange("overworld.gravel.diamond.top"              , 18, worldMin, worldMax);
+            DIAMOND_GRAVEL_ORE_BOTTOM           = builder.defineInRange("overworld.gravel.diamond.bottom"           , 1 , worldMin, worldMax);
 
             // --------------------------------------------- overworld.dense ---------------------------------------------
 
-            DENSE_COPPER_ORE_COUNT      = builder.defineInRange("overworld.dense.copper_count"      , 1260, countMin, countMax);
-            DENSE_COPPER_ORE_TOP        = builder.defineInRange("overworld.dense.copper_top"        , 63  , worldMin, worldMax);
-            DENSE_COPPER_ORE_BOTTOM     = builder.defineInRange("overworld.dense.copper_bottom"     , 1   , worldMin, worldMax);
+            DENSE_COPPER_ORE_COUNT      = builder.defineInRange("overworld.dense.copper.count"      , 1260, countMin, countMax);
+            DENSE_COPPER_ORE_TOP        = builder.defineInRange("overworld.dense.copper.top"        , 63  , worldMin, worldMax);
+            DENSE_COPPER_ORE_BOTTOM     = builder.defineInRange("overworld.dense.copper.bottom"     , 1   , worldMin, worldMax);
 
-            DENSE_TIN_ORE_COUNT         = builder.defineInRange("overworld.dense.tin_count"         , 1260, countMin, countMax);
-            DENSE_TIN_ORE_TOP           = builder.defineInRange("overworld.dense.tin_top"           , 63  , worldMin, worldMax);
-            DENSE_TIN_ORE_BOTTOM        = builder.defineInRange("overworld.dense.tin_bottom"        , 1   , worldMin, worldMax);
+            DENSE_TIN_ORE_COUNT         = builder.defineInRange("overworld.dense.tin.count"         , 1260, countMin, countMax);
+            DENSE_TIN_ORE_TOP           = builder.defineInRange("overworld.dense.tin.top"           , 63  , worldMin, worldMax);
+            DENSE_TIN_ORE_BOTTOM        = builder.defineInRange("overworld.dense.tin.bottom"        , 1   , worldMin, worldMax);
 
-            DENSE_EMERALD_ORE_COUNT     = builder.defineInRange("overworld.dense.emerald_count"     , 640, countMin, countMax);
-            DENSE_EMERALD_ORE_TOP       = builder.defineInRange("overworld.dense.emerald_top"       , 32 , worldMin, worldMax);
-            DENSE_EMERALD_ORE_BOTTOM    = builder.defineInRange("overworld.dense.emerald_bottom"    , 1  , worldMin, worldMax);
+            DENSE_EMERALD_ORE_COUNT     = builder.defineInRange("overworld.dense.emerald.count"     , 640, countMin, countMax);
+            DENSE_EMERALD_ORE_TOP       = builder.defineInRange("overworld.dense.emerald.top"       , 32 , worldMin, worldMax);
+            DENSE_EMERALD_ORE_BOTTOM    = builder.defineInRange("overworld.dense.emerald.bottom"    , 1  , worldMin, worldMax);
 
-            DENSE_COAL_ORE_COUNT        = builder.defineInRange("overworld.dense.coal_count"        , 2600, countMin, countMax);
-            DENSE_COAL_ORE_TOP          = builder.defineInRange("overworld.dense.coal_top"          , 130 , worldMin, worldMax);
-            DENSE_COAL_ORE_BOTTOM       = builder.defineInRange("overworld.dense.coal_bottom"       , 1   , worldMin, worldMax);
+            DENSE_COAL_ORE_COUNT        = builder.defineInRange("overworld.dense.coal.count"        , 2600, countMin, countMax);
+            DENSE_COAL_ORE_TOP          = builder.defineInRange("overworld.dense.coal.top"          , 130 , worldMin, worldMax);
+            DENSE_COAL_ORE_BOTTOM       = builder.defineInRange("overworld.dense.coal.bottom"       , 1   , worldMin, worldMax);
 
-            DENSE_GOLD_ORE_COUNT        = builder.defineInRange("overworld.dense.gold_count"        , 640, countMin, countMax);
-            DENSE_GOLD_ORE_TOP          = builder.defineInRange("overworld.dense.gold_top"          , 32 , worldMin, worldMax);
-            DENSE_GOLD_ORE_BOTTOM       = builder.defineInRange("overworld.dense.gold_bottom"       , 1  , worldMin, worldMax);
+            DENSE_GOLD_ORE_COUNT        = builder.defineInRange("overworld.dense.gold.count"        , 640, countMin, countMax);
+            DENSE_GOLD_ORE_TOP          = builder.defineInRange("overworld.dense.gold.top"          , 32 , worldMin, worldMax);
+            DENSE_GOLD_ORE_BOTTOM       = builder.defineInRange("overworld.dense.gold.bottom"       , 1  , worldMin, worldMax);
 
-            DENSE_IRON_ORE_COUNT        = builder.defineInRange("overworld.dense.iron_count"        , 1260, countMin, countMax);
-            DENSE_IRON_ORE_TOP          = builder.defineInRange("overworld.dense.iron_top"          , 63  , worldMin, worldMax);
-            DENSE_IRON_ORE_BOTTOM       = builder.defineInRange("overworld.dense.iron_bottom"       , 1   , worldMin, worldMax);
+            DENSE_IRON_ORE_COUNT        = builder.defineInRange("overworld.dense.iron.count"        , 1260, countMin, countMax);
+            DENSE_IRON_ORE_TOP          = builder.defineInRange("overworld.dense.iron.top"          , 63  , worldMin, worldMax);
+            DENSE_IRON_ORE_BOTTOM       = builder.defineInRange("overworld.dense.iron.bottom"       , 1   , worldMin, worldMax);
 
-            DENSE_LAPIS_ORE_COUNT       = builder.defineInRange("overworld.dense.lapis_count"       , 640, countMin, countMax);
-            DENSE_LAPIS_ORE_TOP         = builder.defineInRange("overworld.dense.lapis_top"         , 32 , worldMin, worldMax);
-            DENSE_LAPIS_ORE_BOTTOM      = builder.defineInRange("overworld.dense.lapis_bottom"      , 1  , worldMin, worldMax);
+            DENSE_LAPIS_ORE_COUNT       = builder.defineInRange("overworld.dense.lapis.count"       , 640, countMin, countMax);
+            DENSE_LAPIS_ORE_TOP         = builder.defineInRange("overworld.dense.lapis.top"         , 32 , worldMin, worldMax);
+            DENSE_LAPIS_ORE_BOTTOM      = builder.defineInRange("overworld.dense.lapis.bottom"      , 1  , worldMin, worldMax);
 
-            DENSE_REDSTONE_ORE_COUNT    = builder.defineInRange("overworld.dense.redstone_count"    , 320, countMin, countMax);
-            DENSE_REDSTONE_ORE_TOP      = builder.defineInRange("overworld.dense.redstone_top"      , 16 , worldMin, worldMax);
-            DENSE_REDSTONE_ORE_BOTTOM   = builder.defineInRange("overworld.dense.redstone_bottom"   , 1  , worldMin, worldMax);
+            DENSE_REDSTONE_ORE_COUNT    = builder.defineInRange("overworld.dense.redstone.count"    , 320, countMin, countMax);
+            DENSE_REDSTONE_ORE_TOP      = builder.defineInRange("overworld.dense.redstone.top"      , 16 , worldMin, worldMax);
+            DENSE_REDSTONE_ORE_BOTTOM   = builder.defineInRange("overworld.dense.redstone.bottom"   , 1  , worldMin, worldMax);
 
-            DENSE_DIAMOND_ORE_COUNT     = builder.defineInRange("overworld.dense.diamond_count"     , 320, countMin, countMax);
-            DENSE_DIAMOND_ORE_TOP       = builder.defineInRange("overworld.dense.diamond_top"       , 16 , worldMin, worldMax);
-            DENSE_DIAMOND_ORE_BOTTOM    = builder.defineInRange("overworld.dense.diamond_bottom"    , 1  , worldMin, worldMax);
+            DENSE_DIAMOND_ORE_COUNT     = builder.defineInRange("overworld.dense.diamond.count"     , 320, countMin, countMax);
+            DENSE_DIAMOND_ORE_TOP       = builder.defineInRange("overworld.dense.diamond.top"       , 16 , worldMin, worldMax);
+            DENSE_DIAMOND_ORE_BOTTOM    = builder.defineInRange("overworld.dense.diamond.bottom"    , 1  , worldMin, worldMax);
 
             // --------------------------------------------- overworld.ocean.gravel ---------------------------------------------
 
-            OCEAN_IRON_GRAVEL_ORE_SIZE       = builder.defineInRange("overworld.ocean.gravel.iron_size"             , 8 , sizeMin, sizeMax);
-            OCEAN_IRON_GRAVEL_ORE_COUNT      = builder.defineInRange("overworld.ocean.gravel.iron_count"            , 40, countMin, countMax);
-            OCEAN_IRON_GRAVEL_ORE_TOP        = builder.defineInRange("overworld.ocean.gravel.iron_top"              , 64, worldMin, worldMax);
-            OCEAN_IRON_GRAVEL_ORE_BOTTOM     = builder.defineInRange("overworld.ocean.gravel.iron_bottom"           , 1 , worldMin, worldMax);
+            OCEAN_IRON_GRAVEL_ORE_SIZE       = builder.defineInRange("overworld.ocean.gravel.iron.size"             , 8 , sizeMin, sizeMax);
+            OCEAN_IRON_GRAVEL_ORE_COUNT      = builder.defineInRange("overworld.ocean.gravel.iron.count"            , 40, countMin, countMax);
+            OCEAN_IRON_GRAVEL_ORE_TOP        = builder.defineInRange("overworld.ocean.gravel.iron.top"              , 64, worldMin, worldMax);
+            OCEAN_IRON_GRAVEL_ORE_BOTTOM     = builder.defineInRange("overworld.ocean.gravel.iron.bottom"           , 1 , worldMin, worldMax);
 
-            OCEAN_GOLD_GRAVEL_ORE_SIZE       = builder.defineInRange("overworld.ocean.gravel.gold_size"             , 6 , sizeMin, sizeMax);
-            OCEAN_GOLD_GRAVEL_ORE_COUNT      = builder.defineInRange("overworld.ocean.gravel.gold_count"            , 32, countMin, countMax);
-            OCEAN_GOLD_GRAVEL_ORE_TOP        = builder.defineInRange("overworld.ocean.gravel.gold_top"              , 48, worldMin, worldMax);
-            OCEAN_GOLD_GRAVEL_ORE_BOTTOM     = builder.defineInRange("overworld.ocean.gravel.gold_bottom"           , 1 , worldMin, worldMax);
+            OCEAN_GOLD_GRAVEL_ORE_SIZE       = builder.defineInRange("overworld.ocean.gravel.gold.size"             , 6 , sizeMin, sizeMax);
+            OCEAN_GOLD_GRAVEL_ORE_COUNT      = builder.defineInRange("overworld.ocean.gravel.gold.count"            , 32, countMin, countMax);
+            OCEAN_GOLD_GRAVEL_ORE_TOP        = builder.defineInRange("overworld.ocean.gravel.gold.top"              , 48, worldMin, worldMax);
+            OCEAN_GOLD_GRAVEL_ORE_BOTTOM     = builder.defineInRange("overworld.ocean.gravel.gold.bottom"           , 1 , worldMin, worldMax);
 
-            OCEAN_DIAMOND_GRAVEL_ORE_SIZE    = builder.defineInRange("overworld.ocean.gravel.diamond_size"             , 4 , sizeMin, sizeMax);
-            OCEAN_DIAMOND_GRAVEL_ORE_COUNT   = builder.defineInRange("overworld.ocean.gravel.diamond_count"            , 8, countMin, countMax);
-            OCEAN_DIAMOND_GRAVEL_ORE_TOP     = builder.defineInRange("overworld.ocean.gravel.diamond_top"              , 38, worldMin, worldMax);
-            OCEAN_DIAMOND_GRAVEL_ORE_BOTTOM  = builder.defineInRange("overworld.ocean.gravel.diamond_bottom"           , 1 , worldMin, worldMax);
+            OCEAN_DIAMOND_GRAVEL_ORE_SIZE    = builder.defineInRange("overworld.ocean.gravel.diamond.size"             , 4 , sizeMin, sizeMax);
+            OCEAN_DIAMOND_GRAVEL_ORE_COUNT   = builder.defineInRange("overworld.ocean.gravel.diamond.count"            , 8, countMin, countMax);
+            OCEAN_DIAMOND_GRAVEL_ORE_TOP     = builder.defineInRange("overworld.ocean.gravel.diamond.top"              , 38, worldMin, worldMax);
+            OCEAN_DIAMOND_GRAVEL_ORE_BOTTOM  = builder.defineInRange("overworld.ocean.gravel.diamond.bottom"           , 1 , worldMin, worldMax);
 
             // --------------------------------------------- nether ---------------------------------------------
 
-            COAL_NETHER_ORE_SIZE       = builder.defineInRange("nether.coal_size"             , 12 , sizeMin, sizeMax);
-            COAL_NETHER_ORE_COUNT      = builder.defineInRange("nether.coal_count"            , 68, countMin, countMax);
-            COAL_NETHER_ORE_TOP        = builder.defineInRange("nether.coal_top"              , 127, worldMin, worldMax);
-            COAL_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.coal_bottom"           , 1 , worldMin, worldMax);
+            COAL_NETHER_ORE_SIZE       = builder.defineInRange("nether.coal.size"             , 12 , sizeMin, sizeMax);
+            COAL_NETHER_ORE_COUNT      = builder.defineInRange("nether.coal.count"            , 68, countMin, countMax);
+            COAL_NETHER_ORE_TOP        = builder.defineInRange("nether.coal.top"              , 127, worldMin, worldMax);
+            COAL_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.coal.bottom"           , 1 , worldMin, worldMax);
 
-            DIAMOND_NETHER_ORE_SIZE       = builder.defineInRange("nether.diamond_size"             , 4 , sizeMin, sizeMax);
-            DIAMOND_NETHER_ORE_COUNT      = builder.defineInRange("nether.diamond_count"            , 20, countMin, countMax);
-            DIAMOND_NETHER_ORE_TOP        = builder.defineInRange("nether.diamond_top"              , 127, worldMin, worldMax);
-            DIAMOND_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.diamond_bottom"           , 1 , worldMin, worldMax);
+            DIAMOND_NETHER_ORE_SIZE       = builder.defineInRange("nether.diamond.size"             , 4 , sizeMin, sizeMax);
+            DIAMOND_NETHER_ORE_COUNT      = builder.defineInRange("nether.diamond.count"            , 20, countMin, countMax);
+            DIAMOND_NETHER_ORE_TOP        = builder.defineInRange("nether.diamond.top"              , 127, worldMin, worldMax);
+            DIAMOND_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.diamond.bottom"           , 1 , worldMin, worldMax);
 
-            EMERALD_NETHER_ORE_COUNT      = builder.defineInRange("nether.emerald_count"            , 8, countMin, countMax);
-            EMERALD_NETHER_ORE_TOP        = builder.defineInRange("nether.emerald_top"              , 127, worldMin, worldMax);
-            EMERALD_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.emerald_bottom"           , 1 , worldMin, worldMax);
+            EMERALD_NETHER_ORE_COUNT      = builder.defineInRange("nether.emerald.count"            , 8, countMin, countMax);
+            EMERALD_NETHER_ORE_TOP        = builder.defineInRange("nether.emerald.top"              , 127, worldMin, worldMax);
+            EMERALD_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.emerald.bottom"           , 1 , worldMin, worldMax);
 
-            GOLD_NETHER_ORE_SIZE       = builder.defineInRange("nether.gold_size"             , 4 , sizeMin, sizeMax);
-            GOLD_NETHER_ORE_COUNT      = builder.defineInRange("nether.gold_count"            , 32, countMin, countMax);
-            GOLD_NETHER_ORE_TOP        = builder.defineInRange("nether.gold_top"              , 127, worldMin, worldMax);
-            GOLD_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.gold_bottom"           , 1 , worldMin, worldMax);
+            GOLD_NETHER_ORE_SIZE       = builder.defineInRange("nether.gold.size"             , 4 , sizeMin, sizeMax);
+            GOLD_NETHER_ORE_COUNT      = builder.defineInRange("nether.gold.count"            , 32, countMin, countMax);
+            GOLD_NETHER_ORE_TOP        = builder.defineInRange("nether.gold.top"              , 127, worldMin, worldMax);
+            GOLD_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.gold.bottom"           , 1 , worldMin, worldMax);
 
-            IRON_NETHER_ORE_SIZE       = builder.defineInRange("nether.iron_size"             , 6 , sizeMin, sizeMax);
-            IRON_NETHER_ORE_COUNT      = builder.defineInRange("nether.iron_count"            , 40, countMin, countMax);
-            IRON_NETHER_ORE_TOP        = builder.defineInRange("nether.iron_top"              , 127, worldMin, worldMax);
-            IRON_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.iron_bottom"           , 1 , worldMin, worldMax);
+            IRON_NETHER_ORE_SIZE       = builder.defineInRange("nether.iron.size"             , 6 , sizeMin, sizeMax);
+            IRON_NETHER_ORE_COUNT      = builder.defineInRange("nether.iron.count"            , 40, countMin, countMax);
+            IRON_NETHER_ORE_TOP        = builder.defineInRange("nether.iron.top"              , 127, worldMin, worldMax);
+            IRON_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.iron.bottom"           , 1 , worldMin, worldMax);
 
-            LAPIS_NETHER_ORE_SIZE       = builder.defineInRange("nether.lapis_size"             , 6 , sizeMin, sizeMax);
-            LAPIS_NETHER_ORE_COUNT      = builder.defineInRange("nether.lapis_count"            , 20, countMin, countMax);
-            LAPIS_NETHER_ORE_TOP        = builder.defineInRange("nether.lapis_top"              , 127, worldMin, worldMax);
-            LAPIS_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.lapis_bottom"           , 1 , worldMin, worldMax);
+            LAPIS_NETHER_ORE_SIZE       = builder.defineInRange("nether.lapis.size"             , 6 , sizeMin, sizeMax);
+            LAPIS_NETHER_ORE_COUNT      = builder.defineInRange("nether.lapis.count"            , 20, countMin, countMax);
+            LAPIS_NETHER_ORE_TOP        = builder.defineInRange("nether.lapis.top"              , 127, worldMin, worldMax);
+            LAPIS_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.lapis.bottom"           , 1 , worldMin, worldMax);
 
-            REDSTONE_NETHER_ORE_SIZE       = builder.defineInRange("nether.redstone_size"             , 8 , sizeMin, sizeMax);
-            REDSTONE_NETHER_ORE_COUNT      = builder.defineInRange("nether.redstone_count"            , 32, countMin, countMax);
-            REDSTONE_NETHER_ORE_TOP        = builder.defineInRange("nether.redstone_top"              , 127, worldMin, worldMax);
-            REDSTONE_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.redstone_bottom"           , 1 , worldMin, worldMax);
+            REDSTONE_NETHER_ORE_SIZE       = builder.defineInRange("nether.redstone.size"             , 8 , sizeMin, sizeMax);
+            REDSTONE_NETHER_ORE_COUNT      = builder.defineInRange("nether.redstone.count"            , 32, countMin, countMax);
+            REDSTONE_NETHER_ORE_TOP        = builder.defineInRange("nether.redstone.top"              , 127, worldMin, worldMax);
+            REDSTONE_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.redstone.bottom"           , 1 , worldMin, worldMax);
 
-            ALUMINIUM_NETHER_ORE_SIZE       = builder.defineInRange("nether.aluminium_size"             , 6 , sizeMin, sizeMax);
-            ALUMINIUM_NETHER_ORE_COUNT      = builder.defineInRange("nether.aluminium_count"            , 32, countMin, countMax);
-            ALUMINIUM_NETHER_ORE_TOP        = builder.defineInRange("nether.aluminium_top"              , 127, worldMin, worldMax);
-            ALUMINIUM_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.aluminium_bottom"           , 1 , worldMin, worldMax);
+            ALUMINIUM_NETHER_ORE_SIZE       = builder.defineInRange("nether.aluminium.size"             , 6 , sizeMin, sizeMax);
+            ALUMINIUM_NETHER_ORE_COUNT      = builder.defineInRange("nether.aluminium.count"            , 32, countMin, countMax);
+            ALUMINIUM_NETHER_ORE_TOP        = builder.defineInRange("nether.aluminium.top"              , 127, worldMin, worldMax);
+            ALUMINIUM_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.aluminium.bottom"           , 1 , worldMin, worldMax);
 
-            LEAD_NETHER_ORE_SIZE       = builder.defineInRange("nether.lead_size"             , 6 , sizeMin, sizeMax);
-            LEAD_NETHER_ORE_COUNT      = builder.defineInRange("nether.lead_count"            , 40, countMin, countMax);
-            LEAD_NETHER_ORE_TOP        = builder.defineInRange("nether.lead_top"              , 127, worldMin, worldMax);
-            LEAD_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.lead_bottom"           , 1 , worldMin, worldMax);
+            LEAD_NETHER_ORE_SIZE       = builder.defineInRange("nether.lead.size"             , 6 , sizeMin, sizeMax);
+            LEAD_NETHER_ORE_COUNT      = builder.defineInRange("nether.lead.count"            , 40, countMin, countMax);
+            LEAD_NETHER_ORE_TOP        = builder.defineInRange("nether.lead.top"              , 127, worldMin, worldMax);
+            LEAD_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.lead.bottom"           , 1 , worldMin, worldMax);
 
-            TIN_NETHER_ORE_SIZE       = builder.defineInRange("nether.tin_size"             , 6 , sizeMin, sizeMax);
-            TIN_NETHER_ORE_COUNT      = builder.defineInRange("nether.tin_count"            , 32, countMin, countMax);
-            TIN_NETHER_ORE_TOP        = builder.defineInRange("nether.tin_top"              , 127, worldMin, worldMax);
-            TIN_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.tin_bottom"           , 1 , worldMin, worldMax);
+            TIN_NETHER_ORE_SIZE       = builder.defineInRange("nether.tin.size"             , 6 , sizeMin, sizeMax);
+            TIN_NETHER_ORE_COUNT      = builder.defineInRange("nether.tin.count"            , 32, countMin, countMax);
+            TIN_NETHER_ORE_TOP        = builder.defineInRange("nether.tin.top"              , 127, worldMin, worldMax);
+            TIN_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.tin.bottom"           , 1 , worldMin, worldMax);
 
-            COPPER_NETHER_ORE_SIZE       = builder.defineInRange("nether.copper_size"             , 6 , sizeMin, sizeMax);
-            COPPER_NETHER_ORE_COUNT      = builder.defineInRange("nether.copper_count"            , 40, countMin, countMax);
-            COPPER_NETHER_ORE_TOP        = builder.defineInRange("nether.copper_top"              , 127, worldMin, worldMax);
-            COPPER_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.copper_bottom"           , 1 , worldMin, worldMax);
+            COPPER_NETHER_ORE_SIZE       = builder.defineInRange("nether.copper.size"             , 6 , sizeMin, sizeMax);
+            COPPER_NETHER_ORE_COUNT      = builder.defineInRange("nether.copper.count"            , 40, countMin, countMax);
+            COPPER_NETHER_ORE_TOP        = builder.defineInRange("nether.copper.top"              , 127, worldMin, worldMax);
+            COPPER_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.copper.bottom"           , 1 , worldMin, worldMax);
 
-            RUBY_NETHER_ORE_SIZE       = builder.defineInRange("nether.ruby_size"             , 4 , sizeMin, sizeMax);
-            RUBY_NETHER_ORE_COUNT      = builder.defineInRange("nether.ruby_count"            , 20, countMin, countMax);
-            RUBY_NETHER_ORE_TOP        = builder.defineInRange("nether.ruby_top"              , 127, worldMin, worldMax);
-            RUBY_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.ruby_bottom"           , 1 , worldMin, worldMax);
+            RUBY_NETHER_ORE_SIZE       = builder.defineInRange("nether.ruby.size"             , 4 , sizeMin, sizeMax);
+            RUBY_NETHER_ORE_COUNT      = builder.defineInRange("nether.ruby.count"            , 20, countMin, countMax);
+            RUBY_NETHER_ORE_TOP        = builder.defineInRange("nether.ruby.top"              , 127, worldMin, worldMax);
+            RUBY_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.ruby.bottom"           , 1 , worldMin, worldMax);
 
-            SAPPHIRE_NETHER_ORE_SIZE       = builder.defineInRange("nether.sapphire_size"             , 4 , sizeMin, sizeMax);
-            SAPPHIRE_NETHER_ORE_COUNT      = builder.defineInRange("nether.sapphire_count"            , 20, countMin, countMax);
-            SAPPHIRE_NETHER_ORE_TOP        = builder.defineInRange("nether.sapphire_top"              , 127, worldMin, worldMax);
-            SAPPHIRE_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.sapphire_bottom"           , 1 , worldMin, worldMax);
+            SAPPHIRE_NETHER_ORE_SIZE       = builder.defineInRange("nether.sapphire.size"             , 4 , sizeMin, sizeMax);
+            SAPPHIRE_NETHER_ORE_COUNT      = builder.defineInRange("nether.sapphire.count"            , 20, countMin, countMax);
+            SAPPHIRE_NETHER_ORE_TOP        = builder.defineInRange("nether.sapphire.top"              , 127, worldMin, worldMax);
+            SAPPHIRE_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.sapphire.bottom"           , 1 , worldMin, worldMax);
 
-            SILVER_NETHER_ORE_SIZE       = builder.defineInRange("nether.silver_size"             , 4 , sizeMin, sizeMax);
-            SILVER_NETHER_ORE_COUNT      = builder.defineInRange("nether.silver_count"            , 32, countMin, countMax);
-            SILVER_NETHER_ORE_TOP        = builder.defineInRange("nether.silver_top"              , 127, worldMin, worldMax);
-            SILVER_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.silver_bottom"           , 1 , worldMin, worldMax);
+            SILVER_NETHER_ORE_SIZE       = builder.defineInRange("nether.silver.size"             , 4 , sizeMin, sizeMax);
+            SILVER_NETHER_ORE_COUNT      = builder.defineInRange("nether.silver.count"            , 32, countMin, countMax);
+            SILVER_NETHER_ORE_TOP        = builder.defineInRange("nether.silver.top"              , 127, worldMin, worldMax);
+            SILVER_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.silver.bottom"           , 1 , worldMin, worldMax);
 
-            URANIUM_NETHER_ORE_SIZE       = builder.defineInRange("nether.uranium_size"             , 4 , sizeMin, sizeMax);
-            URANIUM_NETHER_ORE_COUNT      = builder.defineInRange("nether.uranium_count"            , 32, countMin, countMax);
-            URANIUM_NETHER_ORE_TOP        = builder.defineInRange("nether.uranium_top"              , 127, worldMin, worldMax);
-            URANIUM_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.uranium_bottom"           , 1 , worldMin, worldMax);
+            URANIUM_NETHER_ORE_SIZE       = builder.defineInRange("nether.uranium.size"             , 4 , sizeMin, sizeMax);
+            URANIUM_NETHER_ORE_COUNT      = builder.defineInRange("nether.uranium.count"            , 32, countMin, countMax);
+            URANIUM_NETHER_ORE_TOP        = builder.defineInRange("nether.uranium.top"              , 127, worldMin, worldMax);
+            URANIUM_NETHER_ORE_BOTTOM     = builder.defineInRange("nether.uranium.bottom"           , 1 , worldMin, worldMax);
 
             // --------------------------------------------- nether.gravel ---------------------------------------------
 
-            NETHER_IRON_GRAVEL_ORE_SIZE       = builder.defineInRange("nether.gravel.iron_size"             , 8 , sizeMin, sizeMax);
-            NETHER_IRON_GRAVEL_ORE_COUNT      = builder.defineInRange("nether.gravel.iron_count"            , 48, countMin, countMax);
-            NETHER_IRON_GRAVEL_ORE_TOP        = builder.defineInRange("nether.gravel.iron_top"              , 127, worldMin, worldMax);
-            NETHER_IRON_GRAVEL_ORE_BOTTOM     = builder.defineInRange("nether.gravel.iron_bottom"           , 1 , worldMin, worldMax);
+            NETHER_IRON_GRAVEL_ORE_SIZE       = builder.defineInRange("nether.gravel.iron.size"             , 8 , sizeMin, sizeMax);
+            NETHER_IRON_GRAVEL_ORE_COUNT      = builder.defineInRange("nether.gravel.iron.count"            , 48, countMin, countMax);
+            NETHER_IRON_GRAVEL_ORE_TOP        = builder.defineInRange("nether.gravel.iron.top"              , 127, worldMin, worldMax);
+            NETHER_IRON_GRAVEL_ORE_BOTTOM     = builder.defineInRange("nether.gravel.iron.bottom"           , 1 , worldMin, worldMax);
 
-            NETHER_GOLD_GRAVEL_ORE_SIZE       = builder.defineInRange("nether.gravel.gold_size"             , 6 , sizeMin, sizeMax);
-            NETHER_GOLD_GRAVEL_ORE_COUNT      = builder.defineInRange("nether.gravel.gold_count"            , 40, countMin, countMax);
-            NETHER_GOLD_GRAVEL_ORE_TOP        = builder.defineInRange("nether.gravel.gold_top"              , 127, worldMin, worldMax);
-            NETHER_GOLD_GRAVEL_ORE_BOTTOM     = builder.defineInRange("nether.gravel.gold_bottom"           , 1 , worldMin, worldMax);
+            NETHER_GOLD_GRAVEL_ORE_SIZE       = builder.defineInRange("nether.gravel.gold.size"             , 6 , sizeMin, sizeMax);
+            NETHER_GOLD_GRAVEL_ORE_COUNT      = builder.defineInRange("nether.gravel.gold.count"            , 40, countMin, countMax);
+            NETHER_GOLD_GRAVEL_ORE_TOP        = builder.defineInRange("nether.gravel.gold.top"              , 127, worldMin, worldMax);
+            NETHER_GOLD_GRAVEL_ORE_BOTTOM     = builder.defineInRange("nether.gravel.gold.bottom"           , 1 , worldMin, worldMax);
 
-            NETHER_DIAMOND_GRAVEL_ORE_SIZE    = builder.defineInRange("nether.gravel.diamond_size"             , 4 , sizeMin, sizeMax);
-            NETHER_DIAMOND_GRAVEL_ORE_COUNT   = builder.defineInRange("nether.gravel.diamond_count"            , 32, countMin, countMax);
-            NETHER_DIAMOND_GRAVEL_ORE_TOP     = builder.defineInRange("nether.gravel.diamond_top"              , 127, worldMin, worldMax);
-            NETHER_DIAMOND_GRAVEL_ORE_BOTTOM  = builder.defineInRange("nether.gravel.diamond_bottom"           , 1 , worldMin, worldMax);
+            NETHER_DIAMOND_GRAVEL_ORE_SIZE    = builder.defineInRange("nether.gravel.diamond.size"             , 4 , sizeMin, sizeMax);
+            NETHER_DIAMOND_GRAVEL_ORE_COUNT   = builder.defineInRange("nether.gravel.diamond.count"            , 32, countMin, countMax);
+            NETHER_DIAMOND_GRAVEL_ORE_TOP     = builder.defineInRange("nether.gravel.diamond.top"              , 127, worldMin, worldMax);
+            NETHER_DIAMOND_GRAVEL_ORE_BOTTOM  = builder.defineInRange("nether.gravel.diamond.bottom"           , 1 , worldMin, worldMax);
 
             // --------------------------------------------- nether.basalt ---------------------------------------------
 
-            COAL_BASALT_ORE_SIZE        = builder.defineInRange("nether.basalt.coal_size"           , 12  , sizeMin, sizeMax);
-            COAL_BASALT_ORE_COUNT       = builder.defineInRange("nether.basalt.coal_count"          , 17 , countMin, countMax);
-            COAL_BASALT_ORE_TOP         = builder.defineInRange("nether.basalt.coal_top"            , 127, worldMin, worldMax);
-            COAL_BASALT_ORE_BOTTOM      = builder.defineInRange("nether.basalt.coal_bottom"         , 1  , worldMin, worldMax);
+            COAL_BASALT_ORE_SIZE        = builder.defineInRange("nether.basalt.coal.size"           , 12  , sizeMin, sizeMax);
+            COAL_BASALT_ORE_COUNT       = builder.defineInRange("nether.basalt.coal.count"          , 17 , countMin, countMax);
+            COAL_BASALT_ORE_TOP         = builder.defineInRange("nether.basalt.coal.top"            , 127, worldMin, worldMax);
+            COAL_BASALT_ORE_BOTTOM      = builder.defineInRange("nether.basalt.coal.bottom"         , 1  , worldMin, worldMax);
 
-            DIAMOND_BASALT_ORE_SIZE     = builder.defineInRange("nether.basalt.diamond_size"        , 4  , sizeMin, sizeMax);
-            DIAMOND_BASALT_ORE_COUNT    = builder.defineInRange("nether.basalt.diamond_count"       , 5 , countMin, countMax);
-            DIAMOND_BASALT_ORE_TOP      = builder.defineInRange("nether.basalt.diamond_top"         , 127, worldMin, worldMax);
-            DIAMOND_BASALT_ORE_BOTTOM   = builder.defineInRange("nether.basalt.diamond_bottom"      , 1  , worldMin, worldMax);
+            DIAMOND_BASALT_ORE_SIZE     = builder.defineInRange("nether.basalt.diamond.size"        , 4  , sizeMin, sizeMax);
+            DIAMOND_BASALT_ORE_COUNT    = builder.defineInRange("nether.basalt.diamond.count"       , 5 , countMin, countMax);
+            DIAMOND_BASALT_ORE_TOP      = builder.defineInRange("nether.basalt.diamond.top"         , 127, worldMin, worldMax);
+            DIAMOND_BASALT_ORE_BOTTOM   = builder.defineInRange("nether.basalt.diamond.bottom"      , 1  , worldMin, worldMax);
 
-            EMERALD_BASALT_ORE_COUNT    = builder.defineInRange("nether.basalt.emerald_count"       , 2  , countMin, countMax);
-            EMERALD_BASALT_ORE_TOP      = builder.defineInRange("nether.basalt.emerald_top"         , 127, worldMin, worldMax);
-            EMERALD_BASALT_ORE_BOTTOM   = builder.defineInRange("nether.basalt.emerald_bottom"      , 1  , worldMin, worldMax);
+            EMERALD_BASALT_ORE_COUNT    = builder.defineInRange("nether.basalt.emerald.count"       , 2  , countMin, countMax);
+            EMERALD_BASALT_ORE_TOP      = builder.defineInRange("nether.basalt.emerald.top"         , 127, worldMin, worldMax);
+            EMERALD_BASALT_ORE_BOTTOM   = builder.defineInRange("nether.basalt.emerald.bottom"      , 1  , worldMin, worldMax);
 
-            GOLD_BASALT_ORE_SIZE        = builder.defineInRange("nether.basalt.gold_size"           , 4  , sizeMin, sizeMax);
-            GOLD_BASALT_ORE_COUNT       = builder.defineInRange("nether.basalt.gold_count"          , 8 , countMin, countMax);
-            GOLD_BASALT_ORE_TOP         = builder.defineInRange("nether.basalt.gold_top"            , 127, worldMin, worldMax);
-            GOLD_BASALT_ORE_BOTTOM      = builder.defineInRange("nether.basalt.gold_bottom"         , 1  , worldMin, worldMax);
+            GOLD_BASALT_ORE_SIZE        = builder.defineInRange("nether.basalt.gold.size"           , 4  , sizeMin, sizeMax);
+            GOLD_BASALT_ORE_COUNT       = builder.defineInRange("nether.basalt.gold.count"          , 8 , countMin, countMax);
+            GOLD_BASALT_ORE_TOP         = builder.defineInRange("nether.basalt.gold.top"            , 127, worldMin, worldMax);
+            GOLD_BASALT_ORE_BOTTOM      = builder.defineInRange("nether.basalt.gold.bottom"         , 1  , worldMin, worldMax);
 
-            IRON_BASALT_ORE_SIZE        = builder.defineInRange("nether.basalt.iron_size"           , 6  , sizeMin, sizeMax);
-            IRON_BASALT_ORE_COUNT       = builder.defineInRange("nether.basalt.iron_count"          , 10 , countMin, countMax);
-            IRON_BASALT_ORE_TOP         = builder.defineInRange("nether.basalt.iron_top"            , 127, worldMin, worldMax);
-            IRON_BASALT_ORE_BOTTOM      = builder.defineInRange("nether.basalt.iron_bottom"         , 1  , worldMin, worldMax);
+            IRON_BASALT_ORE_SIZE        = builder.defineInRange("nether.basalt.iron.size"           , 6  , sizeMin, sizeMax);
+            IRON_BASALT_ORE_COUNT       = builder.defineInRange("nether.basalt.iron.count"          , 10 , countMin, countMax);
+            IRON_BASALT_ORE_TOP         = builder.defineInRange("nether.basalt.iron.top"            , 127, worldMin, worldMax);
+            IRON_BASALT_ORE_BOTTOM      = builder.defineInRange("nether.basalt.iron.bottom"         , 1  , worldMin, worldMax);
 
-            LAPIS_BASALT_ORE_SIZE       = builder.defineInRange("nether.basalt.lapis_size"          , 6  , sizeMin, sizeMax);
-            LAPIS_BASALT_ORE_COUNT      = builder.defineInRange("nether.basalt.lapis_count"         , 5 , countMin, countMax);
-            LAPIS_BASALT_ORE_TOP        = builder.defineInRange("nether.basalt.lapis_top"           , 127, worldMin, worldMax);
-            LAPIS_BASALT_ORE_BOTTOM     = builder.defineInRange("nether.basalt.lapis_bottom"        , 1  , worldMin, worldMax);
+            LAPIS_BASALT_ORE_SIZE       = builder.defineInRange("nether.basalt.lapis.size"          , 6  , sizeMin, sizeMax);
+            LAPIS_BASALT_ORE_COUNT      = builder.defineInRange("nether.basalt.lapis.count"         , 5 , countMin, countMax);
+            LAPIS_BASALT_ORE_TOP        = builder.defineInRange("nether.basalt.lapis.top"           , 127, worldMin, worldMax);
+            LAPIS_BASALT_ORE_BOTTOM     = builder.defineInRange("nether.basalt.lapis.bottom"        , 1  , worldMin, worldMax);
 
-            REDSTONE_BASALT_ORE_SIZE    = builder.defineInRange("nether.basalt.redstone_size"       , 8  , sizeMin, sizeMax);
-            REDSTONE_BASALT_ORE_COUNT   = builder.defineInRange("nether.basalt.redstone_count"      , 8 , countMin, countMax);
-            REDSTONE_BASALT_ORE_TOP     = builder.defineInRange("nether.basalt.redstone_top"        , 127, worldMin, worldMax);
-            REDSTONE_BASALT_ORE_BOTTOM  = builder.defineInRange("nether.basalt.redstone_bottom"     , 1  , worldMin, worldMax);
+            REDSTONE_BASALT_ORE_SIZE    = builder.defineInRange("nether.basalt.redstone.size"       , 8  , sizeMin, sizeMax);
+            REDSTONE_BASALT_ORE_COUNT   = builder.defineInRange("nether.basalt.redstone.count"      , 8 , countMin, countMax);
+            REDSTONE_BASALT_ORE_TOP     = builder.defineInRange("nether.basalt.redstone.top"        , 127, worldMin, worldMax);
+            REDSTONE_BASALT_ORE_BOTTOM  = builder.defineInRange("nether.basalt.redstone.bottom"     , 1  , worldMin, worldMax);
 
             builder.pop();
         }

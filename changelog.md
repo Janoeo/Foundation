@@ -1,3 +1,7 @@
+### 4.4.0.57-experimental
++ Change FrequencyConfig layout (Incompatible with older version !)
++ Reimplement basalt ore generation
+
 ### 4.4.0.56-experimental
 + Add nether ore into FrequencyConfig
 + Reimplement basalt ore localization

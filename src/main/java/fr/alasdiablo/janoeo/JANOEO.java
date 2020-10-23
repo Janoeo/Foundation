@@ -43,6 +43,7 @@ public class JANOEO {
         OresFeatures.initGravel();
         OresFeatures.initOceanGravel();
         OresFeatures.initNetherGravel();
+        OresFeatures.initNetherBasalt();
     }
 
     /**

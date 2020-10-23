@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.world.gen.feature;
 
+import fr.alasdiablo.janoeo.init.BasaltOresBlocks;
 import fr.alasdiablo.janoeo.init.GravelsOresBlocks;
 import fr.alasdiablo.janoeo.init.NetherOresBlocks;
 import fr.alasdiablo.janoeo.init.OverworldOresBlocks;
@@ -22,9 +23,81 @@ public class OresFeatures {
 
     public static final class FillerBlockType {
         public static final RuleTest GRAVEL = new BlockMatchRuleTest(Blocks.GRAVEL);
+        public static final RuleTest BASALT = new BlockMatchRuleTest(Blocks.BASALT);
     }
 
     private static final FrequencyConfig.Config FREQUENCY_CONFIG = FrequencyConfig.CONFIG;
+
+    public static void initNetherBasalt() {
+        createOreGenFeature(
+                BasaltOresBlocks.COAL_BASALT_ORE.getRegistryName(),
+                FillerBlockType.BASALT,
+                BasaltOresBlocks.COAL_BASALT_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.COAL_BASALT_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.COAL_BASALT_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.COAL_BASALT_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.COAL_BASALT_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                BasaltOresBlocks.DIAMOND_BASALT_ORE.getRegistryName(),
+                FillerBlockType.BASALT,
+                BasaltOresBlocks.DIAMOND_BASALT_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DIAMOND_BASALT_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.DIAMOND_BASALT_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DIAMOND_BASALT_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DIAMOND_BASALT_ORE_TOP.get()
+        );
+
+        createBlockGenFeature(
+                BasaltOresBlocks.EMERALD_BASALT_ORE.getRegistryName(),
+                Blocks.BASALT.getDefaultState(),
+                BasaltOresBlocks.EMERALD_BASALT_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.EMERALD_BASALT_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.EMERALD_BASALT_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.EMERALD_BASALT_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                BasaltOresBlocks.GOLD_BASALT_ORE.getRegistryName(),
+                FillerBlockType.BASALT,
+                BasaltOresBlocks.GOLD_BASALT_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.GOLD_BASALT_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.GOLD_BASALT_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.GOLD_BASALT_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.GOLD_BASALT_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                BasaltOresBlocks.IRON_BASALT_ORE.getRegistryName(),
+                FillerBlockType.BASALT,
+                BasaltOresBlocks.IRON_BASALT_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.IRON_BASALT_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.IRON_BASALT_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.IRON_BASALT_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.IRON_BASALT_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                BasaltOresBlocks.LAPIS_BASALT_ORE.getRegistryName(),
+                FillerBlockType.BASALT,
+                BasaltOresBlocks.LAPIS_BASALT_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.LAPIS_BASALT_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.LAPIS_BASALT_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.LAPIS_BASALT_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.LAPIS_BASALT_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                BasaltOresBlocks.REDSTONE_BASALT_ORE.getRegistryName(),
+                FillerBlockType.BASALT,
+                BasaltOresBlocks.REDSTONE_BASALT_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.REDSTONE_BASALT_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.REDSTONE_BASALT_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.REDSTONE_BASALT_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.REDSTONE_BASALT_ORE_TOP.get()
+        );
+    }
 
     public static void initNetherGravel() {
         createOreGenFeature(

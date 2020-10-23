@@ -1,7 +1,6 @@
 package fr.alasdiablo.janoeo.world;
 
 import com.google.common.collect.Lists;
-import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.world.gen.*;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeGenerationSettings;
