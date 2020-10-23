@@ -47,10 +47,8 @@ public class OreGenUtils {
         }
     }
 
-    public static void addFeatureToBiome(Biome biome,@Nullable ConfiguredFeature<?, ?> configuredFeature) {
+    public static void addFeatureToBiome(Biome biome,@Nullable ConfiguredFeature<?, ?> configuredFeature, GenerationStage.Decoration decoration) {
         if (configuredFeature == null) throw new NullPointerException("configuredFeature is null");
-
-        GenerationStage.Decoration decoration = GenerationStage.Decoration.UNDERGROUND_ORES;
 
         List<List<Supplier<ConfiguredFeature<?, ?>>>> biomeFeatures = new ArrayList<>(biome.func_242440_e().func_242498_c());
         while (biomeFeatures.size() <= decoration.ordinal()) {

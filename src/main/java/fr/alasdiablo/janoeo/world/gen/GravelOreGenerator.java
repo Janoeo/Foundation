@@ -7,6 +7,7 @@ import fr.alasdiablo.janoeo.util.Utils;
 import fr.alasdiablo.janoeo.world.OreGenUtils;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.GenerationStage;
 
 public class GravelOreGenerator {
 
@@ -21,19 +22,22 @@ public class GravelOreGenerator {
                 if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName())
+                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName()),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName())
+                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName()),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName())
+                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName()),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
             }
@@ -50,7 +54,8 @@ public class GravelOreGenerator {
                             biome,
                             WorldGenRegistries.field_243653_e.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "nether")
-                            )
+                            ),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
@@ -58,7 +63,8 @@ public class GravelOreGenerator {
                             biome,
                             WorldGenRegistries.field_243653_e.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "nether")
-                            )
+                            ),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
@@ -66,7 +72,8 @@ public class GravelOreGenerator {
                             biome,
                             WorldGenRegistries.field_243653_e.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "nether")
-                            )
+                            ),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
             }
@@ -83,7 +90,8 @@ public class GravelOreGenerator {
                             biome,
                             WorldGenRegistries.field_243653_e.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "ocean")
-                            )
+                            ),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
@@ -91,7 +99,8 @@ public class GravelOreGenerator {
                             biome,
                             WorldGenRegistries.field_243653_e.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "ocean")
-                            )
+                            ),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
@@ -99,7 +108,8 @@ public class GravelOreGenerator {
                             biome,
                             WorldGenRegistries.field_243653_e.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "ocean")
-                            )
+                            ),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
             }
