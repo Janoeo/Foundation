@@ -18,7 +18,8 @@ public class EndRedstoneOre extends RedstoneOreBlock implements IEndOre {
                 .hardnessAndResistance(4f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
-                .func_235838_a_(RedstoneOreUtils.isLit(9))
+                .setRequiresTool()
+                .setLightLevel(RedstoneOreUtils.isLit(9))
         );
         this.setRegistryName(registryName);
     }

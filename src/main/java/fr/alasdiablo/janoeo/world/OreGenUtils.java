@@ -50,7 +50,7 @@ public class OreGenUtils {
     public static void addFeatureToBiome(Biome biome,@Nullable ConfiguredFeature<?, ?> configuredFeature, GenerationStage.Decoration decoration) {
         if (configuredFeature == null) throw new NullPointerException("configuredFeature is null");
 
-        List<List<Supplier<ConfiguredFeature<?, ?>>>> biomeFeatures = new ArrayList<>(biome.func_242440_e().func_242498_c());
+        List<List<Supplier<ConfiguredFeature<?, ?>>>> biomeFeatures = new ArrayList<>(biome.getGenerationSettings().getFeatures());
         while (biomeFeatures.size() <= decoration.ordinal()) {
             biomeFeatures.add(Lists.newArrayList());
         }
@@ -58,6 +58,6 @@ public class OreGenUtils {
         features.add(() -> configuredFeature);
         biomeFeatures.set(decoration.ordinal(), features);
 
-        ObfuscationReflectionHelper.setPrivateValue(BiomeGenerationSettings.class, biome.func_242440_e(), biomeFeatures, "field_242484_f");
+        ObfuscationReflectionHelper.setPrivateValue(BiomeGenerationSettings.class, biome.getGenerationSettings(), biomeFeatures, "field_242484_f");
     }
 }

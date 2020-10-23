@@ -18,7 +18,8 @@ public class NetherRedstoneOre extends RedstoneOreBlock implements INetherOre {
                 .hardnessAndResistance(3f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
-                .func_235838_a_(RedstoneOreUtils.isLit(9))
+                .setRequiresTool()
+                .setLightLevel(RedstoneOreUtils.isLit(9))
         );
         this.setRegistryName(registryName);
     }

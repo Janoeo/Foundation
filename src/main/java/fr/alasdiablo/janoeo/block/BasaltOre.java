@@ -14,9 +14,9 @@ import net.minecraftforge.common.ToolType;
 public class BasaltOre extends RotatedPillarBlock {
     public BasaltOre(String registryName) {
         super(Properties.create(Material.ROCK, MaterialColor.BLACK)
-                .func_235861_h_()
+                .setRequiresTool()
                 .hardnessAndResistance(1.25F, 4.2F)
-                .sound(SoundType.field_235587_I_)
+                .sound(SoundType.BASALT)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
         );

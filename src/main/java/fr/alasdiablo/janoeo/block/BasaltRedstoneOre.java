@@ -22,10 +22,10 @@ public class BasaltRedstoneOre extends RedstoneOreBlock {
                 .sound(SoundType.STONE)
                 .tickRandomly()
                 .hardnessAndResistance(3f)
-                .func_235861_h_()
+                .setRequiresTool()
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
-                .func_235838_a_(RedstoneOreUtils.isLit(9))
+                .setLightLevel(RedstoneOreUtils.isLit(9))
         );
         this.setRegistryName(registryName);
         this.setDefaultState(this.getDefaultState().with(AXIS, Direction.Axis.Y));

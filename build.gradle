@@ -19,7 +19,7 @@ archivesBaseName = 'Janoeo'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
-    mappings channel: 'snapshot', version: '20200514-1.16'
+    mappings channel: 'snapshot', version: '20200916-1.16.2'
     runs {
         client {
             workingDirectory project.file('run')

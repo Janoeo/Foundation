@@ -22,21 +22,21 @@ public class GravelOreGenerator {
                 if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName()),
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName()),
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName()),
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
@@ -52,7 +52,7 @@ public class GravelOreGenerator {
                 if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "nether")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
@@ -61,7 +61,7 @@ public class GravelOreGenerator {
                 if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "nether")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
@@ -70,7 +70,7 @@ public class GravelOreGenerator {
                 if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "nether")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
@@ -88,7 +88,7 @@ public class GravelOreGenerator {
                 if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "ocean")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
@@ -97,7 +97,7 @@ public class GravelOreGenerator {
                 if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "ocean")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
@@ -106,7 +106,7 @@ public class GravelOreGenerator {
                 if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
                     OreGenUtils.addFeatureToBiome(
                             biome,
-                            WorldGenRegistries.field_243653_e.getOrDefault(
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
                                     Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "ocean")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES

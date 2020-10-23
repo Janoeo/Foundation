@@ -127,156 +127,150 @@ public class OresFeatures {
                 NetherOresBlocks.COAL_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.COAL_NETHER_ORE.getDefaultState(),
-                12,
-                68,
-                1,
-                127
+                FREQUENCY_CONFIG.COAL_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.COAL_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.COAL_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.COAL_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.DIAMOND_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.DIAMOND_NETHER_ORE.getDefaultState(),
-                4,
-                20,
-                1,
-                127
+                FREQUENCY_CONFIG.DIAMOND_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.DIAMOND_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DIAMOND_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DIAMOND_NETHER_ORE_TOP.get()
         );
 
         createBlockGenFeature(
                 NetherOresBlocks.EMERALD_NETHER_ORE.getRegistryName(),
                 Blocks.NETHERRACK.getDefaultState(),
                 NetherOresBlocks.EMERALD_NETHER_ORE.getDefaultState(),
-                8,
-                1,
-                127
+                FREQUENCY_CONFIG.EMERALD_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.EMERALD_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.EMERALD_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.GOLD_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.GOLD_NETHER_ORE.getDefaultState(),
-                4,
-                32,
-                1,
-                127
+                FREQUENCY_CONFIG.GOLD_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.GOLD_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.GOLD_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.GOLD_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.IRON_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.IRON_NETHER_ORE.getDefaultState(),
-                6,
-                40,
-                1,
-                127
+                FREQUENCY_CONFIG.IRON_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.IRON_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.IRON_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.IRON_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.LAPIS_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.LAPIS_NETHER_ORE.getDefaultState(),
-                6,
-                20,
-                1,
-                127
+                FREQUENCY_CONFIG.LAPIS_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.LAPIS_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.LAPIS_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.LAPIS_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.REDSTONE_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.REDSTONE_NETHER_ORE.getDefaultState(),
-                8,
-                32,
-                1,
-                127
+                FREQUENCY_CONFIG.REDSTONE_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.REDSTONE_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.REDSTONE_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.REDSTONE_NETHER_ORE_TOP.get()
         );
-
-
 
         createOreGenFeature(
                 NetherOresBlocks.ALUMINIUM_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.ALUMINIUM_NETHER_ORE.getDefaultState(),
-                6,
-                32,
-                1,
-                127
+                FREQUENCY_CONFIG.ALUMINIUM_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.ALUMINIUM_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.ALUMINIUM_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.ALUMINIUM_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.LEAD_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.LEAD_NETHER_ORE.getDefaultState(),
-                6,
-                40,
-                1,
-                127
+                FREQUENCY_CONFIG.LEAD_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.LEAD_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.LEAD_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.LEAD_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.TIN_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.TIN_NETHER_ORE.getDefaultState(),
-                6,
-                32,
-                1,
-                127
+                FREQUENCY_CONFIG.TIN_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.TIN_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.TIN_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.TIN_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.COPPER_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.COPPER_NETHER_ORE.getDefaultState(),
-                6,
-                40,
-                1,
-                127
+                FREQUENCY_CONFIG.COPPER_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.COPPER_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.COPPER_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.COPPER_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.RUBY_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.RUBY_NETHER_ORE.getDefaultState(),
-                4,
-                20,
-                1,
-                127
+                FREQUENCY_CONFIG.RUBY_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.RUBY_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.RUBY_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.RUBY_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.SAPPHIRE_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.SAPPHIRE_NETHER_ORE.getDefaultState(),
-                4,
-                20,
-                1,
-                127
+                FREQUENCY_CONFIG.SAPPHIRE_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.SAPPHIRE_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.SAPPHIRE_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.SAPPHIRE_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.SILVER_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.SILVER_NETHER_ORE.getDefaultState(),
-                4,
-                32,
-                1,
-                127
+                FREQUENCY_CONFIG.SILVER_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.SILVER_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.SILVER_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.SILVER_NETHER_ORE_TOP.get()
         );
 
         createOreGenFeature(
                 NetherOresBlocks.URANIUM_NETHER_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.field_241883_b,
                 NetherOresBlocks.URANIUM_NETHER_ORE.getDefaultState(),
-                4,
-                32,
-                1,
-                127
+                FREQUENCY_CONFIG.URANIUM_NETHER_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.URANIUM_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.URANIUM_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.URANIUM_NETHER_ORE_TOP.get()
         );
-
-
-
-
     }
 
     public static void initOverworld() {
@@ -383,7 +377,7 @@ public class OresFeatures {
 
     private static void createOreGenFeature(ResourceLocation name, RuleTest blockType, BlockState oreBlock, int size, int count, int bottom, int top) {
         Registry.register(
-                WorldGenRegistries.field_243653_e,
+                WorldGenRegistries.CONFIGURED_FEATURE,
                 name,
                 Feature.ORE.withConfiguration(
                         new OreFeatureConfig(
@@ -404,7 +398,7 @@ public class OresFeatures {
 
     private static void createBlockGenFeature(ResourceLocation name, BlockState replacementBlock, BlockState oreBlock, int count, int bottom, int top) {
         Registry.register(
-                WorldGenRegistries.field_243653_e,
+                WorldGenRegistries.CONFIGURED_FEATURE,
                 name,
                 Feature.EMERALD_ORE.withConfiguration(
                         new ReplaceBlockConfig(
