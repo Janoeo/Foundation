@@ -1,3 +1,8 @@
+### 4.4.0.56-experimental
++ Add nether ore into FrequencyConfig
++ Reimplement basalt ore localization
++ Fix issues [#7](https://github.com/AlasDiablo/JANOEO/issues/7)
+
 ### 4.4.0.55-experimental
 + Reimplement gravel ore gen (with new option)
 + Reimplement basalt ore texture
