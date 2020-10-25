@@ -1,3 +1,6 @@
+### 4.4.0.58-experimental
++ Reimplement end ore generation
+
 ### 4.4.0.57-experimental
 + Change FrequencyConfig layout (Incompatible with older version !)
 + Reimplement basalt ore generation

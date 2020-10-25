@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.block.BasicOre;
+import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
@@ -14,25 +15,25 @@ import net.minecraftforge.fml.common.Mod;
 public class OverworldOresBlocks {
 
     public static Block COPPER_ORE
-            = new BasicOre(Registries.COPPER_ORE, 1);
+            = new BasicOre(Registries.COPPER_ORE, 1, NULL);
     public static Block TIN_ORE
-            = new BasicOre(Registries.TIN_ORE, 1);
+            = new BasicOre(Registries.TIN_ORE, 1, NULL);
     public static Block ALUMINIUM_ORE
-            = new BasicOre(Registries.ALUMINIUM_ORE, 1);
+            = new BasicOre(Registries.ALUMINIUM_ORE, 1, NULL);
     public static Block URANIUM_ORE
-            = new BasicOre(Registries.URANIUM_ORE, 2);
+            = new BasicOre(Registries.URANIUM_ORE, 2, NULL);
     public static Block SILVER_ORE
-            = new BasicOre(Registries.SILVER_ORE, 2);
+            = new BasicOre(Registries.SILVER_ORE, 2, NULL);
     public static Block LEAD_ORE
-            = new BasicOre(Registries.LEAD_ORE, 1);
+            = new BasicOre(Registries.LEAD_ORE, 1, NULL);
     public static Block RUBY_ORE
-            = new BasicOre(Registries.RUBY_ORE, 2);
+            = new BasicOre(Registries.RUBY_ORE, 2, RARE);
     public static Block SAPPHIRE_ORE
-            = new BasicOre(Registries.SAPPHIRE_ORE, 2);
+            = new BasicOre(Registries.SAPPHIRE_ORE, 2, RARE);
     public static Block AMETHYST_ORE
-            = new BasicOre(Registries.AMETHYST_ORE, 2);
+            = new BasicOre(Registries.AMETHYST_ORE, 2, RARE);
     public static Block ZINC_ORE
-            = new BasicOre(Registries.ZINC_ORE, 1);
+            = new BasicOre(Registries.ZINC_ORE, 1, NULL);
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {

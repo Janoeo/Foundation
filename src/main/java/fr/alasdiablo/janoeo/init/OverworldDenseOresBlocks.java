@@ -2,6 +2,7 @@ package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.block.BasicOre;
 import fr.alasdiablo.janoeo.block.RedstoneOre;
+import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
@@ -15,23 +16,23 @@ import net.minecraftforge.fml.common.Mod;
 public class OverworldDenseOresBlocks {
 
     public static Block DENSE_COAL_ORE
-            = new BasicOre(Registries.DENSE_COAL_ORE, 1);
+            = new BasicOre(Registries.DENSE_COAL_ORE, 1, COMMON);
     public static Block DENSE_COPPER_ORE
-            = new BasicOre(Registries.DENSE_COPPER_ORE, 1);
+            = new BasicOre(Registries.DENSE_COPPER_ORE, 1, COMMON);
     public static Block DENSE_DIAMOND_ORE
-            = new BasicOre(Registries.DENSE_DIAMOND_ORE, 2);
+            = new BasicOre(Registries.DENSE_DIAMOND_ORE, 2, RARE);
     public static Block DENSE_EMERALD_ORE
-            = new BasicOre(Registries.DENSE_EMERALD_ORE, 2);
+            = new BasicOre(Registries.DENSE_EMERALD_ORE, 2, RARE);
     public static Block DENSE_GOLD_ORE
-            = new BasicOre(Registries.DENSE_GOLD_ORE, 2);
+            = new BasicOre(Registries.DENSE_GOLD_ORE, 2, UNCOMMON);
     public static Block DENSE_IRON_ORE
-            = new BasicOre(Registries.DENSE_IRON_ORE, 1);
+            = new BasicOre(Registries.DENSE_IRON_ORE, 1, COMMON);
     public static Block DENSE_LAPIS_ORE
-            = new BasicOre(Registries.DENSE_LAPIS_ORE, 2);
+            = new BasicOre(Registries.DENSE_LAPIS_ORE, 2, UNCOMMON);
     public static Block DENSE_REDSTONE_ORE
             = new RedstoneOre(Registries.DENSE_REDSTONE_ORE);
     public static Block DENSE_TIN_ORE
-            = new BasicOre(Registries.DENSE_TIN_ORE, 1);
+            = new BasicOre(Registries.DENSE_TIN_ORE, 1, COMMON);
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {

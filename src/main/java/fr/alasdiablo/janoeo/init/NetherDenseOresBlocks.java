@@ -2,6 +2,7 @@ package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.block.NetherOre;
 import fr.alasdiablo.janoeo.block.NetherRedstoneOre;
+import fr.alasdiablo.janoeo.block.util.ExperienceRarity;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import net.minecraft.block.Block;
@@ -36,13 +37,13 @@ public class NetherDenseOresBlocks {
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            event.getRegistry().register(new NetherOre(Registries.DENSE_QUARTZ_NETHER_ORE));
-            event.getRegistry().register(new NetherOre(Registries.DENSE_COAL_NETHER_ORE));
-            event.getRegistry().register(new NetherOre(Registries.DENSE_DIAMOND_NETHER_ORE));
-            event.getRegistry().register(new NetherOre(Registries.DENSE_EMERALD_NETHER_ORE));
-            event.getRegistry().register(new NetherOre(Registries.DENSE_GOLD_NETHER_ORE));
-            event.getRegistry().register(new NetherOre(Registries.DENSE_IRON_NETHER_ORE));
-            event.getRegistry().register(new NetherOre(Registries.DENSE_LAPIS_NETHER_ORE));
+            event.getRegistry().register(new NetherOre(Registries.DENSE_QUARTZ_NETHER_ORE, ExperienceRarity.NULL));
+            event.getRegistry().register(new NetherOre(Registries.DENSE_COAL_NETHER_ORE, ExperienceRarity.NULL));
+            event.getRegistry().register(new NetherOre(Registries.DENSE_DIAMOND_NETHER_ORE, ExperienceRarity.NULL));
+            event.getRegistry().register(new NetherOre(Registries.DENSE_EMERALD_NETHER_ORE, ExperienceRarity.NULL));
+            event.getRegistry().register(new NetherOre(Registries.DENSE_GOLD_NETHER_ORE, ExperienceRarity.NULL));
+            event.getRegistry().register(new NetherOre(Registries.DENSE_IRON_NETHER_ORE, ExperienceRarity.NULL));
+            event.getRegistry().register(new NetherOre(Registries.DENSE_LAPIS_NETHER_ORE, ExperienceRarity.NULL));
             event.getRegistry().register(new NetherRedstoneOre(Registries.DENSE_REDSTONE_NETHER_ORE));
         }
 

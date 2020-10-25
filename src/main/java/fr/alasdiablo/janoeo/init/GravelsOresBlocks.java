@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.block.GravelOre;
+import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
@@ -14,11 +15,11 @@ import net.minecraftforge.fml.common.Mod;
 public class GravelsOresBlocks {
 
     public static Block DIAMOND_GRAVEL_ORE
-            = new GravelOre(Registries.DIAMOND_GRAVEL_ORE);
+            = new GravelOre(Registries.DIAMOND_GRAVEL_ORE, RARE);
     public static Block IRON_GRAVEL_ORE
-            = new GravelOre(Registries.IRON_GRAVEL_ORE);
+            = new GravelOre(Registries.IRON_GRAVEL_ORE, COMMON);
     public static Block GOLD_GRAVEL_ORE
-            = new GravelOre(Registries.GOLD_GRAVEL_ORE);
+            = new GravelOre(Registries.GOLD_GRAVEL_ORE, UNCOMMON);
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {

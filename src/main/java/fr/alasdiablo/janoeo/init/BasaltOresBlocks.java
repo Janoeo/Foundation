@@ -2,6 +2,7 @@ package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.block.BasaltOre;
 import fr.alasdiablo.janoeo.block.BasaltRedstoneOre;
+import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
@@ -15,17 +16,17 @@ import net.minecraftforge.fml.common.Mod;
 public class BasaltOresBlocks {
 
     public static Block COAL_BASALT_ORE
-            = new BasaltOre(Registries.COAL_BASALT_ORE);
+            = new BasaltOre(Registries.COAL_BASALT_ORE, COMMON);
     public static Block DIAMOND_BASALT_ORE
-            = new BasaltOre(Registries.DIAMOND_BASALT_ORE);
+            = new BasaltOre(Registries.DIAMOND_BASALT_ORE, RARE);
     public static Block EMERALD_BASALT_ORE
-            = new BasaltOre(Registries.EMERALD_BASALT_ORE);
+            = new BasaltOre(Registries.EMERALD_BASALT_ORE, RARE);
     public static Block GOLD_BASALT_ORE
-            = new BasaltOre(Registries.GOLD_BASALT_ORE);
+            = new BasaltOre(Registries.GOLD_BASALT_ORE, NULL);
     public static Block IRON_BASALT_ORE
-            = new BasaltOre(Registries.IRON_BASALT_ORE);
+            = new BasaltOre(Registries.IRON_BASALT_ORE, NULL);
     public static Block LAPIS_BASALT_ORE
-            = new BasaltOre(Registries.LAPIS_BASALT_ORE);
+            = new BasaltOre(Registries.LAPIS_BASALT_ORE, UNCOMMON);
     public static Block REDSTONE_BASALT_ORE
             = new BasaltRedstoneOre(Registries.REDSTONE_BASALT_ORE);
 

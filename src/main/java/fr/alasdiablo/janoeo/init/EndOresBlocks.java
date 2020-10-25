@@ -2,6 +2,7 @@ package fr.alasdiablo.janoeo.init;
 
 import fr.alasdiablo.janoeo.block.EndOre;
 import fr.alasdiablo.janoeo.block.EndRedstoneOre;
+import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
@@ -16,17 +17,17 @@ import net.minecraftforge.fml.common.Mod;
 public class EndOresBlocks {
 
     public static Block COAL_END_ORE
-            = new EndOre(Registries.COAL_END_ORE);
+            = new EndOre(Registries.COAL_END_ORE, COMMON);
     public static Block DIAMOND_END_ORE
-            = new EndOre(Registries.DIAMOND_END_ORE);
+            = new EndOre(Registries.DIAMOND_END_ORE, RARE);
     public static Block EMERALD_END_ORE
-            = new EndOre(Registries.EMERALD_END_ORE);
+            = new EndOre(Registries.EMERALD_END_ORE, RARE);
     public static Block GOLD_END_ORE
-            = new EndOre(Registries.GOLD_END_ORE);
+            = new EndOre(Registries.GOLD_END_ORE, NULL);
     public static Block IRON_END_ORE
-            = new EndOre(Registries.IRON_END_ORE);
+            = new EndOre(Registries.IRON_END_ORE, NULL);
     public static Block LAPIS_END_ORE
-            = new EndOre(Registries.LAPIS_END_ORE);
+            = new EndOre(Registries.LAPIS_END_ORE, UNCOMMON);
     public static Block REDSTONE_END_ORE
             = new EndRedstoneOre(Registries.REDSTONE_END_ORE);
 

@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.janoeo.block.util.ExperienceDrop;
+import fr.alasdiablo.janoeo.block.util.ExperienceRarity;
+import fr.alasdiablo.janoeo.block.util.IDropExperience;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
@@ -12,9 +13,11 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class GravelOre extends FallingBlock {
+public class GravelOre extends FallingBlock implements IDropExperience {
 
-    public GravelOre(String registryName) {
+    private final ExperienceRarity experienceRarity;
+
+    public GravelOre(String registryName, ExperienceRarity experienceRarity) {
         super(Properties.create(Material.EARTH)
                 .sound(SoundType.GROUND)
                 .hardnessAndResistance(0.6f)
@@ -22,6 +25,7 @@ public class GravelOre extends FallingBlock {
                 .harvestTool(ToolType.SHOVEL)
         );
         this.setRegistryName(registryName);
+        this.experienceRarity = experienceRarity;
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -31,12 +35,17 @@ public class GravelOre extends FallingBlock {
     }
 
     protected int getExperience(Random random) {
-        int experience = ExperienceDrop.getExperience(random, this);
+        int experience = this.getExperience(random, this);
         return experience != -1 ? experience : 0;
     }
 
     @Override
     public int getExpDrop(BlockState state, IWorldReader world, BlockPos pos, int fortune, int silktouch) {
         return silktouch == 0 ? this.getExperience(RANDOM) : 0;
+    }
+
+    @Override
+    public ExperienceRarity getExperienceRarity() {
+        return this.experienceRarity;
     }
 }
