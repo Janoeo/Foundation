@@ -24,7 +24,7 @@ public class OreGenUtils {
     private static final IWorldGenerator NETHER_GRAVEL_GENERATOR = new GravelOreGenerator.Nether();
     private static final IWorldGenerator BASALT_GENERATOR = new BasaltOreGenerator();
 
-    public static void setupOres() {
+    public static void initOreGen() {
         for (Biome biome : ForgeRegistries.BIOMES) {
             switch (biome.getCategory()) {
                 case NETHER:

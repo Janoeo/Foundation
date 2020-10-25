@@ -2,7 +2,7 @@ package fr.alasdiablo.janoeo;
 
 import fr.alasdiablo.janoeo.config.*;
 import fr.alasdiablo.janoeo.util.Registries;
-import fr.alasdiablo.janoeo.util.*;
+import fr.alasdiablo.janoeo.world.OreGenUtils;
 import fr.alasdiablo.janoeo.world.gen.feature.OresFeatures;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -15,17 +15,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
  * Main class of the mods
  */
 @Mod(Registries.MODID)
-public class JANOEO {
-
-    /**
-     * Mod setup
-     */
-    public static ModSetup setup = new ModSetup();
+public class Janoeo {
 
     /**
      * Mod constructor
      */
-    public JANOEO() {
+    public Janoeo() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GlobalConfig.CONFIG_SPEC, "janoeo.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, NetherConfig.CONFIG_SPEC, "janoeo-nether.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, OverworldConfig.CONFIG_SPEC, "janoeo-overworld.toml");
@@ -44,6 +39,7 @@ public class JANOEO {
         OresFeatures.initOceanGravel();
         OresFeatures.initNetherGravel();
         OresFeatures.initNetherBasalt();
+        OresFeatures.initTheEnd();
     }
 
     /**
@@ -51,6 +47,6 @@ public class JANOEO {
      * @param e
      */
     private void setup(final FMLCommonSetupEvent e) {
-        setup.init();
+        OreGenUtils.initOreGen();
     }
 }

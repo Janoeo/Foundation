@@ -1,9 +1,6 @@
 package fr.alasdiablo.janoeo.world.gen.feature;
 
-import fr.alasdiablo.janoeo.init.BasaltOresBlocks;
-import fr.alasdiablo.janoeo.init.GravelsOresBlocks;
-import fr.alasdiablo.janoeo.init.NetherOresBlocks;
-import fr.alasdiablo.janoeo.init.OverworldOresBlocks;
+import fr.alasdiablo.janoeo.init.*;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
 import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.BlockState;
@@ -24,9 +21,81 @@ public class OresFeatures {
     public static final class FillerBlockType {
         public static final RuleTest GRAVEL = new BlockMatchRuleTest(Blocks.GRAVEL);
         public static final RuleTest BASALT = new BlockMatchRuleTest(Blocks.BASALT);
+        public static final RuleTest END_STONE = new BlockMatchRuleTest(Blocks.END_STONE);
     }
 
     private static final FrequencyConfig.Config FREQUENCY_CONFIG = FrequencyConfig.CONFIG;
+
+    public static void initTheEnd() {
+        createOreGenFeature(
+                EndOresBlocks.COAL_END_ORE.getRegistryName(),
+                FillerBlockType.END_STONE,
+                EndOresBlocks.COAL_END_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.COAL_THEEND_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.COAL_THEEND_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.COAL_THEEND_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.COAL_THEEND_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                EndOresBlocks.DIAMOND_END_ORE.getRegistryName(),
+                FillerBlockType.END_STONE,
+                EndOresBlocks.DIAMOND_END_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DIAMOND_THEEND_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.DIAMOND_THEEND_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DIAMOND_THEEND_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DIAMOND_THEEND_ORE_TOP.get()
+        );
+
+        createBlockGenFeature(
+                EndOresBlocks.EMERALD_END_ORE.getRegistryName(),
+                Blocks.END_STONE.getDefaultState(),
+                EndOresBlocks.EMERALD_END_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.EMERALD_THEEND_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.EMERALD_THEEND_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.EMERALD_THEEND_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                EndOresBlocks.GOLD_END_ORE.getRegistryName(),
+                FillerBlockType.END_STONE,
+                EndOresBlocks.GOLD_END_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.GOLD_THEEND_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.GOLD_THEEND_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.GOLD_THEEND_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.GOLD_THEEND_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                EndOresBlocks.IRON_END_ORE.getRegistryName(),
+                FillerBlockType.END_STONE,
+                EndOresBlocks.IRON_END_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.IRON_THEEND_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.IRON_THEEND_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.IRON_THEEND_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.IRON_THEEND_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                EndOresBlocks.LAPIS_END_ORE.getRegistryName(),
+                FillerBlockType.END_STONE,
+                EndOresBlocks.LAPIS_END_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.LAPIS_THEEND_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.LAPIS_THEEND_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.LAPIS_THEEND_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.LAPIS_THEEND_ORE_TOP.get()
+        );
+
+        createOreGenFeature(
+                EndOresBlocks.REDSTONE_END_ORE.getRegistryName(),
+                FillerBlockType.END_STONE,
+                EndOresBlocks.REDSTONE_END_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.REDSTONE_THEEND_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.REDSTONE_THEEND_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.REDSTONE_THEEND_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.REDSTONE_THEEND_ORE_TOP.get()
+        );
+    }
 
     public static void initNetherBasalt() {
         createOreGenFeature(

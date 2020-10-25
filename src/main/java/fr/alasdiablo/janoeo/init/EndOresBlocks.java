@@ -1,61 +1,54 @@
 package fr.alasdiablo.janoeo.init;
 
-import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.block.EndOre;
 import fr.alasdiablo.janoeo.block.EndRedstoneOre;
+import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
+import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ObjectHolder;
 
 
 @SuppressWarnings("unused")
 public class EndOresBlocks {
 
-    // TODO: Rework the instantiation system
-
-    @ObjectHolder(Registries.MODID + ":" + Registries.COAL_END_ORE)
-    public static Block COAL_END_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.DIAMOND_END_ORE)
-    public static Block DIAMOND_END_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.EMERALD_END_ORE)
-    public static Block EMERALD_END_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.GOLD_END_ORE)
-    public static Block GOLD_END_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.IRON_END_ORE)
-    public static Block IRON_END_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.LAPIS_END_ORE)
-    public static Block LAPIS_END_ORE;
-    @ObjectHolder(Registries.MODID + ":" + Registries.REDSTONE_END_ORE)
-    public static Block REDSTONE_END_ORE;
+    public static Block COAL_END_ORE
+            = new EndOre(Registries.COAL_END_ORE);
+    public static Block DIAMOND_END_ORE
+            = new EndOre(Registries.DIAMOND_END_ORE);
+    public static Block EMERALD_END_ORE
+            = new EndOre(Registries.EMERALD_END_ORE);
+    public static Block GOLD_END_ORE
+            = new EndOre(Registries.GOLD_END_ORE);
+    public static Block IRON_END_ORE
+            = new EndOre(Registries.IRON_END_ORE);
+    public static Block LAPIS_END_ORE
+            = new EndOre(Registries.LAPIS_END_ORE);
+    public static Block REDSTONE_END_ORE
+            = new EndRedstoneOre(Registries.REDSTONE_END_ORE);
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            event.getRegistry().register(new EndOre(Registries.COAL_END_ORE));
-            event.getRegistry().register(new EndOre(Registries.DIAMOND_END_ORE));
-            event.getRegistry().register(new EndOre(Registries.EMERALD_END_ORE));
-            event.getRegistry().register(new EndOre(Registries.GOLD_END_ORE));
-            event.getRegistry().register(new EndOre(Registries.IRON_END_ORE));
-            event.getRegistry().register(new EndOre(Registries.LAPIS_END_ORE));
-            event.getRegistry().register(new EndRedstoneOre(Registries.REDSTONE_END_ORE));
+            Utils.registerBlock(event.getRegistry(),
+                    COAL_END_ORE, DIAMOND_END_ORE, EMERALD_END_ORE,
+                    GOLD_END_ORE, IRON_END_ORE, LAPIS_END_ORE,
+                    REDSTONE_END_ORE
+            );
         }
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoOreGroup);
-            event.getRegistry().register(new BlockItem(EndOresBlocks.COAL_END_ORE, properties).setRegistryName(Registries.COAL_END_ORE));
-            event.getRegistry().register(new BlockItem(EndOresBlocks.DIAMOND_END_ORE, properties).setRegistryName(Registries.DIAMOND_END_ORE));
-            event.getRegistry().register(new BlockItem(EndOresBlocks.EMERALD_END_ORE, properties).setRegistryName(Registries.EMERALD_END_ORE));
-            event.getRegistry().register(new BlockItem(EndOresBlocks.GOLD_END_ORE, properties).setRegistryName(Registries.GOLD_END_ORE));
-            event.getRegistry().register(new BlockItem(EndOresBlocks.IRON_END_ORE, properties).setRegistryName(Registries.IRON_END_ORE));
-            event.getRegistry().register(new BlockItem(EndOresBlocks.LAPIS_END_ORE, properties).setRegistryName(Registries.LAPIS_END_ORE));
-            event.getRegistry().register(new BlockItem(EndOresBlocks.REDSTONE_END_ORE, properties).setRegistryName(Registries.REDSTONE_END_ORE));
+            Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
+            Utils.registerBlockItem(event.getRegistry(), properties,
+                    COAL_END_ORE, DIAMOND_END_ORE, EMERALD_END_ORE,
+                    GOLD_END_ORE, IRON_END_ORE, LAPIS_END_ORE,
+                    REDSTONE_END_ORE
+            );
         }
     }
 }

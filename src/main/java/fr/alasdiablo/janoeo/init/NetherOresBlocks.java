@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.init;
 
-import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.block.NetherOre;
 import fr.alasdiablo.janoeo.block.NetherRedstoneOre;
+import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
@@ -60,7 +60,7 @@ public class NetherOresBlocks {
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoOreGroup);
+            Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
             Utils.registerBlockItem(event.getRegistry(), properties,
                     ALUMINIUM_NETHER_ORE, COAL_NETHER_ORE, COPPER_NETHER_ORE,
                     DIAMOND_NETHER_ORE, EMERALD_NETHER_ORE, GOLD_NETHER_ORE,

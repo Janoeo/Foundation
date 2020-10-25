@@ -119,6 +119,20 @@ public class FrequencyConfig {
 
         public final IntValue URANIUM_NETHER_ORE_SIZE, URANIUM_NETHER_ORE_COUNT, URANIUM_NETHER_ORE_BOTTOM, URANIUM_NETHER_ORE_TOP;
 
+        public final IntValue COAL_THEEND_ORE_SIZE, COAL_THEEND_ORE_COUNT, COAL_THEEND_ORE_BOTTOM, COAL_THEEND_ORE_TOP;
+
+        public final IntValue DIAMOND_THEEND_ORE_SIZE, DIAMOND_THEEND_ORE_COUNT, DIAMOND_THEEND_ORE_BOTTOM, DIAMOND_THEEND_ORE_TOP;
+
+        public final IntValue EMERALD_THEEND_ORE_COUNT, EMERALD_THEEND_ORE_BOTTOM, EMERALD_THEEND_ORE_TOP;
+
+        public final IntValue GOLD_THEEND_ORE_SIZE, GOLD_THEEND_ORE_COUNT, GOLD_THEEND_ORE_BOTTOM, GOLD_THEEND_ORE_TOP;
+
+        public final IntValue IRON_THEEND_ORE_SIZE, IRON_THEEND_ORE_COUNT, IRON_THEEND_ORE_BOTTOM, IRON_THEEND_ORE_TOP;
+
+        public final IntValue LAPIS_THEEND_ORE_SIZE, LAPIS_THEEND_ORE_COUNT, LAPIS_THEEND_ORE_BOTTOM, LAPIS_THEEND_ORE_TOP;
+
+        public final IntValue REDSTONE_THEEND_ORE_SIZE, REDSTONE_THEEND_ORE_COUNT, REDSTONE_THEEND_ORE_BOTTOM, REDSTONE_THEEND_ORE_TOP;
+
 
         public Config(ForgeConfigSpec.Builder builder) {
             builder.comment("Ore frequency and height config for janoeo").push("janoeo");
@@ -377,6 +391,42 @@ public class FrequencyConfig {
             REDSTONE_BASALT_ORE_COUNT   = builder.defineInRange("nether.basalt.redstone.count"      , 8 , countMin, countMax);
             REDSTONE_BASALT_ORE_TOP     = builder.defineInRange("nether.basalt.redstone.top"        , 127, worldMin, worldMax);
             REDSTONE_BASALT_ORE_BOTTOM  = builder.defineInRange("nether.basalt.redstone.bottom"     , 1  , worldMin, worldMax);
+
+            // --------------------------------------------- the end ---------------------------------------------
+
+            COAL_THEEND_ORE_SIZE       = builder.defineInRange("theend.coal.size"             , 12 , sizeMin, sizeMax);
+            COAL_THEEND_ORE_COUNT      = builder.defineInRange("theend.coal.count"            , 34, countMin, countMax);
+            COAL_THEEND_ORE_TOP        = builder.defineInRange("theend.coal.top"              , 70, worldMin, worldMax);
+            COAL_THEEND_ORE_BOTTOM     = builder.defineInRange("theend.coal.bottom"           , 20, worldMin, worldMax);
+
+            DIAMOND_THEEND_ORE_SIZE       = builder.defineInRange("theend.diamond.size"             , 4 , sizeMin, sizeMax);
+            DIAMOND_THEEND_ORE_COUNT      = builder.defineInRange("theend.diamond.count"            , 10, countMin, countMax);
+            DIAMOND_THEEND_ORE_TOP        = builder.defineInRange("theend.diamond.top"              , 70, worldMin, worldMax);
+            DIAMOND_THEEND_ORE_BOTTOM     = builder.defineInRange("theend.diamond.bottom"           , 20, worldMin, worldMax);
+
+            EMERALD_THEEND_ORE_COUNT      = builder.defineInRange("theend.emerald.count"            , 4, countMin, countMax);
+            EMERALD_THEEND_ORE_TOP        = builder.defineInRange("theend.emerald.top"              , 70, worldMin, worldMax);
+            EMERALD_THEEND_ORE_BOTTOM     = builder.defineInRange("theend.emerald.bottom"           , 20, worldMin, worldMax);
+
+            GOLD_THEEND_ORE_SIZE       = builder.defineInRange("theend.gold.size"             , 6 , sizeMin, sizeMax);
+            GOLD_THEEND_ORE_COUNT      = builder.defineInRange("theend.gold.count"            , 16, countMin, countMax);
+            GOLD_THEEND_ORE_TOP        = builder.defineInRange("theend.gold.top"              , 70, worldMin, worldMax);
+            GOLD_THEEND_ORE_BOTTOM     = builder.defineInRange("theend.gold.bottom"           , 20, worldMin, worldMax);
+
+            IRON_THEEND_ORE_SIZE       = builder.defineInRange("theend.iron.size"             , 8 , sizeMin, sizeMax);
+            IRON_THEEND_ORE_COUNT      = builder.defineInRange("theend.iron.count"            , 20, countMin, countMax);
+            IRON_THEEND_ORE_TOP        = builder.defineInRange("theend.iron.top"              , 70, worldMin, worldMax);
+            IRON_THEEND_ORE_BOTTOM     = builder.defineInRange("theend.iron.bottom"           , 20, worldMin, worldMax);
+
+            LAPIS_THEEND_ORE_SIZE       = builder.defineInRange("theend.lapis.size"             , 6 , sizeMin, sizeMax);
+            LAPIS_THEEND_ORE_COUNT      = builder.defineInRange("theend.lapis.count"            , 10, countMin, countMax);
+            LAPIS_THEEND_ORE_TOP        = builder.defineInRange("theend.lapis.top"              , 70, worldMin, worldMax);
+            LAPIS_THEEND_ORE_BOTTOM     = builder.defineInRange("theend.lapis.bottom"           , 20, worldMin, worldMax);
+
+            REDSTONE_THEEND_ORE_SIZE       = builder.defineInRange("theend.redstone.size"             , 6 , sizeMin, sizeMax);
+            REDSTONE_THEEND_ORE_COUNT      = builder.defineInRange("theend.redstone.count"            , 16, countMin, countMax);
+            REDSTONE_THEEND_ORE_TOP        = builder.defineInRange("theend.redstone.top"              , 70, worldMin, worldMax);
+            REDSTONE_THEEND_ORE_BOTTOM     = builder.defineInRange("theend.redstone.bottom"           , 20, worldMin, worldMax);
 
             builder.pop();
         }

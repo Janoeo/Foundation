@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.init;
 
-import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.block.NetherOre;
 import fr.alasdiablo.janoeo.block.NetherRedstoneOre;
+import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -14,8 +14,6 @@ import net.minecraftforge.registries.ObjectHolder;
 
 @SuppressWarnings("unused")
 public class NetherDenseOresBlocks {
-
-    // TODO: Rework the instantiation system
 
     @ObjectHolder(Registries.MODID + ":" + Registries.DENSE_QUARTZ_NETHER_ORE)
     public static Block DENSE_QUARTZ_NETHER_ORE;
@@ -50,7 +48,7 @@ public class NetherDenseOresBlocks {
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoOreGroup);
+            Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
             event.getRegistry().register(new BlockItem(NetherDenseOresBlocks.DENSE_QUARTZ_NETHER_ORE, properties).setRegistryName(Registries.DENSE_QUARTZ_NETHER_ORE));
             event.getRegistry().register(new BlockItem(NetherDenseOresBlocks.DENSE_COAL_NETHER_ORE, properties).setRegistryName(Registries.DENSE_COAL_NETHER_ORE));
             event.getRegistry().register(new BlockItem(NetherDenseOresBlocks.DENSE_DIAMOND_NETHER_ORE, properties).setRegistryName(Registries.DENSE_DIAMOND_NETHER_ORE));

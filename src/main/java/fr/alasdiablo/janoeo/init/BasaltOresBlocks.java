@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.init;
 
-import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.block.BasaltOre;
 import fr.alasdiablo.janoeo.block.BasaltRedstoneOre;
+import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
@@ -13,7 +13,6 @@ import net.minecraftforge.fml.common.Mod;
 
 @SuppressWarnings("unused")
 public class BasaltOresBlocks {
-
 
     public static Block COAL_BASALT_ORE
             = new BasaltOre(Registries.COAL_BASALT_ORE);
@@ -43,7 +42,7 @@ public class BasaltOresBlocks {
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoOreGroup);
+            Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
             Utils.registerBlockItem(event.getRegistry(), properties,
                     COAL_BASALT_ORE, DIAMOND_BASALT_ORE, EMERALD_BASALT_ORE,
                     GOLD_BASALT_ORE, IRON_BASALT_ORE, LAPIS_BASALT_ORE,

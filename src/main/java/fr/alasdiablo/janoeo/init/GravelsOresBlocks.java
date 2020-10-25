@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.init;
 
-import fr.alasdiablo.janoeo.JANOEO;
 import fr.alasdiablo.janoeo.block.GravelOre;
+import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
@@ -31,7 +31,7 @@ public class GravelsOresBlocks {
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Item.Properties properties = new Item.Properties().group(JANOEO.setup.janoeoOreGroup);
+            Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
             Utils.registerBlockItem(event.getRegistry(), properties,
                     DIAMOND_GRAVEL_ORE, IRON_GRAVEL_ORE, GOLD_GRAVEL_ORE
             );
