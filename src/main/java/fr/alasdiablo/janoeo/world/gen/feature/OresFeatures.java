@@ -26,6 +26,163 @@ public class OresFeatures {
 
     private static final FrequencyConfig.Config FREQUENCY_CONFIG = FrequencyConfig.CONFIG;
 
+    public static void initNetherDenseOre() {
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_COAL_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_COAL_NETHER_ORE.getRegistryName(), String.valueOf(i)),
+                NetherOresBlocks.COAL_NETHER_ORE.getDefaultState(),
+                NetherDenseOresBlocks.DENSE_COAL_NETHER_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_COAL_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_COAL_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_COAL_NETHER_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_DIAMOND_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_DIAMOND_NETHER_ORE.getRegistryName(), String.valueOf(i)),
+                NetherOresBlocks.DIAMOND_NETHER_ORE.getDefaultState(),
+                NetherDenseOresBlocks.DENSE_DIAMOND_NETHER_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_DIAMOND_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_DIAMOND_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_DIAMOND_NETHER_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_EMERALD_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_EMERALD_NETHER_ORE.getRegistryName(), String.valueOf(i)),
+                NetherOresBlocks.EMERALD_NETHER_ORE.getDefaultState(),
+                NetherDenseOresBlocks.DENSE_EMERALD_NETHER_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_EMERALD_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_EMERALD_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_EMERALD_NETHER_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_GOLD_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_GOLD_NETHER_ORE.getRegistryName(), String.valueOf(i)),
+                NetherOresBlocks.GOLD_NETHER_ORE.getDefaultState(),
+                NetherDenseOresBlocks.DENSE_GOLD_NETHER_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_GOLD_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_GOLD_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_GOLD_NETHER_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_IRON_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_IRON_NETHER_ORE.getRegistryName(), String.valueOf(i)),
+                NetherOresBlocks.IRON_NETHER_ORE.getDefaultState(),
+                NetherDenseOresBlocks.DENSE_IRON_NETHER_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_IRON_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_IRON_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_IRON_NETHER_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_LAPIS_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_LAPIS_NETHER_ORE.getRegistryName(), String.valueOf(i)),
+                NetherOresBlocks.LAPIS_NETHER_ORE.getDefaultState(),
+                NetherDenseOresBlocks.DENSE_LAPIS_NETHER_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_LAPIS_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_LAPIS_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_LAPIS_NETHER_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_REDSTONE_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_REDSTONE_NETHER_ORE.getRegistryName(), String.valueOf(i)),
+                NetherOresBlocks.REDSTONE_NETHER_ORE.getDefaultState(),
+                NetherDenseOresBlocks.DENSE_REDSTONE_NETHER_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_REDSTONE_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_REDSTONE_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_REDSTONE_NETHER_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_QUARTZ_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_QUARTZ_NETHER_ORE.getRegistryName(), String.valueOf(i)),
+                Blocks.NETHER_QUARTZ_ORE.getDefaultState(),
+                NetherDenseOresBlocks.DENSE_QUARTZ_NETHER_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_QUARTZ_NETHER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_QUARTZ_NETHER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_QUARTZ_NETHER_ORE_TOP.get()
+        );
+    }
+
+    public static void initDenseOre() {
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_COAL_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_COAL_ORE.getRegistryName(), String.valueOf(i)),
+                Blocks.COAL_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_COAL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_COAL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_COAL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_COAL_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_DIAMOND_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_DIAMOND_ORE.getRegistryName(), String.valueOf(i)),
+                Blocks.DIAMOND_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_DIAMOND_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_DIAMOND_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_DIAMOND_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_DIAMOND_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_EMERALD_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getRegistryName(), String.valueOf(i)),
+                Blocks.EMERALD_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_EMERALD_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_GOLD_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_GOLD_ORE.getRegistryName(), String.valueOf(i)),
+                Blocks.GOLD_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_GOLD_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_GOLD_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_GOLD_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_GOLD_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_IRON_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_IRON_ORE.getRegistryName(), String.valueOf(i)),
+                Blocks.IRON_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_IRON_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_IRON_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_IRON_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_IRON_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_LAPIS_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_LAPIS_ORE.getRegistryName(), String.valueOf(i)),
+                Blocks.LAPIS_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_LAPIS_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_LAPIS_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_LAPIS_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_LAPIS_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_REDSTONE_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_REDSTONE_ORE.getRegistryName(), String.valueOf(i)),
+                Blocks.REDSTONE_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_REDSTONE_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_REDSTONE_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_REDSTONE_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_REDSTONE_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_TIN_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_TIN_ORE.getRegistryName(), String.valueOf(i)),
+                OverworldOresBlocks.TIN_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_TIN_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_TIN_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_TIN_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_TIN_ORE_TOP.get()
+        );
+
+        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_COPPER_ORE_MULTIPLIER_FACTOR.get(); i++) createBlockGenFeature(
+                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_COPPER_ORE.getRegistryName(), String.valueOf(i)),
+                OverworldOresBlocks.COPPER_ORE.getDefaultState(),
+                OverworldDenseOresBlocks.DENSE_COPPER_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.DENSE_COPPER_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.DENSE_COPPER_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.DENSE_COPPER_ORE_TOP.get()
+        );
+    }
+
     public static void initTheEnd() {
         createOreGenFeature(
                 EndOresBlocks.COAL_END_ORE.getRegistryName(),

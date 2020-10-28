@@ -11,8 +11,8 @@ import net.minecraft.world.gen.GenerationStage;
 public class BasaltOreGenerator implements IWorldGenerator {
     @Override
     public void startWorldGeneration(Biome biome) {
-        GlobalConfig.Config GLOBAL_CONFIG = GlobalConfig.CONFIG;
-        BasaltConfig.Config BASALT_CONFIG = BasaltConfig.CONFIG;
+        final GlobalConfig.Config GLOBAL_CONFIG = GlobalConfig.CONFIG;
+        final BasaltConfig.Config BASALT_CONFIG = BasaltConfig.CONFIG;
 
         if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {
             if (BASALT_CONFIG.COAL_BASALT_ORE.get()) {

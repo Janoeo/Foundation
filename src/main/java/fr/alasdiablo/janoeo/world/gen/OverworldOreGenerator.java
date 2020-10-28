@@ -1,8 +1,11 @@
 package fr.alasdiablo.janoeo.world.gen;
 
+import fr.alasdiablo.janoeo.config.FrequencyConfig;
+import fr.alasdiablo.janoeo.init.OverworldDenseOresBlocks;
 import fr.alasdiablo.janoeo.init.OverworldOresBlocks;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.OverworldConfig;
+import fr.alasdiablo.janoeo.util.Utils;
 import fr.alasdiablo.janoeo.world.OreGenUtils;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
@@ -12,12 +15,13 @@ public class OverworldOreGenerator implements IWorldGenerator {
 
     @Override
     public void startWorldGeneration(Biome biome) {
-        GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
-        OverworldConfig.Config overworldConfig = OverworldConfig.CONFIG;
+        final GlobalConfig.Config GLOBAL_CONFIG = GlobalConfig.CONFIG;
+        final OverworldConfig.Config OVERWORLD_CONFIG = OverworldConfig.CONFIG;
+        final FrequencyConfig.Config FREQUENCY_CONFIG = FrequencyConfig.CONFIG;
 
-        if (globalConfig.EXTRA_ORE_GEN.get()) {
+        if (GLOBAL_CONFIG.EXTRA_ORE_GEN.get()) {
 
-            if (overworldConfig.COPPER_ORE.get()) {
+            if (OVERWORLD_CONFIG.COPPER_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.COPPER_ORE.getRegistryName()),
@@ -25,7 +29,7 @@ public class OverworldOreGenerator implements IWorldGenerator {
                 );
             }
 
-            if (overworldConfig.TIN_ORE.get()) {
+            if (OVERWORLD_CONFIG.TIN_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.TIN_ORE.getRegistryName()),
@@ -33,7 +37,7 @@ public class OverworldOreGenerator implements IWorldGenerator {
                 );
             }
 
-            if (overworldConfig.ALUMINIUM_ORE.get()) {
+            if (OVERWORLD_CONFIG.ALUMINIUM_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.ALUMINIUM_ORE.getRegistryName()),
@@ -41,7 +45,7 @@ public class OverworldOreGenerator implements IWorldGenerator {
                 );
             }
 
-            if (overworldConfig.URANIUM_ORE.get()) {
+            if (OVERWORLD_CONFIG.URANIUM_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.URANIUM_ORE.getRegistryName()),
@@ -49,7 +53,7 @@ public class OverworldOreGenerator implements IWorldGenerator {
                 );
             }
 
-            if (overworldConfig.LEAD_ORE.get()) {
+            if (OVERWORLD_CONFIG.LEAD_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.LEAD_ORE.getRegistryName()),
@@ -57,7 +61,7 @@ public class OverworldOreGenerator implements IWorldGenerator {
                 );
             }
 
-            if (overworldConfig.SILVER_ORE.get()) {
+            if (OVERWORLD_CONFIG.SILVER_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.SILVER_ORE.getRegistryName()),
@@ -65,7 +69,7 @@ public class OverworldOreGenerator implements IWorldGenerator {
                 );
             }
 
-            if (overworldConfig.RUBY_ORE.get()) {
+            if (OVERWORLD_CONFIG.RUBY_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.RUBY_ORE.getRegistryName()),
@@ -73,7 +77,7 @@ public class OverworldOreGenerator implements IWorldGenerator {
                 );
             }
 
-            if (overworldConfig.SAPPHIRE_ORE.get()) {
+            if (OVERWORLD_CONFIG.SAPPHIRE_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.SAPPHIRE_ORE.getRegistryName()),
@@ -81,7 +85,7 @@ public class OverworldOreGenerator implements IWorldGenerator {
                 );
             }
 
-            if (overworldConfig.AMETHYST_ORE.get()) {
+            if (OVERWORLD_CONFIG.AMETHYST_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.AMETHYST_ORE.getRegistryName()),
@@ -89,12 +93,98 @@ public class OverworldOreGenerator implements IWorldGenerator {
                 );
             }
 
-            if (overworldConfig.ZINC_ORE.get()) {
+            if (OVERWORLD_CONFIG.ZINC_ORE.get()) {
                 OreGenUtils.addFeatureToBiome(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.ZINC_ORE.getRegistryName()),
                         GenerationStage.Decoration.UNDERGROUND_ORES
                 );
+            }
+        }
+
+        if (GLOBAL_CONFIG.DENSE_ORE_GEN.get()) {
+            if (OVERWORLD_CONFIG.DENSE_COAL_ORE.get()) {
+                for (int i = 0; i < FREQUENCY_CONFIG.DENSE_COAL_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
+                                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_COAL_ORE.getRegistryName(), String.valueOf(i))
+                        ),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
+            if (OVERWORLD_CONFIG.DENSE_DIAMOND_ORE.get()) {
+                for (int i = 0; i < FREQUENCY_CONFIG.DENSE_DIAMOND_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
+                                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_DIAMOND_ORE.getRegistryName(), String.valueOf(i))
+                        ),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
+            if (OVERWORLD_CONFIG.DENSE_EMERALD_ORE.get()) {
+                for (int i = 0; i < FREQUENCY_CONFIG.DENSE_EMERALD_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
+                                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_EMERALD_ORE.getRegistryName(), String.valueOf(i))
+                        ),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
+            if (OVERWORLD_CONFIG.DENSE_GOLD_ORE.get()) {
+                for (int i = 0; i < FREQUENCY_CONFIG.DENSE_GOLD_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
+                                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_GOLD_ORE.getRegistryName(), String.valueOf(i))
+                        ),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
+            if (OVERWORLD_CONFIG.DENSE_IRON_ORE.get()) {
+                for (int i = 0; i < FREQUENCY_CONFIG.DENSE_IRON_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
+                                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_IRON_ORE.getRegistryName(), String.valueOf(i))
+                        ),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
+            if (OVERWORLD_CONFIG.DENSE_LAPIS_ORE.get()) {
+                for (int i = 0; i < FREQUENCY_CONFIG.DENSE_LAPIS_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
+                                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_LAPIS_ORE.getRegistryName(), String.valueOf(i))
+                        ),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
+            if (OVERWORLD_CONFIG.DENSE_REDSTONE_ORE.get()) {
+                for (int i = 0; i < FREQUENCY_CONFIG.DENSE_REDSTONE_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
+                                Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_REDSTONE_ORE.getRegistryName(), String.valueOf(i))
+                        ),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
+            if (GLOBAL_CONFIG.EXTRA_ORE_GEN.get()) {
+                if (OVERWORLD_CONFIG.DENSE_COPPER_ORE.get()) {
+                    for (int i = 0; i < FREQUENCY_CONFIG.DENSE_COPPER_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
+                                    Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_COPPER_ORE.getRegistryName(), String.valueOf(i))
+                            ),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
+                    );
+                }
+                if (OVERWORLD_CONFIG.DENSE_TIN_ORE.get()) {
+                    for (int i = 0; i < FREQUENCY_CONFIG.DENSE_TIN_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                            biome,
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
+                                    Utils.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_TIN_ORE.getRegistryName(), String.valueOf(i))
+                            ),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
+                    );
+                }
             }
         }
     }

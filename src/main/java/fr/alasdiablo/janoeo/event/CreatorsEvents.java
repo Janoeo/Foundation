@@ -21,8 +21,6 @@ import java.util.stream.Collectors;
 @Mod.EventBusSubscriber(modid = Registries.MODID)
 public class CreatorsEvents {
 
-    // TODO: Fix firework not spawn on player join
-
     @SubscribeEvent
     public static void onJoin(PlayerEvent.PlayerLoggedInEvent event) {
         PlayerEntity player = event.getPlayer();

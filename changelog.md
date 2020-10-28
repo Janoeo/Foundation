@@ -1,3 +1,6 @@
+### 4.4.0.59-experimental
++ Reimplement dense ore (nether and overworld)
+
 ### 4.4.0.58-experimental
 + Reimplement end ore generation
 

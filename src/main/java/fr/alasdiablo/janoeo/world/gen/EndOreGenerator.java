@@ -11,8 +11,8 @@ import net.minecraft.world.gen.GenerationStage;
 public class EndOreGenerator implements IWorldGenerator {
     @Override
     public void startWorldGeneration(Biome biome) {
-        GlobalConfig.Config GLOBAL_CONFIG = GlobalConfig.CONFIG;
-        EndConfig.Config END_CONFIG = EndConfig.CONFIG;
+        final GlobalConfig.Config GLOBAL_CONFIG = GlobalConfig.CONFIG;
+        final EndConfig.Config END_CONFIG = EndConfig.CONFIG;
 
         if (GLOBAL_CONFIG.END_ORE_GEN.get()) {
             if (END_CONFIG.COAL_END_ORE.get()) {

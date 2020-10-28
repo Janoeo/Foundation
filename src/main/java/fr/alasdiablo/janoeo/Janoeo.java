@@ -40,6 +40,8 @@ public class Janoeo {
         OresFeatures.initNetherGravel();
         OresFeatures.initNetherBasalt();
         OresFeatures.initTheEnd();
+        OresFeatures.initDenseOre();
+        OresFeatures.initNetherDenseOre();
     }
 
     /**
