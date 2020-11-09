@@ -6,19 +6,30 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorldReader;
 import net.minecraftforge.common.ToolType;
 
+/**
+ * Default implementation of Basalt Ore blocks
+ */
 public class BasaltOre extends RotatedPillarBlock implements IDropExperience {
 
+    /**
+     * Variable use of store ExperienceRarity needed by IDropExperience
+     */
     private final ExperienceRarity experienceRarity;
 
+    /**
+     * Default constructor
+     *
+     * @param registryName     Name of the block
+     * @param experienceRarity ExperienceRarity of the block
+     */
     public BasaltOre(String registryName, ExperienceRarity experienceRarity) {
-        super(Properties.create(Material.ROCK, MaterialColor.BLACK)
+        super(Properties.create(Material.ROCK)
                 .setRequiresTool()
-                .hardnessAndResistance(1.25F, 4.2F)
+                .hardnessAndResistance(2f, 4f)
                 .sound(SoundType.BASALT)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
@@ -27,6 +38,12 @@ public class BasaltOre extends RotatedPillarBlock implements IDropExperience {
         this.experienceRarity = experienceRarity;
     }
 
+    /**
+     * Rewrite <i>getExpDrop</i> for make it compatible with <i>IDropExperience</i>
+     *
+     * @see fr.alasdiablo.janoeo.block.util.IDropExperience
+     * @see net.minecraftforge.common.extensions.IForgeBlock
+     */
     @Override
     public int getExpDrop(BlockState state, IWorldReader world, BlockPos pos, int fortune, int silktouch) {
         if (silktouch == 0) {
@@ -35,6 +52,11 @@ public class BasaltOre extends RotatedPillarBlock implements IDropExperience {
         } else return 0;
     }
 
+    /**
+     * Implement getter of <i>IDropExperience</i>
+     *
+     * @see fr.alasdiablo.janoeo.block.util.IDropExperience
+     */
     @Override
     public ExperienceRarity getExperienceRarity() {
         return this.experienceRarity;

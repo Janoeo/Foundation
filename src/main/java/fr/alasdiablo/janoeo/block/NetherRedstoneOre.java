@@ -10,12 +10,21 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
+/**
+ * Default implementation of Nether Redstone Ore blocks
+ */
 public class NetherRedstoneOre extends RedstoneOreBlock implements INetherOre {
+
+    /**
+     * Default constructor
+     *
+     * @param registryName Name of the block
+     */
     public NetherRedstoneOre(String registryName) {
         super(Properties.create(Material.ROCK)
-                .sound(SoundType.STONE)
+                .sound(SoundType.NETHERRACK)
                 .tickRandomly()
-                .hardnessAndResistance(3f)
+                .hardnessAndResistance(1f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
                 .setRequiresTool()
@@ -24,9 +33,15 @@ public class NetherRedstoneOre extends RedstoneOreBlock implements INetherOre {
         this.setRegistryName(registryName);
     }
 
+    /**
+     * Add event <i>IEndOre.angerEnderman</i> event on block harvested
+     *
+     * @see fr.alasdiablo.janoeo.block.IEndOre
+     * @see net.minecraft.block.Block
+     */
     @Override
     public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) {
         super.onBlockHarvested(worldIn, pos, state, player);
-        this.angerPigman(player, worldIn, pos.getX(), pos.getY(), pos.getZ());
+        this.angerPigman(player, worldIn, pos);
     }
 }

@@ -6,17 +6,17 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
 /**
- * Mod setup class
+ * Creative Tab handler
  */
 public class JanoeoGroup {
 
     /**
-     * Mod creative tab for ore block
+     * Creative tab use by ore block
      */
     public static final ItemGroup ORE_BLOCKS = new ItemGroup("janoeo.ore.block") {
         /**
-         * icon getter for the creative tab
-         * @return An itemstack corresponding at the icon
+         * icon getter use by creative tab
+         * @return An itemstack corresponding to the icon
          */
         @Override
         public ItemStack createIcon() {
@@ -25,12 +25,12 @@ public class JanoeoGroup {
     };
 
     /**
-     * Mod creative tab for item
+     * Creative tab use by item
      */
     public static final ItemGroup ORE_ITEMS = new ItemGroup("janoeo.ore.item") {
         /**
-         * icon getter for the creative tab
-         * @return An itemstack corresponding at the icon
+         * icon getter use by creative tab
+         * @return An itemstack corresponding to the icon
          */
         @Override
         public ItemStack createIcon() {

@@ -4,6 +4,9 @@ import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.IntValue;
 import org.apache.commons.lang3.tuple.Pair;
 
+/**
+ * TODO: Add documentation
+ */
 public class FrequencyConfig {
 
     // TODO: Add all generation here (no more hard coded)

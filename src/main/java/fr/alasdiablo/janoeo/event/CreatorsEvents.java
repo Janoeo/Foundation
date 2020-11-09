@@ -17,42 +17,53 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.stream.Collectors;
 
+/**
+ * Event Handler use of spawn a firework when an author of Janoeo Project join a world
+ */
 @SuppressWarnings("unused")
 @Mod.EventBusSubscriber(modid = Registries.MODID)
 public class CreatorsEvents {
 
+    /**
+     * Function use for handle the event
+     * @param event Instance of the event
+     */
     @SubscribeEvent
     public static void onJoin(PlayerEvent.PlayerLoggedInEvent event) {
-        PlayerEntity player = event.getPlayer();
-        World world = player.world;
-        if (player.getName().getString().equals("AlasDiablo")) {
-            ItemStack firework = new ItemStack(Items.FIREWORK_ROCKET);
-            CompoundNBT rocket = new CompoundNBT();
-            CompoundNBT star = new CompoundNBT();
-            CompoundNBT fireworkCompound = firework.getOrCreateTag();
+        final PlayerEntity player = event.getPlayer();
+        final World world = player.world;
+        if (player.getName().getString().equals("Dev")) {
+            final CompoundNBT star = new CompoundNBT();
 
             star.putIntArray("Colors", Collections.singletonList(15790320));
             star.putIntArray("FadeColors", Collections.singletonList(11743532));
             star.putBoolean("Flicker", true);
             star.putBoolean("Trail", true);
             star.putInt("Type", 1);
-            generateFirework(player, world, firework, rocket, star, fireworkCompound);
+            generateFirework(player, world, star);
         } else if (player.getName().getString().equals("Safyrus")) {
-            ItemStack firework = new ItemStack(Items.FIREWORK_ROCKET);
-            CompoundNBT rocket = new CompoundNBT();
-            CompoundNBT star = new CompoundNBT();
-            CompoundNBT fireworkCompound = firework.getOrCreateTag();
+            final CompoundNBT star = new CompoundNBT();
 
             star.putIntArray("Colors", Lists.newArrayList(6719955, 15790320));
             star.putIntArray("FadeColors", Lists.newArrayList(2437522,11250603));
             star.putBoolean("Flicker", true);
             star.putBoolean("Trail", true);
             star.putInt("Type", 2);
-            generateFirework(player, world, firework, rocket, star, fireworkCompound);
+            generateFirework(player, world, star);
         }
     }
 
-    private static void generateFirework(PlayerEntity player, World world, ItemStack firework, CompoundNBT rocket, CompoundNBT star, CompoundNBT fireworkCompound) {
+    /**
+     * Function use for spawn the firework
+     * @param player PlayerEntity use of get player position inside the world
+     * @param world Current world
+     * @param star The firework star element
+     */
+    private static void generateFirework(PlayerEntity player, World world, CompoundNBT star) {
+        final ItemStack firework = new ItemStack(Items.FIREWORK_ROCKET);
+        final CompoundNBT rocket = new CompoundNBT();
+        final CompoundNBT fireworkCompound = firework.getOrCreateTag();
+
         rocket.putInt("Flight", 3);
         rocket.put("Explosions", Arrays.stream(new CompoundNBT[] {star}).collect(Collectors.toCollection(ListNBT::new)));
         fireworkCompound.put("Fireworks", rocket);

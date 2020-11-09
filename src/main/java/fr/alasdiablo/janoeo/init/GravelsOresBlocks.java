@@ -1,7 +1,8 @@
 package fr.alasdiablo.janoeo.init;
 
-import fr.alasdiablo.janoeo.block.GravelOre;
 import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
+
+import fr.alasdiablo.janoeo.block.GravelOre;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
@@ -11,18 +12,38 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+/**
+ * Gravel Ore Block Handler
+ */
 @SuppressWarnings("unused")
 public class GravelsOresBlocks {
 
+    /**
+     * Instance of Gravel Diamond Ore Block
+     */
     public static Block DIAMOND_GRAVEL_ORE
             = new GravelOre(Registries.DIAMOND_GRAVEL_ORE, RARE);
+    /**
+     * Instance of Gravel Iron Ore Block
+     */
     public static Block IRON_GRAVEL_ORE
             = new GravelOre(Registries.IRON_GRAVEL_ORE, COMMON);
+    /**
+     * Instance of Gravel Gold Ore Block
+     */
     public static Block GOLD_GRAVEL_ORE
             = new GravelOre(Registries.GOLD_GRAVEL_ORE, UNCOMMON);
 
+    /**
+     * Registry Event Handler
+     */
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
+        /**
+         * Handle Block registries
+         *
+         * @param event Instance of the event
+         */
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             Utils.registerBlock(event.getRegistry(),
@@ -30,6 +51,11 @@ public class GravelsOresBlocks {
             );
         }
 
+        /**
+         * Handle Item registries
+         *
+         * @param event Instance of the event
+         */
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);

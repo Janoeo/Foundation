@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 
 /**
  * Janoeo recipes data generator
+ * TODO: Finish documentation
  */
 public class Recipes extends RecipeProvider {
 

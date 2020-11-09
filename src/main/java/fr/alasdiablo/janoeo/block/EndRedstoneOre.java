@@ -10,12 +10,21 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
+/**
+ * Default implementation of The End Redstone Ore blocks
+ */
 public class EndRedstoneOre extends RedstoneOreBlock implements IEndOre {
+
+    /**
+     * Default constructor
+     *
+     * @param registryName Name of the block
+     */
     public EndRedstoneOre(String registryName) {
         super(Properties.create(Material.ROCK)
+                .hardnessAndResistance(4.0f, 8.0f)
                 .sound(SoundType.STONE)
                 .tickRandomly()
-                .hardnessAndResistance(4f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
                 .setRequiresTool()
@@ -24,9 +33,15 @@ public class EndRedstoneOre extends RedstoneOreBlock implements IEndOre {
         this.setRegistryName(registryName);
     }
 
+    /**
+     * Add event <i>IEndOre.angerEnderman</i> event on block harvested
+     *
+     * @see fr.alasdiablo.janoeo.block.IEndOre
+     * @see net.minecraft.block.Block
+     */
     @Override
     public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) {
         super.onBlockHarvested(worldIn, pos, state, player);
-        this.angerEnderman(player, worldIn, pos.getX(), pos.getY(), pos.getZ());
+        this.angerEnderman(player, worldIn, pos);
     }
 }

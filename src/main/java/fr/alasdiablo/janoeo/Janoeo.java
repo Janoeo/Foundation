@@ -12,13 +12,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 /**
- * Main class of the mods
+ * Janoeo Main class
  */
 @Mod(Registries.MODID)
 public class Janoeo {
 
     /**
-     * Mod constructor
+     * Jannoeo default constructor
      */
     public Janoeo() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GlobalConfig.CONFIG_SPEC, "janoeo.toml");
@@ -32,6 +32,10 @@ public class Janoeo {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::initFeatures);
     }
 
+    /**
+     * Initialized all ConfiguredFeature
+     * @param e RegistryEvent (not use in this case)
+     */
     private void initFeatures(RegistryEvent.NewRegistry e) {
         OresFeatures.initOverworld();
         OresFeatures.initNether();
@@ -45,8 +49,8 @@ public class Janoeo {
     }
 
     /**
-     * setup function
-     * @param e
+     * Step function use for initialized ore generation
+     * @param e FMLCommonSetupEvent (not use in this case)
      */
     private void setup(final FMLCommonSetupEvent e) {
         OreGenUtils.initOreGen();

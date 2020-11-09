@@ -9,13 +9,29 @@ import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 
+/**
+ * Gravel Ore Generator Handler
+ */
 public class GravelOreGenerator {
 
+    /**
+     * Instance of the Global config
+     */
     private static final GlobalConfig.Config GLOBAL_CONFIG = GlobalConfig.CONFIG;
+    /**
+     * Instance of the Gravel config
+     */
     private static final GravelConfig.Config GRAVEL_CONFIG = GravelConfig.CONFIG;
 
+    /**
+     * Overworld Gravel Ore Generator
+     */
     public static class Overworld implements IWorldGenerator {
 
+        /**
+         * @param biome Biome which receives the ConfiguredFeature
+         * @see fr.alasdiablo.janoeo.world.gen.IWorldGenerator
+         */
         @Override
         public void startWorldGeneration(Biome biome) {
             if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {
@@ -44,8 +60,15 @@ public class GravelOreGenerator {
         }
     }
 
+    /**
+     * Nether Gravel Ore Generator
+     */
     public static class Nether implements IWorldGenerator {
 
+        /**
+         * @param biome Biome which receives the ConfiguredFeature
+         * @see fr.alasdiablo.janoeo.world.gen.IWorldGenerator
+         */
         @Override
         public void startWorldGeneration(Biome biome) {
             if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {
@@ -80,8 +103,15 @@ public class GravelOreGenerator {
         }
     }
 
+    /**
+     * Ocean Gravel Ore Generator
+     */
     public static class Ocean implements IWorldGenerator {
 
+        /**
+         * @param biome Biome which receives the ConfiguredFeature
+         * @see fr.alasdiablo.janoeo.world.gen.IWorldGenerator
+         */
         @Override
         public void startWorldGeneration(Biome biome) {
             if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {

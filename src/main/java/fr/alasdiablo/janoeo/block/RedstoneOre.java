@@ -6,8 +6,16 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
 
+/**
+ * Reimplementation of <i>RedstoneOreBlock</i> use for simplify constructor call
+ */
 public class RedstoneOre extends RedstoneOreBlock {
 
+    /**
+     * Default constructor
+     *
+     * @param registryName Name of the block
+     */
     public RedstoneOre(String registryName) {
         super(Properties.create(Material.ROCK)
                 .sound(SoundType.STONE)

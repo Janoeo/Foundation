@@ -5,22 +5,29 @@ import fr.alasdiablo.janoeo.block.util.IDropExperience;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
 
-import java.util.Random;
+/**
+ * Default implementation of Gravel Ore blocks
+ */
+public class GravelOre extends GravelBlock implements IDropExperience {
 
-public class GravelOre extends FallingBlock implements IDropExperience {
-
+    /**
+     * Variable use of store ExperienceRarity needed by IDropExperience
+     */
     private final ExperienceRarity experienceRarity;
 
+    /**
+     * Default constructor
+     *
+     * @param registryName     Name of the block
+     * @param experienceRarity ExperienceRarity of the block
+     */
     public GravelOre(String registryName, ExperienceRarity experienceRarity) {
-        super(Properties.create(Material.EARTH)
+        super(Properties.create(Material.SAND)
                 .sound(SoundType.GROUND)
-                .hardnessAndResistance(0.6f)
+                .hardnessAndResistance(1f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.SHOVEL)
         );
@@ -28,22 +35,25 @@ public class GravelOre extends FallingBlock implements IDropExperience {
         this.experienceRarity = experienceRarity;
     }
 
-    @OnlyIn(Dist.CLIENT)
-    @Override
-    public int getDustColor(BlockState state, IBlockReader p_189876_2_, BlockPos p_189876_3_) {
-        return -8356741;
-    }
-
-    protected int getExperience(Random random) {
-        int experience = this.getExperience(random, this);
-        return experience != -1 ? experience : 0;
-    }
-
+    /**
+     * Rewrite <i>getExpDrop</i> for make it compatible with <i>IDropExperience</i>
+     *
+     * @see fr.alasdiablo.janoeo.block.util.IDropExperience
+     * @see net.minecraftforge.common.extensions.IForgeBlock
+     */
     @Override
     public int getExpDrop(BlockState state, IWorldReader world, BlockPos pos, int fortune, int silktouch) {
-        return silktouch == 0 ? this.getExperience(RANDOM) : 0;
+        if (silktouch == 0) {
+            int experience = this.getExperience(RANDOM, this);
+            return experience != -1 ? experience : 0;
+        } else return 0;
     }
 
+    /**
+     * Implement getter of <i>IDropExperience</i>
+     *
+     * @see fr.alasdiablo.janoeo.block.util.IDropExperience
+     */
     @Override
     public ExperienceRarity getExperienceRarity() {
         return this.experienceRarity;

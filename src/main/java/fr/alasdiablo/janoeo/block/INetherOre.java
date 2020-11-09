@@ -4,17 +4,29 @@ import fr.alasdiablo.janoeo.config.GlobalConfig;
 import net.minecraft.entity.monster.ZombifiedPiglinEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.World;
 
 import java.util.List;
 
+/**
+ * Interface use by all Nether Ore Block
+ */
 public interface INetherOre {
 
-    default void angerPigman(PlayerEntity player, World world, int x, int y, int z) {
+    /**
+     * Default implementation of angerPigman (function use of make <i>ZombifiedPiglinEntity</i> attack <i>PlayerEntity</i>)
+     *
+     * @param player Player who brake the block
+     * @param world  The current world
+     * @param pos    Block world position
+     */
+    default void angerPigman(PlayerEntity player, World world, BlockPos pos) {
         GlobalConfig.Config globalConfig = GlobalConfig.CONFIG;
         if (globalConfig.ZOMBIE_PIGMAN_ANGER.get()) {
-            int aggroRange = globalConfig.ZOMBIE_PIGMAN_ANGER_RANGE.get();
+            final int aggroRange = globalConfig.ZOMBIE_PIGMAN_ANGER_RANGE.get();
+            final int x = pos.getX(), y = pos.getY(), z = pos.getZ();
             List<ZombifiedPiglinEntity> list = world.getEntitiesWithinAABB(ZombifiedPiglinEntity.class,
                     AxisAlignedBB.toImmutable(MutableBoundingBox.createProper(
                             x - aggroRange,

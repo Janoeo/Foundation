@@ -1,8 +1,9 @@
 package fr.alasdiablo.janoeo.init;
 
+import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
+
 import fr.alasdiablo.janoeo.block.NetherOre;
 import fr.alasdiablo.janoeo.block.NetherRedstoneOre;
-import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.util.Utils;
@@ -12,28 +13,63 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+/**
+ * Dense Nether Ore Block Handler
+ */
 @SuppressWarnings("unused")
 public class NetherDenseOresBlocks {
 
+    /**
+     * Instance of Dense Nether Quartz Ore Block
+     */
     public static Block DENSE_QUARTZ_NETHER_ORE
             = new NetherOre(Registries.DENSE_QUARTZ_NETHER_ORE, UNCOMMON);
+    /**
+     * Instance of Dense Nether Coal Ore Block
+     */
     public static Block DENSE_COAL_NETHER_ORE
             = new NetherOre(Registries.DENSE_COAL_NETHER_ORE, COMMON);
+    /**
+     * Instance of Dense Nether Diamond Ore Block
+     */
     public static Block DENSE_DIAMOND_NETHER_ORE
             = new NetherOre(Registries.DENSE_DIAMOND_NETHER_ORE, RARE);
+    /**
+     * Instance of Dense Nether Emerald Ore Block
+     */
     public static Block DENSE_EMERALD_NETHER_ORE
             = new NetherOre(Registries.DENSE_EMERALD_NETHER_ORE, RARE);
+    /**
+     * Instance of Dense Nether Gold Ore Block
+     */
     public static Block DENSE_GOLD_NETHER_ORE
             = new NetherOre(Registries.DENSE_GOLD_NETHER_ORE, UNCOMMON);
+    /**
+     * Instance of Dense Nether Iron Ore Block
+     */
     public static Block DENSE_IRON_NETHER_ORE
             = new NetherOre(Registries.DENSE_IRON_NETHER_ORE, COMMON);
+    /**
+     * Instance of Dense Nether Lapis Ore Block
+     */
     public static Block DENSE_LAPIS_NETHER_ORE
             = new NetherOre(Registries.DENSE_LAPIS_NETHER_ORE, UNCOMMON);
+    /**
+     * Instance of Dense Nether Redstone Ore Block
+     */
     public static Block DENSE_REDSTONE_NETHER_ORE
             = new NetherRedstoneOre(Registries.DENSE_REDSTONE_NETHER_ORE);
-    
+
+    /**
+     * Registry Event Handler
+     */
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
+        /**
+         * Handle Block registries
+         *
+         * @param event Instance of the event
+         */
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             Utils.registerBlock(event.getRegistry(),
@@ -43,6 +79,11 @@ public class NetherDenseOresBlocks {
             );
         }
 
+        /**
+         * Handle Item registries
+         *
+         * @param event Instance of the event
+         */
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);

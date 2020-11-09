@@ -5,6 +5,7 @@ import org.apache.commons.lang3.tuple.Pair;
 
 /**
  * Janoeo config files
+ * TODO: Finish documentation
  */
 public class GlobalConfig {
 

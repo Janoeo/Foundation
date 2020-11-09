@@ -11,7 +11,14 @@ import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 
+/**
+ * Nether Ore Generator
+ */
 public class NetherOreGenerator implements IWorldGenerator {
+    /**
+     * @param biome Biome which receives the ConfiguredFeature
+     * @see fr.alasdiablo.janoeo.world.gen.IWorldGenerator
+     */
     @Override
     public void startWorldGeneration(Biome biome) {
         final GlobalConfig.Config GLOBAL_CONFIG = GlobalConfig.CONFIG;

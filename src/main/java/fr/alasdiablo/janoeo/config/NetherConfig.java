@@ -3,6 +3,9 @@ package fr.alasdiablo.janoeo.config;
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
+/**
+ * TODO: Finish documentation
+ */
 public class NetherConfig {
 
     /**
