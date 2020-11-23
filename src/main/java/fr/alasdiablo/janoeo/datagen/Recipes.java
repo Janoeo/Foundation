@@ -263,6 +263,9 @@ public class Recipes extends RecipeProvider {
         // copper
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(NetherOresBlocks.COPPER_NETHER_ORE), IngotsItems.COPPER_INGOT, 0.1f, 200)
                 .addCriterion("has_nether_copper_ore", hasItem(NetherOresBlocks.COPPER_NETHER_ORE)).build(consumer, "copper_nether_smelting");
+        // osmium
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(NetherOresBlocks.OSMIUM_NETHER_ORE), IngotsItems.OSMIUM_INGOT, 0.1f, 200)
+                .addCriterion("has_nether_osmium_ore", hasItem(NetherOresBlocks.OSMIUM_NETHER_ORE)).build(consumer, "osmium_nether_smelting");
     }
 
     private void netherOreBlasting(Consumer<IFinishedRecipe> consumer) {
@@ -311,6 +314,9 @@ public class Recipes extends RecipeProvider {
         // copper
         CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(NetherOresBlocks.COPPER_NETHER_ORE), IngotsItems.COPPER_INGOT, 0.1f, 100)
                 .addCriterion("has_nether_copper_ore", hasItem(NetherOresBlocks.COPPER_NETHER_ORE)).build(consumer, "copper_nether_blasting");
+        // osmium
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(NetherOresBlocks.OSMIUM_NETHER_ORE), IngotsItems.OSMIUM_INGOT, 0.1f, 100)
+                .addCriterion("has_nether_osmium_ore", hasItem(NetherOresBlocks.OSMIUM_NETHER_ORE)).build(consumer, "osmium_nether_blasting");
     }
 
     @SuppressWarnings("NullableProblems")

@@ -1,12 +1,12 @@
 package fr.alasdiablo.janoeo.init;
 
-import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
+import static fr.alasdiablo.diabolo.block.ExperienceRarity.*;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
 import fr.alasdiablo.janoeo.block.BasaltOre;
 import fr.alasdiablo.janoeo.block.BasaltRedstoneOre;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
-import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -67,7 +67,7 @@ public class BasaltOresBlocks {
          */
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            Utils.registerBlock(event.getRegistry(),
+            RegistryHelper.registerBlock(event.getRegistry(),
                     COAL_BASALT_ORE, DIAMOND_BASALT_ORE, EMERALD_BASALT_ORE,
                     GOLD_BASALT_ORE, IRON_BASALT_ORE, LAPIS_BASALT_ORE,
                     REDSTONE_BASALT_ORE
@@ -82,7 +82,7 @@ public class BasaltOresBlocks {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
-            Utils.registerBlockItem(event.getRegistry(), properties,
+            RegistryHelper.registerBlockItem(event.getRegistry(), properties,
                     COAL_BASALT_ORE, DIAMOND_BASALT_ORE, EMERALD_BASALT_ORE,
                     GOLD_BASALT_ORE, IRON_BASALT_ORE, LAPIS_BASALT_ORE,
                     REDSTONE_BASALT_ORE

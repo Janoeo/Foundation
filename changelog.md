@@ -1,3 +1,8 @@
+### 4.5.0.61-experimental
++ Implement Diabolo Lib
++ Add osmium ore
++ Rework config organization
+
 ### 4.4.0.59-experimental
 + Reimplement dense ore (nether and overworld)
 

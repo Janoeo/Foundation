@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.janoeo.block.util.ExperienceRarity;
-import fr.alasdiablo.janoeo.block.util.IDropExperience;
+import fr.alasdiablo.diabolo.block.ExperienceRarity;
+import fr.alasdiablo.diabolo.block.IDropExperience;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
@@ -38,7 +38,7 @@ public class GravelOre extends GravelBlock implements IDropExperience {
     /**
      * Rewrite <i>getExpDrop</i> for make it compatible with <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.janoeo.block.util.IDropExperience
+     * @see fr.alasdiablo.diabolo.block.IDropExperience
      * @see net.minecraftforge.common.extensions.IForgeBlock
      */
     @Override
@@ -52,7 +52,7 @@ public class GravelOre extends GravelBlock implements IDropExperience {
     /**
      * Implement getter of <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.janoeo.block.util.IDropExperience
+     * @see fr.alasdiablo.diabolo.block.IDropExperience
      */
     @Override
     public ExperienceRarity getExperienceRarity() {

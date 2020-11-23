@@ -25,3 +25,10 @@ Mod content:
     versionRange="[1.16.3,)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.janoeo]]
+    modId="diabolo"
+    mandatory=true
+    versionRange="[1.0.0,)"
+    ordering="NONE"
+    side="BOTH"
+

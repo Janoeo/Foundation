@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.init;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
-import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -57,6 +57,12 @@ public class IngotsItems {
             = new Item(PROPERTIES).setRegistryName(Registries.ZINC_INGOT);
 
     /**
+     * Instance of Osmium Ingot Item
+     */
+    public static Item OSMIUM_INGOT
+            = new Item(PROPERTIES).setRegistryName(Registries.OSMIUM_INGOT);
+
+    /**
      * Registry Event Handler
      */
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -68,10 +74,10 @@ public class IngotsItems {
          */
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Utils.registerItem(event.getRegistry(),
+            RegistryHelper.registerItem(event.getRegistry(),
                     COPPER_INGOT, TIN_INGOT, ALUMINIUM_INGOT,
                     LEAD_INGOT, SILVER_INGOT, URANIUM_INGOT,
-                    ZINC_INGOT
+                    ZINC_INGOT, OSMIUM_INGOT
             );
         }
     }

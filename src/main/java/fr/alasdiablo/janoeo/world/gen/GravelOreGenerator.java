@@ -1,10 +1,11 @@
 package fr.alasdiablo.janoeo.world.gen;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
+import fr.alasdiablo.diabolo.world.IWorldGenerator;
+import fr.alasdiablo.diabolo.world.WorldGenerationHelper;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.GravelConfig;
 import fr.alasdiablo.janoeo.init.GravelsOresBlocks;
-import fr.alasdiablo.janoeo.util.Utils;
-import fr.alasdiablo.janoeo.world.OreGenUtils;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -30,27 +31,27 @@ public class GravelOreGenerator {
 
         /**
          * @param biome Biome which receives the ConfiguredFeature
-         * @see fr.alasdiablo.janoeo.world.gen.IWorldGenerator
+         * @see fr.alasdiablo.diabolo.world.IWorldGenerator
          */
         @Override
         public void startWorldGeneration(Biome biome) {
             if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {
                 if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
@@ -67,34 +68,34 @@ public class GravelOreGenerator {
 
         /**
          * @param biome Biome which receives the ConfiguredFeature
-         * @see fr.alasdiablo.janoeo.world.gen.IWorldGenerator
+         * @see fr.alasdiablo.diabolo.world.IWorldGenerator
          */
         @Override
         public void startWorldGeneration(Biome biome) {
             if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {
                 if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "nether")
+                                    RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "nether")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "nether")
+                                    RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "nether")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "nether")
+                                    RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "nether")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
@@ -110,34 +111,34 @@ public class GravelOreGenerator {
 
         /**
          * @param biome Biome which receives the ConfiguredFeature
-         * @see fr.alasdiablo.janoeo.world.gen.IWorldGenerator
+         * @see fr.alasdiablo.diabolo.world.IWorldGenerator
          */
         @Override
         public void startWorldGeneration(Biome biome) {
             if (GLOBAL_CONFIG.GRAVEL_ORE_GEN.get()) {
                 if (GRAVEL_CONFIG.IRON_GRAVEL_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "ocean")
+                                    RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.IRON_GRAVEL_ORE.getRegistryName(), "ocean")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.GOLD_GRAVEL_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "ocean")
+                                    RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.GOLD_GRAVEL_ORE.getRegistryName(), "ocean")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (GRAVEL_CONFIG.DIAMOND_GRAVEL_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                    Utils.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "ocean")
+                                    RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.DIAMOND_GRAVEL_ORE.getRegistryName(), "ocean")
                             ),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );

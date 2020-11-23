@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.janoeo.block.util.ExperienceRarity;
-import fr.alasdiablo.janoeo.block.util.IDropExperience;
+import fr.alasdiablo.diabolo.block.ExperienceRarity;
+import fr.alasdiablo.diabolo.block.IDropExperience;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -39,7 +39,7 @@ public class BasicOre extends OreBlock implements IDropExperience {
     /**
      * Rewrite <i>getExperience</i> for make it compatible with <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.janoeo.block.util.IDropExperience
+     * @see fr.alasdiablo.diabolo.block.IDropExperience
      * @see net.minecraft.block.OreBlock
      */
     @Override
@@ -51,7 +51,7 @@ public class BasicOre extends OreBlock implements IDropExperience {
     /**
      * Implement getter of <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.janoeo.block.util.IDropExperience
+     * @see fr.alasdiablo.diabolo.block.IDropExperience
      */
     @Override
     public ExperienceRarity getExperienceRarity() {

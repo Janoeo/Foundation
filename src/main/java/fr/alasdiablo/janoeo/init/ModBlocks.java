@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.init;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
-import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -46,7 +46,7 @@ public class ModBlocks {
          */
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            Utils.registerBlock(event.getRegistry(),
+            RegistryHelper.registerBlock(event.getRegistry(),
                     SAPPHIRE_BLOCK, RUBY_BLOCK
             );
         }
@@ -59,7 +59,7 @@ public class ModBlocks {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_ITEMS);
-            Utils.registerBlockItem(event.getRegistry(), properties,
+            RegistryHelper.registerBlockItem(event.getRegistry(), properties,
                     SAPPHIRE_BLOCK, RUBY_BLOCK
             );
         }

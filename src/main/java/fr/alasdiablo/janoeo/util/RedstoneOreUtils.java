@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.block.util;
+package fr.alasdiablo.janoeo.util;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.state.properties.BlockStateProperties;

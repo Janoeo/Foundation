@@ -18,6 +18,7 @@
     "#forge:ores/ruby",
     "#forge:ores/sapphire",
     "#forge:ores/amethyst",
-    "#forge:ores/zinc"
+    "#forge:ores/zinc",
+    "#forge:ores/osmium"
   ]
 }

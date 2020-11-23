@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.init;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
-import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -48,7 +48,7 @@ public class DustsItems {
          */
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Utils.registerItem(event.getRegistry(),
+            RegistryHelper.registerItem(event.getRegistry(),
                     DIAMOND_DUST, GOLD_DUST, IRON_DUST
             );
         }

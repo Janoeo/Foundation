@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.janoeo.block.util.RedstoneOreUtils;
+import fr.alasdiablo.janoeo.util.RedstoneOreUtils;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;

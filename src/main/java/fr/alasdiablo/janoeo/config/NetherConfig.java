@@ -54,6 +54,7 @@ public class NetherConfig {
         public final ForgeConfigSpec.BooleanValue DENSE_REDSTONE_NETHER_ORE;
         public final ForgeConfigSpec.BooleanValue TIN_NETHER_ORE;
         public final ForgeConfigSpec.BooleanValue COPPER_NETHER_ORE;
+        public final ForgeConfigSpec.BooleanValue OSMIUM_NETHER_ORE;
 
         /**
          * build the config file
@@ -84,6 +85,7 @@ public class NetherConfig {
             DENSE_REDSTONE_NETHER_ORE = builder.comment("Nether dense redstone ore generation: disable / enable").define("netherDenseRedstoneOreGen", true);
             TIN_NETHER_ORE = builder.comment("Nether tin ore generation: disable / enable").define("netherTinOreGen", true);
             COPPER_NETHER_ORE = builder.comment("Nether copper ore generation: disable / enable").define("netherCopperOreGen", true);
+            OSMIUM_NETHER_ORE = builder.comment("Nether osmium ore generation: disable / enable").define("netherOsmiumOreGen", true);
             builder.pop();
         }
     }

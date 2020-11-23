@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.janoeo.block.util.RedstoneOreUtils;
+import fr.alasdiablo.diabolo.block.IEndOre;
+import fr.alasdiablo.janoeo.util.RedstoneOreUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RedstoneOreBlock;
 import net.minecraft.block.SoundType;
@@ -36,12 +37,12 @@ public class EndRedstoneOre extends RedstoneOreBlock implements IEndOre {
     /**
      * Add event <i>IEndOre.angerEnderman</i> event on block harvested
      *
-     * @see fr.alasdiablo.janoeo.block.IEndOre
+     * @see fr.alasdiablo.diabolo.block.IEndOre
      * @see net.minecraft.block.Block
      */
     @Override
     public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) {
         super.onBlockHarvested(worldIn, pos, state, player);
-        this.angerEnderman(player, worldIn, pos);
+        this.angerEnderman(player, worldIn, pos, null, null);
     }
 }

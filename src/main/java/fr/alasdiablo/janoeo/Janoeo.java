@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo;
 
+import fr.alasdiablo.diabolo.DiaboloLib;
 import fr.alasdiablo.janoeo.config.*;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.world.OreGenUtils;
@@ -10,6 +11,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
+
+import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * Janoeo Main class
@@ -21,13 +29,7 @@ public class Janoeo {
      * Jannoeo default constructor
      */
     public Janoeo() {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GlobalConfig.CONFIG_SPEC, "janoeo.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, NetherConfig.CONFIG_SPEC, "janoeo-nether.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, OverworldConfig.CONFIG_SPEC, "janoeo-overworld.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EndConfig.CONFIG_SPEC, "janoeo-end.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GravelConfig.CONFIG_SPEC, "janoeo-gravel.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FrequencyConfig.CONFIG_SPEC, "janoeo-frequency.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FrequencyConfig.CONFIG_SPEC, "janoeo-basalt.toml");
+        this.initConfig();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::initFeatures);
     }
@@ -54,5 +56,29 @@ public class Janoeo {
      */
     private void setup(final FMLCommonSetupEvent e) {
         OreGenUtils.initOreGen();
+    }
+
+    /**
+     * Function called by DiaboloLib during mod construction
+     */
+    private void initConfig() {
+        Path configPath = FMLPaths.CONFIGDIR.get();
+        this.createConfigDir(Paths.get(configPath.toAbsolutePath().toString(), "janoeo"));
+        this.createConfigDir(Paths.get(configPath.toAbsolutePath().toString(), "janoeo/ore"));
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GlobalConfig.CONFIG_SPEC, "janoeo/janoeo.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, NetherConfig.CONFIG_SPEC, "janoeo/ore/nether.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, OverworldConfig.CONFIG_SPEC, "janoeo/ore/overworld.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EndConfig.CONFIG_SPEC, "janoeo/ore/end.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, GravelConfig.CONFIG_SPEC, "janoeo/ore/gravel.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FrequencyConfig.CONFIG_SPEC, "janoeo/ore/frequency.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BasaltConfig.CONFIG_SPEC, "janoeo/ore/basalt.toml");
+    }
+
+    private void createConfigDir(Path configPath) {
+        try {
+            Files.createDirectory(configPath);
+        } catch (FileAlreadyExistsException ignored) {} catch (IOException e) {
+            DiaboloLib.logger.error("Failed to create Janoeo config directory.", e);
+        }
     }
 }

@@ -1,12 +1,12 @@
 package fr.alasdiablo.janoeo.init;
 
-import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
+import static fr.alasdiablo.diabolo.block.ExperienceRarity.*;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
 import fr.alasdiablo.janoeo.block.EndOre;
 import fr.alasdiablo.janoeo.block.EndRedstoneOre;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
-import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -67,7 +67,7 @@ public class EndOresBlocks {
          */
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            Utils.registerBlock(event.getRegistry(),
+            RegistryHelper.registerBlock(event.getRegistry(),
                     COAL_END_ORE, DIAMOND_END_ORE, EMERALD_END_ORE,
                     GOLD_END_ORE, IRON_END_ORE, LAPIS_END_ORE,
                     REDSTONE_END_ORE
@@ -82,7 +82,7 @@ public class EndOresBlocks {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
-            Utils.registerBlockItem(event.getRegistry(), properties,
+            RegistryHelper.registerBlockItem(event.getRegistry(), properties,
                     COAL_END_ORE, DIAMOND_END_ORE, EMERALD_END_ORE,
                     GOLD_END_ORE, IRON_END_ORE, LAPIS_END_ORE,
                     REDSTONE_END_ORE

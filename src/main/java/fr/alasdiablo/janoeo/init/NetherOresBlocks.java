@@ -1,12 +1,12 @@
 package fr.alasdiablo.janoeo.init;
 
-import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
+import static fr.alasdiablo.diabolo.block.ExperienceRarity.*;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
 import fr.alasdiablo.janoeo.block.NetherOre;
 import fr.alasdiablo.janoeo.block.NetherRedstoneOre;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
-import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -96,6 +96,12 @@ public class NetherOresBlocks {
             = new NetherOre(Registries.URANIUM_NETHER_ORE, NULL);
 
     /**
+     * Instance of Nether Osmium Ore Block
+     */
+    public static Block OSMIUM_NETHER_ORE
+            = new NetherOre(Registries.OSMIUM_NETHER_ORE, NULL);
+
+    /**
      * Registry Event Handler
      */
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -107,12 +113,13 @@ public class NetherOresBlocks {
          */
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            Utils.registerBlock(event.getRegistry(),
+            RegistryHelper.registerBlock(event.getRegistry(),
                     ALUMINIUM_NETHER_ORE, COAL_NETHER_ORE, COPPER_NETHER_ORE,
                     DIAMOND_NETHER_ORE, EMERALD_NETHER_ORE, GOLD_NETHER_ORE,
                     IRON_NETHER_ORE, LAPIS_NETHER_ORE, LEAD_NETHER_ORE,
                     REDSTONE_NETHER_ORE, RUBY_NETHER_ORE, SAPPHIRE_NETHER_ORE,
-                    SILVER_NETHER_ORE, TIN_NETHER_ORE, URANIUM_NETHER_ORE
+                    SILVER_NETHER_ORE, TIN_NETHER_ORE, URANIUM_NETHER_ORE,
+                    OSMIUM_NETHER_ORE
             );
         }
 
@@ -124,12 +131,13 @@ public class NetherOresBlocks {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
-            Utils.registerBlockItem(event.getRegistry(), properties,
+            RegistryHelper.registerBlockItem(event.getRegistry(), properties,
                     ALUMINIUM_NETHER_ORE, COAL_NETHER_ORE, COPPER_NETHER_ORE,
                     DIAMOND_NETHER_ORE, EMERALD_NETHER_ORE, GOLD_NETHER_ORE,
                     IRON_NETHER_ORE, LAPIS_NETHER_ORE, LEAD_NETHER_ORE,
                     REDSTONE_NETHER_ORE, RUBY_NETHER_ORE, SAPPHIRE_NETHER_ORE,
-                    SILVER_NETHER_ORE, TIN_NETHER_ORE, URANIUM_NETHER_ORE
+                    SILVER_NETHER_ORE, TIN_NETHER_ORE, URANIUM_NETHER_ORE,
+                    OSMIUM_NETHER_ORE
             );
         }
     }

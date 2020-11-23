@@ -1,12 +1,13 @@
 package fr.alasdiablo.janoeo.world.gen;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
+import fr.alasdiablo.diabolo.world.IWorldGenerator;
+import fr.alasdiablo.diabolo.world.WorldGenerationHelper;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
 import fr.alasdiablo.janoeo.init.NetherDenseOresBlocks;
 import fr.alasdiablo.janoeo.init.NetherOresBlocks;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.NetherConfig;
-import fr.alasdiablo.janoeo.util.Utils;
-import fr.alasdiablo.janoeo.world.OreGenUtils;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -17,7 +18,7 @@ import net.minecraft.world.gen.GenerationStage;
 public class NetherOreGenerator implements IWorldGenerator {
     /**
      * @param biome Biome which receives the ConfiguredFeature
-     * @see fr.alasdiablo.janoeo.world.gen.IWorldGenerator
+     * @see fr.alasdiablo.diabolo.world.IWorldGenerator
      */
     @Override
     public void startWorldGeneration(Biome biome) {
@@ -27,35 +28,35 @@ public class NetherOreGenerator implements IWorldGenerator {
 
         if (GLOBAL_CONFIG.NETHER_ORE_GEN.get()) {
             if (NETHER_CONFIG.COAL_NETHER_ORE.get()) {
-                OreGenUtils.addFeatureToBiome(
+                WorldGenerationHelper.addFeature(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.COAL_NETHER_ORE.getRegistryName()),
                         GenerationStage.Decoration.UNDERGROUND_ORES
                 );
             }
             if (NETHER_CONFIG.IRON_NETHER_ORE.get()) {
-                OreGenUtils.addFeatureToBiome(
+                WorldGenerationHelper.addFeature(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.IRON_NETHER_ORE.getRegistryName()),
                         GenerationStage.Decoration.UNDERGROUND_ORES
                 );
             }
             if (NETHER_CONFIG.GOLD_NETHER_ORE.get()) {
-                OreGenUtils.addFeatureToBiome(
+                WorldGenerationHelper.addFeature(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.GOLD_NETHER_ORE.getRegistryName()),
                         GenerationStage.Decoration.UNDERGROUND_ORES
                 );
             }
             if (NETHER_CONFIG.REDSTONE_NETHER_ORE.get()) {
-                OreGenUtils.addFeatureToBiome(
+                WorldGenerationHelper.addFeature(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.REDSTONE_NETHER_ORE.getRegistryName()),
                         GenerationStage.Decoration.UNDERGROUND_ORES
                 );
             }
             if (NETHER_CONFIG.LAPIS_NETHER_ORE.get()) {
-                OreGenUtils.addFeatureToBiome(
+                WorldGenerationHelper.addFeature(
                         biome,
                         WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.LAPIS_NETHER_ORE.getRegistryName()),
                         GenerationStage.Decoration.UNDERGROUND_ORES
@@ -65,74 +66,74 @@ public class NetherOreGenerator implements IWorldGenerator {
             if (GLOBAL_CONFIG.NETHER_DENSE_ORE_GEN.get()) {
                 if (NETHER_CONFIG.DENSE_COAL_NETHER_ORE.get()) {
                     if (NETHER_CONFIG.DENSE_COAL_NETHER_ORE.get()) {
-                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_COAL_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_COAL_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                                 biome,
                                 WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                        Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_COAL_NETHER_ORE.getRegistryName(), String.valueOf(i))
+                                        RegistryHelper.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_COAL_NETHER_ORE.getRegistryName(), String.valueOf(i))
                                 ),
                                 GenerationStage.Decoration.UNDERGROUND_ORES
                         );
                     }
                     if (NETHER_CONFIG.DENSE_DIAMOND_NETHER_ORE.get()) {
-                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_DIAMOND_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_DIAMOND_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                                 biome,
                                 WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                        Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_DIAMOND_NETHER_ORE.getRegistryName(), String.valueOf(i))
+                                        RegistryHelper.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_DIAMOND_NETHER_ORE.getRegistryName(), String.valueOf(i))
                                 ),
                                 GenerationStage.Decoration.UNDERGROUND_ORES
                         );
                     }
                     if (NETHER_CONFIG.EMERALD_NETHER_ORE.get()) {
-                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_EMERALD_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_EMERALD_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                                 biome,
                                 WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                        Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_EMERALD_NETHER_ORE.getRegistryName(), String.valueOf(i))
+                                        RegistryHelper.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_EMERALD_NETHER_ORE.getRegistryName(), String.valueOf(i))
                                 ),
                                 GenerationStage.Decoration.UNDERGROUND_ORES
                         );
                     }
                     if (NETHER_CONFIG.DENSE_GOLD_NETHER_ORE.get()) {
-                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_GOLD_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_GOLD_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                                 biome,
                                 WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                        Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_GOLD_NETHER_ORE.getRegistryName(), String.valueOf(i))
+                                        RegistryHelper.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_GOLD_NETHER_ORE.getRegistryName(), String.valueOf(i))
                                 ),
                                 GenerationStage.Decoration.UNDERGROUND_ORES
                         );
                     }
                      if (NETHER_CONFIG.DENSE_IRON_NETHER_ORE.get()) {
-                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_IRON_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_IRON_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                                 biome,
                                 WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                        Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_IRON_NETHER_ORE.getRegistryName(), String.valueOf(i))
+                                        RegistryHelper.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_IRON_NETHER_ORE.getRegistryName(), String.valueOf(i))
                                 ),
                                 GenerationStage.Decoration.UNDERGROUND_ORES
                         );
                     }
                      if (NETHER_CONFIG.DENSE_LAPIS_NETHER_ORE.get()) {
-                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_LAPIS_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_LAPIS_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                                 biome,
                                 WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                        Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_LAPIS_NETHER_ORE.getRegistryName(), String.valueOf(i))
+                                        RegistryHelper.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_LAPIS_NETHER_ORE.getRegistryName(), String.valueOf(i))
                                 ),
                                 GenerationStage.Decoration.UNDERGROUND_ORES
                         );
                     }
                     if (NETHER_CONFIG.DENSE_REDSTONE_NETHER_ORE.get()) {
-                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_REDSTONE_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_REDSTONE_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                                 biome,
                                 WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                        Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_REDSTONE_NETHER_ORE.getRegistryName(), String.valueOf(i))
+                                        RegistryHelper.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_REDSTONE_NETHER_ORE.getRegistryName(), String.valueOf(i))
                                 ),
                                 GenerationStage.Decoration.UNDERGROUND_ORES
                         );
                     }
 
                     if (NETHER_CONFIG.DENSE_QUARTZ_NETHER_ORE.get()) {
-                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_QUARTZ_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) OreGenUtils.addFeatureToBiome(
+                        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_QUARTZ_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                                 biome,
                                 WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(
-                                        Utils.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_QUARTZ_NETHER_ORE.getRegistryName(), String.valueOf(i))
+                                        RegistryHelper.setPrefixOnRegistryName(NetherDenseOresBlocks.DENSE_QUARTZ_NETHER_ORE.getRegistryName(), String.valueOf(i))
                                 ),
                                 GenerationStage.Decoration.UNDERGROUND_ORES
                         );
@@ -143,51 +144,58 @@ public class NetherOreGenerator implements IWorldGenerator {
 
             if (GLOBAL_CONFIG.EXTRA_NETHER_ORE_GEN.get()) {
                 if (NETHER_CONFIG.COPPER_NETHER_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.COPPER_NETHER_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (NETHER_CONFIG.ALUMINIUM_NETHER_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.ALUMINIUM_NETHER_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (NETHER_CONFIG.RUBY_NETHER_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.RUBY_NETHER_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (NETHER_CONFIG.SAPPHIRE_NETHER_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.SAPPHIRE_NETHER_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (NETHER_CONFIG.SILVER_NETHER_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.SILVER_NETHER_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (NETHER_CONFIG.TIN_NETHER_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.TIN_NETHER_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }
                 if (NETHER_CONFIG.URANIUM_NETHER_ORE.get()) {
-                    OreGenUtils.addFeatureToBiome(
+                    WorldGenerationHelper.addFeature(
                             biome,
                             WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.URANIUM_NETHER_ORE.getRegistryName()),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
+                    );
+                }
+                if (NETHER_CONFIG.OSMIUM_NETHER_ORE.get()) {
+                    WorldGenerationHelper.addFeature(
+                            biome,
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.OSMIUM_NETHER_ORE.getRegistryName()),
                             GenerationStage.Decoration.UNDERGROUND_ORES
                     );
                 }

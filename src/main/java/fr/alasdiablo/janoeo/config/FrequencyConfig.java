@@ -122,6 +122,8 @@ public class FrequencyConfig {
 
         public final IntValue URANIUM_NETHER_ORE_SIZE, URANIUM_NETHER_ORE_COUNT, URANIUM_NETHER_ORE_BOTTOM, URANIUM_NETHER_ORE_TOP;
 
+        public final IntValue OSMIUM_NETHER_ORE_SIZE, OSMIUM_NETHER_ORE_COUNT, OSMIUM_NETHER_ORE_BOTTOM, OSMIUM_NETHER_ORE_TOP;
+
         public final IntValue COAL_THEEND_ORE_SIZE, COAL_THEEND_ORE_COUNT, COAL_THEEND_ORE_BOTTOM, COAL_THEEND_ORE_TOP;
 
         public final IntValue DIAMOND_THEEND_ORE_SIZE, DIAMOND_THEEND_ORE_COUNT, DIAMOND_THEEND_ORE_BOTTOM, DIAMOND_THEEND_ORE_TOP;
@@ -365,6 +367,11 @@ public class FrequencyConfig {
             URANIUM_NETHER_ORE_COUNT    = builder.defineInRange("nether.uranium.count"     , 32 , countMin, countMax);
             URANIUM_NETHER_ORE_TOP      = builder.defineInRange("nether.uranium.top"       , 127, worldMin, worldMax);
             URANIUM_NETHER_ORE_BOTTOM   = builder.defineInRange("nether.uranium.bottom"    , 1  , worldMin, worldMax);
+
+            OSMIUM_NETHER_ORE_SIZE     = builder.defineInRange("nether.osmium.size"      , 4  , sizeMin, sizeMax);
+            OSMIUM_NETHER_ORE_COUNT    = builder.defineInRange("nether.osmium.count"     , 32 , countMin, countMax);
+            OSMIUM_NETHER_ORE_TOP      = builder.defineInRange("nether.osmium.top"       , 127, worldMin, worldMax);
+            OSMIUM_NETHER_ORE_BOTTOM   = builder.defineInRange("nether.osmium.bottom"    , 1  , worldMin, worldMax);
 
             // --------------------------------------------- nether.dense ---------------------------------------------
 

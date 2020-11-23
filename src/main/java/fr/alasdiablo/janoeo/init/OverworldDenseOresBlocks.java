@@ -1,12 +1,12 @@
 package fr.alasdiablo.janoeo.init;
 
-import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
+import static fr.alasdiablo.diabolo.block.ExperienceRarity.*;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
 import fr.alasdiablo.janoeo.block.BasicOre;
 import fr.alasdiablo.janoeo.block.RedstoneOre;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
-import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -77,7 +77,7 @@ public class OverworldDenseOresBlocks {
          */
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            Utils.registerBlock(event.getRegistry(),
+            RegistryHelper.registerBlock(event.getRegistry(),
                     DENSE_COAL_ORE, DENSE_COPPER_ORE, DENSE_DIAMOND_ORE,
                     DENSE_EMERALD_ORE, DENSE_GOLD_ORE, DENSE_IRON_ORE,
                     DENSE_LAPIS_ORE, DENSE_REDSTONE_ORE, DENSE_TIN_ORE
@@ -92,7 +92,7 @@ public class OverworldDenseOresBlocks {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
-            Utils.registerBlockItem(event.getRegistry(), properties,
+            RegistryHelper.registerBlockItem(event.getRegistry(), properties,
                     DENSE_COAL_ORE, DENSE_COPPER_ORE, DENSE_DIAMOND_ORE,
                     DENSE_EMERALD_ORE, DENSE_GOLD_ORE, DENSE_IRON_ORE,
                     DENSE_LAPIS_ORE, DENSE_REDSTONE_ORE, DENSE_TIN_ORE

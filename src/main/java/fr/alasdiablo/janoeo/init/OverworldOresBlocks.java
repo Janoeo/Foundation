@@ -1,11 +1,11 @@
 package fr.alasdiablo.janoeo.init;
 
-import static fr.alasdiablo.janoeo.block.util.ExperienceRarity.*;
+import static fr.alasdiablo.diabolo.block.ExperienceRarity.*;
 
+import fr.alasdiablo.diabolo.util.RegistryHelper;
 import fr.alasdiablo.janoeo.block.BasicOre;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
-import fr.alasdiablo.janoeo.util.Utils;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -81,7 +81,7 @@ public class OverworldOresBlocks {
          */
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            Utils.registerBlock(event.getRegistry(),
+            RegistryHelper.registerBlock(event.getRegistry(),
                     COPPER_ORE, TIN_ORE, ALUMINIUM_ORE, URANIUM_ORE,
                     SILVER_ORE, LEAD_ORE, RUBY_ORE, SAPPHIRE_ORE,
                     AMETHYST_ORE, ZINC_ORE
@@ -96,7 +96,7 @@ public class OverworldOresBlocks {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
-            Utils.registerBlockItem(event.getRegistry(), properties,
+            RegistryHelper.registerBlockItem(event.getRegistry(), properties,
                     COPPER_ORE, TIN_ORE, ALUMINIUM_ORE, URANIUM_ORE,
                     SILVER_ORE, LEAD_ORE, RUBY_ORE, SAPPHIRE_ORE,
                     AMETHYST_ORE, ZINC_ORE
