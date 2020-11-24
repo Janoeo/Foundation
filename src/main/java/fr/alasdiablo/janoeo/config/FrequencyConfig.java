@@ -30,6 +30,8 @@ public class FrequencyConfig {
 
         public final IntValue URANIUM_ORE_SIZE, URANIUM_ORE_COUNT, URANIUM_ORE_BOTTOM, URANIUM_ORE_TOP;
 
+        public final IntValue OSMIUM_ORE_SIZE, OSMIUM_ORE_COUNT, OSMIUM_ORE_BOTTOM, OSMIUM_ORE_TOP;
+
         public final IntValue LEAD_ORE_SIZE, LEAD_ORE_COUNT, LEAD_ORE_BOTTOM, LEAD_ORE_TOP;
 
         public final IntValue SILVER_ORE_SIZE, SILVER_ORE_COUNT ,SILVER_ORE_BOTTOM, SILVER_ORE_TOP;
@@ -180,6 +182,11 @@ public class FrequencyConfig {
             URANIUM_ORE_COUNT           = builder.defineInRange("overworld.uranium.count"           , 12, countMin, countMax);
             URANIUM_ORE_TOP             = builder.defineInRange("overworld.uranium.top"             , 32, worldMin, worldMax);
             URANIUM_ORE_BOTTOM          = builder.defineInRange("overworld.uranium.bottom"          , 1 , worldMin, worldMax);
+
+            OSMIUM_ORE_SIZE            = builder.defineInRange("overworld.osmium.size"            , 4 , sizeMin, sizeMax);
+            OSMIUM_ORE_COUNT           = builder.defineInRange("overworld.osmium.count"           , 12, countMin, countMax);
+            OSMIUM_ORE_TOP             = builder.defineInRange("overworld.osmium.top"             , 32, worldMin, worldMax);
+            OSMIUM_ORE_BOTTOM          = builder.defineInRange("overworld.osmium.bottom"          , 1 , worldMin, worldMax);
 
             LEAD_ORE_SIZE               = builder.defineInRange("overworld.lead.size"               , 12, sizeMin, sizeMax);
             LEAD_ORE_COUNT              = builder.defineInRange("overworld.lead.count"              , 12, countMin, countMax);

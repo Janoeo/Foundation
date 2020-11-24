@@ -61,6 +61,14 @@ public class OverworldOreGenerator implements IWorldGenerator{
                 );
             }
 
+            if (OVERWORLD_CONFIG.OSMIUM_ORE.get()) {
+                WorldGenerationHelper.addFeature(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.OSMIUM_ORE.getRegistryName()),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
+
             if (OVERWORLD_CONFIG.LEAD_ORE.get()) {
                 WorldGenerationHelper.addFeature(
                         biome,

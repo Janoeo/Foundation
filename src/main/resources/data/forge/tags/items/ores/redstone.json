@@ -3,6 +3,8 @@
   "values": [
     "janoeo:redstone_nether_ore",
     "janoeo:redstone_end_ore",
-    "janoeo:redstone_basalt_ore"
+    "janoeo:redstone_basalt_ore",
+    "janoeo:dense_redstone_nether_ore",
+    "janoeo:dense_redstone_ore"
   ]
 }

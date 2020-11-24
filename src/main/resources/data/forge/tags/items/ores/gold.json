@@ -4,6 +4,8 @@
     "janoeo:gold_nether_ore",
     "janoeo:gold_end_ore",
     "janoeo:gold_gravel_ore",
-    "janoeo:gold_basalt_ore"
+    "janoeo:gold_basalt_ore",
+    "janoeo:dense_gold_nether_ore",
+    "janoeo:dense_gold_ore"
   ]
 }

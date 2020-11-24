@@ -68,6 +68,11 @@ public class OverworldOresBlocks {
      */
     public static Block ZINC_ORE
             = new BasicOre(Registries.ZINC_ORE, 1, NULL);
+    /**
+     * Instance of Overworld Osmium Ore Block
+     */
+    public static Block OSMIUM_ORE
+            = new BasicOre(Registries.OSMIUM_ORE, 2, NULL);
 
     /**
      * Registry Event Handler
@@ -84,7 +89,7 @@ public class OverworldOresBlocks {
             RegistryHelper.registerBlock(event.getRegistry(),
                     COPPER_ORE, TIN_ORE, ALUMINIUM_ORE, URANIUM_ORE,
                     SILVER_ORE, LEAD_ORE, RUBY_ORE, SAPPHIRE_ORE,
-                    AMETHYST_ORE, ZINC_ORE
+                    AMETHYST_ORE, ZINC_ORE, OSMIUM_ORE
             );
         }
 
@@ -99,7 +104,7 @@ public class OverworldOresBlocks {
             RegistryHelper.registerBlockItem(event.getRegistry(), properties,
                     COPPER_ORE, TIN_ORE, ALUMINIUM_ORE, URANIUM_ORE,
                     SILVER_ORE, LEAD_ORE, RUBY_ORE, SAPPHIRE_ORE,
-                    AMETHYST_ORE, ZINC_ORE
+                    AMETHYST_ORE, ZINC_ORE, OSMIUM_ORE
             );
         }
     }

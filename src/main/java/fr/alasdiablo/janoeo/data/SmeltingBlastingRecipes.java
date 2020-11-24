@@ -41,6 +41,7 @@ public class SmeltingBlastingRecipes extends RecipeProvider {
         this.registerSmeltingBlasting(OverworldOresBlocks.LEAD_ORE, IngotsItems.LEAD_INGOT, "has_lead_ore", consumer);
         this.registerSmeltingBlasting(OverworldOresBlocks.SILVER_ORE, IngotsItems.SILVER_INGOT, "has_silver_ore", consumer);
         this.registerSmeltingBlasting(OverworldOresBlocks.URANIUM_ORE, IngotsItems.URANIUM_INGOT, "has_uranium_ore", consumer);
+        this.registerSmeltingBlasting(OverworldOresBlocks.OSMIUM_ORE, IngotsItems.OSMIUM_INGOT, "has_osmium_ore", consumer);
         this.registerSmeltingBlasting(OverworldOresBlocks.RUBY_ORE, GemsItems.RUBY, "has_ruby_ore", consumer);
         this.registerSmeltingBlasting(OverworldOresBlocks.SAPPHIRE_ORE, GemsItems.SAPPHIRE, "has_sapphire_ore", consumer);
         this.registerSmeltingBlasting(OverworldOresBlocks.AMETHYST_ORE, GemsItems.AMETHYST, "has_amethyst_ore", consumer);

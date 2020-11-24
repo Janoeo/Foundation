@@ -82,5 +82,5 @@ public class Registries {
     public static final String REDSTONE_BASALT_ORE         = "redstone_basalt_ore";
     public static final String OSMIUM_NETHER_ORE           = "osmium_nether_ore";
     public static final String OSMIUM_INGOT                = "osmium_ingot";
-
+    public static final String OSMIUM_ORE                  = "osmium_ore";
 }

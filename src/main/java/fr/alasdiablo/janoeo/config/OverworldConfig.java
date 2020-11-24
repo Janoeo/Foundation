@@ -26,6 +26,7 @@ public class OverworldConfig {
         public final ForgeConfigSpec.BooleanValue TIN_ORE;
         public final ForgeConfigSpec.BooleanValue ALUMINIUM_ORE;
         public final ForgeConfigSpec.BooleanValue URANIUM_ORE;
+        public final ForgeConfigSpec.BooleanValue OSMIUM_ORE;
         public final ForgeConfigSpec.BooleanValue SILVER_ORE;
         public final ForgeConfigSpec.BooleanValue LEAD_ORE;
         public final ForgeConfigSpec.BooleanValue RUBY_ORE;
@@ -48,6 +49,7 @@ public class OverworldConfig {
             TIN_ORE            = builder.comment("Tin ore generation: disable / enable").define("tinOreGen", true);
             ALUMINIUM_ORE      = builder.comment("Aluminium ore generation: disable / enable").define("aluminiumOreGen", true);
             URANIUM_ORE        = builder.comment("Uranium ore generation: disable / enable").define("uraniumOreGen", true);
+            OSMIUM_ORE        = builder.comment("Osmium ore generation: disable / enable").define("osmiumOreGen", true);
             SILVER_ORE         = builder.comment("Silver ore generation: disable / enable").define("silverOreGen", true);
             LEAD_ORE           = builder.comment("Lead ore generation: disable / enable").define("leadOreGen", true);
             RUBY_ORE           = builder.comment("Ruby ore generation: disable / enable").define("rubyOreGen", true);

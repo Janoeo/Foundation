@@ -2,6 +2,8 @@
 + Implement Diabolo Lib
 + Add osmium ore
 + Rework config organization
++ Fix missing loot table
++ Add dense ore into tag (same as non dense ore)
 
 ### 4.4.0.59-experimental
 + Reimplement dense ore (nether and overworld)

@@ -19,6 +19,7 @@
     "#forge:ores/sapphire",
     "#forge:ores/amethyst",
     "#forge:ores/zinc",
-    "#forge:ores/osmium"
+    "#forge:ores/osmium",
+    "#forge:ores/quartz"
   ]
 }

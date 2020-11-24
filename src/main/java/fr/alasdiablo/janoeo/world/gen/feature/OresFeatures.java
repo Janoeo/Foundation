@@ -664,6 +664,16 @@ public class OresFeatures {
         );
 
         WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
+                OverworldOresBlocks.OSMIUM_ORE.getRegistryName(),
+                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
+                OverworldOresBlocks.OSMIUM_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.OSMIUM_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.OSMIUM_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.OSMIUM_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.OSMIUM_ORE_TOP.get()
+        );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
                 OverworldOresBlocks.LEAD_ORE.getRegistryName(),
                 OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
                 OverworldOresBlocks.LEAD_ORE.getDefaultState(),

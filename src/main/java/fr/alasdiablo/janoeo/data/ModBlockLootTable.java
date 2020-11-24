@@ -72,6 +72,7 @@ public class ModBlockLootTable extends BlockLootTables {
         this.registerDropSelfLootTable(OverworldOresBlocks.TIN_ORE);
         this.registerDropSelfLootTable(OverworldOresBlocks.URANIUM_ORE);
         this.registerDropSelfLootTable(OverworldOresBlocks.ZINC_ORE);
+        this.registerDropSelfLootTable(OverworldOresBlocks.OSMIUM_ORE);
         this.registerLootTable(BasaltOresBlocks.COAL_BASALT_ORE, Provider.COAL_LOOT_PROVIDER);
         this.registerLootTable(BasaltOresBlocks.DIAMOND_BASALT_ORE, Provider.DIAMOND_LOOT_PROVIDER);
         this.registerLootTable(BasaltOresBlocks.EMERALD_BASALT_ORE, Provider.EMERALD_LOOT_PROVIDER);
