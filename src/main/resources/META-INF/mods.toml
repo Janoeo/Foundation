@@ -10,7 +10,6 @@ authors="AlasDiablo, lIotaMiu, Egame257 and Safyrus"
 description='''
 Janoeo Project Mod
 Mod content:
-- Libraries for Janoeo Project
 - Ore generation
 '''
 [[dependencies.janoeo]]
@@ -26,9 +25,9 @@ Mod content:
     ordering="NONE"
     side="BOTH"
 [[dependencies.janoeo]]
-    modId="diabolo"
+    modId="diolib"
     mandatory=true
-    versionRange="[1.0.0,)"
+    versionRange="[1.0.3,)"
     ordering="NONE"
     side="BOTH"
 

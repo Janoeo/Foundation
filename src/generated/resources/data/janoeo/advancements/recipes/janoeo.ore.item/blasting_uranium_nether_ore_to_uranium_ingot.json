@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:blasting_uranium_nether_ore_to_uranium_ingot"
+    ]
+  },
+  "criteria": {
+    "has_nether_uranium_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:uranium_nether_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:blasting_uranium_nether_ore_to_uranium_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_uranium_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:smelting_diamond_dust_to_diamond"
+    ]
+  },
+  "criteria": {
+    "has_diamond_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:diamond_dust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:smelting_diamond_dust_to_diamond"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_diamond_dust",
+      "has_the_recipe"
+    ]
+  ]
+}

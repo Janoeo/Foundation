@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.diabolo.block.INetherOre;
+import fr.alasdiablo.diolib.block.INetherOre;
 import fr.alasdiablo.janoeo.util.RedstoneOreUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RedstoneOreBlock;
@@ -37,7 +37,7 @@ public class NetherRedstoneOre extends RedstoneOreBlock implements INetherOre {
     /**
      * Add event <i>IEndOre.angerEnderman</i> event on block harvested
      *
-     * @see fr.alasdiablo.diabolo.block.INetherOre
+     * @see fr.alasdiablo.diolib.block.INetherOre
      * @see net.minecraft.block.Block
      */
     @Override

@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.diabolo.block.IEndOre;
+import fr.alasdiablo.diolib.block.IEndOre;
 import fr.alasdiablo.janoeo.util.RedstoneOreUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RedstoneOreBlock;
@@ -37,7 +37,7 @@ public class EndRedstoneOre extends RedstoneOreBlock implements IEndOre {
     /**
      * Add event <i>IEndOre.angerEnderman</i> event on block harvested
      *
-     * @see fr.alasdiablo.diabolo.block.IEndOre
+     * @see fr.alasdiablo.diolib.block.IEndOre
      * @see net.minecraft.block.Block
      */
     @Override

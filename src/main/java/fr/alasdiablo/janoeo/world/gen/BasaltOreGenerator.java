@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.world.gen;
 
-import fr.alasdiablo.diabolo.world.IWorldGenerator;
-import fr.alasdiablo.diabolo.world.WorldGenerationHelper;
+import fr.alasdiablo.diolib.world.IWorldGenerator;
+import fr.alasdiablo.diolib.world.WorldGenerationHelper;
 import fr.alasdiablo.janoeo.config.BasaltConfig;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.init.BasaltOresBlocks;
@@ -15,7 +15,7 @@ import net.minecraft.world.gen.GenerationStage;
 public class BasaltOreGenerator implements IWorldGenerator {
     /**
      * @param biome Biome which receives the ConfiguredFeature
-     * @see fr.alasdiablo.diabolo.world.IWorldGenerator
+     * @see fr.alasdiablo.diolib.world.IWorldGenerator
      */
     @Override
     public void startWorldGeneration(Biome biome) {

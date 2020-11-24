@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "RRR",
-    "RRR",
-    "RRR"
+    "SSS",
+    "SSS",
+    "SSS"
   ],
   "key": {
-    "R": {
-      "item": "janoeo:ruby"
+    "S": {
+      "item": "janoeo:sapphire"
     }
   },
   "result": {

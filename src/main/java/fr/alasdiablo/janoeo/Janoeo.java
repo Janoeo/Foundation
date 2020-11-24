@@ -1,6 +1,5 @@
 package fr.alasdiablo.janoeo;
 
-import fr.alasdiablo.diabolo.DiaboloLib;
 import fr.alasdiablo.janoeo.config.*;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.world.OreGenUtils;
@@ -12,6 +11,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
@@ -24,6 +25,8 @@ import java.nio.file.Paths;
  */
 @Mod(Registries.MODID)
 public class Janoeo {
+
+    public static final Logger logger = LogManager.getLogger(Registries.MODID);
 
     /**
      * Jannoeo default constructor
@@ -59,7 +62,7 @@ public class Janoeo {
     }
 
     /**
-     * Function called by DiaboloLib during mod construction
+     * Function called by Janoeo during mod construction
      */
     private void initConfig() {
         Path configPath = FMLPaths.CONFIGDIR.get();
@@ -78,7 +81,7 @@ public class Janoeo {
         try {
             Files.createDirectory(configPath);
         } catch (FileAlreadyExistsException ignored) {} catch (IOException e) {
-            DiaboloLib.logger.error("Failed to create Janoeo config directory.", e);
+            Janoeo.logger.error("Failed to create Janoeo config directory.", e);
         }
     }
 }

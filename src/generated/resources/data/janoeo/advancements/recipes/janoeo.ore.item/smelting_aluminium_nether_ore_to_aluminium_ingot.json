@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:smelting_aluminium_nether_ore_to_aluminium_ingot"
+    ]
+  },
+  "criteria": {
+    "has_nether_aluminium_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:aluminium_nether_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:smelting_aluminium_nether_ore_to_aluminium_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_aluminium_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

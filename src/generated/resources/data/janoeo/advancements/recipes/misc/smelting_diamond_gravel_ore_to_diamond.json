@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:smelting_diamond_gravel_ore_to_diamond"
+    ]
+  },
+  "criteria": {
+    "has_gravel_diamond_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:diamond_gravel_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:smelting_diamond_gravel_ore_to_diamond"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gravel_diamond_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

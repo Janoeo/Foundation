@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.world.gen.feature;
 
-import fr.alasdiablo.diabolo.util.RegistryHelper;
-import fr.alasdiablo.diabolo.world.ExtenedFillerBlockType;
-import fr.alasdiablo.diabolo.world.WorldGenerationHelper;
+import fr.alasdiablo.diolib.util.RegistryHelper;
+import fr.alasdiablo.diolib.world.ExtenedFillerBlockType;
+import fr.alasdiablo.diolib.world.WorldGenerationHelper;
 import fr.alasdiablo.janoeo.init.*;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
 import net.minecraft.block.Blocks;

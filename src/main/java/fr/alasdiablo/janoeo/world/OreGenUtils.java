@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.world;
 
-import fr.alasdiablo.diabolo.world.IWorldGenerator;
+import fr.alasdiablo.diolib.world.IWorldGenerator;
 import fr.alasdiablo.janoeo.world.gen.*;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.registries.ForgeRegistries;

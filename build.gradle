@@ -12,7 +12,12 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '4.5.0.61-experimental'
+def build_number = '61'
+def isExperimental = true
+version = "4.5.0.${build_number}"
+if (isExperimental) {
+    version += '-experimental'
+}
 group = 'fr.alasdiablo.janoeo'
 archivesBaseName = 'Janoeo'
 
@@ -57,8 +62,10 @@ minecraft {
     }
 }
 
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.3-34.1.42'
+    minecraft 'net.minecraftforge:forge:1.16.4-35.1.0'
     compile fileTree(dir:'lib', include:'*.jar')
 }
 

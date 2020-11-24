@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.init;
 
-import static fr.alasdiablo.diabolo.block.ExperienceRarity.*;
+import static fr.alasdiablo.diolib.block.ExperienceRarity.*;
 
-import fr.alasdiablo.diabolo.util.RegistryHelper;
+import fr.alasdiablo.diolib.util.RegistryHelper;
 import fr.alasdiablo.janoeo.block.NetherOre;
 import fr.alasdiablo.janoeo.block.NetherRedstoneOre;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;

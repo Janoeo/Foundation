@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:blasting_diamond_nether_ore_to_diamond"
+    ]
+  },
+  "criteria": {
+    "has_nether_diamond_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:diamond_nether_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:blasting_diamond_nether_ore_to_diamond"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_diamond_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

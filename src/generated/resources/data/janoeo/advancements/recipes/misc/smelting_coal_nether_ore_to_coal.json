@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:smelting_coal_nether_ore_to_coal"
+    ]
+  },
+  "criteria": {
+    "has_nether_coal_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:coal_nether_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:smelting_coal_nether_ore_to_coal"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_coal_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

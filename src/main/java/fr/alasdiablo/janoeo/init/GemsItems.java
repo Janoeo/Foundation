@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.init;
 
-import fr.alasdiablo.diabolo.util.RegistryHelper;
+import fr.alasdiablo.diolib.util.RegistryHelper;
 import fr.alasdiablo.janoeo.util.JanoeoGroup;
 import fr.alasdiablo.janoeo.util.Registries;
 import net.minecraft.item.Item;

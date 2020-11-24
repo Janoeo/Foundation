@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:smelting_redstone_nether_ore_to_redstone"
+    ]
+  },
+  "criteria": {
+    "has_nether_redstone_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:redstone_nether_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:smelting_redstone_nether_ore_to_redstone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_redstone_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

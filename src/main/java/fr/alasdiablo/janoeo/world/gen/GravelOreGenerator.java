@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.world.gen;
 
-import fr.alasdiablo.diabolo.util.RegistryHelper;
-import fr.alasdiablo.diabolo.world.IWorldGenerator;
-import fr.alasdiablo.diabolo.world.WorldGenerationHelper;
+import fr.alasdiablo.diolib.util.RegistryHelper;
+import fr.alasdiablo.diolib.world.IWorldGenerator;
+import fr.alasdiablo.diolib.world.WorldGenerationHelper;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.GravelConfig;
 import fr.alasdiablo.janoeo.init.GravelsOresBlocks;
@@ -31,7 +31,7 @@ public class GravelOreGenerator {
 
         /**
          * @param biome Biome which receives the ConfiguredFeature
-         * @see fr.alasdiablo.diabolo.world.IWorldGenerator
+         * @see fr.alasdiablo.diolib.world.IWorldGenerator
          */
         @Override
         public void startWorldGeneration(Biome biome) {

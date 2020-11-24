@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.diabolo.block.ExperienceRarity;
-import fr.alasdiablo.diabolo.block.IDropExperience;
+import fr.alasdiablo.diolib.block.ExperienceRarity;
+import fr.alasdiablo.diolib.block.IDropExperience;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
@@ -41,7 +41,7 @@ public class BasaltOre extends RotatedPillarBlock implements IDropExperience {
     /**
      * Rewrite <i>getExpDrop</i> for make it compatible with <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.diabolo.block.IDropExperience
+     * @see fr.alasdiablo.diolib.block.IDropExperience
      * @see net.minecraftforge.common.extensions.IForgeBlock
      */
     @Override
@@ -55,7 +55,7 @@ public class BasaltOre extends RotatedPillarBlock implements IDropExperience {
     /**
      * Implement getter of <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.diabolo.block.IDropExperience
+     * @see fr.alasdiablo.diolib.block.IDropExperience
      */
     @Override
     public ExperienceRarity getExperienceRarity() {

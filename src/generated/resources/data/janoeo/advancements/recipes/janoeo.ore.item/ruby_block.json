@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:ruby_block"
+    ]
+  },
+  "criteria": {
+    "has_sapphire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:ruby_block"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:ruby_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sapphire",
+      "has_the_recipe"
+    ]
+  ]
+}

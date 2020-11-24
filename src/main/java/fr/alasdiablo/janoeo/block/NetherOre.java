@@ -1,8 +1,8 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.diabolo.block.ExperienceRarity;
-import fr.alasdiablo.diabolo.block.IDropExperience;
-import fr.alasdiablo.diabolo.block.INetherOre;
+import fr.alasdiablo.diolib.block.ExperienceRarity;
+import fr.alasdiablo.diolib.block.IDropExperience;
+import fr.alasdiablo.diolib.block.INetherOre;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
@@ -44,7 +44,7 @@ public class NetherOre extends OreBlock implements INetherOre, IDropExperience {
     /**
      * Rewrite <i>getExperience</i> for make it compatible with <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.diabolo.block.IDropExperience
+     * @see fr.alasdiablo.diolib.block.IDropExperience
      * @see net.minecraft.block.OreBlock
      */
     @Override
@@ -56,7 +56,7 @@ public class NetherOre extends OreBlock implements INetherOre, IDropExperience {
     /**
      * Add event <i>INetherOre.angerPigman</i> event on block harvested
      *
-     * @see fr.alasdiablo.diabolo.block.INetherOre
+     * @see fr.alasdiablo.diolib.block.INetherOre
      * @see net.minecraft.block.Block
      */
     @Override
@@ -68,7 +68,7 @@ public class NetherOre extends OreBlock implements INetherOre, IDropExperience {
     /**
      * Implement getter of <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.diabolo.block.IDropExperience
+     * @see fr.alasdiablo.diolib.block.IDropExperience
      */
     @Override
     public ExperienceRarity getExperienceRarity() {
