@@ -8,6 +8,7 @@
     "#forge:ingots/aluminum",
     "#forge:ingots/lead",
     "#forge:ingots/silver",
-    "#forge:ingots/zinc"
+    "#forge:ingots/zinc",
+    "#forge:ingots/osmium"
   ]
 }
