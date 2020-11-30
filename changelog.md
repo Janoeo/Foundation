@@ -1,6 +1,10 @@
+### 4.5.0.63-experimental
++ Add support for DiaboloLib 1.0.4
++ Move Contributor to DiaboloLib
+
 ### 4.5.0.62-experimental
-+ fix missing tag (jprik, cflip)
-+ add an event for contributor
++ Fix missing tag (jprik, cflip)
++ Add an event for contributor
 
 ### 4.5.0.61-experimental
 + Implement Diabolo Lib
@@ -29,64 +33,64 @@
 + Reimplement basalt ore texture
 
 ### 4.4.0.53-experimental
-+ add nether world generation
++ Add nether world generation
 
 ### 4.4.0.52-experimental
 + Testing version of the port to 1.16.3
     + Only overworld ore generation work
 
 ### 4.4.0.49-experimental
-+ drop support for 1.16 for now (wait stable release)
-+ back port to 1.15.2
++ Drop support for 1.16 for now (wait stable release)
++ Back port to 1.15.2
 
 ### 4.4.0.48-experimental
-+ fix missing config file
++ Fix missing config file
 
 ### 4.4.0.47-experimental
-+ fix harvest level
-+ fix redstone ore always lit
-+ add new basalt ore
-  + diamond
-  + emerald
-  + coal
-  + gold
-  + iron
-  + lapis
-  + redstone
++ Fix harvest level
++ Fix redstone ore always lit
++ Add new basalt ore
+  + Diamond
+  + Emerald
+  + Coal
+  + Gold
+  + Iron
+  + Lapis
+  + Redstone
 
 ### 4.4.0.46-experimental
-+ rework world ore generation internal code
-+ balancing the nether and end ore generation
-+ buff on in some biomes
++ Rework world ore generation internal code
++ Balancing the nether and end ore generation
++ Buff on in some biomes
 
 ### 4.4.0.45-experimental
-+ add more possibility in the config (#1)
++ Add more possibility in the config (#1)
 
 ### 4.4.0.42-experimental
-+ change versioning
++ Change versioning
     + \<project version>.\<mod version>.\<mod sub version>.\<project build number>
-+ internal code rework
-+ update xp drop on block
++ Internal code rework
++ Update xp drop on block
 
 ### 3.6.1.1
-+ fix issues with tags references (#2)
++ Fix issues with tags references (#2)
 
 ### 3.6.1
-+ port to Minecraft 1.16.1
++ Port to Minecraft 1.16.1
 
 ### 3.6
-+ add new gravel ore
-    + iron gravel ore
-    + gold gravel ore
-    + diamond gravel ore
++ Add new gravel ore
+    + Iron gravel ore
+    + Gold gravel ore
+    + Diamond gravel ore
 
 ### 3.5
-+ add a new ore world gen system(note for modder: extend of OreFeatureConfig to be use with more predicate (more that stone and netherrack))
-+ setup new world gen system for the end ore (more ore in the end !)
++ Add a new ore world gen system(note for modder: extend of OreFeatureConfig to be use with more predicate (more that stone and netherrack))
++ Setup new world gen system for the end ore (more ore in the end !)
 
 ### 3.4 - Nether Ore and Bug Fixing
-+ add Safyrus in the creator event
-+ add new ore in the nether
++ Add Safyrus in the creator event
++ Add new ore in the nether
     + Aluminium
     + Copper
     + Lead
@@ -95,114 +99,114 @@
     + Silver
     + Tin
     + Uranium
-+ change loot table for dense ore (buff/nerf)
-+ refactor texture folder
-+ fix anger Enderman/Pigman missing on some block due to duplicated code
-+ fix copper dense ore react as redstone ore and redstone dense ore not react as redstone ore
-+ fix cooking time for blasting on some recipes
-+ fix bad value in the loot table
-+ fix duplicated recipes
++ Change loot table for dense ore (buff/nerf)
++ Refactor texture folder
++ Fix anger Enderman/Pigman missing on some block due to duplicated code
++ Fix copper dense ore react as redstone ore and redstone dense ore not react as redstone ore
++ Fix cooking time for blasting on some recipes
++ Fix bad value in the loot table
++ Fix duplicated recipes
 
 ### 3.3
-+ add zinc ore and ingot
-+ add amethyst ore and amethyst
++ Add zinc ore and ingot
++ Add amethyst ore and amethyst
 
 ### 3.2.1
-+ add tag(hardcoded) to be using with other mod.
++ Add tag(hardcoded) to be using with other mod.
 
 ### 3.2
-+ add storage block
-    + ruby
-    + sapphire
++ Add storage block
+    + Ruby
+    + Sapphire
 
 ### 3.1.2
-+ fix mod not working in 1.15.2 due to missing information in the meta-inf
++ Fix mod not working in 1.15.2 due to missing information in the meta-inf
 
 ### 3.1.1
-+ port to 1.15.2
++ Port to 1.15.2
 
 ### 2.3 & 3.1
-+ fix bug on dense emerald ore in the nether(not generated)
-+ add new ore
-    + ruby
-    + sapphire
-+ add a firework when i join a world
++ Fix bug on dense emerald ore in the nether(not generated)
++ Add new ore
+    + Ruby
+    + Sapphire
++ Add a firework when i join a world
 
 ### 3.0
-+ port to 1.15.1
++ Port to 1.15.1
 
 ### 2.2
-+ add dust
-    + diamond
-    + iron
-    + gold
-+ continue to rework the code of the mod
++ Add dust
+    + Diamond
+    + Iron
+    + Gold
++ Continue to rework the code of the mod
 
 ### 2.1.1
-+ fix mistake in 3 line of code, causing problem with the ore generation
++ Fix mistake in 3 line of code, causing problem with the ore generation
 
 ### 2.1
-+ add new mobs mechanism
-    + zombie pigman attack the player if the player break a nether ore
-    + enderman attack the player if the player break a end ore
++ Add new mobs mechanism
+    + Zombie pigman attack the player if the player break a nether ore
+    + Enderman attack the player if the player break a end ore
 
 ### 2.0
-+ internal rework (code)
-+ add a highly modularity (more option in config file)
-+ update to forge 1.14.4-28.1.61
++ Internal rework (code)
++ Add a highly modularity (more option in config file)
++ Update to forge 1.14.4-28.1.61
 
 ### 1.9.2
-+ fix english variants in tag name (aluminium vs aluminum) (once again...)
-+ fix missing recipes
++ Fix english variants in tag name (aluminium vs aluminum) (once again...)
++ Fix missing recipes
 
 ### 1.9.1
-+ fix english variants in tag name (aluminium vs aluminum)
-+ fix missing file for ingots tag
++ Fix english variants in tag name (aluminium vs aluminum)
++ Fix missing file for ingots tag
 
 ### 1.9
-+ add lead, silver, uranium and aluminium ingot
++ Add lead, silver, uranium and aluminium ingot
 
 ### 1.8.1
-+ fix uranium ore with bad tags
-+ fix missing tag for silver and lead ore
++ Fix uranium ore with bad tags
++ Fix missing tag for silver and lead ore
 
 ### 1.8
-+ add lead and silver ore
-+ fix missing loot table
++ Add lead and silver ore
++ Fix missing loot table
 
 ### 1.7
-+ add french localization
-+ add uranium ore
-+ add aluminium ore
-+ add data generator (change nothing for the client and server, only use for mod compilation and mod data generation)
-+ fix dense redstone ore
-+ update forge from 1.14.4-28.0.55 to 1.14.4-28.1.1
-+ update mcp from 20190912 to 20190915
++ Add french localization
++ Add uranium ore
++ Add aluminium ore
++ Add data generator (change nothing for the client and server, only use for mod compilation and mod data generation)
++ Fix dense redstone ore
++ Update forge from 1.14.4-28.0.55 to 1.14.4-28.1.1
++ Update mcp from 20190912 to 20190915
 
 ### 1.6
-+ update mcp to 20190912
-+ dense ore phase 2, dense ore in the nether
-+ fix end/nether redstone ore do not stop lit
++ Update mcp to 20190912
++ Dense ore phase 2, dense ore in the nether
++ Fix end/nether redstone ore do not stop lit
 
 ### 1.5
-+ add a config file
++ Add a config file
 
 ### 1.4
-+ add dense ore in overworld
++ Add dense ore in overworld
 
 ### 1.3
-+ add copper and tin ore
-+ add copper and tin ingot
-+ add a new item group for the non-ore
++ Add copper and tin ore
++ Add copper and tin ingot
++ Add a new item group for the non-ore
 
 ### 1.2
-+ fix missing xp drop
-+ fix end/nether redstone ore
-+ add tags for more compatiblity with other mods
-+ rewrite/clean up the source code of the ore block
++ Fix missing xp drop
++ Fix end/nether redstone ore
++ Add tags for more compatiblity with other mods
++ Rewrite/clean up the source code of the ore block
 
 ### 1.1
-+ add end ore generation
++ Add end ore generation
 
 ### 1.0
-+ initial release
++ Initial release

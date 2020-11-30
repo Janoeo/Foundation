@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.init;
 
-import static fr.alasdiablo.diolib.block.ExperienceRarity.*;
+import static fr.alasdiablo.diolib.generic.ExperienceRarity.*;
 
 import fr.alasdiablo.diolib.util.RegistryHelper;
 import fr.alasdiablo.janoeo.block.BasaltOre;

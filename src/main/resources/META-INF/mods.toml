@@ -27,7 +27,7 @@ Mod content:
 [[dependencies.janoeo]]
     modId="diolib"
     mandatory=true
-    versionRange="[1.0.3,)"
+    versionRange="[1.0.4,)"
     ordering="NONE"
     side="BOTH"
 

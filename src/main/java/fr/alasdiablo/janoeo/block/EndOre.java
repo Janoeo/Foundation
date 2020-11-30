@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.block;
 
-import fr.alasdiablo.diolib.block.ExperienceRarity;
-import fr.alasdiablo.diolib.block.IDropExperience;
+import fr.alasdiablo.diolib.generic.ExperienceRarity;
+import fr.alasdiablo.diolib.generic.IDropExperience;
 import fr.alasdiablo.diolib.block.IEndOre;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
@@ -44,7 +44,7 @@ public class EndOre extends OreBlock implements IEndOre, IDropExperience {
     /**
      * Rewrite <i>getExperience</i> for make it compatible with <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.diolib.block.IDropExperience
+     * @see fr.alasdiablo.diolib.generic.IDropExperience
      * @see net.minecraft.block.OreBlock
      */
     @Override
@@ -68,7 +68,7 @@ public class EndOre extends OreBlock implements IEndOre, IDropExperience {
     /**
      * Implement getter of <i>IDropExperience</i>
      *
-     * @see fr.alasdiablo.diolib.block.IDropExperience
+     * @see fr.alasdiablo.diolib.generic.IDropExperience
      */
     @Override
     public ExperienceRarity getExperienceRarity() {
