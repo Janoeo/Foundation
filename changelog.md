@@ -1,3 +1,11 @@
+### %WIP Version%
++ Fix missing ore generation ([#10](https://github.com/AlasDiablo/JANOEO/issues/10))
+  + Diamond nether ore
+  + Emerald nether ore
++ Add dust
+  + Coal dust
+  + Lapis dust
+
 ### 4.5.0.63-experimental
 + Add support for DiaboloLib 1.0.4
 + Move Contributor to DiaboloLib

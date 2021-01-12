@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:blasting_coal_gravel_ore_to_coal"
+    ]
+  },
+  "criteria": {
+    "has_gravel_coal_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:coal_gravel_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:blasting_coal_gravel_ore_to_coal"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gravel_coal_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

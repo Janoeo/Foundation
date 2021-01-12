@@ -25,9 +25,13 @@ public class SmeltingBlastingRecipes extends RecipeProvider {
         this.registerSmeltingBlasting(DustsItems.IRON_DUST, Items.IRON_INGOT, "has_iron_dust", consumer);
         this.registerSmeltingBlasting(DustsItems.GOLD_DUST, Items.GOLD_INGOT, "has_gold_dust", consumer);
         this.registerSmeltingBlasting(DustsItems.DIAMOND_DUST, Items.DIAMOND, "has_diamond_dust", consumer);
+        this.registerSmeltingBlasting(DustsItems.COAL_DUST, Items.COAL, "has_coal_dust", consumer);
+        this.registerSmeltingBlasting(DustsItems.LAPIS_DUST, Items.LAPIS_LAZULI, "has_lapis_dust", consumer);
         this.registerSmeltingBlasting(GravelsOresBlocks.IRON_GRAVEL_ORE, Items.IRON_INGOT, "has_gravel_iron_ore", consumer);
         this.registerSmeltingBlasting(GravelsOresBlocks.GOLD_GRAVEL_ORE, Items.GOLD_INGOT, "has_gravel_gold_ore", consumer);
         this.registerSmeltingBlasting(GravelsOresBlocks.DIAMOND_GRAVEL_ORE, Items.DIAMOND, "has_gravel_diamond_ore", consumer);
+        this.registerSmeltingBlasting(GravelsOresBlocks.COAL_GRAVEL_ORE, Items.COAL, "has_gravel_coal_ore", consumer);
+        this.registerSmeltingBlasting(GravelsOresBlocks.LAPIS_GRAVEL_ORE, Items.LAPIS_LAZULI, "has_gravel_lapis_ore", consumer);
         this.registerSmeltingBlasting(EndOresBlocks.COAL_END_ORE, Items.COAL, "has_end_coal_ore", consumer);
         this.registerSmeltingBlasting(EndOresBlocks.DIAMOND_END_ORE, Items.DIAMOND, "has_end_diamond_ore", consumer);
         this.registerSmeltingBlasting(EndOresBlocks.EMERALD_END_ORE, Items.EMERALD, "has_end_emerald_ore", consumer);
@@ -73,6 +77,6 @@ public class SmeltingBlastingRecipes extends RecipeProvider {
     @SuppressWarnings("NullableProblems")
     @Override
     public String getName() {
-        return "JANOEO - Smelting Blasting";
+        return "Janoeo - Smelting Blasting";
     }
 }

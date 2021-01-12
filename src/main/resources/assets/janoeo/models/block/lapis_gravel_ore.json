@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "janoeo:block/gravel/lapis_gravel_ore"
+  }
+}

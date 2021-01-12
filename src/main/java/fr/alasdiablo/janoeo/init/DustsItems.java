@@ -36,6 +36,9 @@ public class DustsItems {
     public static Item IRON_DUST
             = new Item(PROPERTIES).setRegistryName(Registries.IRON_DUST);
 
+    public static Item COAL_DUST = new Item(PROPERTIES).setRegistryName(Registries.COAL_DUST);
+    public static Item LAPIS_DUST = new Item(PROPERTIES).setRegistryName(Registries.LAPIS_DUST);
+
     /**
      * Registry Event Handler
      */
@@ -49,7 +52,8 @@ public class DustsItems {
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             RegistryHelper.registerItem(event.getRegistry(),
-                    DIAMOND_DUST, GOLD_DUST, IRON_DUST
+                    DIAMOND_DUST, GOLD_DUST, IRON_DUST,
+                    COAL_DUST, LAPIS_DUST
             );
         }
     }

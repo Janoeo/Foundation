@@ -58,6 +58,6 @@ public class CraftRecipes extends RecipeProvider {
     @SuppressWarnings("NullableProblems")
     @Override
     public String getName() {
-        return "JANOEO - Recipes";
+        return "Janoeo - Recipes";
     }
 }

@@ -83,4 +83,8 @@ public class Registries {
     public static final String OSMIUM_NETHER_ORE           = "osmium_nether_ore";
     public static final String OSMIUM_INGOT                = "osmium_ingot";
     public static final String OSMIUM_ORE                  = "osmium_ore";
+    public static final String COAL_DUST                   = "coal_dust";
+    public static final String LAPIS_DUST                  = "lapis_dust";
+    public static final String COAL_GRAVEL_ORE             = "coal_gravel_ore";
+    public static final String LAPIS_GRAVEL_ORE            = "lapis_gravel_ore";
 }

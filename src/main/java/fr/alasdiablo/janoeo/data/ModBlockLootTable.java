@@ -113,6 +113,8 @@ public class ModBlockLootTable extends BlockLootTables {
         this.registerLootTable(GravelsOresBlocks.DIAMOND_GRAVEL_ORE, (diamond) -> droppingItemWithFortune(diamond, DustsItems.DIAMOND_DUST));
         this.registerLootTable(GravelsOresBlocks.GOLD_GRAVEL_ORE, (gold) -> droppingItemWithFortune(gold, DustsItems.GOLD_DUST));
         this.registerLootTable(GravelsOresBlocks.IRON_GRAVEL_ORE, (iron) -> droppingItemWithFortune(iron, DustsItems.IRON_DUST));
+        this.registerLootTable(GravelsOresBlocks.LAPIS_GRAVEL_ORE, (lapis) -> droppingItemWithFortune(lapis, DustsItems.LAPIS_DUST));
+        this.registerLootTable(GravelsOresBlocks.COAL_GRAVEL_ORE, (coal) -> droppingItemWithFortune(coal, DustsItems.COAL_DUST));
     }
 
     @Override

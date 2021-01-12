@@ -34,6 +34,10 @@ public class GravelsOresBlocks {
     public static Block GOLD_GRAVEL_ORE
             = new GravelOre(Registries.GOLD_GRAVEL_ORE, UNCOMMON);
 
+
+    public static Block COAL_GRAVEL_ORE = new GravelOre(Registries.COAL_GRAVEL_ORE, COMMON);
+    public static Block LAPIS_GRAVEL_ORE = new GravelOre(Registries.LAPIS_GRAVEL_ORE, UNCOMMON);
+
     /**
      * Registry Event Handler
      */
@@ -47,7 +51,8 @@ public class GravelsOresBlocks {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             RegistryHelper.registerBlock(event.getRegistry(),
-                    DIAMOND_GRAVEL_ORE, IRON_GRAVEL_ORE, GOLD_GRAVEL_ORE
+                    DIAMOND_GRAVEL_ORE, IRON_GRAVEL_ORE, GOLD_GRAVEL_ORE,
+                    COAL_GRAVEL_ORE, LAPIS_GRAVEL_ORE
             );
         }
 
@@ -60,7 +65,8 @@ public class GravelsOresBlocks {
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             Item.Properties properties = new Item.Properties().group(JanoeoGroup.ORE_BLOCKS);
             RegistryHelper.registerBlockItem(event.getRegistry(), properties,
-                    DIAMOND_GRAVEL_ORE, IRON_GRAVEL_ORE, GOLD_GRAVEL_ORE
+                    DIAMOND_GRAVEL_ORE, IRON_GRAVEL_ORE, GOLD_GRAVEL_ORE,
+                    COAL_GRAVEL_ORE, LAPIS_GRAVEL_ORE
             );
         }
     }

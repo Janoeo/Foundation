@@ -62,6 +62,20 @@ public class NetherOreGenerator implements IWorldGenerator {
                         GenerationStage.Decoration.UNDERGROUND_ORES
                 );
             }
+            if (NETHER_CONFIG.DIAMOND_NETHER_ORE.get()) {
+                WorldGenerationHelper.addFeature(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.DIAMOND_NETHER_ORE.getRegistryName()),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
+            if (NETHER_CONFIG.EMERALD_NETHER_ORE.get()) {
+                WorldGenerationHelper.addFeature(
+                        biome,
+                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(NetherOresBlocks.EMERALD_NETHER_ORE.getRegistryName()),
+                        GenerationStage.Decoration.UNDERGROUND_ORES
+                );
+            }
 
             if (GLOBAL_CONFIG.NETHER_DENSE_ORE_GEN.get()) {
                 if (NETHER_CONFIG.DENSE_COAL_NETHER_ORE.get()) {
@@ -128,7 +142,6 @@ public class NetherOreGenerator implements IWorldGenerator {
                                 GenerationStage.Decoration.UNDERGROUND_ORES
                         );
                     }
-
                     if (NETHER_CONFIG.DENSE_QUARTZ_NETHER_ORE.get()) {
                         for (int i = 0; i < FREQUENCY_CONFIG.DENSE_QUARTZ_NETHER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                                 biome,
