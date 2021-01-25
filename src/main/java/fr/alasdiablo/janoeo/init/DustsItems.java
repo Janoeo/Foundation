@@ -39,6 +39,18 @@ public class DustsItems {
     public static Item COAL_DUST = new Item(PROPERTIES).setRegistryName(Registries.COAL_DUST);
     public static Item LAPIS_DUST = new Item(PROPERTIES).setRegistryName(Registries.LAPIS_DUST);
 
+    public static Item EMERALD_DUST = new Item(PROPERTIES).setRegistryName(Registries.EMERALD_DUST);
+    public static Item ALUMINIUM_DUST = new Item(PROPERTIES).setRegistryName(Registries.ALUMINIUM_DUST);
+    public static Item LEAD_DUST = new Item(PROPERTIES).setRegistryName(Registries.LEAD_DUST);
+    public static Item NICKEL_DUST = new Item(PROPERTIES).setRegistryName(Registries.NICKEL_DUST);
+    public static Item PLATINUM_DUST = new Item(PROPERTIES).setRegistryName(Registries.PLATINUM_DUST);
+    public static Item RUBY_DUST = new Item(PROPERTIES).setRegistryName(Registries.RUBY_DUST);
+    public static Item SAPPHIRE_DUST = new Item(PROPERTIES).setRegistryName(Registries.SAPPHIRE_DUST);
+    public static Item SILVER_DUST = new Item(PROPERTIES).setRegistryName(Registries.SILVER_DUST);
+    public static Item TIN_DUST = new Item(PROPERTIES).setRegistryName(Registries.TIN_DUST);
+    public static Item URANIUM_DUST = new Item(PROPERTIES).setRegistryName(Registries.URANIUM_DUST);
+    public static Item COPPER_DUST = new Item(PROPERTIES).setRegistryName(Registries.COPPER_DUST);
+
     /**
      * Registry Event Handler
      */
@@ -53,7 +65,11 @@ public class DustsItems {
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             RegistryHelper.registerItem(event.getRegistry(),
                     DIAMOND_DUST, GOLD_DUST, IRON_DUST,
-                    COAL_DUST, LAPIS_DUST
+                    COAL_DUST, LAPIS_DUST, EMERALD_DUST,
+                    ALUMINIUM_DUST, LEAD_DUST, NICKEL_DUST,
+                    PLATINUM_DUST, RUBY_DUST, SAPPHIRE_DUST,
+                    SILVER_DUST, TIN_DUST, URANIUM_DUST,
+                    COPPER_DUST
             );
         }
     }

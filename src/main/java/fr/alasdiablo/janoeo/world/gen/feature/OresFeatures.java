@@ -449,6 +449,30 @@ public class OresFeatures {
                 FREQUENCY_CONFIG.NETHER_DIAMOND_GRAVEL_ORE_BOTTOM.get(),
                 FREQUENCY_CONFIG.NETHER_DIAMOND_GRAVEL_ORE_TOP.get()
         );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
+                Objects.requireNonNull(
+                        RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.COAL_GRAVEL_ORE.getRegistryName(), "nether")
+                ),
+                ExtenedFillerBlockType.GRAVEL.get(),
+                GravelsOresBlocks.COAL_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.NETHER_COAL_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.NETHER_COAL_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.NETHER_COAL_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.NETHER_COAL_GRAVEL_ORE_TOP.get()
+        );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
+                Objects.requireNonNull(
+                        RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.LAPIS_GRAVEL_ORE.getRegistryName(), "nether")
+                ),
+                ExtenedFillerBlockType.GRAVEL.get(),
+                GravelsOresBlocks.LAPIS_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.NETHER_LAPIS_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.NETHER_LAPIS_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.NETHER_LAPIS_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.NETHER_LAPIS_GRAVEL_ORE_TOP.get()
+        );
     }
 
     /**
@@ -490,6 +514,30 @@ public class OresFeatures {
                 FREQUENCY_CONFIG.OCEAN_DIAMOND_GRAVEL_ORE_BOTTOM.get(),
                 FREQUENCY_CONFIG.OCEAN_DIAMOND_GRAVEL_ORE_TOP.get()
         );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
+                Objects.requireNonNull(
+                        RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.COAL_GRAVEL_ORE.getRegistryName(), "ocean")
+                ),
+                ExtenedFillerBlockType.GRAVEL.get(),
+                GravelsOresBlocks.COAL_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.OCEAN_COAL_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.OCEAN_COAL_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.OCEAN_COAL_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.OCEAN_COAL_GRAVEL_ORE_TOP.get()
+        );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
+                Objects.requireNonNull(
+                        RegistryHelper.setPrefixOnRegistryName(GravelsOresBlocks.LAPIS_GRAVEL_ORE.getRegistryName(), "ocean")
+                ),
+                ExtenedFillerBlockType.GRAVEL.get(),
+                GravelsOresBlocks.LAPIS_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.OCEAN_LAPIS_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.OCEAN_LAPIS_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.OCEAN_LAPIS_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.OCEAN_LAPIS_GRAVEL_ORE_TOP.get()
+        );
     }
 
     /**
@@ -530,6 +578,30 @@ public class OresFeatures {
                 FREQUENCY_CONFIG.DIAMOND_GRAVEL_ORE_COUNT.get(),
                 FREQUENCY_CONFIG.DIAMOND_GRAVEL_ORE_BOTTOM.get(),
                 FREQUENCY_CONFIG.DIAMOND_GRAVEL_ORE_TOP.get()
+        );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
+                Objects.requireNonNull(
+                        GravelsOresBlocks.COAL_GRAVEL_ORE.getRegistryName()
+                ),
+                ExtenedFillerBlockType.GRAVEL.get(),
+                GravelsOresBlocks.COAL_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.COAL_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.COAL_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.COAL_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.COAL_GRAVEL_ORE_TOP.get()
+        );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
+                Objects.requireNonNull(
+                        GravelsOresBlocks.LAPIS_GRAVEL_ORE.getRegistryName()
+                ),
+                ExtenedFillerBlockType.GRAVEL.get(),
+                GravelsOresBlocks.LAPIS_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.LAPIS_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.LAPIS_GRAVEL_ORE_COUNT.get(),
+                FREQUENCY_CONFIG.LAPIS_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.LAPIS_GRAVEL_ORE_TOP.get()
         );
     }
 

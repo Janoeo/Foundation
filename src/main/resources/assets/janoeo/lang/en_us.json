@@ -77,5 +77,21 @@
   "block.janoeo.redstone_basalt_ore": "Basalt Redstone Ore",
   "block.janoeo.osmium_nether_ore": "Nether Osmium Ore",
   "block.janoeo.osmium_ore": "Osmium Ore",
-  "item.janoeo.osmium_ingot": "Osmium Ingot"
+  "item.janoeo.osmium_ingot": "Osmium Ingot",
+  "block.janoeo.coal_gravel_ore": "Coal Gravel Ore",
+  "block.janoeo.lapis_gravel_ore": "Lapis Gravel Ore",
+  "item.janoeo.coal_dust": "Coal Dust",
+  "item.janoeo.lapis_dust": "Lapis Dust",
+  "item.janoeo.emerald_dust": "Emerald Dust",
+  "item.janoeo.aluminium_dust": "Aluminium Dust",
+  "item.janoeo.lead_dust": "Lead Dust",
+  "item.janoeo.nickel_dust": "Nickel Dust",
+  "item.janoeo.platinum_dust": "Platinum Dust",
+  "item.janoeo.ruby_dust": "Ruby Dust",
+  "item.janoeo.sapphire_dust": "Sapphire Dust",
+  "item.janoeo.silver_dust": "Silver Dust",
+  "item.janoeo.tin_dust": "Tin Dust",
+  "item.janoeo.uranium_dust": "Uranium Dust",
+  "item.janoeo.copper_dust": "Copper Dust",
+  "block.janoeo.emerald_gravel_ore": "Emerald Gravel Ore"
 }

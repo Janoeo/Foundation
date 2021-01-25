@@ -1,29 +1,20 @@
 package fr.alasdiablo.janoeo.data;
 
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
+import fr.alasdiablo.diolib.data.DioBlockLootTables;
 import fr.alasdiablo.janoeo.init.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.loot.BlockLootTables;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Items;
 import net.minecraft.loot.ItemLootEntry;
 import net.minecraft.loot.LootTable;
-import net.minecraft.loot.LootTables;
 import net.minecraft.loot.RandomValueRange;
 import net.minecraft.loot.functions.ApplyBonus;
 import net.minecraft.loot.functions.SetCount;
-import net.minecraft.util.ResourceLocation;
 
-import java.util.Map;
-import java.util.Set;
-import java.util.function.BiConsumer;
 import java.util.function.Function;
 
-public class ModBlockLootTable extends BlockLootTables {
-
-    private final Map<ResourceLocation, LootTable.Builder> lootTables = Maps.newHashMap();
+public class ModBlockLootTable extends DioBlockLootTables {
 
     private static class Provider {
         // Dense ore value : (base value 4.0F(min), 9.0F(max)) min = (base value max), max = (base value max) + (base value min) * 2, or 9.0F, 17.0F
@@ -115,30 +106,5 @@ public class ModBlockLootTable extends BlockLootTables {
         this.registerLootTable(GravelsOresBlocks.IRON_GRAVEL_ORE, (iron) -> droppingItemWithFortune(iron, DustsItems.IRON_DUST));
         this.registerLootTable(GravelsOresBlocks.LAPIS_GRAVEL_ORE, (lapis) -> droppingItemWithFortune(lapis, DustsItems.LAPIS_DUST));
         this.registerLootTable(GravelsOresBlocks.COAL_GRAVEL_ORE, (coal) -> droppingItemWithFortune(coal, DustsItems.COAL_DUST));
-    }
-
-    @Override
-    public void accept(BiConsumer<ResourceLocation, LootTable.Builder> lootTable) {
-        this.addTables();
-        Set<ResourceLocation> set = Sets.newHashSet();
-
-        for(Block block : getKnownBlocks()) {
-            ResourceLocation resourcelocation = block.getLootTable();
-            if (resourcelocation != LootTables.EMPTY && set.add(resourcelocation)) {
-                LootTable.Builder lootTableBuilder = this.lootTables.remove(resourcelocation);
-                if (lootTableBuilder != null) {
-                    lootTable.accept(resourcelocation, lootTableBuilder);
-                }
-            }
-        }
-
-        if (!this.lootTables.isEmpty()) {
-            throw new IllegalStateException("Created block loot tables for non-blocks: " + this.lootTables.keySet());
-        }
-    }
-
-    @Override
-    protected void registerLootTable(Block blockIn, LootTable.Builder table) {
-        this.lootTables.put(blockIn.getLootTable(), table);
     }
 }

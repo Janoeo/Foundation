@@ -82,17 +82,29 @@ public class FrequencyConfig {
 
         public final IntValue DIAMOND_GRAVEL_ORE_SIZE, DIAMOND_GRAVEL_ORE_COUNT, DIAMOND_GRAVEL_ORE_BOTTOM, DIAMOND_GRAVEL_ORE_TOP;
 
+        public final IntValue COAL_GRAVEL_ORE_SIZE, COAL_GRAVEL_ORE_COUNT, COAL_GRAVEL_ORE_BOTTOM, COAL_GRAVEL_ORE_TOP;
+
+        public final IntValue LAPIS_GRAVEL_ORE_SIZE, LAPIS_GRAVEL_ORE_COUNT, LAPIS_GRAVEL_ORE_BOTTOM, LAPIS_GRAVEL_ORE_TOP;
+
         public final IntValue OCEAN_IRON_GRAVEL_ORE_SIZE, OCEAN_IRON_GRAVEL_ORE_COUNT, OCEAN_IRON_GRAVEL_ORE_BOTTOM, OCEAN_IRON_GRAVEL_ORE_TOP;
 
         public final IntValue OCEAN_GOLD_GRAVEL_ORE_SIZE, OCEAN_GOLD_GRAVEL_ORE_COUNT, OCEAN_GOLD_GRAVEL_ORE_BOTTOM, OCEAN_GOLD_GRAVEL_ORE_TOP;
 
         public final IntValue OCEAN_DIAMOND_GRAVEL_ORE_SIZE, OCEAN_DIAMOND_GRAVEL_ORE_COUNT, OCEAN_DIAMOND_GRAVEL_ORE_BOTTOM, OCEAN_DIAMOND_GRAVEL_ORE_TOP;
 
+        public final IntValue OCEAN_COAL_GRAVEL_ORE_SIZE, OCEAN_COAL_GRAVEL_ORE_COUNT, OCEAN_COAL_GRAVEL_ORE_BOTTOM, OCEAN_COAL_GRAVEL_ORE_TOP;
+
+        public final IntValue OCEAN_LAPIS_GRAVEL_ORE_SIZE, OCEAN_LAPIS_GRAVEL_ORE_COUNT, OCEAN_LAPIS_GRAVEL_ORE_BOTTOM, OCEAN_LAPIS_GRAVEL_ORE_TOP;
+
         public final IntValue NETHER_IRON_GRAVEL_ORE_SIZE, NETHER_IRON_GRAVEL_ORE_COUNT, NETHER_IRON_GRAVEL_ORE_BOTTOM, NETHER_IRON_GRAVEL_ORE_TOP;
 
         public final IntValue NETHER_GOLD_GRAVEL_ORE_SIZE, NETHER_GOLD_GRAVEL_ORE_COUNT, NETHER_GOLD_GRAVEL_ORE_BOTTOM, NETHER_GOLD_GRAVEL_ORE_TOP;
 
         public final IntValue NETHER_DIAMOND_GRAVEL_ORE_SIZE, NETHER_DIAMOND_GRAVEL_ORE_COUNT, NETHER_DIAMOND_GRAVEL_ORE_BOTTOM, NETHER_DIAMOND_GRAVEL_ORE_TOP;
+
+        public final IntValue NETHER_COAL_GRAVEL_ORE_SIZE, NETHER_COAL_GRAVEL_ORE_COUNT, NETHER_COAL_GRAVEL_ORE_BOTTOM, NETHER_COAL_GRAVEL_ORE_TOP;
+
+        public final IntValue NETHER_LAPIS_GRAVEL_ORE_SIZE, NETHER_LAPIS_GRAVEL_ORE_COUNT, NETHER_LAPIS_GRAVEL_ORE_BOTTOM, NETHER_LAPIS_GRAVEL_ORE_TOP;
 
         public final IntValue COAL_NETHER_ORE_SIZE, COAL_NETHER_ORE_COUNT, COAL_NETHER_ORE_BOTTOM, COAL_NETHER_ORE_TOP;
 
@@ -183,10 +195,10 @@ public class FrequencyConfig {
             URANIUM_ORE_TOP             = builder.defineInRange("overworld.uranium.top"             , 32, worldMin, worldMax);
             URANIUM_ORE_BOTTOM          = builder.defineInRange("overworld.uranium.bottom"          , 1 , worldMin, worldMax);
 
-            OSMIUM_ORE_SIZE            = builder.defineInRange("overworld.osmium.size"            , 4 , sizeMin, sizeMax);
-            OSMIUM_ORE_COUNT           = builder.defineInRange("overworld.osmium.count"           , 12, countMin, countMax);
-            OSMIUM_ORE_TOP             = builder.defineInRange("overworld.osmium.top"             , 32, worldMin, worldMax);
-            OSMIUM_ORE_BOTTOM          = builder.defineInRange("overworld.osmium.bottom"          , 1 , worldMin, worldMax);
+            OSMIUM_ORE_SIZE             = builder.defineInRange("overworld.osmium.size"             , 4 , sizeMin, sizeMax);
+            OSMIUM_ORE_COUNT            = builder.defineInRange("overworld.osmium.count"            , 12, countMin, countMax);
+            OSMIUM_ORE_TOP              = builder.defineInRange("overworld.osmium.top"              , 32, worldMin, worldMax);
+            OSMIUM_ORE_BOTTOM           = builder.defineInRange("overworld.osmium.bottom"           , 1 , worldMin, worldMax);
 
             LEAD_ORE_SIZE               = builder.defineInRange("overworld.lead.size"               , 12, sizeMin, sizeMax);
             LEAD_ORE_COUNT              = builder.defineInRange("overworld.lead.count"              , 12, countMin, countMax);
@@ -220,20 +232,30 @@ public class FrequencyConfig {
 
             // --------------------------------------------- overworld.gravel ---------------------------------------------
 
-            IRON_GRAVEL_ORE_SIZE      = builder.defineInRange("overworld.gravel.iron.size"             , 8 , sizeMin, sizeMax);
-            IRON_GRAVEL_ORE_COUNT     = builder.defineInRange("overworld.gravel.iron.count"            , 48, countMin, countMax);
-            IRON_GRAVEL_ORE_TOP       = builder.defineInRange("overworld.gravel.iron.top"              , 48, worldMin, worldMax);
-            IRON_GRAVEL_ORE_BOTTOM    = builder.defineInRange("overworld.gravel.iron.bottom"           , 1 , worldMin, worldMax);
+            IRON_GRAVEL_ORE_SIZE      = builder.defineInRange("overworld.gravel.iron.size"             , 8  , sizeMin, sizeMax);
+            IRON_GRAVEL_ORE_COUNT     = builder.defineInRange("overworld.gravel.iron.count"            , 48 , countMin, countMax);
+            IRON_GRAVEL_ORE_TOP       = builder.defineInRange("overworld.gravel.iron.top"              , 48 , worldMin, worldMax);
+            IRON_GRAVEL_ORE_BOTTOM    = builder.defineInRange("overworld.gravel.iron.bottom"           , 1  , worldMin, worldMax);
 
-            GOLD_GRAVEL_ORE_SIZE      = builder.defineInRange("overworld.gravel.gold.size"             , 6 , sizeMin, sizeMax);
-            GOLD_GRAVEL_ORE_COUNT     = builder.defineInRange("overworld.gravel.gold.count"            , 40, countMin, countMax);
-            GOLD_GRAVEL_ORE_TOP       = builder.defineInRange("overworld.gravel.gold.top"              , 28, worldMin, worldMax);
-            GOLD_GRAVEL_ORE_BOTTOM    = builder.defineInRange("overworld.gravel.gold.bottom"           , 1 , worldMin, worldMax);
+            GOLD_GRAVEL_ORE_SIZE      = builder.defineInRange("overworld.gravel.gold.size"             , 6  , sizeMin, sizeMax);
+            GOLD_GRAVEL_ORE_COUNT     = builder.defineInRange("overworld.gravel.gold.count"            , 40 , countMin, countMax);
+            GOLD_GRAVEL_ORE_TOP       = builder.defineInRange("overworld.gravel.gold.top"              , 28 , worldMin, worldMax);
+            GOLD_GRAVEL_ORE_BOTTOM    = builder.defineInRange("overworld.gravel.gold.bottom"           , 1  , worldMin, worldMax);
 
-            DIAMOND_GRAVEL_ORE_SIZE   = builder.defineInRange("overworld.gravel.diamond.size"          , 4 , sizeMin, sizeMax);
-            DIAMOND_GRAVEL_ORE_COUNT  = builder.defineInRange("overworld.gravel.diamond.count"         , 32, countMin, countMax);
-            DIAMOND_GRAVEL_ORE_TOP    = builder.defineInRange("overworld.gravel.diamond.top"           , 18, worldMin, worldMax);
-            DIAMOND_GRAVEL_ORE_BOTTOM = builder.defineInRange("overworld.gravel.diamond.bottom"        , 1 , worldMin, worldMax);
+            DIAMOND_GRAVEL_ORE_SIZE   = builder.defineInRange("overworld.gravel.diamond.size"          , 4  , sizeMin, sizeMax);
+            DIAMOND_GRAVEL_ORE_COUNT  = builder.defineInRange("overworld.gravel.diamond.count"         , 32 , countMin, countMax);
+            DIAMOND_GRAVEL_ORE_TOP    = builder.defineInRange("overworld.gravel.diamond.top"           , 18 , worldMin, worldMax);
+            DIAMOND_GRAVEL_ORE_BOTTOM = builder.defineInRange("overworld.gravel.diamond.bottom"        , 1  , worldMin, worldMax);
+
+            COAL_GRAVEL_ORE_SIZE      = builder.defineInRange("overworld.gravel.coal.size"             , 12 , sizeMin, sizeMax);
+            COAL_GRAVEL_ORE_COUNT     = builder.defineInRange("overworld.gravel.coal.count"            , 56 , countMin, countMax);
+            COAL_GRAVEL_ORE_TOP       = builder.defineInRange("overworld.gravel.coal.top"              , 120, worldMin, worldMax);
+            COAL_GRAVEL_ORE_BOTTOM    = builder.defineInRange("overworld.gravel.coal.bottom"           , 1  , worldMin, worldMax);
+
+            LAPIS_GRAVEL_ORE_SIZE     = builder.defineInRange("overworld.gravel.lapis.size"            , 5  , sizeMin, sizeMax);
+            LAPIS_GRAVEL_ORE_COUNT    = builder.defineInRange("overworld.gravel.lapis.count"           , 36 , countMin, countMax);
+            LAPIS_GRAVEL_ORE_TOP      = builder.defineInRange("overworld.gravel.lapis.top"             , 23 , worldMin, worldMax);
+            LAPIS_GRAVEL_ORE_BOTTOM   = builder.defineInRange("overworld.gravel.lapis.bottom"          , 1  , worldMin, worldMax);
 
             // --------------------------------------------- overworld.dense ---------------------------------------------
 
@@ -298,6 +320,16 @@ public class FrequencyConfig {
             OCEAN_DIAMOND_GRAVEL_ORE_COUNT   = builder.defineInRange("overworld.ocean.gravel.diamond.count"         , 8 , countMin, countMax);
             OCEAN_DIAMOND_GRAVEL_ORE_TOP     = builder.defineInRange("overworld.ocean.gravel.diamond.top"           , 38, worldMin, worldMax);
             OCEAN_DIAMOND_GRAVEL_ORE_BOTTOM  = builder.defineInRange("overworld.ocean.gravel.diamond.bottom"        , 1 , worldMin, worldMax);
+
+            OCEAN_COAL_GRAVEL_ORE_SIZE       = builder.defineInRange("overworld.ocean.gravel.coal.size"             , 12, sizeMin, sizeMax);
+            OCEAN_COAL_GRAVEL_ORE_COUNT      = builder.defineInRange("overworld.ocean.gravel.coal.count"            , 56, countMin, countMax);
+            OCEAN_COAL_GRAVEL_ORE_TOP        = builder.defineInRange("overworld.ocean.gravel.coal.top"              , 64, worldMin, worldMax);
+            OCEAN_COAL_GRAVEL_ORE_BOTTOM     = builder.defineInRange("overworld.ocean.gravel.coal.bottom"           , 1 , worldMin, worldMax);
+
+            OCEAN_LAPIS_GRAVEL_ORE_SIZE      = builder.defineInRange("overworld.ocean.gravel.lapis.size"            , 4 , sizeMin, sizeMax);
+            OCEAN_LAPIS_GRAVEL_ORE_COUNT     = builder.defineInRange("overworld.ocean.gravel.lapis.count"           , 24, countMin, countMax);
+            OCEAN_LAPIS_GRAVEL_ORE_TOP       = builder.defineInRange("overworld.ocean.gravel.lapis.top"             , 43, worldMin, worldMax);
+            OCEAN_LAPIS_GRAVEL_ORE_BOTTOM    = builder.defineInRange("overworld.ocean.gravel.lapis.bottom"          , 1 , worldMin, worldMax);
 
             // --------------------------------------------- nether ---------------------------------------------
 
@@ -438,6 +470,16 @@ public class FrequencyConfig {
             NETHER_DIAMOND_GRAVEL_ORE_COUNT   = builder.defineInRange("nether.gravel.diamond.count"   , 32 , countMin, countMax);
             NETHER_DIAMOND_GRAVEL_ORE_TOP     = builder.defineInRange("nether.gravel.diamond.top"     , 127, worldMin, worldMax);
             NETHER_DIAMOND_GRAVEL_ORE_BOTTOM  = builder.defineInRange("nether.gravel.diamond.bottom"  , 1  , worldMin, worldMax);
+
+            NETHER_COAL_GRAVEL_ORE_SIZE       = builder.defineInRange("nether.gravel.coal.size"    , 12  , sizeMin, sizeMax);
+            NETHER_COAL_GRAVEL_ORE_COUNT      = builder.defineInRange("nether.gravel.coal.count"   , 64 , countMin, countMax);
+            NETHER_COAL_GRAVEL_ORE_TOP        = builder.defineInRange("nether.gravel.coal.top"     , 127, worldMin, worldMax);
+            NETHER_COAL_GRAVEL_ORE_BOTTOM     = builder.defineInRange("nether.gravel.coal.bottom"  , 1  , worldMin, worldMax);
+
+            NETHER_LAPIS_GRAVEL_ORE_SIZE      = builder.defineInRange("nether.gravel.lapis.size"    , 5  , sizeMin, sizeMax);
+            NETHER_LAPIS_GRAVEL_ORE_COUNT     = builder.defineInRange("nether.gravel.lapis.count"   , 36 , countMin, countMax);
+            NETHER_LAPIS_GRAVEL_ORE_TOP       = builder.defineInRange("nether.gravel.lapis.top"     , 127, worldMin, worldMax);
+            NETHER_LAPIS_GRAVEL_ORE_BOTTOM    = builder.defineInRange("nether.gravel.lapis.bottom"  , 1  , worldMin, worldMax);
 
             // --------------------------------------------- nether.basalt ---------------------------------------------
 

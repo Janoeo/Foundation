@@ -87,4 +87,17 @@ public class Registries {
     public static final String LAPIS_DUST                  = "lapis_dust";
     public static final String COAL_GRAVEL_ORE             = "coal_gravel_ore";
     public static final String LAPIS_GRAVEL_ORE            = "lapis_gravel_ore";
+
+    public static final String EMERALD_DUST                = "emerald_dust";
+    public static final String ALUMINIUM_DUST              = "aluminium_dust";
+    public static final String LEAD_DUST                   = "lead_dust";
+    public static final String NICKEL_DUST                 = "nickel_dust";
+    public static final String PLATINUM_DUST               = "platinum_dust";
+    public static final String RUBY_DUST                   = "ruby_dust";
+    public static final String SAPPHIRE_DUST               = "sapphire_dust";
+    public static final String SILVER_DUST                 = "silver_dust";
+    public static final String TIN_DUST                    = "tin_dust";
+    public static final String URANIUM_DUST                = "uranium_dust";
+    public static final String COPPER_DUST                 = "copper_dust";
+    public static final String EMERALD_GRAVEL_ORE          = "emerald_gravel_ore";
 }

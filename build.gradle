@@ -12,9 +12,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-def build_number = '63'
-def isExperimental = true
-version = "4.5.0.${build_number}"
+def build_number = '67'
+def isExperimental = false
+version = "5.6.0.${build_number}"
 if (isExperimental) {
     version += '-experimental'
 }
