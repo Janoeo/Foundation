@@ -24,7 +24,7 @@ public class ModBlocks {
     public static Block SAPPHIRE_BLOCK
             = new Block(
             Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f).harvestTool(ToolType.PICKAXE))
-            .setRegistryName(Registries.RUBY_BLOCK);
+            .setRegistryName(Registries.SAPPHIRE_BLOCK);
 
     /**
      * Instance of Ruby Block
@@ -32,7 +32,7 @@ public class ModBlocks {
     public static Block RUBY_BLOCK
             = new Block(
             Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f).harvestTool(ToolType.PICKAXE))
-            .setRegistryName(Registries.SAPPHIRE_BLOCK);
+            .setRegistryName(Registries.RUBY_BLOCK);
 
     /**
      * Registry Event Handler

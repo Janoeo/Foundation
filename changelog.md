@@ -3,6 +3,7 @@
   + Missing ore generation ([#10](https://github.com/AlasDiablo/JANOEO/issues/10))
     + Diamond nether ore
     + Emerald nether ore
+  + Bad registry name apply on some block
 + Add
   + Dust
     + Coal

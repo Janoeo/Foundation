@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "janoeo:ruby_block"
+      "item": "janoeo:sapphire_block"
     }
   ],
   "result": {
