@@ -473,6 +473,17 @@ public class OresFeatures {
                 FREQUENCY_CONFIG.NETHER_LAPIS_GRAVEL_ORE_BOTTOM.get(),
                 FREQUENCY_CONFIG.NETHER_LAPIS_GRAVEL_ORE_TOP.get()
         );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerReplaceBlockFeature(
+                Objects.requireNonNull(
+                        GravelsOresBlocks.EMERALD_GRAVEL_ORE.getRegistryName()
+                ),
+                Blocks.GRAVEL.getDefaultState(),
+                GravelsOresBlocks.EMERALD_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.NETHER_EMERALD_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.NETHER_EMERALD_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.NETHER_EMERALD_GRAVEL_ORE_TOP.get()
+        );
     }
 
     /**
@@ -538,6 +549,17 @@ public class OresFeatures {
                 FREQUENCY_CONFIG.OCEAN_LAPIS_GRAVEL_ORE_BOTTOM.get(),
                 FREQUENCY_CONFIG.OCEAN_LAPIS_GRAVEL_ORE_TOP.get()
         );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerReplaceBlockFeature(
+                Objects.requireNonNull(
+                        GravelsOresBlocks.EMERALD_GRAVEL_ORE.getRegistryName()
+                ),
+                Blocks.GRAVEL.getDefaultState(),
+                GravelsOresBlocks.EMERALD_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.OCEAN_EMERALD_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.OCEAN_EMERALD_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.OCEAN_EMERALD_GRAVEL_ORE_TOP.get()
+        );
     }
 
     /**
@@ -602,6 +624,17 @@ public class OresFeatures {
                 FREQUENCY_CONFIG.LAPIS_GRAVEL_ORE_COUNT.get(),
                 FREQUENCY_CONFIG.LAPIS_GRAVEL_ORE_BOTTOM.get(),
                 FREQUENCY_CONFIG.LAPIS_GRAVEL_ORE_TOP.get()
+        );
+
+        WorldGenerationHelper.ConfiguredFeatureHelper.registerReplaceBlockFeature(
+                Objects.requireNonNull(
+                        GravelsOresBlocks.EMERALD_GRAVEL_ORE.getRegistryName()
+                ),
+                Blocks.GRAVEL.getDefaultState(),
+                GravelsOresBlocks.EMERALD_GRAVEL_ORE.getDefaultState(),
+                FREQUENCY_CONFIG.EMERALD_GRAVEL_ORE_SIZE.get(),
+                FREQUENCY_CONFIG.EMERALD_GRAVEL_ORE_BOTTOM.get(),
+                FREQUENCY_CONFIG.EMERALD_GRAVEL_ORE_TOP.get()
         );
     }
 

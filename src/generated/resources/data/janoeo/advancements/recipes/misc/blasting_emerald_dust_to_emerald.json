@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:blasting_emerald_dust_to_emerald"
+    ]
+  },
+  "criteria": {
+    "has_emerald_dust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:emerald_dust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:blasting_emerald_dust_to_emerald"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_emerald_dust",
+      "has_the_recipe"
+    ]
+  ]
+}

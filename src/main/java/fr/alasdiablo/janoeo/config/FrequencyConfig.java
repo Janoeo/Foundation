@@ -86,6 +86,8 @@ public class FrequencyConfig {
 
         public final IntValue LAPIS_GRAVEL_ORE_SIZE, LAPIS_GRAVEL_ORE_COUNT, LAPIS_GRAVEL_ORE_BOTTOM, LAPIS_GRAVEL_ORE_TOP;
 
+        public final IntValue EMERALD_GRAVEL_ORE_SIZE, EMERALD_GRAVEL_ORE_BOTTOM, EMERALD_GRAVEL_ORE_TOP;
+
         public final IntValue OCEAN_IRON_GRAVEL_ORE_SIZE, OCEAN_IRON_GRAVEL_ORE_COUNT, OCEAN_IRON_GRAVEL_ORE_BOTTOM, OCEAN_IRON_GRAVEL_ORE_TOP;
 
         public final IntValue OCEAN_GOLD_GRAVEL_ORE_SIZE, OCEAN_GOLD_GRAVEL_ORE_COUNT, OCEAN_GOLD_GRAVEL_ORE_BOTTOM, OCEAN_GOLD_GRAVEL_ORE_TOP;
@@ -96,6 +98,8 @@ public class FrequencyConfig {
 
         public final IntValue OCEAN_LAPIS_GRAVEL_ORE_SIZE, OCEAN_LAPIS_GRAVEL_ORE_COUNT, OCEAN_LAPIS_GRAVEL_ORE_BOTTOM, OCEAN_LAPIS_GRAVEL_ORE_TOP;
 
+        public final IntValue OCEAN_EMERALD_GRAVEL_ORE_SIZE, OCEAN_EMERALD_GRAVEL_ORE_BOTTOM, OCEAN_EMERALD_GRAVEL_ORE_TOP;
+
         public final IntValue NETHER_IRON_GRAVEL_ORE_SIZE, NETHER_IRON_GRAVEL_ORE_COUNT, NETHER_IRON_GRAVEL_ORE_BOTTOM, NETHER_IRON_GRAVEL_ORE_TOP;
 
         public final IntValue NETHER_GOLD_GRAVEL_ORE_SIZE, NETHER_GOLD_GRAVEL_ORE_COUNT, NETHER_GOLD_GRAVEL_ORE_BOTTOM, NETHER_GOLD_GRAVEL_ORE_TOP;
@@ -105,6 +109,8 @@ public class FrequencyConfig {
         public final IntValue NETHER_COAL_GRAVEL_ORE_SIZE, NETHER_COAL_GRAVEL_ORE_COUNT, NETHER_COAL_GRAVEL_ORE_BOTTOM, NETHER_COAL_GRAVEL_ORE_TOP;
 
         public final IntValue NETHER_LAPIS_GRAVEL_ORE_SIZE, NETHER_LAPIS_GRAVEL_ORE_COUNT, NETHER_LAPIS_GRAVEL_ORE_BOTTOM, NETHER_LAPIS_GRAVEL_ORE_TOP;
+
+        public final IntValue NETHER_EMERALD_GRAVEL_ORE_SIZE, NETHER_EMERALD_GRAVEL_ORE_BOTTOM, NETHER_EMERALD_GRAVEL_ORE_TOP;
 
         public final IntValue COAL_NETHER_ORE_SIZE, COAL_NETHER_ORE_COUNT, COAL_NETHER_ORE_BOTTOM, COAL_NETHER_ORE_TOP;
 
@@ -257,6 +263,10 @@ public class FrequencyConfig {
             LAPIS_GRAVEL_ORE_TOP      = builder.defineInRange("overworld.gravel.lapis.top"             , 23 , worldMin, worldMax);
             LAPIS_GRAVEL_ORE_BOTTOM   = builder.defineInRange("overworld.gravel.lapis.bottom"          , 1  , worldMin, worldMax);
 
+            EMERALD_GRAVEL_ORE_SIZE   = builder.defineInRange("overworld.gravel.emerald.size"          , 4  , sizeMin, sizeMax);
+            EMERALD_GRAVEL_ORE_TOP    = builder.defineInRange("overworld.gravel.emerald.top"           , 18 , worldMin, worldMax);
+            EMERALD_GRAVEL_ORE_BOTTOM = builder.defineInRange("overworld.gravel.emerald.bottom"        , 1  , worldMin, worldMax);
+
             // --------------------------------------------- overworld.dense ---------------------------------------------
 
             DENSE_COPPER_ORE_COUNT               = builder.defineInRange("overworld.dense.copper.count"      , 128, countMin, countMax);
@@ -330,6 +340,10 @@ public class FrequencyConfig {
             OCEAN_LAPIS_GRAVEL_ORE_COUNT     = builder.defineInRange("overworld.ocean.gravel.lapis.count"           , 24, countMin, countMax);
             OCEAN_LAPIS_GRAVEL_ORE_TOP       = builder.defineInRange("overworld.ocean.gravel.lapis.top"             , 43, worldMin, worldMax);
             OCEAN_LAPIS_GRAVEL_ORE_BOTTOM    = builder.defineInRange("overworld.ocean.gravel.lapis.bottom"          , 1 , worldMin, worldMax);
+
+            OCEAN_EMERALD_GRAVEL_ORE_SIZE    = builder.defineInRange("overworld.ocean.gravel.emerald.size"          , 4 , sizeMin, sizeMax);
+            OCEAN_EMERALD_GRAVEL_ORE_TOP     = builder.defineInRange("overworld.ocean.gravel.emerald.top"           , 38, worldMin, worldMax);
+            OCEAN_EMERALD_GRAVEL_ORE_BOTTOM  = builder.defineInRange("overworld.ocean.gravel.emerald.bottom"        , 1 , worldMin, worldMax);
 
             // --------------------------------------------- nether ---------------------------------------------
 
@@ -480,6 +494,10 @@ public class FrequencyConfig {
             NETHER_LAPIS_GRAVEL_ORE_COUNT     = builder.defineInRange("nether.gravel.lapis.count"   , 36 , countMin, countMax);
             NETHER_LAPIS_GRAVEL_ORE_TOP       = builder.defineInRange("nether.gravel.lapis.top"     , 127, worldMin, worldMax);
             NETHER_LAPIS_GRAVEL_ORE_BOTTOM    = builder.defineInRange("nether.gravel.lapis.bottom"  , 1  , worldMin, worldMax);
+
+            NETHER_EMERALD_GRAVEL_ORE_SIZE    = builder.defineInRange("nether.gravel.emerald.size"    , 4  , sizeMin, sizeMax);
+            NETHER_EMERALD_GRAVEL_ORE_TOP     = builder.defineInRange("nether.gravel.emerald.top"     , 127, worldMin, worldMax);
+            NETHER_EMERALD_GRAVEL_ORE_BOTTOM  = builder.defineInRange("nether.gravel.emerald.bottom"  , 1  , worldMin, worldMax);
 
             // --------------------------------------------- nether.basalt ---------------------------------------------
 

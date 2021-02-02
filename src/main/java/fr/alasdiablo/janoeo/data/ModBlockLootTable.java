@@ -106,5 +106,6 @@ public class ModBlockLootTable extends DioBlockLootTables {
         this.registerLootTable(GravelsOresBlocks.IRON_GRAVEL_ORE, (iron) -> droppingItemWithFortune(iron, DustsItems.IRON_DUST));
         this.registerLootTable(GravelsOresBlocks.LAPIS_GRAVEL_ORE, (lapis) -> droppingItemWithFortune(lapis, DustsItems.LAPIS_DUST));
         this.registerLootTable(GravelsOresBlocks.COAL_GRAVEL_ORE, (coal) -> droppingItemWithFortune(coal, DustsItems.COAL_DUST));
+        this.registerLootTable(GravelsOresBlocks.EMERALD_GRAVEL_ORE, (emerald) -> droppingItemWithFortune(emerald, DustsItems.EMERALD_DUST));
     }
 }
