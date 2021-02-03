@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "janoeo:smelting_gold_basalt_ore_to_gold_ingot"
+    ]
+  },
+  "criteria": {
+    "has_basalt_gold_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:gold_basalt_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "janoeo:smelting_gold_basalt_ore_to_gold_ingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_basalt_gold_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

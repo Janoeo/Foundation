@@ -17,24 +17,11 @@ public class GemsItems {
     /**
      * Instance of the Item Properties used by item declared by the class
      */
-    private static final Item.Properties PROPERTIES
-            = new Item.Properties().group(JanoeoGroup.ORE_ITEMS);
+    private static final Item.Properties PROPERTIES = new Item.Properties().group(JanoeoGroup.ORE_ITEMS);
 
-    /**
-     * Instance of Ruby Gem Item
-     */
-    public static Item RUBY
-            = new Item(PROPERTIES).setRegistryName(Registries.RUBY);
-    /**
-     * Instance of Sapphire Gem Item
-     */
-    public static Item SAPPHIRE
-            = new Item(PROPERTIES).setRegistryName(Registries.SAPPHIRE);
-    /**
-     * Instance of Amethyst Gem Item
-     */
-    public static Item AMETHYST
-            = new Item(PROPERTIES).setRegistryName(Registries.AMETHYST);
+    public static Item RUBY = new Item(PROPERTIES).setRegistryName(Registries.RUBY);
+    public static Item SAPPHIRE = new Item(PROPERTIES).setRegistryName(Registries.SAPPHIRE);
+    public static Item AMETHYST = new Item(PROPERTIES).setRegistryName(Registries.AMETHYST);
 
     /**
      * Registry Event Handler

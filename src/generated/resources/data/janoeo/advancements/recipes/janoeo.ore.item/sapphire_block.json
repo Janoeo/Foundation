@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "has_ruby": {
+    "has_sapphire": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -25,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_ruby",
+      "has_sapphire",
       "has_the_recipe"
     ]
   ]

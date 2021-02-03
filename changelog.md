@@ -4,6 +4,7 @@
     + Diamond nether ore
     + Emerald nether ore
   + Bad registry name apply on some block
+  + Missing recipe
 + Add
   + Dust
     + Coal
@@ -24,6 +25,8 @@
     + Lapis
     + Emerald
   + Custom creative tab
++ Compatibility
+  + Create (partial)
 
 ### 4.5.0.63-experimental
 + Add support for DiaboloLib 1.0.4

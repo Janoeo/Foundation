@@ -30,4 +30,10 @@ Mod content:
     versionRange="[1.0.6,)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.janoeo]]
+    modId="create"
+    mandatory=false
+    versionRange="[mc1.16.3_v0.3e,)"
+    ordering="AFTER"
+    side="BOTH"
 

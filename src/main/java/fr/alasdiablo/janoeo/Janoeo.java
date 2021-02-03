@@ -1,18 +1,16 @@
 package fr.alasdiablo.janoeo;
 
-import fr.alasdiablo.diolib.util.DateRange;
 import fr.alasdiablo.janoeo.config.*;
 import fr.alasdiablo.janoeo.util.Registries;
 import fr.alasdiablo.janoeo.world.OreGenUtils;
 import fr.alasdiablo.janoeo.world.gen.feature.OresFeatures;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartedEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,7 +20,6 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Calendar;
 
 /**
  * Janoeo Main class
@@ -31,11 +28,17 @@ import java.util.Calendar;
 public class Janoeo {
 
     public static final Logger logger = LogManager.getLogger(Registries.MODID);
+    public static class Compact {
+        public static boolean CREATE = false;
+    }
 
     /**
      * Jannoeo default constructor
      */
     public Janoeo() {
+        FMLLoader.getLoadingModList().getMods().forEach(modInfo -> {
+            if (modInfo.getModId().equals("create")) Compact.CREATE = true;
+        });
         this.initConfig();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::initFeatures);

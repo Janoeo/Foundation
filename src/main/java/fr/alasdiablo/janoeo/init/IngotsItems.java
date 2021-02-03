@@ -17,50 +17,16 @@ public class IngotsItems {
     /**
      * Instance of the Item Properties used by item declared by the class
      */
-    private static final Item.Properties PROPERTIES
-            = new Item.Properties().group(JanoeoGroup.ORE_ITEMS);
+    private static final Item.Properties PROPERTIES = new Item.Properties().group(JanoeoGroup.ORE_ITEMS);
 
-    /**
-     * Instance of Copper Ingot Item
-     */
-    public static Item COPPER_INGOT
-            = new Item(PROPERTIES).setRegistryName(Registries.COPPER_INGOT);
-    /**
-     * Instance of Tin Ingot Item
-     */
-    public static Item TIN_INGOT
-            = new Item(PROPERTIES).setRegistryName(Registries.TIN_INGOT);
-    /**
-     * Instance of Aluminium Ingot Item
-     */
-    public static Item ALUMINIUM_INGOT
-            = new Item(PROPERTIES).setRegistryName(Registries.ALUMINIUM_INGOT);
-    /**
-     * Instance of Lead Ingot Item
-     */
-    public static Item LEAD_INGOT
-            = new Item(PROPERTIES).setRegistryName(Registries.LEAD_INGOT);
-    /**
-     * Instance of Silver Ingot Item
-     */
-    public static Item SILVER_INGOT
-            = new Item(PROPERTIES).setRegistryName(Registries.SILVER_INGOT);
-    /**
-     * Instance of Uranium Ingot Item
-     */
-    public static Item URANIUM_INGOT
-            = new Item(PROPERTIES).setRegistryName(Registries.URANIUM_INGOT);
-    /**
-     * Instance of Zinc Ingot Item
-     */
-    public static Item ZINC_INGOT
-            = new Item(PROPERTIES).setRegistryName(Registries.ZINC_INGOT);
-
-    /**
-     * Instance of Osmium Ingot Item
-     */
-    public static Item OSMIUM_INGOT
-            = new Item(PROPERTIES).setRegistryName(Registries.OSMIUM_INGOT);
+    public static Item COPPER_INGOT = new Item(PROPERTIES).setRegistryName(Registries.COPPER_INGOT);
+    public static Item TIN_INGOT = new Item(PROPERTIES).setRegistryName(Registries.TIN_INGOT);
+    public static Item ALUMINIUM_INGOT = new Item(PROPERTIES).setRegistryName(Registries.ALUMINIUM_INGOT);
+    public static Item LEAD_INGOT = new Item(PROPERTIES).setRegistryName(Registries.LEAD_INGOT);
+    public static Item SILVER_INGOT = new Item(PROPERTIES).setRegistryName(Registries.SILVER_INGOT);
+    public static Item URANIUM_INGOT = new Item(PROPERTIES).setRegistryName(Registries.URANIUM_INGOT);
+    public static Item ZINC_INGOT = new Item(PROPERTIES).setRegistryName(Registries.ZINC_INGOT);
+    public static Item OSMIUM_INGOT = new Item(PROPERTIES).setRegistryName(Registries.OSMIUM_INGOT);
 
     /**
      * Registry Event Handler

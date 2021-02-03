@@ -98,8 +98,7 @@ public class NetherOresBlocks {
     /**
      * Instance of Nether Osmium Ore Block
      */
-    public static Block OSMIUM_NETHER_ORE
-            = new NetherOre(Registries.OSMIUM_NETHER_ORE, NULL);
+    public static Block OSMIUM_NETHER_ORE = new NetherOre(Registries.OSMIUM_NETHER_ORE, NULL);
 
     /**
      * Registry Event Handler

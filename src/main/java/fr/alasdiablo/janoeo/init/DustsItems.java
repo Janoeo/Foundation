@@ -17,28 +17,13 @@ public class DustsItems {
     /**
      * Instance of the Item Properties used by item declared by the class
      */
-    private static final Item.Properties PROPERTIES
-            = new Item.Properties().group(JanoeoGroup.ORE_ITEMS);
+    private static final Item.Properties PROPERTIES = new Item.Properties().group(JanoeoGroup.ORE_ITEMS);
 
-    /**
-     * Instance of Diamond Dust Item
-     */
-    public static Item DIAMOND_DUST
-            = new Item(PROPERTIES).setRegistryName(Registries.DIAMOND_DUST);
-    /**
-     * Instance of Gold Dust Item
-     */
-    public static Item GOLD_DUST
-            = new Item(PROPERTIES).setRegistryName(Registries.GOLD_DUST);
-    /**
-     * Instance of Iron Dust Item
-     */
-    public static Item IRON_DUST
-            = new Item(PROPERTIES).setRegistryName(Registries.IRON_DUST);
-
+    public static Item DIAMOND_DUST = new Item(PROPERTIES).setRegistryName(Registries.DIAMOND_DUST);
+    public static Item GOLD_DUST = new Item(PROPERTIES).setRegistryName(Registries.GOLD_DUST);
+    public static Item IRON_DUST = new Item(PROPERTIES).setRegistryName(Registries.IRON_DUST);
     public static Item COAL_DUST = new Item(PROPERTIES).setRegistryName(Registries.COAL_DUST);
     public static Item LAPIS_DUST = new Item(PROPERTIES).setRegistryName(Registries.LAPIS_DUST);
-
     public static Item EMERALD_DUST = new Item(PROPERTIES).setRegistryName(Registries.EMERALD_DUST);
     public static Item ALUMINIUM_DUST = new Item(PROPERTIES).setRegistryName(Registries.ALUMINIUM_DUST);
     public static Item LEAD_DUST = new Item(PROPERTIES).setRegistryName(Registries.LEAD_DUST);

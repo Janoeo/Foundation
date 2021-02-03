@@ -28,18 +28,18 @@ public class CraftRecipes extends RecipeProvider {
     @SuppressWarnings("NullableProblems")
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-        ShapelessRecipeBuilder.shapelessRecipe(GemsItems.RUBY, 9)
+        ShapelessRecipeBuilder.shapelessRecipe(AllItems.Gems.RUBY, 9)
                 .addIngredient(ModBlocks.RUBY_BLOCK)
                 .addCriterion("has_ruby_block", hasItem(ModBlocks.RUBY_BLOCK))
                 .build(consumer, new ResourceLocation(Registries.MODID, "ruby_from_block"));
 
-        ShapelessRecipeBuilder.shapelessRecipe(GemsItems.SAPPHIRE, 9)
+        ShapelessRecipeBuilder.shapelessRecipe(AllItems.Gems.SAPPHIRE, 9)
                 .addIngredient(ModBlocks.SAPPHIRE_BLOCK)
                 .addCriterion("has_sapphire_block", hasItem(ModBlocks.SAPPHIRE_BLOCK))
                 .build(consumer, new ResourceLocation(Registries.MODID, "sapphire_from_block"));
 
         ShapedRecipeBuilder.shapedRecipe(ModBlocks.RUBY_BLOCK)
-                .key('R', GemsItems.RUBY)
+                .key('R', AllItems.Gems.RUBY)
                 .patternLine("RRR")
                 .patternLine("RRR")
                 .patternLine("RRR")
@@ -47,7 +47,7 @@ public class CraftRecipes extends RecipeProvider {
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(ModBlocks.SAPPHIRE_BLOCK)
-                .key('S', GemsItems.SAPPHIRE)
+                .key('S', AllItems.Gems.SAPPHIRE)
                 .patternLine("SSS")
                 .patternLine("SSS")
                 .patternLine("SSS")

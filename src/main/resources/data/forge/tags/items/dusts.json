@@ -3,6 +3,20 @@
   "values": [
     "#forge:dusts/iron",
     "#forge:dusts/gold",
-    "#forge:dusts/diamond"
+    "#forge:dusts/diamond",
+    "#forge:dusts/aluminium",
+    "#forge:dusts/aluminum",
+    "#forge:dusts/coal",
+    "#forge:dusts/copper",
+    "#forge:dusts/emerald",
+    "#forge:dusts/lapis",
+    "#forge:dusts/lead",
+    "#forge:dusts/nickel",
+    "#forge:dusts/platinum",
+    "#forge:dusts/ruby",
+    "#forge:dusts/sapphire",
+    "#forge:dusts/silver",
+    "#forge:dusts/tin",
+    "#forge:dusts/uranium"
   ]
 }

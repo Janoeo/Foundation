@@ -64,9 +64,17 @@ minecraft {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
+repositories {
+    maven { url = 'https://www.cursemaven.com/' }
+}
+
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.4-35.1.4'
     compile fileTree(dir:'lib', include:'*.jar')
+    // Mod with compatibility patch
+    implementation fg.deobf("curse.maven:create-328085:3167531")
+    // JEI: use for quick testing on compatibility
+    implementation fg.deobf("curse.maven:jei-238222:3189632")
 }
 
 jar {
