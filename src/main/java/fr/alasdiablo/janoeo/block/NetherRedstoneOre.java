@@ -23,7 +23,7 @@ public class NetherRedstoneOre extends RedstoneOreBlock implements INetherOre {
      */
     public NetherRedstoneOre(String registryName) {
         super(Properties.create(Material.ROCK)
-                .sound(SoundType.NETHERRACK)
+                .sound(SoundType.NETHER_ORE)
                 .tickRandomly()
                 .hardnessAndResistance(1f)
                 .harvestLevel(2)

@@ -3,6 +3,7 @@ package fr.alasdiablo.janoeo.block;
 import fr.alasdiablo.diolib.generic.ExperienceRarity;
 import fr.alasdiablo.diolib.generic.IDropExperience;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -30,7 +31,7 @@ public class BasaltOre extends RotatedPillarBlock implements IDropExperience {
         super(Properties.create(Material.ROCK)
                 .setRequiresTool()
                 .hardnessAndResistance(2f, 4f)
-                .sound(SoundType.BASALT)
+                .sound(SoundType.NETHER_GOLD)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
         );

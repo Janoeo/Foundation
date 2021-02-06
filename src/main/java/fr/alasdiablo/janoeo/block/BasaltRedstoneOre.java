@@ -31,7 +31,7 @@ public class BasaltRedstoneOre extends RedstoneOreBlock {
         super(Properties.create(Material.ROCK)
                 .setRequiresTool()
                 .hardnessAndResistance(2f, 4f)
-                .sound(SoundType.BASALT)
+                .sound(SoundType.NETHER_GOLD)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
                 .tickRandomly()

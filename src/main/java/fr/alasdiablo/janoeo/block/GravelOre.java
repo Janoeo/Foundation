@@ -30,6 +30,7 @@ public class GravelOre extends GravelBlock implements IDropExperience {
                 .hardnessAndResistance(1f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.SHOVEL)
+                .setRequiresTool()
         );
         this.setRegistryName(registryName);
         this.experienceRarity = experienceRarity;

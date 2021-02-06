@@ -32,10 +32,11 @@ public class NetherOre extends OreBlock implements INetherOre, IDropExperience {
      */
     public NetherOre(String registryName, ExperienceRarity experienceRarity) {
         super(Properties.create(Material.ROCK)
-                .sound(SoundType.NETHERRACK)
+                .sound(SoundType.NETHER_ORE)
                 .hardnessAndResistance(1f)
                 .harvestLevel(2)
                 .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool()
         );
         this.setRegistryName(registryName);
         this.experienceRarity = experienceRarity;

@@ -1,3 +1,11 @@
+### 5.6.0.68
++ Fix
+  + Missing requirement tools
++ Change
+  + SoundType of:
+    + Basalt Ore
+    + Nether Ore
+
 ### 5.6.0.67
 + Fix
   + Missing ore generation ([#10](https://github.com/AlasDiablo/JANOEO/issues/10))

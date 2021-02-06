@@ -36,6 +36,7 @@ public class EndOre extends OreBlock implements IEndOre, IDropExperience {
                 .hardnessAndResistance(4.0f, 8.0f)
                 .harvestLevel(3)
                 .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool()
         );
         this.setRegistryName(registryName);
         this.experienceRarity = experienceRarity;

@@ -31,6 +31,7 @@ public class BasicOre extends OreBlock implements IDropExperience {
                 .hardnessAndResistance(3f)
                 .harvestLevel(harvestLevel)
                 .harvestTool(ToolType.PICKAXE)
+                .setRequiresTool()
         );
         this.setRegistryName(registryName);
         this.experienceRarity = experienceRarity;
