@@ -3,14 +3,20 @@ package fr.alasdiablo.janoeo.world.gen;
 import fr.alasdiablo.diolib.util.RegistryHelper;
 import fr.alasdiablo.diolib.world.IWorldGenerator;
 import fr.alasdiablo.diolib.world.WorldGenerationHelper;
+import fr.alasdiablo.janoeo.Janoeo;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
+import fr.alasdiablo.janoeo.init.NetherOresBlocks;
 import fr.alasdiablo.janoeo.init.OverworldDenseOresBlocks;
 import fr.alasdiablo.janoeo.init.OverworldOresBlocks;
 import fr.alasdiablo.janoeo.config.GlobalConfig;
 import fr.alasdiablo.janoeo.config.OverworldConfig;
+import net.minecraft.block.Block;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraftforge.common.ForgeConfigSpec;
+
+import java.util.Map;
 
 /**
  * Overworld Ore Generator
@@ -27,94 +33,22 @@ public class OverworldOreGenerator implements IWorldGenerator{
         final OverworldConfig.Config OVERWORLD_CONFIG = OverworldConfig.CONFIG;
         final FrequencyConfig.Config FREQUENCY_CONFIG = FrequencyConfig.CONFIG;
 
+        Janoeo.logger.debug("JANOEO OVERWORLD CONFIG = " + OVERWORLD_CONFIG.Ores);
+
         if (GLOBAL_CONFIG.EXTRA_ORE_GEN.get()) {
+            for (Map.Entry<String,  ForgeConfigSpec.BooleanValue> Ore : OVERWORLD_CONFIG.Ores.entrySet()) {
+                String OreName = Ore.getKey();
+                ForgeConfigSpec.BooleanValue ConfigValue = Ore.getValue();
 
-            if (OVERWORLD_CONFIG.COPPER_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.COPPER_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.TIN_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.TIN_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.ALUMINIUM_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.ALUMINIUM_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.URANIUM_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.URANIUM_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.OSMIUM_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.OSMIUM_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.LEAD_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.LEAD_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.SILVER_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.SILVER_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.RUBY_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.RUBY_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.SAPPHIRE_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.SAPPHIRE_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.AMETHYST_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.AMETHYST_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
-            }
-
-            if (OVERWORLD_CONFIG.ZINC_ORE.get()) {
-                WorldGenerationHelper.addFeature(
-                        biome,
-                        WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.ZINC_ORE.getRegistryName()),
-                        GenerationStage.Decoration.UNDERGROUND_ORES
-                );
+                Janoeo.logger.debug(OreName + " IS ENABLED = " + ConfigValue.get());
+                if (ConfigValue.get() && OverworldOresBlocks.Ores.containsKey(OreName)) {
+                    Janoeo.logger.debug("Add World Generation Feature = " + OverworldOresBlocks.Ores.get(OreName).getRegistryName());
+                    WorldGenerationHelper.addFeature(
+                            biome,
+                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(OverworldOresBlocks.Ores.get(OreName).getRegistryName()),
+                            GenerationStage.Decoration.UNDERGROUND_ORES
+                    );
+                }
             }
         }
 
@@ -182,7 +116,7 @@ public class OverworldOreGenerator implements IWorldGenerator{
                         GenerationStage.Decoration.UNDERGROUND_ORES
                 );
             }
-            if (GLOBAL_CONFIG.EXTRA_ORE_GEN.get()) {
+            if (GLOBAL_CONFIG.EXTRA_ORE_GEN.get() && false) {
                 if (OVERWORLD_CONFIG.DENSE_COPPER_ORE.get()) {
                     for (int i = 0; i < FREQUENCY_CONFIG.DENSE_COPPER_ORE_MULTIPLIER_FACTOR.get(); i++) WorldGenerationHelper.addFeature(
                             biome,

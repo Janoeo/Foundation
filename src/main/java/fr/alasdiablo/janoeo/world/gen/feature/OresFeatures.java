@@ -3,11 +3,14 @@ package fr.alasdiablo.janoeo.world.gen.feature;
 import fr.alasdiablo.diolib.util.RegistryHelper;
 import fr.alasdiablo.diolib.world.ExtenedFillerBlockType;
 import fr.alasdiablo.diolib.world.WorldGenerationHelper;
+import fr.alasdiablo.janoeo.Janoeo;
 import fr.alasdiablo.janoeo.init.*;
 import fr.alasdiablo.janoeo.config.FrequencyConfig;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -209,7 +212,7 @@ public class OresFeatures {
                     FREQUENCY_CONFIG.DENSE_REDSTONE_ORE_TOP.get()
             );
 
-        for (int i = 0; i < FREQUENCY_CONFIG.DENSE_TIN_ORE_MULTIPLIER_FACTOR.get(); i++)
+        /*for (int i = 0; i < FREQUENCY_CONFIG.DENSE_TIN_ORE_MULTIPLIER_FACTOR.get(); i++)
             WorldGenerationHelper.ConfiguredFeatureHelper.registerReplaceBlockFeature(
                     Objects.requireNonNull(
                             RegistryHelper.setPrefixOnRegistryName(OverworldDenseOresBlocks.DENSE_TIN_ORE.getRegistryName(), String.valueOf(i))
@@ -231,7 +234,7 @@ public class OresFeatures {
                     FREQUENCY_CONFIG.DENSE_COPPER_ORE_COUNT.get(),
                     FREQUENCY_CONFIG.DENSE_COPPER_ORE_BOTTOM.get(),
                     FREQUENCY_CONFIG.DENSE_COPPER_ORE_TOP.get()
-            );
+            );*/
     }
 
     /**
@@ -838,136 +841,38 @@ public class OresFeatures {
      * Initialized Overworld Ore
      */
     public static void initOverworld() {
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.COPPER_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.COPPER_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.COPPER_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.COPPER_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.COPPER_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.COPPER_ORE_TOP.get()
-        );
+        for (Map.Entry<String, Block> Ore : OverworldOresBlocks.Ores.entrySet()) {
+            String OreName = Ore.getKey();
+            Block OreBlock = Ore.getValue();
 
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.TIN_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.TIN_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.TIN_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.TIN_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.TIN_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.TIN_ORE_TOP.get()
-        );
-
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.ALUMINIUM_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.ALUMINIUM_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.ALUMINIUM_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.ALUMINIUM_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.ALUMINIUM_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.ALUMINIUM_ORE_TOP.get()
-        );
-
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.URANIUM_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.URANIUM_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.URANIUM_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.URANIUM_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.URANIUM_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.URANIUM_ORE_TOP.get()
-        );
-
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.OSMIUM_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.OSMIUM_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.OSMIUM_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.OSMIUM_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.OSMIUM_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.OSMIUM_ORE_TOP.get()
-        );
-
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.LEAD_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.LEAD_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.LEAD_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.LEAD_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.LEAD_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.LEAD_ORE_TOP.get()
-        );
-
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.SILVER_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.SILVER_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.SILVER_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.SILVER_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.SILVER_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.SILVER_ORE_TOP.get()
-        );
-
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.RUBY_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.RUBY_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.RUBY_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.RUBY_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.RUBY_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.RUBY_ORE_TOP.get()
-        );
-
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.SAPPHIRE_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.SAPPHIRE_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.SAPPHIRE_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.SAPPHIRE_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.SAPPHIRE_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.SAPPHIRE_ORE_TOP.get()
-        );
-
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.AMETHYST_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.AMETHYST_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.AMETHYST_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.AMETHYST_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.AMETHYST_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.AMETHYST_ORE_TOP.get()
-        );
-
-        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
-                Objects.requireNonNull(
-                        OverworldOresBlocks.ZINC_ORE.getRegistryName()
-                ),
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                OverworldOresBlocks.ZINC_ORE.getDefaultState(),
-                FREQUENCY_CONFIG.ZINC_ORE_SIZE.get(),
-                FREQUENCY_CONFIG.ZINC_ORE_COUNT.get(),
-                FREQUENCY_CONFIG.ZINC_ORE_BOTTOM.get(),
-                FREQUENCY_CONFIG.ZINC_ORE_TOP.get()
-        );
+            if (FREQUENCY_CONFIG.Frequency.containsKey("ALUMINIUM_ORE")) {
+                if (FREQUENCY_CONFIG.Frequency.get("ALUMINIUM_ORE").containsKey("OVERWORLD.STONE")) {
+                    if (FREQUENCY_CONFIG.Frequency.get("ALUMINIUM_ORE").get("OVERWORLD.STONE").containsKey("SIZE")) {
+                        WorldGenerationHelper.ConfiguredFeatureHelper.registerOreFeature(
+                                Objects.requireNonNull(
+                                        OreBlock.getRegistryName()
+                                ),
+                                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
+                                OreBlock.getDefaultState(),
+                                FREQUENCY_CONFIG.Frequency.get("ALUMINIUM_ORE").get("OVERWORLD.STONE").get("SIZE").get(),
+                                FREQUENCY_CONFIG.Frequency.get("ALUMINIUM_ORE").get("OVERWORLD.STONE").get("COUNT").get(),
+                                FREQUENCY_CONFIG.Frequency.get("ALUMINIUM_ORE").get("OVERWORLD.STONE").get("BOTTOM").get(),
+                                FREQUENCY_CONFIG.Frequency.get("ALUMINIUM_ORE").get("OVERWORLD.STONE").get("TOP").get()
+                        );
+                    } else {
+                        WorldGenerationHelper.ConfiguredFeatureHelper.registerReplaceBlockFeature(
+                                Objects.requireNonNull(
+                                        OreBlock.getRegistryName()
+                                ),
+                                Blocks.STONE.getDefaultState(),
+                                OreBlock.getDefaultState(),
+                                FREQUENCY_CONFIG.Frequency.get("ALUMINIUM_ORE").get("OVERWORLD.STONE").get("COUNT").get(),
+                                FREQUENCY_CONFIG.Frequency.get("ALUMINIUM_ORE").get("OVERWORLD.STONE").get("BOTTOM").get(),
+                                FREQUENCY_CONFIG.Frequency.get("ALUMINIUM_ORE").get("OVERWORLD.STONE").get("TOP").get()
+                        );
+                    }
+                }
+            }
+        }
     }
 }

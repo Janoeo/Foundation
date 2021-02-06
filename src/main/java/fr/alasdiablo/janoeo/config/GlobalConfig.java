@@ -28,31 +28,20 @@ public class GlobalConfig {
      */
     public static class Config {
 
-        /**
-         * Nether ore generation config value
-         */
-        public final ForgeConfigSpec.BooleanValue NETHER_ORE_GEN;
-
-        /**
-         * End ore generation config value
-         */
-        public final ForgeConfigSpec.BooleanValue END_ORE_GEN;
-
-
+        // ----------------------------------------------- ore gen ------------------------------------------------
         public final ForgeConfigSpec.BooleanValue GRAVEL_ORE_GEN;
+        public final ForgeConfigSpec.BooleanValue NETHER_ORE_GEN;
+        public final ForgeConfigSpec.BooleanValue END_ORE_GEN;
         public final ForgeConfigSpec.BooleanValue BASALT_ORE_GEN;
 
-        /**
-         * dense ore generation config value
-         */
+        // -------------------------------------------- dense ore gen ---------------------------------------------
         public final ForgeConfigSpec.BooleanValue DENSE_ORE_GEN;
         public final ForgeConfigSpec.BooleanValue NETHER_DENSE_ORE_GEN;
 
-        /**
-         * extra ore generation config value
-         */
+        // ------------------------------------------- extra ore gen ----------------------------------------------
         public final ForgeConfigSpec.BooleanValue EXTRA_ORE_GEN;
         public final ForgeConfigSpec.BooleanValue EXTRA_NETHER_ORE_GEN;
+        public final ForgeConfigSpec.BooleanValue EXTRA_END_ORE_GEN;
 
         /**
          * build the config file
@@ -60,14 +49,18 @@ public class GlobalConfig {
          */
         public Config(ForgeConfigSpec.Builder builder) {
             builder.comment("Common config for janoeo").push("janoeo");
+            GRAVEL_ORE_GEN = builder.comment("Gravel ore generation: disable / enable").define("gravelOreGen", true);
+
             NETHER_ORE_GEN = builder.comment("Nether ore generation: disable / enable").define("netherOreGen", true);
             END_ORE_GEN = builder.comment("End ore generation: disable / enable").define("endOreGen", true);
-            GRAVEL_ORE_GEN = builder.comment("Gravel ore generation: disable / enable").define("gravelOreGen", true);
             BASALT_ORE_GEN = builder.comment("Basalt ore generation: disable / enable").define("basaltOreGen", true);
+
             DENSE_ORE_GEN = builder.comment("Overworld dense ore generation: disable / enable").define("denseOreGen", true);
             NETHER_DENSE_ORE_GEN = builder.comment("Nether dense ore generation: disable / enable").define("denseOreGen", true);
+
             EXTRA_ORE_GEN = builder.comment("Extra ore generation: disable / enable").define("extraOreGen", true);
             EXTRA_NETHER_ORE_GEN = builder.comment("Extra nether ore generation: disable / enable").define("extraNetherOreGen", true);
+            EXTRA_END_ORE_GEN = builder.comment("Extra end ore generation: disable / enable").define("extraEndOreGen", true);
             builder.pop();
         }
     }
