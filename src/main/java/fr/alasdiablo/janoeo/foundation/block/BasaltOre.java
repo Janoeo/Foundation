@@ -1,0 +1,64 @@
+package fr.alasdiablo.janoeo.foundation.block;
+
+import fr.alasdiablo.diolib.generic.ExperienceRarity;
+import fr.alasdiablo.diolib.generic.IDropExperience;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.RotatedPillarBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IWorldReader;
+import net.minecraftforge.common.ToolType;
+
+/**
+ * Default implementation of Basalt Ore blocks
+ */
+public class BasaltOre extends RotatedPillarBlock implements IDropExperience {
+
+    /**
+     * Variable use of store ExperienceRarity needed by IDropExperience
+     */
+    private final ExperienceRarity experienceRarity;
+
+    /**
+     * Default constructor
+     *
+     * @param registryName     Name of the block
+     * @param experienceRarity ExperienceRarity of the block
+     */
+    public BasaltOre(String registryName, ExperienceRarity experienceRarity) {
+        super(Properties.create(Material.ROCK)
+                .setRequiresTool()
+                .hardnessAndResistance(2f, 4f)
+                .sound(SoundType.NETHER_GOLD)
+                .harvestLevel(2)
+                .harvestTool(ToolType.PICKAXE)
+        );
+        this.setRegistryName(registryName);
+        this.experienceRarity = experienceRarity;
+    }
+
+    /**
+     * Rewrite <i>getExpDrop</i> for make it compatible with <i>IDropExperience</i>
+     *
+     * @see fr.alasdiablo.diolib.generic.IDropExperience
+     * @see net.minecraftforge.common.extensions.IForgeBlock
+     */
+    @Override
+    public int getExpDrop(BlockState state, IWorldReader world, BlockPos pos, int fortune, int silktouch) {
+        if (silktouch == 0) {
+            int experience = this.getExperience(RANDOM, this);
+            return experience != -1 ? experience : 0;
+        } else return 0;
+    }
+
+    /**
+     * Implement getter of <i>IDropExperience</i>
+     *
+     * @see fr.alasdiablo.diolib.generic.IDropExperience
+     */
+    @Override
+    public ExperienceRarity getExperienceRarity() {
+        return this.experienceRarity;
+    }
+}

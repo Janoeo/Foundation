@@ -3,9 +3,9 @@ loaderVersion="[34,)"
 license="LGPL-3.0"
 [[mods]]
 modId="janoeo"
-version="${file.jarVersion}"
-displayName="Janoeo"
-updateJSONURL="https://raw.githubusercontent.com/AlasDiablo/JANOEO-Doc/gh-pages/version/janoeo.json"
+version = "${file.jarVersion}"
+displayName = "Janoeo Fondation"
+updateJSONURL = "https://raw.githubusercontent.com/AlasDiablo/JANOEO-Doc/gh-pages/version/janoeo.json"
 authors="AlasDiablo, lIotaMiu, Egame257 and Safyrus"
 description='''
 Janoeo Project Mod
@@ -14,21 +14,21 @@ Mod content:
 '''
 [[dependencies.janoeo]]
     modId="forge"
-    mandatory=true
-    versionRange="[34,)"
-    ordering="NONE"
+mandatory = true
+versionRange = "[36,)"
+ordering = "NONE"
     side="BOTH"
 [[dependencies.janoeo]]
     modId="minecraft"
-    mandatory=true
-    versionRange="[1.16.3,)"
-    ordering="NONE"
+mandatory = true
+versionRange = "[1.16.5,)"
+ordering = "NONE"
     side="BOTH"
 [[dependencies.janoeo]]
     modId="diolib"
-    mandatory=true
-    versionRange="[1.0.6,)"
-    ordering="NONE"
+mandatory = true
+versionRange = "[2.0.9,)"
+ordering = "NONE"
     side="BOTH"
 [[dependencies.janoeo]]
     modId="create"

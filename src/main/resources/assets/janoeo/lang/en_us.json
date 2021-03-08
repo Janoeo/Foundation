@@ -93,5 +93,11 @@
   "item.janoeo.tin_dust": "Tin Dust",
   "item.janoeo.uranium_dust": "Uranium Dust",
   "item.janoeo.copper_dust": "Copper Dust",
-  "block.janoeo.emerald_gravel_ore": "Emerald Gravel Ore"
+  "block.janoeo.emerald_gravel_ore": "Emerald Gravel Ore",
+  "advancements.foundation.root.title": "New Ore !",
+  "advancements.foundation.root.description": "Mine ore added by Janoeo Foundation",
+  "advancements.foundation.new_shiny.title": "New Shiny !",
+  "advancements.foundation.new_shiny.description": "Mine a new Shiny ore",
+  "advancements.foundation.overworld_miner.title": "Overworld Miner !",
+  "advancements.foundation.overworld_miner.description": "Obtain ever new Overworld"
 }

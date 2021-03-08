@@ -1,0 +1,282 @@
+{
+  "parent": "janoeo:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_ore"
+    },
+    "title": {
+      "translate": "advancements.foundation.overworld_miner.title"
+    },
+    "description": {
+      "translate": "advancements.foundation.overworld_miner.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "aluminium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:aluminium_ore"
+          }
+        ]
+      }
+    },
+    "copper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:copper_ore"
+          }
+        ]
+      }
+    },
+    "osmium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:osmium_ore"
+          }
+        ]
+      }
+    },
+    "lead": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:lead_ore"
+          }
+        ]
+      }
+    },
+    "silver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:silver_ore"
+          }
+        ]
+      }
+    },
+    "tin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:tin_ore"
+          }
+        ]
+      }
+    },
+    "uranium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:uranium_ore"
+          }
+        ]
+      }
+    },
+    "zinc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:zinc_ore"
+          }
+        ]
+      }
+    },
+    "amethyst": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:amethyst_ore"
+          }
+        ]
+      }
+    },
+    "ruby": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:ruby_ore"
+          }
+        ]
+      }
+    },
+    "sapphire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:sapphire_ore"
+          }
+        ]
+      }
+    },
+    "dense_coal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:dense_coal_ore"
+          }
+        ]
+      }
+    },
+    "dense_copper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:dense_copper_ore"
+          }
+        ]
+      }
+    },
+    "dense_diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:dense_diamond_ore"
+          }
+        ]
+      }
+    },
+    "dense_gold": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:dense_gold_ore"
+          }
+        ]
+      }
+    },
+    "dense_iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:dense_iron_ore"
+          }
+        ]
+      }
+    },
+    "dense_emerald": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:dense_emerald_ore"
+          }
+        ]
+      }
+    },
+    "dense_lapis": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:dense_lapis_ore"
+          }
+        ]
+      }
+    },
+    "dense_redstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:dense_redstone_ore"
+          }
+        ]
+      }
+    },
+    "dense_tin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:dense_tin_ore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "aluminium"
+    ],
+    [
+      "copper"
+    ],
+    [
+      "osmium"
+    ],
+    [
+      "lead"
+    ],
+    [
+      "silver"
+    ],
+    [
+      "tin"
+    ],
+    [
+      "uranium"
+    ],
+    [
+      "zinc"
+    ],
+    [
+      "amethyst"
+    ],
+    [
+      "ruby"
+    ],
+    [
+      "sapphire"
+    ],
+    [
+      "dense_coal"
+    ],
+    [
+      "dense_copper"
+    ],
+    [
+      "dense_diamond"
+    ],
+    [
+      "dense_gold"
+    ],
+    [
+      "dense_iron"
+    ],
+    [
+      "dense_emerald"
+    ],
+    [
+      "dense_lapis"
+    ],
+    [
+      "dense_redstone"
+    ],
+    [
+      "dense_tin"
+    ]
+  ]
+}

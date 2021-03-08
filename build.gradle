@@ -12,14 +12,14 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-def build_number = '68'
+def build_number = '69'
 def isExperimental = false
-version = "5.6.0.${build_number}"
+version = "6.6.0.${build_number}"
 if (isExperimental) {
     version += '-experimental'
 }
-group = 'fr.alasdiablo.janoeo'
-archivesBaseName = 'Janoeo'
+group = 'fr.alasdiablo.janoeo.fondation'
+archivesBaseName = 'Janoeo Fondation'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
@@ -69,12 +69,12 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.4-35.1.4'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.0.42'
     compile fileTree(dir:'lib', include:'*.jar')
     // Mod with compatibility patch
     implementation fg.deobf("curse.maven:create-328085:3167531")
     // JEI: use for quick testing on compatibility
-    implementation fg.deobf("curse.maven:jei-238222:3189632")
+    implementation fg.deobf("curse.maven:jei-238222:3192904")
 }
 
 jar {

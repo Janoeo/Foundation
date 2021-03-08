@@ -1,0 +1,90 @@
+{
+  "parent": "janoeo:root",
+  "display": {
+    "icon": {
+      "item": "janoeo:amethyst"
+    },
+    "title": {
+      "translate": "advancements.foundation.new_shiny.title"
+    },
+    "description": {
+      "translate": "advancements.foundation.new_shiny.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "amethyst_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:amethyst_ore"
+          }
+        ]
+      }
+    },
+    "ruby_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:ruby_ore"
+          }
+        ]
+      }
+    },
+    "sapphire_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:sapphire_ore"
+          }
+        ]
+      }
+    },
+    "amethyst": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:amethyst"
+          }
+        ]
+      }
+    },
+    "ruby": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:ruby"
+          }
+        ]
+      }
+    },
+    "sapphire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "janoeo:sapphire"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "amethyst_ore",
+      "ruby_ore",
+      "sapphire_ore",
+      "amethyst",
+      "ruby",
+      "sapphire"
+    ]
+  ]
+}
