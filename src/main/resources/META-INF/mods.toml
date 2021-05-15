@@ -1,39 +1,26 @@
 modLoader="javafml"
-loaderVersion="[34,)"
+loaderVersion="[36,)"
 license="LGPL-3.0"
 [[mods]]
-modId="janoeo"
-version = "${file.jarVersion}"
-displayName = "Janoeo Fondation"
-updateJSONURL = "https://raw.githubusercontent.com/AlasDiablo/JANOEO-Doc/gh-pages/version/janoeo.json"
-authors="AlasDiablo, lIotaMiu, Egame257 and Safyrus"
+modId="janoeo_foundation"
+version="${file.jarVersion}"
+displayName="Janoeo Foundation"
+logoFile= "janoeo_foundation.png"
+authors="AlasDiablo, lIotaMiu and Safyrus"
 description='''
 Janoeo Project Mod
 Mod content:
 - Ore generation
 '''
-[[dependencies.janoeo]]
+[[dependencies.janoeo_foundation]]
     modId="forge"
-mandatory = true
-versionRange = "[36,)"
-ordering = "NONE"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
     side="BOTH"
-[[dependencies.janoeo]]
+[[dependencies.janoeo_foundation]]
     modId="minecraft"
-mandatory = true
-versionRange = "[1.16.5,)"
-ordering = "NONE"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
     side="BOTH"
-[[dependencies.janoeo]]
-    modId="diolib"
-mandatory = true
-versionRange = "[2.0.9,)"
-ordering = "NONE"
-    side="BOTH"
-[[dependencies.janoeo]]
-    modId="create"
-    mandatory=false
-    versionRange="[mc1.16.3_v0.3e,)"
-    ordering="AFTER"
-    side="BOTH"
-

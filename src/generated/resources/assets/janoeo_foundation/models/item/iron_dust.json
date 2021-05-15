@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "janoeo_foundation:item/dust/iron_dust"
+  }
+}

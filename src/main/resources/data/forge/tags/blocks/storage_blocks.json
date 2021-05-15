@@ -1,7 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#forge:storage_blocks/ruby",
-    "#forge:storage_blocks/sapphire"
-  ]
-}

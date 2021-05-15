@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "janoeo:block/nether/gold_nether_ore"
-  }
-}

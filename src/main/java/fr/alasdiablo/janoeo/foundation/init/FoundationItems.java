@@ -1,25 +1,38 @@
 package fr.alasdiablo.janoeo.foundation.init;
 
 import fr.alasdiablo.diolib.util.RegistryHelper;
-import fr.alasdiablo.janoeo.foundation.item.GeodeItem;
-import fr.alasdiablo.janoeo.foundation.util.JanoeoGroup;
-import fr.alasdiablo.janoeo.foundation.util.Registries;
+import fr.alasdiablo.janoeo.foundation.Foundation;
+import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
 public class FoundationItems {
+    /* * * * * * * * * * * * Item Properties * * * * * * * * * * * */
+    private static final Item.Properties PROPERTIES = new Item.Properties().group(Foundation.ITEMS_GROUP);
 
-    public static Item GEODE_ITEM = new GeodeItem(new Item.Properties().group(JanoeoGroup.ORE_ITEMS).maxStackSize(16)).setRegistryName(Registries.GEODE);
+    /* * * * * * * * * * * * * * * Dust * * *  * * * * * * * * * * */
+    public static Item AMETHYST_DUST = createItem(PROPERTIES, Registries.AMETHYST_DUST);
+    public static Item COAL_DUST = createItem(PROPERTIES, Registries.COAL_DUST);
+    public static Item COPPER_DUST = createItem(PROPERTIES, Registries.COPPER_DUST);
+    public static Item DIAMOND_DUST = createItem(PROPERTIES, Registries.DIAMOND_DUST);
+    public static Item EMERALD_DUST = createItem(PROPERTIES, Registries.EMERALD_DUST);
+    public static Item GOLD_DUST = createItem(PROPERTIES, Registries.GOLD_DUST);
+    public static Item IRON_DUST = createItem(PROPERTIES, Registries.IRON_DUST);
+    public static Item LAPIS_DUST = createItem(PROPERTIES, Registries.LAPIS_DUST);
 
-    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-        @SubscribeEvent
-        public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            RegistryHelper.registerItem(event.getRegistry(),
-                    GEODE_ITEM
-            );
-        }
+    /* * * * * * * * * * * * * * * Nugget * * *  * * * * * * * * * * */
+    public static Item COPPER_NUGGET = createItem(PROPERTIES, Registries.COPPER_NUGGET);
+
+    private static Item createItem(Item.Properties properties, String registryName) {
+        return new Item(properties).setRegistryName(registryName);
+    }
+
+    public static void init(RegistryEvent.Register<Item> event) {
+        RegistryHelper.registerItem(
+                event.getRegistry(),
+                AMETHYST_DUST, COAL_DUST, COPPER_DUST, DIAMOND_DUST,
+                EMERALD_DUST, GOLD_DUST, IRON_DUST, LAPIS_DUST,
+                COPPER_NUGGET
+        );
     }
 }

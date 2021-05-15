@@ -1,0 +1,13 @@
+{
+  "item.janoeo_foundation.amethyst_dust": "Poussi\u00C3\u00A8re d'am\u00C3\u00A9thyste",
+  "item.janoeo_foundation.coal_dust": "Poussi\u00C3\u00A8re de charbon",
+  "item.janoeo_foundation.copper_dust": "Poussi\u00C3\u00A8re de cuivre ",
+  "item.janoeo_foundation.copper_nugget": "P\u00C3\u00A9pite de cuivre",
+  "item.janoeo_foundation.diamond_dust": "Poussi\u00C3\u00A8re de diamant",
+  "item.janoeo_foundation.emerald_dust": "Poussi\u00C3\u00A8re d'\u00C3\u00A9meraude",
+  "item.janoeo_foundation.gold_dust": "Poussi\u00C3\u00A8re d'or",
+  "item.janoeo_foundation.iron_dust": "Poussi\u00C3\u00A8re de fer",
+  "item.janoeo_foundation.lapis_dust": "Poussi\u00C3\u00A8re de lapis",
+  "itemGroup.janoeo.foundation.block": "Janoeo Foundation - Bloques",
+  "itemGroup.janoeo.foundation.item": "Janoeo Foundation - Objets"
+}
