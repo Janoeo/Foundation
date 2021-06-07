@@ -119,8 +119,6 @@ public class OreConfig extends JsonConfig {
             default:
                 throw new IllegalArgumentException("The parameter 'count.type' need to be 'linear' or 'scale'!");
         }
-
-
     }
 
     @Override

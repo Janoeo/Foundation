@@ -1,4 +1,5 @@
 {
+  "item.janoeo_foundation.aluminium_ingot": "Lingot d'aluminium",
   "item.janoeo_foundation.amethyst_dust": "Poussi\u00C3\u00A8re d'am\u00C3\u00A9thyste",
   "item.janoeo_foundation.coal_dust": "Poussi\u00C3\u00A8re de charbon",
   "item.janoeo_foundation.copper_dust": "Poussi\u00C3\u00A8re de cuivre ",
@@ -8,6 +9,11 @@
   "item.janoeo_foundation.gold_dust": "Poussi\u00C3\u00A8re d'or",
   "item.janoeo_foundation.iron_dust": "Poussi\u00C3\u00A8re de fer",
   "item.janoeo_foundation.lapis_dust": "Poussi\u00C3\u00A8re de lapis",
+  "item.janoeo_foundation.lead_ingot": "Lingot de plomp",
+  "item.janoeo_foundation.nickel_ingot": "Lingot de nickel",
+  "item.janoeo_foundation.silver_ingot": "Lingot d'argent",
+  "item.janoeo_foundation.tin_ingot": "Lingot d'\u00C3\u00A9tain",
+  "item.janoeo_foundation.uranium_ingot": "Lingot d'uranium",
   "itemGroup.janoeo.foundation.block": "Janoeo Foundation - Bloques",
   "itemGroup.janoeo.foundation.item": "Janoeo Foundation - Objets"
 }

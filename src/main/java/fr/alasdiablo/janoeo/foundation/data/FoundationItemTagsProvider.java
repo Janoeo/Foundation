@@ -40,6 +40,23 @@ public class FoundationItemTagsProvider extends net.minecraft.data.ItemTagsProvi
 
         getOrCreateBuilder(Tags.Items.NUGGETS).addTags(FoundationTags.Items.NUGGETS_COPPER);
         getOrCreateBuilder(FoundationTags.Items.NUGGETS_COPPER).addItemEntry(FoundationItems.COPPER_NUGGET);
+
+        getOrCreateBuilder(Tags.Items.INGOTS).addTags(
+                FoundationTags.Items.INGOTS_ALUMINIUM,
+                FoundationTags.Items.INGOTS_ALUMINUM,
+                FoundationTags.Items.INGOTS_LEAD,
+                FoundationTags.Items.INGOTS_NICKEL,
+                FoundationTags.Items.INGOTS_SILVER,
+                FoundationTags.Items.INGOTS_TIN,
+                FoundationTags.Items.INGOTS_URANIUM
+        );
+        getOrCreateBuilder(FoundationTags.Items.INGOTS_ALUMINIUM).addItemEntry(FoundationItems.ALUMINIUM_INGOT);
+        getOrCreateBuilder(FoundationTags.Items.INGOTS_ALUMINUM).addTags(FoundationTags.Items.INGOTS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
+        getOrCreateBuilder(FoundationTags.Items.INGOTS_LEAD).addItemEntry(FoundationItems.LEAD_INGOT);
+        getOrCreateBuilder(FoundationTags.Items.INGOTS_NICKEL).addItemEntry(FoundationItems.NICKEL_INGOT);
+        getOrCreateBuilder(FoundationTags.Items.INGOTS_SILVER).addItemEntry(FoundationItems.SILVER_INGOT);
+        getOrCreateBuilder(FoundationTags.Items.INGOTS_TIN).addItemEntry(FoundationItems.TIN_INGOT);
+        getOrCreateBuilder(FoundationTags.Items.INGOTS_URANIUM).addItemEntry(FoundationItems.URANIUM_INGOT);
     }
 
     @Override

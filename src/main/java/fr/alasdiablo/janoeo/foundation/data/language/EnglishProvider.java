@@ -27,6 +27,13 @@ public class EnglishProvider extends LanguageProvider {
 
         this.add(COPPER_NUGGET, "Copper nugget");
 
+        this.add(ALUMINIUM_INGOT, "Aluminium ingot");
+        this.add(LEAD_INGOT, "Lead ingot");
+        this.add(NICKEL_INGOT, "Nickel ingot");
+        this.add(SILVER_INGOT, "Silver ingot");
+        this.add(TIN_INGOT, "Tin ingot");
+        this.add(URANIUM_INGOT, "Uranium ingot");
+
         this.add(((TranslationTextComponent)Foundation.ITEMS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Items");
         this.add(((TranslationTextComponent)Foundation.BLOCKS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Blocks");
     }

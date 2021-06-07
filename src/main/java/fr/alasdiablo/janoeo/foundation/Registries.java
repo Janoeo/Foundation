@@ -2,6 +2,7 @@ package fr.alasdiablo.janoeo.foundation;
 
 public class Registries {
     public static final String MOD_ID = "janoeo_foundation";
+
     /* * * * * * * * * * * *  Dust * * * * * * * * * * * */
     public static final String AMETHYST_DUST = "amethyst_dust";
     public static final String COAL_DUST     = "coal_dust";
@@ -11,5 +12,15 @@ public class Registries {
     public static final String GOLD_DUST     = "gold_dust";
     public static final String IRON_DUST     = "iron_dust";
     public static final String LAPIS_DUST    = "lapis_dust";
+
+    /* * * * * * * * * * * * * * * Nugget * * *  * * * * * * * * * * */
     public static final String COPPER_NUGGET = "copper_nugget";
+
+    /* * * * * * * * * * * * * * * Ingot * * *  * * * * * * * * * * */
+    public static final String ALUMINIUM_INGOT = "aluminium_ingot";
+    public static final String LEAD_INGOT      = "lead_ingot";
+    public static final String NICKEL_INGOT    = "nickel_ingot";
+    public static final String SILVER_INGOT    = "silver_ingot";
+    public static final String TIN_INGOT       = "tin_ingot";
+    public static final String URANIUM_INGOT   = "uranium_ingot";
 }

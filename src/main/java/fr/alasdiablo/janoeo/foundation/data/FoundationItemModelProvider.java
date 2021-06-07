@@ -2,7 +2,6 @@ package fr.alasdiablo.janoeo.foundation.data;
 
 import static fr.alasdiablo.janoeo.foundation.Registries.*;
 
-import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -16,7 +15,7 @@ public class FoundationItemModelProvider extends net.minecraftforge.client.model
     private static final ResourceLocation GENERATED = new ResourceLocation("item/generated");
 
     public FoundationItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, Registries.MOD_ID, existingFileHelper);
+        super(generator, MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -29,6 +28,12 @@ public class FoundationItemModelProvider extends net.minecraftforge.client.model
 
         List<String> nuggets = Collections.singletonList(COPPER_NUGGET);
         this.registerNuggetItem(nuggets);
+
+        List<String> ingots = Arrays.asList(
+                ALUMINIUM_INGOT, LEAD_INGOT, NICKEL_INGOT,
+                SILVER_INGOT, TIN_INGOT, URANIUM_INGOT
+        );
+        this.registerIngotItem(ingots);
     }
 
     private void registerDustItem(List<String> dusts) {
@@ -37,5 +42,9 @@ public class FoundationItemModelProvider extends net.minecraftforge.client.model
 
     private void registerNuggetItem(List<String> nuggets) {
         nuggets.forEach(nugget -> withExistingParent(nugget, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/nugget/" + nugget)));
+    }
+
+    private void registerIngotItem(List<String> ingots) {
+        ingots.forEach(ingot -> withExistingParent(ingot, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/ingot/" + ingot)));
     }
 }

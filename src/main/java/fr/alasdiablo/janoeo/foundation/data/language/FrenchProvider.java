@@ -27,6 +27,13 @@ public class FrenchProvider extends LanguageProvider {
 
         this.add(COPPER_NUGGET, "Pépite de cuivre");
 
+        this.add(ALUMINIUM_INGOT, "Lingot d'aluminium");
+        this.add(LEAD_INGOT, "Lingot de plomp");
+        this.add(NICKEL_INGOT, "Lingot de nickel");
+        this.add(SILVER_INGOT, "Lingot d'argent");
+        this.add(TIN_INGOT, "Lingot d'étain");
+        this.add(URANIUM_INGOT, "Lingot d'uranium");
+
         this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Objets");
         this.add(((TranslationTextComponent)Foundation.BLOCKS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Bloques");
     }
