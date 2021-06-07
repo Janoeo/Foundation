@@ -38,8 +38,24 @@ public class FoundationItemTagsProvider extends net.minecraft.data.ItemTagsProvi
         getOrCreateBuilder(FoundationTags.Items.DUSTS_IRON).addItemEntry(FoundationItems.IRON_DUST);
         getOrCreateBuilder(FoundationTags.Items.DUSTS_LAPIS).addItemEntry(FoundationItems.LAPIS_DUST);
 
-        getOrCreateBuilder(Tags.Items.NUGGETS).addTags(FoundationTags.Items.NUGGETS_COPPER);
+        getOrCreateBuilder(Tags.Items.NUGGETS).addTags(
+                FoundationTags.Items.NUGGETS_ALUMINIUM,
+                FoundationTags.Items.NUGGETS_ALUMINUM,
+                FoundationTags.Items.NUGGETS_COPPER,
+                FoundationTags.Items.NUGGETS_LEAD,
+                FoundationTags.Items.NUGGETS_NICKEL,
+                FoundationTags.Items.NUGGETS_SILVER,
+                FoundationTags.Items.NUGGETS_TIN,
+                FoundationTags.Items.NUGGETS_URANIUM
+        );
+        getOrCreateBuilder(FoundationTags.Items.NUGGETS_ALUMINIUM).addItemEntry(FoundationItems.ALUMINIUM_NUGGET);
+        getOrCreateBuilder(FoundationTags.Items.NUGGETS_ALUMINUM).addTags(FoundationTags.Items.NUGGETS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
         getOrCreateBuilder(FoundationTags.Items.NUGGETS_COPPER).addItemEntry(FoundationItems.COPPER_NUGGET);
+        getOrCreateBuilder(FoundationTags.Items.NUGGETS_LEAD).addItemEntry(FoundationItems.LEAD_NUGGET);
+        getOrCreateBuilder(FoundationTags.Items.NUGGETS_NICKEL).addItemEntry(FoundationItems.NICKEL_NUGGET);
+        getOrCreateBuilder(FoundationTags.Items.NUGGETS_SILVER).addItemEntry(FoundationItems.SILVER_NUGGET);
+        getOrCreateBuilder(FoundationTags.Items.NUGGETS_TIN).addItemEntry(FoundationItems.TIN_NUGGET);
+        getOrCreateBuilder(FoundationTags.Items.NUGGETS_URANIUM).addItemEntry(FoundationItems.URANIUM_NUGGET);
 
         getOrCreateBuilder(Tags.Items.INGOTS).addTags(
                 FoundationTags.Items.INGOTS_ALUMINIUM,

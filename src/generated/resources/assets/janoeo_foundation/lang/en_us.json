@@ -1,5 +1,6 @@
 {
   "item.janoeo_foundation.aluminium_ingot": "Aluminium ingot",
+  "item.janoeo_foundation.aluminium_nugget": "Aluminium nugget",
   "item.janoeo_foundation.amethyst_dust": "Amethyst dust",
   "item.janoeo_foundation.coal_dust": "Coal dust",
   "item.janoeo_foundation.copper_dust": "Copper dust",
@@ -10,10 +11,15 @@
   "item.janoeo_foundation.iron_dust": "Iron dust",
   "item.janoeo_foundation.lapis_dust": "Lapis dust",
   "item.janoeo_foundation.lead_ingot": "Lead ingot",
+  "item.janoeo_foundation.lead_nugget": "Lead nugget",
   "item.janoeo_foundation.nickel_ingot": "Nickel ingot",
+  "item.janoeo_foundation.nickel_nugget": "Nickel nugget",
   "item.janoeo_foundation.silver_ingot": "Silver ingot",
+  "item.janoeo_foundation.silver_nugget": "Silver nugget",
   "item.janoeo_foundation.tin_ingot": "Tin ingot",
+  "item.janoeo_foundation.tin_nugget": "Tin nugget",
   "item.janoeo_foundation.uranium_ingot": "Uranium ingot",
+  "item.janoeo_foundation.uranium_nugget": "Uranium nugget",
   "itemGroup.janoeo.foundation.block": "Janoeo Foundation - Blocks",
   "itemGroup.janoeo.foundation.item": "Janoeo Foundation - Items"
 }

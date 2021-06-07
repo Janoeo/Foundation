@@ -1,12 +1,12 @@
 package fr.alasdiablo.janoeo.foundation.data.language;
 
-import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
-
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.data.LanguageProvider;
+
+import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 
 public class EnglishProvider extends LanguageProvider {
 
@@ -25,7 +25,13 @@ public class EnglishProvider extends LanguageProvider {
         this.add(IRON_DUST, "Iron dust");
         this.add(LAPIS_DUST, "Lapis dust");
 
+        this.add(ALUMINIUM_NUGGET, "Aluminium nugget");
         this.add(COPPER_NUGGET, "Copper nugget");
+        this.add(LEAD_NUGGET, "Lead nugget");
+        this.add(NICKEL_NUGGET, "Nickel nugget");
+        this.add(SILVER_NUGGET, "Silver nugget");
+        this.add(TIN_NUGGET, "Tin nugget");
+        this.add(URANIUM_NUGGET, "Uranium nugget");
 
         this.add(ALUMINIUM_INGOT, "Aluminium ingot");
         this.add(LEAD_INGOT, "Lead ingot");
@@ -34,7 +40,7 @@ public class EnglishProvider extends LanguageProvider {
         this.add(TIN_INGOT, "Tin ingot");
         this.add(URANIUM_INGOT, "Uranium ingot");
 
-        this.add(((TranslationTextComponent)Foundation.ITEMS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Items");
-        this.add(((TranslationTextComponent)Foundation.BLOCKS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Blocks");
+        this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Items");
+        this.add(((TranslationTextComponent) Foundation.BLOCKS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Blocks");
     }
 }

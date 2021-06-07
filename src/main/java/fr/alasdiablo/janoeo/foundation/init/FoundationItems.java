@@ -29,23 +29,30 @@ public class FoundationItems {
     public static Item DIAMOND_DUST  = createItem(PROPERTIES, Registries.DIAMOND_DUST);
     public static Item EMERALD_DUST  = createItem(PROPERTIES, Registries.EMERALD_DUST);
     public static Item GOLD_DUST     = createItem(PROPERTIES, Registries.GOLD_DUST);
-    public static Item IRON_DUST     = createItem(PROPERTIES, Registries.IRON_DUST);
-    public static Item LAPIS_DUST    = createItem(PROPERTIES, Registries.LAPIS_DUST);
+    public static Item IRON_DUST = createItem(PROPERTIES, Registries.IRON_DUST);
+    public static Item LAPIS_DUST = createItem(PROPERTIES, Registries.LAPIS_DUST);
 
     private static void initDust(IForgeRegistry<Item> registry) {
         RegistryHelper.registerItem(registry,
                 AMETHYST_DUST, COAL_DUST, COPPER_DUST, DIAMOND_DUST,
-                EMERALD_DUST, GOLD_DUST, IRON_DUST, LAPIS_DUST,
-                COPPER_NUGGET
+                EMERALD_DUST, GOLD_DUST, IRON_DUST, LAPIS_DUST
         );
     }
 
     /* * * * * * * * * * * * * * * Nugget * * *  * * * * * * * * * * */
+    public static Item ALUMINIUM_NUGGET = createItem(PROPERTIES, Registries.ALUMINIUM_NUGGET);
     public static Item COPPER_NUGGET = createItem(PROPERTIES, Registries.COPPER_NUGGET);
+    public static Item LEAD_NUGGET = createItem(PROPERTIES, Registries.LEAD_NUGGET);
+    public static Item NICKEL_NUGGET = createItem(PROPERTIES, Registries.NICKEL_NUGGET);
+    public static Item SILVER_NUGGET = createItem(PROPERTIES, Registries.SILVER_NUGGET);
+    public static Item TIN_NUGGET = createItem(PROPERTIES, Registries.TIN_NUGGET);
+    public static Item URANIUM_NUGGET = createItem(PROPERTIES, Registries.URANIUM_NUGGET);
 
     private static void initNugget(IForgeRegistry<Item> registry) {
         RegistryHelper.registerItem(registry,
-                COPPER_NUGGET
+                ALUMINIUM_NUGGET, COPPER_NUGGET, LEAD_NUGGET,
+                NICKEL_NUGGET, SILVER_NUGGET, TIN_NUGGET,
+                URANIUM_NUGGET
         );
     }
 

@@ -26,7 +26,11 @@ public class FoundationItemModelProvider extends net.minecraftforge.client.model
         );
         this.registerDustItem(dusts);
 
-        List<String> nuggets = Collections.singletonList(COPPER_NUGGET);
+        List<String> nuggets = Arrays.asList(
+                ALUMINIUM_NUGGET, COPPER_NUGGET, LEAD_NUGGET,
+                NICKEL_NUGGET, SILVER_NUGGET, TIN_NUGGET,
+                URANIUM_NUGGET
+        );
         this.registerNuggetItem(nuggets);
 
         List<String> ingots = Arrays.asList(
