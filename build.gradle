@@ -75,6 +75,7 @@ dependencies {
     // JEI: use for quick testing on compatibility
     implementation fg.deobf("curse.maven:jei-238222:3308495")
     implementation fg.deobf("curse.maven:just-enough-resources-jer-240630:3293129")
+    implementation fg.deobf("curse.maven:catalogue-459701:3335979")
 }
 
 jar {
