@@ -70,12 +70,15 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.1.13'
     compile fileTree(dir:'lib', include:'*.jar')
-    // Mod with compatibility patch
-    //implementation fg.deobf("curse.maven:create-328085:3278516")
-    // JEI: use for quick testing on compatibility
-    implementation fg.deobf("curse.maven:jei-238222:3308495")
-    implementation fg.deobf("curse.maven:just-enough-resources-jer-240630:3293129")
-    implementation fg.deobf("curse.maven:catalogue-459701:3335979")
+    // Compatibility check with mod
+    implementation fg.deobf("curse.maven:jei-238222:3308495")                       // JEI
+    implementation fg.deobf("curse.maven:just-enough-resources-jer-240630:3293129") // JER
+    implementation fg.deobf("curse.maven:catalogue-459701:3335979")                 // Catalogue
+    implementation fg.deobf("curse.maven:infinitylib-251396:3338377")               // InfinityLib
+    implementation fg.deobf("curse.maven:agricraft-225635:3341924")                 // Agricraft
+    implementation fg.deobf("curse.maven:mantle-74924:3326538")                     // Mantle
+    implementation fg.deobf("curse.maven:tinkers-construct-74072:3326523")          // Tinkers Construct 3
+    implementation fg.deobf("curse.maven:iron-chests-228756:3105315")               // Iron Chests
 }
 
 jar {
