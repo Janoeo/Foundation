@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:raws/aluminium",
+    "#forge:raws/aluminum",
+    "#forge:raws/lead",
+    "#forge:raws/nickel",
+    "#forge:raws/silver",
+    "#forge:raws/tin",
+    "#forge:raws/uranium"
+  ]
+}

@@ -16,6 +16,7 @@ public class FrenchProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        this.add(ALUMINIUM_DUST, "Poussière d'aluminium");
         this.add(AMETHYST_DUST, "Poussière d'améthyste");
         this.add(COAL_DUST, "Poussière de charbon");
         this.add(COPPER_DUST, "Poussière de cuivre ");
@@ -24,6 +25,11 @@ public class FrenchProvider extends LanguageProvider {
         this.add(GOLD_DUST, "Poussière d'or");
         this.add(IRON_DUST, "Poussière de fer");
         this.add(LAPIS_DUST, "Poussière de lapis");
+        this.add(LEAD_DUST, "Poussière de plomp");
+        this.add(NICKEL_DUST, "Poussière de nickel");
+        this.add(SILVER_DUST, "Poussière d'argent");
+        this.add(TIN_DUST, "Poussière d'étain");
+        this.add(URANIUM_DUST, "Poussière d'uranium");
 
         this.add(ALUMINIUM_NUGGET, "Pépite d'aluminium");
         this.add(COPPER_NUGGET, "Pépite de cuivre");

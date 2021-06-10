@@ -7,7 +7,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class FoundationItemModelProvider extends net.minecraftforge.client.model.generators.ItemModelProvider {
@@ -21,23 +20,29 @@ public class FoundationItemModelProvider extends net.minecraftforge.client.model
     @Override
     protected void registerModels() {
         List<String> dusts = Arrays.asList(
-                AMETHYST_DUST, COAL_DUST, COPPER_DUST, DIAMOND_DUST,
-                EMERALD_DUST, GOLD_DUST, IRON_DUST, LAPIS_DUST
+                ALUMINIUM_DUST, AMETHYST_DUST, COAL_DUST, COPPER_DUST,
+                DIAMOND_DUST, EMERALD_DUST, GOLD_DUST, IRON_DUST,
+                LAPIS_DUST, LEAD_DUST, NICKEL_DUST, SILVER_DUST,
+                TIN_DUST, URANIUM_DUST
         );
         this.registerDustItem(dusts);
 
         List<String> nuggets = Arrays.asList(
-                ALUMINIUM_NUGGET, COPPER_NUGGET, LEAD_NUGGET,
-                NICKEL_NUGGET, SILVER_NUGGET, TIN_NUGGET,
-                URANIUM_NUGGET
+                ALUMINIUM_NUGGET, COPPER_NUGGET, LEAD_NUGGET, NICKEL_NUGGET,
+                SILVER_NUGGET, TIN_NUGGET, URANIUM_NUGGET
         );
         this.registerNuggetItem(nuggets);
 
         List<String> ingots = Arrays.asList(
-                ALUMINIUM_INGOT, LEAD_INGOT, NICKEL_INGOT,
-                SILVER_INGOT, TIN_INGOT, URANIUM_INGOT
+                ALUMINIUM_INGOT, LEAD_INGOT, NICKEL_INGOT, SILVER_INGOT,
+                TIN_INGOT, URANIUM_INGOT
         );
         this.registerIngotItem(ingots);
+
+        List<String> raws = Arrays.asList(
+                RAW_SILVER, RAW_TIN, RAW_URANIUM
+        );
+        this.registerRawItem(raws);
     }
 
     private void registerDustItem(List<String> dusts) {
@@ -50,5 +55,9 @@ public class FoundationItemModelProvider extends net.minecraftforge.client.model
 
     private void registerIngotItem(List<String> ingots) {
         ingots.forEach(ingot -> withExistingParent(ingot, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/ingot/" + ingot)));
+    }
+
+    private void registerRawItem(List<String> raws) {
+        raws.forEach(raw -> withExistingParent(raw, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/raw/" + raw)));
     }
 }

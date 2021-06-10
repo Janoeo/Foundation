@@ -16,6 +16,7 @@ public class EnglishProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        this.add(ALUMINIUM_DUST, "Aluminium dust");
         this.add(AMETHYST_DUST, "Amethyst dust");
         this.add(COAL_DUST, "Coal dust");
         this.add(COPPER_DUST, "Copper dust");
@@ -24,6 +25,11 @@ public class EnglishProvider extends LanguageProvider {
         this.add(GOLD_DUST, "Gold dust");
         this.add(IRON_DUST, "Iron dust");
         this.add(LAPIS_DUST, "Lapis dust");
+        this.add(LEAD_DUST, "Lead dust");
+        this.add(NICKEL_DUST, "Nickel dust");
+        this.add(SILVER_DUST, "Silver dust");
+        this.add(TIN_DUST, "Tin dust");
+        this.add(URANIUM_DUST, "Uranium dust");
 
         this.add(ALUMINIUM_NUGGET, "Aluminium nugget");
         this.add(COPPER_NUGGET, "Copper nugget");
@@ -39,6 +45,13 @@ public class EnglishProvider extends LanguageProvider {
         this.add(SILVER_INGOT, "Silver ingot");
         this.add(TIN_INGOT, "Tin ingot");
         this.add(URANIUM_INGOT, "Uranium ingot");
+
+        this.add(RAW_ALUMINIUM, "Raw aluminium");
+        this.add(RAW_LEAD, "Raw lead");
+        this.add(RAW_NICKEL, "Raw nickel");
+        this.add(RAW_SILVER, "Raw silver");
+        this.add(RAW_TIN, "Raw Tin");
+        this.add(RAW_URANIUM, "Raw uranium");
 
         this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Items");
         this.add(((TranslationTextComponent) Foundation.BLOCKS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Blocks");
