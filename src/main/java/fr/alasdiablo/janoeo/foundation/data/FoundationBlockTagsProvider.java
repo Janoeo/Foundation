@@ -5,6 +5,7 @@ import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class FoundationBlockTagsProvider extends BlockTagsProvider {
@@ -16,6 +17,7 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
     protected void registerTags() {
     }
 
+    @Nonnull
     @Override
     public String getName() {
         return "Janoeo Block Tags";

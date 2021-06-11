@@ -35,6 +35,7 @@ public class FoundationTags {
 
         public static final Tags.IOptionalNamedTag<Item> INGOTS_ALUMINIUM = tag("ingots/aluminium"); // UK also FR btw (haha)
         public static final Tags.IOptionalNamedTag<Item> INGOTS_ALUMINUM = tag("ingots/aluminum");  // US // because we can found both…
+        public static final Tags.IOptionalNamedTag<Item> INGOTS_COPPER = tag("ingots/copper");
         public static final Tags.IOptionalNamedTag<Item> INGOTS_LEAD = tag("ingots/lead");
         public static final Tags.IOptionalNamedTag<Item> INGOTS_NICKEL = tag("ingots/nickel");
         public static final Tags.IOptionalNamedTag<Item> INGOTS_SILVER = tag("ingots/silver");

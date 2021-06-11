@@ -4,6 +4,7 @@ import fr.alasdiablo.diolib.gui.GroundItemGroup;
 import fr.alasdiablo.janoeo.foundation.data.FoundationBlockTagsProvider;
 import fr.alasdiablo.janoeo.foundation.data.FoundationItemModelProvider;
 import fr.alasdiablo.janoeo.foundation.data.FoundationItemTagsProvider;
+import fr.alasdiablo.janoeo.foundation.data.FoundationRecipeProvider;
 import fr.alasdiablo.janoeo.foundation.data.language.EnglishProvider;
 import fr.alasdiablo.janoeo.foundation.data.language.FrenchProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
@@ -80,6 +81,9 @@ public class Foundation {
         final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(generator, existingFileHelper);
         generator.addProvider(blockTagsProvider);
         generator.addProvider(new FoundationItemTagsProvider(generator, blockTagsProvider, existingFileHelper));
+
+        Foundation.logger.debug("Add Recipes Provider");
+        generator.addProvider(new FoundationRecipeProvider(generator));
     }
 
     private void setup(final FMLCommonSetupEvent commonSetupEvent) {

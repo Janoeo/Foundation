@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:dusts/lead"
+    }
+  },
+  "result": {
+    "item": "janoeo_foundation:lead_ingot"
+  }
+}

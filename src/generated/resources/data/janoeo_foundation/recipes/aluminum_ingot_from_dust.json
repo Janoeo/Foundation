@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:dusts/aluminum"
+    }
+  },
+  "result": {
+    "item": "janoeo_foundation:aluminium_ingot"
+  }
+}

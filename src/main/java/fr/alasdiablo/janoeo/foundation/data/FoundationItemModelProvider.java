@@ -5,11 +5,12 @@ import static fr.alasdiablo.janoeo.foundation.Registries.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.client.model.generators.ItemModelProvider;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class FoundationItemModelProvider extends net.minecraftforge.client.model.generators.ItemModelProvider {
+public class FoundationItemModelProvider extends ItemModelProvider {
 
     private static final ResourceLocation GENERATED = new ResourceLocation("item/generated");
 
@@ -40,7 +41,8 @@ public class FoundationItemModelProvider extends net.minecraftforge.client.model
         this.registerIngotItem(ingots);
 
         List<String> raws = Arrays.asList(
-                RAW_SILVER, RAW_TIN, RAW_URANIUM
+                RAW_ALUMINIUM, RAW_LEAD, RAW_NICKEL, RAW_SILVER,
+                RAW_TIN, RAW_URANIUM
         );
         this.registerRawItem(raws);
     }

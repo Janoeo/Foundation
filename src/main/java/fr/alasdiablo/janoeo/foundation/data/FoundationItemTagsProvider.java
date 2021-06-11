@@ -1,11 +1,14 @@
 package fr.alasdiablo.janoeo.foundation.data;
 
 import fr.alasdiablo.janoeo.foundation.Registries;
-import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
-import fr.alasdiablo.janoeo.foundation.init.FoundationTags;
+
+import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
+import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.ItemTagsProvider;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -13,7 +16,7 @@ import javax.annotation.Nullable;
 
 @MethodsReturnNonnullByDefault
 @SuppressWarnings("unchecked")
-public class FoundationItemTagsProvider extends net.minecraft.data.ItemTagsProvider {
+public class FoundationItemTagsProvider extends ItemTagsProvider {
 
     public FoundationItemTagsProvider(DataGenerator dataGenerator, BlockTagsProvider blockTagProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(dataGenerator, blockTagProvider, Registries.MOD_ID, existingFileHelper);
@@ -22,94 +25,94 @@ public class FoundationItemTagsProvider extends net.minecraft.data.ItemTagsProvi
     @Override
     protected void registerTags() {
         getOrCreateBuilder(Tags.Items.DUSTS).addTags(
-                FoundationTags.Items.DUSTS_ALUMINIUM,
-                FoundationTags.Items.DUSTS_ALUMINUM,
-                FoundationTags.Items.DUSTS_AMETHYST,
-                FoundationTags.Items.DUSTS_COAL,
-                FoundationTags.Items.DUSTS_COPPER,
-                FoundationTags.Items.DUSTS_DIAMOND,
-                FoundationTags.Items.DUSTS_GOLD,
-                FoundationTags.Items.DUSTS_EMERALD,
-                FoundationTags.Items.DUSTS_IRON,
-                FoundationTags.Items.DUSTS_LAPIS,
-                FoundationTags.Items.DUSTS_LEAD,
-                FoundationTags.Items.DUSTS_NICKEL,
-                FoundationTags.Items.DUSTS_SILVER,
-                FoundationTags.Items.DUSTS_TIN,
-                FoundationTags.Items.DUSTS_URANIUM
+                DUSTS_ALUMINIUM,
+                DUSTS_ALUMINUM,
+                DUSTS_AMETHYST,
+                DUSTS_COAL,
+                DUSTS_COPPER,
+                DUSTS_DIAMOND,
+                DUSTS_GOLD,
+                DUSTS_EMERALD,
+                DUSTS_IRON,
+                DUSTS_LAPIS,
+                DUSTS_LEAD,
+                DUSTS_NICKEL,
+                DUSTS_SILVER,
+                DUSTS_TIN,
+                DUSTS_URANIUM
         );
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_ALUMINIUM).addItemEntry(FoundationItems.ALUMINIUM_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_ALUMINUM).addTags(FoundationTags.Items.DUSTS_ALUMINIUM); // Reference to DUSTS_ALUMINIUM
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_AMETHYST).addItemEntry(FoundationItems.AMETHYST_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_COAL).addItemEntry(FoundationItems.COAL_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_COPPER).addItemEntry(FoundationItems.COPPER_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_DIAMOND).addItemEntry(FoundationItems.DIAMOND_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_GOLD).addItemEntry(FoundationItems.GOLD_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_EMERALD).addItemEntry(FoundationItems.EMERALD_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_IRON).addItemEntry(FoundationItems.IRON_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_LAPIS).addItemEntry(FoundationItems.LAPIS_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_LEAD).addItemEntry(FoundationItems.LEAD_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_NICKEL).addItemEntry(FoundationItems.NICKEL_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_SILVER).addItemEntry(FoundationItems.SILVER_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_TIN).addItemEntry(FoundationItems.TIN_DUST);
-        getOrCreateBuilder(FoundationTags.Items.DUSTS_URANIUM).addItemEntry(FoundationItems.URANIUM_DUST);
+        getOrCreateBuilder(DUSTS_ALUMINIUM).addItemEntry(ALUMINIUM_DUST);
+        getOrCreateBuilder(DUSTS_ALUMINUM).addTags(DUSTS_ALUMINIUM); // Reference to DUSTS_ALUMINIUM
+        getOrCreateBuilder(DUSTS_AMETHYST).addItemEntry(AMETHYST_DUST);
+        getOrCreateBuilder(DUSTS_COAL).addItemEntry(COAL_DUST);
+        getOrCreateBuilder(DUSTS_COPPER).addItemEntry(COPPER_DUST);
+        getOrCreateBuilder(DUSTS_DIAMOND).addItemEntry(DIAMOND_DUST);
+        getOrCreateBuilder(DUSTS_GOLD).addItemEntry(GOLD_DUST);
+        getOrCreateBuilder(DUSTS_EMERALD).addItemEntry(EMERALD_DUST);
+        getOrCreateBuilder(DUSTS_IRON).addItemEntry(IRON_DUST);
+        getOrCreateBuilder(DUSTS_LAPIS).addItemEntry(LAPIS_DUST);
+        getOrCreateBuilder(DUSTS_LEAD).addItemEntry(LEAD_DUST);
+        getOrCreateBuilder(DUSTS_NICKEL).addItemEntry(NICKEL_DUST);
+        getOrCreateBuilder(DUSTS_SILVER).addItemEntry(SILVER_DUST);
+        getOrCreateBuilder(DUSTS_TIN).addItemEntry(TIN_DUST);
+        getOrCreateBuilder(DUSTS_URANIUM).addItemEntry(URANIUM_DUST);
 
         getOrCreateBuilder(Tags.Items.NUGGETS).addTags(
-                FoundationTags.Items.NUGGETS_ALUMINIUM,
-                FoundationTags.Items.NUGGETS_ALUMINUM,
-                FoundationTags.Items.NUGGETS_COPPER,
-                FoundationTags.Items.NUGGETS_LEAD,
-                FoundationTags.Items.NUGGETS_NICKEL,
-                FoundationTags.Items.NUGGETS_SILVER,
-                FoundationTags.Items.NUGGETS_TIN,
-                FoundationTags.Items.NUGGETS_URANIUM
+                NUGGETS_ALUMINIUM,
+                NUGGETS_ALUMINUM,
+                NUGGETS_COPPER,
+                NUGGETS_LEAD,
+                NUGGETS_NICKEL,
+                NUGGETS_SILVER,
+                NUGGETS_TIN,
+                NUGGETS_URANIUM
         );
-        getOrCreateBuilder(FoundationTags.Items.NUGGETS_ALUMINIUM).addItemEntry(FoundationItems.ALUMINIUM_NUGGET);
-        getOrCreateBuilder(FoundationTags.Items.NUGGETS_ALUMINUM).addTags(FoundationTags.Items.NUGGETS_ALUMINIUM); // Reference to NUGGETS_ALUMINIUM
-        getOrCreateBuilder(FoundationTags.Items.NUGGETS_COPPER).addItemEntry(FoundationItems.COPPER_NUGGET);
-        getOrCreateBuilder(FoundationTags.Items.NUGGETS_LEAD).addItemEntry(FoundationItems.LEAD_NUGGET);
-        getOrCreateBuilder(FoundationTags.Items.NUGGETS_NICKEL).addItemEntry(FoundationItems.NICKEL_NUGGET);
-        getOrCreateBuilder(FoundationTags.Items.NUGGETS_SILVER).addItemEntry(FoundationItems.SILVER_NUGGET);
-        getOrCreateBuilder(FoundationTags.Items.NUGGETS_TIN).addItemEntry(FoundationItems.TIN_NUGGET);
-        getOrCreateBuilder(FoundationTags.Items.NUGGETS_URANIUM).addItemEntry(FoundationItems.URANIUM_NUGGET);
+        getOrCreateBuilder(NUGGETS_ALUMINIUM).addItemEntry(ALUMINIUM_NUGGET);
+        getOrCreateBuilder(NUGGETS_ALUMINUM).addTags(NUGGETS_ALUMINIUM); // Reference to NUGGETS_ALUMINIUM
+        getOrCreateBuilder(NUGGETS_COPPER).addItemEntry(COPPER_NUGGET);
+        getOrCreateBuilder(NUGGETS_LEAD).addItemEntry(LEAD_NUGGET);
+        getOrCreateBuilder(NUGGETS_NICKEL).addItemEntry(NICKEL_NUGGET);
+        getOrCreateBuilder(NUGGETS_SILVER).addItemEntry(SILVER_NUGGET);
+        getOrCreateBuilder(NUGGETS_TIN).addItemEntry(TIN_NUGGET);
+        getOrCreateBuilder(NUGGETS_URANIUM).addItemEntry(URANIUM_NUGGET);
 
         getOrCreateBuilder(Tags.Items.INGOTS).addTags(
-                FoundationTags.Items.INGOTS_ALUMINIUM,
-                FoundationTags.Items.INGOTS_ALUMINUM,
-                FoundationTags.Items.INGOTS_LEAD,
-                FoundationTags.Items.INGOTS_NICKEL,
-                FoundationTags.Items.INGOTS_SILVER,
-                FoundationTags.Items.INGOTS_TIN,
-                FoundationTags.Items.INGOTS_URANIUM
+                INGOTS_ALUMINIUM,
+                INGOTS_ALUMINUM,
+                INGOTS_LEAD,
+                INGOTS_NICKEL,
+                INGOTS_SILVER,
+                INGOTS_TIN,
+                INGOTS_URANIUM
         );
-        getOrCreateBuilder(FoundationTags.Items.INGOTS_ALUMINIUM).addItemEntry(FoundationItems.ALUMINIUM_INGOT);
-        getOrCreateBuilder(FoundationTags.Items.INGOTS_ALUMINUM).addTags(FoundationTags.Items.INGOTS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
-        getOrCreateBuilder(FoundationTags.Items.INGOTS_LEAD).addItemEntry(FoundationItems.LEAD_INGOT);
-        getOrCreateBuilder(FoundationTags.Items.INGOTS_NICKEL).addItemEntry(FoundationItems.NICKEL_INGOT);
-        getOrCreateBuilder(FoundationTags.Items.INGOTS_SILVER).addItemEntry(FoundationItems.SILVER_INGOT);
-        getOrCreateBuilder(FoundationTags.Items.INGOTS_TIN).addItemEntry(FoundationItems.TIN_INGOT);
-        getOrCreateBuilder(FoundationTags.Items.INGOTS_URANIUM).addItemEntry(FoundationItems.URANIUM_INGOT);
+        getOrCreateBuilder(INGOTS_ALUMINIUM).addItemEntry(ALUMINIUM_INGOT);
+        getOrCreateBuilder(INGOTS_ALUMINUM).addTags(INGOTS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
+        getOrCreateBuilder(INGOTS_LEAD).addItemEntry(LEAD_INGOT);
+        getOrCreateBuilder(INGOTS_NICKEL).addItemEntry(NICKEL_INGOT);
+        getOrCreateBuilder(INGOTS_SILVER).addItemEntry(SILVER_INGOT);
+        getOrCreateBuilder(INGOTS_TIN).addItemEntry(TIN_INGOT);
+        getOrCreateBuilder(INGOTS_URANIUM).addItemEntry(URANIUM_INGOT);
 
-        getOrCreateBuilder(FoundationTags.Items.RAWS).addTags(
-                FoundationTags.Items.RAWS_ALUMINIUM,
-                FoundationTags.Items.RAWS_ALUMINUM,
-                FoundationTags.Items.RAWS_LEAD,
-                FoundationTags.Items.RAWS_NICKEL,
-                FoundationTags.Items.RAWS_SILVER,
-                FoundationTags.Items.RAWS_TIN,
-                FoundationTags.Items.RAWS_URANIUM
+        getOrCreateBuilder(RAWS).addTags(
+                RAWS_ALUMINIUM,
+                RAWS_ALUMINUM,
+                RAWS_LEAD,
+                RAWS_NICKEL,
+                RAWS_SILVER,
+                RAWS_TIN,
+                RAWS_URANIUM
         );
-        getOrCreateBuilder(FoundationTags.Items.RAWS_ALUMINIUM).addItemEntry(FoundationItems.RAW_ALUMINIUM);
-        getOrCreateBuilder(FoundationTags.Items.RAWS_ALUMINUM).addTags(FoundationTags.Items.RAWS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
-        getOrCreateBuilder(FoundationTags.Items.RAWS_LEAD).addItemEntry(FoundationItems.RAW_LEAD);
-        getOrCreateBuilder(FoundationTags.Items.RAWS_NICKEL).addItemEntry(FoundationItems.RAW_NICKEL);
-        getOrCreateBuilder(FoundationTags.Items.RAWS_SILVER).addItemEntry(FoundationItems.RAW_SILVER);
-        getOrCreateBuilder(FoundationTags.Items.RAWS_TIN).addItemEntry(FoundationItems.RAW_TIN);
-        getOrCreateBuilder(FoundationTags.Items.RAWS_URANIUM).addItemEntry(FoundationItems.RAW_URANIUM);
+        getOrCreateBuilder(RAWS_ALUMINIUM).addItemEntry(RAW_ALUMINIUM);
+        getOrCreateBuilder(RAWS_ALUMINUM).addTags(RAWS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
+        getOrCreateBuilder(RAWS_LEAD).addItemEntry(RAW_LEAD);
+        getOrCreateBuilder(RAWS_NICKEL).addItemEntry(RAW_NICKEL);
+        getOrCreateBuilder(RAWS_SILVER).addItemEntry(RAW_SILVER);
+        getOrCreateBuilder(RAWS_TIN).addItemEntry(RAW_TIN);
+        getOrCreateBuilder(RAWS_URANIUM).addItemEntry(RAW_URANIUM);
     }
 
     @Override
     public String getName() {
-        return "Janoeo Items Tags";
+        return "Janoeo Foundation Items Tags";
     }
 }
