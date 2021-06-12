@@ -1,13 +1,12 @@
 package fr.alasdiablo.janoeo.foundation.data;
 
-import com.google.gson.JsonObject;
-
 import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
 
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.*;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.ITag;
 import net.minecraft.util.IItemProvider;
@@ -15,7 +14,6 @@ import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.nio.file.Path;
 import java.util.function.Consumer;
 
 @ParametersAreNonnullByDefault
@@ -51,6 +49,8 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromDust(ALUMINIUM_INGOT, DUSTS_ALUMINIUM, "has_aluminium_dust", "aluminium_ingot_from_dust");
         this.ingotFromDust(ALUMINIUM_INGOT, DUSTS_ALUMINUM, "has_aluminium_dust", "aluminum_ingot_from_dust");
         // this.ingotFromNuggetRecipe(Items.COPPER_INGOT, DUSTS_COPPER, "has_copper_nugget", "copper_ingot_from_dust");
+        this.ingotFromDust(Items.GOLD_INGOT, DUSTS_GOLD, "has_gold_dust", "gold_ingot_from_dust");
+        this.ingotFromDust(Items.IRON_INGOT, DUSTS_IRON, "has_iron_dust", "iron_ingot_from_dust");
         this.ingotFromDust(LEAD_INGOT, DUSTS_LEAD, "has_lead_dust", "lead_ingot_from_dust");
         this.ingotFromDust(NICKEL_INGOT, DUSTS_NICKEL, "has_nickel_dust", "nickel_ingot_from_dust");
         this.ingotFromDust(SILVER_INGOT, DUSTS_SILVER, "has_silver_dust", "silver_ingot_from_dust");

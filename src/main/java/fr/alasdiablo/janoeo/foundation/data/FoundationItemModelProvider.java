@@ -29,8 +29,9 @@ public class FoundationItemModelProvider extends ItemModelProvider {
         this.registerDustItem(dusts);
 
         List<String> nuggets = Arrays.asList(
-                ALUMINIUM_NUGGET, COPPER_NUGGET, LEAD_NUGGET, NICKEL_NUGGET,
-                SILVER_NUGGET, TIN_NUGGET, URANIUM_NUGGET
+                ALUMINIUM_NUGGET, COAL_NUGGET, COPPER_NUGGET, DIAMOND_NUGGET,
+                EMERALD_NUGGET, LAPIS_NUGGET, LEAD_NUGGET, NICKEL_NUGGET,
+                REDSTONE_NUGGET, SILVER_NUGGET, TIN_NUGGET, URANIUM_NUGGET
         );
         this.registerNuggetItem(nuggets);
 

@@ -21,9 +21,14 @@ public class Registries {
 
     /* * * * * * * * * * * * * * * Nugget * * *  * * * * * * * * * * */
     public static final String ALUMINIUM_NUGGET = "aluminium_nugget";
+    public static final String COAL_NUGGET = "coal_nugget";
     public static final String COPPER_NUGGET = "copper_nugget";
+    public static final String DIAMOND_NUGGET = "diamond_nugget";
+    public static final String EMERALD_NUGGET = "emerald_nugget";
+    public static final String LAPIS_NUGGET = "lapis_nugget";
     public static final String LEAD_NUGGET = "lead_nugget";
     public static final String NICKEL_NUGGET = "nickel_nugget";
+    public static final String REDSTONE_NUGGET = "redstone_nugget";
     public static final String SILVER_NUGGET = "silver_nugget";
     public static final String TIN_NUGGET = "tin_nugget";
     public static final String URANIUM_NUGGET = "uranium_nugget";
@@ -43,4 +48,7 @@ public class Registries {
     public static final String RAW_SILVER = "raw_silver";
     public static final String RAW_TIN = "raw_tin";
     public static final String RAW_URANIUM = "raw_uranium";
+
+    /* * * * * * * * * * * * * * * Tiny Ore * * *  * * * * * * * * * * */
+    public static final String TINY_GOLD_ORE = "tiny_gold_ore";
 }
