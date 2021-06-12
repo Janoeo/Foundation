@@ -1,7 +1,7 @@
 ### Custom ignored file ###
 
 output/
-src/generated/resources/.cache/cache
+src/generated/
 
 # Created by https://www.toptal.com/developers/gitignore/api/forgegradle,intellij+all,gradle
 # Edit at https://www.toptal.com/developers/gitignore?templates=forgegradle,intellij+all,gradle

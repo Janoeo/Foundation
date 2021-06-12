@@ -48,14 +48,14 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromNugget(TIN_INGOT, NUGGETS_TIN, "has_tin_nugget", "tin_ingot_from_nugget");
         this.ingotFromNugget(URANIUM_INGOT, NUGGETS_URANIUM, "has_uranium_nugget", "uranium_ingot_from_nugget");
 
-        this.ingotFromNugget(ALUMINIUM_INGOT, DUSTS_ALUMINIUM, "has_aluminium_dust", "aluminium_ingot_from_dust");
-        this.ingotFromNugget(ALUMINIUM_INGOT, DUSTS_ALUMINUM, "has_aluminium_dust", "aluminum_ingot_from_dust");
+        this.ingotFromDust(ALUMINIUM_INGOT, DUSTS_ALUMINIUM, "has_aluminium_dust", "aluminium_ingot_from_dust");
+        this.ingotFromDust(ALUMINIUM_INGOT, DUSTS_ALUMINUM, "has_aluminium_dust", "aluminum_ingot_from_dust");
         // this.ingotFromNuggetRecipe(Items.COPPER_INGOT, DUSTS_COPPER, "has_copper_nugget", "copper_ingot_from_dust");
-        this.ingotFromNugget(LEAD_INGOT, DUSTS_LEAD, "has_lead_dust", "lead_ingot_from_dust");
-        this.ingotFromNugget(NICKEL_INGOT, DUSTS_NICKEL, "has_nickel_dust", "nickel_ingot_from_dust");
-        this.ingotFromNugget(SILVER_INGOT, DUSTS_SILVER, "has_silver_dust", "silver_ingot_from_dust");
-        this.ingotFromNugget(TIN_INGOT, DUSTS_TIN, "has_tin_dust", "tin_ingot_from_dust");
-        this.ingotFromNugget(URANIUM_INGOT, DUSTS_URANIUM, "has_uranium_dust", "uranium_ingot_from_dust");
+        this.ingotFromDust(LEAD_INGOT, DUSTS_LEAD, "has_lead_dust", "lead_ingot_from_dust");
+        this.ingotFromDust(NICKEL_INGOT, DUSTS_NICKEL, "has_nickel_dust", "nickel_ingot_from_dust");
+        this.ingotFromDust(SILVER_INGOT, DUSTS_SILVER, "has_silver_dust", "silver_ingot_from_dust");
+        this.ingotFromDust(TIN_INGOT, DUSTS_TIN, "has_tin_dust", "tin_ingot_from_dust");
+        this.ingotFromDust(URANIUM_INGOT, DUSTS_URANIUM, "has_uranium_dust", "uranium_ingot_from_dust");
     }
 
     private void nugget(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn) {
@@ -71,13 +71,8 @@ public class FoundationRecipeProvider extends RecipeProvider {
     }
 
     private void ingotFromDust(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(ingredientIn), resultIn, 0f, 200).addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromTag(ingredientIn), resultIn, 0f, 100).addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
-
-    }
-
-    @Override
-    protected void saveRecipeAdvancement(DirectoryCache cache, JsonObject advancementJson, Path path) {
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(ingredientIn), resultIn, 0f, 200).addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "smelting_" + nameIn));
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromTag(ingredientIn), resultIn, 0f, 100).addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "blasting_" + nameIn));
     }
 
     @Nonnull
