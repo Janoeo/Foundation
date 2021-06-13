@@ -6,6 +6,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.data.LanguageProvider;
 
+import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 
 public class FrenchProvider extends LanguageProvider {
@@ -32,9 +33,14 @@ public class FrenchProvider extends LanguageProvider {
         this.add(URANIUM_DUST, "Poussière d'uranium");
 
         this.add(ALUMINIUM_NUGGET, "Pépite d'aluminium");
+        this.add(COAL_NUGGET, "Morceau de charbon");
         this.add(COPPER_NUGGET, "Pépite de cuivre");
+        this.add(DIAMOND_NUGGET, "Éclat de diamant");
+        this.add(EMERALD_NUGGET, "Éclat d'émeraude");
+        this.add(LAPIS_NUGGET, "Fragment de lapis");
         this.add(LEAD_NUGGET, "Pépite de plomp");
         this.add(NICKEL_NUGGET, "Pépite de nickel");
+        this.add(REDSTONE_NUGGET, "Petit tas de Redstone");
         this.add(SILVER_NUGGET, "Pépite d'argent");
         this.add(TIN_NUGGET, "Pépite d'étain");
         this.add(URANIUM_NUGGET, "Pépite d'uranium");
@@ -45,6 +51,22 @@ public class FrenchProvider extends LanguageProvider {
         this.add(SILVER_INGOT, "Lingot d'argent");
         this.add(TIN_INGOT, "Lingot d'étain");
         this.add(URANIUM_INGOT, "Lingot d'uranium");
+
+        this.add(BAUXITE_ORE, "Minerai de bauxite");
+        this.add(LEAD_ORE, "Minerai de plomb");
+        this.add(NICKEL_ORE, "Minerai de nickel");
+        this.add(SILVER_ORE, "Minerai d'argent");
+        this.add(TIN_ORE, "Minerai d'étain");
+        this.add(URANIUM_ORE, "Minerai d'uranium");
+
+        this.add(TINY_COAL_ORE, "Minuscule minerai de charbon");
+        this.add(TINY_COPPER_ORE, "Minuscule minerai de cuivre");
+        this.add(TINY_DIAMOND_ORE, "Minuscule minerai de diamant");
+        this.add(TINY_EMERALD_ORE, "Minuscule minerai d'émeraude");
+        this.add(TINY_GOLD_ORE, "Minuscule minerai d'or");
+        this.add(TINY_IRON_ORE, "Minuscule minerai de fer");
+        this.add(TINY_LAPIS_ORE, "Minuscule minerai de lapis");
+        this.add(TINY_REDSTONE_ORE, "Minuscule minerai de Redstone");
 
         this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Objets");
         this.add(((TranslationTextComponent) Foundation.BLOCKS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Bloques");

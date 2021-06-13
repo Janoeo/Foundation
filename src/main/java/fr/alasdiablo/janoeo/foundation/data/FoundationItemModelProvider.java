@@ -46,6 +46,14 @@ public class FoundationItemModelProvider extends ItemModelProvider {
                 RAW_TIN, RAW_URANIUM
         );
         this.registerRawItem(raws);
+
+        List<String> blocks = Arrays.asList(
+                BAUXITE_ORE, LEAD_ORE, NICKEL_ORE, SILVER_ORE,
+                TIN_ORE, URANIUM_ORE, TINY_COAL_ORE, TINY_COPPER_ORE,
+                TINY_DIAMOND_ORE, TINY_EMERALD_ORE, TINY_GOLD_ORE,
+                TINY_IRON_ORE, TINY_LAPIS_ORE, TINY_REDSTONE_ORE
+        );
+        this.registerBlock(blocks);
     }
 
     private void registerDustItem(List<String> dusts) {
@@ -62,5 +70,9 @@ public class FoundationItemModelProvider extends ItemModelProvider {
 
     private void registerRawItem(List<String> raws) {
         raws.forEach(raw -> withExistingParent(raw, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/raw/" + raw)));
+    }
+
+    private void registerBlock(List<String> blocks) {
+        blocks.forEach(block -> withExistingParent(block, new ResourceLocation(MOD_ID, "block/" + block)));
     }
 }

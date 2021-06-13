@@ -1,10 +1,7 @@
 package fr.alasdiablo.janoeo.foundation;
 
 import fr.alasdiablo.diolib.gui.GroundItemGroup;
-import fr.alasdiablo.janoeo.foundation.data.FoundationBlockTagsProvider;
-import fr.alasdiablo.janoeo.foundation.data.FoundationItemModelProvider;
-import fr.alasdiablo.janoeo.foundation.data.FoundationItemTagsProvider;
-import fr.alasdiablo.janoeo.foundation.data.FoundationRecipeProvider;
+import fr.alasdiablo.janoeo.foundation.data.*;
 import fr.alasdiablo.janoeo.foundation.data.language.EnglishProvider;
 import fr.alasdiablo.janoeo.foundation.data.language.FrenchProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
@@ -61,7 +58,8 @@ public class Foundation {
         modBus.addListener(this::setup);
         modBus.addListener(this::gatherData);
         modBus.addListener(this::initFeatures);
-        modBus.addGenericListener(Block.class, FoundationBlocks::init);
+        modBus.addGenericListener(Block.class, FoundationBlocks::initBlock);
+        modBus.addGenericListener(Item.class, FoundationBlocks::initItem);
         modBus.addGenericListener(Item.class, FoundationItems::init);
     }
 
@@ -69,6 +67,12 @@ public class Foundation {
         Foundation.logger.debug("Start data generator");
         final DataGenerator generator = event.getGenerator();
         final ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+
+        Foundation.logger.debug("Add Block Model Provider");
+        generator.addProvider(new FoundationBlockModelProvider(generator, existingFileHelper));
+
+        Foundation.logger.debug("Add Block State Provider");
+        generator.addProvider(new FoundationBlockStateProvider(generator));
 
         Foundation.logger.debug("Add Item Model Provider");
         generator.addProvider(new FoundationItemModelProvider(generator, existingFileHelper));

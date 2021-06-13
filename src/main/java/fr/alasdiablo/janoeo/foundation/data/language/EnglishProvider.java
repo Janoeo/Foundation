@@ -7,6 +7,7 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
+import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
 
 public class EnglishProvider extends LanguageProvider {
 
@@ -32,9 +33,14 @@ public class EnglishProvider extends LanguageProvider {
         this.add(URANIUM_DUST, "Uranium dust");
 
         this.add(ALUMINIUM_NUGGET, "Aluminium nugget");
+        this.add(COAL_NUGGET, "Coal chunk");
         this.add(COPPER_NUGGET, "Copper nugget");
+        this.add(DIAMOND_NUGGET, "Diamond shard");
+        this.add(EMERALD_NUGGET, "Emerald shard");
+        this.add(LAPIS_NUGGET, "Lapis fragment");
         this.add(LEAD_NUGGET, "Lead nugget");
         this.add(NICKEL_NUGGET, "Nickel nugget");
+        this.add(REDSTONE_NUGGET, "Tiny pile of Redstone");
         this.add(SILVER_NUGGET, "Silver nugget");
         this.add(TIN_NUGGET, "Tin nugget");
         this.add(URANIUM_NUGGET, "Uranium nugget");
@@ -52,6 +58,23 @@ public class EnglishProvider extends LanguageProvider {
         this.add(RAW_SILVER, "Raw silver");
         this.add(RAW_TIN, "Raw Tin");
         this.add(RAW_URANIUM, "Raw uranium");
+
+        this.add(BAUXITE_ORE, "Bauxite ore");
+        this.add(LEAD_ORE, "Lead ore");
+        this.add(NICKEL_ORE, "Nickel ore");
+        this.add(SILVER_ORE, "Silver ore");
+        this.add(TIN_ORE, "Tin ore");
+        this.add(URANIUM_ORE, "Uranium ore");
+
+        this.add(TINY_COAL_ORE, "Tiny coal ore");
+        this.add(TINY_COPPER_ORE, "Tiny copper ore");
+        this.add(TINY_DIAMOND_ORE, "Tiny diamond ore");
+        this.add(TINY_EMERALD_ORE, "Tiny emerald ore");
+        this.add(TINY_GOLD_ORE, "Tiny gold ore");
+        this.add(TINY_IRON_ORE, "Tiny iron ore");
+        this.add(TINY_LAPIS_ORE, "Tiny lapis ore");
+        this.add(TINY_REDSTONE_ORE, "Tiny redstone ore");
+
 
         this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Items");
         this.add(((TranslationTextComponent) Foundation.BLOCKS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Blocks");
