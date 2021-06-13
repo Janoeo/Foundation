@@ -1,4 +1,196 @@
+# Janoeo Foundation Changelog
+
+## Summary
+
+<details><summary><b>1.16.5</b></summary>
+
++ [5.6.0.68](#56068)
++ [5.6.0.67](#56067)
++ [4.5.0.63-experimental](#45063-experimental)
+
+</details>
+
+<details><summary><b>1.16.4</b></summary>
+
++ [5.6.0.68](#56068)
++ [5.6.0.67](#56067)
++ [4.5.0.63-experimental](#45063-experimental)
++ [4.5.0.62-experimental](#45062-experimental)
++ [4.5.0.61-experimental](#45061-experimental)
+
+</details>
+
+<details><summary><b>1.16.3</b></summary>
+
++ [5.6.0.68](#56068)
++ [5.6.0.67](#56067)
++ [4.5.0.63-experimental](#45063-experimental)
++ [4.5.0.62-experimental](#45062-experimental)
++ [4.5.0.61-experimental](#45061-experimental)
++ [4.4.0.59-experimental](#44059-experimental)
++ [4.4.0.58-experimental](#44058-experimental)
++ [4.4.0.57-experimental](#44057-experimental)
++ [4.4.0.56-experimental](#44056-experimental)
++ [4.4.0.55-experimental](#44055-experimental)
++ [4.4.0.53-experimental](#44053-experimental)
++ [4.4.0.52-experimental](#44052-experimental)
+
+</details>
+
+<details><summary><b>1.16.1</b></summary>
+
++ [4.4.0.48-experimental](#44048-experimental)
++ [4.4.0.47-experimental](#44047-experimental)
++ [4.4.0.46-experimental](#44046-experimental)
++ [4.4.0.45-experimental](#44045-experimental)
++ [4.4.0.42-experimental](#44042-experimental)
++ [3.6.1.1](#3611)
++ [3.6.1](#361)
+
+</details>
+
+<details><summary><b>1.15.2</b></summary>
+
++ [4.4.0.49-experimental](#44049-experimental)
++ [3.6](#36)
++ [3.5](#35)
++ [3.4](#34---nether-ore-and-bug-fixing)
++ [3.3](#33)
++ [3.2.1](#321)
++ [3.2](#32)
+
+</details>
+
+<details><summary><b>1.15.1</b></summary>
+
++ [3.1.2](#312)
++ [3.1.1](#311.1)
++ [3.1](#23--31)
++ [3.0](#30)
+
+</details>
+
+<details><summary><b>1.14.4</b></summary>
+
++ [2.3](#23--31)
++ [2.2](#22)
++ [2.1.1](#211)
++ [2.1](#21)
++ [2.0](#20)
++ [1.9.2](#192)
++ [1.9.1](#191)
++ [1.9](#19)
++ [1.8.1](#181)
++ [1.8](#18)
++ [1.7](#17)
++ [1.6](#16)
++ [1.5](#15)
++ [1.4](#14)
++ [1.3](#13)
++ [1.2](#12)
++ [1.1](#11)
++ [1.0](#10)
+
+</details>
+
+### 6.6.0.69
+
+#### BREAKING CHANGE
+
++ Complet mod rewrite
++ Name change to Janoeo Foundation
+
+##### Add & re-add
+
+###### Ore:
+
++ Bauxite (Aluminium)
++ Lead
++ Nickel
++ Silver
++ Tin
++ Uranium
+
+###### Tiny ore:
+
++ Coal
++ Copper
++ Diamond
++ Emerald
++ Gold
++ Iron
++ Lapis
++ Redstone
+
+###### Dust:
+
++ Aluminium
++ Amethyst
++ Coal
++ Copper
++ Diamond
++ Emerald
++ Gold
++ Iron
++ Lapis
++ Lead
++ Nickel
++ Silver
++ Tin
++ Uranium
+
+###### Ingot
+
++ Aluminium
++ Lead
++ Nickel
++ Silver
++ Tin
++ Uranium
+
+###### Nugget:
+
++ Aluminium
++ Coal
++ Copper
++ Diamond
++ Emerald
++ Lapis
++ Lead
++ Nickel
++ Redstone
++ Silver
++ Tin
++ Uranium
+
+###### Raw
+
++ Aluminium
++ Lead
++ Nickel
++ Silver
++ Tin
++ Uranium
+
+##### Technical change
+
+###### Mod implementation
+
++ Json config (DiaboloLib)
+
+###### Add data provider
+
++ English localization
++ French localization
++ Block model
++ Block state
++ Block tag
++ Item model
++ Item tag
++ Recipe
+
 ### 5.6.0.68
+
 + Fix
   + Missing requirement tools
 + Change
@@ -75,7 +267,7 @@
 
 ### 4.4.0.52-experimental
 + Testing version of the port to 1.16.3
-    + Only overworld ore generation work
+  + Only overworld ore generation work
 
 ### 4.4.0.49-experimental
 + Drop support for 1.16 for now (wait stable release)
@@ -106,7 +298,7 @@
 
 ### 4.4.0.42-experimental
 + Change versioning
-    + \<project version>.\<mod version>.\<mod sub version>.\<project build number>
+  + \<project version>.\<mod version>.\<mod sub version>.\<project build number>
 + Internal code rework
 + Update xp drop on block
 
@@ -118,9 +310,9 @@
 
 ### 3.6
 + Add new gravel ore
-    + Iron gravel ore
-    + Gold gravel ore
-    + Diamond gravel ore
+  + Iron gravel ore
+  + Gold gravel ore
+  + Diamond gravel ore
 
 ### 3.5
 + Add a new ore world gen system(note for modder: extend of OreFeatureConfig to be use with more predicate (more that stone and netherrack))
@@ -129,14 +321,14 @@
 ### 3.4 - Nether Ore and Bug Fixing
 + Add Safyrus in the creator event
 + Add new ore in the nether
-    + Aluminium
-    + Copper
-    + Lead
-    + Ruby
-    + Sapphire
-    + Silver
-    + Tin
-    + Uranium
+  + Aluminium
+  + Copper
+  + Lead
+  + Ruby
+  + Sapphire
+  + Silver
+  + Tin
+  + Uranium
 + Change loot table for dense ore (buff/nerf)
 + Refactor texture folder
 + Fix anger Enderman/Pigman missing on some block due to duplicated code
@@ -154,8 +346,8 @@
 
 ### 3.2
 + Add storage block
-    + Ruby
-    + Sapphire
+  + Ruby
+  + Sapphire
 
 ### 3.1.2
 + Fix mod not working in 1.15.2 due to missing information in the meta-inf
@@ -166,8 +358,8 @@
 ### 2.3 & 3.1
 + Fix bug on dense emerald ore in the nether(not generated)
 + Add new ore
-    + Ruby
-    + Sapphire
+  + Ruby
+  + Sapphire
 + Add a firework when i join a world
 
 ### 3.0
@@ -175,9 +367,9 @@
 
 ### 2.2
 + Add dust
-    + Diamond
-    + Iron
-    + Gold
+  + Diamond
+  + Iron
+  + Gold
 + Continue to rework the code of the mod
 
 ### 2.1.1
@@ -185,8 +377,8 @@
 
 ### 2.1
 + Add new mobs mechanism
-    + Zombie pigman attack the player if the player break a nether ore
-    + Enderman attack the player if the player break a end ore
+  + Zombie pigman attack the player if the player break a nether ore
+  + Enderman attack the player if the player break a end ore
 
 ### 2.0
 + Internal rework (code)
