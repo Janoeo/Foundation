@@ -60,18 +60,28 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         getOrCreateBuilder(Tags.Items.NUGGETS).addTags(
                 NUGGETS_ALUMINIUM,
                 NUGGETS_ALUMINUM,
+                NUGGETS_COAL,
                 NUGGETS_COPPER,
+                NUGGETS_DIAMOND,
+                NUGGETS_EMERALD,
+                NUGGETS_LAPIS,
                 NUGGETS_LEAD,
                 NUGGETS_NICKEL,
+                NUGGETS_REDSTONE,
                 NUGGETS_SILVER,
                 NUGGETS_TIN,
                 NUGGETS_URANIUM
         );
         getOrCreateBuilder(NUGGETS_ALUMINIUM).addItemEntry(ALUMINIUM_NUGGET);
         getOrCreateBuilder(NUGGETS_ALUMINUM).addTags(NUGGETS_ALUMINIUM); // Reference to NUGGETS_ALUMINIUM
+        getOrCreateBuilder(NUGGETS_COAL).addItemEntry(COAL_NUGGET);
         getOrCreateBuilder(NUGGETS_COPPER).addItemEntry(COPPER_NUGGET);
+        getOrCreateBuilder(NUGGETS_DIAMOND).addItemEntry(DIAMOND_NUGGET);
+        getOrCreateBuilder(NUGGETS_EMERALD).addItemEntry(EMERALD_NUGGET);
+        getOrCreateBuilder(NUGGETS_LAPIS).addItemEntry(LAPIS_NUGGET);
         getOrCreateBuilder(NUGGETS_LEAD).addItemEntry(LEAD_NUGGET);
         getOrCreateBuilder(NUGGETS_NICKEL).addItemEntry(NICKEL_NUGGET);
+        getOrCreateBuilder(NUGGETS_REDSTONE).addItemEntry(REDSTONE_NUGGET);
         getOrCreateBuilder(NUGGETS_SILVER).addItemEntry(SILVER_NUGGET);
         getOrCreateBuilder(NUGGETS_TIN).addItemEntry(TIN_NUGGET);
         getOrCreateBuilder(NUGGETS_URANIUM).addItemEntry(URANIUM_NUGGET);

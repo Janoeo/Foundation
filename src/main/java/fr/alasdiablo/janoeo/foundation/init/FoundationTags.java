@@ -1,11 +1,29 @@
 package fr.alasdiablo.janoeo.foundation.init;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.Tags;
 
 public class FoundationTags {
+
+    public static class Blocks {
+        public static final Tags.IOptionalNamedTag<Block> ORES = tag("ores");
+        public static final Tags.IOptionalNamedTag<Block> ORES_ALUMINIUM = tag("ores/aluminium"); // UK also FR btw (haha)
+        public static final Tags.IOptionalNamedTag<Block> ORES_ALUMINUM = tag("ores/aluminum");  // US // because we can found both…
+        public static final Tags.IOptionalNamedTag<Block> ORES_LEAD = tag("ores/lead");
+        public static final Tags.IOptionalNamedTag<Block> ORES_NICKEL = tag("ores/nickel");
+        public static final Tags.IOptionalNamedTag<Block> ORES_SILVER = tag("ores/silver");
+        public static final Tags.IOptionalNamedTag<Block> ORES_TIN = tag("ores/tin");
+        public static final Tags.IOptionalNamedTag<Block> ORES_URANIUM = tag("ores/uranium");
+
+        private static Tags.IOptionalNamedTag<Block> tag(String name) {
+            return BlockTags.createOptional(new ResourceLocation("forge", name));
+        }
+    }
 
     public static class Items {
         public static final Tags.IOptionalNamedTag<Item> DUSTS_ALUMINIUM = tag("dusts/aluminium"); // UK also FR btw (haha)
@@ -26,9 +44,14 @@ public class FoundationTags {
 
         public static final Tags.IOptionalNamedTag<Item> NUGGETS_ALUMINIUM = tag("nuggets/aluminium"); // UK also FR btw (haha)
         public static final Tags.IOptionalNamedTag<Item> NUGGETS_ALUMINUM = tag("nuggets/aluminum");  // US // because we can found both…
+        public static final Tags.IOptionalNamedTag<Item> NUGGETS_COAL = tag("nuggets/coal");
         public static final Tags.IOptionalNamedTag<Item> NUGGETS_COPPER = tag("nuggets/copper");
+        public static final Tags.IOptionalNamedTag<Item> NUGGETS_DIAMOND = tag("nuggets/diamond");
+        public static final Tags.IOptionalNamedTag<Item> NUGGETS_EMERALD = tag("nuggets/emerald");
+        public static final Tags.IOptionalNamedTag<Item> NUGGETS_LAPIS = tag("nuggets/lapis");
         public static final Tags.IOptionalNamedTag<Item> NUGGETS_LEAD = tag("nuggets/lead");
         public static final Tags.IOptionalNamedTag<Item> NUGGETS_NICKEL = tag("nuggets/nickel");
+        public static final Tags.IOptionalNamedTag<Item> NUGGETS_REDSTONE = tag("nuggets/redstone");
         public static final Tags.IOptionalNamedTag<Item> NUGGETS_SILVER = tag("nuggets/silver");
         public static final Tags.IOptionalNamedTag<Item> NUGGETS_TIN = tag("nuggets/tin");
         public static final Tags.IOptionalNamedTag<Item> NUGGETS_URANIUM = tag("nuggets/uranium");
@@ -42,6 +65,8 @@ public class FoundationTags {
         public static final Tags.IOptionalNamedTag<Item> INGOTS_TIN = tag("ingots/tin");
         public static final Tags.IOptionalNamedTag<Item> INGOTS_URANIUM = tag("ingots/uranium");
 
+        // TEMP
+        public static final Tags.IOptionalNamedTag<Item> RAWS = tag("raws");
         public static final Tags.IOptionalNamedTag<Item> RAWS_ALUMINIUM = tag("raws/aluminium"); // UK also FR btw (haha)
         public static final Tags.IOptionalNamedTag<Item> RAWS_ALUMINUM = tag("raws/aluminum");  // US // because we can found both…
         public static final Tags.IOptionalNamedTag<Item> RAWS_LEAD = tag("raws/lead");
@@ -50,8 +75,14 @@ public class FoundationTags {
         public static final Tags.IOptionalNamedTag<Item> RAWS_TIN = tag("raws/tin");
         public static final Tags.IOptionalNamedTag<Item> RAWS_URANIUM = tag("raws/uranium");
 
-        // TEMP
-        public static final Tags.IOptionalNamedTag<Item> RAWS = tag("raws");
+        public static final Tags.IOptionalNamedTag<Item> ORES = tag("ores");
+        public static final Tags.IOptionalNamedTag<Item> ORES_ALUMINIUM = tag("ores/aluminium"); // UK also FR btw (haha)
+        public static final Tags.IOptionalNamedTag<Item> ORES_ALUMINUM = tag("ores/aluminum");  // US // because we can found both…
+        public static final Tags.IOptionalNamedTag<Item> ORES_LEAD = tag("ores/lead");
+        public static final Tags.IOptionalNamedTag<Item> ORES_NICKEL = tag("ores/nickel");
+        public static final Tags.IOptionalNamedTag<Item> ORES_SILVER = tag("ores/silver");
+        public static final Tags.IOptionalNamedTag<Item> ORES_TIN = tag("ores/tin");
+        public static final Tags.IOptionalNamedTag<Item> ORES_URANIUM = tag("ores/uranium");
 
         private static Tags.IOptionalNamedTag<Item> tag(String name) {
             return ItemTags.createOptional(new ResourceLocation("forge", name));
