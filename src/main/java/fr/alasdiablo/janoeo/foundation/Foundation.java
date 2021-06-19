@@ -88,6 +88,9 @@ public class Foundation {
 
         Foundation.logger.debug("Add Recipes Provider");
         generator.addProvider(new FoundationRecipeProvider(generator));
+
+        Foundation.logger.debug("Add Loot Tables Provider");
+        generator.addProvider(new FoundationLootTableProvider(generator));
     }
 
     private void setup(final FMLCommonSetupEvent commonSetupEvent) {

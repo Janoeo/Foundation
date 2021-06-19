@@ -15,6 +15,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class FoundationBlocks {
     private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties().group(Foundation.BLOCKS_GROUP);
+    private static final AbstractBlock.Properties PROPERTIES_ORE_WOOD_TIER = AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(0).hardnessAndResistance(3.0F, 3.0F);
     private static final AbstractBlock.Properties PROPERTIES_ORE_STONE_TIER = AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(1).hardnessAndResistance(3.0F, 3.0F);
     private static final AbstractBlock.Properties PROPERTIES_ORE_IRON_TIER = AbstractBlock.Properties.create(Material.ROCK).setRequiresTool().harvestTool(ToolType.PICKAXE).harvestLevel(2).hardnessAndResistance(3.0F, 3.0F);
 
@@ -53,7 +54,7 @@ public class FoundationBlocks {
     }
 
     /* * * * * * * * * * * * * * * Tiny Ore * * *  * * * * * * * * * * */
-    public static final Block TINY_COAL_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.TINY_COAL_ORE);
+    public static final Block TINY_COAL_ORE = new OreBlock(PROPERTIES_ORE_WOOD_TIER, ExperienceRarity.COMMON, Registries.TINY_COAL_ORE);
     public static final Block TINY_COPPER_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.TINY_COPPER_ORE);
     public static final Block TINY_DIAMOND_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.RARE, Registries.TINY_DIAMOND_ORE);
     public static final Block TINY_EMERALD_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.RARE, Registries.TINY_EMERALD_ORE);
