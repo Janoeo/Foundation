@@ -34,10 +34,10 @@ public class FoundationBlocks {
     /* * * * * * * * * * * * * * * Ore * * *  * * * * * * * * * * */
     public static final Block BAUXITE_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.BAUXITE_ORE);
     public static final Block LEAD_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.LEAD_ORE);
-    public static final Block NICKEL_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.NICKEL_ORE);
-    public static final Block SILVER_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.UNCOMMON, Registries.SILVER_ORE);
+    public static final Block NICKEL_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.COMMON, Registries.NICKEL_ORE);
+    public static final Block SILVER_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.UNCOMMON, Registries.SILVER_ORE);
     public static final Block TIN_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.TIN_ORE);
-    public static final Block URANIUM_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.UNCOMMON, Registries.URANIUM_ORE);
+    public static final Block URANIUM_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.UNCOMMON, Registries.URANIUM_ORE);
 
     private static void initOreBlock(IForgeRegistry<Block> registry) {
         RegistryHelper.registerBlock(registry,
