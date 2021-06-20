@@ -1,64 +1,98 @@
-<img src="https://raw.githubusercontent.com/Janoeo/Texture/master/logo/Janoeo%20-%20Fondation%20-%20V6%20-%20Banner.png" alt="Janoeo Foundation Logo" style="display: block;margin-left: auto;margin-right: auto;" />
+[![Downloads](http://cf.way2muchnoise.eu/full_janoeo_downloads.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/janoeo)
+[![Versions](http://cf.way2muchnoise.eu/versions/janoeo.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/janoeo/files)
+[![size](https://img.shields.io/github/repo-size/Janoeo/Foundation?style=for-the-badge)](https://github.com/AlasDiablo/JANOEO)
+[![license](https://img.shields.io/github/license/Janoeo/Foundation?style=for-the-badge)](https://github.com/AlasDiablo/JANOEO/blob/master/LICENSE)
+[![discord](https://img.shields.io/discord/630863620842061877?style=for-the-badge)](https://discord.gg/KkzqnzA)
 
-[![Downloads](http://cf.way2muchnoise.eu/full_janoeo_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/janoeo)
-[![Versions](http://cf.way2muchnoise.eu/versions/janoeo.svg)](https://www.curseforge.com/minecraft/mc-mods/janoeo/files)
-[![size](https://img.shields.io/github/repo-size/AlasDiablo/JANOEO)](https://github.com/AlasDiablo/JANOEO)
-[![license](https://img.shields.io/github/license/AlasDiablo/JANOEO)](https://github.com/AlasDiablo/JANOEO/blob/master/LICENSE)
-[![discord](https://img.shields.io/discord/630863620842061877)](https://discord.gg/KkzqnzA)
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="https://raw.githubusercontent.com/Janoeo/Texture/master/logo/Janoeo%20-%20Fondation%20-%20V6%20-%20Banner.png" alt="Logo" style="border-radius: 54px 6px">
+  </a>
+  <p align="center">
+    A mod who add ore and more!
+    <br />
+    <a href="#download">Download</a>
+    ·
+    <a href="https://github.com/Janoeo/Foundation/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Janoeo/Foundation/issues">Request Feature</a>
+  </p>
+</div>
 
-## What is this mod?
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#screenshot">Screenshot</a></li>
+        <li><a href="#download--mirror">Download | Mirror</a></li>
+        <li><a href="#dependencies">Dependencies</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-This mod adds some ores in the Overworld, the Nether, and the End.
+## About The Project
 
-## License
+Janoeo Foundation is a who lanch the janoeo project, this mod mente to add a large variety of ore, ingot, dust and more!
 
-- The source code is under [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)
-- The texture (and everything related to art) is under [CC BY-SA 3.0 FR](https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en)
+### screenshot
 
-## Roadmap
+<img src="https://raw.githubusercontent.com/AlasDiablo/JANOEO/1.15/textures/desc/2020-05-01_20.31.59.png" alt="screenshot" style="border-radius: 64px 8px">
 
-- Add more ore
-- Add more dense ore
-- Add more nether ore
-- Add more end ore
-
-## Why did you make this mod?
-
-I just wanted to make a useful mod for other people.
-
-## Dependencies
-
-#### Recommended
-
-+ [Janoeo - Arsenal](https://www.curseforge.com/minecraft/mc-mods/janoeo-arsenal)
-
-#### Optionals / Compatibles
-
-+ [JAOPCA](https://www.curseforge.com/minecraft/mc-mods/jaopca)
-+ [Tinkers Construct](https://www.curseforge.com/minecraft/mc-mods/tinkers-construct)
-+ [Iron Chests](https://www.curseforge.com/minecraft/mc-mods/iron-chests)
-+ [Iron Furnaces](https://www.curseforge.com/minecraft/mc-mods/iron-furnaces)
-+ [Silent's Mechanisms](https://www.curseforge.com/minecraft/mc-mods/silents-mechanisms)
-+ [Mekanism](https://www.curseforge.com/minecraft/mc-mods/mekanism)
-
-## Can I use this in a modpack?
-
-Yes you can, just remember to put the name of the mod in the description of your modpack!
-
-# Download:
+### Download | Mirror
 
 - [Curseforge](https://www.curseforge.com/minecraft/mc-mods/janoeo)
 - [Planet Minecraft](https://www.planetminecraft.com/mod/janoeo-just-another-nether-overworld-end-ores/)
 - [NexusMods](https://www.nexusmods.com/minecraft/mods/121/)
 - [Github](https://github.com/Janoeo/Foundation/releases)
 
-# Some screenshots:
-![img1](https://raw.githubusercontent.com/AlasDiablo/JANOEO/1.15/textures/desc/2020-05-01_20.31.59.png)
-![img2](https://raw.githubusercontent.com/AlasDiablo/JANOEO/1.15/textures/desc/2020-05-01_20.33.00.png)
-![img3](https://raw.githubusercontent.com/AlasDiablo/JANOEO/1.15/textures/desc/2020-05-01_20.34.28.png)
+### Dependencies
 
++ Required
+  + [DiaboloLib](https://www.curseforge.com/minecraft/mc-mods/diabololib)
 
-![img1-old](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.11.02.png)
-![img2-old](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-22_15.30.17.png)
-![img3-old](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.17.12.png)
-![img4-old](https://raw.githubusercontent.com/AlasDiablo/JANOEO/master/textures/desc/2019-08-29_10.13.38.png)
++ Recommended
+  + [Janoeo - Arsenal](https://www.curseforge.com/minecraft/mc-mods/janoeo-arsenal)
+
++ Optionals / Compatibles
+  + [JAOPCA](https://www.curseforge.com/minecraft/mc-mods/jaopca)
+  + [Tinkers Construct](https://www.curseforge.com/minecraft/mc-mods/tinkers-construct)
+  + [Iron Chests](https://www.curseforge.com/minecraft/mc-mods/iron-chests)
+  + [Iron Furnaces](https://www.curseforge.com/minecraft/mc-mods/iron-furnaces)
+  + [Silent's Mechanisms](https://www.curseforge.com/minecraft/mc-mods/silents-mechanisms)
+  + [Mekanism](https://www.curseforge.com/minecraft/mc-mods/mekanism)
+
+## Contributing
+
+If you want to contribute you can to it via:
+
+- [Bug report](https://github.com/Janoeo/Foundation/issues)
+- [Feature request](https://github.com/Janoeo/Foundation/issues)
+- [Bug fix](https://github.com/Janoeo/Foundation/pulls)
+- [Any useful code change](https://github.com/Janoeo/Foundation/pulls)
+- If you want to give a donation you can't because we don't have a Patreon(or anything like this), for now you just need
+  to download the mod on CurseForge!
+
+## License
+
+- The source code is under [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)
+- The texture (and everything related to art) is
+  under [CC BY-SA 3.0 FR](https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en)
+
+## Contact
+
+- Contact us via [Discord](https://discord.gg/KkzqnzA)
+
+## Acknowledgements
+
+- [AlasDiablo](https://github.com/AlasDiablo) - Original author, main contributor
+- [Safyrus](https://github.com/Safyrus) - Lead artist
+- [Dadadodu](https://github.com/Dadadodu) - Testing, proposition
+- [Any Contributor](https://github.com/Janoeo/Foundation/graphs/contributors) - Bug report, bug fix
+- And people who download my mod!
