@@ -39,7 +39,10 @@
 
 ## About The Project
 
-Janoeo Foundation is a who lanch the janoeo project, this mod mente to add a large variety of ore, ingot, dust and more!
+***Janoeo Foundation*** is the mod who launch the Janoeo Project. At the start of ***Janoeo*** this mod aim to only add
+ore, and now the part of the project is implemented as ***Janoeo Foundation***.
+
+***Janoeo Foundation*** aim to add a large variety of ore, ingot, dust and more!
 
 ### screenshot
 
