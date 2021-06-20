@@ -1,6 +1,4 @@
-# Janoeo
-
-<img src="https://raw.githubusercontent.com/AlasDiablo/JANOEO/1.15/textures/desc/logo.png" alt="AkumaCodeBlack" align=right width=128px />
+<img src="https://raw.githubusercontent.com/Janoeo/Texture/master/logo/Janoeo%20-%20Fondation%20-%20V6%20-%20Banner.png" alt="Janoeo Foundation Logo" style="display: block;margin-left: auto;margin-right: auto;" />
 
 [![Downloads](http://cf.way2muchnoise.eu/full_janoeo_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/janoeo)
 [![Versions](http://cf.way2muchnoise.eu/versions/janoeo.svg)](https://www.curseforge.com/minecraft/mc-mods/janoeo/files)
@@ -31,8 +29,13 @@ I just wanted to make a useful mod for other people.
 ## Dependencies
 
 #### Recommended
-+ [JANOEO Arsenal](https://www.curseforge.com/minecraft/mc-mods/janoeo-arsenal)
+
++ [Janoeo - Arsenal](https://www.curseforge.com/minecraft/mc-mods/janoeo-arsenal)
+
 #### Optionals / Compatibles
+
++ [JAOPCA](https://www.curseforge.com/minecraft/mc-mods/jaopca)
++ [Tinkers Construct](https://www.curseforge.com/minecraft/mc-mods/tinkers-construct)
 + [Iron Chests](https://www.curseforge.com/minecraft/mc-mods/iron-chests)
 + [Iron Furnaces](https://www.curseforge.com/minecraft/mc-mods/iron-furnaces)
 + [Silent's Mechanisms](https://www.curseforge.com/minecraft/mc-mods/silents-mechanisms)
@@ -47,6 +50,7 @@ Yes you can, just remember to put the name of the mod in the description of your
 - [Curseforge](https://www.curseforge.com/minecraft/mc-mods/janoeo)
 - [Planet Minecraft](https://www.planetminecraft.com/mod/janoeo-just-another-nether-overworld-end-ores/)
 - [NexusMods](https://www.nexusmods.com/minecraft/mods/121/)
+- [Github](https://github.com/Janoeo/Foundation/releases)
 
 # Some screenshots:
 ![img1](https://raw.githubusercontent.com/AlasDiablo/JANOEO/1.15/textures/desc/2020-05-01_20.31.59.png)
