@@ -94,7 +94,7 @@ If you want to contribute you can to it via:
 
 ## Acknowledgements
 
-- [AlasDiablo](https://github.com/AlasDiablo) - Original author, main contributor
+- [AlasDiablo](https://github.com/AlasDiablo) / [lIotaMiu](https://github.com/liotamiu) - Original author, main contributor
 - [Safyrus](https://github.com/Safyrus) - Lead artist
 - [Dadadodu](https://github.com/Dadadodu) - Testing, proposition
 - [Any Contributor](https://github.com/Janoeo/Foundation/graphs/contributors) - Bug report, bug fix
