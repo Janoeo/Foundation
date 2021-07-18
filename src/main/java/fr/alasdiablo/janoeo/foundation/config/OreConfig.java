@@ -3,188 +3,168 @@ package fr.alasdiablo.janoeo.foundation.config;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import fr.alasdiablo.diolib.config.json.JsonConfig;
-import net.minecraft.util.ResourceLocation;
 
 public class OreConfig extends JsonConfig {
 
-    private int size;
-    private int count;
-    private int heightTop;
-    private int heightBottom;
-    private boolean enable;
-    private String countType;
-    private ResourceLocation replace;
-    private String replaceType;
     private final String name;
+    private String placement;
+    private boolean enable;
+    private int size;
+    private int range;
+    private int count;
+    private int baseline;
+    private int spread;
+    private int bottomOffset;
+    private int topOffset;
+    private int maximum;
 
-    public OreConfig(String name,
-                     String replaceType,
-                     ResourceLocation replace,
-                     int size,
-                     int count,
-                     int heightBottom,
-                     int heightTop,
-                     boolean rounded,
-                     boolean enable
-    ) {
-        this.size = size;
-        this.count = count;
-        this.heightBottom = heightBottom;
-        this.heightTop = heightTop;
+    public OreConfig(String name, boolean enable) {
         this.name = name;
         this.enable = enable;
-        this.countType = rounded ? "rounded" : "linear";
-        this.replace = replace;
-        this.replaceType = replaceType;
-    }
-
-    public OreConfig(String name,
-                     String replaceType,
-                     ResourceLocation replace,
-                     int size,
-                     int heightBottom,
-                     int heightTop,
-                     boolean enable
-    ) {
-        this.size = size;
+        this.placement = "";
+        this.size = 0;
+        this.range = 0;
         this.count = 0;
-        this.heightBottom = heightBottom;
-        this.heightTop = heightTop;
-        this.name = name;
-        this.enable = enable;
-        this.countType = "square";
-        this.replace = replace;
-        this.replaceType = replaceType;
+        this.baseline = 0;
+        this.spread = 0;
+        this.bottomOffset = 0;
+        this.topOffset = 0;
+        this.maximum = 0;
     }
 
-    public int getSize() {
-        return size;
+    public OreConfig placementRange(int size, int range, int count) {
+        this.placement = "range";
+        this.size = size;
+        this.range = range;
+        this.count = count;
+        return this;
     }
 
-    public int getCount() {
-        return count;
+    public OreConfig placementDepthAverage(int size, int baseline, int spread) {
+        this.placement = "depth_average";
+        this.size = size;
+        this.baseline = baseline;
+        this.spread = spread;
+        return this;
     }
 
-    public int getHeightTop() {
-        return heightTop;
-    }
-
-    public int getHeightBottom() {
-        return heightBottom;
-    }
-
-    public boolean isEnable() {
-        return enable;
-    }
-
-    public String getCountType() {
-        return countType;
-    }
-
-    public ResourceLocation getReplace() {
-        return replace;
-    }
-
-    public String getReplaceType() {
-        return replaceType;
+    public OreConfig placementTopSolidRange(int size, int bottomOffset, int topOffset, int maximum, int count) {
+        this.placement = "top_solid_range";
+        this.size = size;
+        this.bottomOffset = bottomOffset;
+        this.topOffset = topOffset;
+        this.maximum = maximum;
+        this.count = count;
+        return this;
     }
 
     @Override
     protected void read(final JsonObject json) {
-        JsonElement enable, size, countEle, countType, count, heightEle, bottom, top, replaceEle, replace, replaceType;
-
-        countEle = json.get("count");
-        heightEle = json.get("height");
-        replaceEle = json.get("replace");
-
-        final JsonObject countObj = countEle.getAsJsonObject(),
-                heightObj = heightEle.getAsJsonObject(),
-                replaceObj = replaceEle.getAsJsonObject();
-
-        enable = json.get("enable");
-        size = json.get("size");
-        top = heightObj.get("top");
-        bottom = heightObj.get("bottom");
-        countType = countObj.get("type");
-        replaceType = replaceObj.get("type");
-        replace = replaceObj.get("name");
-
-        this.replaceType = replaceType.getAsString();
-        this.replace = new ResourceLocation(replace.getAsString());
-
+        JsonElement type = json.get("type");
+        JsonElement enable = json.get("enable");
+        JsonObject placement = json.get("placement").getAsJsonObject();
+        this.placement = type.getAsString();
         this.enable = enable.getAsBoolean();
-
-        int sizeValue = size.getAsInt();
-        if (sizeValue >= 128 || sizeValue <= 0)
-            throw new IllegalArgumentException("The parameter 'size' is out of range!");
-        else this.size = sizeValue;
-
-        int topValue = top.getAsInt();
-        int bottomValue = bottom.getAsInt();
-
-        if (topValue < bottomValue)
-            throw new IllegalArgumentException("The parameter 'height.top' can't be lower that 'height.bottom'!");
-
-        if (topValue >= 255 || topValue <= -30)
-            throw new IllegalArgumentException("The parameter 'height.top' is out of range!");
-        else this.heightTop = topValue;
-
-        if (bottomValue <= -30)
-            throw new IllegalArgumentException("The parameter 'height.bottom' is out of range!");
-        else this.heightBottom = bottomValue;
-
-        String countTypeValue = countType.getAsString();
-        switch (countTypeValue) {
-            case "linear": {
-                this.countType = "linear";
-                count = countObj.get("value");
-                if (count.isJsonArray())
-                    throw new IllegalArgumentException("The parameter 'count.value' can't be an array in 'linear' type");
-
-                int countValue = count.getAsInt();
-                if (countValue >= 128 || countValue <= 0)
-                    throw new IllegalArgumentException("The parameter 'count.value' is out of range!");
-                else this.count = countValue;
+        switch (this.placement) {
+            case "range": {
+                this.size = placement.get("size").getAsInt();
+                this.range = placement.get("range").getAsInt();
+                this.count = placement.get("count").getAsInt();
                 break;
             }
-
-            case "scale": {
-                this.countType = "scale";
+            case "depth_average": {
+                this.size = placement.get("size").getAsInt();
+                this.baseline = placement.get("baseline").getAsInt();
+                this.spread = placement.get("spread").getAsInt();
                 break;
             }
-
+            case "top_solid_range": {
+                this.size = placement.get("size").getAsInt();
+                this.bottomOffset = placement.get("bottomOffset").getAsInt();
+                this.topOffset = placement.get("topOffset").getAsInt();
+                this.maximum = placement.get("maximum").getAsInt();
+                this.count = placement.get("count").getAsInt();
+                break;
+            }
             default:
-                throw new IllegalArgumentException("The parameter 'count.type' need to be 'linear' or 'scale'!");
+                throw new IllegalArgumentException("Unknown placement type");
         }
     }
 
     @Override
     protected JsonObject write() {
         final JsonObject json = new JsonObject();
-        final JsonObject height = new JsonObject();
-        final JsonObject count = new JsonObject();
-        final JsonObject replace = new JsonObject();
-
-        height.addProperty("top", this.heightTop);
-        height.addProperty("bottom", this.heightBottom);
-
-        count.addProperty("type", this.countType);
-        if (this.countType.equals("linear")) count.addProperty("value", this.count);
-
-        replace.addProperty("type", this.replaceType);
-        replace.addProperty("name", this.replace.toString());
-
+        json.addProperty("type", this.placement);
         json.addProperty("enable", this.enable);
-        json.addProperty("size", this.size);
-        json.add("height", height);
-        json.add("count", count);
-        json.add("replace", replace);
-
+        final JsonObject placement = new JsonObject();
+        switch (this.placement) {
+            case "range": {
+                placement.addProperty("size", this.size);
+                placement.addProperty("range", this.range);
+                placement.addProperty("count", this.count);
+                break;
+            }
+            case "depth_average": {
+                placement.addProperty("size", this.size);
+                placement.addProperty("baseline", this.baseline);
+                placement.addProperty("spread", this.spread);
+                break;
+            }
+            case "top_solid_range": {
+                placement.addProperty("size", this.size);
+                placement.addProperty("bottomOffset", this.bottomOffset);
+                placement.addProperty("topOffset", this.topOffset);
+                placement.addProperty("maximum", this.maximum);
+                placement.addProperty("count", this.count);
+                break;
+            }
+        }
+        json.add("placement", placement);
         return json;
     }
 
     @Override
     protected String getName() {
         return this.name;
+    }
+
+    public String getPlacement() {
+        return placement;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getRange() {
+        return range;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public int getBaseline() {
+        return baseline;
+    }
+
+    public int getSpread() {
+        return spread;
+    }
+
+    public int getBottomOffset() {
+        return bottomOffset;
+    }
+
+    public int getTopOffset() {
+        return topOffset;
+    }
+
+    public int getMaximum() {
+        return maximum;
     }
 }
