@@ -1,11 +1,13 @@
 package fr.alasdiablo.janoeo.foundation;
 
 import fr.alasdiablo.diolib.gui.GroundItemGroup;
+import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.data.*;
 import fr.alasdiablo.janoeo.foundation.data.language.EnglishProvider;
 import fr.alasdiablo.janoeo.foundation.data.language.FrenchProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
+import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.DataGenerator;
@@ -24,19 +26,24 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
+
 @Mod(Registries.MOD_ID)
+@MethodsReturnNonnullByDefault
 public class Foundation {
 
     public static final Logger logger = LogManager.getLogger(Registries.MOD_ID);
 
     public static final ItemGroup ITEMS_GROUP = new GroundItemGroup("janoeo.foundation.item") {
-        @Override public ItemStack createIcon() {
+        @Override
+        public ItemStack makeIcon() {
             return new ItemStack(Items.COAL);
         }
     };
 
     public static final ItemGroup BLOCKS_GROUP = new GroundItemGroup("janoeo.foundation.block") {
-        @Override public ItemStack createIcon() {
+        @Override
+        public ItemStack makeIcon() {
             return new ItemStack(Blocks.COAL_BLOCK);
         }
     };
@@ -52,8 +59,9 @@ public class Foundation {
         Compact.JUST_ENOUGH_RESOURCES = modList.isLoaded("jeresources");
     }
 
-    public Foundation() {
+    public Foundation() throws IOException {
         this.foundCompact();
+        FoundationConfig.init();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         modBus.addListener(this::setup);
         modBus.addListener(this::gatherData);

@@ -27,7 +27,7 @@ public class OreBlock extends net.minecraft.block.OreBlock implements IDropExper
     public int getExpDrop(BlockState state, IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
         if (silktouch != 0) return 0;
         int exp = this.getExperience(RANDOM, this);
-        if (exp == -1) return this.getExperience(RANDOM);
+        if (exp == -1) return this.xpOnDrop(RANDOM);
         else return exp;
     }
 }

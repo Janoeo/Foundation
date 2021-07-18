@@ -9,7 +9,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class FoundationItems {
 
-    private static final Item.Properties PROPERTIES = new Item.Properties().group(Foundation.ITEMS_GROUP);
+    private static final Item.Properties PROPERTIES = new Item.Properties().tab(Foundation.ITEMS_GROUP);
 
     private static Item createItem(Item.Properties properties, String registryName) {
         return new Item(properties).setRegistryName(registryName);

@@ -26,7 +26,7 @@ public class FoundationRecipeProvider extends RecipeProvider {
     private static Consumer<IFinishedRecipe> finishedRecipeConsumer;
 
     @Override
-    protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
+    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
         finishedRecipeConsumer = consumer;
 
         this.nugget(ALUMINIUM_NUGGET, INGOTS_ALUMINIUM, "has_aluminium_ingot", "aluminium_nugget");
@@ -86,24 +86,24 @@ public class FoundationRecipeProvider extends RecipeProvider {
     }
 
     private void nugget(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn) {
-        ShapelessRecipeBuilder.shapelessRecipe(resultIn, 9).addIngredient(Ingredient.fromTag(ingredientIn)).addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer);
+        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer);
     }
 
     private void nugget(IItemProvider resultIn, Item ingredientIn, String criterionNameIn) {
-        ShapelessRecipeBuilder.shapelessRecipe(resultIn, 9).addIngredient(Ingredient.fromItems(ingredientIn)).addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer);
+        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer);
     }
 
     private void nugget(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        ShapelessRecipeBuilder.shapelessRecipe(resultIn, 9).addIngredient(Ingredient.fromTag(ingredientIn)).addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
+        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
     }
 
     private void ingotFromNugget(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        ShapedRecipeBuilder.shapedRecipe(resultIn).key('A', ingredientIn).patternLine("AAA").patternLine("AAA").patternLine("AAA").addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
+        ShapedRecipeBuilder.shaped(resultIn).define('A', ingredientIn).pattern("AAA").pattern("AAA").pattern("AAA").unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
     }
 
     private void ingotFromDust(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(ingredientIn), resultIn, 0f, 200).addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "smelting_" + nameIn));
-        CookingRecipeBuilder.blastingRecipe(Ingredient.fromTag(ingredientIn), resultIn, 0f, 100).addCriterion(criterionNameIn, hasItem(ingredientIn)).build(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "blasting_" + nameIn));
+        CookingRecipeBuilder.smelting(Ingredient.of(ingredientIn), resultIn, 0f, 200).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "smelting_" + nameIn));
+        CookingRecipeBuilder.blasting(Ingredient.of(ingredientIn), resultIn, 0f, 100).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "blasting_" + nameIn));
     }
 
     private void ingotFromRaw(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {

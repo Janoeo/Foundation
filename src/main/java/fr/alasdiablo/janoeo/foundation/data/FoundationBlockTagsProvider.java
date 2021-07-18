@@ -19,8 +19,8 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
     }
 
     @Override
-    protected void registerTags() {
-        this.getOrCreateBuilder(Tags.Blocks.ORES).addTags(
+    protected void addTags() {
+        this.tag(Tags.Blocks.ORES).addTags(
                 ORES_ALUMINIUM,
                 ORES_ALUMINUM,
                 ORES_LEAD,
@@ -30,15 +30,15 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
                 ORES_URANIUM,
                 ORES_TINY
         );
-        this.getOrCreateBuilder(ORES_ALUMINIUM).addItemEntry(BAUXITE_ORE);
-        this.getOrCreateBuilder(ORES_ALUMINUM).addTags(ORES_ALUMINIUM); // Reference to DUSTS_ALUMINIUM
-        this.getOrCreateBuilder(ORES_LEAD).addItemEntry(LEAD_ORE);
-        this.getOrCreateBuilder(ORES_NICKEL).addItemEntry(NICKEL_ORE);
-        this.getOrCreateBuilder(ORES_SILVER).addItemEntry(SILVER_ORE);
-        this.getOrCreateBuilder(ORES_TIN).addItemEntry(TIN_ORE);
-        this.getOrCreateBuilder(ORES_URANIUM).addItemEntry(URANIUM_ORE);
+        this.tag(ORES_ALUMINIUM).add(BAUXITE_ORE);
+        this.tag(ORES_ALUMINUM).addTags(ORES_ALUMINIUM); // Reference to DUSTS_ALUMINIUM
+        this.tag(ORES_LEAD).add(LEAD_ORE);
+        this.tag(ORES_NICKEL).add(NICKEL_ORE);
+        this.tag(ORES_SILVER).add(SILVER_ORE);
+        this.tag(ORES_TIN).add(TIN_ORE);
+        this.tag(ORES_URANIUM).add(URANIUM_ORE);
 
-        this.getOrCreateBuilder(ORES_TINY).addTags(
+        this.tag(ORES_TINY).addTags(
                 ORES_TINY_COAL,
                 ORES_TINY_COPPER,
                 ORES_TINY_DIAMOND,
@@ -48,14 +48,14 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
                 ORES_TINY_LAPIS,
                 ORES_TINY_REDSTONE
         );
-        this.getOrCreateBuilder(ORES_TINY_COAL).addItemEntry(TINY_COAL_ORE);
-        this.getOrCreateBuilder(ORES_TINY_COPPER).addItemEntry(TINY_COPPER_ORE);
-        this.getOrCreateBuilder(ORES_TINY_DIAMOND).addItemEntry(TINY_DIAMOND_ORE);
-        this.getOrCreateBuilder(ORES_TINY_EMERALD).addItemEntry(TINY_EMERALD_ORE);
-        this.getOrCreateBuilder(ORES_TINY_GOLD).addItemEntry(TINY_GOLD_ORE);
-        this.getOrCreateBuilder(ORES_TINY_IRON).addItemEntry(TINY_IRON_ORE);
-        this.getOrCreateBuilder(ORES_TINY_LAPIS).addItemEntry(TINY_LAPIS_ORE);
-        this.getOrCreateBuilder(ORES_TINY_REDSTONE).addItemEntry(TINY_REDSTONE_ORE);
+        this.tag(ORES_TINY_COAL).add(TINY_COAL_ORE);
+        this.tag(ORES_TINY_COPPER).add(TINY_COPPER_ORE);
+        this.tag(ORES_TINY_DIAMOND).add(TINY_DIAMOND_ORE);
+        this.tag(ORES_TINY_EMERALD).add(TINY_EMERALD_ORE);
+        this.tag(ORES_TINY_GOLD).add(TINY_GOLD_ORE);
+        this.tag(ORES_TINY_IRON).add(TINY_IRON_ORE);
+        this.tag(ORES_TINY_LAPIS).add(TINY_LAPIS_ORE);
+        this.tag(ORES_TINY_REDSTONE).add(TINY_REDSTONE_ORE);
     }
 
     @Nonnull

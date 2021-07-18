@@ -76,7 +76,7 @@ public class EnglishProvider extends LanguageProvider {
         this.add(TINY_REDSTONE_ORE, "Tiny redstone ore");
 
 
-        this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Items");
-        this.add(((TranslationTextComponent) Foundation.BLOCKS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Blocks");
+        this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Items");
+        this.add(((TranslationTextComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Blocks");
     }
 }

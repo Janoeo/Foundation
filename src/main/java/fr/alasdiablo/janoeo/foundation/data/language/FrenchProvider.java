@@ -68,7 +68,7 @@ public class FrenchProvider extends LanguageProvider {
         this.add(TINY_LAPIS_ORE, "Minuscule minerai de lapis");
         this.add(TINY_REDSTONE_ORE, "Minuscule minerai de Redstone");
 
-        this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Objets");
-        this.add(((TranslationTextComponent) Foundation.BLOCKS_GROUP.getGroupName()).getKey(), "Janoeo Foundation - Bloques");
+        this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Objets");
+        this.add(((TranslationTextComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Bloques");
     }
 }

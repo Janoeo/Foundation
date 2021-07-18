@@ -23,17 +23,17 @@ public class FoundationBlockLootTables extends DioBlockLootTables {
         this.registerOreLootTable(FoundationBlocks.TIN_ORE, FoundationItems.RAW_TIN, new RandomValueRange(1.0F));
         this.registerOreLootTable(FoundationBlocks.URANIUM_ORE, FoundationItems.RAW_URANIUM, new RandomValueRange(1.0F));
 
-        this.registerOreLootTable(FoundationBlocks.TINY_COAL_ORE, FoundationItems.COAL_NUGGET, RandomValueRange.of(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_COPPER_ORE, FoundationItems.COPPER_NUGGET, RandomValueRange.of(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_DIAMOND_ORE, FoundationItems.DIAMOND_NUGGET, RandomValueRange.of(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_EMERALD_ORE, FoundationItems.EMERALD_NUGGET, RandomValueRange.of(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_GOLD_ORE, Items.GOLD_NUGGET, RandomValueRange.of(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_IRON_ORE, Items.IRON_NUGGET, RandomValueRange.of(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_LAPIS_ORE, FoundationItems.LAPIS_NUGGET, RandomValueRange.of(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_REDSTONE_ORE, FoundationItems.REDSTONE_NUGGET, RandomValueRange.of(2.0F, 6.0F));
+        this.registerOreLootTable(FoundationBlocks.TINY_COAL_ORE, FoundationItems.COAL_NUGGET, RandomValueRange.between(2.0F, 6.0F));
+        this.registerOreLootTable(FoundationBlocks.TINY_COPPER_ORE, FoundationItems.COPPER_NUGGET, RandomValueRange.between(2.0F, 6.0F));
+        this.registerOreLootTable(FoundationBlocks.TINY_DIAMOND_ORE, FoundationItems.DIAMOND_NUGGET, RandomValueRange.between(2.0F, 6.0F));
+        this.registerOreLootTable(FoundationBlocks.TINY_EMERALD_ORE, FoundationItems.EMERALD_NUGGET, RandomValueRange.between(2.0F, 6.0F));
+        this.registerOreLootTable(FoundationBlocks.TINY_GOLD_ORE, Items.GOLD_NUGGET, RandomValueRange.between(2.0F, 6.0F));
+        this.registerOreLootTable(FoundationBlocks.TINY_IRON_ORE, Items.IRON_NUGGET, RandomValueRange.between(2.0F, 6.0F));
+        this.registerOreLootTable(FoundationBlocks.TINY_LAPIS_ORE, FoundationItems.LAPIS_NUGGET, RandomValueRange.between(2.0F, 6.0F));
+        this.registerOreLootTable(FoundationBlocks.TINY_REDSTONE_ORE, FoundationItems.REDSTONE_NUGGET, RandomValueRange.between(2.0F, 6.0F));
     }
 
     protected void registerOreLootTable(final Block tinyOreBlock, final Item nuggetItem, final RandomValueRange valueRange) {
-        this.registerLootTable(tinyOreBlock, (tinyOre) -> droppingWithSilkTouch(tinyOre, withExplosionDecay(tinyOre, ItemLootEntry.builder(nuggetItem).acceptFunction(SetCount.builder(valueRange)).acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE)))));
+        this.add(tinyOreBlock, (tinyOre) -> createSilkTouchDispatchTable(tinyOre, applyExplosionDecay(tinyOre, ItemLootEntry.lootTableItem(nuggetItem).apply(SetCount.setCount(valueRange)).apply(ApplyBonus.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
     }
 }

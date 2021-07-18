@@ -1,72 +1,116 @@
 package fr.alasdiablo.janoeo.foundation.config;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import fr.alasdiablo.diolib.config.json.JsonConfig;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import net.minecraft.util.ResourceLocation;
 
 public class OreConfig extends JsonConfig {
 
     private int size;
-    private List<Integer> count;
+    private int count;
     private int heightTop;
     private int heightBottom;
     private boolean enable;
     private String countType;
+    private ResourceLocation replace;
+    private String replaceType;
     private final String name;
 
     public OreConfig(String name,
+                     String replaceType,
+                     ResourceLocation replace,
                      int size,
                      int count,
                      int heightBottom,
                      int heightTop,
+                     boolean rounded,
                      boolean enable
     ) {
         this.size = size;
-        this.count = Collections.singletonList(count);
+        this.count = count;
         this.heightBottom = heightBottom;
         this.heightTop = heightTop;
         this.name = name;
         this.enable = enable;
-        this.countType = "linear";
+        this.countType = rounded ? "rounded" : "linear";
+        this.replace = replace;
+        this.replaceType = replaceType;
     }
 
     public OreConfig(String name,
+                     String replaceType,
+                     ResourceLocation replace,
                      int size,
-                     Integer[] count,
                      int heightBottom,
                      int heightTop,
                      boolean enable
     ) {
         this.size = size;
-        this.count = Arrays.asList(count);
+        this.count = 0;
         this.heightBottom = heightBottom;
         this.heightTop = heightTop;
         this.name = name;
         this.enable = enable;
-        this.countType = "scale";
+        this.countType = "square";
+        this.replace = replace;
+        this.replaceType = replaceType;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public int getHeightTop() {
+        return heightTop;
+    }
+
+    public int getHeightBottom() {
+        return heightBottom;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public String getCountType() {
+        return countType;
+    }
+
+    public ResourceLocation getReplace() {
+        return replace;
+    }
+
+    public String getReplaceType() {
+        return replaceType;
     }
 
     @Override
     protected void read(final JsonObject json) {
-        JsonElement enable, size, countEle, countType, count, heightEle, bottom, top;
+        JsonElement enable, size, countEle, countType, count, heightEle, bottom, top, replaceEle, replace, replaceType;
 
         countEle = json.get("count");
         heightEle = json.get("height");
+        replaceEle = json.get("replace");
 
-        final JsonObject countObj = countEle.getAsJsonObject(), heightObj = heightEle.getAsJsonObject();
+        final JsonObject countObj = countEle.getAsJsonObject(),
+                heightObj = heightEle.getAsJsonObject(),
+                replaceObj = replaceEle.getAsJsonObject();
 
         enable = json.get("enable");
         size = json.get("size");
         top = heightObj.get("top");
-        bottom = heightObj.get("height");
+        bottom = heightObj.get("bottom");
         countType = countObj.get("type");
-        count = countObj.get("value");
+        replaceType = replaceObj.get("type");
+        replace = replaceObj.get("name");
+
+        this.replaceType = replaceType.getAsString();
+        this.replace = new ResourceLocation(replace.getAsString());
 
         this.enable = enable.getAsBoolean();
 
@@ -89,30 +133,23 @@ public class OreConfig extends JsonConfig {
             throw new IllegalArgumentException("The parameter 'height.bottom' is out of range!");
         else this.heightBottom = bottomValue;
 
-        switch (countType.getAsString()) {
+        String countTypeValue = countType.getAsString();
+        switch (countTypeValue) {
             case "linear": {
+                this.countType = "linear";
+                count = countObj.get("value");
                 if (count.isJsonArray())
                     throw new IllegalArgumentException("The parameter 'count.value' can't be an array in 'linear' type");
 
                 int countValue = count.getAsInt();
                 if (countValue >= 128 || countValue <= 0)
                     throw new IllegalArgumentException("The parameter 'count.value' is out of range!");
-                else this.count = Collections.singletonList(countValue);
+                else this.count = countValue;
                 break;
             }
 
             case "scale": {
-                if (!count.isJsonArray())
-                    throw new IllegalArgumentException("The parameter 'count.value' need be an array in 'scale' type");
-
-                final List<Integer> countValue = new ArrayList<>();
-                count.getAsJsonArray().iterator().forEachRemaining(jsonElement -> {
-                    int intElement = jsonElement.getAsInt();
-                    if (intElement >= 128 || intElement <= 0)
-                        throw new IllegalArgumentException("One element of 'count.value' parameter is out of range!");
-                    else countValue.add(intElement);
-                });
-                this.count = countValue;
+                this.countType = "scale";
                 break;
             }
 
@@ -126,22 +163,22 @@ public class OreConfig extends JsonConfig {
         final JsonObject json = new JsonObject();
         final JsonObject height = new JsonObject();
         final JsonObject count = new JsonObject();
+        final JsonObject replace = new JsonObject();
 
         height.addProperty("top", this.heightTop);
         height.addProperty("bottom", this.heightBottom);
 
         count.addProperty("type", this.countType);
-        if (this.countType.equals("linear")) count.addProperty("value", this.count.get(0));
-        else {
-            final JsonArray countArray = new JsonArray();
-            this.count.forEach(countArray::add);
-            count.add("value", countArray);
-        }
+        if (this.countType.equals("linear")) count.addProperty("value", this.count);
+
+        replace.addProperty("type", this.replaceType);
+        replace.addProperty("name", this.replace.toString());
 
         json.addProperty("enable", this.enable);
         json.addProperty("size", this.size);
         json.add("height", height);
         json.add("count", count);
+        json.add("replace", replace);
 
         return json;
     }

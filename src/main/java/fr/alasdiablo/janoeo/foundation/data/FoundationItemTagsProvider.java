@@ -24,7 +24,7 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
     }
 
     @Override
-    protected void registerTags() {
+    protected void addTags() {
         this.copy(FoundationTags.Blocks.ORES_TINY_COAL, ORES_TINY_COAL);
         this.copy(FoundationTags.Blocks.ORES_TINY_COPPER, ORES_TINY_COPPER);
         this.copy(FoundationTags.Blocks.ORES_TINY_DIAMOND, ORES_TINY_DIAMOND);
@@ -46,7 +46,7 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
 
-        this.getOrCreateBuilder(Tags.Items.DUSTS).addTags(
+        this.tag(Tags.Items.DUSTS).addTags(
                 DUSTS_ALUMINIUM,
                 DUSTS_ALUMINUM,
                 DUSTS_AMETHYST,
@@ -63,23 +63,23 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
                 DUSTS_TIN,
                 DUSTS_URANIUM
         );
-        this.getOrCreateBuilder(DUSTS_ALUMINIUM).addItemEntry(ALUMINIUM_DUST);
-        this.getOrCreateBuilder(DUSTS_ALUMINUM).addTags(DUSTS_ALUMINIUM); // Reference to DUSTS_ALUMINIUM
-        this.getOrCreateBuilder(DUSTS_AMETHYST).addItemEntry(AMETHYST_DUST);
-        this.getOrCreateBuilder(DUSTS_COAL).addItemEntry(COAL_DUST);
-        this.getOrCreateBuilder(DUSTS_COPPER).addItemEntry(COPPER_DUST);
-        this.getOrCreateBuilder(DUSTS_DIAMOND).addItemEntry(DIAMOND_DUST);
-        this.getOrCreateBuilder(DUSTS_GOLD).addItemEntry(GOLD_DUST);
-        this.getOrCreateBuilder(DUSTS_EMERALD).addItemEntry(EMERALD_DUST);
-        this.getOrCreateBuilder(DUSTS_IRON).addItemEntry(IRON_DUST);
-        this.getOrCreateBuilder(DUSTS_LAPIS).addItemEntry(LAPIS_DUST);
-        this.getOrCreateBuilder(DUSTS_LEAD).addItemEntry(LEAD_DUST);
-        this.getOrCreateBuilder(DUSTS_NICKEL).addItemEntry(NICKEL_DUST);
-        this.getOrCreateBuilder(DUSTS_SILVER).addItemEntry(SILVER_DUST);
-        this.getOrCreateBuilder(DUSTS_TIN).addItemEntry(TIN_DUST);
-        this.getOrCreateBuilder(DUSTS_URANIUM).addItemEntry(URANIUM_DUST);
+        this.tag(DUSTS_ALUMINIUM).add(ALUMINIUM_DUST);
+        this.tag(DUSTS_ALUMINUM).addTags(DUSTS_ALUMINIUM); // Reference to DUSTS_ALUMINIUM
+        this.tag(DUSTS_AMETHYST).add(AMETHYST_DUST);
+        this.tag(DUSTS_COAL).add(COAL_DUST);
+        this.tag(DUSTS_COPPER).add(COPPER_DUST);
+        this.tag(DUSTS_DIAMOND).add(DIAMOND_DUST);
+        this.tag(DUSTS_GOLD).add(GOLD_DUST);
+        this.tag(DUSTS_EMERALD).add(EMERALD_DUST);
+        this.tag(DUSTS_IRON).add(IRON_DUST);
+        this.tag(DUSTS_LAPIS).add(LAPIS_DUST);
+        this.tag(DUSTS_LEAD).add(LEAD_DUST);
+        this.tag(DUSTS_NICKEL).add(NICKEL_DUST);
+        this.tag(DUSTS_SILVER).add(SILVER_DUST);
+        this.tag(DUSTS_TIN).add(TIN_DUST);
+        this.tag(DUSTS_URANIUM).add(URANIUM_DUST);
 
-        this.getOrCreateBuilder(Tags.Items.NUGGETS).addTags(
+        this.tag(Tags.Items.NUGGETS).addTags(
                 NUGGETS_ALUMINIUM,
                 NUGGETS_ALUMINUM,
                 NUGGETS_COAL,
@@ -94,21 +94,21 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
                 NUGGETS_TIN,
                 NUGGETS_URANIUM
         );
-        this.getOrCreateBuilder(NUGGETS_ALUMINIUM).addItemEntry(ALUMINIUM_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_ALUMINUM).addTags(NUGGETS_ALUMINIUM); // Reference to NUGGETS_ALUMINIUM
-        this.getOrCreateBuilder(NUGGETS_COAL).addItemEntry(COAL_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_COPPER).addItemEntry(COPPER_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_DIAMOND).addItemEntry(DIAMOND_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_EMERALD).addItemEntry(EMERALD_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_LAPIS).addItemEntry(LAPIS_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_LEAD).addItemEntry(LEAD_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_NICKEL).addItemEntry(NICKEL_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_REDSTONE).addItemEntry(REDSTONE_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_SILVER).addItemEntry(SILVER_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_TIN).addItemEntry(TIN_NUGGET);
-        this.getOrCreateBuilder(NUGGETS_URANIUM).addItemEntry(URANIUM_NUGGET);
+        this.tag(NUGGETS_ALUMINIUM).add(ALUMINIUM_NUGGET);
+        this.tag(NUGGETS_ALUMINUM).addTags(NUGGETS_ALUMINIUM); // Reference to NUGGETS_ALUMINIUM
+        this.tag(NUGGETS_COAL).add(COAL_NUGGET);
+        this.tag(NUGGETS_COPPER).add(COPPER_NUGGET);
+        this.tag(NUGGETS_DIAMOND).add(DIAMOND_NUGGET);
+        this.tag(NUGGETS_EMERALD).add(EMERALD_NUGGET);
+        this.tag(NUGGETS_LAPIS).add(LAPIS_NUGGET);
+        this.tag(NUGGETS_LEAD).add(LEAD_NUGGET);
+        this.tag(NUGGETS_NICKEL).add(NICKEL_NUGGET);
+        this.tag(NUGGETS_REDSTONE).add(REDSTONE_NUGGET);
+        this.tag(NUGGETS_SILVER).add(SILVER_NUGGET);
+        this.tag(NUGGETS_TIN).add(TIN_NUGGET);
+        this.tag(NUGGETS_URANIUM).add(URANIUM_NUGGET);
 
-        this.getOrCreateBuilder(Tags.Items.INGOTS).addTags(
+        this.tag(Tags.Items.INGOTS).addTags(
                 INGOTS_ALUMINIUM,
                 INGOTS_ALUMINUM,
                 INGOTS_LEAD,
@@ -117,15 +117,15 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
                 INGOTS_TIN,
                 INGOTS_URANIUM
         );
-        this.getOrCreateBuilder(INGOTS_ALUMINIUM).addItemEntry(ALUMINIUM_INGOT);
-        this.getOrCreateBuilder(INGOTS_ALUMINUM).addTags(INGOTS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
-        this.getOrCreateBuilder(INGOTS_LEAD).addItemEntry(LEAD_INGOT);
-        this.getOrCreateBuilder(INGOTS_NICKEL).addItemEntry(NICKEL_INGOT);
-        this.getOrCreateBuilder(INGOTS_SILVER).addItemEntry(SILVER_INGOT);
-        this.getOrCreateBuilder(INGOTS_TIN).addItemEntry(TIN_INGOT);
-        this.getOrCreateBuilder(INGOTS_URANIUM).addItemEntry(URANIUM_INGOT);
+        this.tag(INGOTS_ALUMINIUM).add(ALUMINIUM_INGOT);
+        this.tag(INGOTS_ALUMINUM).addTags(INGOTS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
+        this.tag(INGOTS_LEAD).add(LEAD_INGOT);
+        this.tag(INGOTS_NICKEL).add(NICKEL_INGOT);
+        this.tag(INGOTS_SILVER).add(SILVER_INGOT);
+        this.tag(INGOTS_TIN).add(TIN_INGOT);
+        this.tag(INGOTS_URANIUM).add(URANIUM_INGOT);
 
-        this.getOrCreateBuilder(RAWS).addTags(
+        this.tag(RAWS).addTags(
                 RAWS_ALUMINIUM,
                 RAWS_ALUMINUM,
                 RAWS_LEAD,
@@ -134,13 +134,13 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
                 RAWS_TIN,
                 RAWS_URANIUM
         );
-        this.getOrCreateBuilder(RAWS_ALUMINIUM).addItemEntry(RAW_ALUMINIUM);
-        this.getOrCreateBuilder(RAWS_ALUMINUM).addTags(RAWS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
-        this.getOrCreateBuilder(RAWS_LEAD).addItemEntry(RAW_LEAD);
-        this.getOrCreateBuilder(RAWS_NICKEL).addItemEntry(RAW_NICKEL);
-        this.getOrCreateBuilder(RAWS_SILVER).addItemEntry(RAW_SILVER);
-        this.getOrCreateBuilder(RAWS_TIN).addItemEntry(RAW_TIN);
-        this.getOrCreateBuilder(RAWS_URANIUM).addItemEntry(RAW_URANIUM);
+        this.tag(RAWS_ALUMINIUM).add(RAW_ALUMINIUM);
+        this.tag(RAWS_ALUMINUM).addTags(RAWS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
+        this.tag(RAWS_LEAD).add(RAW_LEAD);
+        this.tag(RAWS_NICKEL).add(RAW_NICKEL);
+        this.tag(RAWS_SILVER).add(RAW_SILVER);
+        this.tag(RAWS_TIN).add(RAW_TIN);
+        this.tag(RAWS_URANIUM).add(RAW_URANIUM);
     }
 
     @Override

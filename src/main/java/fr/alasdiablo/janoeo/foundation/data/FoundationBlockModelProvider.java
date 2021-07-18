@@ -43,7 +43,7 @@ public class FoundationBlockModelProvider extends BlockModelProvider {
         ORE("ore/"),
         DEFAULT("");
 
-        private String folder;
+        private final String folder;
 
         Folder(String folder) {
             this.folder = folder;
