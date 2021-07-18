@@ -7,6 +7,8 @@ import fr.alasdiablo.janoeo.foundation.data.language.EnglishProvider;
 import fr.alasdiablo.janoeo.foundation.data.language.FrenchProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
+import fr.alasdiablo.janoeo.foundation.world.WorldGen;
+import fr.alasdiablo.janoeo.foundation.world.gen.FoundationFeatures;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -15,9 +17,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.world.gen.GenerationStage;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -102,8 +107,10 @@ public class Foundation {
     }
 
     private void setup(final FMLCommonSetupEvent commonSetupEvent) {
+        WorldGen.init();
     }
 
     private void initFeatures(RegistryEvent.NewRegistry newRegistry) {
+        FoundationFeatures.init();
     }
 }
