@@ -5,7 +5,7 @@
 [![discord](https://img.shields.io/discord/630863620842061877?style=for-the-badge)](https://discord.gg/KkzqnzA)
 
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/Janoeo/Foundation">
     <img src="https://raw.githubusercontent.com/Janoeo/Texture/master/logo/Janoeo%20-%20Fondation%20-%20V6%20-%20Banner.png" alt="Logo" style="border-radius: 54px 6px">
   </a>
   <p align="center">
