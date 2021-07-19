@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.foundation;
 
 import fr.alasdiablo.diolib.gui.GroundItemGroup;
+import fr.alasdiablo.janoeo.foundation.compatibility.JERCompat;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.data.*;
 import fr.alasdiablo.janoeo.foundation.data.language.EnglishProvider;
@@ -17,12 +18,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.world.gen.GenerationStage;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -53,19 +51,17 @@ public class Foundation {
         }
     };
 
-    public static class Compact {
-        public static boolean CREATE = false;
+    public static class Compat {
         public static boolean JUST_ENOUGH_RESOURCES = false;
     }
 
-    private void foundCompact() {
+    private void foundCompat() {
         final ModList modList = ModList.get();
-        Compact.CREATE = modList.isLoaded("create");
-        Compact.JUST_ENOUGH_RESOURCES = modList.isLoaded("jeresources");
+        Compat.JUST_ENOUGH_RESOURCES = modList.isLoaded("jeresources");
     }
 
     public Foundation() throws IOException {
-        this.foundCompact();
+        this.foundCompat();
         FoundationConfig.init();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         modBus.addListener(this::setup);
@@ -108,6 +104,7 @@ public class Foundation {
 
     private void setup(final FMLCommonSetupEvent commonSetupEvent) {
         WorldGen.init();
+        if (Compat.JUST_ENOUGH_RESOURCES) JERCompat.init();
     }
 
     private void initFeatures(RegistryEvent.NewRegistry newRegistry) {
