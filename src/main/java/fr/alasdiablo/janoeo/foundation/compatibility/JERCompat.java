@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.compatibility;
 
-import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
+/*import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.config.OreConfig;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
@@ -12,12 +12,12 @@ import jeresources.api.drop.LootDrop;
 import jeresources.api.restrictions.BiomeRestriction;
 import jeresources.api.restrictions.Restriction;
 import jeresources.compatibility.JERAPI;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;*/
 
 public class JERCompat {
 
-    private static final IWorldGenRegistry WORLD_GEN_REGISTRY = JERAPI.getInstance().getWorldGenRegistry();
+    /*private static final IWorldGenRegistry WORLD_GEN_REGISTRY = JERAPI.getInstance().getWorldGenRegistry();
 
     private static DistributionBase getDistribution(OreConfig config) {
         DistributionBase distribution;
@@ -98,5 +98,5 @@ public class JERCompat {
                 true,
                 new LootDrop(new ItemStack(FoundationItems.REDSTONE_NUGGET, 6))
         );
-    }
+    }*/
 }

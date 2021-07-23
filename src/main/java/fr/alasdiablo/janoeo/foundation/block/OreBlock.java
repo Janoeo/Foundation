@@ -2,14 +2,14 @@ package fr.alasdiablo.janoeo.foundation.block;
 
 import fr.alasdiablo.diolib.generic.ExperienceRarity;
 import fr.alasdiablo.diolib.generic.IDropExperience;
-import net.minecraft.block.BlockState;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorldReader;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.state.BlockState;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
-public class OreBlock extends net.minecraft.block.OreBlock implements IDropExperience {
+public class OreBlock extends net.minecraft.world.level.block.OreBlock implements IDropExperience {
     private final ExperienceRarity experienceRarity;
 
     public OreBlock(Properties properties, ExperienceRarity experienceRarity, String registryName) {
@@ -24,10 +24,10 @@ public class OreBlock extends net.minecraft.block.OreBlock implements IDropExper
     }
 
     @Override
-    public int getExpDrop(BlockState state, IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
+    public int getExpDrop(BlockState state, LevelReader reader, BlockPos pos, int fortune, int silktouch) {
         if (silktouch != 0) return 0;
         int exp = this.getExperience(RANDOM, this);
-        if (exp == -1) return this.xpOnDrop(RANDOM);
+        if (exp == -1) return super.getExpDrop(state, reader, pos, fortune, silktouch);
         else return exp;
     }
 }

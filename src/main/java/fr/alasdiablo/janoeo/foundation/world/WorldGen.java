@@ -3,8 +3,8 @@ package fr.alasdiablo.janoeo.foundation.world;
 import fr.alasdiablo.diolib.world.WorldGenerationHelper;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.world.gen.FoundationFeatures;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class WorldGen {
@@ -16,30 +16,30 @@ public class WorldGen {
 
     private static void oreGen(Biome biome) {
         if (FoundationConfig.TINY_COAL_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
-                biome, FoundationFeatures.ORE_TINY_COAL, GenerationStage.Decoration.UNDERGROUND_ORES
+                biome, FoundationFeatures.ORE_TINY_COAL, GenerationStep.Decoration.UNDERGROUND_ORES
         );
         if (FoundationConfig.TINY_COPPER_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
-                biome, FoundationFeatures.ORE_TINY_COPPER, GenerationStage.Decoration.UNDERGROUND_ORES
+                biome, FoundationFeatures.ORE_TINY_COPPER, GenerationStep.Decoration.UNDERGROUND_ORES
         );
         if (FoundationConfig.TINY_DIAMOND_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
-                biome, FoundationFeatures.ORE_TINY_DIAMOND, GenerationStage.Decoration.UNDERGROUND_ORES
+                biome, FoundationFeatures.ORE_TINY_DIAMOND, GenerationStep.Decoration.UNDERGROUND_ORES
         );
         // add emerald
         if (FoundationConfig.TINY_GOLD_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
-                biome, FoundationFeatures.ORE_TINY_GOLD, GenerationStage.Decoration.UNDERGROUND_ORES
+                biome, FoundationFeatures.ORE_TINY_GOLD, GenerationStep.Decoration.UNDERGROUND_ORES
         );
         if (FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG.isEnable()
-                && biome.getBiomeCategory() == Biome.Category.MESA) WorldGenerationHelper.addFeature(
-                biome, FoundationFeatures.ORE_TINY_GOLD_EXTRA, GenerationStage.Decoration.UNDERGROUND_ORES
+                && biome.getBiomeCategory() == Biome.BiomeCategory.MESA) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.ORE_TINY_GOLD_EXTRA, GenerationStep.Decoration.UNDERGROUND_ORES
         );
         if (FoundationConfig.TINY_IRON_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
-                biome, FoundationFeatures.ORE_TINY_IRON, GenerationStage.Decoration.UNDERGROUND_ORES
+                biome, FoundationFeatures.ORE_TINY_IRON, GenerationStep.Decoration.UNDERGROUND_ORES
         );
         if (FoundationConfig.TINY_LAPIS_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
-                biome, FoundationFeatures.ORE_TINY_LAPIS, GenerationStage.Decoration.UNDERGROUND_ORES
+                biome, FoundationFeatures.ORE_TINY_LAPIS, GenerationStep.Decoration.UNDERGROUND_ORES
         );
         if (FoundationConfig.TINY_REDSTONE_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
-                biome, FoundationFeatures.ORE_TINY_REDSTONE, GenerationStage.Decoration.UNDERGROUND_ORES
+                biome, FoundationFeatures.ORE_TINY_REDSTONE, GenerationStep.Decoration.UNDERGROUND_ORES
         );
     }
 }

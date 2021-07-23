@@ -5,13 +5,12 @@ import fr.alasdiablo.diolib.world.WorldGenerationHelper;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.config.OreConfig;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
-import net.minecraft.block.Block;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.template.RuleTest;
-import net.minecraft.world.gen.placement.DepthAverageConfig;
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.TopSolidRangeConfig;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 
 import java.util.Objects;
 
@@ -19,32 +18,28 @@ public class FoundationFeatures {
 
     private static ConfiguredFeature<?, ?> createOreFeature(Block block, RuleTest target, OreConfig config) {
         switch (config.getPlacement()) {
-            case "range": {
+            case "range" -> {
                 return Feature.ORE.configured(
-                        new OreFeatureConfig(target, block.defaultBlockState(), config.getSize())
-                ).range(config.getRange()).squared().count(config.getCount());
+                        new OreConfiguration(target, block.defaultBlockState(), config.getSize())
+                ).rangeUniform(
+                        VerticalAnchor.bottom(),
+                        VerticalAnchor.absolute(config.getRange())
+                ).squared().count(config.getCount());
             }
-            case "depth_average": {
+            case "triangle" -> {
                 return Feature.ORE.configured(
-                        new OreFeatureConfig(target, block.defaultBlockState(), config.getSize())
-                ).decorated(
-                        Placement.DEPTH_AVERAGE.configured(
-                                new DepthAverageConfig(config.getBaseline(), config.getSpread())
-                        )
+                        new OreConfiguration(target, block.defaultBlockState(), config.getSize())
+                ).rangeTriangle(
+                        VerticalAnchor.absolute(config.getBottom()),
+                        VerticalAnchor.absolute(config.getTop())
                 ).squared();
-
             }
-            case "top_solid_range": {
+            case "uniform" -> {
                 return Feature.ORE.configured(
-                        new OreFeatureConfig(target, block.defaultBlockState(), config.getSize())
-                ).decorated(
-                        Placement.RANGE.configured(
-                                new TopSolidRangeConfig(
-                                        config.getBottomOffset(),
-                                        config.getTopOffset(),
-                                        config.getMaximum()
-                                )
-                        )
+                        new OreConfiguration(target, block.defaultBlockState(), config.getSize())
+                ).rangeUniform(
+                        VerticalAnchor.absolute(config.getBottom()),
+                        VerticalAnchor.absolute(config.getTop())
                 ).squared().count(config.getCount());
             }
         }
@@ -77,16 +72,16 @@ public class FoundationFeatures {
         register(FoundationBlocks.TINY_REDSTONE_ORE, ORE_TINY_REDSTONE);
     }
 
-    public static final ConfiguredFeature<?, ?> ORE_TINY_COAL = createOreFeature(FoundationBlocks.TINY_COAL_ORE, OreFeatureConfig.FillerBlockType.NATURAL_STONE, FoundationConfig.TINY_COAL_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_COPPER = createOreFeature(FoundationBlocks.TINY_COPPER_ORE, OreFeatureConfig.FillerBlockType.NATURAL_STONE, FoundationConfig.TINY_COPPER_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_COAL = createOreFeature(FoundationBlocks.TINY_COAL_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_COAL_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_COPPER = createOreFeature(FoundationBlocks.TINY_COPPER_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_COPPER_ORE_CONFIG);
     ;
-    public static final ConfiguredFeature<?, ?> ORE_TINY_DIAMOND = createOreFeature(FoundationBlocks.TINY_DIAMOND_ORE, OreFeatureConfig.FillerBlockType.NATURAL_STONE, FoundationConfig.TINY_DIAMOND_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_DIAMOND = createOreFeature(FoundationBlocks.TINY_DIAMOND_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_DIAMOND_ORE_CONFIG);
     ;
     // add emerald
-    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD = createOreFeature(FoundationBlocks.TINY_GOLD_ORE, OreFeatureConfig.FillerBlockType.NATURAL_STONE, FoundationConfig.TINY_GOLD_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD_EXTRA = createOreFeature(FoundationBlocks.TINY_GOLD_ORE, OreFeatureConfig.FillerBlockType.NATURAL_STONE, FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_IRON = createOreFeature(FoundationBlocks.TINY_IRON_ORE, OreFeatureConfig.FillerBlockType.NATURAL_STONE, FoundationConfig.TINY_IRON_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_LAPIS = createOreFeature(FoundationBlocks.TINY_LAPIS_ORE, OreFeatureConfig.FillerBlockType.NATURAL_STONE, FoundationConfig.TINY_LAPIS_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_REDSTONE = createOreFeature(FoundationBlocks.TINY_REDSTONE_ORE, OreFeatureConfig.FillerBlockType.NATURAL_STONE, FoundationConfig.TINY_REDSTONE_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD = createOreFeature(FoundationBlocks.TINY_GOLD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_GOLD_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD_EXTRA = createOreFeature(FoundationBlocks.TINY_GOLD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_IRON = createOreFeature(FoundationBlocks.TINY_IRON_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_IRON_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_LAPIS = createOreFeature(FoundationBlocks.TINY_LAPIS_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_LAPIS_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_REDSTONE = createOreFeature(FoundationBlocks.TINY_REDSTONE_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_REDSTONE_ORE_CONFIG);
     ;
 }

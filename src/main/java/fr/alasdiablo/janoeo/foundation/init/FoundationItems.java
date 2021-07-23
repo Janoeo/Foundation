@@ -3,7 +3,7 @@ package fr.alasdiablo.janoeo.foundation.init;
 import fr.alasdiablo.diolib.util.RegistryHelper;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.Registries;
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 

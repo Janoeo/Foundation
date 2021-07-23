@@ -12,11 +12,8 @@ public class OreConfig extends JsonConfig {
     private int size;
     private int range;
     private int count;
-    private int baseline;
-    private int spread;
-    private int bottomOffset;
-    private int topOffset;
-    private int maximum;
+    private int bottom;
+    private int top;
 
     public OreConfig(String name, boolean enable) {
         this.name = name;
@@ -25,11 +22,8 @@ public class OreConfig extends JsonConfig {
         this.size = 0;
         this.range = 0;
         this.count = 0;
-        this.baseline = 0;
-        this.spread = 0;
-        this.bottomOffset = 0;
-        this.topOffset = 0;
-        this.maximum = 0;
+        this.bottom = 0;
+        this.top = 0;
     }
 
     public OreConfig placementRange(int size, int range, int count) {
@@ -40,20 +34,19 @@ public class OreConfig extends JsonConfig {
         return this;
     }
 
-    public OreConfig placementDepthAverage(int size, int baseline, int spread) {
-        this.placement = "depth_average";
+    public OreConfig placementTriangle(int size, int bottom, int top) {
+        this.placement = "triangle";
         this.size = size;
-        this.baseline = baseline;
-        this.spread = spread;
+        this.bottom = bottom;
+        this.top = top;
         return this;
     }
 
-    public OreConfig placementTopSolidRange(int size, int bottomOffset, int topOffset, int maximum, int count) {
-        this.placement = "top_solid_range";
+    public OreConfig placementUniform(int size, int bottom, int top, int count) {
+        this.placement = "uniform";
         this.size = size;
-        this.bottomOffset = bottomOffset;
-        this.topOffset = topOffset;
-        this.maximum = maximum;
+        this.bottom = bottom;
+        this.top = top;
         this.count = count;
         return this;
     }
@@ -66,28 +59,23 @@ public class OreConfig extends JsonConfig {
         this.placement = type.getAsString();
         this.enable = enable.getAsBoolean();
         switch (this.placement) {
-            case "range": {
+            case "range" -> {
                 this.size = placement.get("size").getAsInt();
                 this.range = placement.get("range").getAsInt();
                 this.count = placement.get("count").getAsInt();
-                break;
             }
-            case "depth_average": {
+            case "triangle" -> {
                 this.size = placement.get("size").getAsInt();
-                this.baseline = placement.get("baseline").getAsInt();
-                this.spread = placement.get("spread").getAsInt();
-                break;
+                this.bottom = placement.get("bottom").getAsInt();
+                this.top = placement.get("top").getAsInt();
             }
-            case "top_solid_range": {
+            case "uniform" -> {
                 this.size = placement.get("size").getAsInt();
-                this.bottomOffset = placement.get("bottomOffset").getAsInt();
-                this.topOffset = placement.get("topOffset").getAsInt();
-                this.maximum = placement.get("maximum").getAsInt();
+                this.bottom = placement.get("bottom").getAsInt();
+                this.top = placement.get("top").getAsInt();
                 this.count = placement.get("count").getAsInt();
-                break;
             }
-            default:
-                throw new IllegalArgumentException("Unknown placement type");
+            default -> throw new IllegalArgumentException("Unknown placement type");
         }
     }
 
@@ -98,25 +86,21 @@ public class OreConfig extends JsonConfig {
         json.addProperty("enable", this.enable);
         final JsonObject placement = new JsonObject();
         switch (this.placement) {
-            case "range": {
+            case "range" -> {
                 placement.addProperty("size", this.size);
                 placement.addProperty("range", this.range);
                 placement.addProperty("count", this.count);
-                break;
             }
-            case "depth_average": {
+            case "triangle" -> {
                 placement.addProperty("size", this.size);
-                placement.addProperty("baseline", this.baseline);
-                placement.addProperty("spread", this.spread);
-                break;
+                placement.addProperty("bottom", this.bottom);
+                placement.addProperty("top", this.top);
             }
-            case "top_solid_range": {
+            case "uniform" -> {
                 placement.addProperty("size", this.size);
-                placement.addProperty("bottomOffset", this.bottomOffset);
-                placement.addProperty("topOffset", this.topOffset);
-                placement.addProperty("maximum", this.maximum);
+                placement.addProperty("bottom", this.bottom);
+                placement.addProperty("top", this.top);
                 placement.addProperty("count", this.count);
-                break;
             }
         }
         json.add("placement", placement);
@@ -148,23 +132,11 @@ public class OreConfig extends JsonConfig {
         return count;
     }
 
-    public int getBaseline() {
-        return baseline;
+    public int getBottom() {
+        return bottom;
     }
 
-    public int getSpread() {
-        return spread;
-    }
-
-    public int getBottomOffset() {
-        return bottomOffset;
-    }
-
-    public int getTopOffset() {
-        return topOffset;
-    }
-
-    public int getMaximum() {
-        return maximum;
+    public int getTop() {
+        return top;
     }
 }

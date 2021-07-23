@@ -2,9 +2,15 @@
 
 ## Summary
 
+<details><summary><b>1.17.1</b></summary>
+
++ [6.6.0.70-experimental](#66070-experimental)
+
+</details>
+
 <details><summary><b>1.16.5</b></summary>
 
-+ [5.6.0.69](#56068)
++ [6.6.0.69](#56068)
 + [5.6.0.68](#56068)
 + [5.6.0.67](#56067)
 + [4.5.0.63-experimental](#45063-experimental)
@@ -94,6 +100,31 @@
 
 </details>
 
+### 6.6.0.70
+
+Update to Minecraft 1.17.1
+
+##### Add & re-add
+
+###### Ore Gen
+
++ Coal
++ Copper
++ Diamond
++ Gold
++ Iron
++ Lapis
++ Redstone
+
+###### Recipe
+
++ Copper nugget
++ Copper ingot from dust
+
+##### Technical change
+
+Use Mojang mapping
+
 ### 6.6.0.69
 
 #### BREAKING CHANGE
@@ -149,7 +180,7 @@
 + Tin
 + Uranium
 
-###### Nugget:
+###### Nugget
 
 + Aluminium
 + Coal

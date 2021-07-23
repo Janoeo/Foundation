@@ -6,10 +6,10 @@ import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
 
 import fr.alasdiablo.janoeo.foundation.init.FoundationTags;
-import mcp.MethodsReturnNonnullByDefault;
-import net.minecraft.data.BlockTagsProvider;
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.ItemTagsProvider;
+import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 

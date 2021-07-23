@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
 
@@ -21,10 +21,10 @@ if (isExperimental) {
 group = 'fr.alasdiablo.janoeo.foundation'
 archivesBaseName = 'Janoeo Foundation'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+java.toolchain.languageVersion = JavaLanguageVersion.of(16)
 
 minecraft {
-    mappings channel: 'official', version: '1.16.5'
+    mappings channel: 'official', version: '1.17.1'
     runs {
         client {
             workingDirectory project.file('run')
@@ -68,17 +68,18 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.1.13'
-    compile fileTree(dir:'lib', include:'*.jar')
+    minecraft 'net.minecraftforge:forge:1.17.1-37.0.1'
+    runtimeOnly fileTree(dir:'lib', include:'*.jar')
+    compileOnly fileTree(dir:'lib', include:'*.jar')
     // Compatibility check with mod
-    implementation fg.deobf("curse.maven:jei-238222:3383214")                       // JEI
-    implementation fg.deobf("curse.maven:just-enough-resources-jer-240630:3336760") // JER
-    implementation fg.deobf("curse.maven:catalogue-459701:3335979")                 // Catalogue
+    // implementation fg.deobf("curse.maven:jei-238222:3383214")                       // JEI
+    // implementation fg.deobf("curse.maven:just-enough-resources-jer-240630:3336760") // JER
+    // implementation fg.deobf("curse.maven:catalogue-459701:3335979")                 // Catalogue
     // implementation fg.deobf("curse.maven:infinitylib-251396:3367362")               // InfinityLib
     // implementation fg.deobf("curse.maven:agricraft-225635:3379947")                 // Agricraft
-    implementation fg.deobf("curse.maven:mantle-74924:3389377")                     // Mantle
-    implementation fg.deobf("curse.maven:tinkers-construct-74072:3389395")          // Tinkers Construct 3
-    implementation fg.deobf("curse.maven:iron-chests-228756:3105315")               // Iron Chests
+    // implementation fg.deobf("curse.maven:mantle-74924:3389377")                     // Mantle
+    // implementation fg.deobf("curse.maven:tinkers-construct-74072:3389395")          // Tinkers Construct 3
+    // implementation fg.deobf("curse.maven:iron-chests-228756:3105315")               // Iron Chests
 }
 
 jar {

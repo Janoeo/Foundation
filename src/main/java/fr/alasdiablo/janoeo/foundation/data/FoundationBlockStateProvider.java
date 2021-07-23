@@ -5,7 +5,7 @@ import static fr.alasdiablo.janoeo.foundation.Registries.*;
 import fr.alasdiablo.diolib.data.BlockStateBuilder;
 import fr.alasdiablo.diolib.data.BlockStateProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 
 import java.util.Arrays;
 import java.util.List;

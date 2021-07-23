@@ -5,19 +5,19 @@ import fr.alasdiablo.diolib.util.RegistryHelper;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import fr.alasdiablo.janoeo.foundation.block.OreBlock;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class FoundationBlocks {
     private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties().tab(Foundation.BLOCKS_GROUP);
-    private static final AbstractBlock.Properties PROPERTIES_ORE_WOOD_TIER = AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE).harvestLevel(0).strength(3.0F, 3.0F);
-    private static final AbstractBlock.Properties PROPERTIES_ORE_STONE_TIER = AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE).harvestLevel(1).strength(3.0F, 3.0F);
-    private static final AbstractBlock.Properties PROPERTIES_ORE_IRON_TIER = AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE).harvestLevel(2).strength(3.0F, 3.0F);
+    private static final BlockBehaviour.Properties PROPERTIES_ORE_WOOD_TIER = BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE).harvestLevel(0).strength(3.0F, 3.0F);
+    private static final BlockBehaviour.Properties PROPERTIES_ORE_STONE_TIER = BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE).harvestLevel(1).strength(3.0F, 3.0F);
+    private static final BlockBehaviour.Properties PROPERTIES_ORE_IRON_TIER = BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().harvestTool(ToolType.PICKAXE).harvestLevel(2).strength(3.0F, 3.0F);
 
     public static void initBlock(RegistryEvent.Register<Block> event) {
         final IForgeRegistry<Block> registry = event.getRegistry();

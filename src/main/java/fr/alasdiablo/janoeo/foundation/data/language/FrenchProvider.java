@@ -3,7 +3,7 @@ package fr.alasdiablo.janoeo.foundation.data.language;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
@@ -68,7 +68,7 @@ public class FrenchProvider extends LanguageProvider {
         this.add(TINY_LAPIS_ORE, "Minuscule minerai de lapis");
         this.add(TINY_REDSTONE_ORE, "Minuscule minerai de Redstone");
 
-        this.add(((TranslationTextComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Objets");
-        this.add(((TranslationTextComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Bloques");
+        this.add(((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Objets");
+        this.add(((TranslatableComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Bloques");
     }
 }

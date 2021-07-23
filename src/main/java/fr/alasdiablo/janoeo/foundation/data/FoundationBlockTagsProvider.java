@@ -4,8 +4,8 @@ import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Blocks.*;
 
 import fr.alasdiablo.janoeo.foundation.Registries;
-import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 

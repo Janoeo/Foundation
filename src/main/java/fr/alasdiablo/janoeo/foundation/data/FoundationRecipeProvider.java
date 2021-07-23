@@ -5,12 +5,13 @@ import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
 
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.*;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.tags.ITag;
-import net.minecraft.util.IItemProvider;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.Tags;
 
 import javax.annotation.Nonnull;
@@ -23,16 +24,17 @@ public class FoundationRecipeProvider extends RecipeProvider {
         super(generatorIn);
     }
 
-    private static Consumer<IFinishedRecipe> finishedRecipeConsumer;
+    private static Consumer<FinishedRecipe> finishedRecipeConsumer;
 
     @Override
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
         finishedRecipeConsumer = consumer;
 
         this.nugget(ALUMINIUM_NUGGET, INGOTS_ALUMINIUM, "has_aluminium_ingot", "aluminium_nugget");
         this.nugget(ALUMINIUM_NUGGET, INGOTS_ALUMINUM, "has_aluminium_ingot", "aluminum_nugget");
         this.nugget(COAL_NUGGET, Items.COAL, "has_coal");
-        this.nugget(COPPER_NUGGET, INGOTS_COPPER, "has_copper_ingot");
+        this.nugget(COPPER_NUGGET, Items.COPPER_INGOT, "has_copper_ingot");
+        this.nugget(COPPER_NUGGET, INGOTS_COPPER, "has_copper_ingot", "copper_ingot_tag");
         this.nugget(DIAMOND_NUGGET, Tags.Items.GEMS_DIAMOND, "has_diamond");
         this.nugget(EMERALD_NUGGET, Tags.Items.GEMS_EMERALD, "has_emerald");
         this.nugget(LAPIS_NUGGET, Tags.Items.GEMS_LAPIS, "has_lapis");
@@ -46,7 +48,7 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromNugget(ALUMINIUM_INGOT, NUGGETS_ALUMINIUM, "has_aluminium_nugget", "aluminium_ingot_from_nugget");
         this.ingotFromNugget(ALUMINIUM_INGOT, NUGGETS_ALUMINUM, "has_aluminium_nugget", "aluminum_ingot_from_nugget");
         this.ingotFromNugget(Items.COAL, NUGGETS_COAL, "has_coal_nugget", "coal_ingot_from_nugget");
-        // this.ingotFromNuggetRecipe(Items.COPPER_INGOT, NUGGETS_COPPER, "has_copper_nugget", "copper_ingot_from_nugget");
+        this.ingotFromNugget(Items.COPPER_INGOT, NUGGETS_COPPER, "has_copper_nugget", "copper_ingot_from_nugget");
         this.ingotFromNugget(Items.DIAMOND, NUGGETS_DIAMOND, "has_diamond_nugget", "diamond_from_nugget");
         this.ingotFromNugget(Items.EMERALD, NUGGETS_EMERALD, "has_emerald_nugget", "emerald_from_nugget");
         this.ingotFromNugget(Items.LAPIS_LAZULI, NUGGETS_LAPIS, "has_lapis_nugget", "lapis_from_nugget");
@@ -59,7 +61,7 @@ public class FoundationRecipeProvider extends RecipeProvider {
 
         this.ingotFromDust(ALUMINIUM_INGOT, DUSTS_ALUMINIUM, "has_aluminium_dust", "aluminium_ingot_from_dust");
         this.ingotFromDust(ALUMINIUM_INGOT, DUSTS_ALUMINUM, "has_aluminium_dust", "aluminum_ingot_from_dust");
-        // this.ingotFromDust(Items.COPPER_INGOT, DUSTS_COPPER, "has_copper_nugget", "copper_ingot_from_dust");
+        this.ingotFromDust(Items.COPPER_INGOT, DUSTS_COPPER, "has_copper_nugget", "copper_ingot_from_dust");
         this.ingotFromDust(Items.GOLD_INGOT, DUSTS_GOLD, "has_gold_dust", "gold_ingot_from_dust");
         this.ingotFromDust(Items.IRON_INGOT, DUSTS_IRON, "has_iron_dust", "iron_ingot_from_dust");
         this.ingotFromDust(LEAD_INGOT, DUSTS_LEAD, "has_lead_dust", "lead_ingot_from_dust");
@@ -85,32 +87,32 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromRaw(URANIUM_INGOT, ORES_URANIUM, "has_uranium_ore", "uranium_ingot_from_ore");
     }
 
-    private void nugget(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn) {
+    private void nugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn) {
         ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer);
     }
 
-    private void nugget(IItemProvider resultIn, Item ingredientIn, String criterionNameIn) {
+    private void nugget(ItemLike resultIn, Item ingredientIn, String criterionNameIn) {
         ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer);
     }
 
-    private void nugget(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {
+    private void nugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
         ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
     }
 
-    private void ingotFromNugget(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {
+    private void ingotFromNugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
         ShapedRecipeBuilder.shaped(resultIn).define('A', ingredientIn).pattern("AAA").pattern("AAA").pattern("AAA").unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
     }
 
-    private void ingotFromDust(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        CookingRecipeBuilder.smelting(Ingredient.of(ingredientIn), resultIn, 0f, 200).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "smelting_" + nameIn));
-        CookingRecipeBuilder.blasting(Ingredient.of(ingredientIn), resultIn, 0f, 100).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "blasting_" + nameIn));
+    private void ingotFromDust(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredientIn), resultIn, 0f, 200).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "smelting_" + nameIn));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ingredientIn), resultIn, 0f, 100).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "blasting_" + nameIn));
     }
 
-    private void ingotFromRaw(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {
+    private void ingotFromRaw(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
         this.ingotFromDust(resultIn, ingredientIn, criterionNameIn, nameIn);
     }
 
-    private void ingotFromOre(IItemProvider resultIn, ITag<Item> ingredientIn, String criterionNameIn, String nameIn) {
+    private void ingotFromOre(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
         this.ingotFromDust(resultIn, ingredientIn, criterionNameIn, nameIn);
     }
 
