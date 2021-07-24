@@ -6,6 +6,7 @@ import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Blocks.*;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -56,6 +57,13 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
         this.tag(ORES_TINY_IRON).add(TINY_IRON_ORE);
         this.tag(ORES_TINY_LAPIS).add(TINY_LAPIS_ORE);
         this.tag(ORES_TINY_REDSTONE).add(TINY_REDSTONE_ORE);
+
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                BAUXITE_ORE, LEAD_ORE, NICKEL_ORE, SILVER_ORE,
+                TIN_ORE, URANIUM_ORE, TINY_COAL_ORE, TINY_COPPER_ORE,
+                TINY_DIAMOND_ORE, TINY_EMERALD_ORE, TINY_GOLD_ORE,
+                TINY_IRON_ORE, TINY_LAPIS_ORE, TINY_REDSTONE_ORE
+        );
     }
 
     @Nonnull
