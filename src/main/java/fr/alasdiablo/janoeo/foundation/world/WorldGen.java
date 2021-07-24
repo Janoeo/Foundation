@@ -24,7 +24,9 @@ public class WorldGen {
         if (FoundationConfig.TINY_DIAMOND_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
                 biome, FoundationFeatures.ORE_TINY_DIAMOND, GenerationStep.Decoration.UNDERGROUND_ORES
         );
-        // add emerald
+        if (FoundationConfig.TINY_EMERALD_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.ORE_TINY_EMERALD, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
         if (FoundationConfig.TINY_GOLD_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
                 biome, FoundationFeatures.ORE_TINY_GOLD, GenerationStep.Decoration.UNDERGROUND_ORES
         );
@@ -40,6 +42,25 @@ public class WorldGen {
         );
         if (FoundationConfig.TINY_REDSTONE_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
                 biome, FoundationFeatures.ORE_TINY_REDSTONE, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+
+        if (FoundationConfig.BAUXITE_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.ORE_BAUXITE, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.LEAD_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.ORE_LEAD, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.NICKEL_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.ORE_NICKEL, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.SILVER_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.ORE_SILVER, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.TIN_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.ORE_TIN, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.URANIUM_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.ORE_URANIUM, GenerationStep.Decoration.UNDERGROUND_ORES
         );
     }
 }

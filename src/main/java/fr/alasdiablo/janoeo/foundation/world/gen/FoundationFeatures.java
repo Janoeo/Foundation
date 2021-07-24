@@ -64,24 +64,35 @@ public class FoundationFeatures {
         register(FoundationBlocks.TINY_COAL_ORE, ORE_TINY_COAL);
         register(FoundationBlocks.TINY_COPPER_ORE, ORE_TINY_COPPER);
         register(FoundationBlocks.TINY_DIAMOND_ORE, ORE_TINY_DIAMOND);
-        // add emerald
+        register(FoundationBlocks.TINY_EMERALD_ORE, ORE_TINY_EMERALD);
         register(FoundationBlocks.TINY_GOLD_ORE, ORE_TINY_GOLD);
         register(FoundationBlocks.TINY_GOLD_ORE, "extra", ORE_TINY_GOLD_EXTRA);
         register(FoundationBlocks.TINY_IRON_ORE, ORE_TINY_IRON);
         register(FoundationBlocks.TINY_LAPIS_ORE, ORE_TINY_LAPIS);
         register(FoundationBlocks.TINY_REDSTONE_ORE, ORE_TINY_REDSTONE);
+
+        register(FoundationBlocks.BAUXITE_ORE, ORE_BAUXITE);
+        register(FoundationBlocks.LEAD_ORE, ORE_LEAD);
+        register(FoundationBlocks.NICKEL_ORE, ORE_NICKEL);
+        register(FoundationBlocks.SILVER_ORE, ORE_SILVER);
+        register(FoundationBlocks.TIN_ORE, ORE_TIN);
+        register(FoundationBlocks.URANIUM_ORE, ORE_URANIUM);
     }
 
     public static final ConfiguredFeature<?, ?> ORE_TINY_COAL = createOreFeature(FoundationBlocks.TINY_COAL_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_COAL_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_TINY_COPPER = createOreFeature(FoundationBlocks.TINY_COPPER_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_COPPER_ORE_CONFIG);
-    ;
     public static final ConfiguredFeature<?, ?> ORE_TINY_DIAMOND = createOreFeature(FoundationBlocks.TINY_DIAMOND_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_DIAMOND_ORE_CONFIG);
-    ;
-    // add emerald
+    public static final ConfiguredFeature<?, ?> ORE_TINY_EMERALD = createOreFeature(FoundationBlocks.TINY_EMERALD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_EMERALD_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD = createOreFeature(FoundationBlocks.TINY_GOLD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_GOLD_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD_EXTRA = createOreFeature(FoundationBlocks.TINY_GOLD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_TINY_IRON = createOreFeature(FoundationBlocks.TINY_IRON_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_IRON_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_TINY_LAPIS = createOreFeature(FoundationBlocks.TINY_LAPIS_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_LAPIS_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_TINY_REDSTONE = createOreFeature(FoundationBlocks.TINY_REDSTONE_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_REDSTONE_ORE_CONFIG);
-    ;
+
+    public static final ConfiguredFeature<?, ?> ORE_BAUXITE = createOreFeature(FoundationBlocks.BAUXITE_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.BAUXITE_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_LEAD = createOreFeature(FoundationBlocks.LEAD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.LEAD_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_NICKEL = createOreFeature(FoundationBlocks.NICKEL_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.NICKEL_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_SILVER = createOreFeature(FoundationBlocks.SILVER_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.SILVER_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TIN = createOreFeature(FoundationBlocks.TIN_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TIN_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_URANIUM = createOreFeature(FoundationBlocks.URANIUM_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.URANIUM_ORE_CONFIG);
 }

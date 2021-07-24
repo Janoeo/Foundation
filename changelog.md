@@ -4,6 +4,7 @@
 
 <details><summary><b>1.17.1</b></summary>
 
++ [6.6.0.72-experimental](#66072-experimental)
 + [6.6.0.71-experimental](#66071-experimental)
 + [6.6.0.70-experimental](#66070-experimental)
 
@@ -100,6 +101,20 @@
 + [1.0](#10)
 
 </details>
+
+### 6.6.0.72-experimental
+
+##### Add
+
+###### World gen
+
++ Bauxite ore
++ Lead ore
++ Nickel ore
++ Silver ore
++ Tin ore
++ Uranium ore
++ Tiny emerald ore
 
 ### 6.6.0.71-experimental
 

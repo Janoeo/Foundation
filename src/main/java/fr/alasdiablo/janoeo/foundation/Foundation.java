@@ -64,9 +64,9 @@ public class Foundation {
         this.foundCompat();
         FoundationConfig.init();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modBus.addListener(this::initFeatures);
         modBus.addListener(this::setup);
         modBus.addListener(this::gatherData);
-        modBus.addListener(this::initFeatures);
         modBus.addGenericListener(Block.class, FoundationBlocks::initBlock);
         modBus.addGenericListener(Item.class, FoundationBlocks::initItem);
         modBus.addGenericListener(Item.class, FoundationItems::init);
