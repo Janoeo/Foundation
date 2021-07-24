@@ -4,6 +4,7 @@
 
 <details><summary><b>1.17.1</b></summary>
 
++ [6.6.0.71-experimental](#66071-experimental)
 + [6.6.0.70-experimental](#66070-experimental)
 
 </details>
@@ -100,7 +101,13 @@
 
 </details>
 
-### 6.6.0.70
+### 6.6.0.71-experimental
+
+##### Fix
+
+harvest tool
+
+### 6.6.0.70-experimental
 
 Update to Minecraft 1.17.1
 
