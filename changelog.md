@@ -4,6 +4,7 @@
 
 <details><summary><b>1.17.1</b></summary>
 
++ [6.6.1.74-experimental](#66174-experimental)
 + [6.6.0.73-experimental](#66073-experimental)
 + [6.6.0.72-experimental](#66072-experimental)
 + [6.6.0.71-experimental](#66071-experimental)
@@ -102,6 +103,17 @@
 + [1.0](#10)
 
 </details>
+
+### 6.6.1.74-experimental
+
+##### Fix
+
++ Tiny Deepslate ore with bad behavior
++ Tiny Redstone ore not acting as redstone ore
+
+##### Technical only
+
++ Correctly increments mod version
 
 ### 6.6.0.73-experimental
 
