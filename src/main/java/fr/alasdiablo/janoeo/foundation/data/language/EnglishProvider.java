@@ -6,8 +6,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraftforge.common.data.LanguageProvider;
 
-import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
+import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 
 public class EnglishProvider extends LanguageProvider {
 
@@ -74,6 +74,15 @@ public class EnglishProvider extends LanguageProvider {
         this.add(TINY_IRON_ORE, "Tiny iron ore");
         this.add(TINY_LAPIS_ORE, "Tiny lapis ore");
         this.add(TINY_REDSTONE_ORE, "Tiny redstone ore");
+
+        this.add(DEEPSLATE_TINY_COAL_ORE, "Deepslate tiny coal ore");
+        this.add(DEEPSLATE_TINY_COPPER_ORE, "Deepslate tiny copper ore");
+        this.add(DEEPSLATE_TINY_DIAMOND_ORE, "Deepslate tiny diamond ore");
+        this.add(DEEPSLATE_TINY_EMERALD_ORE, "Deepslate tiny emerald ore");
+        this.add(DEEPSLATE_TINY_GOLD_ORE, "Deepslate tiny gold ore");
+        this.add(DEEPSLATE_TINY_IRON_ORE, "Deepslate tiny iron ore");
+        this.add(DEEPSLATE_TINY_LAPIS_ORE, "Deepslate tiny lapis ore");
+        this.add(DEEPSLATE_TINY_REDSTONE_ORE, "Deepslate tiny redstone ore");
 
 
         this.add(((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Items");

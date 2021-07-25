@@ -68,7 +68,7 @@ public class FoundationBlocks {
         );
     }
 
-    /* * * * * * * * * * * * * * * Tiny Ore * * *  * * * * * * * * * * */
+    /* * * * * * * * * * * * * * * Tiny Ore * * * * * * * * * * * * * */
     public static final Block TINY_COAL_ORE = new OreBlock(PROPERTIES_ORE_WOOD_TIER, ExperienceRarity.COMMON, Registries.TINY_COAL_ORE);
     public static final Block TINY_COPPER_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.TINY_COPPER_ORE);
     public static final Block TINY_DIAMOND_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.RARE, Registries.TINY_DIAMOND_ORE);
@@ -77,18 +77,32 @@ public class FoundationBlocks {
     public static final Block TINY_IRON_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.TINY_IRON_ORE);
     public static final Block TINY_LAPIS_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.UNCOMMON, Registries.TINY_LAPIS_ORE);
     public static final Block TINY_REDSTONE_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.UNCOMMON, Registries.TINY_REDSTONE_ORE);
+    public static final Block DEEPSLATE_TINY_COAL_ORE = new OreBlock(PROPERTIES_ORE_WOOD_TIER, ExperienceRarity.COMMON, Registries.DEEPSLATE_TINY_COAL_ORE);
+    public static final Block DEEPSLATE_TINY_COPPER_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.DEEPSLATE_TINY_COPPER_ORE);
+    public static final Block DEEPSLATE_TINY_DIAMOND_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.RARE, Registries.DEEPSLATE_TINY_DIAMOND_ORE);
+    public static final Block DEEPSLATE_TINY_EMERALD_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.RARE, Registries.DEEPSLATE_TINY_EMERALD_ORE);
+    public static final Block DEEPSLATE_TINY_GOLD_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.UNCOMMON, Registries.DEEPSLATE_TINY_GOLD_ORE);
+    public static final Block DEEPSLATE_TINY_IRON_ORE = new OreBlock(PROPERTIES_ORE_STONE_TIER, ExperienceRarity.COMMON, Registries.DEEPSLATE_TINY_IRON_ORE);
+    public static final Block DEEPSLATE_TINY_LAPIS_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.UNCOMMON, Registries.DEEPSLATE_TINY_LAPIS_ORE);
+    public static final Block DEEPSLATE_TINY_REDSTONE_ORE = new OreBlock(PROPERTIES_ORE_IRON_TIER, ExperienceRarity.UNCOMMON, Registries.DEEPSLATE_TINY_REDSTONE_ORE);
 
     private static void initTinyOreBlock(IForgeRegistry<Block> registry) {
         RegistryHelper.registerBlock(registry,
                 TINY_COAL_ORE, TINY_COPPER_ORE, TINY_DIAMOND_ORE, TINY_EMERALD_ORE,
-                TINY_GOLD_ORE, TINY_IRON_ORE, TINY_LAPIS_ORE, TINY_REDSTONE_ORE
+                TINY_GOLD_ORE, TINY_IRON_ORE, TINY_LAPIS_ORE, TINY_REDSTONE_ORE,
+                DEEPSLATE_TINY_COAL_ORE, DEEPSLATE_TINY_COPPER_ORE, DEEPSLATE_TINY_DIAMOND_ORE,
+                DEEPSLATE_TINY_EMERALD_ORE, DEEPSLATE_TINY_GOLD_ORE, DEEPSLATE_TINY_IRON_ORE,
+                DEEPSLATE_TINY_LAPIS_ORE, DEEPSLATE_TINY_REDSTONE_ORE
         );
     }
 
     private static void initTinyOreItem(IForgeRegistry<Item> registry) {
         RegistryHelper.registerBlockItem(registry, PROPERTIES_ITEM_BLOCK,
                 TINY_COAL_ORE, TINY_COPPER_ORE, TINY_DIAMOND_ORE, TINY_EMERALD_ORE,
-                TINY_GOLD_ORE, TINY_IRON_ORE, TINY_LAPIS_ORE, TINY_REDSTONE_ORE
+                TINY_GOLD_ORE, TINY_IRON_ORE, TINY_LAPIS_ORE, TINY_REDSTONE_ORE,
+                DEEPSLATE_TINY_COAL_ORE, DEEPSLATE_TINY_COPPER_ORE, DEEPSLATE_TINY_DIAMOND_ORE,
+                DEEPSLATE_TINY_EMERALD_ORE, DEEPSLATE_TINY_GOLD_ORE, DEEPSLATE_TINY_IRON_ORE,
+                DEEPSLATE_TINY_LAPIS_ORE, DEEPSLATE_TINY_REDSTONE_ORE
         );
     }
 }

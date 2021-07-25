@@ -68,6 +68,15 @@ public class FrenchProvider extends LanguageProvider {
         this.add(TINY_LAPIS_ORE, "Minuscule minerai de lapis");
         this.add(TINY_REDSTONE_ORE, "Minuscule minerai de Redstone");
 
+        this.add(DEEPSLATE_TINY_COAL_ORE, "Minuscule minerai de charbon des abîmes");
+        this.add(DEEPSLATE_TINY_COPPER_ORE, "Minuscule minerai de cuivre des abîmes");
+        this.add(DEEPSLATE_TINY_DIAMOND_ORE, "Minuscule minerai de diamant des abîmes");
+        this.add(DEEPSLATE_TINY_EMERALD_ORE, "Minuscule minerai d'émeraude des abîmes");
+        this.add(DEEPSLATE_TINY_GOLD_ORE, "Minuscule minerai d'or des abîmes");
+        this.add(DEEPSLATE_TINY_IRON_ORE, "Minuscule minerai de fer des abîmes");
+        this.add(DEEPSLATE_TINY_LAPIS_ORE, "Minuscule minerai de lapis des abîmes");
+        this.add(DEEPSLATE_TINY_REDSTONE_ORE, "Minuscule minerai de Redstone des abîmes");
+
         this.add(((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Objets");
         this.add(((TranslatableComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Bloques");
     }

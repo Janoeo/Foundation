@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.world.gen;
 
+import com.google.common.collect.ImmutableList;
 import fr.alasdiablo.diolib.util.RegistryHelper;
 import fr.alasdiablo.diolib.world.WorldGenerationHelper;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
@@ -46,6 +47,36 @@ public class FoundationFeatures {
         throw new IllegalStateException("Undefined placement type");
     }
 
+    private static ConfiguredFeature<?, ?> createOreFeature(ImmutableList<OreConfiguration.TargetBlockState> target, OreConfig config) {
+        switch (config.getPlacement()) {
+            case "range" -> {
+                return Feature.ORE.configured(
+                        new OreConfiguration(target, config.getSize())
+                ).rangeUniform(
+                        VerticalAnchor.bottom(),
+                        VerticalAnchor.absolute(config.getRange())
+                ).squared().count(config.getCount());
+            }
+            case "triangle" -> {
+                return Feature.ORE.configured(
+                        new OreConfiguration(target, config.getSize())
+                ).rangeTriangle(
+                        VerticalAnchor.absolute(config.getBottom()),
+                        VerticalAnchor.absolute(config.getTop())
+                ).squared();
+            }
+            case "uniform" -> {
+                return Feature.ORE.configured(
+                        new OreConfiguration(target, config.getSize())
+                ).rangeUniform(
+                        VerticalAnchor.absolute(config.getBottom()),
+                        VerticalAnchor.absolute(config.getTop())
+                ).squared().count(config.getCount());
+            }
+        }
+        throw new IllegalStateException("Undefined placement type");
+    }
+
     private static void register(Block block, ConfiguredFeature<?, ?> configuredFeature) {
         WorldGenerationHelper.ConfiguredFeatureHelper.register(
                 Objects.requireNonNull(block.getRegistryName()), configuredFeature
@@ -79,15 +110,50 @@ public class FoundationFeatures {
         register(FoundationBlocks.URANIUM_ORE, ORE_URANIUM);
     }
 
-    public static final ConfiguredFeature<?, ?> ORE_TINY_COAL = createOreFeature(FoundationBlocks.TINY_COAL_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_COAL_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_COPPER = createOreFeature(FoundationBlocks.TINY_COPPER_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_COPPER_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_DIAMOND = createOreFeature(FoundationBlocks.TINY_DIAMOND_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_DIAMOND_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_EMERALD = createOreFeature(FoundationBlocks.TINY_EMERALD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_EMERALD_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD = createOreFeature(FoundationBlocks.TINY_GOLD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_GOLD_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD_EXTRA = createOreFeature(FoundationBlocks.TINY_GOLD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_IRON = createOreFeature(FoundationBlocks.TINY_IRON_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_IRON_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_LAPIS = createOreFeature(FoundationBlocks.TINY_LAPIS_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_LAPIS_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_REDSTONE = createOreFeature(FoundationBlocks.TINY_REDSTONE_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.TINY_REDSTONE_ORE_CONFIG);
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_COAL_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_COAL_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_COAL_ORE.defaultBlockState())
+    );
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_COPPER_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_COPPER_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_COPPER_ORE.defaultBlockState())
+    );
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_DIAMOND_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_DIAMOND_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_DIAMOND_ORE.defaultBlockState())
+    );
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_EMERALD_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_EMERALD_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_EMERALD_ORE.defaultBlockState())
+    );
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_GOLD_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_GOLD_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_GOLD_ORE.defaultBlockState())
+    );
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_IRON_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_IRON_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_IRON_ORE.defaultBlockState())
+    );
+
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_LAPIS_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_LAPIS_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_LAPIS_ORE.defaultBlockState())
+    );
+
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_REDSTONE_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_REDSTONE_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_REDSTONE_ORE.defaultBlockState())
+    );
+
+    public static final ConfiguredFeature<?, ?> ORE_TINY_COAL = createOreFeature(ORE_TINY_COAL_LIST, FoundationConfig.TINY_COAL_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_COPPER = createOreFeature(ORE_TINY_COPPER_LIST, FoundationConfig.TINY_COPPER_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_DIAMOND = createOreFeature(ORE_TINY_DIAMOND_LIST, FoundationConfig.TINY_DIAMOND_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_EMERALD = createOreFeature(ORE_TINY_EMERALD_LIST, FoundationConfig.TINY_EMERALD_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD = createOreFeature(ORE_TINY_GOLD_LIST, FoundationConfig.TINY_GOLD_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD_EXTRA = createOreFeature(ORE_TINY_GOLD_LIST, FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_IRON = createOreFeature(ORE_TINY_IRON_LIST, FoundationConfig.TINY_IRON_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_LAPIS = createOreFeature(ORE_TINY_LAPIS_LIST, FoundationConfig.TINY_LAPIS_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_REDSTONE = createOreFeature(ORE_TINY_REDSTONE_LIST, FoundationConfig.TINY_REDSTONE_ORE_CONFIG);
 
     public static final ConfiguredFeature<?, ?> ORE_BAUXITE = createOreFeature(FoundationBlocks.BAUXITE_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.BAUXITE_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_LEAD = createOreFeature(FoundationBlocks.LEAD_ORE, OreConfiguration.Predicates.NATURAL_STONE, FoundationConfig.LEAD_ORE_CONFIG);
