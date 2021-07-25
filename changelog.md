@@ -4,6 +4,7 @@
 
 <details><summary><b>1.17.1</b></summary>
 
++ [6.6.0.73-experimental](#66073-experimental)
 + [6.6.0.72-experimental](#66072-experimental)
 + [6.6.0.71-experimental](#66071-experimental)
 + [6.6.0.70-experimental](#66070-experimental)
@@ -101,6 +102,21 @@
 + [1.0](#10)
 
 </details>
+
+### 6.6.0.73-experimental
+
+##### Add
+
+###### Deepslate version of
+
++ Tiny coal ore
++ Tiny copper ore
++ Tiny diamond ore
++ Tiny emerald ore
++ Tiny gold ore
++ Tiny iron ore
++ Tiny lapis ore
++ Tiny redstone ore
 
 ### 6.6.0.72-experimental
 
