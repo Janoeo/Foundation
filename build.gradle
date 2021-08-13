@@ -12,9 +12,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-def build_number = '74'
+def build_number = '76'
 def isExperimental = true
-version = "6.6.1.${build_number}"
+version = "6.6.2.${build_number}"
 if (isExperimental) {
     version += '-experimental'
 }
@@ -68,7 +68,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.1'
+    minecraft 'net.minecraftforge:forge:1.17.1-37.0.33'
     runtimeOnly fileTree(dir:'lib', include:'*.jar')
     compileOnly fileTree(dir:'lib', include:'*.jar')
     // Compatibility check with mod

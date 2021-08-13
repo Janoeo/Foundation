@@ -68,6 +68,19 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
                 DEEPSLATE_TINY_GOLD_ORE, DEEPSLATE_TINY_IRON_ORE,
                 DEEPSLATE_TINY_LAPIS_ORE, DEEPSLATE_TINY_REDSTONE_ORE
         );
+        this.tag(BlockTags.NEEDS_STONE_TOOL).add(
+                BAUXITE_ORE, LEAD_ORE, TIN_ORE, TINY_COPPER_ORE,
+                TINY_IRON_ORE, DEEPSLATE_TINY_COPPER_ORE,
+                DEEPSLATE_TINY_IRON_ORE
+
+        );
+        this.tag(BlockTags.NEEDS_IRON_TOOL).add(
+                NICKEL_ORE, SILVER_ORE, URANIUM_ORE, TINY_DIAMOND_ORE,
+                TINY_EMERALD_ORE, TINY_GOLD_ORE, TINY_LAPIS_ORE,
+                TINY_REDSTONE_ORE, DEEPSLATE_TINY_DIAMOND_ORE,
+                DEEPSLATE_TINY_EMERALD_ORE, DEEPSLATE_TINY_GOLD_ORE,
+                DEEPSLATE_TINY_LAPIS_ORE, DEEPSLATE_TINY_REDSTONE_ORE
+        );
     }
 
     @Nonnull
