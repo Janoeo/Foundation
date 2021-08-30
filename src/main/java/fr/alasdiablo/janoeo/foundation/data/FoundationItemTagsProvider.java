@@ -10,6 +10,8 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -41,6 +43,14 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.copy(FoundationTags.Blocks.ORES_SILVER, ORES_SILVER);
         this.copy(FoundationTags.Blocks.ORES_TIN, ORES_TIN);
         this.copy(FoundationTags.Blocks.ORES_URANIUM, ORES_URANIUM);
+
+        this.copy(FoundationTags.Blocks.ORES_TINY_ALUMINIUM, ORES_TINY_ALUMINIUM);
+        this.copy(FoundationTags.Blocks.ORES_TINY_ALUMINUM, ORES_TINY_ALUMINUM);
+        this.copy(FoundationTags.Blocks.ORES_TINY_LEAD, ORES_TINY_LEAD);
+        this.copy(FoundationTags.Blocks.ORES_TINY_NICKEL, ORES_TINY_NICKEL);
+        this.copy(FoundationTags.Blocks.ORES_TINY_SILVER, ORES_TINY_SILVER);
+        this.copy(FoundationTags.Blocks.ORES_TINY_TIN, ORES_TINY_TIN);
+        this.copy(FoundationTags.Blocks.ORES_TINY_URANIUM, ORES_TINY_URANIUM);
 
         this.copy(FoundationTags.Blocks.ORES_TINY, ORES_TINY);
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);

@@ -14,41 +14,38 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
+import java.util.Arrays;
+
 public class FoundationBlockLootTables extends DioBlockLootTables {
 
     @Override
     protected void addTables() {
-        this.registerOreLootTable(FoundationBlocks.BAUXITE_ORE, FoundationItems.RAW_ALUMINIUM, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.LEAD_ORE, FoundationItems.RAW_LEAD, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.NICKEL_ORE, FoundationItems.RAW_NICKEL, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.SILVER_ORE, FoundationItems.RAW_SILVER, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.TIN_ORE, FoundationItems.RAW_TIN, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.URANIUM_ORE, FoundationItems.RAW_URANIUM, ConstantValue.exactly(1.0F));
+        this.registerOreLootTable(FoundationItems.RAW_ALUMINIUM, ConstantValue.exactly(1.0F), FoundationBlocks.BAUXITE_ORE, FoundationBlocks.DEEPSLATE_BAUXITE_ORE);
+        this.registerOreLootTable(FoundationItems.RAW_LEAD, ConstantValue.exactly(1.0F), FoundationBlocks.LEAD_ORE, FoundationBlocks.DEEPSLATE_LEAD_ORE);
+        this.registerOreLootTable(FoundationItems.RAW_NICKEL, ConstantValue.exactly(1.0F), FoundationBlocks.NICKEL_ORE, FoundationBlocks.DEEPSLATE_NICKEL_ORE);
+        this.registerOreLootTable(FoundationItems.RAW_SILVER, ConstantValue.exactly(1.0F), FoundationBlocks.SILVER_ORE, FoundationBlocks.DEEPSLATE_SILVER_ORE);
+        this.registerOreLootTable(FoundationItems.RAW_TIN, ConstantValue.exactly(1.0F), FoundationBlocks.TIN_ORE, FoundationBlocks.DEEPSLATE_TIN_ORE);
+        this.registerOreLootTable(FoundationItems.RAW_URANIUM, ConstantValue.exactly(1.0F), FoundationBlocks.URANIUM_ORE, FoundationBlocks.DEEPSLATE_URANIUM_ORE);
 
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_BAUXITE_ORE, FoundationItems.RAW_ALUMINIUM, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_LEAD_ORE, FoundationItems.RAW_LEAD, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_NICKEL_ORE, FoundationItems.RAW_NICKEL, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_SILVER_ORE, FoundationItems.RAW_SILVER, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_TIN_ORE, FoundationItems.RAW_TIN, ConstantValue.exactly(1.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_URANIUM_ORE, FoundationItems.RAW_URANIUM, ConstantValue.exactly(1.0F));
+        this.registerOreLootTable(FoundationItems.ALUMINIUM_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_BAUXITE_ORE, FoundationBlocks.DEEPSLATE_TINY_BAUXITE_ORE);
+        this.registerOreLootTable(FoundationItems.LEAD_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_LEAD_ORE, FoundationBlocks.DEEPSLATE_TINY_LEAD_ORE);
+        this.registerOreLootTable(FoundationItems.NICKEL_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_NICKEL_ORE, FoundationBlocks.DEEPSLATE_TINY_NICKEL_ORE);
+        this.registerOreLootTable(FoundationItems.SILVER_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_SILVER_ORE, FoundationBlocks.DEEPSLATE_TINY_SILVER_ORE);
+        this.registerOreLootTable(FoundationItems.TIN_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_TIN_ORE, FoundationBlocks.DEEPSLATE_TINY_TIN_ORE);
+        this.registerOreLootTable(FoundationItems.URANIUM_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_URANIUM_ORE, FoundationBlocks.DEEPSLATE_TINY_URANIUM_ORE);
 
-        this.registerOreLootTable(FoundationBlocks.TINY_COAL_ORE, FoundationItems.COAL_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_COPPER_ORE, FoundationItems.COPPER_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_DIAMOND_ORE, FoundationItems.DIAMOND_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_EMERALD_ORE, FoundationItems.EMERALD_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_GOLD_ORE, Items.GOLD_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_IRON_ORE, Items.IRON_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_LAPIS_ORE, FoundationItems.LAPIS_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.TINY_REDSTONE_ORE, FoundationItems.REDSTONE_NUGGET, UniformGenerator.between(2.0F, 6.0F));
+        this.registerOreLootTable(FoundationItems.COAL_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_COAL_ORE, FoundationBlocks.DEEPSLATE_TINY_COAL_ORE);
+        this.registerOreLootTable(FoundationItems.COPPER_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_COPPER_ORE, FoundationBlocks.DEEPSLATE_TINY_COPPER_ORE);
+        this.registerOreLootTable(FoundationItems.DIAMOND_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_DIAMOND_ORE, FoundationBlocks.DEEPSLATE_TINY_DIAMOND_ORE);
+        this.registerOreLootTable(FoundationItems.EMERALD_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_EMERALD_ORE, FoundationBlocks.DEEPSLATE_TINY_EMERALD_ORE);
+        this.registerOreLootTable(Items.GOLD_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_GOLD_ORE, FoundationBlocks.DEEPSLATE_TINY_GOLD_ORE);
+        this.registerOreLootTable(Items.IRON_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_IRON_ORE, FoundationBlocks.DEEPSLATE_TINY_IRON_ORE);
+        this.registerOreLootTable(FoundationItems.LAPIS_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_LAPIS_ORE, FoundationBlocks.DEEPSLATE_TINY_LAPIS_ORE);
+        this.registerOreLootTable(FoundationItems.REDSTONE_NUGGET, UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_REDSTONE_ORE, FoundationBlocks.DEEPSLATE_TINY_REDSTONE_ORE);
+    }
 
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_TINY_COAL_ORE, FoundationItems.COAL_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_TINY_COPPER_ORE, FoundationItems.COPPER_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_TINY_DIAMOND_ORE, FoundationItems.DIAMOND_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_TINY_EMERALD_ORE, FoundationItems.EMERALD_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_TINY_GOLD_ORE, Items.GOLD_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_TINY_IRON_ORE, Items.IRON_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_TINY_LAPIS_ORE, FoundationItems.LAPIS_NUGGET, UniformGenerator.between(2.0F, 6.0F));
-        this.registerOreLootTable(FoundationBlocks.DEEPSLATE_TINY_REDSTONE_ORE, FoundationItems.REDSTONE_NUGGET, UniformGenerator.between(2.0F, 6.0F));
+    protected void registerOreLootTable(final Item nuggetItem, final NumberProvider valueRange, Block... blocks) {
+        Arrays.stream(blocks).forEach(block -> registerOreLootTable(block, nuggetItem, valueRange));
     }
 
     protected void registerOreLootTable(final Block tinyOreBlock, final Item nuggetItem, final NumberProvider valueRange) {

@@ -47,10 +47,16 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
                 ORES_TINY_GOLD,
                 ORES_TINY_IRON,
                 ORES_TINY_LAPIS,
-                ORES_TINY_REDSTONE
+                ORES_TINY_REDSTONE,
+                ORES_TINY_ALUMINIUM,
+                ORES_TINY_ALUMINUM,
+                ORES_TINY_LEAD,
+                ORES_TINY_NICKEL,
+                ORES_TINY_SILVER,
+                ORES_TINY_TIN,
+                ORES_TINY_URANIUM
         );
         this.tag(ORES_TINY_COAL).add(TINY_COAL_ORE, DEEPSLATE_TINY_COAL_ORE);
-        this.tag(BlockTags.COAL_ORES).addTag(ORES_TINY_COAL);
         this.tag(ORES_TINY_COPPER).add(TINY_COPPER_ORE, DEEPSLATE_TINY_COPPER_ORE);
         this.tag(ORES_TINY_DIAMOND).add(TINY_DIAMOND_ORE, DEEPSLATE_TINY_DIAMOND_ORE);
         this.tag(ORES_TINY_EMERALD).add(TINY_EMERALD_ORE, DEEPSLATE_TINY_EMERALD_ORE);
@@ -58,6 +64,14 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
         this.tag(ORES_TINY_IRON).add(TINY_IRON_ORE, DEEPSLATE_TINY_IRON_ORE);
         this.tag(ORES_TINY_LAPIS).add(TINY_LAPIS_ORE, DEEPSLATE_TINY_LAPIS_ORE);
         this.tag(ORES_TINY_REDSTONE).add(TINY_REDSTONE_ORE, DEEPSLATE_TINY_REDSTONE_ORE);
+
+        this.tag(ORES_TINY_ALUMINUM).addTags(ORES_TINY_ALUMINIUM); // Reference to ORES_TINY_ALUMINIUM
+        this.tag(ORES_TINY_ALUMINIUM).add(TINY_BAUXITE_ORE, DEEPSLATE_TINY_BAUXITE_ORE);
+        this.tag(ORES_TINY_LEAD).add(TINY_LEAD_ORE, DEEPSLATE_TINY_LEAD_ORE);
+        this.tag(ORES_TINY_NICKEL).add(TINY_NICKEL_ORE, DEEPSLATE_TINY_NICKEL_ORE);
+        this.tag(ORES_TINY_SILVER).add(TINY_SILVER_ORE, DEEPSLATE_TINY_SILVER_ORE);
+        this.tag(ORES_TINY_TIN).add(TINY_TIN_ORE, DEEPSLATE_TINY_TIN_ORE);
+        this.tag(ORES_TINY_URANIUM).add(TINY_URANIUM_ORE, DEEPSLATE_TINY_URANIUM_ORE);
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 BAUXITE_ORE, LEAD_ORE, NICKEL_ORE, SILVER_ORE,
@@ -77,6 +91,7 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
                 DEEPSLATE_TINY_NICKEL_ORE, DEEPSLATE_TINY_SILVER_ORE, DEEPSLATE_TINY_TIN_ORE,
                 DEEPSLATE_TINY_URANIUM_ORE
         );
+
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
                 BAUXITE_ORE, LEAD_ORE, TIN_ORE,
                 DEEPSLATE_BAUXITE_ORE, DEEPSLATE_LEAD_ORE,

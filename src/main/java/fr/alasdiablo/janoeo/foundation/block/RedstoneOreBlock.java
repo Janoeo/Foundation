@@ -15,7 +15,13 @@ public class RedstoneOreBlock extends RedStoneOreBlock implements IDropExperienc
     private final ExperienceRarity experienceRarity;
 
     public RedstoneOreBlock(Properties properties, ExperienceRarity experienceRarity, String registryName) {
-        super(properties.randomTicks().lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 9 : 0));
+        super(properties.randomTicks().lightLevel(state -> {
+            try {
+                return state.getValue(BlockStateProperties.LIT) ? 9 : 0;
+            } catch (Exception e) {
+                return 0;
+            }
+        }));
         this.experienceRarity = experienceRarity;
         this.setRegistryName(registryName);
     }
