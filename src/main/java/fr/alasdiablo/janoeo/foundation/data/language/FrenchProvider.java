@@ -7,6 +7,7 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraftforge.common.data.LanguageProvider;
 
 import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
+import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.DEEPSLATE_URANIUM_ORE;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 
 public class FrenchProvider extends LanguageProvider {
@@ -58,6 +59,13 @@ public class FrenchProvider extends LanguageProvider {
         this.add(SILVER_ORE, "Minerai d'argent");
         this.add(TIN_ORE, "Minerai d'étain");
         this.add(URANIUM_ORE, "Minerai d'uranium");
+
+        this.add(DEEPSLATE_BAUXITE_ORE, "Minerai de bauxite des abîmes");
+        this.add(DEEPSLATE_LEAD_ORE, "Minerai de plomb des abîmes");
+        this.add(DEEPSLATE_NICKEL_ORE, "Minerai de nickel des abîmes");
+        this.add(DEEPSLATE_SILVER_ORE, "Minerai d'argent des abîmes");
+        this.add(DEEPSLATE_TIN_ORE, "Minerai d'étain des abîmes");
+        this.add(DEEPSLATE_URANIUM_ORE, "Minerai d'uranium des abîmes");
 
         this.add(TINY_COAL_ORE, "Minuscule minerai de charbon");
         this.add(TINY_COPPER_ORE, "Minuscule minerai de cuivre");

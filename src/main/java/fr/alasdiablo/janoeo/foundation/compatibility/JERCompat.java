@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.compatibility;
 
-/*import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
+import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.config.OreConfig;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
@@ -13,29 +13,23 @@ import jeresources.api.restrictions.BiomeRestriction;
 import jeresources.api.restrictions.Restriction;
 import jeresources.compatibility.JERAPI;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;*/
+import net.minecraft.world.item.Items;
 
 public class JERCompat {
 
-    /*private static final IWorldGenRegistry WORLD_GEN_REGISTRY = JERAPI.getInstance().getWorldGenRegistry();
+    private static final IWorldGenRegistry WORLD_GEN_REGISTRY = JERAPI.getInstance().getWorldGenRegistry();
 
     private static DistributionBase getDistribution(OreConfig config) {
         DistributionBase distribution;
         switch (config.getPlacement()) {
-            case "range": {
-                distribution = new DistributionSquare(config.getCount(), config.getSize(), 0, config.getRange());
-                break;
-            }
-            case "depth_average": {
-                distribution = new DistributionTriangular(config.getBaseline(), config.getSpread(), 0.001f);
-                break;
-            }
-            case "top_solid_range": {
-                distribution = new DistributionSquare(config.getCount(), config.getSize(), config.getBottomOffset(), config.getMaximum());
-                break;
-            }
-            default:
-                throw new IllegalArgumentException("Unknown placement type");
+            case "range" -> distribution = new DistributionSquare(config.getCount(), config.getSize(), 0, config.getRange());
+            case "triangle" -> distribution = new DistributionTriangular(
+                    (config.getTop() - config.getBottom()) / 2 + config.getBottom(),
+                    config.getTop() - config.getBottom() / 2,
+                    0.001f
+            );
+            case "uniform" -> distribution = new DistributionSquare(config.getCount(), config.getSize(), config.getBottom(), config.getTop());
+            default -> throw new IllegalArgumentException("Unknown placement type");
         }
 
         return distribution;
@@ -98,5 +92,5 @@ public class JERCompat {
                 true,
                 new LootDrop(new ItemStack(FoundationItems.REDSTONE_NUGGET, 6))
         );
-    }*/
+    }
 }

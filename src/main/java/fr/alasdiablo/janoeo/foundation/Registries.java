@@ -57,6 +57,13 @@ public class Registries {
     public static final String TIN_ORE = "tin_ore";
     public static final String URANIUM_ORE = "uranium_ore";
 
+    public static final String DEEPSLATE_BAUXITE_ORE = "deepslate_bauxite_ore";
+    public static final String DEEPSLATE_LEAD_ORE = "deepslate_lead_ore";
+    public static final String DEEPSLATE_NICKEL_ORE = "deepslate_nickel_ore";
+    public static final String DEEPSLATE_SILVER_ORE = "deepslate_silver_ore";
+    public static final String DEEPSLATE_TIN_ORE = "deepslate_tin_ore";
+    public static final String DEEPSLATE_URANIUM_ORE = "deepslate_uranium_ore";
+
     /* * * * * * * * * * * * * * * Tiny Ore * * *  * * * * * * * * * * */
     public static final String TINY_COAL_ORE = "tiny_coal_ore";
     public static final String TINY_COPPER_ORE = "tiny_copper_ore";
@@ -75,4 +82,18 @@ public class Registries {
     public static final String DEEPSLATE_TINY_IRON_ORE = "deepslate_tiny_iron_ore";
     public static final String DEEPSLATE_TINY_LAPIS_ORE = "deepslate_tiny_lapis_ore";
     public static final String DEEPSLATE_TINY_REDSTONE_ORE = "deepslate_tiny_redstone_ore";
+
+    public static final String TINY_BAUXITE_ORE = "tiny_bauxite_ore";
+    public static final String TINY_LEAD_ORE = "tiny_lead_ore";
+    public static final String TINY_NICKEL_ORE = "tiny_nickel_ore";
+    public static final String TINY_SILVER_ORE = "tiny_silver_ore";
+    public static final String TINY_TIN_ORE = "tiny_tin_ore";
+    public static final String TINY_URANIUM_ORE = "tiny_uranium_ore";
+
+    public static final String DEEPSLATE_TINY_BAUXITE_ORE = "deepslate_tiny_bauxite_ore";
+    public static final String DEEPSLATE_TINY_LEAD_ORE = "deepslate_tiny_lead_ore";
+    public static final String DEEPSLATE_TINY_NICKEL_ORE = "deepslate_tiny_nickel_ore";
+    public static final String DEEPSLATE_TINY_SILVER_ORE = "deepslate_tiny_silver_ore";
+    public static final String DEEPSLATE_TINY_TIN_ORE = "deepslate_tiny_tin_ore";
+    public static final String DEEPSLATE_TINY_URANIUM_ORE = "deepslate_tiny_uranium_ore";
 }

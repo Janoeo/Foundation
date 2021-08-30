@@ -104,7 +104,15 @@ public class Foundation {
 
     private void setup(final FMLCommonSetupEvent commonSetupEvent) {
         WorldGen.init();
-        // if (Compat.JUST_ENOUGH_RESOURCES) JERCompat.init();
+        this.initCompat();
+    }
+
+    private void initCompat() {
+        try {
+            if (Compat.JUST_ENOUGH_RESOURCES) JERCompat.init();
+        } catch (Exception e) {
+            logger.warn("Just Enough Ressources compatibility patch have failed!");
+        }
     }
 
     private void initFeatures(RegistryEvent.NewRegistry newRegistry) {
