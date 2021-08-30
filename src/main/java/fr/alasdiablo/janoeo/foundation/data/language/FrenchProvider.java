@@ -1,21 +1,15 @@
 package fr.alasdiablo.janoeo.foundation.data.language;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraftforge.common.data.LanguageProvider;
 
-import java.util.Map;
-import java.util.TreeMap;
-
 import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 
 public class FrenchProvider extends LanguageProvider {
-
     public FrenchProvider(DataGenerator gen) {
         super(gen, Registries.MOD_ID, "fr_fr");
     }
