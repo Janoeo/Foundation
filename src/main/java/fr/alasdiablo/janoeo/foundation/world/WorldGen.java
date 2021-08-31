@@ -62,5 +62,24 @@ public class WorldGen {
         if (FoundationConfig.URANIUM_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
                 biome, FoundationFeatures.ORE_URANIUM, GenerationStep.Decoration.UNDERGROUND_ORES
         );
+
+        if (FoundationConfig.TINY_BAUXITE_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.TINY_ORE_BAUXITE, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.TINY_LEAD_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.TINY_ORE_LEAD, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.TINY_NICKEL_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.TINY_ORE_NICKEL, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.TINY_SILVER_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.TINY_ORE_SILVER, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.TINY_TIN_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.TINY_ORE_TIN, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
+        if (FoundationConfig.TINY_URANIUM_ORE_CONFIG.isEnable()) WorldGenerationHelper.addFeature(
+                biome, FoundationFeatures.TINY_ORE_URANIUM, GenerationStep.Decoration.UNDERGROUND_ORES
+        );
     }
 }

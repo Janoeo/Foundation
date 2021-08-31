@@ -109,6 +109,13 @@ public class FoundationFeatures {
         register(FoundationBlocks.SILVER_ORE, ORE_SILVER);
         register(FoundationBlocks.TIN_ORE, ORE_TIN);
         register(FoundationBlocks.URANIUM_ORE, ORE_URANIUM);
+
+        register(FoundationBlocks.TINY_BAUXITE_ORE, TINY_ORE_BAUXITE);
+        register(FoundationBlocks.TINY_LEAD_ORE, TINY_ORE_LEAD);
+        register(FoundationBlocks.TINY_NICKEL_ORE, TINY_ORE_NICKEL);
+        register(FoundationBlocks.TINY_SILVER_ORE, TINY_ORE_SILVER);
+        register(FoundationBlocks.TINY_TIN_ORE, TINY_ORE_TIN);
+        register(FoundationBlocks.TINY_URANIUM_ORE, TINY_ORE_URANIUM);
     }
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_COAL_LIST = ImmutableList.of(
@@ -177,6 +184,37 @@ public class FoundationFeatures {
             OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_URANIUM_ORE.defaultBlockState())
     );
 
+
+    public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_BAUXITE_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_BAUXITE_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_BAUXITE_ORE.defaultBlockState())
+    );
+
+    public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_LEAD_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_LEAD_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_LEAD_ORE.defaultBlockState())
+    );
+
+    public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_NICKEL_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_NICKEL_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_NICKEL_ORE.defaultBlockState())
+    );
+
+    public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_SILVER_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_SILVER_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_SILVER_ORE.defaultBlockState())
+    );
+
+    public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_TIN_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_TIN_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_TIN_ORE.defaultBlockState())
+    );
+
+    public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_URANIUM_LIST = ImmutableList.of(
+            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_URANIUM_ORE.defaultBlockState()),
+            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_URANIUM_ORE.defaultBlockState())
+    );
+
     public static final ConfiguredFeature<?, ?> ORE_TINY_COAL = createOreFeature(ORE_TINY_COAL_LIST, FoundationConfig.TINY_COAL_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_TINY_COPPER = createOreFeature(ORE_TINY_COPPER_LIST, FoundationConfig.TINY_COPPER_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_TINY_DIAMOND = createOreFeature(ORE_TINY_DIAMOND_LIST, FoundationConfig.TINY_DIAMOND_ORE_CONFIG);
@@ -193,4 +231,11 @@ public class FoundationFeatures {
     public static final ConfiguredFeature<?, ?> ORE_SILVER = createOreFeature(ORE_SILVER_LIST, FoundationConfig.SILVER_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_TIN = createOreFeature(ORE_TIN_LIST, FoundationConfig.TIN_ORE_CONFIG);
     public static final ConfiguredFeature<?, ?> ORE_URANIUM = createOreFeature(ORE_URANIUM_LIST, FoundationConfig.URANIUM_ORE_CONFIG);
+
+    public static final ConfiguredFeature<?, ?> TINY_ORE_BAUXITE = createOreFeature(TINY_ORE_BAUXITE_LIST, FoundationConfig.TINY_BAUXITE_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_LEAD = createOreFeature(TINY_ORE_LEAD_LIST, FoundationConfig.TINY_LEAD_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_NICKEL = createOreFeature(TINY_ORE_NICKEL_LIST, FoundationConfig.TINY_NICKEL_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_SILVER = createOreFeature(TINY_ORE_SILVER_LIST, FoundationConfig.TINY_SILVER_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_TIN = createOreFeature(TINY_ORE_TIN_LIST, FoundationConfig.TINY_TIN_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_URANIUM = createOreFeature(TINY_ORE_URANIUM_LIST, FoundationConfig.TINY_URANIUM_ORE_CONFIG);
 }

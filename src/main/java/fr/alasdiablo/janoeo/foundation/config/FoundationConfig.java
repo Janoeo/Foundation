@@ -28,6 +28,13 @@ public class FoundationConfig {
     public static final OreConfig TIN_ORE_CONFIG = new OreConfig(Registries.TIN_ORE, true).placementRange(10, 96, 6);
     public static final OreConfig URANIUM_ORE_CONFIG = new OreConfig(Registries.URANIUM_ORE, true).placementRange(6, 28, 4);
 
+    public static final OreConfig TINY_BAUXITE_ORE_CONFIG = new OreConfig(Registries.TINY_BAUXITE_ORE, true).placementRange(10, 96, 6);
+    public static final OreConfig TINY_LEAD_ORE_CONFIG = new OreConfig(Registries.TINY_LEAD_ORE, true).placementRange(6, 48, 6);
+    public static final OreConfig TINY_NICKEL_ORE_CONFIG = new OreConfig(Registries.TINY_NICKEL_ORE, true).placementRange(6, 32, 4);
+    public static final OreConfig TINY_SILVER_ORE_CONFIG = new OreConfig(Registries.TINY_SILVER_ORE, true).placementRange(6, 28, 4);
+    public static final OreConfig TINY_TIN_ORE_CONFIG = new OreConfig(Registries.TINY_TIN_ORE, true).placementRange(10, 96, 6);
+    public static final OreConfig TINY_URANIUM_ORE_CONFIG = new OreConfig(Registries.TINY_URANIUM_ORE, true).placementRange(6, 28, 4);
+
     public static void init() throws IOException {
         OVERWORLD_ORE_TINY_CONFIG
                 .add(TINY_COAL_ORE_CONFIG)
@@ -39,6 +46,12 @@ public class FoundationConfig {
                 .add(TINY_IRON_ORE_CONFIG)
                 .add(TINY_LAPIS_ORE_CONFIG)
                 .add(TINY_REDSTONE_ORE_CONFIG)
+                .add(TINY_BAUXITE_ORE_CONFIG)
+                .add(TINY_LEAD_ORE_CONFIG)
+                .add(TINY_NICKEL_ORE_CONFIG)
+                .add(TINY_SILVER_ORE_CONFIG)
+                .add(TINY_TIN_ORE_CONFIG)
+                .add(TINY_URANIUM_ORE_CONFIG)
                 .build();
 
         OVERWORLD_ORE_CONFIG
