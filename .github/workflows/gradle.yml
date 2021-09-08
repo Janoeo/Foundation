@@ -5,9 +5,9 @@ name: Run build
 
 on:
   push:
-    branches: [ 1.16-v6 ]
+    branches: [ 1.17-v6 ]
   pull_request:
-    branches: [ 1.16-v6 ]
+    branches: [ 1.17-v6 ]
 
 jobs:
   build:
