@@ -51,15 +51,6 @@ public class Foundation {
         }
     };
 
-    public static class Compat {
-        public static boolean JUST_ENOUGH_RESOURCES = false;
-    }
-
-    private void foundCompat() {
-        final ModList modList = ModList.get();
-        Compat.JUST_ENOUGH_RESOURCES = modList.isLoaded("jeresources");
-    }
-
     public Foundation() throws IOException {
         this.foundCompat();
         FoundationConfig.init();
@@ -72,9 +63,14 @@ public class Foundation {
         modBus.addGenericListener(Item.class, FoundationItems::init);
     }
 
+    private void foundCompat() {
+        final ModList modList = ModList.get();
+        Compat.JUST_ENOUGH_RESOURCES = modList.isLoaded("jeresources");
+    }
+
     private void gatherData(GatherDataEvent event) {
         Foundation.logger.debug("Start data generator");
-        final DataGenerator generator = event.getGenerator();
+        final DataGenerator      generator          = event.getGenerator();
         final ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         Foundation.logger.debug("Add Block Model Provider");
@@ -117,5 +113,9 @@ public class Foundation {
 
     private void initFeatures(RegistryEvent.NewRegistry newRegistry) {
         FoundationFeatures.init();
+    }
+
+    public static class Compat {
+        public static boolean JUST_ENOUGH_RESOURCES = false;
     }
 }

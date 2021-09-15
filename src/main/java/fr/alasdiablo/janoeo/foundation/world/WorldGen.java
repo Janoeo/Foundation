@@ -9,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class WorldGen {
     public static void init() {
-        for (Biome biome : ForgeRegistries.BIOMES) {
+        for (Biome biome: ForgeRegistries.BIOMES) {
             oreGen(biome);
         }
     }

@@ -1,21 +1,18 @@
 package fr.alasdiablo.janoeo.foundation.data;
 
 import fr.alasdiablo.janoeo.foundation.Registries;
-
-import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
-import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
-
 import fr.alasdiablo.janoeo.foundation.init.FoundationTags;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
+
+import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
+import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
 
 @MethodsReturnNonnullByDefault
 @SuppressWarnings("unchecked")
@@ -56,23 +53,11 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
 
-        this.tag(Tags.Items.DUSTS).addTags(
-                DUSTS_ALUMINIUM,
-                DUSTS_ALUMINUM,
-                DUSTS_AMETHYST,
-                DUSTS_COAL,
-                DUSTS_COPPER,
-                DUSTS_DIAMOND,
-                DUSTS_GOLD,
-                DUSTS_EMERALD,
-                DUSTS_IRON,
-                DUSTS_LAPIS,
-                DUSTS_LEAD,
-                DUSTS_NICKEL,
-                DUSTS_SILVER,
-                DUSTS_TIN,
-                DUSTS_URANIUM
-        );
+        this.tag(Tags.Items.DUSTS)
+                .addTags(DUSTS_ALUMINIUM, DUSTS_ALUMINUM, DUSTS_AMETHYST, DUSTS_COAL, DUSTS_COPPER, DUSTS_DIAMOND, DUSTS_GOLD, DUSTS_EMERALD, DUSTS_IRON,
+                         DUSTS_LAPIS, DUSTS_LEAD, DUSTS_NICKEL, DUSTS_SILVER, DUSTS_TIN, DUSTS_URANIUM
+                );
+
         this.tag(DUSTS_ALUMINIUM).add(ALUMINIUM_DUST);
         this.tag(DUSTS_ALUMINUM).addTags(DUSTS_ALUMINIUM); // Reference to DUSTS_ALUMINIUM
         this.tag(DUSTS_AMETHYST).add(AMETHYST_DUST);
@@ -89,21 +74,11 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.tag(DUSTS_TIN).add(TIN_DUST);
         this.tag(DUSTS_URANIUM).add(URANIUM_DUST);
 
-        this.tag(Tags.Items.NUGGETS).addTags(
-                NUGGETS_ALUMINIUM,
-                NUGGETS_ALUMINUM,
-                NUGGETS_COAL,
-                NUGGETS_COPPER,
-                NUGGETS_DIAMOND,
-                NUGGETS_EMERALD,
-                NUGGETS_LAPIS,
-                NUGGETS_LEAD,
-                NUGGETS_NICKEL,
-                NUGGETS_REDSTONE,
-                NUGGETS_SILVER,
-                NUGGETS_TIN,
-                NUGGETS_URANIUM
-        );
+        this.tag(Tags.Items.NUGGETS)
+                .addTags(NUGGETS_ALUMINIUM, NUGGETS_ALUMINUM, NUGGETS_COAL, NUGGETS_COPPER, NUGGETS_DIAMOND, NUGGETS_EMERALD, NUGGETS_LAPIS, NUGGETS_LEAD,
+                         NUGGETS_NICKEL, NUGGETS_REDSTONE, NUGGETS_SILVER, NUGGETS_TIN, NUGGETS_URANIUM
+                );
+
         this.tag(NUGGETS_ALUMINIUM).add(ALUMINIUM_NUGGET);
         this.tag(NUGGETS_ALUMINUM).addTags(NUGGETS_ALUMINIUM); // Reference to NUGGETS_ALUMINIUM
         this.tag(NUGGETS_COAL).add(COAL_NUGGET);
@@ -118,15 +93,8 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.tag(NUGGETS_TIN).add(TIN_NUGGET);
         this.tag(NUGGETS_URANIUM).add(URANIUM_NUGGET);
 
-        this.tag(Tags.Items.INGOTS).addTags(
-                INGOTS_ALUMINIUM,
-                INGOTS_ALUMINUM,
-                INGOTS_LEAD,
-                INGOTS_NICKEL,
-                INGOTS_SILVER,
-                INGOTS_TIN,
-                INGOTS_URANIUM
-        );
+        this.tag(Tags.Items.INGOTS).addTags(INGOTS_ALUMINIUM, INGOTS_ALUMINUM, INGOTS_LEAD, INGOTS_NICKEL, INGOTS_SILVER, INGOTS_TIN, INGOTS_URANIUM);
+
         this.tag(INGOTS_ALUMINIUM).add(ALUMINIUM_INGOT);
         this.tag(INGOTS_ALUMINUM).addTags(INGOTS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
         this.tag(INGOTS_LEAD).add(LEAD_INGOT);
@@ -135,15 +103,8 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.tag(INGOTS_TIN).add(TIN_INGOT);
         this.tag(INGOTS_URANIUM).add(URANIUM_INGOT);
 
-        this.tag(RAWS).addTags(
-                RAWS_ALUMINIUM,
-                RAWS_ALUMINUM,
-                RAWS_LEAD,
-                RAWS_NICKEL,
-                RAWS_SILVER,
-                RAWS_TIN,
-                RAWS_URANIUM
-        );
+        this.tag(RAWS).addTags(RAWS_ALUMINIUM, RAWS_ALUMINUM, RAWS_LEAD, RAWS_NICKEL, RAWS_SILVER, RAWS_TIN, RAWS_URANIUM);
+
         this.tag(RAWS_ALUMINIUM).add(RAW_ALUMINIUM);
         this.tag(RAWS_ALUMINUM).addTags(RAWS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
         this.tag(RAWS_LEAD).add(RAW_LEAD);
