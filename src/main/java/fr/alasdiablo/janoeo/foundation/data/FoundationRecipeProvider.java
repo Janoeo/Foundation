@@ -88,24 +88,34 @@ public class FoundationRecipeProvider extends RecipeProvider {
     }
 
     private void nugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn) {
-        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer);
+        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn))
+                .unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer);
     }
 
     private void nugget(ItemLike resultIn, Item ingredientIn, String criterionNameIn) {
-        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer);
+        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn))
+                .unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer);
     }
 
     private void nugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
+        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn))
+                .unlockedBy(criterionNameIn, has(ingredientIn))
+                .save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
     }
 
     private void ingotFromNugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        ShapedRecipeBuilder.shaped(resultIn).define('A', ingredientIn).pattern("AAA").pattern("AAA").pattern("AAA").unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
+        ShapedRecipeBuilder.shaped(resultIn).define('A', ingredientIn).pattern("AAA").pattern("AAA").pattern("AAA")
+                .unlockedBy(criterionNameIn, has(ingredientIn))
+                .save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
     }
 
     private void ingotFromDust(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredientIn), resultIn, 0f, 200).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "smelting_" + nameIn));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ingredientIn), resultIn, 0f, 100).unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "blasting_" + nameIn));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredientIn), resultIn, 0f, 200)
+                .unlockedBy(criterionNameIn, has(ingredientIn))
+                .save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "smelting_" + nameIn));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ingredientIn), resultIn, 0f, 100)
+                .unlockedBy(criterionNameIn, has(ingredientIn))
+                .save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "blasting_" + nameIn));
     }
 
     private void ingotFromRaw(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {

@@ -74,7 +74,7 @@ public class Foundation {
 
     private void gatherData(GatherDataEvent event) {
         Foundation.logger.debug("Start data generator");
-        final DataGenerator generator = event.getGenerator();
+        final DataGenerator      generator          = event.getGenerator();
         final ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         Foundation.logger.debug("Add Block Model Provider");
@@ -91,7 +91,8 @@ public class Foundation {
         generator.addProvider(new FrenchProvider(generator));
 
         Foundation.logger.debug("Add Tags Provider");
-        final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(generator, existingFileHelper);
+        final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(
+                generator, existingFileHelper);
         generator.addProvider(blockTagsProvider);
         generator.addProvider(new FoundationItemTagsProvider(generator, blockTagsProvider, existingFileHelper));
 

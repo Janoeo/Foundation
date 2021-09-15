@@ -48,7 +48,9 @@ public class FoundationFeatures {
         throw new IllegalStateException("Undefined placement type");
     }
 
-    private static ConfiguredFeature<?, ?> createOreFeature(ImmutableList<OreConfiguration.TargetBlockState> target, OreConfig config) {
+    private static ConfiguredFeature<?, ?> createOreFeature(
+            ImmutableList<OreConfiguration.TargetBlockState> target, OreConfig config
+    ) {
         switch (config.getPlacement()) {
             case "range" -> {
                 return Feature.ORE.configured(
@@ -118,124 +120,261 @@ public class FoundationFeatures {
         register(FoundationBlocks.TINY_URANIUM_ORE, TINY_ORE_URANIUM);
     }
 
-    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_COAL_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_COAL_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_COAL_ORE.defaultBlockState())
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_COAL_LIST    = ImmutableList.of(
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_COAL_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_COAL_ORE.defaultBlockState()
+            )
     );
-    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_COPPER_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_COPPER_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_COPPER_ORE.defaultBlockState())
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_COPPER_LIST  = ImmutableList.of(
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_COPPER_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_COPPER_ORE.defaultBlockState()
+            )
     );
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_DIAMOND_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_DIAMOND_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_DIAMOND_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_DIAMOND_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_DIAMOND_ORE.defaultBlockState()
+            )
     );
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_EMERALD_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_EMERALD_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_EMERALD_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_EMERALD_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_EMERALD_ORE.defaultBlockState()
+            )
     );
-    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_GOLD_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_GOLD_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_GOLD_ORE.defaultBlockState())
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_GOLD_LIST    = ImmutableList.of(
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_GOLD_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_GOLD_ORE.defaultBlockState()
+            )
     );
-    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_IRON_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_IRON_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_IRON_ORE.defaultBlockState())
+    public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_IRON_LIST    = ImmutableList.of(
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_IRON_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_IRON_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_LAPIS_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_LAPIS_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_LAPIS_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_LAPIS_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_LAPIS_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TINY_REDSTONE_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_REDSTONE_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_REDSTONE_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_REDSTONE_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_REDSTONE_ORE.defaultBlockState()
+            )
     );
 
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_BAUXITE_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.BAUXITE_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_BAUXITE_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.BAUXITE_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_BAUXITE_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_LEAD_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.LEAD_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_LEAD_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.LEAD_ORE.defaultBlockState()),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_LEAD_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_NICKEL_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.NICKEL_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_NICKEL_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.NICKEL_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_NICKEL_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_SILVER_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.SILVER_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_SILVER_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.SILVER_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_SILVER_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_TIN_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TIN_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TIN_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TIN_ORE.defaultBlockState()),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TIN_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> ORE_URANIUM_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.URANIUM_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_URANIUM_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.URANIUM_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_URANIUM_ORE.defaultBlockState()
+            )
     );
 
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_BAUXITE_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_BAUXITE_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_BAUXITE_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_BAUXITE_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_BAUXITE_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_LEAD_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_LEAD_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_LEAD_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_LEAD_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_LEAD_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_NICKEL_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_NICKEL_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_NICKEL_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_NICKEL_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_NICKEL_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_SILVER_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_SILVER_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_SILVER_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_SILVER_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_SILVER_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_TIN_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_TIN_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_TIN_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_TIN_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_TIN_ORE.defaultBlockState()
+            )
     );
 
     public static final ImmutableList<OreConfiguration.TargetBlockState> TINY_ORE_URANIUM_LIST = ImmutableList.of(
-            OreConfiguration.target(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_URANIUM_ORE.defaultBlockState()),
-            OreConfiguration.target(OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.DEEPSLATE_TINY_URANIUM_ORE.defaultBlockState())
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,
+                    FoundationBlocks.TINY_URANIUM_ORE.defaultBlockState()
+            ),
+            OreConfiguration.target(
+                    OreConfiguration.Predicates.DEEPSLATE_ORE_REPLACEABLES,
+                    FoundationBlocks.DEEPSLATE_TINY_URANIUM_ORE.defaultBlockState()
+            )
     );
 
-    public static final ConfiguredFeature<?, ?> ORE_TINY_COAL = createOreFeature(ORE_TINY_COAL_LIST, FoundationConfig.TINY_COAL_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_COPPER = createOreFeature(ORE_TINY_COPPER_LIST, FoundationConfig.TINY_COPPER_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_DIAMOND = createOreFeature(ORE_TINY_DIAMOND_LIST, FoundationConfig.TINY_DIAMOND_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_EMERALD = createOreFeature(ORE_TINY_EMERALD_LIST, FoundationConfig.TINY_EMERALD_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD = createOreFeature(ORE_TINY_GOLD_LIST, FoundationConfig.TINY_GOLD_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD_EXTRA = createOreFeature(ORE_TINY_GOLD_LIST, FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_IRON = createOreFeature(ORE_TINY_IRON_LIST, FoundationConfig.TINY_IRON_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_LAPIS = createOreFeature(ORE_TINY_LAPIS_LIST, FoundationConfig.TINY_LAPIS_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TINY_REDSTONE = createOreFeature(ORE_TINY_REDSTONE_LIST, FoundationConfig.TINY_REDSTONE_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_COAL       = createOreFeature(
+            ORE_TINY_COAL_LIST, FoundationConfig.TINY_COAL_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_COPPER     = createOreFeature(
+            ORE_TINY_COPPER_LIST, FoundationConfig.TINY_COPPER_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_DIAMOND    = createOreFeature(
+            ORE_TINY_DIAMOND_LIST, FoundationConfig.TINY_DIAMOND_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_EMERALD    = createOreFeature(
+            ORE_TINY_EMERALD_LIST, FoundationConfig.TINY_EMERALD_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD       = createOreFeature(
+            ORE_TINY_GOLD_LIST, FoundationConfig.TINY_GOLD_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_GOLD_EXTRA = createOreFeature(
+            ORE_TINY_GOLD_LIST, FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_IRON       = createOreFeature(
+            ORE_TINY_IRON_LIST, FoundationConfig.TINY_IRON_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_LAPIS      = createOreFeature(
+            ORE_TINY_LAPIS_LIST, FoundationConfig.TINY_LAPIS_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TINY_REDSTONE   = createOreFeature(
+            ORE_TINY_REDSTONE_LIST, FoundationConfig.TINY_REDSTONE_ORE_CONFIG);
 
-    public static final ConfiguredFeature<?, ?> ORE_BAUXITE = createOreFeature(ORE_BAUXITE_LIST, FoundationConfig.BAUXITE_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_LEAD = createOreFeature(ORE_LEAD_LIST, FoundationConfig.LEAD_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_NICKEL = createOreFeature(ORE_NICKEL_LIST, FoundationConfig.NICKEL_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_SILVER = createOreFeature(ORE_SILVER_LIST, FoundationConfig.SILVER_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_TIN = createOreFeature(ORE_TIN_LIST, FoundationConfig.TIN_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> ORE_URANIUM = createOreFeature(ORE_URANIUM_LIST, FoundationConfig.URANIUM_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_BAUXITE = createOreFeature(
+            ORE_BAUXITE_LIST, FoundationConfig.BAUXITE_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_LEAD    = createOreFeature(
+            ORE_LEAD_LIST, FoundationConfig.LEAD_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_NICKEL  = createOreFeature(
+            ORE_NICKEL_LIST, FoundationConfig.NICKEL_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_SILVER  = createOreFeature(
+            ORE_SILVER_LIST, FoundationConfig.SILVER_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_TIN     = createOreFeature(
+            ORE_TIN_LIST, FoundationConfig.TIN_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> ORE_URANIUM = createOreFeature(
+            ORE_URANIUM_LIST, FoundationConfig.URANIUM_ORE_CONFIG);
 
-    public static final ConfiguredFeature<?, ?> TINY_ORE_BAUXITE = createOreFeature(TINY_ORE_BAUXITE_LIST, FoundationConfig.TINY_BAUXITE_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> TINY_ORE_LEAD = createOreFeature(TINY_ORE_LEAD_LIST, FoundationConfig.TINY_LEAD_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> TINY_ORE_NICKEL = createOreFeature(TINY_ORE_NICKEL_LIST, FoundationConfig.TINY_NICKEL_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> TINY_ORE_SILVER = createOreFeature(TINY_ORE_SILVER_LIST, FoundationConfig.TINY_SILVER_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> TINY_ORE_TIN = createOreFeature(TINY_ORE_TIN_LIST, FoundationConfig.TINY_TIN_ORE_CONFIG);
-    public static final ConfiguredFeature<?, ?> TINY_ORE_URANIUM = createOreFeature(TINY_ORE_URANIUM_LIST, FoundationConfig.TINY_URANIUM_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_BAUXITE = createOreFeature(
+            TINY_ORE_BAUXITE_LIST, FoundationConfig.TINY_BAUXITE_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_LEAD    = createOreFeature(
+            TINY_ORE_LEAD_LIST, FoundationConfig.TINY_LEAD_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_NICKEL  = createOreFeature(
+            TINY_ORE_NICKEL_LIST, FoundationConfig.TINY_NICKEL_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_SILVER  = createOreFeature(
+            TINY_ORE_SILVER_LIST, FoundationConfig.TINY_SILVER_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_TIN     = createOreFeature(
+            TINY_ORE_TIN_LIST, FoundationConfig.TINY_TIN_ORE_CONFIG);
+    public static final ConfiguredFeature<?, ?> TINY_ORE_URANIUM = createOreFeature(
+            TINY_ORE_URANIUM_LIST, FoundationConfig.TINY_URANIUM_ORE_CONFIG);
 }
