@@ -97,7 +97,13 @@ public class FrenchProvider extends LanguageProvider {
         this.add(DEEPSLATE_TINY_LAPIS_ORE, "Minuscule minerai de lapis-lazuli des abîmes");
         this.add(DEEPSLATE_TINY_REDSTONE_ORE, "Minuscule minerai de redstone des abîmes");
 
-        this.add(((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Objets");
-        this.add(((TranslatableComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Bloques");
+        this.add(
+                ((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(),
+                "Janoeo Foundation - Objets"
+        );
+        this.add(
+                ((TranslatableComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(),
+                "Janoeo Foundation - Bloques"
+        );
     }
 }

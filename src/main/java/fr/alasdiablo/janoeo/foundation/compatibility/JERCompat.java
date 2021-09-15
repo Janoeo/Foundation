@@ -22,13 +22,15 @@ public class JERCompat {
     private static DistributionBase getDistribution(OreConfig config) {
         DistributionBase distribution;
         switch (config.getPlacement()) {
-            case "range" -> distribution = new DistributionSquare(config.getCount(), config.getSize(), 0, config.getRange());
+            case "range" -> distribution = new DistributionSquare(
+                    config.getCount(), config.getSize(), 0, config.getRange());
             case "triangle" -> distribution = new DistributionTriangular(
                     (config.getTop() - config.getBottom()) / 2 + config.getBottom(),
                     config.getTop() - config.getBottom() / 2,
                     0.001f
             );
-            case "uniform" -> distribution = new DistributionSquare(config.getCount(), config.getSize(), config.getBottom(), config.getTop());
+            case "uniform" -> distribution = new DistributionSquare(
+                    config.getCount(), config.getSize(), config.getBottom(), config.getTop());
             default -> throw new IllegalArgumentException("Unknown placement type");
         }
 

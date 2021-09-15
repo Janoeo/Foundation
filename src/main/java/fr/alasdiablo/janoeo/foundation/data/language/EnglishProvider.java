@@ -106,7 +106,13 @@ public class EnglishProvider extends LanguageProvider {
         this.add(DEEPSLATE_TINY_REDSTONE_ORE, "Deepslate Tiny Redstone Ore");
 
 
-        this.add(((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Items");
-        this.add(((TranslatableComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(), "Janoeo Foundation - Blocks");
+        this.add(
+                ((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(),
+                "Janoeo Foundation - Items"
+        );
+        this.add(
+                ((TranslatableComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(),
+                "Janoeo Foundation - Blocks"
+        );
     }
 }

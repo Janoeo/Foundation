@@ -18,7 +18,10 @@ import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
 @SuppressWarnings("unchecked")
 public class FoundationItemTagsProvider extends ItemTagsProvider {
 
-    public FoundationItemTagsProvider(DataGenerator dataGenerator, BlockTagsProvider blockTagProvider, @Nullable ExistingFileHelper existingFileHelper) {
+    public FoundationItemTagsProvider(
+            DataGenerator dataGenerator, BlockTagsProvider blockTagProvider,
+            @Nullable ExistingFileHelper existingFileHelper
+    ) {
         super(dataGenerator, blockTagProvider, Registries.MOD_ID, existingFileHelper);
     }
 

@@ -87,7 +87,8 @@ public class Foundation {
         generator.addProvider(new FrenchProvider(generator));
 
         Foundation.logger.debug("Add Tags Provider");
-        final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(generator, existingFileHelper);
+        final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(
+                generator, existingFileHelper);
         generator.addProvider(blockTagsProvider);
         generator.addProvider(new FoundationItemTagsProvider(generator, blockTagsProvider, existingFileHelper));
 
