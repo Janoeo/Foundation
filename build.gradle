@@ -68,11 +68,11 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.45'
-    runtimeOnly fileTree(dir:'lib', include:'*.jar')
-    compileOnly fileTree(dir:'lib', include:'*.jar')
+    minecraft 'net.minecraftforge:forge:1.17.1-37.0.110'
+    implementation fg.deobf("curse.maven:diabololib-422014:3536336")                   // Diabolo Lib
     // Compatibility check with mod
     implementation fg.deobf("curse.maven:jei-238222:3438501")                          // JEI
+    implementation fg.deobf("curse.maven:jeresources-240630:3489131")
     implementation fg.deobf("curse.maven:biomes-o-plenty-220318:3399675")              // Biomes O' Plenty
     implementation fg.deobf("curse.maven:catalogue-459701:3399552")                    // Catalogue
     implementation fg.deobf("curse.maven:jade-324717:3439658")                         // Jade 🔍
