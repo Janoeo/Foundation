@@ -2,9 +2,14 @@
 
 ## Summary
 
-<details><summary><b>1.17.1</b></summary>
+<details><summary><b>1.18.1</b></summary>
 
 + [6.7.2.77](#67277)
+
+</details>
+
+<details><summary><b>1.17.1</b></summary>
+
 + [6.6.2.76-experimental](#66276-experimental)
 + [6.6.1.74-experimental](#66174-experimental)
 + [6.6.0.73-experimental](#66073-experimental)
@@ -110,11 +115,7 @@
 
 #### Update
 
-+ forge from 37.0.33 to 37.0.45
-
-#### Add
-
-[...]
++ port mod to mc 1.18.1
 
 ### 6.6.2.76-experimental
 

@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.data.loot;
 
-import fr.alasdiablo.diolib.data.DioBlockLootTables;
+import fr.alasdiablo.diolib.data.loot.BlockLootTable;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import net.minecraft.world.item.Item;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.Arrays;
 
-public class FoundationBlockLootTables extends DioBlockLootTables {
+public class FoundationBlockLootTables extends BlockLootTable {
 
     @Override
     protected void addTables() {

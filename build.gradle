@@ -12,19 +12,53 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-def build_number = '77'
+// ***************************************** //
+//                                           //
+//        Standard versioning system         //
+//                                           //
+// ***************************************** //
+def majorVersion = 7
+def minorVersion = 2
+def buildVersion = 77
 def isExperimental = true
-version = "6.7.2.${build_number}"
+version = "${majorVersion}.${minorVersion}.${buildVersion}"
 if (isExperimental) {
     version += '-experimental'
 }
+
+// ***************************************** //
+//                                           //
+//         Janoeo versioning system          //
+//                                           //
+// ***************************************** //
+def isJanoeo = true
+def janoeoProjectVersion = 6
+if (isJanoeo) {
+    version = "${janoeoProjectVersion}.${version}"
+}
+
 group = 'fr.alasdiablo.janoeo.foundation'
 archivesBaseName = 'Janoeo Foundation'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(16)
+def manifestAttributes = [
+        "Specification-Title"     : "Janoeo Foundation",
+        "Specification-Vendor"    : "AlasDiablo, Safyrus",
+        "Specification-Version"   : "1",
+        "Implementation-Title"    : project.name,
+        "Implementation-Version"  : project.jar.archiveVersion,
+        "Implementation-Vendor"   : "AlasDiablo, Safyrus",
+        "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+]
+
+def outputFolder = file(rootProject.getRootDir().getPath() + '/output')
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+def deobfSourceClassifier
 
 minecraft {
-    mappings channel: 'official', version: '1.17.1'
+    mappings channel: 'official', version: '1.18.1'
+    deobfSourceClassifier = getMappings().get()
     runs {
         client {
             workingDirectory project.file('run')
@@ -68,33 +102,37 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.110'
-    implementation fg.deobf("curse.maven:diabololib-422014:3536336")                   // Diabolo Lib
-    // Compatibility check with mod
-    implementation fg.deobf("curse.maven:jei-238222:3438501")                          // JEI
-    implementation fg.deobf("curse.maven:jeresources-240630:3489131")
-    implementation fg.deobf("curse.maven:biomes-o-plenty-220318:3399675")              // Biomes O' Plenty
-    implementation fg.deobf("curse.maven:catalogue-459701:3399552")                    // Catalogue
-    implementation fg.deobf("curse.maven:jade-324717:3439658")                         // Jade 🔍
-    // implementation fg.deobf("curse.maven:infinitylib-251396:3367362")               // InfinityLib
-    // implementation fg.deobf("curse.maven:agricraft-225635:3379947")                 // Agricraft
-    // implementation fg.deobf("curse.maven:mantle-74924:3389377")                     // Mantle
-    // implementation fg.deobf("curse.maven:tinkers-construct-74072:3389395")          // Tinkers Construct 3
-    // implementation fg.deobf("curse.maven:iron-chests-228756:3105315")               // Iron Chests
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
+    implementation 'curse.maven:diabololib-422014:3571204'          // DiaboloLib
+    implementation fg.deobf('curse.maven:catalogue-459701:3559402') // Catalogue
+    implementation fg.deobf('curse.maven:jei-238222:3569553')       // JEI
+    implementation fg.deobf('curse.maven:jer-240630:3562195')       // JER
 }
 
 jar {
-    manifest.attributes([
-            "Specification-Title"     : "Janoeo Foundation",
-            "Specification-Vendor"    : "AlasDiablo, lIotaMiu, Safyrus",
-            "Specification-Version"   : "1",
-            "Implementation-Title"    : project.name,
-            "Implementation-Version"  : project.jar.archiveVersion,
-            "Implementation-Vendor"   :"AlasDiablo, lIotaMiu, Safyrus",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
-    ])
-
+    manifest.attributes(manifestAttributes)
     destinationDirectory.set(file(rootProject.getRootDir().getPath() + '/output'))
 }
 
 jar.finalizedBy('reobfJar')
+
+task sourcesJar(type: Jar) {
+    from sourceSets.main.allJava
+    def archiveName = 'sources-' + deobfSourceClassifier
+    archiveClassifier.set(archiveName)
+    destinationDirectory.set(outputFolder)
+}
+
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    def archiveName = 'deobf-' + deobfSourceClassifier
+    archiveClassifier.set(archiveName)
+    manifest.attributes(manifestAttributes)
+    destinationDirectory.set(outputFolder)
+}
+
+artifacts {
+    archives jar
+    archives sourcesJar
+    archives deobfJar
+}

@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.init;
 
-import fr.alasdiablo.diolib.util.RegistryHelper;
+import fr.alasdiablo.diolib.registries.RegistryHelper;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.world.item.Item;

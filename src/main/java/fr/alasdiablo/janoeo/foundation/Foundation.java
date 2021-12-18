@@ -1,15 +1,14 @@
 package fr.alasdiablo.janoeo.foundation;
 
-import fr.alasdiablo.diolib.gui.GroundItemGroup;
+import fr.alasdiablo.diolib.item.GroundCreativeModeTab;
 import fr.alasdiablo.janoeo.foundation.compatibility.JERCompat;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.data.*;
 import fr.alasdiablo.janoeo.foundation.data.language.EnglishProvider;
 import fr.alasdiablo.janoeo.foundation.data.language.FrenchProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
+import fr.alasdiablo.janoeo.foundation.init.FoundationGeneration;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
-import fr.alasdiablo.janoeo.foundation.world.WorldGen;
-import fr.alasdiablo.janoeo.foundation.world.gen.FoundationFeatures;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,6 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -37,14 +37,14 @@ public class Foundation {
 
     public static final Logger logger = LogManager.getLogger(Registries.MOD_ID);
 
-    public static final CreativeModeTab ITEMS_GROUP = new GroundItemGroup("janoeo.foundation.item") {
+    public static final CreativeModeTab ITEMS_GROUP = new GroundCreativeModeTab("janoeo.foundation.item") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(Items.COAL);
         }
     };
 
-    public static final CreativeModeTab BLOCKS_GROUP = new GroundItemGroup("janoeo.foundation.block") {
+    public static final CreativeModeTab BLOCKS_GROUP = new GroundCreativeModeTab("janoeo.foundation.block") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(Blocks.COAL_BLOCK);
@@ -100,7 +100,6 @@ public class Foundation {
     }
 
     private void setup(final FMLCommonSetupEvent commonSetupEvent) {
-        WorldGen.init();
         this.initCompat();
     }
 
@@ -113,7 +112,7 @@ public class Foundation {
     }
 
     private void initFeatures(RegistryEvent.NewRegistry newRegistry) {
-        FoundationFeatures.init();
+        MinecraftForge.EVENT_BUS.addListener(FoundationGeneration::onBiomeLoading);
     }
 
     public static class Compat {

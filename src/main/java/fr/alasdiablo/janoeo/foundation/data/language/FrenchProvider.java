@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.data.language;
 
-import fr.alasdiablo.diolib.util.SimpleUnicode;
+import fr.alasdiablo.diolib.data.SimpleUnicode;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.DataGenerator;

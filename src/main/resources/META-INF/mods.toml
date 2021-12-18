@@ -1,39 +1,36 @@
-modLoader="javafml"
-loaderVersion="[37,)"
-license = "LGPL-3.0"
+modLoader = "javafml"
+loaderVersion = "[39,)"
+license = "LGPL-3.0 License"
 issueTrackerURL = "https://github.com/Janoeo/Foundation/issues"
-
 [[mods]]
-    modId="janoeo_foundation"
-    version="${file.jarVersion}"
-    displayName="Janoeo Foundation"
-    logoFile="janoeo_foundation.png"
-    itemIcon="janoeo_foundation:iron_dust"
-    displayURL="https://www.curseforge.com/minecraft/mc-mods/janoeo"
-    authors="AlasDiablo, lIotaMiu and Safyrus"
-    description='''
-Janoeo Project Mod
-Mod content:
-- Ore generation
+modId = "janoeo_foundation"
+version = "${file.jarVersion}"
+displayName = "Janoeo Foundation"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/janoeo"
+logoFile = "janoeo_foundation.png"
+itemIcon = "janoeo_foundation:iron_dust"
+authors = "AlasDiablo, Safyrus"
+description = '''
+This mod a lot of ore type and more!
 '''
 
 [[dependencies.janoeo_foundation]]
-    modId="forge"
-    mandatory=true
-    versionRange="[37,)"
-    ordering="NONE"
-    side="BOTH"
+modId = "forge"
+mandatory = true
+versionRange = "[39,)"
+ordering = "NONE"
+side = "BOTH"
 
 [[dependencies.janoeo_foundation]]
-    modId = "minecraft"
-    mandatory = true
-    versionRange = "[1.17.1,1.18)"
-    ordering = "NONE"
-    side = "BOTH"
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.1,1.19)"
+ordering = "NONE"
+side = "BOTH"
 
 [[dependencies.janoeo_foundation]]
-    modId = "jeresources"
-    mandatory = false
-    versionRange = "[0.13.0.130,)"
-    ordering = "AFTER"
-    side = "BOTH"
+modId = "diolib"
+mandatory = true
+versionRange = "[3.0.19,)"
+ordering = "NONE"
+side = "BOTH"

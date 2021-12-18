@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.block;
 
-import fr.alasdiablo.diolib.generic.ExperienceRarity;
-import fr.alasdiablo.diolib.generic.IDropExperience;
+import fr.alasdiablo.diolib.block.ExperienceRarity;
+import fr.alasdiablo.diolib.block.IDropExperience;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.RedStoneOreBlock;
