@@ -26,7 +26,7 @@ public class FrenchProvider extends LanguageProvider {
         this.add(GOLD_DUST, SimpleUnicode.encodeOf("Poussière d'or"));
         this.add(IRON_DUST, SimpleUnicode.encodeOf("Poussière de fer"));
         this.add(LAPIS_DUST, SimpleUnicode.encodeOf("Poussière de lapis-lazuli"));
-        this.add(LEAD_DUST, SimpleUnicode.encodeOf("Poussière de plomp"));
+        this.add(LEAD_DUST, SimpleUnicode.encodeOf("Poussière de plomb"));
         this.add(NICKEL_DUST, SimpleUnicode.encodeOf("Poussière de nickel"));
         this.add(SILVER_DUST, SimpleUnicode.encodeOf("Poussière d'argent"));
         this.add(TIN_DUST, SimpleUnicode.encodeOf("Poussière d'étain"));
@@ -38,7 +38,7 @@ public class FrenchProvider extends LanguageProvider {
         this.add(DIAMOND_NUGGET, SimpleUnicode.encodeOf("Éclat de diamant"));
         this.add(EMERALD_NUGGET, SimpleUnicode.encodeOf("Éclat d'émeraude"));
         this.add(LAPIS_NUGGET, SimpleUnicode.encodeOf("Fragment de lapis-lazuli"));
-        this.add(LEAD_NUGGET, SimpleUnicode.encodeOf("Pépite de plomp"));
+        this.add(LEAD_NUGGET, SimpleUnicode.encodeOf("Pépite de plomb"));
         this.add(NICKEL_NUGGET, SimpleUnicode.encodeOf("Pépite de nickel"));
         this.add(REDSTONE_NUGGET, SimpleUnicode.encodeOf("Petit tas de redstone"));
         this.add(SILVER_NUGGET, SimpleUnicode.encodeOf("Pépite d'argent"));
@@ -46,7 +46,7 @@ public class FrenchProvider extends LanguageProvider {
         this.add(URANIUM_NUGGET, SimpleUnicode.encodeOf("Pépite d'uranium"));
 
         this.add(ALUMINIUM_INGOT, SimpleUnicode.encodeOf("Lingot d'aluminium"));
-        this.add(LEAD_INGOT, SimpleUnicode.encodeOf("Lingot de plomp"));
+        this.add(LEAD_INGOT, SimpleUnicode.encodeOf("Lingot de plomb"));
         this.add(NICKEL_INGOT, SimpleUnicode.encodeOf("Lingot de nickel"));
         this.add(SILVER_INGOT, SimpleUnicode.encodeOf("Lingot d'argent"));
         this.add(TIN_INGOT, SimpleUnicode.encodeOf("Lingot d'étain"));
@@ -104,7 +104,7 @@ public class FrenchProvider extends LanguageProvider {
         );
         this.add(
                 ((TranslatableComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(),
-                "Janoeo Foundation - Bloques"
+                "Janoeo Foundation - Blocs"
         );
     }
 }
