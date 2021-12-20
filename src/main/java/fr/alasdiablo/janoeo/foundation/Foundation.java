@@ -6,6 +6,7 @@ import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.data.*;
 import fr.alasdiablo.janoeo.foundation.data.language.EnglishProvider;
 import fr.alasdiablo.janoeo.foundation.data.language.FrenchProvider;
+import fr.alasdiablo.janoeo.foundation.data.language.SpanishProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationGeneration;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
@@ -85,6 +86,7 @@ public class Foundation {
         Foundation.logger.debug("Add Language Provider");
         generator.addProvider(new EnglishProvider(generator));
         generator.addProvider(new FrenchProvider(generator));
+        generator.addProvider(new SpanishProvider(generator));
 
         Foundation.logger.debug("Add Tags Provider");
         final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(
