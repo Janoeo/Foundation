@@ -8,6 +8,7 @@ import fr.alasdiablo.janoeo.foundation.block.OreBlock;
 import fr.alasdiablo.janoeo.foundation.block.RedstoneOreBlock;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -16,11 +17,25 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class FoundationBlocks {
+    /* * * * * * * * * * * * * * * Item properties * * *  * * * * * * * * * * */
     private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties().tab(Foundation.BLOCKS_GROUP);
 
+    /* * * * * * * * * * * * * * * Block properties * * *  * * * * * * * * * * */
     private static final BlockBehaviour.Properties PROPERTIES_STONE_ORE = BlockBehaviour.Properties.of(Material.STONE)
             .requiresCorrectToolForDrops()
             .strength(3.0F, 3.0F);
+
+    private static final BlockBehaviour.Properties PROPERTIES_DEEPSLATE_ORE = BlockBehaviour.Properties.of(Material.STONE)
+            .requiresCorrectToolForDrops()
+            .color(MaterialColor.DEEPSLATE)
+            .strength(4.5F, 3.0F)
+            .sound(SoundType.DEEPSLATE);
+
+    private static final BlockBehaviour.Properties PROPERTIES_NETHER_ORE = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER)
+            .requiresCorrectToolForDrops()
+            .strength(3.0F, 3.0F)
+            .sound(SoundType.NETHER_ORE);
+
     /* * * * * * * * * * * * * * * Ore * * *  * * * * * * * * * * */
     public static final Block BAUXITE_ORE = new OreBlock(PROPERTIES_STONE_ORE, ExperienceRarity.COMMON, Registries.BAUXITE_ORE);
     public static final Block LEAD_ORE    = new OreBlock(PROPERTIES_STONE_ORE, ExperienceRarity.COMMON, Registries.LEAD_ORE);
@@ -43,17 +58,14 @@ public class FoundationBlocks {
     public static final Block TINY_SILVER_ORE  = new OreBlock(PROPERTIES_STONE_ORE, ExperienceRarity.UNCOMMON, Registries.TINY_SILVER_ORE);
     public static final Block TINY_TIN_ORE     = new OreBlock(PROPERTIES_STONE_ORE, ExperienceRarity.COMMON, Registries.TINY_TIN_ORE);
     public static final Block TINY_URANIUM_ORE = new OreBlock(PROPERTIES_STONE_ORE, ExperienceRarity.UNCOMMON, Registries.TINY_URANIUM_ORE);
-    private static final BlockBehaviour.Properties PROPERTIES_DEEPSLATE_ORE = BlockBehaviour.Properties.of(Material.STONE)
-            .requiresCorrectToolForDrops()
-            .color(MaterialColor.DEEPSLATE)
-            .strength(4.5F, 3.0F)
-            .sound(SoundType.DEEPSLATE);
+    /* * * * * * * * * * * * * * * Deepslate Ore * * * * * * * * * * * * * */
     public static final Block DEEPSLATE_BAUXITE_ORE = new OreBlock(PROPERTIES_DEEPSLATE_ORE, ExperienceRarity.COMMON, Registries.DEEPSLATE_BAUXITE_ORE);
     public static final Block DEEPSLATE_LEAD_ORE    = new OreBlock(PROPERTIES_DEEPSLATE_ORE, ExperienceRarity.COMMON, Registries.DEEPSLATE_LEAD_ORE);
     public static final Block DEEPSLATE_NICKEL_ORE  = new OreBlock(PROPERTIES_DEEPSLATE_ORE, ExperienceRarity.COMMON, Registries.DEEPSLATE_NICKEL_ORE);
     public static final Block DEEPSLATE_SILVER_ORE  = new OreBlock(PROPERTIES_DEEPSLATE_ORE, ExperienceRarity.UNCOMMON, Registries.DEEPSLATE_SILVER_ORE);
     public static final Block DEEPSLATE_TIN_ORE     = new OreBlock(PROPERTIES_DEEPSLATE_ORE, ExperienceRarity.COMMON, Registries.DEEPSLATE_TIN_ORE);
     public static final Block DEEPSLATE_URANIUM_ORE = new OreBlock(PROPERTIES_DEEPSLATE_ORE, ExperienceRarity.UNCOMMON, Registries.DEEPSLATE_URANIUM_ORE);
+    /* * * * * * * * * * * * * * * Deepslate Tiny Ore * * * * * * * * * * * * * */
     public static final Block DEEPSLATE_TINY_COAL_ORE     = new OreBlock(PROPERTIES_DEEPSLATE_ORE, ExperienceRarity.COMMON, Registries.DEEPSLATE_TINY_COAL_ORE);
     public static final Block DEEPSLATE_TINY_COPPER_ORE   = new OreBlock(
             PROPERTIES_DEEPSLATE_ORE, ExperienceRarity.COMMON, Registries.DEEPSLATE_TINY_COPPER_ORE);
