@@ -103,7 +103,8 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
-    implementation 'curse.maven:diabololib-422014:3571204'          // DiaboloLib
+    implementation fileTree(dir:'lib', include:'*.jar')
+    // implementation 'curse.maven:diabololib-422014:3574175'       // DiaboloLib
     implementation fg.deobf('curse.maven:catalogue-459701:3559402') // Catalogue
     implementation fg.deobf('curse.maven:jei-238222:3569553')       // JEI
     implementation fg.deobf('curse.maven:jer-240630:3562195')       // JER

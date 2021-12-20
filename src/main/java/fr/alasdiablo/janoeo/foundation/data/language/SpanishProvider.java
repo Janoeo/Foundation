@@ -52,13 +52,13 @@ public class SpanishProvider extends LanguageProvider {
         this.add(TIN_INGOT, SimpleUnicode.encodeOf("Lingote de estaño"));
         this.add(URANIUM_INGOT, SimpleUnicode.encodeOf("Lingote de uranio"));
 
-        this.add(RAW_ALUMINIUM, "Aluminio en bruto");
-        this.add(RAW_LEAD, "Plomo en bruto");
-        this.add(RAW_NICKEL, "Níquel en  bruto");
-        this.add(RAW_SILVER, "Plata en bruto");
-        this.add(RAW_TIN, "Estaño en bruto");
-        this.add(RAW_URANIUM, "Uranio en bruto");
-        
+        this.add(RAW_ALUMINIUM, SimpleUnicode.encodeOf("Aluminio en bruto"));
+        this.add(RAW_LEAD, SimpleUnicode.encodeOf("Plomo en bruto"));
+        this.add(RAW_NICKEL, SimpleUnicode.encodeOf("Níquel en  bruto"));
+        this.add(RAW_SILVER, SimpleUnicode.encodeOf("Plata en bruto"));
+        this.add(RAW_TIN, SimpleUnicode.encodeOf("Estaño en bruto"));
+        this.add(RAW_URANIUM, SimpleUnicode.encodeOf("Uranio en bruto"));
+
         this.add(BAUXITE_ORE, SimpleUnicode.encodeOf("Mena de bauxita"));
         this.add(LEAD_ORE, SimpleUnicode.encodeOf("Mena de plomo"));
         this.add(NICKEL_ORE, SimpleUnicode.encodeOf("Mena de níquel"));
