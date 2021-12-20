@@ -52,6 +52,13 @@ public class FrenchProvider extends LanguageProvider {
         this.add(TIN_INGOT, SimpleUnicode.encodeOf("Lingot d'étain"));
         this.add(URANIUM_INGOT, SimpleUnicode.encodeOf("Lingot d'uranium"));
 
+        this.add(RAW_ALUMINIUM, SimpleUnicode.encodeOf("Aluminium brut"));
+        this.add(RAW_LEAD, SimpleUnicode.encodeOf("Plomb brut"));
+        this.add(RAW_NICKEL, SimpleUnicode.encodeOf("Nickel brut"));
+        this.add(RAW_SILVER, SimpleUnicode.encodeOf("Argent brut"));
+        this.add(RAW_TIN, SimpleUnicode.encodeOf("Étain brut"));
+        this.add(RAW_URANIUM, SimpleUnicode.encodeOf("Uranium brut"));
+        
         this.add(BAUXITE_ORE, SimpleUnicode.encodeOf("Minerai de bauxite"));
         this.add(LEAD_ORE, SimpleUnicode.encodeOf("Minerai de plomb"));
         this.add(NICKEL_ORE, SimpleUnicode.encodeOf("Minerai de nickel"));
