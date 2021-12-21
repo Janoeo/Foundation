@@ -58,7 +58,7 @@ public class FrenchProvider extends LanguageProvider {
         this.add(RAW_SILVER, SimpleUnicode.encodeOf("Argent brut"));
         this.add(RAW_TIN, SimpleUnicode.encodeOf("Étain brut"));
         this.add(RAW_URANIUM, SimpleUnicode.encodeOf("Uranium brut"));
-        
+
         this.add(BAUXITE_ORE, SimpleUnicode.encodeOf("Minerai de bauxite"));
         this.add(LEAD_ORE, SimpleUnicode.encodeOf("Minerai de plomb"));
         this.add(NICKEL_ORE, SimpleUnicode.encodeOf("Minerai de nickel"));
@@ -104,6 +104,21 @@ public class FrenchProvider extends LanguageProvider {
         this.add(DEEPSLATE_TINY_IRON_ORE, SimpleUnicode.encodeOf("Minuscule minerai de fer des abîmes"));
         this.add(DEEPSLATE_TINY_LAPIS_ORE, SimpleUnicode.encodeOf("Minuscule minerai de lapis-lazuli des abîmes"));
         this.add(DEEPSLATE_TINY_REDSTONE_ORE, SimpleUnicode.encodeOf("Minuscule minerai de redstone des abîmes"));
+
+        this.add(NETHER_COAL_ORE, SimpleUnicode.encodeOf("Nether Coal Ore"));
+        this.add(NETHER_COPPER_ORE, SimpleUnicode.encodeOf("Nether Copper Ore"));
+        this.add(NETHER_DIAMOND_ORE, SimpleUnicode.encodeOf("Nether Diamond Ore"));
+        this.add(NETHER_EMERALD_ORE, SimpleUnicode.encodeOf("Nether Emerald Ore"));
+        this.add(NETHER_IRON_ORE, SimpleUnicode.encodeOf("Nether Iron Ore"));
+        this.add(NETHER_LAPIS_ORE, SimpleUnicode.encodeOf("Nether Lapis Lazuli Ore"));
+        this.add(NETHER_REDSTONE_ORE, SimpleUnicode.encodeOf("Nether Redstone Ore"));
+
+        this.add(NETHER_BAUXITE_ORE, SimpleUnicode.encodeOf("Nether Bauxite Ore"));
+        this.add(NETHER_LEAD_ORE, SimpleUnicode.encodeOf("Nether Lead Ore"));
+        this.add(NETHER_NICKEL_ORE, SimpleUnicode.encodeOf("Nether Nickel Ore"));
+        this.add(NETHER_SILVER_ORE, SimpleUnicode.encodeOf("Nether Silver Ore"));
+        this.add(NETHER_TIN_ORE, SimpleUnicode.encodeOf("Nether Tin Ore"));
+        this.add(NETHER_URANIUM_ORE, SimpleUnicode.encodeOf("Nether Uranium Ore"));
 
         this.add(
                 ((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(),

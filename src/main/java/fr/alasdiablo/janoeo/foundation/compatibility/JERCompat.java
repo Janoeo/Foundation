@@ -15,6 +15,7 @@ import jeresources.compatibility.JERAPI;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
+@Deprecated
 public class JERCompat {
 
     private static final IWorldGenRegistry WORLD_GEN_REGISTRY = JERAPI.getInstance().getWorldGenRegistry();

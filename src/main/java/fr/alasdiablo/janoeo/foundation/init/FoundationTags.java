@@ -17,6 +17,7 @@ public class FoundationTags {
         public static final Tags.IOptionalNamedTag<Block> ORES_SILVER    = tag("ores/silver");
         public static final Tags.IOptionalNamedTag<Block> ORES_TIN       = tag("ores/tin");
         public static final Tags.IOptionalNamedTag<Block> ORES_URANIUM   = tag("ores/uranium");
+        public static final Tags.IOptionalNamedTag<Block> ORES_COPPER    = tag("ores/copper");
 
         public static final Tags.IOptionalNamedTag<Block> ORES_TINY          = tag("ores/tiny");
         public static final Tags.IOptionalNamedTag<Block> ORES_TINY_COAL     = tag("ores/tiny/coal");
@@ -49,6 +50,7 @@ public class FoundationTags {
         public static final Tags.IOptionalNamedTag<Item> ORES_SILVER    = tag("ores/silver");
         public static final Tags.IOptionalNamedTag<Item> ORES_TIN       = tag("ores/tin");
         public static final Tags.IOptionalNamedTag<Item> ORES_URANIUM   = tag("ores/uranium");
+        public static final Tags.IOptionalNamedTag<Item> ORES_COPPER    = tag("ores/copper");
 
         public static final Tags.IOptionalNamedTag<Item> ORES_TINY          = tag("ores/tiny");
         public static final Tags.IOptionalNamedTag<Item> ORES_TINY_COAL     = tag("ores/tiny/coal");

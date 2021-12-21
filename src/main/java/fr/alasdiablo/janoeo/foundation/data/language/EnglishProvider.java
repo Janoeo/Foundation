@@ -105,6 +105,20 @@ public class EnglishProvider extends LanguageProvider {
         this.add(DEEPSLATE_TINY_LAPIS_ORE, "Deepslate Tiny Lapis Lazuli Ore");
         this.add(DEEPSLATE_TINY_REDSTONE_ORE, "Deepslate Tiny Redstone Ore");
 
+        this.add(NETHER_COAL_ORE, "Nether Coal Ore");
+        this.add(NETHER_COPPER_ORE, "Nether Copper Ore");
+        this.add(NETHER_DIAMOND_ORE, "Nether Diamond Ore");
+        this.add(NETHER_EMERALD_ORE, "Nether Emerald Ore");
+        this.add(NETHER_IRON_ORE, "Nether Iron Ore");
+        this.add(NETHER_LAPIS_ORE, "Nether Lapis Lazuli Ore");
+        this.add(NETHER_REDSTONE_ORE, "Nether Redstone Ore");
+
+        this.add(NETHER_BAUXITE_ORE, "Nether Bauxite Ore");
+        this.add(NETHER_LEAD_ORE, "Nether Lead Ore");
+        this.add(NETHER_NICKEL_ORE, "Nether Nickel Ore");
+        this.add(NETHER_SILVER_ORE, "Nether Silver Ore");
+        this.add(NETHER_TIN_ORE, "Nether Tin Ore");
+        this.add(NETHER_URANIUM_ORE, "Nether Uranium Ore");
 
         this.add(
                 ((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(),

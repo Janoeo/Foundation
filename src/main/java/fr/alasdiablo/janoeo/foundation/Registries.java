@@ -65,14 +65,15 @@ public class Registries {
     public static final String DEEPSLATE_URANIUM_ORE = "deepslate_uranium_ore";
 
     /* * * * * * * * * * * * * * * Tiny Ore * * *  * * * * * * * * * * */
-    public static final String TINY_COAL_ORE     = "tiny_coal_ore";
-    public static final String TINY_COPPER_ORE   = "tiny_copper_ore";
-    public static final String TINY_DIAMOND_ORE  = "tiny_diamond_ore";
-    public static final String TINY_EMERALD_ORE  = "tiny_emerald_ore";
-    public static final String TINY_GOLD_ORE     = "tiny_gold_ore";
-    public static final String TINY_IRON_ORE     = "tiny_iron_ore";
-    public static final String TINY_LAPIS_ORE    = "tiny_lapis_ore";
-    public static final String TINY_REDSTONE_ORE = "tiny_redstone_ore";
+    public static final String TINY_COAL_ORE       = "tiny_coal_ore";
+    public static final String TINY_COPPER_ORE     = "tiny_copper_ore";
+    public static final String TINY_DIAMOND_ORE    = "tiny_diamond_ore";
+    public static final String TINY_EMERALD_ORE    = "tiny_emerald_ore";
+    public static final String TINY_GOLD_ORE       = "tiny_gold_ore";
+    public static final String TINY_GOLD_ORE_EXTRA = "tiny_gold_ore_extra"; // Use only for config and world gen
+    public static final String TINY_IRON_ORE       = "tiny_iron_ore";
+    public static final String TINY_LAPIS_ORE      = "tiny_lapis_ore";
+    public static final String TINY_REDSTONE_ORE   = "tiny_redstone_ore";
 
     public static final String DEEPSLATE_TINY_COAL_ORE     = "deepslate_tiny_coal_ore";
     public static final String DEEPSLATE_TINY_COPPER_ORE   = "deepslate_tiny_copper_ore";
@@ -96,4 +97,20 @@ public class Registries {
     public static final String DEEPSLATE_TINY_SILVER_ORE  = "deepslate_tiny_silver_ore";
     public static final String DEEPSLATE_TINY_TIN_ORE     = "deepslate_tiny_tin_ore";
     public static final String DEEPSLATE_TINY_URANIUM_ORE = "deepslate_tiny_uranium_ore";
+
+    /* * * * * * * * * * * * * * * Nether Ore * * *  * * * * * * * * * * */
+    public static final String NETHER_COAL_ORE     = "nether_coal_ore";
+    public static final String NETHER_COPPER_ORE   = "nether_copper_ore";
+    public static final String NETHER_DIAMOND_ORE  = "nether_diamond_ore";
+    public static final String NETHER_EMERALD_ORE  = "nether_emerald_ore";
+    public static final String NETHER_IRON_ORE     = "nether_iron_ore";
+    public static final String NETHER_LAPIS_ORE    = "nether_lapis_ore";
+    public static final String NETHER_REDSTONE_ORE = "nether_redstone_ore";
+
+    public static final String NETHER_BAUXITE_ORE = "nether_bauxite_ore";
+    public static final String NETHER_LEAD_ORE    = "nether_lead_ore";
+    public static final String NETHER_NICKEL_ORE  = "nether_nickel_ore";
+    public static final String NETHER_SILVER_ORE  = "nether_silver_ore";
+    public static final String NETHER_TIN_ORE     = "nether_tin_ore";
+    public static final String NETHER_URANIUM_ORE = "nether_uranium_ore";
 }

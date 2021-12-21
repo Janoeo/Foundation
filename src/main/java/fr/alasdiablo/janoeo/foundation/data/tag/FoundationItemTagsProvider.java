@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.foundation.data;
+package fr.alasdiablo.janoeo.foundation.data.tag;
 
 import fr.alasdiablo.janoeo.foundation.Registries;
 import fr.alasdiablo.janoeo.foundation.init.FoundationTags;
@@ -6,6 +6,7 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -43,6 +44,14 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.copy(FoundationTags.Blocks.ORES_SILVER, ORES_SILVER);
         this.copy(FoundationTags.Blocks.ORES_TIN, ORES_TIN);
         this.copy(FoundationTags.Blocks.ORES_URANIUM, ORES_URANIUM);
+
+        this.copy(Tags.Blocks.ORES_REDSTONE, Tags.Items.ORES_REDSTONE);
+        this.copy(Tags.Blocks.ORES_LAPIS, Tags.Items.ORES_LAPIS);
+        this.copy(Tags.Blocks.ORES_IRON, Tags.Items.ORES_IRON);
+        this.copy(Tags.Blocks.ORES_EMERALD, Tags.Items.ORES_EMERALD);
+        this.copy(Tags.Blocks.ORES_DIAMOND, Tags.Items.ORES_DIAMOND);
+        this.copy(Tags.Blocks.ORES_COAL, Tags.Items.ORES_COAL);
+        this.copy(FoundationTags.Blocks.ORES_COPPER, ORES_COPPER);
 
         this.copy(FoundationTags.Blocks.ORES_TINY_ALUMINIUM, ORES_TINY_ALUMINIUM);
         this.copy(FoundationTags.Blocks.ORES_TINY_ALUMINUM, ORES_TINY_ALUMINUM);
@@ -105,6 +114,7 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.tag(INGOTS_SILVER).add(SILVER_INGOT);
         this.tag(INGOTS_TIN).add(TIN_INGOT);
         this.tag(INGOTS_URANIUM).add(URANIUM_INGOT);
+        this.tag(INGOTS_COPPER).add(Items.COPPER_INGOT);
 
         this.tag(RAWS).addTags(RAWS_ALUMINIUM, RAWS_ALUMINUM, RAWS_LEAD, RAWS_NICKEL, RAWS_SILVER, RAWS_TIN, RAWS_URANIUM);
 

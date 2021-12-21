@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.foundation.data;
+package fr.alasdiablo.janoeo.foundation.data.recipe;
 
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.DataGenerator;
@@ -78,13 +78,21 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromRaw(TIN_INGOT, RAWS_TIN, "has_raw_tin", "tin_ingot_from_raw");
         this.ingotFromRaw(URANIUM_INGOT, RAWS_URANIUM, "has_raw_uranium", "uranium_ingot_from_raw");
 
-        this.ingotFromRaw(ALUMINIUM_INGOT, ORES_ALUMINIUM, "has_aluminium_ore", "aluminium_ingot_from_ore");
-        this.ingotFromRaw(ALUMINIUM_INGOT, ORES_ALUMINUM, "has_aluminium_ore", "aluminum_ingot_from_ore");
-        this.ingotFromRaw(LEAD_INGOT, ORES_LEAD, "has_lead_ore", "lead_ingot_from_ore");
-        this.ingotFromRaw(NICKEL_INGOT, ORES_NICKEL, "has_nickel_ore", "nickel_ingot_from_ore");
-        this.ingotFromRaw(SILVER_INGOT, ORES_SILVER, "has_silver_ore", "silver_ingot_from_ore");
-        this.ingotFromRaw(TIN_INGOT, ORES_TIN, "has_tin_ore", "tin_ingot_from_ore");
-        this.ingotFromRaw(URANIUM_INGOT, ORES_URANIUM, "has_uranium_ore", "uranium_ingot_from_ore");
+        this.ingotFromOre(ALUMINIUM_INGOT, ORES_ALUMINIUM, "has_aluminium_ore", "aluminium_ingot_from_ore");
+        this.ingotFromOre(ALUMINIUM_INGOT, ORES_ALUMINUM, "has_aluminium_ore", "aluminum_ingot_from_ore");
+        this.ingotFromOre(LEAD_INGOT, ORES_LEAD, "has_lead_ore", "lead_ingot_from_ore");
+        this.ingotFromOre(NICKEL_INGOT, ORES_NICKEL, "has_nickel_ore", "nickel_ingot_from_ore");
+        this.ingotFromOre(SILVER_INGOT, ORES_SILVER, "has_silver_ore", "silver_ingot_from_ore");
+        this.ingotFromOre(TIN_INGOT, ORES_TIN, "has_tin_ore", "tin_ingot_from_ore");
+        this.ingotFromOre(URANIUM_INGOT, ORES_URANIUM, "has_uranium_ore", "uranium_ingot_from_ore");
+
+        this.ingotFromOre(Items.COAL, Tags.Items.ORES_COAL, "has_coal_ore", "coal_from_ore");
+        this.ingotFromOre(Items.COPPER_INGOT, ORES_COPPER, "has_copper_ore", "copper_ingot_from_ore");
+        this.ingotFromOre(Items.DIAMOND, Tags.Items.ORES_DIAMOND, "has_diamond_ore", "diamond_from_ore");
+        this.ingotFromOre(Items.EMERALD, Tags.Items.ORES_EMERALD, "has_emerald_ore", "emerald_from_ore");
+        this.ingotFromOre(Items.IRON_INGOT, Tags.Items.ORES_IRON, "has_iron_ore", "iron_ingot_from_ore");
+        this.ingotFromOre(Items.LAPIS_LAZULI, Tags.Items.ORES_LAPIS, "has_lapis_ore", "lapis_from_ore");
+        this.ingotFromOre(Items.REDSTONE, Tags.Items.ORES_REDSTONE, "has_redstone_ore", "redstone_from_ore");
     }
 
     private void nugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn) {

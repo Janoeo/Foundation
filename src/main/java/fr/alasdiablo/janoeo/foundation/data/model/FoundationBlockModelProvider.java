@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.foundation.data;
+package fr.alasdiablo.janoeo.foundation.data.model;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -21,7 +21,9 @@ public class FoundationBlockModelProvider extends BlockModelProvider {
     protected void registerModels() {
         List<String> ores = Arrays.asList(
                 BAUXITE_ORE, LEAD_ORE, NICKEL_ORE, SILVER_ORE, TIN_ORE, URANIUM_ORE, DEEPSLATE_BAUXITE_ORE, DEEPSLATE_LEAD_ORE, DEEPSLATE_NICKEL_ORE,
-                DEEPSLATE_SILVER_ORE, DEEPSLATE_TIN_ORE, DEEPSLATE_URANIUM_ORE
+                DEEPSLATE_SILVER_ORE, DEEPSLATE_TIN_ORE, DEEPSLATE_URANIUM_ORE, NETHER_COAL_ORE, NETHER_COPPER_ORE, NETHER_DIAMOND_ORE, NETHER_EMERALD_ORE,
+                NETHER_IRON_ORE, NETHER_LAPIS_ORE, NETHER_REDSTONE_ORE, NETHER_BAUXITE_ORE, NETHER_LEAD_ORE, NETHER_NICKEL_ORE, NETHER_SILVER_ORE,
+                NETHER_TIN_ORE, NETHER_URANIUM_ORE
         );
 
         ores.forEach(block -> cubeAll(block, Folder.ORE));

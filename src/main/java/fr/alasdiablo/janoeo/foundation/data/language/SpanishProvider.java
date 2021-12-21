@@ -105,6 +105,21 @@ public class SpanishProvider extends LanguageProvider {
         this.add(DEEPSLATE_TINY_LAPIS_ORE, SimpleUnicode.encodeOf("Minúsculo mineral de lapislázuli de las profundidades"));
         this.add(DEEPSLATE_TINY_REDSTONE_ORE, SimpleUnicode.encodeOf("Minúsculo mineral de redstone de las profundidades"));
 
+        this.add(NETHER_COAL_ORE, SimpleUnicode.encodeOf("Nether Coal Ore"));
+        this.add(NETHER_COPPER_ORE, SimpleUnicode.encodeOf("Nether Copper Ore"));
+        this.add(NETHER_DIAMOND_ORE, SimpleUnicode.encodeOf("Nether Diamond Ore"));
+        this.add(NETHER_EMERALD_ORE, SimpleUnicode.encodeOf("Nether Emerald Ore"));
+        this.add(NETHER_IRON_ORE, SimpleUnicode.encodeOf("Nether Iron Ore"));
+        this.add(NETHER_LAPIS_ORE, SimpleUnicode.encodeOf("Nether Lapis Lazuli Ore"));
+        this.add(NETHER_REDSTONE_ORE, SimpleUnicode.encodeOf("Nether Redstone Ore"));
+
+        this.add(NETHER_BAUXITE_ORE, SimpleUnicode.encodeOf("Nether Bauxite Ore"));
+        this.add(NETHER_LEAD_ORE, SimpleUnicode.encodeOf("Nether Lead Ore"));
+        this.add(NETHER_NICKEL_ORE, SimpleUnicode.encodeOf("Nether Nickel Ore"));
+        this.add(NETHER_SILVER_ORE, SimpleUnicode.encodeOf("Nether Silver Ore"));
+        this.add(NETHER_TIN_ORE, SimpleUnicode.encodeOf("Nether Tin Ore"));
+        this.add(NETHER_URANIUM_ORE, SimpleUnicode.encodeOf("Nether Uranium Ore"));
+
         this.add(
                 ((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(),
                 "Janoeo Foundation - Objetos"
