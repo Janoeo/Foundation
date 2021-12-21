@@ -4,7 +4,8 @@
 
 <details><summary><b>1.18.1</b></summary>
 
-+ [6.7.2.77](#67277)
++ [6.8.2.78](#68278)
++ [6.7.2.77-experimental](#67277-experimental)
 
 </details>
 
@@ -111,7 +112,15 @@
 
 </details>
 
-### 6.7.2.77
+### 6.8.2.78
+
+#### Add
+
++ Nether Ore
++ Scrap (Item for next development)
++ Spanish translation
+
+### 6.7.2.77-experimental
 
 #### Update
 

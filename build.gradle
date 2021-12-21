@@ -17,10 +17,10 @@ apply plugin: 'maven-publish'
 //        Standard versioning system         //
 //                                           //
 // ***************************************** //
-def majorVersion = 7
+def majorVersion = 8
 def minorVersion = 2
-def buildVersion = 77
-def isExperimental = true
+def buildVersion = 78
+def isExperimental = false
 version = "${majorVersion}.${minorVersion}.${buildVersion}"
 if (isExperimental) {
     version += '-experimental'
@@ -42,7 +42,7 @@ archivesBaseName = 'Janoeo Foundation'
 
 def manifestAttributes = [
         "Specification-Title"     : "Janoeo Foundation",
-        "Specification-Vendor"    : "AlasDiablo, Safyrus",
+        "Specification-Vendor"    : "AlasDiablo, Safyrus, SmartzyYY",
         "Specification-Version"   : "1",
         "Implementation-Title"    : project.name,
         "Implementation-Version"  : project.jar.archiveVersion,
