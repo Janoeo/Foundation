@@ -49,6 +49,9 @@ public class Registries {
     public static final String RAW_TIN       = "raw_tin";
     public static final String RAW_URANIUM   = "raw_uranium";
 
+    /* * * * * * * * * * * * * * * Other * * *  * * * * * * * * * * */
+    public static final String SCRAP = "scrap";
+
     /* * * * * * * * * * * * * * * Ore * * *  * * * * * * * * * * */
     public static final String BAUXITE_ORE = "bauxite_ore";
     public static final String LEAD_ORE    = "lead_ore";

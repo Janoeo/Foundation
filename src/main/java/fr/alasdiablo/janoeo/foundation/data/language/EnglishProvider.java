@@ -59,6 +59,8 @@ public class EnglishProvider extends LanguageProvider {
         this.add(RAW_TIN, "Raw Tin");
         this.add(RAW_URANIUM, "Raw Uranium");
 
+        this.add(SCRAP, "Scrap");
+
         this.add(BAUXITE_ORE, "Bauxite Ore");
         this.add(LEAD_ORE, "Lead Ore");
         this.add(NICKEL_ORE, "Nickel Ore");

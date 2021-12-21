@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.data.tag;
 
 import fr.alasdiablo.janoeo.foundation.Registries;
+import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.init.FoundationTags;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
@@ -125,6 +126,8 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.tag(RAWS_SILVER).add(RAW_SILVER);
         this.tag(RAWS_TIN).add(RAW_TIN);
         this.tag(RAWS_URANIUM).add(RAW_URANIUM);
+
+        this.tag(FoundationTags.Items.SCRAP).add(FoundationItems.SCRAP);
     }
 
     @Override

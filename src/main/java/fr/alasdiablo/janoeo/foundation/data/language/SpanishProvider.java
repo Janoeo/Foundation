@@ -59,6 +59,8 @@ public class SpanishProvider extends LanguageProvider {
         this.add(RAW_TIN, SimpleUnicode.encodeOf("Estaño en bruto"));
         this.add(RAW_URANIUM, SimpleUnicode.encodeOf("Uranio en bruto"));
 
+        this.add(SCRAP, "Scrap");
+
         this.add(BAUXITE_ORE, SimpleUnicode.encodeOf("Mena de bauxita"));
         this.add(LEAD_ORE, SimpleUnicode.encodeOf("Mena de plomo"));
         this.add(NICKEL_ORE, SimpleUnicode.encodeOf("Mena de níquel"));

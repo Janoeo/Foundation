@@ -32,26 +32,28 @@ public class FoundationItems {
     public static final  Item            DIAMOND_NUGGET   = createItem(PROPERTIES, Registries.DIAMOND_NUGGET);
     public static final  Item            EMERALD_NUGGET   = createItem(PROPERTIES, Registries.EMERALD_NUGGET);
     public static final  Item            LAPIS_NUGGET     = createItem(PROPERTIES, Registries.LAPIS_NUGGET);
-    public static final  Item            LEAD_NUGGET      = createItem(PROPERTIES, Registries.LEAD_NUGGET);
-    public static final  Item            NICKEL_NUGGET    = createItem(PROPERTIES, Registries.NICKEL_NUGGET);
-    public static final  Item            REDSTONE_NUGGET  = createItem(PROPERTIES, Registries.REDSTONE_NUGGET);
-    public static final  Item            SILVER_NUGGET    = createItem(PROPERTIES, Registries.SILVER_NUGGET);
-    public static final  Item            TIN_NUGGET       = createItem(PROPERTIES, Registries.TIN_NUGGET);
-    public static final  Item            URANIUM_NUGGET   = createItem(PROPERTIES, Registries.URANIUM_NUGGET);
+    public static final Item LEAD_NUGGET     = createItem(PROPERTIES, Registries.LEAD_NUGGET);
+    public static final Item NICKEL_NUGGET   = createItem(PROPERTIES, Registries.NICKEL_NUGGET);
+    public static final Item REDSTONE_NUGGET = createItem(PROPERTIES, Registries.REDSTONE_NUGGET);
+    public static final Item SILVER_NUGGET   = createItem(PROPERTIES, Registries.SILVER_NUGGET);
+    public static final Item TIN_NUGGET      = createItem(PROPERTIES, Registries.TIN_NUGGET);
+    public static final Item URANIUM_NUGGET  = createItem(PROPERTIES, Registries.URANIUM_NUGGET);
     /* * * * * * * * * * * * * * * Ingot * * *  * * * * * * * * * * */
-    public static final  Item            ALUMINIUM_INGOT  = createItem(PROPERTIES, Registries.ALUMINIUM_INGOT);
-    public static final  Item            LEAD_INGOT       = createItem(PROPERTIES, Registries.LEAD_INGOT);
-    public static final  Item            NICKEL_INGOT     = createItem(PROPERTIES, Registries.NICKEL_INGOT);
-    public static final  Item            SILVER_INGOT     = createItem(PROPERTIES, Registries.SILVER_INGOT);
-    public static final  Item            TIN_INGOT        = createItem(PROPERTIES, Registries.TIN_INGOT);
-    public static final  Item            URANIUM_INGOT    = createItem(PROPERTIES, Registries.URANIUM_INGOT);
+    public static final Item ALUMINIUM_INGOT = createItem(PROPERTIES, Registries.ALUMINIUM_INGOT);
+    public static final Item LEAD_INGOT      = createItem(PROPERTIES, Registries.LEAD_INGOT);
+    public static final Item NICKEL_INGOT    = createItem(PROPERTIES, Registries.NICKEL_INGOT);
+    public static final Item SILVER_INGOT    = createItem(PROPERTIES, Registries.SILVER_INGOT);
+    public static final Item TIN_INGOT       = createItem(PROPERTIES, Registries.TIN_INGOT);
+    public static final Item URANIUM_INGOT   = createItem(PROPERTIES, Registries.URANIUM_INGOT);
     /* * * * * * * * * * * * * * * Raw * * *  * * * * * * * * * * */
-    public static final  Item            RAW_ALUMINIUM    = createItem(PROPERTIES, Registries.RAW_ALUMINIUM);
-    public static final  Item            RAW_LEAD         = createItem(PROPERTIES, Registries.RAW_LEAD);
-    public static final  Item            RAW_NICKEL       = createItem(PROPERTIES, Registries.RAW_NICKEL);
-    public static final  Item            RAW_SILVER       = createItem(PROPERTIES, Registries.RAW_SILVER);
-    public static final  Item            RAW_TIN          = createItem(PROPERTIES, Registries.RAW_TIN);
-    public static final  Item            RAW_URANIUM      = createItem(PROPERTIES, Registries.RAW_URANIUM);
+    public static final Item RAW_ALUMINIUM   = createItem(PROPERTIES, Registries.RAW_ALUMINIUM);
+    public static final Item RAW_LEAD        = createItem(PROPERTIES, Registries.RAW_LEAD);
+    public static final Item RAW_NICKEL      = createItem(PROPERTIES, Registries.RAW_NICKEL);
+    public static final Item RAW_SILVER      = createItem(PROPERTIES, Registries.RAW_SILVER);
+    public static final Item RAW_TIN         = createItem(PROPERTIES, Registries.RAW_TIN);
+    public static final Item RAW_URANIUM     = createItem(PROPERTIES, Registries.RAW_URANIUM);
+    /* * * * * * * * * * * * * * * Other * * *  * * * * * * * * * * */
+    public static final Item SCRAP           = createItem(PROPERTIES, Registries.SCRAP);
 
     private static Item createItem(Item.Properties properties, String registryName) {
         return new Item(properties).setRegistryName(registryName);
@@ -59,10 +61,11 @@ public class FoundationItems {
 
     public static void init(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
-        FoundationItems.initDust(registry);
-        FoundationItems.initNugget(registry);
-        FoundationItems.initIngot(registry);
-        FoundationItems.initRaw(registry);
+        initDust(registry);
+        initNugget(registry);
+        initIngot(registry);
+        initRaw(registry);
+        initOther(registry);
     }
 
     private static void initDust(IForgeRegistry<Item> registry) {
@@ -85,5 +88,9 @@ public class FoundationItems {
 
     private static void initRaw(IForgeRegistry<Item> registry) {
         RegistryHelper.registerItem(registry, RAW_ALUMINIUM, RAW_LEAD, RAW_NICKEL, RAW_SILVER, RAW_TIN, RAW_URANIUM);
+    }
+
+    private static void initOther(IForgeRegistry<Item> registry) {
+        RegistryHelper.registerItem(registry, SCRAP);
     }
 }

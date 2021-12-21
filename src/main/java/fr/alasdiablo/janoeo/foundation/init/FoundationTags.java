@@ -118,6 +118,8 @@ public class FoundationTags {
         public static final Tags.IOptionalNamedTag<Item> RAWS_TIN       = tag("raws/tin");
         public static final Tags.IOptionalNamedTag<Item> RAWS_URANIUM   = tag("raws/uranium");
 
+        public static final Tags.IOptionalNamedTag<Item> SCRAP = tag("scrap");
+
         private static Tags.IOptionalNamedTag<Item> tag(String name) {
             return ItemTags.createOptional(new ResourceLocation("forge", name));
         }
