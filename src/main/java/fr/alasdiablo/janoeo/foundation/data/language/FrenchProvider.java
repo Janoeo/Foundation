@@ -59,7 +59,7 @@ public class FrenchProvider extends LanguageProvider {
         this.add(RAW_TIN, SimpleUnicode.encodeOf("Étain brut"));
         this.add(RAW_URANIUM, SimpleUnicode.encodeOf("Uranium brut"));
 
-        this.add(SCRAP, SimpleUnicode.encodeOf("ferraille"));
+        this.add(SCRAP, SimpleUnicode.encodeOf("Ferraille"));
 
         this.add(BAUXITE_ORE, SimpleUnicode.encodeOf("Minerai de bauxite"));
         this.add(LEAD_ORE, SimpleUnicode.encodeOf("Minerai de plomb"));
