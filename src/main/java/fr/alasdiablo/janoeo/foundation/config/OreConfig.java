@@ -24,11 +24,12 @@ public class OreConfig extends JsonConfig {
         this.top       = 0;
     }
 
-    public OreConfig placementTriangle(int size, int bottom, int top) {
+    public OreConfig placementTriangle(int size, int bottom, int top, int count) {
         this.placement = "triangle";
         this.size      = size;
         this.bottom    = bottom;
         this.top       = top;
+        this.count     = count;
         return this;
     }
 

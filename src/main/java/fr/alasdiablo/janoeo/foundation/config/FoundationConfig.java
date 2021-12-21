@@ -23,7 +23,7 @@ public class FoundationConfig {
     public static final OreConfig TINY_GOLD_ORE_CONFIG       = new OreConfig(Registries.TINY_GOLD_ORE, true).placementUniform(9, -64, 32, 2);
     public static final OreConfig TINY_GOLD_ORE_EXTRA_CONFIG = new OreConfig(Registries.TINY_GOLD_ORE_EXTRA, true).placementUniform(9, 32, 80, 20);
     public static final OreConfig TINY_IRON_ORE_CONFIG       = new OreConfig(Registries.TINY_IRON_ORE, true).placementUniform(9, -24, 180, 20);
-    public static final OreConfig TINY_LAPIS_ORE_CONFIG      = new OreConfig(Registries.TINY_LAPIS_ORE, true).placementTriangle(7, 16, 16);
+    public static final OreConfig TINY_LAPIS_ORE_CONFIG      = new OreConfig(Registries.TINY_LAPIS_ORE, true).placementTriangle(7, 16, 16, 4);
     public static final OreConfig TINY_REDSTONE_ORE_CONFIG   = new OreConfig(Registries.TINY_REDSTONE_ORE, true).placementUniform(8, -16, 16, 8);
 
     public static final OreConfig TINY_BAUXITE_ORE_CONFIG = new OreConfig(Registries.TINY_BAUXITE_ORE, true).placementUniform(10, 0, 96, 6);

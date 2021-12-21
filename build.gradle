@@ -107,7 +107,7 @@ dependencies {
     // implementation 'curse.maven:diabololib-422014:3574175'       // DiaboloLib
     implementation fg.deobf('curse.maven:catalogue-459701:3559402') // Catalogue
     implementation fg.deobf('curse.maven:jei-238222:3569553')       // JEI
-    implementation fg.deobf('curse.maven:jer-240630:3562195')       // JER
+    implementation 'curse.maven:jer-240630:3575594'                 // JER
 }
 
 jar {
