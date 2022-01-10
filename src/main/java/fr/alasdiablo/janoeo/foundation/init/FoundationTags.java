@@ -6,6 +6,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
+import org.jetbrains.annotations.NotNull;
 
 public class FoundationTags {
 
@@ -37,7 +38,7 @@ public class FoundationTags {
         public static final Tags.IOptionalNamedTag<Block> ORES_TINY_TIN       = tag("ores/tiny/tin");
         public static final Tags.IOptionalNamedTag<Block> ORES_TINY_URANIUM   = tag("ores/tiny/uranium");
 
-        private static Tags.IOptionalNamedTag<Block> tag(String name) {
+        private static Tags.@NotNull IOptionalNamedTag<Block> tag(String name) {
             return BlockTags.createOptional(new ResourceLocation("forge", name));
         }
     }
@@ -118,9 +119,25 @@ public class FoundationTags {
         public static final Tags.IOptionalNamedTag<Item> RAWS_TIN       = tag("raws/tin");
         public static final Tags.IOptionalNamedTag<Item> RAWS_URANIUM   = tag("raws/uranium");
 
+        public static final Tags.IOptionalNamedTag<Item> RODS_COPPER  = tag("rods/copper");
+        public static final Tags.IOptionalNamedTag<Item> RODS_DIAMOND = tag("rods/diamond");
+        public static final Tags.IOptionalNamedTag<Item> RODS_GOLD    = tag("rods/gold");
+        public static final Tags.IOptionalNamedTag<Item> RODS_IRON    = tag("rods/iron");
+        public static final Tags.IOptionalNamedTag<Item> RODS_SILVER  = tag("rods/silver");
+        public static final Tags.IOptionalNamedTag<Item> RODS_TIN     = tag("rods/tin");
+
+        public static final Tags.IOptionalNamedTag<Item> GEARS         = tag("gears");
+        public static final Tags.IOptionalNamedTag<Item> GEARS_COPPER  = tag("gears/copper");
+        public static final Tags.IOptionalNamedTag<Item> GEARS_DIAMOND = tag("gears/diamond");
+        public static final Tags.IOptionalNamedTag<Item> GEARS_GOLD    = tag("gears/gold");
+        public static final Tags.IOptionalNamedTag<Item> GEARS_IRON    = tag("gears/iron");
+        public static final Tags.IOptionalNamedTag<Item> GEARS_SILVER  = tag("gears/silver");
+        public static final Tags.IOptionalNamedTag<Item> GEARS_TIN     = tag("gears/tin");
+        public static final Tags.IOptionalNamedTag<Item> GEARS_WOODEN  = tag("gears/wooden");
+
         public static final Tags.IOptionalNamedTag<Item> SCRAP = tag("scrap");
 
-        private static Tags.IOptionalNamedTag<Item> tag(String name) {
+        private static Tags.@NotNull IOptionalNamedTag<Item> tag(String name) {
             return ItemTags.createOptional(new ResourceLocation("forge", name));
         }
     }

@@ -4,6 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -41,9 +42,23 @@ public class FoundationItemModelProvider extends ItemModelProvider {
 
         this.registerRawItem(raws);
 
-        List<String> others = List.of(SCRAP);
+        List<String> others = List.of(
+                SCRAP
+        );
 
         this.registerOtherItem(others);
+
+        List<String> gears = List.of(
+                COPPER_GEAR, DIAMOND_GEAR, GOLD_GEAR, IRON_GEAR, SILVER_GEAR, TIN_GEAR, WOODEN_GEAR
+        );
+
+        this.registerGearItem(gears);
+
+        List<String> rods = List.of(
+                COPPER_STICK, DIAMOND_STICK, GOLD_STICK, IRON_STICK, SILVER_STICK, TIN_STICK
+        );
+
+        this.registerRodItem(rods);
 
         List<String> blocks = List.of(
                 BAUXITE_ORE, LEAD_ORE, NICKEL_ORE, SILVER_ORE, TIN_ORE, URANIUM_ORE, DEEPSLATE_BAUXITE_ORE, DEEPSLATE_LEAD_ORE, DEEPSLATE_NICKEL_ORE,
@@ -59,27 +74,35 @@ public class FoundationItemModelProvider extends ItemModelProvider {
         this.registerBlock(blocks);
     }
 
-    private void registerDustItem(List<String> dusts) {
+    private void registerGearItem(@NotNull List<String> gears) {
+        gears.forEach(gear -> withExistingParent(gear, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/gear/" + gear)));
+    }
+
+    private void registerRodItem(@NotNull List<String> rods) {
+        rods.forEach(rod -> withExistingParent(rod, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/rod/" + rod)));
+    }
+
+    private void registerDustItem(@NotNull List<String> dusts) {
         dusts.forEach(dust -> withExistingParent(dust, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/dust/" + dust)));
     }
 
-    private void registerNuggetItem(List<String> nuggets) {
+    private void registerNuggetItem(@NotNull List<String> nuggets) {
         nuggets.forEach(nugget -> withExistingParent(nugget, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/nugget/" + nugget)));
     }
 
-    private void registerIngotItem(List<String> ingots) {
+    private void registerIngotItem(@NotNull List<String> ingots) {
         ingots.forEach(ingot -> withExistingParent(ingot, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/ingot/" + ingot)));
     }
 
-    private void registerRawItem(List<String> raws) {
+    private void registerRawItem(@NotNull List<String> raws) {
         raws.forEach(raw -> withExistingParent(raw, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/raw/" + raw)));
     }
 
-    private void registerOtherItem(List<String> others) {
+    private void registerOtherItem(@NotNull List<String> others) {
         others.forEach(other -> withExistingParent(other, GENERATED).texture("layer0", new ResourceLocation(MOD_ID, "item/" + other)));
     }
 
-    private void registerBlock(List<String> blocks) {
+    private void registerBlock(@NotNull List<String> blocks) {
         blocks.forEach(block -> withExistingParent(block, new ResourceLocation(MOD_ID, "block/" + block)));
     }
 }

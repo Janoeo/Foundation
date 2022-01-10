@@ -15,10 +15,11 @@ import jeresources.api.restrictions.Restriction;
 import jeresources.compatibility.JERAPI;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import org.jetbrains.annotations.NotNull;
 
 public class JERCompat {
 
-    private static DistributionBase getDistribution(OreConfig config) {
+    private static DistributionBase getDistribution(@NotNull OreConfig config) {
         DistributionBase distribution;
         switch (config.getPlacement()) {
             case "triangle" -> distribution = new DistributionTriangular(
@@ -40,7 +41,7 @@ public class JERCompat {
         addTinyOre(worldGenRegistry);
     }
 
-    private static void addTinyOre(IWorldGenRegistry registry) {
+    private static void addTinyOre(@NotNull IWorldGenRegistry registry) {
         registry.register(
                 new ItemStack(FoundationBlocks.TINY_COAL_ORE),
                 getDistribution(FoundationConfig.TINY_COAL_ORE_CONFIG),
@@ -136,7 +137,7 @@ public class JERCompat {
         );
     }
 
-    private static void addOres(IWorldGenRegistry registry) {
+    private static void addOres(@NotNull IWorldGenRegistry registry) {
         registry.register(
                 new ItemStack(FoundationBlocks.BAUXITE_ORE),
                 getDistribution(FoundationConfig.BAUXITE_ORE_CONFIG),

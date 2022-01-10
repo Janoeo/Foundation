@@ -12,6 +12,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -167,14 +168,14 @@ public class FoundationFeatures {
             OreFeatures.NETHERRACK, FoundationBlocks.NETHER_URANIUM_ORE, FoundationConfig.NETHER_URANIUM_ORE_CONFIG
     );
 
-    private static ConfiguredFeature<?, ?> createOreFeature(List<OreConfiguration.TargetBlockState> targetList, OreConfig oreConfig) {
+    private static @NotNull ConfiguredFeature<?, ?> createOreFeature(List<OreConfiguration.TargetBlockState> targetList, @NotNull OreConfig oreConfig) {
         return FeatureUtils.register(
                 RegistryHelper.rl(Registries.MOD_ID, oreConfig.name()).toString(),
                 Feature.ORE.configured(new OreConfiguration(targetList, oreConfig.getSize()))
         );
     }
 
-    private static ConfiguredFeature<?, ?> createOreFeature(RuleTest target, Block oreBlock, OreConfig oreConfig) {
+    private static @NotNull ConfiguredFeature<?, ?> createOreFeature(RuleTest target, @NotNull Block oreBlock, @NotNull OreConfig oreConfig) {
         return FeatureUtils.register(
                 RegistryHelper.rl(Registries.MOD_ID, oreConfig.name()).toString(),
                 Feature.ORE.configured(new OreConfiguration(target, oreBlock.defaultBlockState(), oreConfig.getSize()))

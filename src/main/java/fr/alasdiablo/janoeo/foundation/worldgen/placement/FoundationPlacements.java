@@ -9,6 +9,8 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
 
@@ -66,7 +68,7 @@ public class FoundationPlacements {
     public static final PlacedFeature NETHER_URANIUM_ORE = createPlacedFeature(
             FoundationFeatures.NETHER_URANIUM_ORE, FoundationConfig.NETHER_URANIUM_ORE_CONFIG);
 
-    private static PlacedFeature createPlacedFeature(ConfiguredFeature<?, ?> target, OreConfig config) {
+    private static @NotNull PlacedFeature createPlacedFeature(@NotNull ConfiguredFeature<?, ?> target, @NotNull OreConfig config) {
         PlacedFeature placedFeature = switch (config.getPlacement()) {
             case "triangle" -> target.placed(commonOrePlacement(config.getCount(), HeightRangePlacement.triangle(
                     VerticalAnchor.absolute(config.getBottom()),
@@ -82,11 +84,11 @@ public class FoundationPlacements {
         return PlacementUtils.register(RegistryHelper.rl(Registries.MOD_ID, config.name()).toString(), placedFeature);
     }
 
-    private static List<PlacementModifier> orePlacement(PlacementModifier count, PlacementModifier heightRange) {
+    private static @Unmodifiable List<PlacementModifier> orePlacement(PlacementModifier count, PlacementModifier heightRange) {
         return List.of(count, InSquarePlacement.spread(), heightRange, BiomeFilter.biome());
     }
 
-    private static List<PlacementModifier> commonOrePlacement(int count, PlacementModifier heightRange) {
+    private static @Unmodifiable List<PlacementModifier> commonOrePlacement(int count, PlacementModifier heightRange) {
         return orePlacement(CountPlacement.of(count), heightRange);
     }
 }

@@ -4,6 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class FoundationBlockModelProvider extends BlockModelProvider {
         tinyOres.forEach(block -> cubeAll(block, Folder.TINY_ORE));
     }
 
-    private void cubeAll(String blockNameIn, Folder folder) {
+    private void cubeAll(String blockNameIn, @NotNull Folder folder) {
         withExistingParent(blockNameIn, CUBE_ALL).texture("all", new ResourceLocation(MOD_ID, "block/" + folder.getFolder() + blockNameIn));
     }
 

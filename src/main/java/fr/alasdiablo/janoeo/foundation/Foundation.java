@@ -21,9 +21,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
@@ -35,6 +33,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 
@@ -44,17 +43,24 @@ public class Foundation {
 
     public static final Logger logger = LogManager.getLogger(Registries.MOD_ID);
 
-    public static final CreativeModeTab ITEMS_GROUP = new GroundCreativeModeTab("janoeo.foundation.item") {
+    public static final CreativeModeTab ORES_ITEMS_GROUP = new GroundCreativeModeTab("janoeo.foundation.ores.item") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(Items.COAL);
+            return new ItemStack(FoundationItems.SILVER_INGOT);
         }
     };
 
-    public static final CreativeModeTab BLOCKS_GROUP = new GroundCreativeModeTab("janoeo.foundation.block") {
+    public static final CreativeModeTab GEAR_ITEMS_GROUP = new GroundCreativeModeTab("janoeo.foundation.gear.item") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(Blocks.COAL_BLOCK);
+            return new ItemStack(FoundationItems.SILVER_GEAR);
+        }
+    };
+
+    public static final CreativeModeTab ORES_BLOCKS_GROUP = new GroundCreativeModeTab("janoeo.foundation.ores.block") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(FoundationBlocks.SILVER_ORE);
         }
     };
 
@@ -75,7 +81,7 @@ public class Foundation {
         Compat.JUST_ENOUGH_RESOURCES = modList.isLoaded("jeresources");
     }
 
-    private void gatherData(GatherDataEvent event) {
+    private void gatherData(@NotNull GatherDataEvent event) {
         Foundation.logger.debug("Start data generator");
         final DataGenerator      generator          = event.getGenerator();
         final ExistingFileHelper existingFileHelper = event.getExistingFileHelper();

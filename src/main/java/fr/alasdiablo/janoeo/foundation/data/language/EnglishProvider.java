@@ -17,6 +17,21 @@ public class EnglishProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        this.add(COPPER_STICK, "Copper Rod");
+        this.add(DIAMOND_STICK, "Diamond Rod");
+        this.add(GOLD_STICK, "Golden Rod");
+        this.add(IRON_STICK, "Iron Rod");
+        this.add(SILVER_STICK, "Silver Rod");
+        this.add(TIN_STICK, "Tin Rod");
+
+        this.add(COPPER_GEAR, "Copper Gear");
+        this.add(DIAMOND_GEAR, "Diamond Gear");
+        this.add(GOLD_GEAR, "Golden Gear");
+        this.add(IRON_GEAR, "Iron Gear");
+        this.add(SILVER_GEAR, "Silver Gear");
+        this.add(TIN_GEAR, "Tin Gear");
+        this.add(WOODEN_GEAR, "Wooden Gear");
+
         this.add(ALUMINIUM_DUST, "Aluminium Dust");
         this.add(AMETHYST_DUST, "Amethyst Dust");
         this.add(COAL_DUST, "Coal Dust");
@@ -123,11 +138,15 @@ public class EnglishProvider extends LanguageProvider {
         this.add(NETHER_URANIUM_ORE, "Nether Uranium Ore");
 
         this.add(
-                ((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(),
+                ((TranslatableComponent) Foundation.ORES_ITEMS_GROUP.getDisplayName()).getKey(),
                 "Janoeo Foundation - Items"
         );
         this.add(
-                ((TranslatableComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(),
+                ((TranslatableComponent) Foundation.GEAR_ITEMS_GROUP.getDisplayName()).getKey(),
+                "Janoeo Foundation - Gear"
+        );
+        this.add(
+                ((TranslatableComponent) Foundation.ORES_BLOCKS_GROUP.getDisplayName()).getKey(),
                 "Janoeo Foundation - Blocks"
         );
     }

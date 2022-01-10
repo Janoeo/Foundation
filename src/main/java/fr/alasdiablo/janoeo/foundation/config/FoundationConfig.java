@@ -16,7 +16,7 @@ public class FoundationConfig {
     public static final OreConfig URANIUM_ORE_CONFIG = new OreConfig(Registries.URANIUM_ORE, true).placementUniform(6, -24, 28, 4);
 
     /* * * * * * * * * * * * * * * Tiny Ore * * *  * * * * * * * * * * */
-    public static final OreConfig TINY_COAL_ORE_CONFIG       = new OreConfig(Registries.TINY_COAL_ORE, true).placementUniform(17, -24, 180, 20);
+    public static final OreConfig TINY_COAL_ORE_CONFIG       = new OreConfig(Registries.TINY_COAL_ORE, true).placementUniform(17, -36, 180, 20);
     public static final OreConfig TINY_COPPER_ORE_CONFIG     = new OreConfig(Registries.TINY_COPPER_ORE, true).placementUniform(10, -16, 112, 6);
     public static final OreConfig TINY_DIAMOND_ORE_CONFIG    = new OreConfig(Registries.TINY_DIAMOND_ORE, true).placementUniform(8, -24, 16, 4);
     public static final OreConfig TINY_EMERALD_ORE_CONFIG    = new OreConfig(Registries.TINY_EMERALD_ORE, true).placementUniform(2, 4, 31, 4);

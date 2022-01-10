@@ -6,10 +6,11 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import org.jetbrains.annotations.NotNull;
 
 public class FoundationGeneration {
 
-    public static void onBiomeLoading(BiomeLoadingEvent biomeLoadingEvent) {
+    public static void onBiomeLoading(@NotNull BiomeLoadingEvent biomeLoadingEvent) {
         var generation    = biomeLoadingEvent.getGeneration();
         var biomeCategory = biomeLoadingEvent.getCategory();
 

@@ -65,6 +65,24 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.copy(FoundationTags.Blocks.ORES_TINY, ORES_TINY);
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
 
+        this.tag(Tags.Items.RODS).addTags(RODS_COPPER, RODS_DIAMOND, RODS_GOLD, RODS_IRON, RODS_SILVER, RODS_TIN);
+
+        this.tag(RODS_COPPER).add(COPPER_STICK);
+        this.tag(RODS_DIAMOND).add(DIAMOND_STICK);
+        this.tag(RODS_GOLD).add(GOLD_STICK);
+        this.tag(RODS_IRON).add(IRON_STICK);
+        this.tag(RODS_SILVER).add(SILVER_STICK);
+        this.tag(RODS_TIN).add(TIN_STICK);
+
+        this.tag(GEARS).addTags(GEARS_COPPER, GEARS_DIAMOND, GEARS_GOLD, GEARS_IRON, GEARS_SILVER, GEARS_TIN, GEARS_WOODEN);
+
+        this.tag(GEARS_COPPER).add(COPPER_GEAR);
+        this.tag(GEARS_DIAMOND).add(DIAMOND_GEAR);
+        this.tag(GEARS_GOLD).add(GOLD_GEAR);
+        this.tag(GEARS_IRON).add(IRON_GEAR);
+        this.tag(GEARS_SILVER).add(SILVER_GEAR);
+        this.tag(GEARS_TIN).add(TIN_GEAR);
+        this.tag(GEARS_WOODEN).add(TIN_GEAR);
 
         this.tag(Tags.Items.DUSTS)
                 .addTags(DUSTS_ALUMINIUM, DUSTS_ALUMINUM, DUSTS_AMETHYST, DUSTS_COAL, DUSTS_COPPER, DUSTS_DIAMOND, DUSTS_GOLD, DUSTS_EMERALD, DUSTS_IRON,

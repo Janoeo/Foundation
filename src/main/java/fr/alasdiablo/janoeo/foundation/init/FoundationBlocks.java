@@ -16,10 +16,11 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.IForgeRegistry;
+import org.jetbrains.annotations.NotNull;
 
 public class FoundationBlocks {
     /* * * * * * * * * * * * * * * Item Properties * * *  * * * * * * * * * * */
-    private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties().tab(Foundation.BLOCKS_GROUP);
+    private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties().tab(Foundation.ORES_BLOCKS_GROUP);
 
     /* * * * * * * * * * * * * * * Block Properties * * *  * * * * * * * * * * */
     private static final BlockBehaviour.Properties PROPERTIES_STONE_ORE = BlockBehaviour.Properties.of(Material.STONE)
@@ -124,14 +125,14 @@ public class FoundationBlocks {
     public static final Block NETHER_TIN_ORE      = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_TIN_ORE);
     public static final Block NETHER_URANIUM_ORE  = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.UNCOMMON, Registries.NETHER_URANIUM_ORE);
 
-    public static void initBlock(RegistryEvent.Register<Block> event) {
+    public static void initBlock(RegistryEvent.@NotNull Register<Block> event) {
         final IForgeRegistry<Block> registry = event.getRegistry();
         initOreBlock(registry);
         initTinyOreBlock(registry);
         initNetherOreBlock(registry);
     }
 
-    public static void initItem(RegistryEvent.Register<Item> event) {
+    public static void initItem(RegistryEvent.@NotNull Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
         initOreItem(registry);
         initTinyOreItem(registry);

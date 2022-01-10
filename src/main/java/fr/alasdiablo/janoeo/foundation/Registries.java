@@ -3,7 +3,24 @@ package fr.alasdiablo.janoeo.foundation;
 public class Registries {
     public static final String MOD_ID = "janoeo_foundation";
 
-    /* * * * * * * * * * * *  Dust * * * * * * * * * * * */
+    /* * * * * * * * * * * * Stick * * * * * * * * * * * */
+    public static final String COPPER_STICK  = "copper_stick";
+    public static final String DIAMOND_STICK = "diamond_stick";
+    public static final String GOLD_STICK    = "gold_stick";
+    public static final String IRON_STICK    = "iron_stick";
+    public static final String SILVER_STICK  = "silver_stick";
+    public static final String TIN_STICK     = "tin_stick";
+
+    /* * * * * * * * * * * * GEAR * * * * * * * * * * * */
+    public static final String COPPER_GEAR  = "copper_gear";
+    public static final String DIAMOND_GEAR = "diamond_gear";
+    public static final String GOLD_GEAR    = "gold_gear";
+    public static final String IRON_GEAR    = "iron_gear";
+    public static final String SILVER_GEAR  = "silver_gear";
+    public static final String TIN_GEAR     = "tin_gear";
+    public static final String WOODEN_GEAR  = "wooden_gear";
+
+    /* * * * * * * * * * * * Dust * * * * * * * * * * * */
     public static final String ALUMINIUM_DUST = "aluminium_dust";
     public static final String AMETHYST_DUST  = "amethyst_dust";
     public static final String COAL_DUST      = "coal_dust";

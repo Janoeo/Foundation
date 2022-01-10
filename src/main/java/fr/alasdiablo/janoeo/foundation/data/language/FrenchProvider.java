@@ -17,6 +17,21 @@ public class FrenchProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        this.add(COPPER_STICK, SimpleUnicode.encodeOf("Copper Rod"));
+        this.add(DIAMOND_STICK, SimpleUnicode.encodeOf("Diamond Rod"));
+        this.add(GOLD_STICK, SimpleUnicode.encodeOf("Golden Rod"));
+        this.add(IRON_STICK, SimpleUnicode.encodeOf("Iron Rod"));
+        this.add(SILVER_STICK, SimpleUnicode.encodeOf("Silver Rod"));
+        this.add(TIN_STICK, SimpleUnicode.encodeOf("Tin Rod"));
+
+        this.add(COPPER_GEAR, SimpleUnicode.encodeOf("Copper Gear"));
+        this.add(DIAMOND_GEAR, SimpleUnicode.encodeOf("Diamond Gear"));
+        this.add(GOLD_GEAR, SimpleUnicode.encodeOf("Golden Gear"));
+        this.add(IRON_GEAR, SimpleUnicode.encodeOf("Iron Gear"));
+        this.add(SILVER_GEAR, SimpleUnicode.encodeOf("Silver Gear"));
+        this.add(TIN_GEAR, SimpleUnicode.encodeOf("Tin Gear"));
+        this.add(WOODEN_GEAR, SimpleUnicode.encodeOf("Wooden Gear"));
+
         this.add(ALUMINIUM_DUST, SimpleUnicode.encodeOf("Poussière d'aluminium"));
         this.add(AMETHYST_DUST, SimpleUnicode.encodeOf("Poussière d'améthyste"));
         this.add(COAL_DUST, SimpleUnicode.encodeOf("Poussière de charbon"));
@@ -123,11 +138,11 @@ public class FrenchProvider extends LanguageProvider {
         this.add(NETHER_URANIUM_ORE, SimpleUnicode.encodeOf("Minerai d'uranium du Nether"));
 
         this.add(
-                ((TranslatableComponent) Foundation.ITEMS_GROUP.getDisplayName()).getKey(),
+                ((TranslatableComponent) Foundation.ORES_ITEMS_GROUP.getDisplayName()).getKey(),
                 "Janoeo Foundation - Objets"
         );
         this.add(
-                ((TranslatableComponent) Foundation.BLOCKS_GROUP.getDisplayName()).getKey(),
+                ((TranslatableComponent) Foundation.ORES_BLOCKS_GROUP.getDisplayName()).getKey(),
                 "Janoeo Foundation - Blocs"
         );
     }

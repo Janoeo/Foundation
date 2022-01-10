@@ -3,6 +3,7 @@ package fr.alasdiablo.janoeo.foundation.config;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import fr.alasdiablo.diolib.config.json.JsonConfig;
+import org.jetbrains.annotations.NotNull;
 
 public class OreConfig extends JsonConfig {
 
@@ -43,7 +44,7 @@ public class OreConfig extends JsonConfig {
     }
 
     @Override
-    protected void read(final JsonObject json) {
+    protected void read(final @NotNull JsonObject json) {
         JsonElement type      = json.get("type");
         JsonElement enable    = json.get("enable");
         JsonObject  placement = json.get("placement").getAsJsonObject();
