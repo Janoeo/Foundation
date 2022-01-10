@@ -102,7 +102,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.5'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.17'
     implementation fileTree(dir:'lib', include:'*.jar')
     // implementation 'curse.maven:diabololib-422014:3574175'       // DiaboloLib
     implementation fg.deobf('curse.maven:catalogue-459701:3559402') // Catalogue
