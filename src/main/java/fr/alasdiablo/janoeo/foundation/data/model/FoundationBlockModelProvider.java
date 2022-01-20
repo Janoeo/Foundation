@@ -37,6 +37,13 @@ public class FoundationBlockModelProvider extends BlockModelProvider {
         );
 
         tinyOres.forEach(block -> cubeAll(block, Folder.TINY_ORE));
+
+
+        List<String> storageBlock = List.of(
+                ALUMINIUM_BLOCK, LEAD_BLOCK, NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK
+        );
+
+        storageBlock.forEach(block -> cubeAll(block, Folder.DEFAULT));
     }
 
     private void cubeAll(String blockNameIn, @NotNull Folder folder) {

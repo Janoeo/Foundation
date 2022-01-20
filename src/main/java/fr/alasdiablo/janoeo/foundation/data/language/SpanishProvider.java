@@ -137,9 +137,20 @@ public class SpanishProvider extends LanguageProvider {
         this.add(NETHER_TIN_ORE, SimpleUnicode.encodeOf("Mena de estaño del Nether"));
         this.add(NETHER_URANIUM_ORE, SimpleUnicode.encodeOf("Mena de uranio del Nether"));
 
+        this.add(ALUMINIUM_BLOCK, SimpleUnicode.encodeOf("Block of Aluminium"));
+        this.add(LEAD_BLOCK, SimpleUnicode.encodeOf("Block of Lead"));
+        this.add(NICKEL_BLOCK, SimpleUnicode.encodeOf("Block of Nickel"));
+        this.add(SILVER_BLOCK, SimpleUnicode.encodeOf("Block of Silver"));
+        this.add(TIN_BLOCK, SimpleUnicode.encodeOf("Block of Tin"));
+        this.add(URANIUM_BLOCK, SimpleUnicode.encodeOf("Block of Uranium"));
+
         this.add(
                 ((TranslatableComponent) Foundation.ORES_ITEMS_GROUP.getDisplayName()).getKey(),
                 "Janoeo Foundation - Objetos"
+        );
+        this.add(
+                ((TranslatableComponent) Foundation.GEAR_ITEMS_GROUP.getDisplayName()).getKey(),
+                "Janoeo Foundation - Gear"
         );
         this.add(
                 ((TranslatableComponent) Foundation.ORES_BLOCKS_GROUP.getDisplayName()).getKey(),

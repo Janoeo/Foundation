@@ -4,6 +4,7 @@
 
 <details><summary><b>1.18.1</b></summary>
 
++ [6.9.2.79](#68278)
 + [6.8.2.78](#68278)
 + [6.7.2.77-experimental](#67277-experimental)
 
@@ -111,6 +112,24 @@
 + [1.0](#10)
 
 </details>
+
+### 6.9.2.79
+
+#### Fix
+
++ Lapis ore with the wrong harvest level
++ Nether ore without a specified requirement tools (making ore un minable)
++ Add missing ore in the ores tags
+
+#### Add
+
++ Block of each ingot
++ Metal rods (iron, etc.)
++ Gear (wood, iron, etc.)
+
+##### Technical only
+
++ Use parchment as mapping
 
 ### 6.8.2.78
 

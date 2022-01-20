@@ -46,14 +46,6 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.copy(FoundationTags.Blocks.ORES_TIN, ORES_TIN);
         this.copy(FoundationTags.Blocks.ORES_URANIUM, ORES_URANIUM);
 
-        this.copy(Tags.Blocks.ORES_REDSTONE, Tags.Items.ORES_REDSTONE);
-        this.copy(Tags.Blocks.ORES_LAPIS, Tags.Items.ORES_LAPIS);
-        this.copy(Tags.Blocks.ORES_IRON, Tags.Items.ORES_IRON);
-        this.copy(Tags.Blocks.ORES_EMERALD, Tags.Items.ORES_EMERALD);
-        this.copy(Tags.Blocks.ORES_DIAMOND, Tags.Items.ORES_DIAMOND);
-        this.copy(Tags.Blocks.ORES_COAL, Tags.Items.ORES_COAL);
-        this.copy(FoundationTags.Blocks.ORES_COPPER, ORES_COPPER);
-
         this.copy(FoundationTags.Blocks.ORES_TINY_ALUMINIUM, ORES_TINY_ALUMINIUM);
         this.copy(FoundationTags.Blocks.ORES_TINY_ALUMINUM, ORES_TINY_ALUMINUM);
         this.copy(FoundationTags.Blocks.ORES_TINY_LEAD, ORES_TINY_LEAD);
@@ -62,8 +54,29 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.copy(FoundationTags.Blocks.ORES_TINY_TIN, ORES_TINY_TIN);
         this.copy(FoundationTags.Blocks.ORES_TINY_URANIUM, ORES_TINY_URANIUM);
 
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_ALUMINIUM, STORAGE_BLOCKS_ALUMINIUM);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_ALUMINUM, STORAGE_BLOCKS_ALUMINUM);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_LEAD, STORAGE_BLOCKS_LEAD);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_NICKEL, STORAGE_BLOCKS_NICKEL);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_SILVER, STORAGE_BLOCKS_SILVER);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_TIN, STORAGE_BLOCKS_TIN);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_URANIUM, STORAGE_BLOCKS_URANIUM);
+
+        this.copy(Tags.Blocks.ORES_REDSTONE, Tags.Items.ORES_REDSTONE);
+        this.copy(Tags.Blocks.ORES_LAPIS, Tags.Items.ORES_LAPIS);
+        this.copy(Tags.Blocks.ORES_IRON, Tags.Items.ORES_IRON);
+        this.copy(Tags.Blocks.ORES_EMERALD, Tags.Items.ORES_EMERALD);
+        this.copy(Tags.Blocks.ORES_DIAMOND, Tags.Items.ORES_DIAMOND);
+        this.copy(Tags.Blocks.ORES_COAL, Tags.Items.ORES_COAL);
+        this.copy(Tags.Blocks.ORES_COPPER, Tags.Items.ORES_COPPER);
+
+
         this.copy(FoundationTags.Blocks.ORES_TINY, ORES_TINY);
+
         this.copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
+        this.copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
+
 
         this.tag(Tags.Items.RODS).addTags(RODS_COPPER, RODS_DIAMOND, RODS_GOLD, RODS_IRON, RODS_SILVER, RODS_TIN);
 
@@ -135,15 +148,18 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.tag(INGOTS_URANIUM).add(URANIUM_INGOT);
         this.tag(INGOTS_COPPER).add(Items.COPPER_INGOT);
 
-        this.tag(RAWS).addTags(RAWS_ALUMINIUM, RAWS_ALUMINUM, RAWS_LEAD, RAWS_NICKEL, RAWS_SILVER, RAWS_TIN, RAWS_URANIUM);
+        this.tag(Tags.Items.RAW_MATERIALS).addTags(
+                RAW_MATERIALS_ALUMINIUM, RAW_MATERIALS_ALUMINUM, RAW_MATERIALS_LEAD, RAW_MATERIALS_NICKEL, RAW_MATERIALS_SILVER, RAW_MATERIALS_TIN,
+                RAW_MATERIALS_URANIUM
+        );
 
-        this.tag(RAWS_ALUMINIUM).add(RAW_ALUMINIUM);
-        this.tag(RAWS_ALUMINUM).addTags(RAWS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
-        this.tag(RAWS_LEAD).add(RAW_LEAD);
-        this.tag(RAWS_NICKEL).add(RAW_NICKEL);
-        this.tag(RAWS_SILVER).add(RAW_SILVER);
-        this.tag(RAWS_TIN).add(RAW_TIN);
-        this.tag(RAWS_URANIUM).add(RAW_URANIUM);
+        this.tag(RAW_MATERIALS_ALUMINIUM).add(RAW_ALUMINIUM);
+        this.tag(RAW_MATERIALS_ALUMINUM).addTags(RAW_MATERIALS_ALUMINIUM); // Reference to INGOTS_ALUMINIUM
+        this.tag(RAW_MATERIALS_LEAD).add(RAW_LEAD);
+        this.tag(RAW_MATERIALS_NICKEL).add(RAW_NICKEL);
+        this.tag(RAW_MATERIALS_SILVER).add(RAW_SILVER);
+        this.tag(RAW_MATERIALS_TIN).add(RAW_TIN);
+        this.tag(RAW_MATERIALS_URANIUM).add(RAW_URANIUM);
 
         this.tag(FoundationTags.Items.SCRAP).add(FoundationItems.SCRAP);
     }

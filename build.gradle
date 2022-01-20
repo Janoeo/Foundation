@@ -1,25 +1,31 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://repo.spongepowered.org/maven' }
+        maven { url = 'https://maven.parchmentmc.org' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.parchmentmc:librarian:1.+'
+        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
 
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: 'org.spongepowered.mixin'
 
 // ***************************************** //
 //                                           //
 //        Standard versioning system         //
 //                                           //
 // ***************************************** //
-def majorVersion = 8
+def majorVersion = 9
 def minorVersion = 2
-def buildVersion = 78
+def buildVersion = 79
 def isExperimental = false
 version = "${majorVersion}.${minorVersion}.${buildVersion}"
 if (isExperimental) {
@@ -57,7 +63,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 def deobfSourceClassifier
 
 minecraft {
-    mappings channel: 'official', version: '1.18.1'
+    mappings channel: 'parchment', version: '2021.12.19-1.18.1'
     deobfSourceClassifier = getMappings().get()
     runs {
         client {
@@ -98,16 +104,21 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven { url = 'https://www.cursemaven.com/' }
+    maven {
+        url 'https://cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.17'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.0.40'
     implementation fileTree(dir:'lib', include:'*.jar')
-    // implementation 'curse.maven:diabololib-422014:3574175'       // DiaboloLib
     implementation fg.deobf('curse.maven:catalogue-459701:3559402') // Catalogue
     implementation fg.deobf('curse.maven:jei-238222:3569553')       // JEI
-    implementation 'curse.maven:jer-240630:3575594'                 // JER
+    implementation fg.deobf('curse.maven:jer-240630:3575594')       // JER
+    annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
 
 jar {

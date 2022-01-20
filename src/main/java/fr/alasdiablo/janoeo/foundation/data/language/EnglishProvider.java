@@ -137,6 +137,13 @@ public class EnglishProvider extends LanguageProvider {
         this.add(NETHER_TIN_ORE, "Nether Tin Ore");
         this.add(NETHER_URANIUM_ORE, "Nether Uranium Ore");
 
+        this.add(ALUMINIUM_BLOCK, "Block of Aluminium");
+        this.add(LEAD_BLOCK, "Block of Lead");
+        this.add(NICKEL_BLOCK, "Block of Nickel");
+        this.add(SILVER_BLOCK, "Block of Silver");
+        this.add(TIN_BLOCK, "Block of Tin");
+        this.add(URANIUM_BLOCK, "Block of Uranium");
+
         this.add(
                 ((TranslatableComponent) Foundation.ORES_ITEMS_GROUP.getDisplayName()).getKey(),
                 "Janoeo Foundation - Items"

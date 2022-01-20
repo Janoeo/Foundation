@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.data.recipe;
 
+import fr.alasdiablo.diolib.registries.RegistryHelper;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
@@ -15,6 +16,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Consumer;
 
+import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
 
@@ -70,13 +72,13 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromDust(TIN_INGOT, DUSTS_TIN, "has_tin_dust", "tin_ingot_from_dust");
         this.ingotFromDust(URANIUM_INGOT, DUSTS_URANIUM, "has_uranium_dust", "uranium_ingot_from_dust");
 
-        this.ingotFromRaw(ALUMINIUM_INGOT, RAWS_ALUMINIUM, "has_raw_aluminium", "aluminium_ingot_from_raw");
-        this.ingotFromRaw(ALUMINIUM_INGOT, RAWS_ALUMINUM, "has_raw_aluminium", "aluminum_ingot_from_raw");
-        this.ingotFromRaw(LEAD_INGOT, RAWS_LEAD, "has_raw_lead", "lead_ingot_from_raw");
-        this.ingotFromRaw(NICKEL_INGOT, RAWS_NICKEL, "has_raw_nickel", "nickel_ingot_from_raw");
-        this.ingotFromRaw(SILVER_INGOT, RAWS_SILVER, "has_raw_silver", "silver_ingot_from_raw");
-        this.ingotFromRaw(TIN_INGOT, RAWS_TIN, "has_raw_tin", "tin_ingot_from_raw");
-        this.ingotFromRaw(URANIUM_INGOT, RAWS_URANIUM, "has_raw_uranium", "uranium_ingot_from_raw");
+        this.ingotFromRaw(ALUMINIUM_INGOT, RAW_MATERIALS_ALUMINIUM, "has_raw_aluminium", "aluminium_ingot_from_raw");
+        this.ingotFromRaw(ALUMINIUM_INGOT, RAW_MATERIALS_ALUMINUM, "has_raw_aluminium", "aluminum_ingot_from_raw");
+        this.ingotFromRaw(LEAD_INGOT, RAW_MATERIALS_LEAD, "has_raw_lead", "lead_ingot_from_raw");
+        this.ingotFromRaw(NICKEL_INGOT, RAW_MATERIALS_NICKEL, "has_raw_nickel", "nickel_ingot_from_raw");
+        this.ingotFromRaw(SILVER_INGOT, RAW_MATERIALS_SILVER, "has_raw_silver", "silver_ingot_from_raw");
+        this.ingotFromRaw(TIN_INGOT, RAW_MATERIALS_TIN, "has_raw_tin", "tin_ingot_from_raw");
+        this.ingotFromRaw(URANIUM_INGOT, RAW_MATERIALS_URANIUM, "has_raw_uranium", "uranium_ingot_from_raw");
 
         this.ingotFromOre(ALUMINIUM_INGOT, ORES_ALUMINIUM, "has_aluminium_ore", "aluminium_ingot_from_ore");
         this.ingotFromOre(ALUMINIUM_INGOT, ORES_ALUMINUM, "has_aluminium_ore", "aluminum_ingot_from_ore");
@@ -87,12 +89,28 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromOre(URANIUM_INGOT, ORES_URANIUM, "has_uranium_ore", "uranium_ingot_from_ore");
 
         this.ingotFromOre(Items.COAL, Tags.Items.ORES_COAL, "has_coal_ore", "coal_from_ore");
-        this.ingotFromOre(Items.COPPER_INGOT, ORES_COPPER, "has_copper_ore", "copper_ingot_from_ore");
+        this.ingotFromOre(Items.COPPER_INGOT, Tags.Items.ORES_COPPER, "has_copper_ore", "copper_ingot_from_ore");
         this.ingotFromOre(Items.DIAMOND, Tags.Items.ORES_DIAMOND, "has_diamond_ore", "diamond_from_ore");
         this.ingotFromOre(Items.EMERALD, Tags.Items.ORES_EMERALD, "has_emerald_ore", "emerald_from_ore");
         this.ingotFromOre(Items.IRON_INGOT, Tags.Items.ORES_IRON, "has_iron_ore", "iron_ingot_from_ore");
         this.ingotFromOre(Items.LAPIS_LAZULI, Tags.Items.ORES_LAPIS, "has_lapis_ore", "lapis_from_ore");
         this.ingotFromOre(Items.REDSTONE, Tags.Items.ORES_REDSTONE, "has_redstone_ore", "redstone_from_ore");
+
+        this.blockFromIngot(ALUMINIUM_BLOCK, INGOTS_ALUMINIUM, "has_aluminium_ingot", "aluminium_block");
+        this.blockFromIngot(ALUMINIUM_BLOCK, INGOTS_ALUMINUM, "has_aluminum_ingot", "aluminum_block");
+        this.blockFromIngot(LEAD_BLOCK, INGOTS_LEAD, "has_lead_ingot", "lead_block");
+        this.blockFromIngot(NICKEL_BLOCK, INGOTS_NICKEL, "has_nickel_ingot", "nickel_block");
+        this.blockFromIngot(SILVER_BLOCK, INGOTS_SILVER, "has_silver_ingot", "silver_block");
+        this.blockFromIngot(TIN_BLOCK, INGOTS_TIN, "has_tin_ingot", "tin_block");
+        this.blockFromIngot(URANIUM_BLOCK, INGOTS_URANIUM, "has_uranium_ingot", "uranium_block");
+
+        this.ingotFromBlock(ALUMINIUM_INGOT, STORAGE_BLOCKS_ALUMINIUM, "has_aluminium_block", "aluminium_ingot_from_block");
+        this.ingotFromBlock(ALUMINIUM_INGOT, STORAGE_BLOCKS_ALUMINUM, "has_aluminum_block", "aluminum_ingot_from_block");
+        this.ingotFromBlock(LEAD_INGOT, STORAGE_BLOCKS_LEAD, "has_lead_block", "lead_ingot_from_block");
+        this.ingotFromBlock(NICKEL_INGOT, STORAGE_BLOCKS_NICKEL, "has_nickel_block", "nickel_ingot_from_block");
+        this.ingotFromBlock(SILVER_INGOT, STORAGE_BLOCKS_SILVER, "has_silver_block", "silver_ingot_from_block");
+        this.ingotFromBlock(TIN_INGOT, STORAGE_BLOCKS_TIN, "has_tin_block", "tin_ingot_from_block");
+        this.ingotFromBlock(URANIUM_INGOT, STORAGE_BLOCKS_URANIUM, "has_uranium_block", "uranium_ingot_from_block");
     }
 
     private void nugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn) {
@@ -107,12 +125,21 @@ public class FoundationRecipeProvider extends RecipeProvider {
 
     private void nugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
         ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn))
-                .save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
+                .save(finishedRecipeConsumer, RegistryHelper.rl(Registries.MOD_ID, nameIn));
     }
 
     private void ingotFromNugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
         ShapedRecipeBuilder.shaped(resultIn).define('A', ingredientIn).pattern("AAA").pattern("AAA").pattern("AAA")
-                .unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, nameIn));
+                .unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, RegistryHelper.rl(Registries.MOD_ID, nameIn));
+    }
+
+    private void blockFromIngot(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
+        this.ingotFromNugget(resultIn, ingredientIn, criterionNameIn, nameIn);
+    }
+
+    private void ingotFromBlock(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
+        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(ingredientIn).unlockedBy(criterionNameIn, has(ingredientIn))
+                .save(finishedRecipeConsumer, RegistryHelper.rl(Registries.MOD_ID, nameIn));
     }
 
     private void ingotFromDust(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn, String nameIn) {
