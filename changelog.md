@@ -113,6 +113,10 @@
 
 </details>
 
+### 6.9.2.80
+
++ Recompile jar with missing data
+
 ### 6.9.2.79
 
 #### Fix
