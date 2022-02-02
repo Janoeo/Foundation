@@ -5,6 +5,7 @@ import fr.alasdiablo.janoeo.foundation.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -111,6 +112,42 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromBlock(SILVER_INGOT, STORAGE_BLOCKS_SILVER, "has_silver_block", "silver_ingot_from_block");
         this.ingotFromBlock(TIN_INGOT, STORAGE_BLOCKS_TIN, "has_tin_block", "tin_ingot_from_block");
         this.ingotFromBlock(URANIUM_INGOT, STORAGE_BLOCKS_URANIUM, "has_uranium_block", "uranium_ingot_from_block");
+
+        this.rod(COPPER_STICK, Tags.Items.INGOTS_COPPER, "has_copper_ingot");
+        this.rod(DIAMOND_STICK, Tags.Items.GEMS_DIAMOND, "has_diamond_ingot");
+        this.rod(GOLD_STICK, Tags.Items.INGOTS_GOLD, "has_gold_ingot");
+        this.rod(IRON_STICK, Tags.Items.INGOTS_IRON, "has_iron_ingot");
+        this.rod(SILVER_STICK, INGOTS_SILVER, "has_silver_ingot");
+        this.rod(TIN_STICK, INGOTS_TIN, "has_tin_ingot");
+
+        this.gear(WOODEN_GEAR, Tags.Items.RODS_WOODEN, ItemTags.PLANKS, "has_wooden_rod", "has_wooden_planks");
+        this.gear(TIN_GEAR, RODS_TIN, GEARS_WOODEN, "has_tin_rod", "has_wooden_gear");
+        this.gear(COPPER_GEAR, RODS_COPPER, GEARS_TIN, "has_copper_rod", "has_tin_gear");
+        this.gear(IRON_GEAR, RODS_IRON, GEARS_COPPER, "has_iron_rod", "has_copper_gear");
+        this.gear(SILVER_GEAR, RODS_SILVER, GEARS_IRON, "has_silver_rod", "has_iron_gear");
+        this.gear(GOLD_GEAR, RODS_GOLD, GEARS_SILVER, "has_gold_rod", "has_silver_gear");
+        this.gear(DIAMOND_GEAR, RODS_DIAMOND, GEARS_GOLD, "has_diamond_rod", "has_gold_gear");
+    }
+
+    private void rod(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn) {
+        ShapedRecipeBuilder.shaped(resultIn, 2)
+                .define('I', ingredientIn)
+                .pattern("I")
+                .pattern("I")
+                .unlockedBy(criterionNameIn, has(ingredientIn))
+                .save(finishedRecipeConsumer);
+    }
+
+    private void gear(ItemLike resultIn, Tag<Item> rod, Tag<Item> middle, String criterionNameIn, String middleCriterionNameIn) {
+        ShapedRecipeBuilder.shaped(resultIn)
+                .define('R', rod)
+                .define('M', middle)
+                .pattern(" R ")
+                .pattern("RMR")
+                .pattern(" R ")
+                .unlockedBy(criterionNameIn, has(rod))
+                .unlockedBy(middleCriterionNameIn, has(middle))
+                .save(finishedRecipeConsumer);
     }
 
     private void nugget(ItemLike resultIn, Tag<Item> ingredientIn, String criterionNameIn) {
