@@ -95,7 +95,7 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.tag(GEARS_IRON).add(IRON_GEAR);
         this.tag(GEARS_SILVER).add(SILVER_GEAR);
         this.tag(GEARS_TIN).add(TIN_GEAR);
-        this.tag(GEARS_WOODEN).add(TIN_GEAR);
+        this.tag(GEARS_WOODEN).add(WOODEN_GEAR);
 
         this.tag(Tags.Items.DUSTS)
                 .addTags(DUSTS_ALUMINIUM, DUSTS_ALUMINUM, DUSTS_AMETHYST, DUSTS_COAL, DUSTS_COPPER, DUSTS_DIAMOND, DUSTS_GOLD, DUSTS_EMERALD, DUSTS_IRON,
