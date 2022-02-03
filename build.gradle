@@ -118,6 +118,8 @@ dependencies {
     implementation fg.deobf('curse.maven:catalogue-459701:3559402') // Catalogue (1.6.0)
     implementation fg.deobf('curse.maven:jei-238222:3599262')       // JEI (9.2.1.69)
     implementation fg.deobf('curse.maven:jer-240630:3575590')       // JER (0.13.1.138)
+    implementation fg.deobf("curse.maven:flywheel-486392:3623314")  // Flywheel (0.6.0)
+    implementation fg.deobf("curse.maven:create-328085:3623348")    // Create (v0.4d)
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
 

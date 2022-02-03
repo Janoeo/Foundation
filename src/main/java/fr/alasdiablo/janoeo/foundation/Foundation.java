@@ -1,7 +1,11 @@
 package fr.alasdiablo.janoeo.foundation;
 
 import fr.alasdiablo.diolib.item.GroundCreativeModeTab;
-import fr.alasdiablo.janoeo.foundation.compatibility.JERCompat;
+import fr.alasdiablo.janoeo.foundation.compatibility.create.CompactingRecipe;
+import fr.alasdiablo.janoeo.foundation.compatibility.create.CrushingRecipe;
+import fr.alasdiablo.janoeo.foundation.compatibility.create.SmeltingRecipe;
+import fr.alasdiablo.janoeo.foundation.compatibility.create.WashingRecipe;
+import fr.alasdiablo.janoeo.foundation.compatibility.jer.JERCompat;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.data.language.EnglishProvider;
 import fr.alasdiablo.janoeo.foundation.data.language.FrenchProvider;
@@ -79,6 +83,7 @@ public class Foundation {
     private void foundCompat() {
         final ModList modList = ModList.get();
         Compat.JUST_ENOUGH_RESOURCES = modList.isLoaded("jeresources");
+        Compat.CREATE                = modList.isLoaded("create");
     }
 
     private void gatherData(@NotNull GatherDataEvent event) {
@@ -111,6 +116,13 @@ public class Foundation {
 
         Foundation.logger.debug("Add Loot Tables Provider");
         generator.addProvider(new FoundationLootTableProvider(generator));
+
+        if (Compat.CREATE) {
+            generator.addProvider(new CrushingRecipe(generator));
+            generator.addProvider(new CompactingRecipe(generator));
+            generator.addProvider(new SmeltingRecipe(generator));
+            generator.addProvider(new WashingRecipe(generator));
+        }
     }
 
     private void setup(final FMLCommonSetupEvent commonSetupEvent) {
@@ -129,7 +141,8 @@ public class Foundation {
         MinecraftForge.EVENT_BUS.addListener(FoundationGeneration::onBiomeLoading);
     }
 
-    public static class Compat {
+    private static class Compat {
         public static boolean JUST_ENOUGH_RESOURCES = false;
+        public static boolean CREATE                = false;
     }
 }

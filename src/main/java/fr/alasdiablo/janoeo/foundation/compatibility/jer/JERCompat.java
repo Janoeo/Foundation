@@ -1,4 +1,4 @@
-package fr.alasdiablo.janoeo.foundation.compatibility;
+package fr.alasdiablo.janoeo.foundation.compatibility.jer;
 
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.config.OreConfig;
