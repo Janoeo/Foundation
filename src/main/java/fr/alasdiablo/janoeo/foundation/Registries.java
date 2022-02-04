@@ -77,6 +77,13 @@ public class Registries {
     public static final String TIN_BLOCK       = "tin_block";
     public static final String URANIUM_BLOCK   = "uranium_block";
 
+    public static final String RAW_ALUMINIUM_BLOCK = "raw_aluminium_block";
+    public static final String RAW_LEAD_BLOCK      = "raw_lead_block";
+    public static final String RAW_NICKEL_BLOCK    = "raw_nickel_block";
+    public static final String RAW_SILVER_BLOCK    = "raw_silver_block";
+    public static final String RAW_TIN_BLOCK       = "raw_tin_block";
+    public static final String RAW_URANIUM_BLOCK   = "raw_uranium_block";
+
     /* * * * * * * * * * * * * * * Ore * * *  * * * * * * * * * * */
     public static final String BAUXITE_ORE = "bauxite_ore";
     public static final String LEAD_ORE    = "lead_ore";

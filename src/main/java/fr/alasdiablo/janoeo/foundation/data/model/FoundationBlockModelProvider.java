@@ -40,7 +40,8 @@ public class FoundationBlockModelProvider extends BlockModelProvider {
 
 
         List<String> storageBlock = List.of(
-                ALUMINIUM_BLOCK, LEAD_BLOCK, NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK
+                ALUMINIUM_BLOCK, LEAD_BLOCK, NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK, RAW_ALUMINIUM_BLOCK, RAW_LEAD_BLOCK, RAW_NICKEL_BLOCK,
+                RAW_SILVER_BLOCK, RAW_TIN_BLOCK, RAW_URANIUM_BLOCK
         );
 
         storageBlock.forEach(block -> cubeAll(block, Folder.DEFAULT));

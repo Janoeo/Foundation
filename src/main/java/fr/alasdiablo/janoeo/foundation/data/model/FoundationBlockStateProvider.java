@@ -12,9 +12,8 @@ public class FoundationBlockStateProvider extends DioBlockStateProvider {
         super(generator, MOD_ID);
     }
 
-    @Override
-    protected void registerStates() {
-        List<String> cubeAllList = List.of(
+    static List<String> getBlocksList() {
+        return List.of(
                 BAUXITE_ORE, LEAD_ORE, NICKEL_ORE, SILVER_ORE, TIN_ORE, URANIUM_ORE, DEEPSLATE_BAUXITE_ORE, DEEPSLATE_LEAD_ORE, DEEPSLATE_NICKEL_ORE,
                 DEEPSLATE_SILVER_ORE, DEEPSLATE_TIN_ORE, DEEPSLATE_URANIUM_ORE, TINY_COAL_ORE, TINY_COPPER_ORE, TINY_DIAMOND_ORE, TINY_EMERALD_ORE,
                 TINY_GOLD_ORE, TINY_IRON_ORE, TINY_LAPIS_ORE, TINY_REDSTONE_ORE, DEEPSLATE_TINY_COAL_ORE, DEEPSLATE_TINY_COPPER_ORE, DEEPSLATE_TINY_DIAMOND_ORE,
@@ -23,9 +22,13 @@ public class FoundationBlockStateProvider extends DioBlockStateProvider {
                 DEEPSLATE_TINY_LEAD_ORE, DEEPSLATE_TINY_NICKEL_ORE, DEEPSLATE_TINY_SILVER_ORE, DEEPSLATE_TINY_TIN_ORE, DEEPSLATE_TINY_URANIUM_ORE,
                 NETHER_COAL_ORE, NETHER_COPPER_ORE, NETHER_DIAMOND_ORE, NETHER_EMERALD_ORE, NETHER_IRON_ORE, NETHER_LAPIS_ORE, NETHER_REDSTONE_ORE,
                 NETHER_BAUXITE_ORE, NETHER_LEAD_ORE, NETHER_NICKEL_ORE, NETHER_SILVER_ORE, NETHER_TIN_ORE, NETHER_URANIUM_ORE, ALUMINIUM_BLOCK, LEAD_BLOCK,
-                NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK
+                NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK, RAW_ALUMINIUM_BLOCK, RAW_LEAD_BLOCK, RAW_NICKEL_BLOCK,
+                RAW_SILVER_BLOCK, RAW_TIN_BLOCK, RAW_URANIUM_BLOCK
         );
+    }
 
-        cubeAllList.forEach(this::cubeAll);
+    @Override
+    protected void registerStates() {
+        getBlocksList().forEach(this::cubeAll);
     }
 }

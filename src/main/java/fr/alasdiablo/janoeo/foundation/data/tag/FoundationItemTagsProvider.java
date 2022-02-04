@@ -62,6 +62,14 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
         this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_TIN, STORAGE_BLOCKS_TIN);
         this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_URANIUM, STORAGE_BLOCKS_URANIUM);
 
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_RAW_ALUMINIUM, STORAGE_BLOCKS_RAW_ALUMINIUM);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_RAW_ALUMINUM, STORAGE_BLOCKS_RAW_ALUMINUM);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_RAW_LEAD, STORAGE_BLOCKS_RAW_LEAD);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_RAW_NICKEL, STORAGE_BLOCKS_RAW_NICKEL);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_RAW_SILVER, STORAGE_BLOCKS_RAW_SILVER);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_RAW_TIN, STORAGE_BLOCKS_RAW_TIN);
+        this.copy(FoundationTags.Blocks.STORAGE_BLOCKS_RAW_URANIUM, STORAGE_BLOCKS_RAW_URANIUM);
+
         this.copy(Tags.Blocks.ORES_REDSTONE, Tags.Items.ORES_REDSTONE);
         this.copy(Tags.Blocks.ORES_LAPIS, Tags.Items.ORES_LAPIS);
         this.copy(Tags.Blocks.ORES_IRON, Tags.Items.ORES_IRON);

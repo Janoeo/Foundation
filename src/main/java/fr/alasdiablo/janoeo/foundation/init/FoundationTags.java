@@ -45,6 +45,15 @@ public class FoundationTags {
         public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_TIN       = tag("storage_blocks/tin");
         public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_URANIUM   = tag("storage_blocks/uranium");
 
+        public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_ALUMINIUM = tag("storage_blocks/raw_aluminium"); // UK also FR btw
+        public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_ALUMINUM  = tag("storage_blocks/raw_aluminum");
+                // US // because we can found both…
+        public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_LEAD      = tag("storage_blocks/raw_lead");
+        public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_NICKEL    = tag("storage_blocks/raw_nickel");
+        public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_SILVER    = tag("storage_blocks/raw_silver");
+        public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_TIN       = tag("storage_blocks/raw_tin");
+        public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_URANIUM   = tag("storage_blocks/raw_uranium");
+
         private static Tags.@NotNull IOptionalNamedTag<Block> tag(String name) {
             return BlockTags.createOptional(new ResourceLocation("forge", name));
         }
@@ -131,6 +140,14 @@ public class FoundationTags {
         public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_SILVER    = tag("storage_blocks/silver");
         public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_TIN       = tag("storage_blocks/tin");
         public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_URANIUM   = tag("storage_blocks/uranium");
+
+        public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_RAW_ALUMINIUM = tag("storage_blocks/raw_aluminium"); // UK also FR btw
+        public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_RAW_ALUMINUM  = tag("storage_blocks/raw_aluminum");  // US // because we can found both…
+        public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_RAW_LEAD      = tag("storage_blocks/raw_lead");
+        public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_RAW_NICKEL    = tag("storage_blocks/raw_nickel");
+        public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_RAW_SILVER    = tag("storage_blocks/raw_silver");
+        public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_RAW_TIN       = tag("storage_blocks/raw_tin");
+        public static final Tags.IOptionalNamedTag<Item> STORAGE_BLOCKS_RAW_URANIUM   = tag("storage_blocks/raw_uranium");
 
         public static final Tags.IOptionalNamedTag<Item> RODS_COPPER  = tag("rods/copper");
         public static final Tags.IOptionalNamedTag<Item> RODS_DIAMOND = tag("rods/diamond");

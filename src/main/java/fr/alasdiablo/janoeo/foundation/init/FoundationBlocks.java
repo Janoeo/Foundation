@@ -21,8 +21,6 @@ import org.jetbrains.annotations.NotNull;
 public class FoundationBlocks {
     /* * * * * * * * * * * * * * * Item Properties * * *  * * * * * * * * * * */
     private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties().tab(Foundation.ORES_BLOCKS_GROUP);
-    /* * * * * * * * * * * * * * * Storage Block * * * * * * * * * * * * * */
-    public static final  Block           ALUMINIUM_BLOCK       = createStorageBlock(Registries.ALUMINIUM_BLOCK, MaterialColor.METAL);
 
     /* * * * * * * * * * * * * * * Block Properties * * *  * * * * * * * * * * */
     private static final BlockBehaviour.Properties PROPERTIES_STONE_ORE = BlockBehaviour.Properties.of(Material.STONE)
@@ -111,43 +109,60 @@ public class FoundationBlocks {
             .sound(SoundType.NETHER_ORE);
 
     /* * * * * * * * * * * * * * * Nether Ore * * * * * * * * * * * * * */
-    public static final  Block           NETHER_COAL_ORE               = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_COAL_ORE);
-    public static final  Block           NETHER_COPPER_ORE             = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_COPPER_ORE);
-    public static final  Block           NETHER_DIAMOND_ORE            = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.RARE, Registries.NETHER_DIAMOND_ORE);
-    public static final  Block           NETHER_EMERALD_ORE            = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.RARE, Registries.NETHER_EMERALD_ORE);
-    public static final  Block           NETHER_IRON_ORE               = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_IRON_ORE);
-    public static final  Block           NETHER_LAPIS_ORE              = new NetherOreBlock(
+    public static final Block NETHER_COAL_ORE     = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_COAL_ORE);
+    public static final Block NETHER_COPPER_ORE   = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_COPPER_ORE);
+    public static final Block NETHER_DIAMOND_ORE  = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.RARE, Registries.NETHER_DIAMOND_ORE);
+    public static final Block NETHER_EMERALD_ORE  = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.RARE, Registries.NETHER_EMERALD_ORE);
+    public static final Block NETHER_IRON_ORE     = new NetherOreBlock(PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_IRON_ORE);
+    public static final Block NETHER_LAPIS_ORE    = new NetherOreBlock(
             PROPERTIES_NETHER_ORE, ExperienceRarity.UNCOMMON, Registries.NETHER_LAPIS_ORE);
-    public static final  Block           NETHER_REDSTONE_ORE           = new NetherRedstoneOreBlock(
+    public static final Block NETHER_REDSTONE_ORE = new NetherRedstoneOreBlock(
             PROPERTIES_NETHER_ORE, ExperienceRarity.UNCOMMON, Registries.NETHER_REDSTONE_ORE
     );
-    public static final  Block           NETHER_BAUXITE_ORE            = new NetherOreBlock(
+    public static final Block NETHER_BAUXITE_ORE  = new NetherOreBlock(
             PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_BAUXITE_ORE);
-    public static final  Block           NETHER_LEAD_ORE               = new NetherOreBlock(
+    public static final Block NETHER_LEAD_ORE     = new NetherOreBlock(
             PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_LEAD_ORE);
-    public static final  Block           NETHER_NICKEL_ORE             = new NetherOreBlock(
+    public static final Block NETHER_NICKEL_ORE   = new NetherOreBlock(
             PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_NICKEL_ORE);
-    public static final  Block           NETHER_SILVER_ORE             = new NetherOreBlock(
+    public static final Block NETHER_SILVER_ORE   = new NetherOreBlock(
             PROPERTIES_NETHER_ORE, ExperienceRarity.UNCOMMON, Registries.NETHER_SILVER_ORE);
-    public static final  Block           NETHER_TIN_ORE                = new NetherOreBlock(
+    public static final Block NETHER_TIN_ORE      = new NetherOreBlock(
             PROPERTIES_NETHER_ORE, ExperienceRarity.COMMON, Registries.NETHER_TIN_ORE);
-    public static final  Block           NETHER_URANIUM_ORE            = new NetherOreBlock(
+    public static final Block NETHER_URANIUM_ORE  = new NetherOreBlock(
             PROPERTIES_NETHER_ORE, ExperienceRarity.UNCOMMON, Registries.NETHER_URANIUM_ORE);
-    public static final  Block           LEAD_BLOCK                    = createStorageBlock(Registries.LEAD_BLOCK, MaterialColor.COLOR_GRAY);
-    public static final  Block           NICKEL_BLOCK                  = createStorageBlock(Registries.NICKEL_BLOCK, MaterialColor.SAND);
-    public static final  Block           SILVER_BLOCK                  = createStorageBlock(Registries.SILVER_BLOCK, MaterialColor.SNOW);
-    public static final  Block           TIN_BLOCK                     = createStorageBlock(Registries.TIN_BLOCK, MaterialColor.METAL);
-    public static final  Block           URANIUM_BLOCK                 = createStorageBlock(Registries.URANIUM_BLOCK, MaterialColor.COLOR_YELLOW);
+
+    /* * * * * * * * * * * * * * * Storage Block Properties * * * * * * * * * * * * * */
     private static final Item.Properties PROPERTIES_ITEM_STORAGE_BLOCK = new Item.Properties().tab(Foundation.GEAR_ITEMS_GROUP);
+
+    /* * * * * * * * * * * * * * * Storage Block * * * * * * * * * * * * * */
+    public static final Block ALUMINIUM_BLOCK = createStorageBlock(Registries.ALUMINIUM_BLOCK, MaterialColor.METAL);
+    public static final Block LEAD_BLOCK      = createStorageBlock(Registries.LEAD_BLOCK, MaterialColor.COLOR_GRAY);
+    public static final Block NICKEL_BLOCK    = createStorageBlock(Registries.NICKEL_BLOCK, MaterialColor.SAND);
+    public static final Block SILVER_BLOCK    = createStorageBlock(Registries.SILVER_BLOCK, MaterialColor.SNOW);
+    public static final Block TIN_BLOCK       = createStorageBlock(Registries.TIN_BLOCK, MaterialColor.METAL);
+    public static final Block URANIUM_BLOCK   = createStorageBlock(Registries.URANIUM_BLOCK, MaterialColor.COLOR_YELLOW);
+
+    public static final Block RAW_ALUMINIUM_BLOCK = createRawBlock(Registries.RAW_ALUMINIUM_BLOCK, MaterialColor.METAL);
+    public static final Block RAW_LEAD_BLOCK      = createRawBlock(Registries.RAW_LEAD_BLOCK, MaterialColor.COLOR_GRAY);
+    public static final Block RAW_NICKEL_BLOCK    = createRawBlock(Registries.RAW_NICKEL_BLOCK, MaterialColor.SAND);
+    public static final Block RAW_SILVER_BLOCK    = createRawBlock(Registries.RAW_SILVER_BLOCK, MaterialColor.SNOW);
+    public static final Block RAW_TIN_BLOCK       = createRawBlock(Registries.RAW_TIN_BLOCK, MaterialColor.METAL);
+    public static final Block RAW_URANIUM_BLOCK   = createRawBlock(Registries.RAW_URANIUM_BLOCK, MaterialColor.COLOR_YELLOW);
 
     private static @NotNull Block createStorageBlock(String name, MaterialColor color) {
         var block = new Block(BlockBehaviour.Properties.of(
-                        Material.METAL, color
-                )
-                                      .requiresCorrectToolForDrops()
-                                      .strength(3.0F, 6.0F)
-                                      .sound(SoundType.METAL)
+                Material.METAL, color
+        ).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.METAL)
         );
+        block.setRegistryName(name);
+        return block;
+    }
+
+    private static @NotNull Block createRawBlock(String name, MaterialColor color) {
+        var block = new Block(BlockBehaviour.Properties.of(
+                Material.STONE, color
+        ).requiresCorrectToolForDrops().strength(5.0F, 6.0F));
         block.setRegistryName(name);
         return block;
     }
@@ -218,13 +233,15 @@ public class FoundationBlocks {
 
     private static void initStorageBlock(IForgeRegistry<Block> registry) {
         RegistryHelper.registerBlock(
-                registry, ALUMINIUM_BLOCK, LEAD_BLOCK, NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK
+                registry, ALUMINIUM_BLOCK, LEAD_BLOCK, NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK, RAW_ALUMINIUM_BLOCK, RAW_LEAD_BLOCK,
+                RAW_NICKEL_BLOCK, RAW_SILVER_BLOCK, RAW_TIN_BLOCK, RAW_URANIUM_BLOCK
         );
     }
 
     private static void initStorageItem(IForgeRegistry<Item> registry) {
         RegistryHelper.registerBlockItem(
-                registry, PROPERTIES_ITEM_STORAGE_BLOCK, ALUMINIUM_BLOCK, LEAD_BLOCK, NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK
+                registry, PROPERTIES_ITEM_STORAGE_BLOCK, ALUMINIUM_BLOCK, LEAD_BLOCK, NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK, RAW_ALUMINIUM_BLOCK,
+                RAW_LEAD_BLOCK, RAW_NICKEL_BLOCK, RAW_SILVER_BLOCK, RAW_TIN_BLOCK, RAW_URANIUM_BLOCK
         );
     }
 }

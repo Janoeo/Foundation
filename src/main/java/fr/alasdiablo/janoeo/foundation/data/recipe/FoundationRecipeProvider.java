@@ -113,6 +113,22 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromBlock(TIN_INGOT, STORAGE_BLOCKS_TIN, "has_tin_block", "tin_ingot_from_block");
         this.ingotFromBlock(URANIUM_INGOT, STORAGE_BLOCKS_URANIUM, "has_uranium_block", "uranium_ingot_from_block");
 
+        this.blockFromIngot(RAW_ALUMINIUM_BLOCK, RAW_MATERIALS_ALUMINIUM, "has_raw_aluminium", "raw_aluminium_block");
+        this.blockFromIngot(RAW_ALUMINIUM_BLOCK, RAW_MATERIALS_ALUMINUM, "has_raw_aluminum", "raw_aluminum_block");
+        this.blockFromIngot(RAW_LEAD_BLOCK, RAW_MATERIALS_LEAD, "has_raw_lead", "raw_lead_block");
+        this.blockFromIngot(RAW_NICKEL_BLOCK, RAW_MATERIALS_NICKEL, "has_raw_nickel", "raw_nickel_block");
+        this.blockFromIngot(RAW_SILVER_BLOCK, RAW_MATERIALS_SILVER, "has_raw_silver", "raw_silver_block");
+        this.blockFromIngot(RAW_TIN_BLOCK, RAW_MATERIALS_TIN, "has_raw_tin", "raw_tin_block");
+        this.blockFromIngot(RAW_URANIUM_BLOCK, RAW_MATERIALS_URANIUM, "has_raw_uranium", "raw_uranium_block");
+
+        this.ingotFromBlock(RAW_ALUMINIUM, STORAGE_BLOCKS_RAW_ALUMINIUM, "has_raw_aluminium_block", "raw_aluminium_from_block");
+        this.ingotFromBlock(RAW_ALUMINIUM, STORAGE_BLOCKS_RAW_ALUMINUM, "has_raw_aluminum_block", "raw_aluminum_from_block");
+        this.ingotFromBlock(RAW_LEAD, STORAGE_BLOCKS_RAW_LEAD, "has_raw_lead_block", "raw_lead_from_block");
+        this.ingotFromBlock(RAW_NICKEL, STORAGE_BLOCKS_RAW_NICKEL, "has_raw_nickel_block", "raw_nickel_from_block");
+        this.ingotFromBlock(RAW_SILVER, STORAGE_BLOCKS_RAW_SILVER, "has_raw_silver_block", "raw_silver_from_block");
+        this.ingotFromBlock(RAW_TIN, STORAGE_BLOCKS_RAW_TIN, "has_raw_tin_block", "raw_tin_from_block");
+        this.ingotFromBlock(RAW_URANIUM, STORAGE_BLOCKS_RAW_URANIUM, "has_raw_uranium_block", "raw_uranium_from_block");
+
         this.rod(COPPER_STICK, Tags.Items.INGOTS_COPPER, "has_copper_ingot");
         this.rod(DIAMOND_STICK, Tags.Items.GEMS_DIAMOND, "has_diamond_ingot");
         this.rod(GOLD_STICK, Tags.Items.INGOTS_GOLD, "has_gold_ingot");
