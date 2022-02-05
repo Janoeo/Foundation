@@ -4,7 +4,9 @@
 
 <details><summary><b>1.18.1</b></summary>
 
-+ [6.9.2.79](#68278)
++ [6.9.3.81](#68381)
++ [6.9.2.80](#69280)
++ [6.9.2.79](#69279)
 + [6.8.2.78](#68278)
 + [6.7.2.77-experimental](#67277-experimental)
 
@@ -112,6 +114,32 @@
 + [1.0](#10)
 
 </details>
+
+### 6.9.3.81
+
+#### Fix
+
++ add missing recipes
++ update tag with wrong reference
++ add missing loot table
+
+#### Add
+
++ add Create compatibility
++ add block of raw materials
+
+#### Other
+
++ Rename and reorganise creative tab
+
+#### Dependencies
+
++ update Forge (39.0.64)
++ update Catalog (1.6.0)
++ update JEI (9.2.1.69)
++ update JER (0.13.1.138)
++ add Flywheel (0.6.0)
++ add Create (v0.4d)
 
 ### 6.9.2.80
 

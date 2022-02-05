@@ -153,8 +153,7 @@ public class FoundationBlocks {
     private static @NotNull Block createStorageBlock(String name, MaterialColor color) {
         var block = new Block(BlockBehaviour.Properties.of(
                 Material.METAL, color
-        ).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.METAL)
-        );
+        ).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.METAL));
         block.setRegistryName(name);
         return block;
     }
