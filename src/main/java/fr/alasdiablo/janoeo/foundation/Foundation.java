@@ -47,21 +47,14 @@ public class Foundation {
 
     public static final Logger logger = LogManager.getLogger(Registries.MOD_ID);
 
-    public static final CreativeModeTab ORES_ITEMS_GROUP = new GroundCreativeModeTab("janoeo.foundation.ores.item") {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(FoundationItems.SILVER_INGOT);
-        }
-    };
-
-    public static final CreativeModeTab GEAR_ITEMS_GROUP = new GroundCreativeModeTab("janoeo.foundation.gear.item") {
+    public static final CreativeModeTab MATERIALS_GROUP = new GroundCreativeModeTab("janoeo.foundation.materials") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(FoundationItems.SILVER_GEAR);
         }
     };
 
-    public static final CreativeModeTab ORES_BLOCKS_GROUP = new GroundCreativeModeTab("janoeo.foundation.ores.block") {
+    public static final CreativeModeTab ORES_GROUP = new GroundCreativeModeTab("janoeo.foundation.ores") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(FoundationBlocks.SILVER_ORE);

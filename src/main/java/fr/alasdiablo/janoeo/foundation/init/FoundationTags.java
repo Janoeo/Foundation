@@ -47,7 +47,7 @@ public class FoundationTags {
 
         public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_ALUMINIUM = tag("storage_blocks/raw_aluminium"); // UK also FR btw
         public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_ALUMINUM  = tag("storage_blocks/raw_aluminum");
-                // US // because we can found both…
+        // US // because we can found both…
         public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_LEAD      = tag("storage_blocks/raw_lead");
         public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_NICKEL    = tag("storage_blocks/raw_nickel");
         public static final Tags.IOptionalNamedTag<Block> STORAGE_BLOCKS_RAW_SILVER    = tag("storage_blocks/raw_silver");

@@ -39,36 +39,42 @@ public class CrushingRecipe extends ProcessingRecipe {
         this.ore(() -> FoundationBlocks.BAUXITE_ORE, AllItems.CRUSHED_BAUXITE::get, () -> Blocks.COBBLESTONE);
         this.ore(() -> FoundationBlocks.DEEPSLATE_BAUXITE_ORE, AllItems.CRUSHED_BAUXITE::get, () -> Blocks.COBBLED_DEEPSLATE);
         this.raw(() -> FoundationItems.RAW_ALUMINIUM, AllItems.CRUSHED_BAUXITE::get);
+        this.rawBlock(() -> FoundationBlocks.RAW_ALUMINIUM_BLOCK, AllItems.CRUSHED_BAUXITE::get);
         this.dust(() -> FoundationItems.ALUMINIUM_INGOT, () -> FoundationItems.ALUMINIUM_DUST);
         this.dust(AllItems.CRUSHED_BAUXITE::get, () -> FoundationItems.ALUMINIUM_DUST);
 
         this.ore(() -> FoundationBlocks.LEAD_ORE, AllItems.CRUSHED_LEAD::get, () -> Blocks.COBBLESTONE);
         this.ore(() -> FoundationBlocks.DEEPSLATE_LEAD_ORE, AllItems.CRUSHED_LEAD::get, () -> Blocks.COBBLED_DEEPSLATE);
         this.raw(() -> FoundationItems.RAW_LEAD, AllItems.CRUSHED_LEAD::get);
+        this.rawBlock(() -> FoundationBlocks.RAW_LEAD_BLOCK, AllItems.CRUSHED_LEAD::get);
         this.dust(() -> FoundationItems.LEAD_INGOT, () -> FoundationItems.LEAD_DUST);
         this.dust(AllItems.CRUSHED_LEAD::get, () -> FoundationItems.LEAD_DUST);
 
         this.ore(() -> FoundationBlocks.NICKEL_ORE, AllItems.CRUSHED_NICKEL::get, () -> Blocks.COBBLESTONE);
         this.ore(() -> FoundationBlocks.DEEPSLATE_NICKEL_ORE, AllItems.CRUSHED_NICKEL::get, () -> Blocks.COBBLED_DEEPSLATE);
         this.raw(() -> FoundationItems.RAW_NICKEL, AllItems.CRUSHED_NICKEL::get);
+        this.rawBlock(() -> FoundationBlocks.RAW_NICKEL_BLOCK, AllItems.CRUSHED_NICKEL::get);
         this.dust(() -> FoundationItems.NICKEL_INGOT, () -> FoundationItems.NICKEL_DUST);
         this.dust(AllItems.CRUSHED_NICKEL::get, () -> FoundationItems.NICKEL_DUST);
 
         this.ore(() -> FoundationBlocks.SILVER_ORE, AllItems.CRUSHED_SILVER::get, () -> Blocks.COBBLESTONE);
         this.ore(() -> FoundationBlocks.DEEPSLATE_SILVER_ORE, AllItems.CRUSHED_SILVER::get, () -> Blocks.COBBLED_DEEPSLATE);
         this.raw(() -> FoundationItems.RAW_SILVER, AllItems.CRUSHED_SILVER::get);
+        this.rawBlock(() -> FoundationBlocks.RAW_SILVER_BLOCK, AllItems.CRUSHED_SILVER::get);
         this.dust(() -> FoundationItems.SILVER_INGOT, () -> FoundationItems.SILVER_DUST);
         this.dust(AllItems.CRUSHED_SILVER::get, () -> FoundationItems.SILVER_DUST);
 
         this.ore(() -> FoundationBlocks.TIN_ORE, AllItems.CRUSHED_TIN::get, () -> Blocks.COBBLESTONE);
         this.ore(() -> FoundationBlocks.DEEPSLATE_TIN_ORE, AllItems.CRUSHED_TIN::get, () -> Blocks.COBBLED_DEEPSLATE);
         this.raw(() -> FoundationItems.RAW_TIN, AllItems.CRUSHED_TIN::get);
+        this.rawBlock(() -> FoundationBlocks.RAW_TIN_BLOCK, AllItems.CRUSHED_TIN::get);
         this.dust(() -> FoundationItems.TIN_INGOT, () -> FoundationItems.TIN_DUST);
         this.dust(AllItems.CRUSHED_TIN::get, () -> FoundationItems.TIN_DUST);
 
         this.ore(() -> FoundationBlocks.URANIUM_ORE, AllItems.CRUSHED_URANIUM::get, () -> Blocks.COBBLESTONE);
         this.ore(() -> FoundationBlocks.DEEPSLATE_URANIUM_ORE, AllItems.CRUSHED_URANIUM::get, () -> Blocks.COBBLED_DEEPSLATE);
         this.raw(() -> FoundationItems.RAW_URANIUM, AllItems.CRUSHED_URANIUM::get);
+        this.rawBlock(() -> FoundationBlocks.RAW_URANIUM_BLOCK, AllItems.CRUSHED_URANIUM::get);
         this.dust(() -> FoundationItems.URANIUM_INGOT, () -> FoundationItems.URANIUM_DUST);
         this.dust(AllItems.CRUSHED_URANIUM::get, () -> FoundationItems.URANIUM_DUST);
     }
@@ -89,6 +95,15 @@ public class CrushingRecipe extends ProcessingRecipe {
             builder.duration(400);
             builder.output(output.get(), 1);
             builder.output(0.75f, AllItems.EXP_NUGGET.get(), 1);
+            return builder;
+        });
+    }
+
+    private void rawBlock(Supplier<ItemLike> input, Supplier<ItemLike> output) {
+        this.create(Registries.MOD_ID, input, builder -> {
+            builder.duration(400);
+            builder.output(output.get(), 9);
+            builder.output(0.75f, AllItems.EXP_NUGGET.get(), 9);
             return builder;
         });
     }

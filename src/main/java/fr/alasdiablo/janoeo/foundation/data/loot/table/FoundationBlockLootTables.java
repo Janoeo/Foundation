@@ -27,6 +27,13 @@ public class FoundationBlockLootTables extends BlockLootTable {
         this.dropSelf(FoundationBlocks.TIN_BLOCK);
         this.dropSelf(FoundationBlocks.URANIUM_BLOCK);
 
+        this.dropSelf(FoundationBlocks.RAW_ALUMINIUM_BLOCK);
+        this.dropSelf(FoundationBlocks.RAW_LEAD_BLOCK);
+        this.dropSelf(FoundationBlocks.RAW_NICKEL_BLOCK);
+        this.dropSelf(FoundationBlocks.RAW_SILVER_BLOCK);
+        this.dropSelf(FoundationBlocks.RAW_TIN_BLOCK);
+        this.dropSelf(FoundationBlocks.RAW_URANIUM_BLOCK);
+
         this.registerOreLootTable(
                 FoundationItems.RAW_ALUMINIUM, ConstantValue.exactly(1.0F), FoundationBlocks.BAUXITE_ORE, FoundationBlocks.DEEPSLATE_BAUXITE_ORE);
         this.registerOreLootTable(FoundationItems.RAW_LEAD, ConstantValue.exactly(1.0F), FoundationBlocks.LEAD_ORE, FoundationBlocks.DEEPSLATE_LEAD_ORE);

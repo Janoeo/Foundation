@@ -144,17 +144,20 @@ public class SpanishProvider extends LanguageProvider {
         this.add(TIN_BLOCK, SimpleUnicode.encodeOf("Block of Tin"));
         this.add(URANIUM_BLOCK, SimpleUnicode.encodeOf("Block of Uranium"));
 
+        this.add(RAW_ALUMINIUM_BLOCK, SimpleUnicode.encodeOf("Block of Raw Aluminium"));
+        this.add(RAW_LEAD_BLOCK, SimpleUnicode.encodeOf("Block of Raw Lead"));
+        this.add(RAW_NICKEL_BLOCK, SimpleUnicode.encodeOf("Block of Raw Nickel"));
+        this.add(RAW_SILVER_BLOCK, SimpleUnicode.encodeOf("Block of Raw Silver"));
+        this.add(RAW_TIN_BLOCK, SimpleUnicode.encodeOf("Block of Raw Tin"));
+        this.add(RAW_URANIUM_BLOCK, SimpleUnicode.encodeOf("Block of Raw Uranium"));
+
         this.add(
-                ((TranslatableComponent) Foundation.ORES_ITEMS_GROUP.getDisplayName()).getKey(),
-                "Janoeo Foundation - Objetos"
+                ((TranslatableComponent) Foundation.ORES_GROUP.getDisplayName()).getKey(),
+                "Janoeo Foundation - Ores"
         );
         this.add(
-                ((TranslatableComponent) Foundation.GEAR_ITEMS_GROUP.getDisplayName()).getKey(),
-                "Janoeo Foundation - Gear"
-        );
-        this.add(
-                ((TranslatableComponent) Foundation.ORES_BLOCKS_GROUP.getDisplayName()).getKey(),
-                "Janoeo Foundation - Bloques"
+                ((TranslatableComponent) Foundation.MATERIALS_GROUP.getDisplayName()).getKey(),
+                "Janoeo Foundation - Materials"
         );
     }
 }
