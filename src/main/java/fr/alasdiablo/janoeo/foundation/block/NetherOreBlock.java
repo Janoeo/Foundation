@@ -1,16 +1,18 @@
 package fr.alasdiablo.janoeo.foundation.block;
 
-import fr.alasdiablo.diolib.block.ExperienceRarity;
-import fr.alasdiablo.diolib.block.INetherOre;
+import fr.alasdiablo.diolib.api.block.INetherOre;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.OreBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 
 public class NetherOreBlock extends OreBlock implements INetherOre {
-    public NetherOreBlock(Properties properties, ExperienceRarity experienceRarity, String registryName) {
-        super(properties, experienceRarity, registryName);
+
+    public NetherOreBlock(Properties properties, UniformInt xp) {
+        super(properties, xp);
     }
 
     @Override

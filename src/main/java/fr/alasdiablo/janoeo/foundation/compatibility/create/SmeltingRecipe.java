@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.compatibility.create;
 
 import com.simibubi.create.AllItems;
-import fr.alasdiablo.diolib.registries.RegistryHelper;
+import fr.alasdiablo.diolib.api.util.ResourceLocations;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import net.minecraft.data.DataGenerator;
@@ -23,12 +23,12 @@ public class SmeltingRecipe extends RecipeProvider {
 
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
-        this.ingot(FoundationItems.ALUMINIUM_INGOT, AllItems.CRUSHED_BAUXITE.get(), consumer);
-        this.ingot(FoundationItems.LEAD_INGOT, AllItems.CRUSHED_LEAD.get(), consumer);
-        this.ingot(FoundationItems.NICKEL_INGOT, AllItems.CRUSHED_NICKEL.get(), consumer);
-        this.ingot(FoundationItems.SILVER_INGOT, AllItems.CRUSHED_SILVER.get(), consumer);
-        this.ingot(FoundationItems.TIN_INGOT, AllItems.CRUSHED_TIN.get(), consumer);
-        this.ingot(FoundationItems.URANIUM_INGOT, AllItems.CRUSHED_URANIUM.get(), consumer);
+        this.ingot(FoundationItems.ALUMINIUM_INGOT.get(), AllItems.CRUSHED_BAUXITE.get(), consumer);
+        this.ingot(FoundationItems.LEAD_INGOT.get(), AllItems.CRUSHED_LEAD.get(), consumer);
+        this.ingot(FoundationItems.NICKEL_INGOT.get(), AllItems.CRUSHED_NICKEL.get(), consumer);
+        this.ingot(FoundationItems.SILVER_INGOT.get(), AllItems.CRUSHED_SILVER.get(), consumer);
+        this.ingot(FoundationItems.TIN_INGOT.get(), AllItems.CRUSHED_TIN.get(), consumer);
+        this.ingot(FoundationItems.URANIUM_INGOT.get(), AllItems.CRUSHED_URANIUM.get(), consumer);
     }
 
     private void ingot(ItemLike resultIn, ItemLike ingredientIn, Consumer<FinishedRecipe> consumer) {
@@ -40,10 +40,10 @@ public class SmeltingRecipe extends RecipeProvider {
         ).unlockedBy(
                 Objects.requireNonNull(ingredientIn.asItem().getRegistryName()).getPath(),
                 has(ingredientIn)
-        ).save(consumer, RegistryHelper.rl(
-                       Registries.MOD_ID,
-                       "smelting/" + Objects.requireNonNull(resultIn.asItem().getRegistryName()).getPath()
-               )
+        ).save(consumer, ResourceLocations.of(
+                        Registries.MOD_ID,
+                        "smelting/" + Objects.requireNonNull(resultIn.asItem().getRegistryName()).getPath()
+                )
         );
 
         SimpleCookingRecipeBuilder.blasting(
@@ -54,10 +54,10 @@ public class SmeltingRecipe extends RecipeProvider {
         ).unlockedBy(
                 Objects.requireNonNull(ingredientIn.asItem().getRegistryName()).getPath(),
                 has(ingredientIn)
-        ).save(consumer, RegistryHelper.rl(
-                       Registries.MOD_ID,
-                       "blasting/" + Objects.requireNonNull(resultIn.asItem().getRegistryName()).getPath()
-               )
+        ).save(consumer, ResourceLocations.of(
+                        Registries.MOD_ID,
+                        "blasting/" + Objects.requireNonNull(resultIn.asItem().getRegistryName()).getPath()
+                )
         );
     }
 }

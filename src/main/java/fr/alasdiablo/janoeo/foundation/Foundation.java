@@ -1,15 +1,12 @@
 package fr.alasdiablo.janoeo.foundation;
 
-import fr.alasdiablo.diolib.item.GroundCreativeModeTab;
+import fr.alasdiablo.diolib.api.item.GroundCreativeModeTab;
 import fr.alasdiablo.janoeo.foundation.compatibility.create.CompactingRecipe;
 import fr.alasdiablo.janoeo.foundation.compatibility.create.CrushingRecipe;
 import fr.alasdiablo.janoeo.foundation.compatibility.create.SmeltingRecipe;
 import fr.alasdiablo.janoeo.foundation.compatibility.create.WashingRecipe;
 import fr.alasdiablo.janoeo.foundation.compatibility.jer.JERCompat;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
-import fr.alasdiablo.janoeo.foundation.data.language.EnglishProvider;
-import fr.alasdiablo.janoeo.foundation.data.language.FrenchProvider;
-import fr.alasdiablo.janoeo.foundation.data.language.SpanishProvider;
 import fr.alasdiablo.janoeo.foundation.data.loot.FoundationLootTableProvider;
 import fr.alasdiablo.janoeo.foundation.data.model.FoundationBlockModelProvider;
 import fr.alasdiablo.janoeo.foundation.data.model.FoundationBlockStateProvider;
@@ -23,12 +20,9 @@ import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -50,38 +44,37 @@ public class Foundation {
     public static final CreativeModeTab MATERIALS_GROUP = new GroundCreativeModeTab("janoeo.foundation.materials") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(FoundationItems.SILVER_GEAR);
+            return new ItemStack(FoundationItems.SILVER_GEAR.get());
         }
     };
 
     public static final CreativeModeTab ORES_GROUP = new GroundCreativeModeTab("janoeo.foundation.ores") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(FoundationBlocks.SILVER_ORE);
+            return new ItemStack(FoundationBlocks.SILVER_ORE.get());
         }
     };
 
     public Foundation() throws IOException {
         this.foundCompat();
-        FoundationConfig.init();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modBus.addListener(this::initFeatures);
+        FoundationItems.init(modBus);
+        FoundationBlocks.init(modBus);
         modBus.addListener(this::setup);
         modBus.addListener(this::gatherData);
-        modBus.addGenericListener(Block.class, FoundationBlocks::initBlock);
-        modBus.addGenericListener(Item.class, FoundationBlocks::initItem);
-        modBus.addGenericListener(Item.class, FoundationItems::init);
+        FoundationConfig.init();
+        MinecraftForge.EVENT_BUS.addListener(FoundationGeneration::onBiomeLoading);
     }
 
     private void foundCompat() {
         final ModList modList = ModList.get();
         Compat.JUST_ENOUGH_RESOURCES = modList.isLoaded("jeresources");
-        Compat.CREATE                = modList.isLoaded("create");
+        Compat.CREATE = modList.isLoaded("create");
     }
 
     private void gatherData(@NotNull GatherDataEvent event) {
         Foundation.logger.debug("Start data generator");
-        final DataGenerator      generator          = event.getGenerator();
+        final DataGenerator generator = event.getGenerator();
         final ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         Foundation.logger.debug("Add Block Model Provider");
@@ -92,11 +85,6 @@ public class Foundation {
 
         Foundation.logger.debug("Add Item Model Provider");
         generator.addProvider(new FoundationItemModelProvider(generator, existingFileHelper));
-
-        Foundation.logger.debug("Add Language Provider");
-        generator.addProvider(new EnglishProvider(generator));
-        generator.addProvider(new FrenchProvider(generator));
-        generator.addProvider(new SpanishProvider(generator));
 
         Foundation.logger.debug("Add Tags Provider");
         final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(
@@ -130,12 +118,8 @@ public class Foundation {
         }
     }
 
-    private void initFeatures(RegistryEvent.NewRegistry newRegistry) {
-        MinecraftForge.EVENT_BUS.addListener(FoundationGeneration::onBiomeLoading);
-    }
-
     private static class Compat {
         public static boolean JUST_ENOUGH_RESOURCES = false;
-        public static boolean CREATE                = false;
+        public static boolean CREATE = false;
     }
 }

@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 public class FoundationGeneration {
 
     public static void onBiomeLoading(@NotNull BiomeLoadingEvent biomeLoadingEvent) {
-        var generation    = biomeLoadingEvent.getGeneration();
+        var generation = biomeLoadingEvent.getGeneration();
         var biomeCategory = biomeLoadingEvent.getCategory();
 
         if (biomeCategory != Biome.BiomeCategory.NETHER && biomeCategory != Biome.BiomeCategory.THEEND) {
@@ -61,9 +61,10 @@ public class FoundationGeneration {
         if (FoundationConfig.TINY_GOLD_ORE_CONFIG.isEnable()) generation.addFeature(
                 GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_TINY_GOLD
         );
-        if (FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG.isEnable() && biomeCategory == Biome.BiomeCategory.MESA) generation.addFeature(
-                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_TINY_GOLD_EXTRA
-        );
+        if (FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG.isEnable() && biomeCategory == Biome.BiomeCategory.MESA)
+            generation.addFeature(
+                    GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_TINY_GOLD_EXTRA
+            );
         if (FoundationConfig.TINY_IRON_ORE_CONFIG.isEnable()) generation.addFeature(
                 GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_TINY_IRON
         );

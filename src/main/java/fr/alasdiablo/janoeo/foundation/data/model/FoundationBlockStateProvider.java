@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.data.model;
 
-import fr.alasdiablo.diolib.data.provider.DioBlockStateProvider;
+import fr.alasdiablo.diolib.api.data.blockstate.DioBlockStateProvider;
 import net.minecraft.data.DataGenerator;
 
 import java.util.List;

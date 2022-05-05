@@ -2,9 +2,15 @@
 
 ## Summary
 
+<details><summary><b>1.18.2</b></summary>
+
++ [7.9.3.82](#79382)
+
+</details>
+
 <details><summary><b>1.18.1</b></summary>
 
-+ [6.9.3.81](#68381)
++ [6.9.3.81](#69381)
 + [6.9.2.80](#69280)
 + [6.9.2.79](#69279)
 + [6.8.2.78](#68278)
@@ -114,6 +120,21 @@
 + [1.0](#10)
 
 </details>
+
+### 7.9.3.82
+
+### Remove
++ Scrap
+
+#### Dependencies
+
++ update Minecraft (1.18.2)
++ update Forge (40.1.0)
++ update Catalog (1.6.1)
++ update JEI (9.7.0.194)
++ update JER (0.14.1.160)
++ add Flywheel (0.6.2)
++ add Create (v0.4.1)
 
 ### 6.9.3.81
 

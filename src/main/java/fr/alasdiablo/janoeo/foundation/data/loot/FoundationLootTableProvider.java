@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.data.loot;
 
 import com.mojang.datafixers.util.Pair;
-import fr.alasdiablo.diolib.data.provider.DioLootTableProvider;
+import fr.alasdiablo.diolib.api.data.loot.DioLootTableProvider;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import fr.alasdiablo.janoeo.foundation.data.loot.table.FoundationBlockLootTables;
 import net.minecraft.data.DataGenerator;

@@ -13,12 +13,12 @@ import java.util.function.Supplier;
 public class WashingRecipe extends ProcessingRecipe {
     public WashingRecipe(DataGenerator generator) {
         super(generator);
-        this.crushedOre(AllItems.CRUSHED_BAUXITE::get, FoundationItems.ALUMINIUM_NUGGET);
-        this.crushedOre(AllItems.CRUSHED_LEAD::get, FoundationItems.LEAD_NUGGET);
-        this.crushedOre(AllItems.CRUSHED_NICKEL::get, FoundationItems.NICKEL_NUGGET);
-        this.crushedOre(AllItems.CRUSHED_SILVER::get, FoundationItems.SILVER_NUGGET);
-        this.crushedOre(AllItems.CRUSHED_TIN::get, FoundationItems.TIN_NUGGET);
-        this.crushedOre(AllItems.CRUSHED_URANIUM::get, FoundationItems.URANIUM_NUGGET);
+        this.crushedOre(AllItems.CRUSHED_BAUXITE::get, FoundationItems.ALUMINIUM_NUGGET.get());
+        this.crushedOre(AllItems.CRUSHED_LEAD::get, FoundationItems.LEAD_NUGGET.get());
+        this.crushedOre(AllItems.CRUSHED_NICKEL::get, FoundationItems.NICKEL_NUGGET.get());
+        this.crushedOre(AllItems.CRUSHED_SILVER::get, FoundationItems.SILVER_NUGGET.get());
+        this.crushedOre(AllItems.CRUSHED_TIN::get, FoundationItems.TIN_NUGGET.get());
+        this.crushedOre(AllItems.CRUSHED_URANIUM::get, FoundationItems.URANIUM_NUGGET.get());
     }
 
     private void crushedOre(Supplier<ItemLike> input, ItemLike output) { // TODO Add extra drop

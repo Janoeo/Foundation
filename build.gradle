@@ -25,7 +25,7 @@ apply plugin: 'org.spongepowered.mixin'
 // ***************************************** //
 def majorVersion = 9
 def minorVersion = 3
-def buildVersion = 81
+def buildVersion = 82
 def isExperimental = false
 version = "${majorVersion}.${minorVersion}.${buildVersion}"
 if (isExperimental) {
@@ -38,7 +38,7 @@ if (isExperimental) {
 //                                           //
 // ***************************************** //
 def isJanoeo = true
-def janoeoProjectVersion = 6
+def janoeoProjectVersion = 7
 if (isJanoeo) {
     version = "${janoeoProjectVersion}.${version}"
 }
