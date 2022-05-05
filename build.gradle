@@ -63,7 +63,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 def deobfSourceClassifier
 
 minecraft {
-    mappings channel: 'parchment', version: '2022.01.23-1.18.1'
+    mappings channel: 'parchment', version: '2022.05.02-1.18.2'
     deobfSourceClassifier = getMappings().get()
     runs {
         client {
@@ -113,13 +113,13 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.64'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
     implementation fileTree(dir:'lib', include:'*.jar')
-    implementation fg.deobf('curse.maven:catalogue-459701:3559402') // Catalogue (1.6.0)
-    implementation fg.deobf('curse.maven:jei-238222:3599262')       // JEI (9.2.1.69)
-    implementation fg.deobf('curse.maven:jer-240630:3575590')       // JER (0.13.1.138)
-    implementation fg.deobf("curse.maven:flywheel-486392:3623314")  // Flywheel (0.6.0)
-    implementation fg.deobf("curse.maven:create-328085:3623348")    // Create (v0.4d)
+    implementation fg.deobf('curse.maven:catalogue-459701:3721991') // Catalogue (1.6.1)
+    implementation fg.deobf('curse.maven:jei-238222:3773518')       // JEI (9.7.0.194)
+    implementation fg.deobf('curse.maven:jer-240630:3705938')       // JER (0.14.1.160)
+    implementation fg.deobf("curse.maven:flywheel-486392:3737402")  // Flywheel (0.6.2)
+    implementation fg.deobf("curse.maven:create-328085:3737418")    // Create (v0.4.1)
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
 
