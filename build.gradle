@@ -18,29 +18,16 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-// ***************************************** //
-//                                           //
-//        Standard versioning system         //
-//                                           //
-// ***************************************** //
-def majorVersion = 9
-def minorVersion = 3
-def buildVersion = 82
-def isExperimental = false
-version = "${majorVersion}.${minorVersion}.${buildVersion}"
-if (isExperimental) {
-    version += '-experimental'
-}
-
-// ***************************************** //
-//                                           //
-//         Janoeo versioning system          //
-//                                           //
-// ***************************************** //
-def isJanoeo = true
-def janoeoProjectVersion = 7
-if (isJanoeo) {
-    version = "${janoeoProjectVersion}.${version}"
+if (project.findProperty('ci_build').toBoolean()) {
+    version = "ci.${project.findProperty('ci_build_number')}"
+} else {
+    version =  "${project.findProperty('Main_Version')}"
+    version +=".${project.findProperty('majorVersion')}"
+    version +=".${project.findProperty('minorVersion')}"
+    version +=".${project.findProperty('buildVersion')}"
+    if (isExperimental) {
+        version += '-experimental'
+    }
 }
 
 group = 'fr.alasdiablo.janoeo.foundation'
