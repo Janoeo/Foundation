@@ -22,7 +22,7 @@ jobs:
         run: chmod +x gradlew
       - name: Set gradle ci information
         shell: bash
-        run: echo "org.gradle.jvmargs=-Xmx3G\norg.gradle.daemon=false\nci_build=true\nci_build_number=${{github.run_number}}" > gradle.properties
+        run: ${GITHUB_WORKSPACE}/.github/workflows/setkey.sh ${{github.run_number}}
       - name: Build with Gradle
         run: ./gradlew build
       - name: Upload ci build
