@@ -18,16 +18,19 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-      - name: Set gradle ci information
+      - name: Grant execute permission
         shell: bash
         run: |
-          chmod +x ${GITHUB_WORKSPACE}/.github/workflows/setkey.sh
-          ${GITHUB_WORKSPACE}/.github/workflows/setkey.sh ${{github.run_number}}
-      - name: Build with Gradle
+          chmod +x gradlew
+          chmod +x ./.github/workflows/setkey.sh
+      - name: Update mod version
+        shell: bash
+        run: ./.github/workflows/setkey.sh ${{github.run_number}}
+      - name: Generated mod data
+        run: ./gradlew runData
+      - name: Build mod
         run: ./gradlew build
-      - name: Upload ci build
+      - name: Upload mod build
         uses: actions/upload-artifact@v2
         with:
           name: janoeo-foundation
