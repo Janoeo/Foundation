@@ -66,9 +66,6 @@ public class Registries {
     public static final String RAW_TIN = "raw_tin";
     public static final String RAW_URANIUM = "raw_uranium";
 
-    /* * * * * * * * * * * * * * * Other * * *  * * * * * * * * * * */
-    public static final String SCRAP = "scrap";
-
     /* * * * * * * * * * * * * * * Storage Blocks * * *  * * * * * * * * * * */
     public static final String ALUMINIUM_BLOCK = "aluminium_block";
     public static final String LEAD_BLOCK = "lead_block";

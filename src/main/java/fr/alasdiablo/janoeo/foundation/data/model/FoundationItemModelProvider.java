@@ -42,12 +42,6 @@ public class FoundationItemModelProvider extends ItemModelProvider {
 
         this.registerRawItem(raws);
 
-        List<String> others = List.of(
-                SCRAP
-        );
-
-        this.registerOtherItem(others);
-
         List<String> gears = List.of(
                 COPPER_GEAR, DIAMOND_GEAR, GOLD_GEAR, IRON_GEAR, SILVER_GEAR, TIN_GEAR, WOODEN_GEAR
         );
