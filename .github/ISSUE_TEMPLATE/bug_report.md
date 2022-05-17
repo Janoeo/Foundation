@@ -26,4 +26,3 @@ If applicable, add screenshots to help explain your problem.
 **Minecraft information (please complete the following information):**
  - MC Version: [e.g. 1.16.4]
  - Janoeo Version: [e.g. 4.5.0.63-experimental]
- - Your MC Username: [e.g. AlasDiablo]
