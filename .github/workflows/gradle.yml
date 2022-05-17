@@ -22,7 +22,9 @@ jobs:
         run: chmod +x gradlew
       - name: Set gradle ci information
         shell: bash
-        run: ${GITHUB_WORKSPACE}/.github/workflows/setkey.sh ${{github.run_number}}
+        run: |
+          chmod +x ${GITHUB_WORKSPACE}/.github/workflows/setkey.sh
+          ${GITHUB_WORKSPACE}/.github/workflows/setkey.sh ${{github.run_number}}
       - name: Build with Gradle
         run: ./gradlew build
       - name: Upload ci build
