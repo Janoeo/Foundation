@@ -145,4 +145,20 @@ public class Registries {
     public static final String NETHER_SILVER_ORE = "nether_silver_ore";
     public static final String NETHER_TIN_ORE = "nether_tin_ore";
     public static final String NETHER_URANIUM_ORE = "nether_uranium_ore";
+
+    /* * * * * * * * * * * * * * * Gravel Ore * * *  * * * * * * * * * * */
+    public static final String GRAVEL_COAL_ORE = "gravel_coal_ore";
+    public static final String GRAVEL_COPPER_ORE = "gravel_copper_ore";
+    public static final String GRAVEL_DIAMOND_ORE = "gravel_diamond_ore";
+    public static final String GRAVEL_EMERALD_ORE = "gravel_emerald_ore";
+    public static final String GRAVEL_IRON_ORE = "gravel_iron_ore";
+    public static final String GRAVEL_LAPIS_ORE = "gravel_lapis_ore";
+    public static final String GRAVEL_REDSTONE_ORE = "gravel_redstone_ore";
+
+    public static final String GRAVEL_BAUXITE_ORE = "gravel_bauxite_ore";
+    public static final String GRAVEL_LEAD_ORE = "gravel_lead_ore";
+    public static final String GRAVEL_NICKEL_ORE = "gravel_nickel_ore";
+    public static final String GRAVEL_SILVER_ORE = "gravel_silver_ore";
+    public static final String GRAVEL_TIN_ORE = "gravel_tin_ore";
+    public static final String GRAVEL_URANIUM_ORE = "gravel_uranium_ore";
 }

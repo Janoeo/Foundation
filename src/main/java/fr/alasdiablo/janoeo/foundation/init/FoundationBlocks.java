@@ -2,6 +2,7 @@ package fr.alasdiablo.janoeo.foundation.init;
 
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.Registries;
+import fr.alasdiablo.janoeo.foundation.block.GravelRedStoneOre;
 import fr.alasdiablo.janoeo.foundation.block.NetherOreBlock;
 import fr.alasdiablo.janoeo.foundation.block.NetherRedStoneOreBlock;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -47,7 +48,6 @@ public class FoundationBlocks {
     private static final UniformInt COMMON = UniformInt.of(0, 2);
     private static final UniformInt UNCOMMON = UniformInt.of(2, 5);
     private static final UniformInt RARE = UniformInt.of(3, 7);
-
 
     /* * * * * * * * * * * * * * * Stone Ore * * *  * * * * * * * * * * */
     public static final RegistryObject<Block> BAUXITE_ORE = createOreBlock(PROPERTIES_STONE_ORE, Registries.BAUXITE_ORE, COMMON);
@@ -111,9 +111,6 @@ public class FoundationBlocks {
     public static final RegistryObject<Block> NETHER_SILVER_ORE = createNetherOreBlock(PROPERTIES_DEEPSLATE_ORE, Registries.NETHER_SILVER_ORE, UNCOMMON);
     public static final RegistryObject<Block> NETHER_TIN_ORE = createNetherOreBlock(PROPERTIES_NETHER_ORE, Registries.NETHER_TIN_ORE, COMMON);
     public static final RegistryObject<Block> NETHER_URANIUM_ORE = createNetherOreBlock(PROPERTIES_DEEPSLATE_ORE, Registries.NETHER_URANIUM_ORE, UNCOMMON);
-
-    /* * * * * * * * * * * * * * * Storage Block Properties * * * * * * * * * * * * * */
-    private static final Item.Properties PROPERTIES_ITEM_STORAGE_BLOCK = new Item.Properties().tab(Foundation.MATERIALS_GROUP);
 
     /* * * * * * * * * * * * * * * Storage Block * * * * * * * * * * * * * */
     public static final RegistryObject<Block> ALUMINIUM_BLOCK = createStorageBlock(Registries.ALUMINIUM_BLOCK, MaterialColor.METAL);
