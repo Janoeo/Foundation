@@ -40,7 +40,8 @@ def manifestAttributes = [
         "Implementation-Title"    : project.name,
         "Implementation-Version"  : project.jar.archiveVersion,
         "Implementation-Vendor"   : "AlasDiablo, Safyrus",
-        "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+        "MixinConfigs"            : "janoeo_foundation.mixins.json"
 ]
 
 def outputFolder = file(rootProject.getRootDir().getPath() + '/output')
@@ -50,12 +51,14 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 def deobfSourceClassifier
 
 minecraft {
-    mappings channel: 'parchment', version: '2022.05.02-1.18.2'
+    mappings channel: 'parchment', version: '2022.06.05-1.18.2'
     deobfSourceClassifier = getMappings().get()
     runs {
         client {
             workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', '${projectDir}/build/createSrgToMcp/output.srg'
+            property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             mods {
                 janoeo_foundation {
@@ -65,7 +68,9 @@ minecraft {
         }
         server {
             workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', '${projectDir}/build/createSrgToMcp/output.srg'
+            property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             mods {
                 janoeo_foundation {
@@ -76,6 +81,8 @@ minecraft {
 
         data {
             workingDirectory project.file('run')
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', '${projectDir}/build/createSrgToMcp/output.srg'
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
             args '--mod', 'janoeo_foundation', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
@@ -92,6 +99,9 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
+        url "https://maven.tterrag.com/"
+    }
+    maven {
         url 'https://cursemaven.com'
         content {
             includeGroup 'curse.maven'
@@ -100,13 +110,11 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.20'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.47'
     implementation fileTree(dir:'lib', include:'*.jar')
     implementation fg.deobf('curse.maven:catalogue-459701:3721991') // Catalogue (1.6.1)
     implementation fg.deobf('curse.maven:jei-238222:3788739')       // JEI (9.7.0.195)
     implementation fg.deobf('curse.maven:jer-240630:3760449')       // JER (0.14.1.167)
-    implementation fg.deobf("curse.maven:flywheel-486392:3737402")  // Flywheel (0.6.2)
-    implementation fg.deobf("curse.maven:create-328085:3737418")    // Create (v0.4.1)
     annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 }
 

@@ -3,7 +3,7 @@ package fr.alasdiablo.janoeo.foundation.compatibility.create;
 import com.simibubi.create.AllItems;
 import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.foundation.utility.recipe.IRecipeTypeInfo;
-import fr.alasdiablo.janoeo.foundation.Registries;
+import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.data.DataGenerator;
@@ -23,7 +23,7 @@ public class WashingRecipe extends ProcessingRecipe {
     }
 
     private void crushedOre(Supplier<ItemLike> input, ItemLike output) { // TODO Add extra drop
-        this.create(Registries.MOD_ID, input, builder -> {
+        this.create(Foundation.MOD_ID, input, builder -> {
             builder.output(output, 9);
             return builder;
         });

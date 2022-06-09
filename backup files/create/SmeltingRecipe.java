@@ -2,7 +2,7 @@ package fr.alasdiablo.janoeo.foundation.compatibility.create;
 
 import com.simibubi.create.AllItems;
 import fr.alasdiablo.diolib.api.util.ResourceLocations;
-import fr.alasdiablo.janoeo.foundation.Registries;
+import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.data.DataGenerator;
@@ -42,8 +42,8 @@ public class SmeltingRecipe extends RecipeProvider {
                 Objects.requireNonNull(ingredientIn.asItem().getRegistryName()).getPath(),
                 has(ingredientIn)
         ).save(consumer, ResourceLocations.of(
-                        Registries.MOD_ID,
-                        "smelting/" + Objects.requireNonNull(resultIn.asItem().getRegistryName()).getPath()
+                Foundation.MOD_ID,
+                "smelting/" + Objects.requireNonNull(resultIn.asItem().getRegistryName()).getPath()
                 )
         );
 
@@ -56,7 +56,7 @@ public class SmeltingRecipe extends RecipeProvider {
                 Objects.requireNonNull(ingredientIn.asItem().getRegistryName()).getPath(),
                 has(ingredientIn)
         ).save(consumer, ResourceLocations.of(
-                        Registries.MOD_ID,
+                Foundation.MOD_ID,
                         "blasting/" + Objects.requireNonNull(resultIn.asItem().getRegistryName()).getPath()
                 )
         );

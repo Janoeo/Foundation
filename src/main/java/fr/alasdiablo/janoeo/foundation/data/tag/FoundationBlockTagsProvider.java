@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.data.tag;
 
-import fr.alasdiablo.janoeo.foundation.Registries;
+import fr.alasdiablo.janoeo.foundation.Foundation;
+import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
@@ -16,7 +17,7 @@ import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Blocks.*;
 @SuppressWarnings("unchecked")
 public class FoundationBlockTagsProvider extends BlockTagsProvider {
     public FoundationBlockTagsProvider(DataGenerator generatorIn, @Nullable ExistingFileHelper existingFileHelper) {
-        super(generatorIn, Registries.MOD_ID, existingFileHelper);
+        super(generatorIn, Foundation.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -28,42 +29,43 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
         );
 
         this.tag(ORES_ALUMINUM).addTags(ORES_ALUMINIUM); // Reference to ORES_ALUMINIUM
-        this.tag(ORES_ALUMINIUM).add(BAUXITE_ORE.get(), DEEPSLATE_BAUXITE_ORE.get(), NETHER_BAUXITE_ORE.get());
-        this.tag(ORES_LEAD).add(LEAD_ORE.get(), DEEPSLATE_LEAD_ORE.get(), NETHER_LEAD_ORE.get());
-        this.tag(ORES_NICKEL).add(NICKEL_ORE.get(), DEEPSLATE_NICKEL_ORE.get(), NICKEL_ORE.get());
-        this.tag(ORES_SILVER).add(SILVER_ORE.get(), DEEPSLATE_SILVER_ORE.get(), NETHER_SILVER_ORE.get());
-        this.tag(ORES_TIN).add(TIN_ORE.get(), DEEPSLATE_TIN_ORE.get(), NETHER_TIN_ORE.get());
-        this.tag(ORES_URANIUM).add(URANIUM_ORE.get(), DEEPSLATE_URANIUM_ORE.get(), NETHER_URANIUM_ORE.get());
+        this.tag(ORES_ALUMINIUM)
+                .add(STONE_ORES.get(Resource.Aluminium).get(), DEEPSLATE_ORES.get(Resource.Aluminium).get(), NETHER_ORES.get(Resource.Aluminium).get());
+        this.tag(ORES_LEAD).add(STONE_ORES.get(Resource.Lead).get(), DEEPSLATE_ORES.get(Resource.Lead).get(), NETHER_ORES.get(Resource.Lead).get());
+        this.tag(ORES_NICKEL).add(STONE_ORES.get(Resource.Nickel).get(), DEEPSLATE_ORES.get(Resource.Nickel).get(), NETHER_ORES.get(Resource.Nickel).get());
+        this.tag(ORES_SILVER).add(STONE_ORES.get(Resource.Silver).get(), DEEPSLATE_ORES.get(Resource.Silver).get(), NETHER_ORES.get(Resource.Silver).get());
+        this.tag(ORES_TIN).add(STONE_ORES.get(Resource.Tin).get(), DEEPSLATE_ORES.get(Resource.Tin).get(), NETHER_ORES.get(Resource.Tin).get());
+        this.tag(ORES_URANIUM).add(STONE_ORES.get(Resource.Uranium).get(), DEEPSLATE_ORES.get(Resource.Uranium).get(), NETHER_ORES.get(Resource.Uranium).get());
 
-        this.tag(Tags.Blocks.ORES_REDSTONE).add(NETHER_REDSTONE_ORE.get());
-        this.tag(Tags.Blocks.ORES_LAPIS).add(NETHER_LAPIS_ORE.get());
-        this.tag(Tags.Blocks.ORES_IRON).add(NETHER_IRON_ORE.get());
-        this.tag(Tags.Blocks.ORES_EMERALD).add(NETHER_EMERALD_ORE.get());
-        this.tag(Tags.Blocks.ORES_DIAMOND).add(NETHER_DIAMOND_ORE.get());
-        this.tag(Tags.Blocks.ORES_COPPER).add(NETHER_COPPER_ORE.get());
-        this.tag(Tags.Blocks.ORES_COAL).add(NETHER_COAL_ORE.get());
+        this.tag(Tags.Blocks.ORES_REDSTONE).add(NETHER_ORES.get(Resource.RedStone).get());
+        this.tag(Tags.Blocks.ORES_LAPIS).add(NETHER_ORES.get(Resource.Lapis).get());
+        this.tag(Tags.Blocks.ORES_IRON).add(NETHER_ORES.get(Resource.Iron).get());
+        this.tag(Tags.Blocks.ORES_EMERALD).add(NETHER_ORES.get(Resource.Emerald).get());
+        this.tag(Tags.Blocks.ORES_DIAMOND).add(NETHER_ORES.get(Resource.Diamond).get());
+        this.tag(Tags.Blocks.ORES_COPPER).add(NETHER_ORES.get(Resource.Copper).get());
+        this.tag(Tags.Blocks.ORES_COAL).add(NETHER_ORES.get(Resource.Copper).get());
 
         this.tag(ORES_TINY).addTags(
                 ORES_TINY_COAL, ORES_TINY_COPPER, ORES_TINY_DIAMOND, ORES_TINY_EMERALD, ORES_TINY_GOLD, ORES_TINY_IRON, ORES_TINY_LAPIS, ORES_TINY_REDSTONE,
                 ORES_TINY_ALUMINIUM, ORES_TINY_ALUMINUM, ORES_TINY_LEAD, ORES_TINY_NICKEL, ORES_TINY_SILVER, ORES_TINY_TIN, ORES_TINY_URANIUM
         );
 
-        this.tag(ORES_TINY_COAL).add(TINY_COAL_ORE.get(), DEEPSLATE_TINY_COAL_ORE.get());
-        this.tag(ORES_TINY_COPPER).add(TINY_COPPER_ORE.get(), DEEPSLATE_TINY_COPPER_ORE.get());
-        this.tag(ORES_TINY_DIAMOND).add(TINY_DIAMOND_ORE.get(), DEEPSLATE_TINY_DIAMOND_ORE.get());
-        this.tag(ORES_TINY_EMERALD).add(TINY_EMERALD_ORE.get(), DEEPSLATE_TINY_EMERALD_ORE.get());
-        this.tag(ORES_TINY_GOLD).add(TINY_GOLD_ORE.get(), DEEPSLATE_TINY_GOLD_ORE.get());
-        this.tag(ORES_TINY_IRON).add(TINY_IRON_ORE.get(), DEEPSLATE_TINY_IRON_ORE.get());
-        this.tag(ORES_TINY_LAPIS).add(TINY_LAPIS_ORE.get(), DEEPSLATE_TINY_LAPIS_ORE.get());
-        this.tag(ORES_TINY_REDSTONE).add(TINY_REDSTONE_ORE.get(), DEEPSLATE_TINY_REDSTONE_ORE.get());
+        this.tag(ORES_TINY_COAL).add(TINY_STONE_ORES.get(Resource.Coal).get(), TINY_DEEPSLATE_ORES.get(Resource.Coal).get());
+        this.tag(ORES_TINY_COPPER).add(TINY_STONE_ORES.get(Resource.Copper).get(), TINY_DEEPSLATE_ORES.get(Resource.Copper).get());
+        this.tag(ORES_TINY_DIAMOND).add(TINY_STONE_ORES.get(Resource.Diamond).get(), TINY_DEEPSLATE_ORES.get(Resource.Diamond).get());
+        this.tag(ORES_TINY_EMERALD).add(TINY_STONE_ORES.get(Resource.Emerald).get(), TINY_DEEPSLATE_ORES.get(Resource.Emerald).get());
+        this.tag(ORES_TINY_GOLD).add(TINY_STONE_ORES.get(Resource.Gold).get(), TINY_DEEPSLATE_ORES.get(Resource.Gold).get());
+        this.tag(ORES_TINY_IRON).add(TINY_STONE_ORES.get(Resource.Iron).get(), TINY_DEEPSLATE_ORES.get(Resource.Iron).get());
+        this.tag(ORES_TINY_LAPIS).add(TINY_STONE_ORES.get(Resource.Lapis).get(), TINY_DEEPSLATE_ORES.get(Resource.Lapis).get());
+        this.tag(ORES_TINY_REDSTONE).add(TINY_STONE_ORES.get(Resource.RedStone).get(), TINY_DEEPSLATE_ORES.get(Resource.RedStone).get());
 
         this.tag(ORES_TINY_ALUMINUM).addTags(ORES_TINY_ALUMINIUM); // Reference to ORES_TINY_ALUMINIUM
-        this.tag(ORES_TINY_ALUMINIUM).add(TINY_BAUXITE_ORE.get(), DEEPSLATE_TINY_BAUXITE_ORE.get());
-        this.tag(ORES_TINY_LEAD).add(TINY_LEAD_ORE.get(), DEEPSLATE_TINY_LEAD_ORE.get());
-        this.tag(ORES_TINY_NICKEL).add(TINY_NICKEL_ORE.get(), DEEPSLATE_TINY_NICKEL_ORE.get());
-        this.tag(ORES_TINY_SILVER).add(TINY_SILVER_ORE.get(), DEEPSLATE_TINY_SILVER_ORE.get());
-        this.tag(ORES_TINY_TIN).add(TINY_TIN_ORE.get(), DEEPSLATE_TINY_TIN_ORE.get());
-        this.tag(ORES_TINY_URANIUM).add(TINY_URANIUM_ORE.get(), DEEPSLATE_TINY_URANIUM_ORE.get());
+        this.tag(ORES_TINY_ALUMINIUM).add(TINY_STONE_ORES.get(Resource.Aluminium).get(), TINY_DEEPSLATE_ORES.get(Resource.Aluminium).get());
+        this.tag(ORES_TINY_LEAD).add(TINY_STONE_ORES.get(Resource.Lead).get(), TINY_DEEPSLATE_ORES.get(Resource.Lead).get());
+        this.tag(ORES_TINY_NICKEL).add(TINY_STONE_ORES.get(Resource.Nickel).get(), TINY_DEEPSLATE_ORES.get(Resource.Nickel).get());
+        this.tag(ORES_TINY_SILVER).add(TINY_STONE_ORES.get(Resource.Silver).get(), TINY_DEEPSLATE_ORES.get(Resource.Silver).get());
+        this.tag(ORES_TINY_TIN).add(TINY_STONE_ORES.get(Resource.Tin).get(), TINY_DEEPSLATE_ORES.get(Resource.Tin).get());
+        this.tag(ORES_TINY_URANIUM).add(TINY_STONE_ORES.get(Resource.Uranium).get(), TINY_DEEPSLATE_ORES.get(Resource.Uranium).get());
 
         this.tag(Tags.Blocks.STORAGE_BLOCKS).addTags(
                 STORAGE_BLOCKS_ALUMINIUM, STORAGE_BLOCKS_ALUMINUM, STORAGE_BLOCKS_LEAD, STORAGE_BLOCKS_NICKEL, STORAGE_BLOCKS_SILVER, STORAGE_BLOCKS_TIN,
@@ -72,50 +74,92 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
         );
 
         this.tag(STORAGE_BLOCKS_ALUMINUM).addTags(STORAGE_BLOCKS_ALUMINIUM); // Reference to STORAGE_BLOCKS_ALUMINIUM
-        this.tag(STORAGE_BLOCKS_ALUMINIUM).add(ALUMINIUM_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_LEAD).add(LEAD_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_NICKEL).add(NICKEL_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_SILVER).add(SILVER_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_TIN).add(TIN_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_URANIUM).add(URANIUM_BLOCK.get());
+        this.tag(STORAGE_BLOCKS_ALUMINIUM).add(STORAGE_BLOCKS.get(Resource.Aluminium).get());
+        this.tag(STORAGE_BLOCKS_LEAD).add(STORAGE_BLOCKS.get(Resource.Lead).get());
+        this.tag(STORAGE_BLOCKS_NICKEL).add(STORAGE_BLOCKS.get(Resource.Nickel).get());
+        this.tag(STORAGE_BLOCKS_SILVER).add(STORAGE_BLOCKS.get(Resource.Silver).get());
+        this.tag(STORAGE_BLOCKS_TIN).add(STORAGE_BLOCKS.get(Resource.Tin).get());
+        this.tag(STORAGE_BLOCKS_URANIUM).add(STORAGE_BLOCKS.get(Resource.Uranium).get());
 
         this.tag(STORAGE_BLOCKS_RAW_ALUMINUM).addTags(STORAGE_BLOCKS_RAW_ALUMINIUM); // Reference to STORAGE_BLOCKS_ALUMINIUM
-        this.tag(STORAGE_BLOCKS_RAW_ALUMINIUM).add(RAW_ALUMINIUM_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_RAW_LEAD).add(RAW_LEAD_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_RAW_NICKEL).add(RAW_NICKEL_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_RAW_SILVER).add(RAW_SILVER_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_RAW_TIN).add(RAW_TIN_BLOCK.get());
-        this.tag(STORAGE_BLOCKS_RAW_URANIUM).add(RAW_URANIUM_BLOCK.get());
+        this.tag(STORAGE_BLOCKS_RAW_ALUMINIUM).add(RAW_BLOCKS.get(Resource.Aluminium).get());
+        this.tag(STORAGE_BLOCKS_RAW_LEAD).add(RAW_BLOCKS.get(Resource.Lead).get());
+        this.tag(STORAGE_BLOCKS_RAW_NICKEL).add(RAW_BLOCKS.get(Resource.Nickel).get());
+        this.tag(STORAGE_BLOCKS_RAW_SILVER).add(RAW_BLOCKS.get(Resource.Silver).get());
+        this.tag(STORAGE_BLOCKS_RAW_TIN).add(RAW_BLOCKS.get(Resource.Tin).get());
+        this.tag(STORAGE_BLOCKS_RAW_URANIUM).add(RAW_BLOCKS.get(Resource.Uranium).get());
 
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(BAUXITE_ORE.get(), LEAD_ORE.get(), NICKEL_ORE.get(), SILVER_ORE.get(), TIN_ORE.get(), URANIUM_ORE.get(), DEEPSLATE_BAUXITE_ORE.get(), DEEPSLATE_LEAD_ORE.get(), DEEPSLATE_NICKEL_ORE.get(),
-                        DEEPSLATE_SILVER_ORE.get(), DEEPSLATE_TIN_ORE.get(), DEEPSLATE_URANIUM_ORE.get(), TINY_COAL_ORE.get(), TINY_COPPER_ORE.get(), TINY_DIAMOND_ORE.get(), TINY_EMERALD_ORE.get(),
-                        TINY_GOLD_ORE.get(), TINY_IRON_ORE.get(), TINY_LAPIS_ORE.get(), TINY_REDSTONE_ORE.get(), DEEPSLATE_TINY_COAL_ORE.get(), DEEPSLATE_TINY_COPPER_ORE.get(),
-                        DEEPSLATE_TINY_DIAMOND_ORE.get(), DEEPSLATE_TINY_EMERALD_ORE.get(), DEEPSLATE_TINY_GOLD_ORE.get(), DEEPSLATE_TINY_IRON_ORE.get(), DEEPSLATE_TINY_LAPIS_ORE.get(),
-                        DEEPSLATE_TINY_REDSTONE_ORE.get(), TINY_BAUXITE_ORE.get(), TINY_LEAD_ORE.get(), TINY_NICKEL_ORE.get(), TINY_SILVER_ORE.get(), TINY_TIN_ORE.get(), TINY_URANIUM_ORE.get(),
-                        DEEPSLATE_TINY_BAUXITE_ORE.get(), DEEPSLATE_TINY_LEAD_ORE.get(), DEEPSLATE_TINY_NICKEL_ORE.get(), DEEPSLATE_TINY_SILVER_ORE.get(), DEEPSLATE_TINY_TIN_ORE.get(),
-                        DEEPSLATE_TINY_URANIUM_ORE.get(), NETHER_COAL_ORE.get(), NETHER_COPPER_ORE.get(), NETHER_DIAMOND_ORE.get(), NETHER_EMERALD_ORE.get(), NETHER_IRON_ORE.get(), NETHER_LAPIS_ORE.get(),
-                        NETHER_REDSTONE_ORE.get(), NETHER_BAUXITE_ORE.get(), NETHER_LEAD_ORE.get(), NETHER_NICKEL_ORE.get(), NETHER_SILVER_ORE.get(), NETHER_TIN_ORE.get(), NETHER_URANIUM_ORE.get(),
-                        ALUMINIUM_BLOCK.get(), LEAD_BLOCK.get(), NICKEL_BLOCK.get(), SILVER_BLOCK.get(), TIN_BLOCK.get(), URANIUM_BLOCK.get(), RAW_ALUMINIUM_BLOCK.get(), RAW_LEAD_BLOCK.get(), RAW_NICKEL_BLOCK.get(),
-                        RAW_SILVER_BLOCK.get(), RAW_TIN_BLOCK.get(), RAW_URANIUM_BLOCK.get()
-                );
+        var mineableWithPickaxe = this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
+        var mineableWithShovel  = this.tag(BlockTags.MINEABLE_WITH_SHOVEL);
+        var needsStoneTool      = this.tag(BlockTags.NEEDS_STONE_TOOL);
+        var needsIronTool       = this.tag(BlockTags.NEEDS_STONE_TOOL);
 
-        this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(BAUXITE_ORE.get(), LEAD_ORE.get(), TIN_ORE.get(), DEEPSLATE_BAUXITE_ORE.get(), DEEPSLATE_LEAD_ORE.get(), DEEPSLATE_TIN_ORE.get(), TINY_COPPER_ORE.get(), TINY_IRON_ORE.get(),
-                        DEEPSLATE_TINY_COPPER_ORE.get(), DEEPSLATE_TINY_IRON_ORE.get(), TINY_BAUXITE_ORE.get(), TINY_LEAD_ORE.get(), TINY_TIN_ORE.get(), DEEPSLATE_TINY_BAUXITE_ORE.get(),
-                        DEEPSLATE_TINY_LEAD_ORE.get(), DEEPSLATE_TINY_TIN_ORE.get(), TINY_LAPIS_ORE.get(), DEEPSLATE_TINY_LAPIS_ORE.get(), ALUMINIUM_BLOCK.get(), LEAD_BLOCK.get(), NICKEL_BLOCK.get(),
-                        SILVER_BLOCK.get(), TIN_BLOCK.get(), URANIUM_BLOCK.get(), RAW_ALUMINIUM_BLOCK.get(), RAW_LEAD_BLOCK.get(), RAW_NICKEL_BLOCK.get(), RAW_SILVER_BLOCK.get(), RAW_TIN_BLOCK.get(),
-                        RAW_URANIUM_BLOCK.get()
-                );
+        STONE_ORES.forEach((resource, block) -> mineableWithPickaxe.add(block.get()));
+        DEEPSLATE_ORES.forEach((resource, block) -> mineableWithPickaxe.add(block.get()));
+        TINY_STONE_ORES.forEach((resource, block) -> mineableWithPickaxe.add(block.get()));
+        TINY_DEEPSLATE_ORES.forEach((resource, block) -> mineableWithPickaxe.add(block.get()));
+        GRAVEL_ORES.forEach((resource, block) -> mineableWithShovel.add(block.get()));
+        NETHER_ORES.forEach((resource, block) -> {
+            mineableWithPickaxe.add(block.get());
+            needsIronTool.add(block.get());
+        });
+        STORAGE_BLOCKS.forEach((resource, block) -> {
+            mineableWithPickaxe.add(block.get());
+            needsStoneTool.add(block.get());
+        });
 
-        this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(NICKEL_ORE.get(), SILVER_ORE.get(), URANIUM_ORE.get(), DEEPSLATE_NICKEL_ORE.get(), DEEPSLATE_SILVER_ORE.get(), DEEPSLATE_URANIUM_ORE.get(), TINY_DIAMOND_ORE.get(), TINY_EMERALD_ORE.get(),
-                        TINY_GOLD_ORE.get(), TINY_REDSTONE_ORE.get(), DEEPSLATE_TINY_DIAMOND_ORE.get(), DEEPSLATE_TINY_EMERALD_ORE.get(), DEEPSLATE_TINY_GOLD_ORE.get(),
-                        DEEPSLATE_TINY_REDSTONE_ORE.get(), TINY_NICKEL_ORE.get(), TINY_SILVER_ORE.get(), TINY_URANIUM_ORE.get(), DEEPSLATE_TINY_NICKEL_ORE.get(),
-                        DEEPSLATE_TINY_SILVER_ORE.get(), DEEPSLATE_TINY_URANIUM_ORE.get(), NETHER_COAL_ORE.get(), NETHER_COPPER_ORE.get(), NETHER_DIAMOND_ORE.get(), NETHER_EMERALD_ORE.get(),
-                        NETHER_IRON_ORE.get(), NETHER_LAPIS_ORE.get(), NETHER_REDSTONE_ORE.get(), NETHER_BAUXITE_ORE.get(), NETHER_LEAD_ORE.get(), NETHER_NICKEL_ORE.get(), NETHER_SILVER_ORE.get(),
-                        NETHER_TIN_ORE.get(), NETHER_URANIUM_ORE.get()
-                );
+        RAW_BLOCKS.forEach((resource, block) -> {
+            mineableWithPickaxe.add(block.get());
+            needsStoneTool.add(block.get());
+        });
+
+        needsStoneTool.add(
+                STONE_ORES.get(Resource.Aluminium).get(),
+                STONE_ORES.get(Resource.Lead).get(),
+                STONE_ORES.get(Resource.Tin).get(),
+                DEEPSLATE_ORES.get(Resource.Aluminium).get(),
+                DEEPSLATE_ORES.get(Resource.Lead).get(),
+                DEEPSLATE_ORES.get(Resource.Tin).get(),
+
+                TINY_STONE_ORES.get(Resource.Aluminium).get(),
+                TINY_STONE_ORES.get(Resource.Lead).get(),
+                TINY_STONE_ORES.get(Resource.Tin).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Aluminium).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Lead).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Tin).get(),
+
+                TINY_STONE_ORES.get(Resource.Copper).get(),
+                TINY_STONE_ORES.get(Resource.Iron).get(),
+                TINY_STONE_ORES.get(Resource.Lapis).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Copper).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Iron).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Lapis).get()
+        );
+
+        needsIronTool.add(
+                STONE_ORES.get(Resource.Nickel).get(),
+                STONE_ORES.get(Resource.Silver).get(),
+                STONE_ORES.get(Resource.Uranium).get(),
+                DEEPSLATE_ORES.get(Resource.Nickel).get(),
+                DEEPSLATE_ORES.get(Resource.Silver).get(),
+                DEEPSLATE_ORES.get(Resource.Uranium).get(),
+
+                TINY_STONE_ORES.get(Resource.Nickel).get(),
+                TINY_STONE_ORES.get(Resource.Silver).get(),
+                TINY_STONE_ORES.get(Resource.Uranium).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Nickel).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Silver).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Uranium).get(),
+
+                TINY_STONE_ORES.get(Resource.Diamond).get(),
+                TINY_STONE_ORES.get(Resource.Emerald).get(),
+                TINY_STONE_ORES.get(Resource.Gold).get(),
+                TINY_STONE_ORES.get(Resource.RedStone).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Diamond).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Emerald).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.Gold).get(),
+                TINY_DEEPSLATE_ORES.get(Resource.RedStone).get()
+        );
     }
 
     @Nonnull

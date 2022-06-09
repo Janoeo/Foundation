@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.worldgen.placement;
 
 import fr.alasdiablo.diolib.api.util.ResourceLocations;
-import fr.alasdiablo.janoeo.foundation.Registries;
+import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.config.OreConfig;
 import fr.alasdiablo.janoeo.foundation.worldgen.features.FoundationFeatures;
@@ -63,7 +63,7 @@ public class FoundationPlacements {
     private static Holder<PlacedFeature> createPlacedFeature(@NotNull Holder<ConfiguredFeature<OreConfiguration, ?>> target, @NotNull OreConfig config) {
         return switch (config.getPlacement()) {
             case "triangle" -> PlacementUtils.register(
-                    ResourceLocations.of(Registries.MOD_ID, config.name()).toString(),
+                    ResourceLocations.of(Foundation.MOD_ID, config.name()).toString(),
                     target,
                     commonOrePlacement(
                             config.getCount(),
@@ -75,7 +75,7 @@ public class FoundationPlacements {
                     )
             );
             case "uniform" -> PlacementUtils.register(
-                    ResourceLocations.of(Registries.MOD_ID, config.name()).toString(),
+                    ResourceLocations.of(Foundation.MOD_ID, config.name()).toString(),
                     target,
                     commonOrePlacement(
                             config.getCount(),

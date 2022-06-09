@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.data.tag;
 
-import fr.alasdiablo.janoeo.foundation.Registries;
+import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.init.FoundationTags;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
@@ -25,7 +25,7 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
             DataGenerator dataGenerator, BlockTagsProvider blockTagProvider,
             @Nullable ExistingFileHelper existingFileHelper
     ) {
-        super(dataGenerator, blockTagProvider, Registries.MOD_ID, existingFileHelper);
+        super(dataGenerator, blockTagProvider, Foundation.MOD_ID, existingFileHelper);
     }
 
     @Override

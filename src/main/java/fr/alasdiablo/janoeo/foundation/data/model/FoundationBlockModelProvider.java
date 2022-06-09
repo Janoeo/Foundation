@@ -1,58 +1,40 @@
 package fr.alasdiablo.janoeo.foundation.data.model;
 
+import fr.alasdiablo.janoeo.foundation.Foundation;
+import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
-
-import static fr.alasdiablo.janoeo.foundation.Registries.*;
-
 public class FoundationBlockModelProvider extends BlockModelProvider {
     private static final ResourceLocation CUBE_ALL = new ResourceLocation("block/cube_all");
 
     public FoundationBlockModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, MOD_ID, existingFileHelper);
+        super(generator, Foundation.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void registerModels() {
-        List<String> ores = List.of(
-                BAUXITE_ORE, LEAD_ORE, NICKEL_ORE, SILVER_ORE, TIN_ORE, URANIUM_ORE, DEEPSLATE_BAUXITE_ORE, DEEPSLATE_LEAD_ORE, DEEPSLATE_NICKEL_ORE,
-                DEEPSLATE_SILVER_ORE, DEEPSLATE_TIN_ORE, DEEPSLATE_URANIUM_ORE, NETHER_COAL_ORE, NETHER_COPPER_ORE, NETHER_DIAMOND_ORE, NETHER_EMERALD_ORE,
-                NETHER_IRON_ORE, NETHER_LAPIS_ORE, NETHER_REDSTONE_ORE, NETHER_BAUXITE_ORE, NETHER_LEAD_ORE, NETHER_NICKEL_ORE, NETHER_SILVER_ORE,
-                NETHER_TIN_ORE, NETHER_URANIUM_ORE
-        );
-
-        ores.forEach(block -> cubeAll(block, Folder.ORE));
-
-        List<String> tinyOres = List.of(
-                TINY_COAL_ORE, TINY_COPPER_ORE, TINY_DIAMOND_ORE, TINY_EMERALD_ORE, TINY_GOLD_ORE, TINY_IRON_ORE, TINY_LAPIS_ORE, TINY_REDSTONE_ORE,
-                DEEPSLATE_TINY_COAL_ORE, DEEPSLATE_TINY_COPPER_ORE, DEEPSLATE_TINY_DIAMOND_ORE, DEEPSLATE_TINY_EMERALD_ORE, DEEPSLATE_TINY_GOLD_ORE,
-                DEEPSLATE_TINY_IRON_ORE, DEEPSLATE_TINY_LAPIS_ORE, DEEPSLATE_TINY_REDSTONE_ORE, TINY_BAUXITE_ORE, TINY_LEAD_ORE, TINY_NICKEL_ORE,
-                TINY_SILVER_ORE, TINY_TIN_ORE, TINY_URANIUM_ORE, DEEPSLATE_TINY_BAUXITE_ORE, DEEPSLATE_TINY_LEAD_ORE, DEEPSLATE_TINY_NICKEL_ORE,
-                DEEPSLATE_TINY_SILVER_ORE, DEEPSLATE_TINY_TIN_ORE, DEEPSLATE_TINY_URANIUM_ORE
-        );
-
-        tinyOres.forEach(block -> cubeAll(block, Folder.TINY_ORE));
-
-
-        List<String> storageBlock = List.of(
-                ALUMINIUM_BLOCK, LEAD_BLOCK, NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK, RAW_ALUMINIUM_BLOCK, RAW_LEAD_BLOCK, RAW_NICKEL_BLOCK,
-                RAW_SILVER_BLOCK, RAW_TIN_BLOCK, RAW_URANIUM_BLOCK
-        );
-
-        storageBlock.forEach(block -> cubeAll(block, Folder.DEFAULT));
+        FoundationBlocks.STONE_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.ORE));
+        FoundationBlocks.DEEPSLATE_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.ORE));
+        FoundationBlocks.TINY_STONE_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.TINY_ORE));
+        FoundationBlocks.TINY_DEEPSLATE_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.TINY_ORE));
+        FoundationBlocks.NETHER_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.NETHER_ORE));
+        FoundationBlocks.GRAVEL_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.GRAVEL_ORE));
+        FoundationBlocks.RAW_BLOCKS.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.DEFAULT));
+        FoundationBlocks.STORAGE_BLOCKS.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.DEFAULT));
     }
 
     private void cubeAll(String blockNameIn, @NotNull Folder folder) {
-        withExistingParent(blockNameIn, CUBE_ALL).texture("all", new ResourceLocation(MOD_ID, "block/" + folder.getFolder() + blockNameIn));
+        withExistingParent(blockNameIn, CUBE_ALL).texture("all", new ResourceLocation(Foundation.MOD_ID, "block/" + folder.getFolder() + blockNameIn));
     }
 
     private enum Folder {
         TINY_ORE("ore/tiny/"),
+        GRAVEL_ORE("ore/gravel/"),
+        NETHER_ORE("ore/nether/"),
         ORE("ore/"),
         DEFAULT("");
 

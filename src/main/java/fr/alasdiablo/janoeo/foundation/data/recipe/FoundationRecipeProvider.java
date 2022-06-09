@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.data.recipe;
 
 import fr.alasdiablo.diolib.api.util.ResourceLocations;
-import fr.alasdiablo.janoeo.foundation.Registries;
+import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.data.DataGenerator;
@@ -19,7 +19,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Consumer;
 
-import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
+import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.RAW_BLOCKS;
+import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.STORAGE_BLOCKS;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
 
@@ -99,13 +100,13 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromOre(Items.LAPIS_LAZULI, Tags.Items.ORES_LAPIS, "has_lapis_ore", "lapis_from_ore");
         this.ingotFromOre(Items.REDSTONE, Tags.Items.ORES_REDSTONE, "has_redstone_ore", "redstone_from_ore");
 
-        this.blockFromIngot(ALUMINIUM_BLOCK.get(), INGOTS_ALUMINIUM, "has_aluminium_ingot", "aluminium_block");
-        this.blockFromIngot(ALUMINIUM_BLOCK.get(), INGOTS_ALUMINUM, "has_aluminum_ingot", "aluminum_block");
-        this.blockFromIngot(LEAD_BLOCK.get(), INGOTS_LEAD, "has_lead_ingot", "lead_block");
-        this.blockFromIngot(NICKEL_BLOCK.get(), INGOTS_NICKEL, "has_nickel_ingot", "nickel_block");
-        this.blockFromIngot(SILVER_BLOCK.get(), INGOTS_SILVER, "has_silver_ingot", "silver_block");
-        this.blockFromIngot(TIN_BLOCK.get(), INGOTS_TIN, "has_tin_ingot", "tin_block");
-        this.blockFromIngot(URANIUM_BLOCK.get(), INGOTS_URANIUM, "has_uranium_ingot", "uranium_block");
+        this.blockFromIngot(STORAGE_BLOCKS.get(Resource.Aluminium).get(), INGOTS_ALUMINIUM, "has_aluminium_ingot", "aluminium_block");
+        this.blockFromIngot(STORAGE_BLOCKS.get(Resource.Aluminium).get(), INGOTS_ALUMINUM, "has_aluminum_ingot", "aluminum_block");
+        this.blockFromIngot(STORAGE_BLOCKS.get(Resource.Lead).get(), INGOTS_LEAD, "has_lead_ingot", "lead_block");
+        this.blockFromIngot(STORAGE_BLOCKS.get(Resource.Nickel).get(), INGOTS_NICKEL, "has_nickel_ingot", "nickel_block");
+        this.blockFromIngot(STORAGE_BLOCKS.get(Resource.Silver).get(), INGOTS_SILVER, "has_silver_ingot", "silver_block");
+        this.blockFromIngot(STORAGE_BLOCKS.get(Resource.Tin).get(), INGOTS_TIN, "has_tin_ingot", "tin_block");
+        this.blockFromIngot(STORAGE_BLOCKS.get(Resource.Uranium).get(), INGOTS_URANIUM, "has_uranium_ingot", "uranium_block");
 
         this.ingotFromBlock(INGOTS.get(Resource.Aluminium).get(), STORAGE_BLOCKS_ALUMINIUM, "has_aluminium_block", "aluminium_ingot_from_block");
         this.ingotFromBlock(INGOTS.get(Resource.Aluminium).get(), STORAGE_BLOCKS_ALUMINUM, "has_aluminum_block", "aluminum_ingot_from_block");
@@ -115,13 +116,13 @@ public class FoundationRecipeProvider extends RecipeProvider {
         this.ingotFromBlock(INGOTS.get(Resource.Tin).get(), STORAGE_BLOCKS_TIN, "has_tin_block", "tin_ingot_from_block");
         this.ingotFromBlock(INGOTS.get(Resource.Uranium).get(), STORAGE_BLOCKS_URANIUM, "has_uranium_block", "uranium_ingot_from_block");
 
-        this.blockFromIngot(RAW_ALUMINIUM_BLOCK.get(), RAW_MATERIALS_ALUMINIUM, "has_raw_aluminium", "raw_aluminium_block");
-        this.blockFromIngot(RAW_ALUMINIUM_BLOCK.get(), RAW_MATERIALS_ALUMINUM, "has_raw_aluminum", "raw_aluminum_block");
-        this.blockFromIngot(RAW_LEAD_BLOCK.get(), RAW_MATERIALS_LEAD, "has_raw_lead", "raw_lead_block");
-        this.blockFromIngot(RAW_NICKEL_BLOCK.get(), RAW_MATERIALS_NICKEL, "has_raw_nickel", "raw_nickel_block");
-        this.blockFromIngot(RAW_SILVER_BLOCK.get(), RAW_MATERIALS_SILVER, "has_raw_silver", "raw_silver_block");
-        this.blockFromIngot(RAW_TIN_BLOCK.get(), RAW_MATERIALS_TIN, "has_raw_tin", "raw_tin_block");
-        this.blockFromIngot(RAW_URANIUM_BLOCK.get(), RAW_MATERIALS_URANIUM, "has_raw_uranium", "raw_uranium_block");
+        this.blockFromIngot(RAW_BLOCKS.get(Resource.Aluminium).get(), RAW_MATERIALS_ALUMINIUM, "has_raw_aluminium", "raw_aluminium_block");
+        this.blockFromIngot(RAW_BLOCKS.get(Resource.Aluminium).get(), RAW_MATERIALS_ALUMINUM, "has_raw_aluminum", "raw_aluminum_block");
+        this.blockFromIngot(RAW_BLOCKS.get(Resource.Lead).get(), RAW_MATERIALS_LEAD, "has_raw_lead", "raw_lead_block");
+        this.blockFromIngot(RAW_BLOCKS.get(Resource.Nickel).get(), RAW_MATERIALS_NICKEL, "has_raw_nickel", "raw_nickel_block");
+        this.blockFromIngot(RAW_BLOCKS.get(Resource.Silver).get(), RAW_MATERIALS_SILVER, "has_raw_silver", "raw_silver_block");
+        this.blockFromIngot(RAW_BLOCKS.get(Resource.Tin).get(), RAW_MATERIALS_TIN, "has_raw_tin", "raw_tin_block");
+        this.blockFromIngot(RAW_BLOCKS.get(Resource.Uranium).get(), RAW_MATERIALS_URANIUM, "has_raw_uranium", "raw_uranium_block");
 
         this.ingotFromBlock(RAWS.get(Resource.Aluminium).get(), STORAGE_BLOCKS_RAW_ALUMINIUM, "has_raw_aluminium_block", "raw_aluminium_from_block");
         this.ingotFromBlock(RAWS.get(Resource.Aluminium).get(), STORAGE_BLOCKS_RAW_ALUMINUM, "has_raw_aluminum_block", "raw_aluminum_from_block");
@@ -180,12 +181,12 @@ public class FoundationRecipeProvider extends RecipeProvider {
 
     private void nugget(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
         ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn))
-                .save(finishedRecipeConsumer, ResourceLocations.of(Registries.MOD_ID, nameIn));
+                .save(finishedRecipeConsumer, ResourceLocations.of(Foundation.MOD_ID, nameIn));
     }
 
     private void ingotFromNugget(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
         ShapedRecipeBuilder.shaped(resultIn).define('A', ingredientIn).pattern("AAA").pattern("AAA").pattern("AAA")
-                .unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, ResourceLocations.of(Registries.MOD_ID, nameIn));
+                .unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, ResourceLocations.of(Foundation.MOD_ID, nameIn));
     }
 
     private void blockFromIngot(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
@@ -194,14 +195,14 @@ public class FoundationRecipeProvider extends RecipeProvider {
 
     private void ingotFromBlock(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
         ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(ingredientIn).unlockedBy(criterionNameIn, has(ingredientIn))
-                .save(finishedRecipeConsumer, ResourceLocations.of(Registries.MOD_ID, nameIn));
+                .save(finishedRecipeConsumer, ResourceLocations.of(Foundation.MOD_ID, nameIn));
     }
 
     private void ingotFromDust(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredientIn), resultIn, 0f, 200).unlockedBy(criterionNameIn, has(ingredientIn))
-                .save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "smelting_" + nameIn));
+                .save(finishedRecipeConsumer, new ResourceLocation(Foundation.MOD_ID, "smelting_" + nameIn));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ingredientIn), resultIn, 0f, 100).unlockedBy(criterionNameIn, has(ingredientIn))
-                .save(finishedRecipeConsumer, new ResourceLocation(Registries.MOD_ID, "blasting_" + nameIn));
+                .save(finishedRecipeConsumer, new ResourceLocation(Foundation.MOD_ID, "blasting_" + nameIn));
     }
 
     private void ingotFromRaw(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {

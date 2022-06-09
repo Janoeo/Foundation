@@ -7,7 +7,7 @@ public enum ResourceType {
     StoneOre("", "ore", true),
     TinyStoneOre("tiny", "ore", true),
     DeepSlateOre("deepslate", "ore", true),
-    TinyDeepSlate("deepslate", "ore", true),
+    TinyDeepSlateOre("deepslate_tiny", "ore", true),
     NetherOre("nether", "ore", true),
     GravelOre("gravel", "ore", true),
     RawMaterialBlock("raw", "block"),
@@ -19,20 +19,20 @@ public enum ResourceType {
     Gear("", "gear"),
     Rod("", "rod");
 
-    public static final ResourceType[] ALL = ResourceType.values();
-    public static final ResourceType[] ALL_ORE_WITH_ITEM = new ResourceType[] {
-            StoneOre, TinyStoneOre, DeepSlateOre, TinyDeepSlate, NetherOre, GravelOre, RawMaterialBlock, StorageBlock,
+    public static final ResourceType[] ALL               = ResourceType.values();
+    public static final ResourceType[] ALL_ORE_WITH_ITEM = new ResourceType[]{
+            StoneOre, TinyStoneOre, DeepSlateOre, TinyDeepSlateOre, NetherOre, GravelOre, RawMaterialBlock, StorageBlock,
             RawMaterialItem, Ingot, Nugget, Dust
     };
-    public static final ResourceType[] ITEMS = new ResourceType[] {
+    public static final ResourceType[] ITEMS             = new ResourceType[]{
             Dust, Nugget, Ingot, RawMaterialItem, Rod, Gear
     };
-    public static final ResourceType[] BLOCKS = new ResourceType[] {
-            StoneOre, TinyStoneOre, DeepSlateOre, TinyDeepSlate, NetherOre, GravelOre, RawMaterialBlock, StorageBlock
+    public static final ResourceType[] BLOCKS            = new ResourceType[]{
+            StoneOre, TinyStoneOre, DeepSlateOre, TinyDeepSlateOre, NetherOre, GravelOre, RawMaterialBlock, StorageBlock
     };
 
-    private final String prefix;
-    private final String suffix;
+    private final String  prefix;
+    private final String  suffix;
     private final boolean isOre;
 
     ResourceType(String prefix, String suffix) {
@@ -47,10 +47,15 @@ public enum ResourceType {
 
     @Contract("_ -> new")
     public @NotNull String format(String name) {
-        if (prefix.equals(""))
+        if (this.prefix.equals("") && this.suffix.equals(""))
+            return String.join("_", name);
+
+        if (this.prefix.equals(""))
             return String.join("_", name, this.suffix);
-        if (suffix.equals(""))
+
+        if (this.suffix.equals(""))
             return String.join("_", this.prefix, name);
+
         return String.join("_", this.prefix, name, this.suffix);
     }
 
