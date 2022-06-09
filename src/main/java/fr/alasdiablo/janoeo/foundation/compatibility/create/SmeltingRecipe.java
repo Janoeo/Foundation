@@ -4,6 +4,7 @@ import com.simibubi.create.AllItems;
 import fr.alasdiablo.diolib.api.util.ResourceLocations;
 import fr.alasdiablo.janoeo.foundation.Registries;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
+import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -23,12 +24,12 @@ public class SmeltingRecipe extends RecipeProvider {
 
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
-        this.ingot(FoundationItems.ALUMINIUM_INGOT.get(), AllItems.CRUSHED_BAUXITE.get(), consumer);
-        this.ingot(FoundationItems.LEAD_INGOT.get(), AllItems.CRUSHED_LEAD.get(), consumer);
-        this.ingot(FoundationItems.NICKEL_INGOT.get(), AllItems.CRUSHED_NICKEL.get(), consumer);
-        this.ingot(FoundationItems.SILVER_INGOT.get(), AllItems.CRUSHED_SILVER.get(), consumer);
-        this.ingot(FoundationItems.TIN_INGOT.get(), AllItems.CRUSHED_TIN.get(), consumer);
-        this.ingot(FoundationItems.URANIUM_INGOT.get(), AllItems.CRUSHED_URANIUM.get(), consumer);
+        this.ingot(FoundationItems.INGOTS.get(Resource.Aluminium).get(), AllItems.CRUSHED_BAUXITE.get(), consumer);
+        this.ingot(FoundationItems.INGOTS.get(Resource.Lead).get(), AllItems.CRUSHED_LEAD.get(), consumer);
+        this.ingot(FoundationItems.INGOTS.get(Resource.Nickel).get(), AllItems.CRUSHED_NICKEL.get(), consumer);
+        this.ingot(FoundationItems.INGOTS.get(Resource.Silver).get(), AllItems.CRUSHED_SILVER.get(), consumer);
+        this.ingot(FoundationItems.INGOTS.get(Resource.Tin).get(), AllItems.CRUSHED_TIN.get(), consumer);
+        this.ingot(FoundationItems.INGOTS.get(Resource.Uranium).get(), AllItems.CRUSHED_URANIUM.get(), consumer);
     }
 
     private void ingot(ItemLike resultIn, ItemLike ingredientIn, Consumer<FinishedRecipe> consumer) {

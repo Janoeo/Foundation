@@ -3,6 +3,7 @@ package fr.alasdiablo.janoeo.foundation.data.loot.table;
 import fr.alasdiablo.diolib.api.data.loot.DioBlockLootTable;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
+import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -35,54 +36,54 @@ public class FoundationBlockLootTables extends DioBlockLootTable {
         this.dropSelf(FoundationBlocks.RAW_URANIUM_BLOCK.get());
 
         this.registerOreLootTable(
-                FoundationItems.RAW_ALUMINIUM.get(), ConstantValue.exactly(1.0F), FoundationBlocks.BAUXITE_ORE.get(), FoundationBlocks.DEEPSLATE_BAUXITE_ORE.get());
-        this.registerOreLootTable(FoundationItems.RAW_LEAD.get(), ConstantValue.exactly(1.0F), FoundationBlocks.LEAD_ORE.get(), FoundationBlocks.DEEPSLATE_LEAD_ORE.get());
-        this.registerOreLootTable(FoundationItems.RAW_NICKEL.get(), ConstantValue.exactly(1.0F), FoundationBlocks.NICKEL_ORE.get(), FoundationBlocks.DEEPSLATE_NICKEL_ORE.get());
-        this.registerOreLootTable(FoundationItems.RAW_SILVER.get(), ConstantValue.exactly(1.0F), FoundationBlocks.SILVER_ORE.get(), FoundationBlocks.DEEPSLATE_SILVER_ORE.get());
-        this.registerOreLootTable(FoundationItems.RAW_TIN.get(), ConstantValue.exactly(1.0F), FoundationBlocks.TIN_ORE.get(), FoundationBlocks.DEEPSLATE_TIN_ORE.get());
+                FoundationItems.RAWS.get(Resource.Aluminium).get(), ConstantValue.exactly(1.0F), FoundationBlocks.BAUXITE_ORE.get(), FoundationBlocks.DEEPSLATE_BAUXITE_ORE.get());
+        this.registerOreLootTable(FoundationItems.RAWS.get(Resource.Lead).get(), ConstantValue.exactly(1.0F), FoundationBlocks.LEAD_ORE.get(), FoundationBlocks.DEEPSLATE_LEAD_ORE.get());
+        this.registerOreLootTable(FoundationItems.RAWS.get(Resource.Nickel).get(), ConstantValue.exactly(1.0F), FoundationBlocks.NICKEL_ORE.get(), FoundationBlocks.DEEPSLATE_NICKEL_ORE.get());
+        this.registerOreLootTable(FoundationItems.RAWS.get(Resource.Silver).get(), ConstantValue.exactly(1.0F), FoundationBlocks.SILVER_ORE.get(), FoundationBlocks.DEEPSLATE_SILVER_ORE.get());
+        this.registerOreLootTable(FoundationItems.RAWS.get(Resource.Tin).get(), ConstantValue.exactly(1.0F), FoundationBlocks.TIN_ORE.get(), FoundationBlocks.DEEPSLATE_TIN_ORE.get());
         this.registerOreLootTable(
-                FoundationItems.RAW_URANIUM.get(), ConstantValue.exactly(1.0F), FoundationBlocks.URANIUM_ORE.get(), FoundationBlocks.DEEPSLATE_URANIUM_ORE.get()
+                FoundationItems.RAWS.get(Resource.Uranium).get(), ConstantValue.exactly(1.0F), FoundationBlocks.URANIUM_ORE.get(), FoundationBlocks.DEEPSLATE_URANIUM_ORE.get()
         );
 
         this.registerOreLootTable(
-                FoundationItems.ALUMINIUM_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_BAUXITE_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Aluminium).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_BAUXITE_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_BAUXITE_ORE.get(), FoundationBlocks.NETHER_BAUXITE_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.LEAD_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_LEAD_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Lead).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_LEAD_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_LEAD_ORE.get(), FoundationBlocks.NETHER_LEAD_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.NICKEL_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_NICKEL_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Nickel).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_NICKEL_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_NICKEL_ORE.get(), FoundationBlocks.NETHER_NICKEL_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.SILVER_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_SILVER_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Silver).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_SILVER_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_SILVER_ORE.get(), FoundationBlocks.NETHER_SILVER_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.TIN_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F),
+                FoundationItems.NUGGETS.get(Resource.Tin).get(), UniformGenerator.between(2.0F, 6.0F),
                 FoundationBlocks.TINY_TIN_ORE.get(), FoundationBlocks.DEEPSLATE_TINY_TIN_ORE.get(), FoundationBlocks.NETHER_TIN_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.URANIUM_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_URANIUM_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Uranium).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_URANIUM_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_URANIUM_ORE.get(), FoundationBlocks.NETHER_URANIUM_ORE.get()
         );
 
         this.registerOreLootTable(
-                FoundationItems.COAL_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_COAL_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Coal).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_COAL_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_COAL_ORE.get(), FoundationBlocks.NETHER_COAL_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.COPPER_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_COPPER_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Copper).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_COPPER_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_COPPER_ORE.get(), FoundationBlocks.NETHER_COPPER_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.DIAMOND_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_DIAMOND_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Diamond).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_DIAMOND_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_DIAMOND_ORE.get(), FoundationBlocks.NETHER_DIAMOND_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.EMERALD_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_EMERALD_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Emerald).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_EMERALD_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_EMERALD_ORE.get(), FoundationBlocks.NETHER_EMERALD_ORE.get()
         );
         this.registerOreLootTable(
@@ -93,11 +94,11 @@ public class FoundationBlockLootTables extends DioBlockLootTable {
                 FoundationBlocks.DEEPSLATE_TINY_IRON_ORE.get(), FoundationBlocks.NETHER_IRON_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.LAPIS_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_LAPIS_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.Lapis).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_LAPIS_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_LAPIS_ORE.get(), FoundationBlocks.NETHER_LAPIS_ORE.get()
         );
         this.registerOreLootTable(
-                FoundationItems.REDSTONE_NUGGET.get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_REDSTONE_ORE.get(),
+                FoundationItems.NUGGETS.get(Resource.RedStone).get(), UniformGenerator.between(2.0F, 6.0F), FoundationBlocks.TINY_REDSTONE_ORE.get(),
                 FoundationBlocks.DEEPSLATE_TINY_REDSTONE_ORE.get(), FoundationBlocks.NETHER_REDSTONE_ORE.get()
         );
     }

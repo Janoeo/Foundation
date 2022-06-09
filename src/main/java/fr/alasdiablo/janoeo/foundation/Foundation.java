@@ -17,6 +17,7 @@ import fr.alasdiablo.janoeo.foundation.data.tag.FoundationItemTagsProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationGeneration;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
+import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTab;
@@ -44,7 +45,7 @@ public class Foundation {
     public static final CreativeModeTab MATERIALS_GROUP = new GroundCreativeModeTab("janoeo.foundation.materials") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(FoundationItems.SILVER_GEAR.get());
+            return new ItemStack(FoundationItems.GEARS.get(Resource.Silver).get());
         }
     };
 
