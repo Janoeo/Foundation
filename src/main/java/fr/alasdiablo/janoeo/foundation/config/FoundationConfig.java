@@ -50,39 +50,74 @@ public class FoundationConfig {
 
     /* * * * * * * * * * * * * * * Nether Ore * * *  * * * * * * * * * * */
     public static final OreConfig NETHER_COAL_ORE_CONFIG     = new OreConfig(Resource.Coal.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 6);
     public static final OreConfig NETHER_COPPER_ORE_CONFIG   = new OreConfig(Resource.Copper.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 6);
     public static final OreConfig NETHER_DIAMOND_ORE_CONFIG  = new OreConfig(Resource.Diamond.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 4);
     public static final OreConfig NETHER_EMERALD_ORE_CONFIG  = new OreConfig(Resource.Emerald.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 4);
     public static final OreConfig NETHER_IRON_ORE_CONFIG     = new OreConfig(Resource.Iron.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 6);
     public static final OreConfig NETHER_LAPIS_ORE_CONFIG    = new OreConfig(Resource.Lapis.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 4);
     public static final OreConfig NETHER_REDSTONE_ORE_CONFIG = new OreConfig(Resource.RedStone.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 4);
 
     public static final OreConfig NETHER_BAUXITE_ORE_CONFIG = new OreConfig(Resource.Aluminium.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 6);
     public static final OreConfig NETHER_LEAD_ORE_CONFIG    = new OreConfig(Resource.Lead.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 6);
     public static final OreConfig NETHER_NICKEL_ORE_CONFIG  = new OreConfig(Resource.Nickel.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 4);
     public static final OreConfig NETHER_SILVER_ORE_CONFIG  = new OreConfig(Resource.Silver.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 4);
     public static final OreConfig NETHER_TIN_ORE_CONFIG     = new OreConfig(Resource.Tin.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 6);
     public static final OreConfig NETHER_URANIUM_ORE_CONFIG = new OreConfig(Resource.Uranium.getName(ResourceType.NetherOre), true).placementUniform(
-            10, 10, 118, 10);
+            6, 4, 120, 4);
+
+    /* * * * * * * * * * * * * * * Gravel Ore * * *  * * * * * * * * * * */
+    public static final OreConfig GRAVEL_COAL_ORE_CONFIG     = new OreConfig(Resource.Coal.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 118, 24);
+    public static final OreConfig GRAVEL_COPPER_ORE_CONFIG   = new OreConfig(Resource.Copper.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 118, 24);
+    public static final OreConfig GRAVEL_DIAMOND_ORE_CONFIG  = new OreConfig(Resource.Diamond.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 118, 24);
+    public static final OreConfig GRAVEL_EMERALD_ORE_CONFIG  = new OreConfig(Resource.Emerald.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 118, 24);
+    public static final OreConfig GRAVEL_IRON_ORE_CONFIG     = new OreConfig(Resource.Iron.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 118, 24);
+    public static final OreConfig GRAVEL_LAPIS_ORE_CONFIG    = new OreConfig(Resource.Lapis.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 118, 24);
+    public static final OreConfig GRAVEL_REDSTONE_ORE_CONFIG = new OreConfig(Resource.RedStone.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 118, 24);
+
+    public static final OreConfig GRAVEL_BAUXITE_ORE_CONFIG = new OreConfig(Resource.Aluminium.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 242, 24);
+    public static final OreConfig GRAVEL_LEAD_ORE_CONFIG    = new OreConfig(Resource.Lead.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 242, 24);
+    public static final OreConfig GRAVEL_NICKEL_ORE_CONFIG  = new OreConfig(Resource.Nickel.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 242, 24);
+    public static final OreConfig GRAVEL_SILVER_ORE_CONFIG  = new OreConfig(Resource.Silver.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 242, 24);
+    public static final OreConfig GRAVEL_TIN_ORE_CONFIG     = new OreConfig(Resource.Tin.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 242, 24);
+    public static final OreConfig GRAVEL_URANIUM_ORE_CONFIG = new OreConfig(Resource.Uranium.getName(ResourceType.GravelOre), true).placementUniform(
+            4, 2, 242, 24);
 
     /* * * * * * * * * * * * * * * Config Builder * * *  * * * * * * * * * * */
+    private static final JsonConfigBuilder ALL_GRAVEL_ORE_CONFIG     = new JsonConfigBuilder("janoeo", "foundation", "all", "gravel");
     private static final JsonConfigBuilder OVERWORLD_ORE_TINY_CONFIG = new JsonConfigBuilder("janoeo", "foundation", "overworld", "tiny");
     private static final JsonConfigBuilder OVERWORLD_ORE_CONFIG      = new JsonConfigBuilder("janoeo", "foundation", "overworld");
     private static final JsonConfigBuilder NETHER_ORE_CONFIG         = new JsonConfigBuilder("janoeo", "foundation", "nether");
 
     public static void init() throws IOException {
+        ALL_GRAVEL_ORE_CONFIG.add(GRAVEL_COAL_ORE_CONFIG).add(GRAVEL_COPPER_ORE_CONFIG).add(GRAVEL_DIAMOND_ORE_CONFIG).add(GRAVEL_EMERALD_ORE_CONFIG)
+                .add(GRAVEL_IRON_ORE_CONFIG).add(GRAVEL_LAPIS_ORE_CONFIG).add(GRAVEL_REDSTONE_ORE_CONFIG).add(GRAVEL_BAUXITE_ORE_CONFIG)
+                .add(GRAVEL_LEAD_ORE_CONFIG)
+                .add(GRAVEL_NICKEL_ORE_CONFIG).add(GRAVEL_SILVER_ORE_CONFIG).add(GRAVEL_TIN_ORE_CONFIG).add(GRAVEL_URANIUM_ORE_CONFIG).build();
+
         OVERWORLD_ORE_TINY_CONFIG.add(TINY_COAL_ORE_CONFIG).add(TINY_COPPER_ORE_CONFIG).add(TINY_DIAMOND_ORE_CONFIG).add(TINY_EMERALD_ORE_CONFIG)
                 .add(TINY_GOLD_ORE_CONFIG).add(TINY_GOLD_ORE_EXTRA_CONFIG).add(TINY_IRON_ORE_CONFIG).add(TINY_LAPIS_ORE_CONFIG).add(TINY_REDSTONE_ORE_CONFIG)
                 .add(TINY_BAUXITE_ORE_CONFIG).add(TINY_LEAD_ORE_CONFIG).add(TINY_NICKEL_ORE_CONFIG).add(TINY_SILVER_ORE_CONFIG).add(TINY_TIN_ORE_CONFIG)

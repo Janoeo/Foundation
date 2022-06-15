@@ -56,12 +56,12 @@ public class Foundation {
 
     public Foundation() throws IOException {
         this.foundCompat();
+        FoundationConfig.init();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         FoundationItems.init(modBus);
         FoundationBlocks.init(modBus);
         modBus.addListener(this::setup);
         modBus.addListener(this::gatherData);
-        FoundationConfig.init();
         MinecraftForge.EVENT_BUS.addListener(FoundationGeneration::onBiomeLoading);
     }
 

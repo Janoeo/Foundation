@@ -11,17 +11,23 @@ import org.jetbrains.annotations.NotNull;
 public class FoundationGeneration {
 
     public static void onBiomeLoading(@NotNull BiomeLoadingEvent biomeLoadingEvent) {
-        var generation = biomeLoadingEvent.getGeneration();
+        var generation    = biomeLoadingEvent.getGeneration();
         var biomeCategory = biomeLoadingEvent.getCategory();
 
-        if (biomeCategory != Biome.BiomeCategory.NETHER && biomeCategory != Biome.BiomeCategory.THEEND) {
-            addOre(generation);
-            addTinyOre(generation, biomeCategory);
-        }
 
-        if (biomeCategory == Biome.BiomeCategory.NETHER) {
-            addNetherOre(generation);
-        }
+        addOre(generation);
+        addTinyOre(generation, biomeCategory);
+        addNetherOre(generation);
+        addGravelOre(generation);
+
+//        if (biomeCategory != Biome.BiomeCategory.NETHER && biomeCategory != Biome.BiomeCategory.THEEND) {
+//            addOre(generation);
+//            addTinyOre(generation, biomeCategory);
+//        }
+//
+//        if (biomeCategory == Biome.BiomeCategory.NETHER) {
+//            addNetherOre(generation);
+//        }
     }
 
     private static void addOre(BiomeGenerationSettingsBuilder generation) {
@@ -135,6 +141,49 @@ public class FoundationGeneration {
         );
         if (FoundationConfig.NETHER_URANIUM_ORE_CONFIG.isEnable()) generation.addFeature(
                 GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_NETHER_URANIUM
+        );
+    }
+
+    private static void addGravelOre(BiomeGenerationSettingsBuilder generation) {
+        if (FoundationConfig.GRAVEL_COAL_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_COAL
+        );
+        if (FoundationConfig.GRAVEL_COPPER_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_COPPER
+        );
+        if (FoundationConfig.GRAVEL_DIAMOND_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_DIAMOND
+        );
+        if (FoundationConfig.GRAVEL_EMERALD_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_EMERALD
+        );
+        if (FoundationConfig.GRAVEL_IRON_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_IRON
+        );
+        if (FoundationConfig.GRAVEL_LAPIS_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_LAPIS
+        );
+        if (FoundationConfig.GRAVEL_REDSTONE_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_REDSTONE
+        );
+
+        if (FoundationConfig.GRAVEL_BAUXITE_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_BAUXITE
+        );
+        if (FoundationConfig.GRAVEL_LEAD_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_LEAD
+        );
+        if (FoundationConfig.GRAVEL_NICKEL_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_NICKEL
+        );
+        if (FoundationConfig.GRAVEL_SILVER_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_SILVER
+        );
+        if (FoundationConfig.GRAVEL_TIN_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_TIN
+        );
+        if (FoundationConfig.GRAVEL_URANIUM_ORE_CONFIG.isEnable()) generation.addFeature(
+                GenerationStep.Decoration.UNDERGROUND_ORES, FoundationPlacements.ORE_GRAVEL_URANIUM
         );
     }
 }

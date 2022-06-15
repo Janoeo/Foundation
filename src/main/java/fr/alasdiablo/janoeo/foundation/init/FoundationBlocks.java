@@ -27,37 +27,40 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public class FoundationBlocks {
+    static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Foundation.MOD_ID);
+
     /* * * * * * * * * * * * * * * Blocks * * * * * * * * * * * * * */
     public static final Map<Resource, RegistryObject<Block>> STONE_ORES;
     public static final Map<Resource, RegistryObject<Block>> TINY_STONE_ORES;
     public static final Map<Resource, RegistryObject<Block>> DEEPSLATE_ORES;
+    public static final Map<Resource, RegistryObject<Block>> TINY_DEEPSLATE_ORES;
+    public static final Map<Resource, RegistryObject<Block>> NETHER_ORES;
+    public static final Map<Resource, RegistryObject<Block>> GRAVEL_ORES;
+    public static final Map<Resource, RegistryObject<Block>> RAW_BLOCKS;
+    public static final Map<Resource, RegistryObject<Block>> STORAGE_BLOCKS;
 
-    private static final BlockBehaviour.Properties            PROPERTIES_DEEPSLATE_ORE = BlockBehaviour.Properties.of(Material.STONE)
+    /* * * * * * * * * * * * * * * Item Properties * * * * * * * * * * * * * */
+    private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties().tab(Foundation.ORES_GROUP);
+
+    /* * * * * * * * * * * * * * * Block Properties * * * * * * * * * * * * * */
+    private static final BlockBehaviour.Properties PROPERTIES_STONE_ORE     = BlockBehaviour.Properties.of(Material.STONE)
+            .requiresCorrectToolForDrops()
+            .strength(3.0F, 3.0F);
+    private static final BlockBehaviour.Properties PROPERTIES_DEEPSLATE_ORE = BlockBehaviour.Properties.of(Material.STONE)
             .requiresCorrectToolForDrops()
             .color(MaterialColor.DEEPSLATE)
             .strength(4.5F, 3.0F)
             .sound(SoundType.DEEPSLATE);
-    public static final  Map<Resource, RegistryObject<Block>> TINY_DEEPSLATE_ORES;
-    public static final  Map<Resource, RegistryObject<Block>> NETHER_ORES;
-    public static final  Map<Resource, RegistryObject<Block>> GRAVEL_ORES;
-    public static final  Map<Resource, RegistryObject<Block>> RAW_BLOCKS;
-    public static final  Map<Resource, RegistryObject<Block>> STORAGE_BLOCKS;
-    static final         DeferredRegister<Block>              BLOCKS                   = DeferredRegister.create(ForgeRegistries.BLOCKS, Foundation.MOD_ID);
-    private static final BlockBehaviour.Properties            PROPERTIES_NETHER_ORE    = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER)
+    private static final BlockBehaviour.Properties PROPERTIES_NETHER_ORE    = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER)
             .requiresCorrectToolForDrops()
             .strength(3.0F, 3.0F)
             .sound(SoundType.NETHER_ORE);
-    /* * * * * * * * * * * * * * * Item Properties * * * * * * * * * * * * * */
-    private static final Item.Properties                      PROPERTIES_ITEM_BLOCK    = new Item.Properties().tab(Foundation.ORES_GROUP);
-    /* * * * * * * * * * * * * * * Block Properties * * * * * * * * * * * * * */
-    private static final BlockBehaviour.Properties            PROPERTIES_STONE_ORE     = BlockBehaviour.Properties.of(Material.STONE)
-            .requiresCorrectToolForDrops()
-            .strength(3.0F, 3.0F);
-    private static final BlockBehaviour.Properties            PROPERTIES_GRAVEL_ORE    = BlockBehaviour.Properties.of(Material.SAND, MaterialColor.STONE)
+    private static final BlockBehaviour.Properties PROPERTIES_GRAVEL_ORE    = BlockBehaviour.Properties.of(Material.SAND, MaterialColor.STONE)
             .requiresCorrectToolForDrops()
             .strength(0.6F)
             .sound(SoundType.GRAVEL);
 
+    /* * * * * * * * * * * * * * * Block Constructor * * * * * * * * * * * * * */
     static {
         var stoneOres         = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var tinyStoneOres     = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
@@ -109,6 +112,37 @@ public class FoundationBlocks {
         STORAGE_BLOCKS      = storageBlocks.build();
     }
 
+    /* * * * * * * * * * * * * * * Block builder * * * * * * * * * * * * * */
+    private static <T extends Block> RegistryObject<T> register(Supplier<T> block, String name) {
+        RegistryObject<T> blockRegistry = BLOCKS.register(name, block);
+        FoundationItems.ITEMS.register(name, () -> new BlockItem(blockRegistry.get(), PROPERTIES_ITEM_BLOCK));
+        return blockRegistry;
+    }
+
+    private static RegistryObject<Block> createOreBlock(BlockBehaviour.Properties properties, String name, UniformInt xp) {
+        return register(() -> new OreBlock(properties, xp), name);
+    }
+
+    private static RegistryObject<Block> createRedStoneOreBlock(BlockBehaviour.Properties properties, String name) {
+        return register(() -> new RedStoneOreBlock(properties), name);
+    }
+
+    private static RegistryObject<Block> createNetherOreBlock(String name, UniformInt xp) {
+        return register(() -> new NetherOreBlock(PROPERTIES_NETHER_ORE, xp), name);
+    }
+
+    private static RegistryObject<Block> createNetherRedStoneOreBlock(String name) {
+        return register(() -> new NetherRedStoneOreBlock(PROPERTIES_NETHER_ORE), name);
+    }
+
+    private static RegistryObject<Block> createGravelOreBlock(String name, UniformInt xp) {
+        return register(() -> new GravelOre(PROPERTIES_GRAVEL_ORE, xp), name);
+    }
+
+    private static RegistryObject<Block> createRedStoneGravelOreBlock(String name) {
+        return register(() -> new GravelRedStoneOre(PROPERTIES_GRAVEL_ORE), name);
+    }
+
     private static RegistryObject<Block> createStorageBlock(String name, MaterialColor color) {
         return register(
                 () -> new Block(
@@ -130,37 +164,6 @@ public class FoundationBlocks {
                 ),
                 name
         );
-    }
-
-    private static RegistryObject<Block> createOreBlock(BlockBehaviour.Properties properties, String name, UniformInt xp) {
-        return register(() -> new OreBlock(properties, xp), name);
-    }
-
-    /* * * * * * * * * * * * * * * Block builder * * * * * * * * * * * * * */
-    private static <T extends Block> RegistryObject<T> register(Supplier<T> block, String name) {
-        RegistryObject<T> blockRegistry = BLOCKS.register(name, block);
-        FoundationItems.ITEMS.register(name, () -> new BlockItem(blockRegistry.get(), PROPERTIES_ITEM_BLOCK));
-        return blockRegistry;
-    }
-
-    private static RegistryObject<Block> createNetherOreBlock(String name, UniformInt xp) {
-        return register(() -> new NetherOreBlock(PROPERTIES_NETHER_ORE, xp), name);
-    }
-
-    private static RegistryObject<Block> createRedStoneOreBlock(BlockBehaviour.Properties properties, String name) {
-        return register(() -> new RedStoneOreBlock(properties), name);
-    }
-
-    private static RegistryObject<Block> createGravelOreBlock(String name, UniformInt xp) {
-        return register(() -> new GravelOre(PROPERTIES_GRAVEL_ORE, xp), name);
-    }
-
-    private static RegistryObject<Block> createNetherRedStoneOreBlock(String name) {
-        return register(() -> new NetherRedStoneOreBlock(PROPERTIES_NETHER_ORE), name);
-    }
-
-    private static RegistryObject<Block> createRedStoneGravelOreBlock(String name) {
-        return register(() -> new GravelRedStoneOre(PROPERTIES_GRAVEL_ORE), name);
     }
 
     public static void init(IEventBus bus) {

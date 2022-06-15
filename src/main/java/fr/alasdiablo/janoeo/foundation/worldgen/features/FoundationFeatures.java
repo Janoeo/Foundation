@@ -9,10 +9,12 @@ import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;
@@ -23,6 +25,7 @@ import java.util.function.Supplier;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
 
 public class FoundationFeatures {
+    public static final RuleTest GRAVEL = new BlockMatchTest(Blocks.GRAVEL);
 
     /* * * * * * * * * * * * * * * Ore * * *  * * * * * * * * * * */
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_BAUXITE = createOreFeature(
@@ -103,6 +106,35 @@ public class FoundationFeatures {
             OreFeatures.NETHERRACK, NETHER_ORES.get(Resource.Tin), FoundationConfig.NETHER_TIN_ORE_CONFIG);
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_NETHER_URANIUM = createOreFeature(
             OreFeatures.NETHERRACK, NETHER_ORES.get(Resource.Uranium), FoundationConfig.NETHER_URANIUM_ORE_CONFIG);
+
+    /* * * * * * * * * * * * * * * Gravel Ore * * *  * * * * * * * * * * */
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_COAL     = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Coal), FoundationConfig.GRAVEL_COAL_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_COPPER   = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Copper), FoundationConfig.GRAVEL_COPPER_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_DIAMOND  = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Diamond), FoundationConfig.GRAVEL_DIAMOND_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_EMERALD  = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Emerald), FoundationConfig.GRAVEL_EMERALD_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_IRON     = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Iron), FoundationConfig.GRAVEL_IRON_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_LAPIS    = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Lapis), FoundationConfig.GRAVEL_LAPIS_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_REDSTONE = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.RedStone), FoundationConfig.GRAVEL_REDSTONE_ORE_CONFIG);
+
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_BAUXITE = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Aluminium), FoundationConfig.GRAVEL_BAUXITE_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_LEAD    = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Lead), FoundationConfig.GRAVEL_LEAD_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_NICKEL  = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Nickel), FoundationConfig.GRAVEL_NICKEL_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_SILVER  = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Silver), FoundationConfig.GRAVEL_SILVER_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_TIN     = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Tin), FoundationConfig.GRAVEL_TIN_ORE_CONFIG);
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ORE_GRAVEL_URANIUM = createOreFeature(
+            GRAVEL, GRAVEL_ORES.get(Resource.Uranium), FoundationConfig.GRAVEL_URANIUM_ORE_CONFIG);
 
     private static @NotNull @Unmodifiable List<OreConfiguration.TargetBlockState> getOverworldTargetList(
             @NotNull Supplier<Block> stoneReplacer, @NotNull Supplier<Block> deepSlateReplacer
