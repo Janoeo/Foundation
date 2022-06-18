@@ -25,7 +25,7 @@ if (project.findProperty('ci_build').toBoolean()) {
     version +=".${project.findProperty('majorVersion')}"
     version +=".${project.findProperty('minorVersion')}"
     version +=".${project.findProperty('buildVersion')}"
-    if (isExperimental) {
+    if (project.findProperty('isExperimental').toBoolean()) {
         version += '-experimental'
     }
 }
