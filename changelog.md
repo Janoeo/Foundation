@@ -4,6 +4,7 @@
 
 <details><summary><b>1.18.2</b></summary>
 
++ [7.10.3.83](#710383)
 + [7.9.3.82](#79382)
 
 </details>
@@ -120,6 +121,17 @@
 + [1.0](#10)
 
 </details>
+
+### 7.10.3.83
+
+### Add
++ Gravel ore (every variants of ore)
+
+### Breaking change
++ Rod items registry name have change
+
+### Technical change
++ Add a new system to register items and blocks
 
 ### 7.9.3.82
 
