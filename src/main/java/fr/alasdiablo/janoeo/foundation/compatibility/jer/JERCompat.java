@@ -4,6 +4,7 @@ import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.config.OreConfig;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
+import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import jeresources.api.IWorldGenRegistry;
 import jeresources.api.conditionals.Conditional;
 import jeresources.api.distributions.DistributionBase;
@@ -43,130 +44,130 @@ public class JERCompat {
 
     private static void addTinyOre(@NotNull IWorldGenRegistry registry) {
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_COAL_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Coal).get()),
                 getDistribution(FoundationConfig.TINY_COAL_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.COAL_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Coal).get()), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_COPPER_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Copper).get()),
                 getDistribution(FoundationConfig.TINY_COPPER_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.COPPER_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Copper).get()), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_DIAMOND_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Diamond).get()),
                 getDistribution(FoundationConfig.TINY_DIAMOND_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.DIAMOND_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Diamond).get()), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_EMERALD_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Emerald).get()),
                 getDistribution(FoundationConfig.TINY_EMERALD_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.EMERALD_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Diamond).get()), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_GOLD_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Gold).get()),
                 getDistribution(FoundationConfig.TINY_GOLD_ORE_CONFIG),
                 true,
                 new LootDrop(new ItemStack(Items.GOLD_NUGGET), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_GOLD_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Gold).get()),
                 getDistribution(FoundationConfig.TINY_GOLD_ORE_CONFIG),
                 new Restriction(BiomeRestriction.MESA),
                 true,
                 new LootDrop(new ItemStack(Items.GOLD_NUGGET), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_GOLD_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Gold).get()),
                 getDistribution(FoundationConfig.TINY_GOLD_ORE_EXTRA_CONFIG),
                 new Restriction(BiomeRestriction.MESA),
                 true,
                 new LootDrop(new ItemStack(Items.GOLD_NUGGET), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_IRON_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Iron).get()),
                 getDistribution(FoundationConfig.TINY_IRON_ORE_CONFIG),
                 true,
                 new LootDrop(new ItemStack(Items.IRON_NUGGET), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_LAPIS_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Lapis).get()),
                 getDistribution(FoundationConfig.TINY_LAPIS_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.LAPIS_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Lapis).get()), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_REDSTONE_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.RedStone).get()),
                 getDistribution(FoundationConfig.TINY_REDSTONE_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.REDSTONE_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.RedStone).get()), 2, 6, Conditional.affectedByFortune)
         );
 
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_BAUXITE_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Aluminium).get()),
                 getDistribution(FoundationConfig.TINY_BAUXITE_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.ALUMINIUM_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Aluminium).get()), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_LEAD_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Lead).get()),
                 getDistribution(FoundationConfig.TINY_LEAD_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.LEAD_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Lead).get()), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_NICKEL_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Nickel).get()),
                 getDistribution(FoundationConfig.TINY_NICKEL_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.NICKEL_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Nickel).get()), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_TIN_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Tin).get()),
                 getDistribution(FoundationConfig.TINY_TIN_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.TIN_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Tin).get()), 2, 6, Conditional.affectedByFortune)
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TINY_URANIUM_ORE.get()),
+                new ItemStack(FoundationBlocks.TINY_STONE_ORES.get(Resource.Uranium).get()),
                 getDistribution(FoundationConfig.TINY_URANIUM_ORE_CONFIG),
                 true,
-                new LootDrop(new ItemStack(FoundationItems.URANIUM_NUGGET.get()), 2, 6, Conditional.affectedByFortune)
+                new LootDrop(new ItemStack(FoundationItems.NUGGETS.get(Resource.Uranium).get()), 2, 6, Conditional.affectedByFortune)
         );
     }
 
     private static void addOres(@NotNull IWorldGenRegistry registry) {
         registry.register(
-                new ItemStack(FoundationBlocks.BAUXITE_ORE.get()),
+                new ItemStack(FoundationBlocks.STONE_ORES.get(Resource.Aluminium).get()),
                 getDistribution(FoundationConfig.BAUXITE_ORE_CONFIG),
-                new LootDrop(new ItemStack(FoundationItems.RAW_ALUMINIUM.get()))
+                new LootDrop(new ItemStack(FoundationItems.RAWS.get(Resource.Aluminium).get()))
         );
         registry.register(
-                new ItemStack(FoundationBlocks.LEAD_ORE.get()),
+                new ItemStack(FoundationBlocks.STONE_ORES.get(Resource.Lead).get()),
                 getDistribution(FoundationConfig.LEAD_ORE_CONFIG),
-                new LootDrop(new ItemStack(FoundationItems.RAW_LEAD.get()))
+                new LootDrop(new ItemStack(FoundationItems.RAWS.get(Resource.Lead).get()))
         );
         registry.register(
-                new ItemStack(FoundationBlocks.NICKEL_ORE.get()),
+                new ItemStack(FoundationBlocks.STONE_ORES.get(Resource.Nickel).get()),
                 getDistribution(FoundationConfig.NICKEL_ORE_CONFIG),
-                new LootDrop(new ItemStack(FoundationItems.RAW_NICKEL.get()))
+                new LootDrop(new ItemStack(FoundationItems.RAWS.get(Resource.Nickel).get()))
         );
         registry.register(
-                new ItemStack(FoundationBlocks.SILVER_ORE.get()),
+                new ItemStack(FoundationBlocks.STONE_ORES.get(Resource.Silver).get()),
                 getDistribution(FoundationConfig.SILVER_ORE_CONFIG),
-                new LootDrop(new ItemStack(FoundationItems.RAW_SILVER.get()))
+                new LootDrop(new ItemStack(FoundationItems.RAWS.get(Resource.Silver).get()))
         );
         registry.register(
-                new ItemStack(FoundationBlocks.TIN_ORE.get()),
+                new ItemStack(FoundationBlocks.STONE_ORES.get(Resource.Tin).get()),
                 getDistribution(FoundationConfig.TIN_ORE_CONFIG),
-                new LootDrop(new ItemStack(FoundationItems.RAW_TIN.get()))
+                new LootDrop(new ItemStack(FoundationItems.RAWS.get(Resource.Tin).get()))
         );
         registry.register(
-                new ItemStack(FoundationBlocks.URANIUM_ORE.get()),
+                new ItemStack(FoundationBlocks.STONE_ORES.get(Resource.Uranium).get()),
                 getDistribution(FoundationConfig.URANIUM_ORE_CONFIG),
-                new LootDrop(new ItemStack(FoundationItems.RAW_URANIUM.get()))
+                new LootDrop(new ItemStack(FoundationItems.RAWS.get(Resource.Uranium).get()))
         );
     }
 }

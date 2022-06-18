@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.worldgen.placement;
 
 import fr.alasdiablo.diolib.api.util.ResourceLocations;
-import fr.alasdiablo.janoeo.foundation.Registries;
+import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.config.OreConfig;
 import fr.alasdiablo.janoeo.foundation.worldgen.features.FoundationFeatures;
@@ -37,33 +37,71 @@ public class FoundationPlacements {
     public static final Holder<PlacedFeature> ORE_TINY_LAPIS = createPlacedFeature(FoundationFeatures.ORE_TINY_LAPIS, FoundationConfig.TINY_LAPIS_ORE_CONFIG);
     public static final Holder<PlacedFeature> ORE_TINY_REDSTONE = createPlacedFeature(FoundationFeatures.ORE_TINY_REDSTONE, FoundationConfig.TINY_REDSTONE_ORE_CONFIG);
 
-    public static final Holder<PlacedFeature> TINY_ORE_BAUXITE = createPlacedFeature(FoundationFeatures.TINY_ORE_BAUXITE, FoundationConfig.TINY_BAUXITE_ORE_CONFIG);
-    public static final Holder<PlacedFeature> TINY_ORE_LEAD = createPlacedFeature(FoundationFeatures.TINY_ORE_LEAD, FoundationConfig.TINY_LEAD_ORE_CONFIG);
-    public static final Holder<PlacedFeature> TINY_ORE_NICKEL = createPlacedFeature(FoundationFeatures.TINY_ORE_NICKEL, FoundationConfig.TINY_NICKEL_ORE_CONFIG);
-    public static final Holder<PlacedFeature> TINY_ORE_SILVER = createPlacedFeature(FoundationFeatures.TINY_ORE_SILVER, FoundationConfig.TINY_SILVER_ORE_CONFIG);
-    public static final Holder<PlacedFeature> TINY_ORE_TIN = createPlacedFeature(FoundationFeatures.TINY_ORE_TIN, FoundationConfig.TINY_TIN_ORE_CONFIG);
-    public static final Holder<PlacedFeature> TINY_ORE_URANIUM = createPlacedFeature(FoundationFeatures.TINY_ORE_URANIUM, FoundationConfig.TINY_URANIUM_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_TINY_BAUXITE = createPlacedFeature(FoundationFeatures.ORE_TINY_BAUXITE, FoundationConfig.TINY_BAUXITE_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_TINY_LEAD = createPlacedFeature(FoundationFeatures.ORE_TINY_LEAD, FoundationConfig.TINY_LEAD_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_TINY_NICKEL = createPlacedFeature(FoundationFeatures.ORE_TINY_NICKEL, FoundationConfig.TINY_NICKEL_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_TINY_SILVER = createPlacedFeature(FoundationFeatures.ORE_TINY_SILVER, FoundationConfig.TINY_SILVER_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_TINY_TIN = createPlacedFeature(FoundationFeatures.ORE_TINY_TIN, FoundationConfig.TINY_TIN_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_TINY_URANIUM = createPlacedFeature(FoundationFeatures.ORE_TINY_URANIUM, FoundationConfig.TINY_URANIUM_ORE_CONFIG);
 
     /* * * * * * * * * * * * * * * Nether Ore * * *  * * * * * * * * * * */
-    public static final Holder<PlacedFeature> NETHER_COAL_ORE = createPlacedFeature(FoundationFeatures.NETHER_COAL_ORE, FoundationConfig.NETHER_COAL_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_COPPER_ORE = createPlacedFeature(FoundationFeatures.NETHER_COPPER_ORE, FoundationConfig.NETHER_COPPER_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_DIAMOND_ORE = createPlacedFeature(FoundationFeatures.NETHER_DIAMOND_ORE, FoundationConfig.NETHER_DIAMOND_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_EMERALD_ORE = createPlacedFeature(FoundationFeatures.NETHER_EMERALD_ORE, FoundationConfig.NETHER_EMERALD_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_IRON_ORE = createPlacedFeature(FoundationFeatures.NETHER_IRON_ORE, FoundationConfig.NETHER_IRON_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_LAPIS_ORE = createPlacedFeature(FoundationFeatures.NETHER_LAPIS_ORE, FoundationConfig.NETHER_LAPIS_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_REDSTONE_ORE = createPlacedFeature(FoundationFeatures.NETHER_REDSTONE_ORE, FoundationConfig.NETHER_REDSTONE_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_COAL     = createPlacedFeature(FoundationFeatures.ORE_NETHER_COAL, FoundationConfig.NETHER_COAL_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_COPPER   = createPlacedFeature(FoundationFeatures.ORE_NETHER_COPPER, FoundationConfig.NETHER_COPPER_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_DIAMOND  = createPlacedFeature(FoundationFeatures.ORE_NETHER_DIAMOND, FoundationConfig.NETHER_DIAMOND_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_EMERALD  = createPlacedFeature(FoundationFeatures.ORE_NETHER_EMERALD, FoundationConfig.NETHER_EMERALD_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_IRON     = createPlacedFeature(
+            FoundationFeatures.ORE_NETHER_IRON, FoundationConfig.NETHER_IRON_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_LAPIS    = createPlacedFeature(
+            FoundationFeatures.ORE_NETHER_LAPIS, FoundationConfig.NETHER_LAPIS_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_REDSTONE = createPlacedFeature(
+            FoundationFeatures.ORE_NETHER_REDSTONE, FoundationConfig.NETHER_REDSTONE_ORE_CONFIG);
 
-    public static final Holder<PlacedFeature> NETHER_BAUXITE_ORE = createPlacedFeature(FoundationFeatures.NETHER_BAUXITE_ORE, FoundationConfig.NETHER_BAUXITE_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_LEAD_ORE = createPlacedFeature(FoundationFeatures.NETHER_LEAD_ORE, FoundationConfig.NETHER_LEAD_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_NICKEL_ORE = createPlacedFeature(FoundationFeatures.NETHER_NICKEL_ORE, FoundationConfig.NETHER_NICKEL_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_SILVER_ORE = createPlacedFeature(FoundationFeatures.NETHER_SILVER_ORE, FoundationConfig.NETHER_SILVER_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_TIN_ORE = createPlacedFeature(FoundationFeatures.NETHER_TIN_ORE, FoundationConfig.NETHER_TIN_ORE_CONFIG);
-    public static final Holder<PlacedFeature> NETHER_URANIUM_ORE = createPlacedFeature(FoundationFeatures.NETHER_URANIUM_ORE, FoundationConfig.NETHER_URANIUM_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_BAUXITE = createPlacedFeature(
+            FoundationFeatures.ORE_NETHER_BAUXITE, FoundationConfig.NETHER_BAUXITE_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_LEAD    = createPlacedFeature(
+            FoundationFeatures.ORE_NETHER_LEAD, FoundationConfig.NETHER_LEAD_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_NICKEL  = createPlacedFeature(
+            FoundationFeatures.ORE_NETHER_NICKEL, FoundationConfig.NETHER_NICKEL_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_SILVER  = createPlacedFeature(
+            FoundationFeatures.ORE_NETHER_SILVER, FoundationConfig.NETHER_SILVER_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_TIN     = createPlacedFeature(
+            FoundationFeatures.ORE_NETHER_TIN, FoundationConfig.NETHER_TIN_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_NETHER_URANIUM = createPlacedFeature(
+            FoundationFeatures.ORE_NETHER_URANIUM, FoundationConfig.NETHER_URANIUM_ORE_CONFIG);
+
+    /* * * * * * * * * * * * * * * Gravel Ore * * *  * * * * * * * * * * */
+    public static final Holder<PlacedFeature> ORE_GRAVEL_COAL     = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_COAL, FoundationConfig.GRAVEL_COAL_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_COPPER   = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_COPPER, FoundationConfig.GRAVEL_COPPER_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_DIAMOND  = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_DIAMOND, FoundationConfig.GRAVEL_DIAMOND_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_EMERALD  = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_EMERALD, FoundationConfig.GRAVEL_EMERALD_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_IRON     = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_IRON, FoundationConfig.GRAVEL_IRON_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_LAPIS    = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_LAPIS, FoundationConfig.GRAVEL_LAPIS_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_REDSTONE = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_REDSTONE, FoundationConfig.GRAVEL_REDSTONE_ORE_CONFIG);
+
+    public static final Holder<PlacedFeature> ORE_GRAVEL_BAUXITE = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_BAUXITE, FoundationConfig.GRAVEL_BAUXITE_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_LEAD    = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_LEAD, FoundationConfig.GRAVEL_LEAD_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_NICKEL  = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_NICKEL, FoundationConfig.GRAVEL_NICKEL_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_SILVER  = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_SILVER, FoundationConfig.GRAVEL_SILVER_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_TIN     = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_TIN, FoundationConfig.GRAVEL_TIN_ORE_CONFIG);
+    public static final Holder<PlacedFeature> ORE_GRAVEL_URANIUM = createPlacedFeature(
+            FoundationFeatures.ORE_GRAVEL_URANIUM, FoundationConfig.GRAVEL_URANIUM_ORE_CONFIG);
 
     private static Holder<PlacedFeature> createPlacedFeature(@NotNull Holder<ConfiguredFeature<OreConfiguration, ?>> target, @NotNull OreConfig config) {
         return switch (config.getPlacement()) {
             case "triangle" -> PlacementUtils.register(
-                    ResourceLocations.of(Registries.MOD_ID, config.name()).toString(),
+                    ResourceLocations.of(Foundation.MOD_ID, config.name()).toString(),
                     target,
                     commonOrePlacement(
                             config.getCount(),
@@ -75,7 +113,7 @@ public class FoundationPlacements {
                     )
             );
             case "uniform" -> PlacementUtils.register(
-                    ResourceLocations.of(Registries.MOD_ID, config.name()).toString(),
+                    ResourceLocations.of(Foundation.MOD_ID, config.name()).toString(),
                     target,
                     commonOrePlacement(
                             config.getCount(),

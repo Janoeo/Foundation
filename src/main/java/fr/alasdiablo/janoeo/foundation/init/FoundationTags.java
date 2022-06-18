@@ -6,6 +6,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
 public class FoundationTags {
 
@@ -53,7 +54,7 @@ public class FoundationTags {
         public static final TagKey<Block> STORAGE_BLOCKS_RAW_TIN = tag("storage_blocks/raw_tin");
         public static final TagKey<Block> STORAGE_BLOCKS_RAW_URANIUM = tag("storage_blocks/raw_uranium");
 
-        private static TagKey<Block> tag(String name) {
+        private static @NotNull TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation("forge", name));
         }
     }
@@ -164,9 +165,7 @@ public class FoundationTags {
         public static final TagKey<Item> GEARS_TIN = tag("gears/tin");
         public static final TagKey<Item> GEARS_WOODEN = tag("gears/wooden");
 
-        public static final TagKey<Item> SCRAP = tag("scrap");
-
-        private static TagKey<Item> tag(String name) {
+        private static @NotNull TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
         }
     }

@@ -1,30 +1,33 @@
 package fr.alasdiablo.janoeo.foundation.data.model;
 
+import com.google.common.collect.ImmutableList;
 import fr.alasdiablo.diolib.api.data.blockstate.DioBlockStateProvider;
+import fr.alasdiablo.janoeo.foundation.Foundation;
+import fr.alasdiablo.janoeo.foundation.resource.Resource;
+import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
 import net.minecraft.data.DataGenerator;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
 
-import static fr.alasdiablo.janoeo.foundation.Registries.*;
-
 public class FoundationBlockStateProvider extends DioBlockStateProvider {
     public FoundationBlockStateProvider(DataGenerator generator) {
-        super(generator, MOD_ID);
+        super(generator, Foundation.MOD_ID);
     }
 
-    static List<String> getBlocksList() {
-        return List.of(
-                BAUXITE_ORE, LEAD_ORE, NICKEL_ORE, SILVER_ORE, TIN_ORE, URANIUM_ORE, DEEPSLATE_BAUXITE_ORE, DEEPSLATE_LEAD_ORE, DEEPSLATE_NICKEL_ORE,
-                DEEPSLATE_SILVER_ORE, DEEPSLATE_TIN_ORE, DEEPSLATE_URANIUM_ORE, TINY_COAL_ORE, TINY_COPPER_ORE, TINY_DIAMOND_ORE, TINY_EMERALD_ORE,
-                TINY_GOLD_ORE, TINY_IRON_ORE, TINY_LAPIS_ORE, TINY_REDSTONE_ORE, DEEPSLATE_TINY_COAL_ORE, DEEPSLATE_TINY_COPPER_ORE, DEEPSLATE_TINY_DIAMOND_ORE,
-                DEEPSLATE_TINY_EMERALD_ORE, DEEPSLATE_TINY_GOLD_ORE, DEEPSLATE_TINY_IRON_ORE, DEEPSLATE_TINY_LAPIS_ORE, DEEPSLATE_TINY_REDSTONE_ORE,
-                TINY_BAUXITE_ORE, TINY_LEAD_ORE, TINY_NICKEL_ORE, TINY_SILVER_ORE, TINY_TIN_ORE, TINY_URANIUM_ORE, DEEPSLATE_TINY_BAUXITE_ORE,
-                DEEPSLATE_TINY_LEAD_ORE, DEEPSLATE_TINY_NICKEL_ORE, DEEPSLATE_TINY_SILVER_ORE, DEEPSLATE_TINY_TIN_ORE, DEEPSLATE_TINY_URANIUM_ORE,
-                NETHER_COAL_ORE, NETHER_COPPER_ORE, NETHER_DIAMOND_ORE, NETHER_EMERALD_ORE, NETHER_IRON_ORE, NETHER_LAPIS_ORE, NETHER_REDSTONE_ORE,
-                NETHER_BAUXITE_ORE, NETHER_LEAD_ORE, NETHER_NICKEL_ORE, NETHER_SILVER_ORE, NETHER_TIN_ORE, NETHER_URANIUM_ORE, ALUMINIUM_BLOCK, LEAD_BLOCK,
-                NICKEL_BLOCK, SILVER_BLOCK, TIN_BLOCK, URANIUM_BLOCK, RAW_ALUMINIUM_BLOCK, RAW_LEAD_BLOCK, RAW_NICKEL_BLOCK,
-                RAW_SILVER_BLOCK, RAW_TIN_BLOCK, RAW_URANIUM_BLOCK
-        );
+    static @NotNull @Unmodifiable List<String> getBlocksList() {
+        ImmutableList.Builder<String> toReturn = new ImmutableList.Builder<>();
+
+        for (ResourceType type: ResourceType.BLOCKS) {
+            for (Resource resource: Resource.values()) {
+                if (resource.has(type)) {
+                    toReturn.add(resource.getName(type));
+                }
+            }
+        }
+
+        return toReturn.build();
     }
 
     @Override

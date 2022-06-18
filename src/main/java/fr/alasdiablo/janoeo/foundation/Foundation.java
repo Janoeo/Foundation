@@ -1,10 +1,6 @@
 package fr.alasdiablo.janoeo.foundation;
 
 import fr.alasdiablo.diolib.api.item.GroundCreativeModeTab;
-import fr.alasdiablo.janoeo.foundation.compatibility.create.CompactingRecipe;
-import fr.alasdiablo.janoeo.foundation.compatibility.create.CrushingRecipe;
-import fr.alasdiablo.janoeo.foundation.compatibility.create.SmeltingRecipe;
-import fr.alasdiablo.janoeo.foundation.compatibility.create.WashingRecipe;
 import fr.alasdiablo.janoeo.foundation.compatibility.jer.JERCompat;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.data.loot.FoundationLootTableProvider;
@@ -17,6 +13,7 @@ import fr.alasdiablo.janoeo.foundation.data.tag.FoundationItemTagsProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationGeneration;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
+import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTab;
@@ -35,41 +32,42 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 
-@Mod(Registries.MOD_ID)
+@Mod(Foundation.MOD_ID)
 @MethodsReturnNonnullByDefault
 public class Foundation {
 
-    public static final Logger logger = LogManager.getLogger(Registries.MOD_ID);
+    public static final String MOD_ID = "janoeo_foundation";
+
+    public static final Logger logger = LogManager.getLogger(Foundation.MOD_ID);
 
     public static final CreativeModeTab MATERIALS_GROUP = new GroundCreativeModeTab("janoeo.foundation.materials") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(FoundationItems.SILVER_GEAR.get());
+            return new ItemStack(FoundationItems.GEARS.get(Resource.Silver).get());
         }
     };
 
     public static final CreativeModeTab ORES_GROUP = new GroundCreativeModeTab("janoeo.foundation.ores") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(FoundationBlocks.SILVER_ORE.get());
+            return new ItemStack(FoundationBlocks.STONE_ORES.get(Resource.Silver).get());
         }
     };
 
     public Foundation() throws IOException {
         this.foundCompat();
+        FoundationConfig.init();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         FoundationItems.init(modBus);
         FoundationBlocks.init(modBus);
         modBus.addListener(this::setup);
         modBus.addListener(this::gatherData);
-        FoundationConfig.init();
         MinecraftForge.EVENT_BUS.addListener(FoundationGeneration::onBiomeLoading);
     }
 
     private void foundCompat() {
         final ModList modList = ModList.get();
         Compat.JUST_ENOUGH_RESOURCES = modList.isLoaded("jeresources");
-        Compat.CREATE = modList.isLoaded("create");
     }
 
     private void gatherData(@NotNull GatherDataEvent event) {
@@ -97,13 +95,6 @@ public class Foundation {
 
         Foundation.logger.debug("Add Loot Tables Provider");
         generator.addProvider(new FoundationLootTableProvider(generator));
-
-        if (Compat.CREATE) {
-            generator.addProvider(new CrushingRecipe(generator));
-            generator.addProvider(new CompactingRecipe(generator));
-            generator.addProvider(new SmeltingRecipe(generator));
-            generator.addProvider(new WashingRecipe(generator));
-        }
     }
 
     private void setup(final FMLCommonSetupEvent commonSetupEvent) {
@@ -120,6 +111,5 @@ public class Foundation {
 
     private static class Compat {
         public static boolean JUST_ENOUGH_RESOURCES = false;
-        public static boolean CREATE = false;
     }
 }
