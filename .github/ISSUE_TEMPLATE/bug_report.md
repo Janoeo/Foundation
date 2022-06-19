@@ -23,6 +23,12 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
+**Helpful file**
+- Crash report
+- Debug files
+
+You can use [PasteBin](https://pastebin.com) to upload files.
+
 **Minecraft information (please complete the following information):**
  - MC Version: [e.g. 1.16.4]
  - Janoeo Version: [e.g. 4.5.0.63-experimental]
