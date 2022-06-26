@@ -124,23 +124,24 @@
 </details>
 
 ### 7.10.3.84
-### Technical
+
+#### Technical
 + Remove unwanted mixin
 
 ### 7.10.3.83
 
-### Add
+#### Add
 + Gravel ore (every variants of ore)
 
-### Breaking change
+#### Breaking change
 + Rod items registry name have change
 
-### Technical change
+#### Technical change
 + Add a new system to register items and blocks
 
 ### 7.9.3.82
 
-### Remove
+#### Remove
 + Scrap
 
 #### Dependencies
@@ -269,7 +270,7 @@
 
 ##### Fix
 
-harvest tool
++ harvest tool
 
 ### 6.6.0.70-experimental
 
