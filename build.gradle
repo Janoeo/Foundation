@@ -8,7 +8,7 @@ buildscript {
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
         classpath 'org.parchmentmc:librarian:1.+'
-        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
+        classpath 'org.spongepowered:mixingradle:0.7.32'
     }
 }
 
@@ -21,7 +21,7 @@ apply plugin: 'org.spongepowered.mixin'
 if (project.findProperty('ci_build').toBoolean()) {
     version = "ci.${project.findProperty('ci_build_number')}"
 } else {
-    version =  "${project.findProperty('Main_Version')}"
+    version =  "${project.findProperty('projectVersion')}"
     version +=".${project.findProperty('majorVersion')}"
     version +=".${project.findProperty('minorVersion')}"
     version +=".${project.findProperty('buildVersion')}"
@@ -34,12 +34,12 @@ group = 'fr.alasdiablo.janoeo.foundation'
 archivesBaseName = 'Janoeo Foundation'
 
 def manifestAttributes = [
-        "Specification-Title"     : "Janoeo Foundation",
+        "Specification-Title"     : project.name,
         "Specification-Vendor"    : "AlasDiablo, Safyrus, SmartzyYY",
-        "Specification-Version"   : "1",
+        "Specification-Version"   : project.findProperty('majorVersion').toString(),
         "Implementation-Title"    : project.name,
         "Implementation-Version"  : project.jar.archiveVersion,
-        "Implementation-Vendor"   : "AlasDiablo, Safyrus",
+        "Implementation-Vendor"   : "AlasDiablo",
         "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
 ]
 
@@ -50,27 +50,40 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 def deobfSourceClassifier
 
 minecraft {
-    mappings channel: 'parchment', version: '2022.06.05-1.18.2'
+    // mappings channel: 'parchment', version: '2022.06.05-1.18.2'
+    mappings channel: 'official', version: '1.19'
     deobfSourceClassifier = getMappings().get()
     runs {
         client {
             workingDirectory project.file('run')
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', '${projectDir}/build/createSrgToMcp/output.srg'
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'janoeo_foundation'
             mods {
                 janoeo_foundation {
                     source sourceSets.main
                 }
             }
         }
+
         server {
             workingDirectory project.file('run')
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', '${projectDir}/build/createSrgToMcp/output.srg'
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'janoeo_foundation'
+            mods {
+                janoeo_foundation {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        gameTestServer {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'janoeo_foundation'
+
             mods {
                 janoeo_foundation {
                     source sourceSets.main
@@ -80,8 +93,6 @@ minecraft {
 
         data {
             workingDirectory project.file('run')
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', '${projectDir}/build/createSrgToMcp/output.srg'
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
             args '--mod', 'janoeo_foundation', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
@@ -109,12 +120,12 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.47'
+    minecraft 'net.minecraftforge:forge:1.19-41.1.0'
     implementation fileTree(dir:'lib', include:'*.jar')
-    implementation fg.deobf('curse.maven:catalogue-459701:3721991') // Catalogue (1.6.1)
-    implementation fg.deobf('curse.maven:jei-238222:3788739')       // JEI (9.7.0.195)
-    implementation fg.deobf('curse.maven:jer-240630:3760449')       // JER (0.14.1.167)
-    annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
+    implementation fg.deobf('curse.maven:catalogue-459701:3822882') // Catalogue (1.6.1)
+    implementation fg.deobf('curse.maven:jei-238222:3835406')       // JEI (9.7.0.195)
+    // implementation fg.deobf('curse.maven:jer-240630:3760449')       // JER (0.14.1.167)
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 jar {

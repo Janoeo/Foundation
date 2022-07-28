@@ -5,11 +5,11 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 
-public class NetherOreBlock extends OreBlock implements AngerZombifiedPiglin {
+public class NetherOreBlock extends DropExperienceBlock implements AngerZombifiedPiglin {
 
     public NetherOreBlock(Properties properties, UniformInt xp) {
         super(properties, xp);

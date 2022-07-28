@@ -10,22 +10,24 @@ import fr.alasdiablo.janoeo.foundation.data.model.FoundationItemModelProvider;
 import fr.alasdiablo.janoeo.foundation.data.recipe.FoundationRecipeProvider;
 import fr.alasdiablo.janoeo.foundation.data.tag.FoundationBlockTagsProvider;
 import fr.alasdiablo.janoeo.foundation.data.tag.FoundationItemTagsProvider;
+import fr.alasdiablo.janoeo.foundation.data.world.BiomeModifierProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
-import fr.alasdiablo.janoeo.foundation.init.FoundationGeneration;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
+import fr.alasdiablo.janoeo.foundation.world.feature.FoundationFeatures;
+import fr.alasdiablo.janoeo.foundation.world.placement.FoundationPlacements;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
@@ -60,9 +62,10 @@ public class Foundation {
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         FoundationItems.init(modBus);
         FoundationBlocks.init(modBus);
+        FoundationFeatures.init(modBus);
+        FoundationPlacements.init(modBus);
         modBus.addListener(this::setup);
         modBus.addListener(this::gatherData);
-        MinecraftForge.EVENT_BUS.addListener(FoundationGeneration::onBiomeLoading);
     }
 
     private void foundCompat() {
@@ -76,25 +79,28 @@ public class Foundation {
         final ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         Foundation.logger.debug("Add Block Model Provider");
-        generator.addProvider(new FoundationBlockModelProvider(generator, existingFileHelper));
+        generator.addProvider(true, new FoundationBlockModelProvider(generator, existingFileHelper));
 
         Foundation.logger.debug("Add Block State Provider");
-        generator.addProvider(new FoundationBlockStateProvider(generator));
+        generator.addProvider(true, new FoundationBlockStateProvider(generator));
 
         Foundation.logger.debug("Add Item Model Provider");
-        generator.addProvider(new FoundationItemModelProvider(generator, existingFileHelper));
+        generator.addProvider(true, new FoundationItemModelProvider(generator, existingFileHelper));
 
         Foundation.logger.debug("Add Tags Provider");
         final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(
                 generator, existingFileHelper);
-        generator.addProvider(blockTagsProvider);
-        generator.addProvider(new FoundationItemTagsProvider(generator, blockTagsProvider, existingFileHelper));
+        generator.addProvider(true, blockTagsProvider);
+        generator.addProvider(true, new FoundationItemTagsProvider(generator, blockTagsProvider, existingFileHelper));
 
         Foundation.logger.debug("Add Recipes Provider");
-        generator.addProvider(new FoundationRecipeProvider(generator));
+        generator.addProvider(true, new FoundationRecipeProvider(generator));
 
         Foundation.logger.debug("Add Loot Tables Provider");
-        generator.addProvider(new FoundationLootTableProvider(generator));
+        generator.addProvider(true, new FoundationLootTableProvider(generator));
+
+        Foundation.logger.debug("Add Biome Modifier Provider");
+        generator.addProvider(true, new BiomeModifierProvider(generator));
     }
 
     private void setup(final FMLCommonSetupEvent commonSetupEvent) {

@@ -12,7 +12,7 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.RedStoneOreBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -120,7 +120,7 @@ public class FoundationBlocks {
     }
 
     private static RegistryObject<Block> createOreBlock(BlockBehaviour.Properties properties, String name, UniformInt xp) {
-        return register(() -> new OreBlock(properties, xp), name);
+        return register(() -> new DropExperienceBlock(properties, xp), name);
     }
 
     private static RegistryObject<Block> createRedStoneOreBlock(BlockBehaviour.Properties properties, String name) {

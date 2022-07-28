@@ -1,6 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.block;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.GravelBlock;
@@ -15,7 +16,7 @@ public class GravelOre extends GravelBlock {
     }
 
     @Override
-    public int getExpDrop(BlockState state, LevelReader reader, BlockPos pos, int fortune, int silktouch) {
-        return silktouch == 0 ? this.xpRange.sample(RANDOM) : 0;
+    public int getExpDrop(BlockState state, LevelReader level, RandomSource randomSource, BlockPos pos, int fortuneLevel, int silkTouchLevel) {
+        return silkTouchLevel == 0 ? this.xpRange.sample(randomSource) : 0;
     }
 }

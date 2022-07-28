@@ -1,10 +1,10 @@
 package fr.alasdiablo.janoeo.foundation.block;
 
+import fr.alasdiablo.diolib.api.block.BlockHelper;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
@@ -22,7 +22,6 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Random;
 
 
 @SuppressWarnings("deprecation")
@@ -36,19 +35,22 @@ public class GravelRedStoneOre extends GravelBlock {
         this.registerDefaultState(this.defaultBlockState().setValue(LIT, Boolean.FALSE));
     }
 
+    @Override
     public void attack(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer) {
         interact(pState, pLevel, pPos);
         super.attack(pState, pLevel, pPos, pPlayer);
     }
 
+    @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
         interact(pState, pLevel, pPos);
         super.stepOn(pLevel, pPos, pState, pEntity);
     }
 
+    @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (pLevel.isClientSide) {
-            spawnParticles(pLevel, pPos);
+            BlockHelper.redStoneOreParticles(pLevel, pPos);
         } else {
             interact(pState, pLevel, pPos);
         }
@@ -67,44 +69,33 @@ public class GravelRedStoneOre extends GravelBlock {
     }
 
     private static void interact(BlockState pState, Level pLevel, BlockPos pPos) {
-        spawnParticles(pLevel, pPos);
+        BlockHelper.redStoneOreParticles(pLevel, pPos);
         if (!pState.getValue(LIT)) {
             pLevel.setBlock(pPos, pState.setValue(LIT, Boolean.TRUE), 3);
         }
     }
 
+    @Override
     public boolean isRandomlyTicking(BlockState pState) {
         return pState.getValue(LIT);
     }
 
-    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
+    @Override
+    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         if (pState.getValue(LIT)) {
             pLevel.setBlock(pPos, pState.setValue(LIT, Boolean.FALSE), 3);
         }
     }
 
     @Override
-    public int getExpDrop(BlockState state, LevelReader world, BlockPos pos, int fortune, int silktouch) {
-        return silktouch == 0 ? 1 + RANDOM.nextInt(5) : 0;
+    public int getExpDrop(BlockState state, LevelReader level, RandomSource randomSource, BlockPos pos, int fortuneLevel, int silkTouchLevel) {
+        return silkTouchLevel == 0 ? 1 + randomSource.nextInt(5) : 0;
     }
 
-    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, Random pRand) {
+    @Override
+    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRand) {
         if (pState.getValue(LIT)) {
-            spawnParticles(pLevel, pPos);
-        }
-    }
-
-    private static void spawnParticles(Level level, BlockPos blockPos) { // Use access transformer to reduce copy past code
-        Random random = level.random;
-        for(Direction direction : Direction.values()) {
-            BlockPos blockpos = blockPos.relative(direction);
-            if (!level.getBlockState(blockpos).isSolidRender(level, blockpos)) {
-                Direction.Axis direction$axis = direction.getAxis();
-                double d1 = direction$axis == Direction.Axis.X ? 0.5D + 0.5625D * direction.getStepX() : random.nextFloat();
-                double d2 = direction$axis == Direction.Axis.Y ? 0.5D + 0.5625D * direction.getStepY() : random.nextFloat();
-                double d3 = direction$axis == Direction.Axis.Z ? 0.5D + 0.5625D * direction.getStepZ() : random.nextFloat();
-                level.addParticle(DustParticleOptions.REDSTONE, blockPos.getX() + d1, blockPos.getY() + d2, blockPos.getZ() + d3, 0.0D, 0.0D, 0.0D);
-            }
+            BlockHelper.redStoneOreParticles(pLevel, pPos);
         }
     }
 
