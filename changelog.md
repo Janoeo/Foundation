@@ -2,6 +2,12 @@
 
 ## Summary
 
+<details><summary><b>1.19</b></summary>
+
++ [8.10.4.85](#810485)
+
+</details>
+
 <details><summary><b>1.18.2</b></summary>
 
 + [7.10.3.84](#710384)
@@ -122,6 +128,12 @@
 + [1.0](#10)
 
 </details>
+
+### 8.10.4.85
+
+#### General change
++ Update to Forge 41.1.0 and Minecraft 1.19
++ Update ore gen code base
 
 ### 7.10.3.84
 

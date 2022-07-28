@@ -74,24 +74,28 @@ public class FoundationPlacements {
             if (resource.has(ResourceType.StoneOre) && resource.has(ResourceType.DeepSlateOre)) {
                 var config = FoundationConfig.OVERWORLD_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
-                    PLACED_FEATURES.register(
+                    overworldOreFeature.put(resource,
+                        PLACED_FEATURES.register(
                             resource.getName(ResourceType.StoneOre),
                             () -> createPlacedFeature(
                                     FoundationFeatures.OVERWORLD_ORE_FEATURE.get(resource).getHolder().get(),
                                     config
                             )
+                        )
                     );
                 }
             }
             if (resource.has(ResourceType.TinyStoneOre) && resource.has(ResourceType.TinyDeepSlateOre)) {
                 var config = FoundationConfig.OVERWORLD_ORE_TINY_CONFIG.get(resource);
                 if (config.isEnable()) {
-                    PLACED_FEATURES.register(
+                    overworldOreTinyFeature.put(resource,
+                        PLACED_FEATURES.register(
                             resource.getName(ResourceType.TinyStoneOre),
                             () -> createPlacedFeature(
                                     FoundationFeatures.OVERWORLD_ORE_TINY_FEATURE.get(resource).getHolder().get(),
                                     config
                             )
+                        )
                     );
                 }
             }
@@ -99,12 +103,14 @@ public class FoundationPlacements {
             if (resource.has(ResourceType.GravelOre)) {
                 var config = FoundationConfig.ALL_GRAVEL_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
-                    PLACED_FEATURES.register(
+                    allGravelOreFeature.put(resource,
+                        PLACED_FEATURES.register(
                             resource.getName(ResourceType.GravelOre),
                             () -> createPlacedFeature(
                                     FoundationFeatures.ALL_GRAVEL_ORE_FEATURE.get(resource).getHolder().get(),
                                     config
                             )
+                        )
                     );
                 }
             }
@@ -112,12 +118,14 @@ public class FoundationPlacements {
             if (resource.has(ResourceType.NetherOre)) {
                 var config = FoundationConfig.NETHER_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
-                    PLACED_FEATURES.register(
+                    netherOreFeature.put(resource,
+                        PLACED_FEATURES.register(
                             resource.getName(ResourceType.NetherOre),
                             () -> createPlacedFeature(
                                     FoundationFeatures.NETHER_ORE_FEATURE.get(resource).getHolder().get(),
                                     config
                             )
+                        )
                     );
                 }
             }

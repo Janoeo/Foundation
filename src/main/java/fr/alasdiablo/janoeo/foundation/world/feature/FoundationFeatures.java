@@ -92,10 +92,10 @@ public class FoundationFeatures {
                     Supplier<List<OreConfiguration.TargetBlockState>> targets = Suppliers.memoize(() -> List.of(
                             OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, FoundationBlocks.NETHER_ORES.get(resource).get().defaultBlockState())
                     ));
-                    allGravelOreFeature.put(
+                    netherOreFeature.put(
                             resource,
                             CONFIGURED_FEATURE.register(
-                                    resource.getName(ResourceType.GravelOre),
+                                    resource.getName(ResourceType.NetherOre),
                                     () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets.get(), config.getSize()))
                             )
                     );

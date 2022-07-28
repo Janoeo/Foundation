@@ -93,7 +93,7 @@ minecraft {
 
         data {
             workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             args '--mod', 'janoeo_foundation', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
             mods {
@@ -122,8 +122,8 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.19-41.1.0'
     implementation fileTree(dir:'lib', include:'*.jar')
-    implementation fg.deobf('curse.maven:catalogue-459701:3822882') // Catalogue (1.6.1)
-    implementation fg.deobf('curse.maven:jei-238222:3835406')       // JEI (9.7.0.195)
+    // implementation fg.deobf('curse.maven:catalogue-459701:3822882') // Catalogue (1.6.1)
+    // implementation fg.deobf('curse.maven:jei-238222:3835406')       // JEI (9.7.0.195)
     // implementation fg.deobf('curse.maven:jer-240630:3760449')       // JER (0.14.1.167)
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
@@ -154,4 +154,21 @@ artifacts {
     archives jar
     archives sourcesJar
     archives deobfJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/mcmodsrepo"
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
 }
