@@ -66,36 +66,38 @@ public class FoundationPlacements {
     }
 
     static {
-        var allGravelOreFeature = new ImmutableMap.Builder<Resource, RegistryObject<PlacedFeature>>();
+        var allGravelOreFeature     = new ImmutableMap.Builder<Resource, RegistryObject<PlacedFeature>>();
         var overworldOreTinyFeature = new ImmutableMap.Builder<Resource, RegistryObject<PlacedFeature>>();
-        var overworldOreFeature = new ImmutableMap.Builder<Resource, RegistryObject<PlacedFeature>>();
-        var netherOreFeature = new ImmutableMap.Builder<Resource, RegistryObject<PlacedFeature>>();
+        var overworldOreFeature     = new ImmutableMap.Builder<Resource, RegistryObject<PlacedFeature>>();
+        var netherOreFeature        = new ImmutableMap.Builder<Resource, RegistryObject<PlacedFeature>>();
         for (Resource resource: Resource.values()) {
             if (resource.has(ResourceType.StoneOre) && resource.has(ResourceType.DeepSlateOre)) {
                 var config = FoundationConfig.OVERWORLD_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
-                    overworldOreFeature.put(resource,
-                        PLACED_FEATURES.register(
-                            resource.getName(ResourceType.StoneOre),
-                            () -> createPlacedFeature(
-                                    FoundationFeatures.OVERWORLD_ORE_FEATURE.get(resource).getHolder().get(),
-                                    config
+                    overworldOreFeature.put(
+                            resource,
+                            PLACED_FEATURES.register(
+                                    resource.getName(ResourceType.StoneOre),
+                                    () -> createPlacedFeature(
+                                            FoundationFeatures.OVERWORLD_ORE_FEATURE.get(resource).getHolder().get(),
+                                            config
+                                    )
                             )
-                        )
                     );
                 }
             }
             if (resource.has(ResourceType.TinyStoneOre) && resource.has(ResourceType.TinyDeepSlateOre)) {
                 var config = FoundationConfig.OVERWORLD_ORE_TINY_CONFIG.get(resource);
                 if (config.isEnable()) {
-                    overworldOreTinyFeature.put(resource,
-                        PLACED_FEATURES.register(
-                            resource.getName(ResourceType.TinyStoneOre),
-                            () -> createPlacedFeature(
-                                    FoundationFeatures.OVERWORLD_ORE_TINY_FEATURE.get(resource).getHolder().get(),
-                                    config
+                    overworldOreTinyFeature.put(
+                            resource,
+                            PLACED_FEATURES.register(
+                                    resource.getName(ResourceType.TinyStoneOre),
+                                    () -> createPlacedFeature(
+                                            FoundationFeatures.OVERWORLD_ORE_TINY_FEATURE.get(resource).getHolder().get(),
+                                            config
+                                    )
                             )
-                        )
                     );
                 }
             }
@@ -103,14 +105,15 @@ public class FoundationPlacements {
             if (resource.has(ResourceType.GravelOre)) {
                 var config = FoundationConfig.ALL_GRAVEL_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
-                    allGravelOreFeature.put(resource,
-                        PLACED_FEATURES.register(
-                            resource.getName(ResourceType.GravelOre),
-                            () -> createPlacedFeature(
-                                    FoundationFeatures.ALL_GRAVEL_ORE_FEATURE.get(resource).getHolder().get(),
-                                    config
+                    allGravelOreFeature.put(
+                            resource,
+                            PLACED_FEATURES.register(
+                                    resource.getName(ResourceType.GravelOre),
+                                    () -> createPlacedFeature(
+                                            FoundationFeatures.ALL_GRAVEL_ORE_FEATURE.get(resource).getHolder().get(),
+                                            config
+                                    )
                             )
-                        )
                     );
                 }
             }
@@ -118,23 +121,24 @@ public class FoundationPlacements {
             if (resource.has(ResourceType.NetherOre)) {
                 var config = FoundationConfig.NETHER_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
-                    netherOreFeature.put(resource,
-                        PLACED_FEATURES.register(
-                            resource.getName(ResourceType.NetherOre),
-                            () -> createPlacedFeature(
-                                    FoundationFeatures.NETHER_ORE_FEATURE.get(resource).getHolder().get(),
-                                    config
+                    netherOreFeature.put(
+                            resource,
+                            PLACED_FEATURES.register(
+                                    resource.getName(ResourceType.NetherOre),
+                                    () -> createPlacedFeature(
+                                            FoundationFeatures.NETHER_ORE_FEATURE.get(resource).getHolder().get(),
+                                            config
+                                    )
                             )
-                        )
                     );
                 }
             }
         }
 
-        ALL_GRAVEL_ORE_FEATURE = allGravelOreFeature.build();
+        ALL_GRAVEL_ORE_FEATURE     = allGravelOreFeature.build();
         OVERWORLD_ORE_TINY_FEATURE = overworldOreTinyFeature.build();
-        OVERWORLD_ORE_FEATURE = overworldOreFeature.build();
-        NETHER_ORE_FEATURE = netherOreFeature.build();
+        OVERWORLD_ORE_FEATURE      = overworldOreFeature.build();
+        NETHER_ORE_FEATURE         = netherOreFeature.build();
     }
 
 

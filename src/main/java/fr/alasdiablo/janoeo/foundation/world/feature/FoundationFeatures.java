@@ -23,7 +23,8 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public class FoundationFeatures {
-    private static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURE = DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Foundation.MOD_ID);
+    private static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURE = DeferredRegister.create(
+            Registry.CONFIGURED_FEATURE_REGISTRY, Foundation.MOD_ID);
 
     public static final Map<Resource, RegistryObject<ConfiguredFeature<?, ?>>> ALL_GRAVEL_ORE_FEATURE;
     public static final Map<Resource, RegistryObject<ConfiguredFeature<?, ?>>> OVERWORLD_ORE_TINY_FEATURE;
@@ -31,10 +32,10 @@ public class FoundationFeatures {
     public static final Map<Resource, RegistryObject<ConfiguredFeature<?, ?>>> NETHER_ORE_FEATURE;
 
     static {
-        var allGravelOreFeature = new ImmutableMap.Builder<Resource, RegistryObject<ConfiguredFeature<?, ?>>>();
+        var allGravelOreFeature     = new ImmutableMap.Builder<Resource, RegistryObject<ConfiguredFeature<?, ?>>>();
         var overworldOreTinyFeature = new ImmutableMap.Builder<Resource, RegistryObject<ConfiguredFeature<?, ?>>>();
-        var overworldOreFeature = new ImmutableMap.Builder<Resource, RegistryObject<ConfiguredFeature<?, ?>>>();
-        var netherOreFeature = new ImmutableMap.Builder<Resource, RegistryObject<ConfiguredFeature<?, ?>>>();
+        var overworldOreFeature     = new ImmutableMap.Builder<Resource, RegistryObject<ConfiguredFeature<?, ?>>>();
+        var netherOreFeature        = new ImmutableMap.Builder<Resource, RegistryObject<ConfiguredFeature<?, ?>>>();
         for (Resource resource: Resource.values()) {
             if (resource.has(ResourceType.StoneOre) && resource.has(ResourceType.DeepSlateOre)) {
                 var config = FoundationConfig.OVERWORLD_ORE_CONFIG.get(resource);
@@ -57,8 +58,10 @@ public class FoundationFeatures {
                 var config = FoundationConfig.OVERWORLD_ORE_TINY_CONFIG.get(resource);
                 if (config.isEnable()) {
                     Supplier<List<OreConfiguration.TargetBlockState>> targets = Suppliers.memoize(() -> List.of(
-                            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_STONE_ORES.get(resource).get().defaultBlockState()),
-                            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.TINY_DEEPSLATE_ORES.get(resource).get().defaultBlockState())
+                            OreConfiguration.target(
+                                    OreFeatures.STONE_ORE_REPLACEABLES, FoundationBlocks.TINY_STONE_ORES.get(resource).get().defaultBlockState()),
+                            OreConfiguration.target(
+                                    OreFeatures.DEEPSLATE_ORE_REPLACEABLES, FoundationBlocks.TINY_DEEPSLATE_ORES.get(resource).get().defaultBlockState())
                     ));
                     overworldOreTinyFeature.put(
                             resource,
@@ -103,10 +106,10 @@ public class FoundationFeatures {
             }
         }
 
-        ALL_GRAVEL_ORE_FEATURE = allGravelOreFeature.build();
+        ALL_GRAVEL_ORE_FEATURE     = allGravelOreFeature.build();
         OVERWORLD_ORE_TINY_FEATURE = overworldOreTinyFeature.build();
-        OVERWORLD_ORE_FEATURE = overworldOreFeature.build();
-        NETHER_ORE_FEATURE = netherOreFeature.build();
+        OVERWORLD_ORE_FEATURE      = overworldOreFeature.build();
+        NETHER_ORE_FEATURE         = netherOreFeature.build();
     }
 
     public static void init(IEventBus bus) {

@@ -20,7 +20,6 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -75,7 +74,7 @@ public class Foundation {
 
     private void gatherData(@NotNull GatherDataEvent event) {
         Foundation.logger.debug("Start data generator");
-        final DataGenerator generator = event.getGenerator();
+        final DataGenerator      generator          = event.getGenerator();
         final ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         Foundation.logger.debug("Add Block Model Provider");

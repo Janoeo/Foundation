@@ -108,7 +108,7 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
 
         this.tag(Tags.Items.DUSTS)
                 .addTags(DUSTS_ALUMINIUM, DUSTS_ALUMINUM, DUSTS_AMETHYST, DUSTS_COAL, DUSTS_COPPER, DUSTS_DIAMOND, DUSTS_GOLD, DUSTS_EMERALD, DUSTS_IRON,
-                        DUSTS_LAPIS, DUSTS_LEAD, DUSTS_NICKEL, DUSTS_SILVER, DUSTS_TIN, DUSTS_URANIUM
+                         DUSTS_LAPIS, DUSTS_LEAD, DUSTS_NICKEL, DUSTS_SILVER, DUSTS_TIN, DUSTS_URANIUM
                 );
 
         this.tag(DUSTS_ALUMINIUM).add(DUSTS.get(Resource.Aluminium).get());
@@ -129,7 +129,7 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
 
         this.tag(Tags.Items.NUGGETS)
                 .addTags(NUGGETS_ALUMINIUM, NUGGETS_ALUMINUM, NUGGETS_COAL, NUGGETS_COPPER, NUGGETS_DIAMOND, NUGGETS_EMERALD, NUGGETS_LAPIS, NUGGETS_LEAD,
-                        NUGGETS_NICKEL, NUGGETS_REDSTONE, NUGGETS_SILVER, NUGGETS_TIN, NUGGETS_URANIUM
+                         NUGGETS_NICKEL, NUGGETS_REDSTONE, NUGGETS_SILVER, NUGGETS_TIN, NUGGETS_URANIUM
                 );
 
         this.tag(NUGGETS_ALUMINIUM).add(NUGGETS.get(Resource.Aluminium).get());

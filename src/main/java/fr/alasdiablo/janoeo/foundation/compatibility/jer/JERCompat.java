@@ -1,23 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.compatibility.jer;
 
 import fr.alasdiablo.janoeo.foundation.Foundation;
-import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
-import fr.alasdiablo.janoeo.foundation.config.OreConfig;
-import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
-import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
-import fr.alasdiablo.janoeo.foundation.resource.Resource;
-//import jeresources.api.IWorldGenRegistry;
-//import jeresources.api.conditionals.Conditional;
-//import jeresources.api.distributions.DistributionBase;
-//import jeresources.api.distributions.DistributionSquare;
-//import jeresources.api.distributions.DistributionTriangular;
-//import jeresources.api.drop.LootDrop;
-//import jeresources.api.restrictions.BiomeRestriction;
-//import jeresources.api.restrictions.Restriction;
-//import jeresources.compatibility.JERAPI;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import org.jetbrains.annotations.NotNull;
 
 public class JERCompat {
 

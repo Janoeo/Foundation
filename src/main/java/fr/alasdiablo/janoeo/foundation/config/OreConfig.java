@@ -7,55 +7,55 @@ import org.jetbrains.annotations.NotNull;
 
 public class OreConfig extends JsonConfig {
 
-    private final String name;
-    private String placement;
-    private boolean enable;
-    private int size;
-    private int count;
-    private int bottom;
-    private int top;
+    private final String  name;
+    private       String  placement;
+    private       boolean enable;
+    private       int     size;
+    private       int     count;
+    private       int     bottom;
+    private       int     top;
 
     public OreConfig(String name, boolean enable) {
-        this.name = name;
-        this.enable = enable;
+        this.name      = name;
+        this.enable    = enable;
         this.placement = "";
-        this.size = 0;
-        this.count = 0;
-        this.bottom = 0;
-        this.top = 0;
+        this.size      = 0;
+        this.count     = 0;
+        this.bottom    = 0;
+        this.top       = 0;
     }
 
     public OreConfig placementTriangle(int size, int bottom, int top, int count) {
         this.placement = "triangle";
-        this.size = size;
-        this.bottom = bottom;
-        this.top = top;
-        this.count = count;
+        this.size      = size;
+        this.bottom    = bottom;
+        this.top       = top;
+        this.count     = count;
         return this;
     }
 
     public OreConfig placementUniform(int size, int bottom, int top, int count) {
         this.placement = "uniform";
-        this.size = size;
-        this.bottom = bottom;
-        this.top = top;
-        this.count = count;
+        this.size      = size;
+        this.bottom    = bottom;
+        this.top       = top;
+        this.count     = count;
         return this;
     }
 
     @Override
     protected void read(final @NotNull JsonObject json) {
-        JsonElement type = json.get("type");
-        JsonElement enable = json.get("enable");
-        JsonObject placement = json.get("placement").getAsJsonObject();
+        JsonElement type      = json.get("type");
+        JsonElement enable    = json.get("enable");
+        JsonObject  placement = json.get("placement").getAsJsonObject();
         this.placement = type.getAsString();
-        this.enable = enable.getAsBoolean();
+        this.enable    = enable.getAsBoolean();
         switch (this.placement) {
             case "triangle", "uniform" -> {
-                this.size = placement.get("size").getAsInt();
+                this.size   = placement.get("size").getAsInt();
                 this.bottom = placement.get("bottom").getAsInt();
-                this.top = placement.get("top").getAsInt();
-                this.count = placement.get("count").getAsInt();
+                this.top    = placement.get("top").getAsInt();
+                this.count  = placement.get("count").getAsInt();
             }
             default -> throw new IllegalArgumentException("Unknown placement type");
         }

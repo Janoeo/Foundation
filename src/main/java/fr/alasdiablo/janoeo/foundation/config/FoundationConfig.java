@@ -5,8 +5,6 @@ import fr.alasdiablo.diolib.api.config.JsonConfigBuilder;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.io.IOException;
 import java.util.Map;
@@ -22,21 +20,21 @@ public class FoundationConfig {
     public static final OreConfig URANIUM_ORE_CONFIG = new OreConfig(Resource.Uranium.getName(ResourceType.StoneOre), true).placementUniform(6, -56, 28, 6);
 
     /* * * * * * * * * * * * * * * Tiny Ore * * *  * * * * * * * * * * */
-    public static final OreConfig TINY_COAL_ORE_CONFIG       = new OreConfig(Resource.Coal.getName(ResourceType.TinyStoneOre), true).placementUniform(
+    public static final OreConfig TINY_COAL_ORE_CONFIG     = new OreConfig(Resource.Coal.getName(ResourceType.TinyStoneOre), true).placementUniform(
             17, -36, 180, 20);
-    public static final OreConfig TINY_COPPER_ORE_CONFIG     = new OreConfig(Resource.Copper.getName(ResourceType.TinyStoneOre), true).placementUniform(
+    public static final OreConfig TINY_COPPER_ORE_CONFIG   = new OreConfig(Resource.Copper.getName(ResourceType.TinyStoneOre), true).placementUniform(
             10, -16, 112, 6);
-    public static final OreConfig TINY_DIAMOND_ORE_CONFIG    = new OreConfig(Resource.Diamond.getName(ResourceType.TinyStoneOre), true).placementUniform(
+    public static final OreConfig TINY_DIAMOND_ORE_CONFIG  = new OreConfig(Resource.Diamond.getName(ResourceType.TinyStoneOre), true).placementUniform(
             8, -62, 16, 4);
-    public static final OreConfig TINY_EMERALD_ORE_CONFIG    = new OreConfig(Resource.Emerald.getName(ResourceType.TinyStoneOre), true).placementUniform(
+    public static final OreConfig TINY_EMERALD_ORE_CONFIG  = new OreConfig(Resource.Emerald.getName(ResourceType.TinyStoneOre), true).placementUniform(
             2, 24, 31, 4);
-    public static final OreConfig TINY_GOLD_ORE_CONFIG       = new OreConfig(Resource.Gold.getName(ResourceType.TinyStoneOre), true).placementUniform(
+    public static final OreConfig TINY_GOLD_ORE_CONFIG     = new OreConfig(Resource.Gold.getName(ResourceType.TinyStoneOre), true).placementUniform(
             9, -62, 32, 2);
-    public static final OreConfig TINY_IRON_ORE_CONFIG       = new OreConfig(Resource.Iron.getName(ResourceType.TinyStoneOre), true).placementUniform(
+    public static final OreConfig TINY_IRON_ORE_CONFIG     = new OreConfig(Resource.Iron.getName(ResourceType.TinyStoneOre), true).placementUniform(
             9, -24, 180, 20);
-    public static final OreConfig TINY_LAPIS_ORE_CONFIG      = new OreConfig(Resource.Lapis.getName(ResourceType.TinyStoneOre), true).placementTriangle(
+    public static final OreConfig TINY_LAPIS_ORE_CONFIG    = new OreConfig(Resource.Lapis.getName(ResourceType.TinyStoneOre), true).placementTriangle(
             7, 16, 16, 4);
-    public static final OreConfig TINY_REDSTONE_ORE_CONFIG   = new OreConfig(Resource.RedStone.getName(ResourceType.TinyStoneOre), true).placementUniform(
+    public static final OreConfig TINY_REDSTONE_ORE_CONFIG = new OreConfig(Resource.RedStone.getName(ResourceType.TinyStoneOre), true).placementUniform(
             8, -62, 16, 8);
 
     public static final OreConfig TINY_BAUXITE_ORE_CONFIG = new OreConfig(Resource.Aluminium.getName(ResourceType.TinyStoneOre), true).placementUniform(
@@ -112,8 +110,8 @@ public class FoundationConfig {
             4, 2, 242, 24);
 
     /* * * * * * * * * * * * * * * Config Builder * * *  * * * * * * * * * * */
-    private static final JsonConfigBuilder ALL_GRAVEL_ORE_CONFIG_BUILDER = new JsonConfigBuilder("janoeo", "foundation", "all", "gravel");
-    private static final JsonConfigBuilder OVERWORLD_ORE_TINY_CONFIG_BUILDER     = new JsonConfigBuilder("janoeo", "foundation", "overworld", "tiny");
+    private static final JsonConfigBuilder ALL_GRAVEL_ORE_CONFIG_BUILDER     = new JsonConfigBuilder("janoeo", "foundation", "all", "gravel");
+    private static final JsonConfigBuilder OVERWORLD_ORE_TINY_CONFIG_BUILDER = new JsonConfigBuilder("janoeo", "foundation", "overworld", "tiny");
     private static final JsonConfigBuilder OVERWORLD_ORE_CONFIG_BUILDER      = new JsonConfigBuilder("janoeo", "foundation", "overworld");
     private static final JsonConfigBuilder NETHER_ORE_CONFIG_BUILDER         = new JsonConfigBuilder("janoeo", "foundation", "nether");
 
@@ -126,7 +124,8 @@ public class FoundationConfig {
     static {
         try {
             ALL_GRAVEL_ORE_CONFIG_BUILDER.add(GRAVEL_COAL_ORE_CONFIG).add(GRAVEL_COPPER_ORE_CONFIG).add(GRAVEL_DIAMOND_ORE_CONFIG)
-                    .add(GRAVEL_EMERALD_ORE_CONFIG).add(GRAVEL_GOLD_ORE_CONFIG).add(GRAVEL_IRON_ORE_CONFIG).add(GRAVEL_LAPIS_ORE_CONFIG).add(GRAVEL_REDSTONE_ORE_CONFIG)
+                    .add(GRAVEL_EMERALD_ORE_CONFIG).add(GRAVEL_GOLD_ORE_CONFIG).add(GRAVEL_IRON_ORE_CONFIG).add(GRAVEL_LAPIS_ORE_CONFIG)
+                    .add(GRAVEL_REDSTONE_ORE_CONFIG)
                     .add(GRAVEL_BAUXITE_ORE_CONFIG).add(GRAVEL_LEAD_ORE_CONFIG).add(GRAVEL_NICKEL_ORE_CONFIG).add(GRAVEL_SILVER_ORE_CONFIG)
                     .add(GRAVEL_TIN_ORE_CONFIG).add(GRAVEL_URANIUM_ORE_CONFIG).build();
 
@@ -165,7 +164,7 @@ public class FoundationConfig {
                 .put(Resource.Aluminium, BAUXITE_ORE_CONFIG).put(Resource.Lead, LEAD_ORE_CONFIG).put(Resource.Nickel, NICKEL_ORE_CONFIG)
                 .put(Resource.Silver, SILVER_ORE_CONFIG).put(Resource.Tin, TIN_ORE_CONFIG).put(Resource.Uranium, URANIUM_ORE_CONFIG).build();
 
-        NETHER_ORE_CONFIG  = new ImmutableMap.Builder<Resource, OreConfig>()
+        NETHER_ORE_CONFIG = new ImmutableMap.Builder<Resource, OreConfig>()
                 .put(Resource.Coal, NETHER_COAL_ORE_CONFIG).put(Resource.Copper, NETHER_COPPER_ORE_CONFIG).put(Resource.Diamond, NETHER_DIAMOND_ORE_CONFIG)
                 .put(Resource.Emerald, NETHER_EMERALD_ORE_CONFIG).put(Resource.Iron, NETHER_IRON_ORE_CONFIG).put(Resource.Lapis, NETHER_LAPIS_ORE_CONFIG)
                 .put(Resource.RedStone, NETHER_REDSTONE_ORE_CONFIG).put(Resource.Aluminium, NETHER_BAUXITE_ORE_CONFIG)

@@ -42,7 +42,7 @@ public enum ResourceType {
     ResourceType(String prefix, String suffix, boolean isOre) {
         this.prefix = prefix;
         this.suffix = suffix;
-        this.isOre = isOre;
+        this.isOre  = isOre;
     }
 
     @Contract("_ -> new")
