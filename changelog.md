@@ -2,6 +2,13 @@
 
 ## Summary
 
+<details><summary><b>1.19.2</b></summary>
+
++ [8.10.4.87](#810487)
++ [8.10.4.86](#810486)
+
+</details>
+
 <details><summary><b>1.19</b></summary>
 
 + [8.10.4.85](#810485)
@@ -128,6 +135,18 @@
 + [1.0](#10)
 
 </details>
+
+### 8.10.4.87
+
+#### Other
+
++ Enable JER Integration
+
+### 8.10.4.86
+
+#### General change
+
++ Update to Forge 43.1.33 and Minecraft 1.19.2
 
 ### 8.10.4.85
 
