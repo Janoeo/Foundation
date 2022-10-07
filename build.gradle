@@ -50,8 +50,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 def deobfSourceClassifier
 
 minecraft {
-    // mappings channel: 'parchment', version: '2022.06.05-1.18.2'
-    mappings channel: 'official', version: '1.19'
+     mappings channel: 'parchment', version: '2022.09.18-1.19.2'
     deobfSourceClassifier = getMappings().get()
     runs {
         client {
@@ -120,11 +119,11 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.19-41.1.0'
+    minecraft 'net.minecraftforge:forge:1.19.2-43.1.33'
     implementation fileTree(dir:'lib', include:'*.jar')
     // implementation fg.deobf('curse.maven:catalogue-459701:3822882') // Catalogue (1.6.1)
-    // implementation fg.deobf('curse.maven:jei-238222:3835406')       // JEI (9.7.0.195)
-    // implementation fg.deobf('curse.maven:jer-240630:3760449')       // JER (0.14.1.167)
+    implementation fg.deobf('curse.maven:jei-238222:3969039')       // JEI (11.3.0.262)
+    implementation fg.deobf('curse.maven:jer-240630:3951643')       // JER (1.1.0.179)
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
