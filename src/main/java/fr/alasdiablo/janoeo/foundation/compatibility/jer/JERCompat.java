@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.compatibility.jer;
 
+import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.config.OreConfig;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
@@ -38,6 +39,7 @@ public class JERCompat {
 
     public static void init() {
 //        Foundation.logger.info("You are running jer but the Janoeo Foundation compatibility is currently hard disable");
+        Foundation.logger.info("Janoeo Foundation JER compatibility is currently not update be ware of missing information or mis match information");
         IWorldGenRegistry worldGenRegistry = JERAPI.getInstance().getWorldGenRegistry();
         addOres(worldGenRegistry);
         addTinyOre(worldGenRegistry);
