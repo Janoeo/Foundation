@@ -1,5 +1,10 @@
 # Janoeo Foundation Changelog
 
+### 8.11.4.89
+
++ Update to mc 1.19.3
++ Update to forge 44.1.5
+
 ### 8.10.4.88
 
 #### Fix
@@ -32,7 +37,7 @@
 ### 7.10.3.83
 
 #### Add
-+ Gravel ore (every variants of ore)
++ Gravel ore (every variant of ore)
 
 #### Breaking change
 + Rod items registry name have change

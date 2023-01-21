@@ -3,6 +3,7 @@ package fr.alasdiablo.janoeo.foundation.data.model;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -11,8 +12,8 @@ public class FoundationItemModelProvider extends ItemModelProvider {
 
     private static final ResourceLocation GENERATED = new ResourceLocation("item/generated");
 
-    public FoundationItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, Foundation.MOD_ID, existingFileHelper);
+    public FoundationItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Foundation.MOD_ID, existingFileHelper);
     }
 
     @Override

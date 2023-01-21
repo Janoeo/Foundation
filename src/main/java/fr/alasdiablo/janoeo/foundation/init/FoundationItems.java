@@ -1,10 +1,15 @@
 package fr.alasdiablo.janoeo.foundation.init;
 
 import com.google.common.collect.ImmutableMap;
+import fr.alasdiablo.diolib.api.item.GroundCreativeModeTab;
+import fr.alasdiablo.diolib.api.util.ResourceLocations;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,7 +23,7 @@ public class FoundationItems {
     static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Foundation.MOD_ID);
 
     /* * * * * * * * * * * * * * * Item Properties * * * * * * * * * * * * * */
-    private static final Item.Properties ITEMS_PROPERTIES = new Item.Properties().tab(Foundation.MATERIALS_GROUP);
+    private static final Item.Properties ITEMS_PROPERTIES = new Item.Properties();
 
     /* * * * * * * * * * * * * * * Items * * * * * * * * * * * * * */
     public static final Map<Resource, RegistryObject<Item>> DUSTS;
@@ -71,5 +76,16 @@ public class FoundationItems {
 
     public static void init(IEventBus bus) {
         ITEMS.register(bus);
+    }
+
+    public static void onCreativeModeTabEvent(@NotNull CreativeModeTabEvent.BuildContents event) {
+        if (event.getTab() == Foundation.MATERIALS_GROUP) {
+            FoundationItems.RAWS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationItems.INGOTS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationItems.NUGGETS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationItems.DUSTS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationItems.RODS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationItems.GEARS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+        }
     }
 }

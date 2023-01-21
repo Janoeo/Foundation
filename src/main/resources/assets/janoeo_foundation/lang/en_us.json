@@ -131,6 +131,6 @@
   "item.janoeo_foundation.uranium_ingot": "Uranium Ingot",
   "item.janoeo_foundation.uranium_nugget": "Uranium Nugget",
   "item.janoeo_foundation.wooden_gear": "Wooden Gear",
-  "itemGroup.janoeo.foundation.materials": "Janoeo Foundation - Materials",
-  "itemGroup.janoeo.foundation.ores": "Janoeo Foundation - Ores"
+  "item_group.janoeo_foundation.materials": "Janoeo Foundation - Materials",
+  "item_group.janoeo_foundation.ores": "Janoeo Foundation - Ores"
 }

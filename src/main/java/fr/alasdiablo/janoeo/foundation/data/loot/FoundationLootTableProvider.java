@@ -1,19 +1,16 @@
 package fr.alasdiablo.janoeo.foundation.data.loot;
 
-import com.mojang.datafixers.util.Pair;
-import fr.alasdiablo.diolib.api.data.loot.DioLootTableProvider;
-import fr.alasdiablo.janoeo.foundation.Foundation;
+
 import fr.alasdiablo.janoeo.foundation.data.loot.table.FoundationBlockLootTables;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
-public class FoundationLootTableProvider extends DioLootTableProvider {
-    public FoundationLootTableProvider(DataGenerator dataGeneratorIn) {
-        super(dataGeneratorIn, Foundation.MOD_ID);
-    }
+import java.util.List;
+import java.util.Set;
 
-    @Override
-    public void registerAdvancements() {
-        this.addLootTable(Pair.of(FoundationBlockLootTables::new, LootContextParamSets.BLOCK));
+public class FoundationLootTableProvider extends LootTableProvider {
+    public FoundationLootTableProvider(PackOutput output) {
+        super(output, Set.of(), List.of(new LootTableProvider.SubProviderEntry(FoundationBlockLootTables::new, LootContextParamSets.BLOCK)));
     }
 }

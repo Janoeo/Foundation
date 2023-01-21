@@ -5,15 +5,16 @@ import fr.alasdiablo.diolib.api.data.blockstate.DioBlockStateProvider;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
 
 public class FoundationBlockStateProvider extends DioBlockStateProvider {
-    public FoundationBlockStateProvider(DataGenerator generator) {
-        super(generator, Foundation.MOD_ID);
+
+    public FoundationBlockStateProvider(PackOutput output) {
+        super(output, Foundation.MOD_ID);
     }
 
     static @NotNull @Unmodifiable List<String> getBlocksList() {

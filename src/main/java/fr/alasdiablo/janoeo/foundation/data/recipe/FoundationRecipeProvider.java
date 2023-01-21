@@ -5,6 +5,7 @@ import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -28,12 +29,12 @@ import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
 public class FoundationRecipeProvider extends RecipeProvider {
     private static Consumer<FinishedRecipe> finishedRecipeConsumer;
 
-    public FoundationRecipeProvider(DataGenerator generatorIn) {
-        super(generatorIn);
+    public FoundationRecipeProvider(PackOutput output) {
+        super(output);
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         finishedRecipeConsumer = consumer;
 
         this.nugget(NUGGETS.get(Resource.Aluminium).get(), INGOTS_ALUMINIUM, "has_aluminium_ingot", "aluminium_nugget");
@@ -149,7 +150,7 @@ public class FoundationRecipeProvider extends RecipeProvider {
     }
 
     private void rod(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn) {
-        ShapedRecipeBuilder.shaped(resultIn, 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, resultIn, 2)
                 .define('I', ingredientIn)
                 .pattern("I")
                 .pattern("I")
@@ -158,7 +159,7 @@ public class FoundationRecipeProvider extends RecipeProvider {
     }
 
     private void gear(ItemLike resultIn, TagKey<Item> rod, TagKey<Item> middle, String criterionNameIn, String middleCriterionNameIn) {
-        ShapedRecipeBuilder.shaped(resultIn)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, resultIn)
                 .define('R', rod)
                 .define('M', middle)
                 .pattern(" R ")
@@ -170,22 +171,22 @@ public class FoundationRecipeProvider extends RecipeProvider {
     }
 
     private void nugget(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn) {
-        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn))
                 .save(finishedRecipeConsumer);
     }
 
     private void nugget(ItemLike resultIn, Item ingredientIn, String criterionNameIn) {
-        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn))
                 .save(finishedRecipeConsumer);
     }
 
     private void nugget(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, resultIn, 9).requires(Ingredient.of(ingredientIn)).unlockedBy(criterionNameIn, has(ingredientIn))
                 .save(finishedRecipeConsumer, ResourceLocations.of(Foundation.MOD_ID, nameIn));
     }
 
     private void ingotFromNugget(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        ShapedRecipeBuilder.shaped(resultIn).define('A', ingredientIn).pattern("AAA").pattern("AAA").pattern("AAA")
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, resultIn).define('A', ingredientIn).pattern("AAA").pattern("AAA").pattern("AAA")
                 .unlockedBy(criterionNameIn, has(ingredientIn)).save(finishedRecipeConsumer, ResourceLocations.of(Foundation.MOD_ID, nameIn));
     }
 
@@ -194,14 +195,14 @@ public class FoundationRecipeProvider extends RecipeProvider {
     }
 
     private void ingotFromBlock(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        ShapelessRecipeBuilder.shapeless(resultIn, 9).requires(ingredientIn).unlockedBy(criterionNameIn, has(ingredientIn))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, resultIn, 9).requires(ingredientIn).unlockedBy(criterionNameIn, has(ingredientIn))
                 .save(finishedRecipeConsumer, ResourceLocations.of(Foundation.MOD_ID, nameIn));
     }
 
     private void ingotFromDust(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredientIn), resultIn, 0f, 200).unlockedBy(criterionNameIn, has(ingredientIn))
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredientIn), RecipeCategory.MISC, resultIn, 0f, 200).unlockedBy(criterionNameIn, has(ingredientIn))
                 .save(finishedRecipeConsumer, new ResourceLocation(Foundation.MOD_ID, "smelting_" + nameIn));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ingredientIn), resultIn, 0f, 100).unlockedBy(criterionNameIn, has(ingredientIn))
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ingredientIn), RecipeCategory.MISC, resultIn, 0f, 100).unlockedBy(criterionNameIn, has(ingredientIn))
                 .save(finishedRecipeConsumer, new ResourceLocation(Foundation.MOD_ID, "blasting_" + nameIn));
     }
 
@@ -211,11 +212,5 @@ public class FoundationRecipeProvider extends RecipeProvider {
 
     private void ingotFromOre(ItemLike resultIn, TagKey<Item> ingredientIn, String criterionNameIn, String nameIn) {
         this.ingotFromDust(resultIn, ingredientIn, criterionNameIn, nameIn);
-    }
-
-    @Nonnull
-    @Override
-    public String getName() {
-        return "Janoeo Foundation Recipes";
     }
 }

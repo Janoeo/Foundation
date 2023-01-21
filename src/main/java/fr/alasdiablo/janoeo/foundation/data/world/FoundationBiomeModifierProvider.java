@@ -6,23 +6,26 @@ import fr.alasdiablo.janoeo.foundation.config.FoundationConfig;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
 import net.minecraft.data.CachedOutput;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
+import net.minecraft.data.PackOutput;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
-public class BiomeModifierProvider implements DataProvider {
-    private final String        modid;
-    private final DataGenerator gen;
+public class FoundationBiomeModifierProvider implements DataProvider {
+    private final String     modid;
+    private final PackOutput output;
 
-    public BiomeModifierProvider(DataGenerator gen) {
+    public FoundationBiomeModifierProvider(PackOutput output) {
         this.modid = Foundation.MOD_ID;
-        this.gen   = gen;
+        this.output   = output;
     }
 
     @Override
-    public void run(@NotNull CachedOutput cache) throws IOException {
+    public @NotNull CompletableFuture<?> run(@NotNull CachedOutput cache) {
+        List<CompletableFuture<?>> output = new ArrayList<>();
 
         for (Resource resource: Resource.values()) {
             if (resource.has(ResourceType.StoneOre) && resource.has(ResourceType.DeepSlateOre)) {
@@ -34,7 +37,13 @@ public class BiomeModifierProvider implements DataProvider {
                     json.addProperty("biomes", "#minecraft:is_overworld");
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
-                    DataProvider.saveStable(cache, json, this.gen.getOutputFolder().resolve("data/" + modid + "/forge/biome_modifier/" + name + ".json"));
+                    output.add(DataProvider.saveStable(cache, json,
+                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                   .resolve(modid)
+                                   .resolve("forge")
+                                   .resolve("biome_modifier")
+                                   .resolve(name + ".json")
+                    ));
                 }
             }
             if (resource.has(ResourceType.TinyStoneOre) && resource.has(ResourceType.TinyDeepSlateOre)) {
@@ -46,10 +55,15 @@ public class BiomeModifierProvider implements DataProvider {
                     json.addProperty("biomes", "#minecraft:is_overworld");
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
-                    DataProvider.saveStable(cache, json, this.gen.getOutputFolder().resolve("data/" + modid + "/forge/biome_modifier/" + name + ".json"));
+                    output.add(DataProvider.saveStable(cache, json,
+                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                   .resolve(modid)
+                                   .resolve("forge")
+                                   .resolve("biome_modifier")
+                                   .resolve(name + ".json")
+                    ));
                 }
             }
-
             if (resource.has(ResourceType.GravelOre)) {
                 var config = FoundationConfig.ALL_GRAVEL_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
@@ -59,10 +73,15 @@ public class BiomeModifierProvider implements DataProvider {
                     json.addProperty("biomes", "#minecraft:is_overworld");
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
-                    DataProvider.saveStable(cache, json, this.gen.getOutputFolder().resolve("data/" + modid + "/forge/biome_modifier/" + name + ".json"));
+                    output.add(DataProvider.saveStable(cache, json,
+                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                   .resolve(modid)
+                                   .resolve("forge")
+                                   .resolve("biome_modifier")
+                                   .resolve(name + ".json")
+                    ));
                 }
             }
-
             if (resource.has(ResourceType.NetherOre)) {
                 var config = FoundationConfig.NETHER_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
@@ -72,10 +91,17 @@ public class BiomeModifierProvider implements DataProvider {
                     json.addProperty("biomes", "#minecraft:is_nether");
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
-                    DataProvider.saveStable(cache, json, this.gen.getOutputFolder().resolve("data/" + modid + "/forge/biome_modifier/" + name + ".json"));
+                    output.add(DataProvider.saveStable(cache, json,
+                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                   .resolve(modid)
+                                   .resolve("forge")
+                                   .resolve("biome_modifier")
+                                   .resolve(name + ".json")
+                    ));
                 }
             }
         }
+        return CompletableFuture.allOf(output.toArray(CompletableFuture[]::new));
     }
 
     @Override

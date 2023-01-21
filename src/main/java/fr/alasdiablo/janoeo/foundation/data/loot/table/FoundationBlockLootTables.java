@@ -1,9 +1,10 @@
 package fr.alasdiablo.janoeo.foundation.data.loot.table;
 
-import fr.alasdiablo.diolib.api.data.loot.DioBlockLootTable;
+import fr.alasdiablo.diolib.api.data.loot.DioBlockLootSubProvider;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
+import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -18,11 +19,16 @@ import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
+import java.util.Set;
 
-public class FoundationBlockLootTables extends DioBlockLootTable {
+public class FoundationBlockLootTables extends DioBlockLootSubProvider {
+
+    public FoundationBlockLootTables() {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+    }
 
     @Override
-    protected void addTables() {
+    protected void generate() {
         this.registerDropSelf(FoundationBlocks.STORAGE_BLOCKS);
         this.registerDropSelf(FoundationBlocks.RAW_BLOCKS);
 
