@@ -1,6 +1,9 @@
 package fr.alasdiablo.janoeo.foundation.init;
 
 import com.google.common.collect.ImmutableMap;
+import fr.alasdiablo.diolib.api.item.GroundCreativeModeTab;
+import fr.alasdiablo.diolib.api.util.ResourceLocations;
+import fr.alasdiablo.diolib.event.IEvent;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.block.GravelOre;
 import fr.alasdiablo.janoeo.foundation.block.GravelRedStoneOre;
@@ -8,9 +11,12 @@ import fr.alasdiablo.janoeo.foundation.block.NetherOreBlock;
 import fr.alasdiablo.janoeo.foundation.block.NetherRedStoneOreBlock;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.RedStoneOreBlock;
@@ -18,10 +24,12 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 import java.util.function.Supplier;
@@ -40,7 +48,7 @@ public class FoundationBlocks {
     public static final Map<Resource, RegistryObject<Block>> STORAGE_BLOCKS;
 
     /* * * * * * * * * * * * * * * Item Properties * * * * * * * * * * * * * */
-    private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties().tab(Foundation.ORES_GROUP);
+    private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties();
 
     /* * * * * * * * * * * * * * * Block Properties * * * * * * * * * * * * * */
     private static final BlockBehaviour.Properties PROPERTIES_STONE_ORE     = BlockBehaviour.Properties.of(Material.STONE)
@@ -168,5 +176,18 @@ public class FoundationBlocks {
 
     public static void init(IEventBus bus) {
         BLOCKS.register(bus);
+    }
+
+    public static void onCreativeModeTabEvent(@NotNull CreativeModeTabEvent.BuildContents event) {
+        if (event.getTab() == Foundation.ORES_GROUP) {
+            FoundationBlocks.RAW_BLOCKS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationBlocks.STORAGE_BLOCKS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationBlocks.STONE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationBlocks.TINY_STONE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationBlocks.GRAVEL_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationBlocks.DEEPSLATE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationBlocks.TINY_DEEPSLATE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationBlocks.NETHER_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+        }
     }
 }

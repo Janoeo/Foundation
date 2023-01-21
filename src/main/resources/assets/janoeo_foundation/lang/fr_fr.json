@@ -90,6 +90,6 @@
   "item.janoeo_foundation.uranium_dust": "Poussière d'uranium",
   "item.janoeo_foundation.uranium_ingot": "Lingot d'uranium",
   "item.janoeo_foundation.uranium_nugget": "Pépite d'uranium",
-  "itemGroup.janoeo.foundation.materials": "Janoeo Foundation - Materials",
-  "itemGroup.janoeo.foundation.ores": "Janoeo Foundation - Ores"
+  "item_group.janoeo_foundation.materials": "Janoeo Foundation - Materials",
+  "item_group.janoeo_foundation.ores": "Janoeo Foundation - Ores"
 }

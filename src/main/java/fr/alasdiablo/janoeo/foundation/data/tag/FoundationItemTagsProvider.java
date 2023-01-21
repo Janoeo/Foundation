@@ -5,14 +5,18 @@ import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.init.FoundationTags;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.MethodsReturnNonnullByDefault;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
+import java.util.concurrent.CompletableFuture;
 
 import static fr.alasdiablo.janoeo.foundation.init.FoundationItems.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
@@ -22,14 +26,15 @@ import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Items.*;
 public class FoundationItemTagsProvider extends ItemTagsProvider {
 
     public FoundationItemTagsProvider(
-            DataGenerator dataGenerator, BlockTagsProvider blockTagProvider,
+            PackOutput output, CompletableFuture<HolderLookup.Provider> lookup,
+            TagsProvider<Block> blockTagsProvider,
             @Nullable ExistingFileHelper existingFileHelper
     ) {
-        super(dataGenerator, blockTagProvider, Foundation.MOD_ID, existingFileHelper);
+        super(output, lookup, blockTagsProvider, Foundation.MOD_ID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(@NotNull HolderLookup.Provider pProvider) {
         this.copy(FoundationTags.Blocks.ORES_TINY_COAL, ORES_TINY_COAL);
         this.copy(FoundationTags.Blocks.ORES_TINY_COPPER, ORES_TINY_COPPER);
         this.copy(FoundationTags.Blocks.ORES_TINY_DIAMOND, ORES_TINY_DIAMOND);

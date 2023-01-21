@@ -2,26 +2,34 @@ package fr.alasdiablo.janoeo.foundation.data.tag;
 
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+
+import java.util.concurrent.CompletableFuture;
 
 import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;
 import static fr.alasdiablo.janoeo.foundation.init.FoundationTags.Blocks.*;
 
 @SuppressWarnings("unchecked")
 public class FoundationBlockTagsProvider extends BlockTagsProvider {
-    public FoundationBlockTagsProvider(DataGenerator generatorIn, @Nullable ExistingFileHelper existingFileHelper) {
-        super(generatorIn, Foundation.MOD_ID, existingFileHelper);
+    public FoundationBlockTagsProvider(
+            PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+            @Nullable ExistingFileHelper existingFileHelper
+    ) {
+        super(output, lookupProvider, Foundation.MOD_ID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(@NotNull HolderLookup.Provider pProvider) {
         this.tag(Tags.Blocks.ORES).addTags(
                 ORES_ALUMINIUM, ORES_ALUMINUM, ORES_LEAD, ORES_NICKEL, ORES_SILVER, ORES_TIN, ORES_URANIUM, ORES_TINY, ORES_TINY_COAL, ORES_TINY_COPPER,
                 ORES_TINY_DIAMOND, ORES_TINY_EMERALD, ORES_TINY_GOLD, ORES_TINY_IRON, ORES_TINY_LAPIS, ORES_TINY_REDSTONE, ORES_TINY_ALUMINIUM,

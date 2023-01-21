@@ -3,6 +3,7 @@ package fr.alasdiablo.janoeo.foundation.data.model;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.init.FoundationBlocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -11,8 +12,8 @@ import org.jetbrains.annotations.NotNull;
 public class FoundationBlockModelProvider extends BlockModelProvider {
     private static final ResourceLocation CUBE_ALL = new ResourceLocation("block/cube_all");
 
-    public FoundationBlockModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, Foundation.MOD_ID, existingFileHelper);
+    public FoundationBlockModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Foundation.MOD_ID, existingFileHelper);
     }
 
     @Override
