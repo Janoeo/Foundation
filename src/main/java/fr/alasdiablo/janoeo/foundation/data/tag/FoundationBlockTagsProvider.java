@@ -100,7 +100,8 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
         var mineableWithPickaxe = this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
         var mineableWithShovel  = this.tag(BlockTags.MINEABLE_WITH_SHOVEL);
         var needsStoneTool      = this.tag(BlockTags.NEEDS_STONE_TOOL);
-        var needsIronTool       = this.tag(BlockTags.NEEDS_STONE_TOOL);
+        var needsIronTool       = this.tag(BlockTags.NEEDS_IRON_TOOL);
+        var needsDiamondTool    = this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
 
         STONE_ORES.forEach((resource, block) -> mineableWithPickaxe.add(block.get()));
         DEEPSLATE_ORES.forEach((resource, block) -> mineableWithPickaxe.add(block.get()));
@@ -111,15 +112,14 @@ public class FoundationBlockTagsProvider extends BlockTagsProvider {
             mineableWithPickaxe.add(block.get());
             needsIronTool.add(block.get());
         });
-        STORAGE_BLOCKS.forEach((resource, block) -> {
+        END_ORES.forEach((resource, block) -> {
             mineableWithPickaxe.add(block.get());
-            needsStoneTool.add(block.get());
+            needsDiamondTool.add(block.get());
         });
 
-        RAW_BLOCKS.forEach((resource, block) -> {
-            mineableWithPickaxe.add(block.get());
-            needsStoneTool.add(block.get());
-        });
+        STORAGE_BLOCKS.forEach((resource, block) -> mineableWithPickaxe.add(block.get()));
+
+        RAW_BLOCKS.forEach((resource, block) -> mineableWithPickaxe.add(block.get()));
 
         needsStoneTool.add(
                 STONE_ORES.get(Resource.Aluminium).get(),

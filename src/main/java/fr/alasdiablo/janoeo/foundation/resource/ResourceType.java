@@ -10,6 +10,7 @@ public enum ResourceType {
     TinyDeepSlateOre("deepslate_tiny", "ore", true),
     NetherOre("nether", "ore", true),
     GravelOre("gravel", "ore", true),
+    EndOre("end", "ore", true),
     RawMaterialBlock("raw", "block"),
     StorageBlock("", "block"),
     RawMaterialItem("raw", ""),
@@ -21,14 +22,14 @@ public enum ResourceType {
 
     public static final ResourceType[] ALL               = ResourceType.values();
     public static final ResourceType[] ALL_ORE_WITH_ITEM = new ResourceType[]{
-            StoneOre, TinyStoneOre, DeepSlateOre, TinyDeepSlateOre, NetherOre, GravelOre, RawMaterialBlock, StorageBlock,
+            StoneOre, TinyStoneOre, DeepSlateOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, RawMaterialBlock, StorageBlock,
             RawMaterialItem, Ingot, Nugget, Dust
     };
     public static final ResourceType[] ITEMS             = new ResourceType[]{
             Dust, Nugget, Ingot, RawMaterialItem, Rod, Gear
     };
     public static final ResourceType[] BLOCKS            = new ResourceType[]{
-            StoneOre, TinyStoneOre, DeepSlateOre, TinyDeepSlateOre, NetherOre, GravelOre, RawMaterialBlock, StorageBlock
+            StoneOre, TinyStoneOre, DeepSlateOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, RawMaterialBlock, StorageBlock
     };
 
     private final String  prefix;

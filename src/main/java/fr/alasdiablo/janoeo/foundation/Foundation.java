@@ -33,7 +33,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 
 @Mod(Foundation.MOD_ID)
@@ -47,7 +46,7 @@ public class Foundation {
     public static CreativeModeTab MATERIALS_GROUP;
     public static CreativeModeTab ORES_GROUP;
 
-    public Foundation() throws IOException {
+    public Foundation() {
         FoundationConfig.init();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         FoundationItems.init(modBus);

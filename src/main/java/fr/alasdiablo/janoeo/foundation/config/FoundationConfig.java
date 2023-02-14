@@ -109,17 +109,51 @@ public class FoundationConfig {
     public static final OreConfig GRAVEL_URANIUM_ORE_CONFIG = new OreConfig(Resource.Uranium.getName(ResourceType.GravelOre), true).placementUniform(
             4, 2, 242, 24);
 
+
+    /* * * * * * * * * * * * * * * End Ore * * *  * * * * * * * * * * */
+    public static final OreConfig END_COAL_ORE_CONFIG     = new OreConfig(Resource.Coal.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 8);
+    public static final OreConfig END_COPPER_ORE_CONFIG   = new OreConfig(Resource.Copper.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 8);
+    public static final OreConfig END_DIAMOND_ORE_CONFIG  = new OreConfig(Resource.Diamond.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 24);
+    public static final OreConfig END_EMERALD_ORE_CONFIG  = new OreConfig(Resource.Emerald.getName(ResourceType.EndOre), true).placementUniform(
+            2, 2, 64, 24);
+    public static final OreConfig END_GOLD_ORE_CONFIG     = new OreConfig(Resource.Gold.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 18);
+    public static final OreConfig END_IRON_ORE_CONFIG     = new OreConfig(Resource.Iron.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 16);
+    public static final OreConfig END_LAPIS_ORE_CONFIG    = new OreConfig(Resource.Lapis.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 18);
+    public static final OreConfig END_REDSTONE_ORE_CONFIG = new OreConfig(Resource.RedStone.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 16);
+
+    public static final OreConfig END_BAUXITE_ORE_CONFIG = new OreConfig(Resource.Aluminium.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 8);
+    public static final OreConfig END_LEAD_ORE_CONFIG    = new OreConfig(Resource.Lead.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 8);
+    public static final OreConfig END_NICKEL_ORE_CONFIG  = new OreConfig(Resource.Nickel.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 8);
+    public static final OreConfig END_SILVER_ORE_CONFIG  = new OreConfig(Resource.Silver.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 18);
+    public static final OreConfig END_TIN_ORE_CONFIG     = new OreConfig(Resource.Tin.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 8);
+    public static final OreConfig END_URANIUM_ORE_CONFIG = new OreConfig(Resource.Uranium.getName(ResourceType.EndOre), true).placementUniform(
+            4, 2, 64, 16);
+
     /* * * * * * * * * * * * * * * Config Builder * * *  * * * * * * * * * * */
     private static final JsonConfigBuilder ALL_GRAVEL_ORE_CONFIG_BUILDER     = new JsonConfigBuilder("janoeo", "foundation", "all", "gravel");
     private static final JsonConfigBuilder OVERWORLD_ORE_TINY_CONFIG_BUILDER = new JsonConfigBuilder("janoeo", "foundation", "overworld", "tiny");
     private static final JsonConfigBuilder OVERWORLD_ORE_CONFIG_BUILDER      = new JsonConfigBuilder("janoeo", "foundation", "overworld");
     private static final JsonConfigBuilder NETHER_ORE_CONFIG_BUILDER         = new JsonConfigBuilder("janoeo", "foundation", "nether");
+    private static final JsonConfigBuilder END_ORE_CONFIG_BUILDER         = new JsonConfigBuilder("janoeo", "foundation", "end");
 
     /* * * * * * * * * * * * * * * Config Map * * *  * * * * * * * * * * */
     public static final Map<Resource, OreConfig> ALL_GRAVEL_ORE_CONFIG;
     public static final Map<Resource, OreConfig> OVERWORLD_ORE_TINY_CONFIG;
     public static final Map<Resource, OreConfig> OVERWORLD_ORE_CONFIG;
     public static final Map<Resource, OreConfig> NETHER_ORE_CONFIG;
+    public static final Map<Resource, OreConfig> END_ORE_CONFIG;
 
     static {
         try {
@@ -141,6 +175,12 @@ public class FoundationConfig {
                     .add(NETHER_IRON_ORE_CONFIG).add(NETHER_LAPIS_ORE_CONFIG).add(NETHER_REDSTONE_ORE_CONFIG).add(NETHER_BAUXITE_ORE_CONFIG)
                     .add(NETHER_LEAD_ORE_CONFIG).add(NETHER_NICKEL_ORE_CONFIG).add(NETHER_SILVER_ORE_CONFIG).add(NETHER_TIN_ORE_CONFIG)
                     .add(NETHER_URANIUM_ORE_CONFIG).build();
+
+            END_ORE_CONFIG_BUILDER.add(END_COAL_ORE_CONFIG).add(END_COPPER_ORE_CONFIG).add(END_DIAMOND_ORE_CONFIG)
+                    .add(END_EMERALD_ORE_CONFIG).add(END_GOLD_ORE_CONFIG).add(END_IRON_ORE_CONFIG).add(END_LAPIS_ORE_CONFIG)
+                    .add(END_REDSTONE_ORE_CONFIG)
+                    .add(END_BAUXITE_ORE_CONFIG).add(END_LEAD_ORE_CONFIG).add(END_NICKEL_ORE_CONFIG).add(END_SILVER_ORE_CONFIG)
+                    .add(END_TIN_ORE_CONFIG).add(END_URANIUM_ORE_CONFIG).build();
         } catch (IOException e) {
             Foundation.logger.error("Unable to load config files");
         }
@@ -170,9 +210,15 @@ public class FoundationConfig {
                 .put(Resource.RedStone, NETHER_REDSTONE_ORE_CONFIG).put(Resource.Aluminium, NETHER_BAUXITE_ORE_CONFIG)
                 .put(Resource.Lead, NETHER_LEAD_ORE_CONFIG).put(Resource.Nickel, NETHER_NICKEL_ORE_CONFIG).put(Resource.Silver, NETHER_SILVER_ORE_CONFIG)
                 .put(Resource.Tin, NETHER_TIN_ORE_CONFIG).put(Resource.Uranium, NETHER_URANIUM_ORE_CONFIG).build();
+
+        END_ORE_CONFIG = new ImmutableMap.Builder<Resource, OreConfig>()
+                .put(Resource.Coal, END_COAL_ORE_CONFIG).put(Resource.Copper, END_COPPER_ORE_CONFIG).put(Resource.Diamond, END_DIAMOND_ORE_CONFIG)
+                .put(Resource.Emerald, END_EMERALD_ORE_CONFIG).put(Resource.Gold, END_GOLD_ORE_CONFIG).put(Resource.Iron, END_IRON_ORE_CONFIG)
+                .put(Resource.Lapis, END_LAPIS_ORE_CONFIG).put(Resource.RedStone, END_REDSTONE_ORE_CONFIG)
+                .put(Resource.Aluminium, END_BAUXITE_ORE_CONFIG).put(Resource.Lead, END_LEAD_ORE_CONFIG).put(Resource.Nickel, END_NICKEL_ORE_CONFIG)
+                .put(Resource.Silver, END_SILVER_ORE_CONFIG).put(Resource.Tin, END_TIN_ORE_CONFIG).put(Resource.Uranium, END_URANIUM_ORE_CONFIG)
+                .build();
     }
 
-    public static void init() throws IOException {
-
-    }
+    public static void init() {}
 }
