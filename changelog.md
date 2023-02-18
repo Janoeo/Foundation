@@ -1,5 +1,13 @@
 # Janoeo Foundation Changelog
 
+### 8.12.0.90
+
+#### Add
++ End ore
+
+#### Fix
++ Fix gravel ore generated on netherrack instead of gravel
+
 ### 8.11.4.89
 
 + Update to mc 1.19.3

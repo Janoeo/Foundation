@@ -8,6 +8,7 @@ import fr.alasdiablo.janoeo.foundation.data.model.FoundationBlockModelProvider;
 import fr.alasdiablo.janoeo.foundation.data.model.FoundationBlockStateProvider;
 import fr.alasdiablo.janoeo.foundation.data.model.FoundationItemModelProvider;
 import fr.alasdiablo.janoeo.foundation.data.recipe.FoundationRecipeProvider;
+import fr.alasdiablo.janoeo.foundation.data.tag.FoundationBiomeTagsProvider;
 import fr.alasdiablo.janoeo.foundation.data.tag.FoundationBlockTagsProvider;
 import fr.alasdiablo.janoeo.foundation.data.tag.FoundationItemTagsProvider;
 import fr.alasdiablo.janoeo.foundation.data.world.FoundationBiomeModifierProvider;
@@ -93,6 +94,7 @@ public class Foundation {
         final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(output, lookup, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new FoundationItemTagsProvider(output, lookup, blockTagsProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new FoundationBiomeTagsProvider(output, lookup, existingFileHelper));
 
         Foundation.logger.debug("Add Recipes Provider");
         generator.addProvider(event.includeServer(), new FoundationRecipeProvider(output));
