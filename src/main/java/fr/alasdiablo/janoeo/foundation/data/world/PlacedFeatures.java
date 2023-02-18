@@ -10,7 +10,6 @@ import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -22,16 +21,18 @@ import java.util.List;
 import java.util.Map;
 
 public class PlacedFeatures {
-    public static Map<Resource, ResourceKey<PlacedFeature>> ALL_GRAVEL_ORE_PLACED;
-    public static Map<Resource, ResourceKey<PlacedFeature>> OVERWORLD_ORE_TINY_PLACED;
-    public static Map<Resource, ResourceKey<PlacedFeature>> OVERWORLD_ORE_PLACED;
-    public static Map<Resource, ResourceKey<PlacedFeature>> NETHER_ORE_PLACED;
+    public static final Map<Resource, ResourceKey<PlacedFeature>> ALL_GRAVEL_ORE_PLACED;
+    public static final Map<Resource, ResourceKey<PlacedFeature>> OVERWORLD_ORE_TINY_PLACED;
+    public static final Map<Resource, ResourceKey<PlacedFeature>> OVERWORLD_ORE_PLACED;
+    public static final Map<Resource, ResourceKey<PlacedFeature>> NETHER_ORE_PLACED;
+    public static final Map<Resource, ResourceKey<PlacedFeature>> END_ORE_PLACED;
 
     static {
         var allGravelOrePlaced     = new ImmutableMap.Builder<Resource, ResourceKey<PlacedFeature>>();
         var overworldOreTinyPlaced = new ImmutableMap.Builder<Resource, ResourceKey<PlacedFeature>>();
         var overworldOrePlaced     = new ImmutableMap.Builder<Resource, ResourceKey<PlacedFeature>>();
         var netherOrePlaced        = new ImmutableMap.Builder<Resource, ResourceKey<PlacedFeature>>();
+        var endOrePlaced           = new ImmutableMap.Builder<Resource, ResourceKey<PlacedFeature>>();
 
         for (Resource resource: Resource.values()) {
             if (resource.has(ResourceType.StoneOre) && resource.has(ResourceType.DeepSlateOre)) {
@@ -72,12 +73,23 @@ public class PlacedFeatures {
                     );
                 }
             }
+
+            if (resource.has(ResourceType.EndOre)) {
+                var config = FoundationConfig.END_ORE_CONFIG.get(resource);
+                if (config.isEnable()) {
+                    endOrePlaced.put(
+                            resource,
+                            ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocations.of(Foundation.MOD_ID, resource.getName(ResourceType.EndOre)))
+                    );
+                }
+            }
         }
 
         ALL_GRAVEL_ORE_PLACED     = allGravelOrePlaced.build();
         OVERWORLD_ORE_TINY_PLACED = overworldOreTinyPlaced.build();
         OVERWORLD_ORE_PLACED      = overworldOrePlaced.build();
         NETHER_ORE_PLACED         = netherOrePlaced.build();
+        END_ORE_PLACED            = endOrePlaced.build();
     }
 
 
@@ -165,6 +177,20 @@ public class PlacedFeatures {
                            configuredFeatures.getOrThrow(configuredFeature),
                            createPlacementModifier(config)
                        )
+                    );
+                }
+            }
+
+            if (resource.has(ResourceType.EndOre)) {
+                var config = FoundationConfig.END_ORE_CONFIG.get(resource);
+                if (config.isEnable()) {
+                    var configuredFeature = ConfiguredFeatures.END_ORE_FEATURE.get(resource);
+                    var placedFeature = END_ORE_PLACED.get(resource);
+                    bootstrap.register(placedFeature,
+                                       new PlacedFeature(
+                                               configuredFeatures.getOrThrow(configuredFeature),
+                                               createPlacementModifier(config)
+                                       )
                     );
                 }
             }

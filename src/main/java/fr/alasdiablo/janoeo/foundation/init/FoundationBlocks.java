@@ -5,10 +5,7 @@ import fr.alasdiablo.diolib.api.item.GroundCreativeModeTab;
 import fr.alasdiablo.diolib.api.util.ResourceLocations;
 import fr.alasdiablo.diolib.event.IEvent;
 import fr.alasdiablo.janoeo.foundation.Foundation;
-import fr.alasdiablo.janoeo.foundation.block.GravelOre;
-import fr.alasdiablo.janoeo.foundation.block.GravelRedStoneOre;
-import fr.alasdiablo.janoeo.foundation.block.NetherOreBlock;
-import fr.alasdiablo.janoeo.foundation.block.NetherRedStoneOreBlock;
+import fr.alasdiablo.janoeo.foundation.block.*;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
 import net.minecraft.network.chat.Component;
@@ -43,6 +40,7 @@ public class FoundationBlocks {
     public static final Map<Resource, RegistryObject<Block>> DEEPSLATE_ORES;
     public static final Map<Resource, RegistryObject<Block>> TINY_DEEPSLATE_ORES;
     public static final Map<Resource, RegistryObject<Block>> NETHER_ORES;
+    public static final Map<Resource, RegistryObject<Block>> END_ORES;
     public static final Map<Resource, RegistryObject<Block>> GRAVEL_ORES;
     public static final Map<Resource, RegistryObject<Block>> RAW_BLOCKS;
     public static final Map<Resource, RegistryObject<Block>> STORAGE_BLOCKS;
@@ -75,6 +73,7 @@ public class FoundationBlocks {
         var deepslateOres     = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var tinyDeepslateOres = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var netherOres        = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
+        var endOres        = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var gravelOres        = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var rawBlocks         = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var storageBlocks     = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
@@ -84,6 +83,7 @@ public class FoundationBlocks {
                 tinyStoneOres.put(resource, createRedStoneOreBlock(PROPERTIES_STONE_ORE, resource.getName(ResourceType.TinyStoneOre)));
                 tinyDeepslateOres.put(resource, createRedStoneOreBlock(PROPERTIES_DEEPSLATE_ORE, resource.getName(ResourceType.TinyDeepSlateOre)));
                 netherOres.put(resource, createNetherRedStoneOreBlock(resource.getName(ResourceType.NetherOre)));
+                endOres.put(resource, createEndRedStoneOreBlock(resource.getName(ResourceType.EndOre)));
                 gravelOres.put(resource, createRedStoneGravelOreBlock(resource.getName(ResourceType.GravelOre)));
             } else for (ResourceType type: ResourceType.BLOCKS) {
                 if (resource.has(type)) {
@@ -94,6 +94,7 @@ public class FoundationBlocks {
                         case StoneOre, TinyStoneOre -> createOreBlock(PROPERTIES_STONE_ORE, name, resource.getXp());
                         case DeepSlateOre, TinyDeepSlateOre -> createOreBlock(PROPERTIES_DEEPSLATE_ORE, name, resource.getXp());
                         case NetherOre -> createNetherOreBlock(name, resource.getXp());
+                        case EndOre -> createEndOreBlock(name, resource.getXp());
                         case GravelOre -> createGravelOreBlock(name, resource.getXp());
                         default -> throw new IllegalStateException("Unknown block type: " + type.name());
                     };
@@ -103,6 +104,7 @@ public class FoundationBlocks {
                     if (type == ResourceType.DeepSlateOre) deepslateOres.put(resource, block);
                     if (type == ResourceType.TinyDeepSlateOre) tinyDeepslateOres.put(resource, block);
                     if (type == ResourceType.NetherOre) netherOres.put(resource, block);
+                    if (type == ResourceType.EndOre) endOres.put(resource, block);
                     if (type == ResourceType.GravelOre) gravelOres.put(resource, block);
                     if (type == ResourceType.RawMaterialBlock) rawBlocks.put(resource, block);
                     if (type == ResourceType.StorageBlock) storageBlocks.put(resource, block);
@@ -115,6 +117,7 @@ public class FoundationBlocks {
         DEEPSLATE_ORES      = deepslateOres.build();
         TINY_DEEPSLATE_ORES = tinyDeepslateOres.build();
         NETHER_ORES         = netherOres.build();
+        END_ORES            = endOres.build();
         GRAVEL_ORES         = gravelOres.build();
         RAW_BLOCKS          = rawBlocks.build();
         STORAGE_BLOCKS      = storageBlocks.build();
@@ -141,6 +144,14 @@ public class FoundationBlocks {
 
     private static RegistryObject<Block> createNetherRedStoneOreBlock(String name) {
         return register(() -> new NetherRedStoneOreBlock(PROPERTIES_NETHER_ORE), name);
+    }
+
+    private static RegistryObject<Block> createEndOreBlock(String name, UniformInt xp) {
+        return register(() -> new EndOreBlock(PROPERTIES_NETHER_ORE, xp), name);
+    }
+
+    private static RegistryObject<Block> createEndRedStoneOreBlock(String name) {
+        return register(() -> new EndRedStoneOreBlock(PROPERTIES_NETHER_ORE), name);
     }
 
     private static RegistryObject<Block> createGravelOreBlock(String name, UniformInt xp) {
@@ -188,6 +199,7 @@ public class FoundationBlocks {
             FoundationBlocks.DEEPSLATE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
             FoundationBlocks.TINY_DEEPSLATE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
             FoundationBlocks.NETHER_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
+            FoundationBlocks.END_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
         }
     }
 }

@@ -35,7 +35,7 @@ archivesBaseName = 'Janoeo Foundation'
 
 def manifestAttributes = [
         "Specification-Title"     : project.name,
-        "Specification-Vendor"    : "AlasDiablo, Safyrus, SmartzyYY",
+        "Specification-Vendor"    : "AlasDiablo, Safyrus",
         "Specification-Version"   : project.findProperty('majorVersion').toString(),
         "Implementation-Title"    : project.name,
         "Implementation-Version"  : project.jar.archiveVersion,

@@ -23,6 +23,7 @@ public class FoundationBlockModelProvider extends BlockModelProvider {
         FoundationBlocks.TINY_STONE_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.TINY_ORE));
         FoundationBlocks.TINY_DEEPSLATE_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.TINY_ORE));
         FoundationBlocks.NETHER_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.NETHER_ORE));
+        FoundationBlocks.END_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.END_ORE));
         FoundationBlocks.GRAVEL_ORES.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.GRAVEL_ORE));
         FoundationBlocks.RAW_BLOCKS.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.DEFAULT));
         FoundationBlocks.STORAGE_BLOCKS.forEach((resource, block) -> cubeAll(block.getId().getPath(), Folder.DEFAULT));
@@ -36,6 +37,7 @@ public class FoundationBlockModelProvider extends BlockModelProvider {
         TINY_ORE("ore/tiny/"),
         GRAVEL_ORE("ore/gravel/"),
         NETHER_ORE("ore/nether/"),
+        END_ORE("ore/end/"),
         ORE("ore/"),
         DEFAULT("");
 

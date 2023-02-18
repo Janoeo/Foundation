@@ -23,16 +23,18 @@ import java.util.List;
 import java.util.Map;
 
 public class ConfiguredFeatures {
-    public static Map<Resource, ResourceKey<ConfiguredFeature<?, ?>>> ALL_GRAVEL_ORE_FEATURE;
-    public static Map<Resource, ResourceKey<ConfiguredFeature<?, ?>>> OVERWORLD_ORE_TINY_FEATURE;
-    public static Map<Resource, ResourceKey<ConfiguredFeature<?, ?>>> OVERWORLD_ORE_FEATURE;
-    public static Map<Resource, ResourceKey<ConfiguredFeature<?, ?>>> NETHER_ORE_FEATURE;
+    public static final Map<Resource, ResourceKey<ConfiguredFeature<?, ?>>> ALL_GRAVEL_ORE_FEATURE;
+    public static final Map<Resource, ResourceKey<ConfiguredFeature<?, ?>>> OVERWORLD_ORE_TINY_FEATURE;
+    public static final Map<Resource, ResourceKey<ConfiguredFeature<?, ?>>> OVERWORLD_ORE_FEATURE;
+    public static final Map<Resource, ResourceKey<ConfiguredFeature<?, ?>>> NETHER_ORE_FEATURE;
+    public static final Map<Resource, ResourceKey<ConfiguredFeature<?, ?>>> END_ORE_FEATURE;
 
     static {
         var allGravelOreFeature     = new ImmutableMap.Builder<Resource, ResourceKey<ConfiguredFeature<?, ?>>>();
         var overworldOreTinyFeature = new ImmutableMap.Builder<Resource, ResourceKey<ConfiguredFeature<?, ?>>>();
         var overworldOreFeature     = new ImmutableMap.Builder<Resource, ResourceKey<ConfiguredFeature<?, ?>>>();
         var netherOreFeature        = new ImmutableMap.Builder<Resource, ResourceKey<ConfiguredFeature<?, ?>>>();
+        var endOreFeature           = new ImmutableMap.Builder<Resource, ResourceKey<ConfiguredFeature<?, ?>>>();
 
         for (Resource resource: Resource.values()) {
             if (resource.has(ResourceType.StoneOre) && resource.has(ResourceType.DeepSlateOre)) {
@@ -73,19 +75,31 @@ public class ConfiguredFeatures {
                     );
                 }
             }
+
+            if (resource.has(ResourceType.EndOre)) {
+                var config = FoundationConfig.END_ORE_CONFIG.get(resource);
+                if (config.isEnable()) {
+                    endOreFeature.put(
+                            resource,
+                            ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocations.of(Foundation.MOD_ID, resource.getName(ResourceType.EndOre)))
+                    );
+                }
+            }
         }
 
         ALL_GRAVEL_ORE_FEATURE     = allGravelOreFeature.build();
         OVERWORLD_ORE_TINY_FEATURE = overworldOreTinyFeature.build();
         OVERWORLD_ORE_FEATURE      = overworldOreFeature.build();
         NETHER_ORE_FEATURE         = netherOreFeature.build();
+        END_ORE_FEATURE            = endOreFeature.build();
     }
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> bootstrap) {
         RuleTest STONE_ORE_REPLACEABLES = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest DEEPSLATE_ORE_REPLACEABLES = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest NETHER_ORE_REPLACEABLES = new BlockMatchTest(Blocks.NETHERRACK);
-        RuleTest GRAVEL_ORE_REPLACEABLES = new BlockMatchTest(Blocks.NETHERRACK);
+        RuleTest GRAVEL_ORE_REPLACEABLES = new BlockMatchTest(Blocks.GRAVEL);
+        RuleTest END_ORE_REPLACEABLES = new BlockMatchTest(Blocks.END_STONE);
 
         for (Resource resource: Resource.values()) {
             if (resource.has(ResourceType.StoneOre) && resource.has(ResourceType.DeepSlateOre)) {
@@ -153,6 +167,24 @@ public class ConfiguredFeatures {
                     );
 
                     var configuredFeature = NETHER_ORE_FEATURE.get(resource);
+
+                    bootstrap.register(
+                            configuredFeature, new ConfiguredFeature<>(
+                                    Feature.ORE,
+                                    new OreConfiguration(targets, config.getSize())
+                            )
+                    );
+                }
+            }
+
+            if (resource.has(ResourceType.EndOre)) {
+                var config = FoundationConfig.END_ORE_CONFIG.get(resource);
+                if (config.isEnable()) {
+                    List<OreConfiguration.TargetBlockState> targets = List.of(
+                            OreConfiguration.target(END_ORE_REPLACEABLES, FoundationBlocks.END_ORES.get(resource).get().defaultBlockState())
+                    );
+
+                    var configuredFeature = END_ORE_FEATURE.get(resource);
 
                     bootstrap.register(
                             configuredFeature, new ConfiguredFeature<>(

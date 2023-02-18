@@ -8,6 +8,9 @@ import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BiomeTags;
+import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -70,7 +73,7 @@ public class FoundationBiomeModifierProvider implements DataProvider {
                     JsonObject json = new JsonObject();
                     String     name = resource.getName(ResourceType.GravelOre);
                     json.addProperty("type", "forge:add_features");
-                    json.addProperty("biomes", "#minecraft:is_overworld");
+                    json.addProperty("biomes", "#forge:has_gravel");
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
                     output.add(DataProvider.saveStable(cache, json,
@@ -89,6 +92,25 @@ public class FoundationBiomeModifierProvider implements DataProvider {
                     String     name = resource.getName(ResourceType.NetherOre);
                     json.addProperty("type", "forge:add_features");
                     json.addProperty("biomes", "#minecraft:is_nether");
+                    json.addProperty("step", "underground_ores");
+                    json.addProperty("features", this.modid + ":" + name);
+                    output.add(DataProvider.saveStable(cache, json,
+                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                   .resolve(modid)
+                                   .resolve("forge")
+                                   .resolve("biome_modifier")
+                                   .resolve(name + ".json")
+                    ));
+                }
+            }
+
+            if (resource.has(ResourceType.EndOre)) {
+                var config = FoundationConfig.END_ORE_CONFIG.get(resource);
+                if (config.isEnable()) {
+                    JsonObject json = new JsonObject();
+                    String     name = resource.getName(ResourceType.EndOre);
+                    json.addProperty("type", "forge:add_features");
+                    json.addProperty("biomes", "#minecraft:is_end");
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
                     output.add(DataProvider.saveStable(cache, json,

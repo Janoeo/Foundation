@@ -11,21 +11,21 @@ import static fr.alasdiablo.janoeo.foundation.resource.ResourceType.*;
 
 public enum Resource {
     Wooden("wooden", Gear),
-    Coal("coal", UniformInts.COMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, Nugget, Dust),
+    Coal("coal", UniformInts.COMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust),
     Aluminium("bauxite", "aluminium", MaterialColor.METAL, UniformInts.COMMON, ALL_ORE_WITH_ITEM),
-    Copper("copper", UniformInts.COMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, Nugget, Dust, Gear, Rod),
+    Copper("copper", UniformInts.COMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust, Gear, Rod),
     Tin("tin", MaterialColor.METAL, UniformInts.COMMON, ALL),
-    Iron("iron", UniformInts.COMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, Dust, Gear, Rod),
+    Iron("iron", UniformInts.COMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Dust, Gear, Rod),
     Lead("lead", MaterialColor.COLOR_GRAY, UniformInts.COMMON, ALL_ORE_WITH_ITEM),
     Nickel("nickel", MaterialColor.METAL, UniformInts.COMMON, ALL_ORE_WITH_ITEM),
     Silver("silver", MaterialColor.SNOW, UniformInts.UNCOMMON, ALL),
-    Lapis("lapis", UniformInts.UNCOMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, Nugget, Dust),
-    Gold("gold", UniformInts.UNCOMMON, TinyStoneOre, TinyDeepSlateOre, GravelOre, Dust, Gear, Rod),
+    Lapis("lapis", UniformInts.UNCOMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust),
+    Gold("gold", UniformInts.UNCOMMON, TinyStoneOre, TinyDeepSlateOre, GravelOre, EndOre, Dust, Gear, Rod),
     Uranium("uranium", MaterialColor.COLOR_YELLOW, UniformInts.UNCOMMON, ALL_ORE_WITH_ITEM),
     Amethyst("amethyst", Dust),
-    Diamond("diamond", UniformInts.RARE, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, Nugget, Dust, Gear, Rod),
-    Emerald("emerald", UniformInts.RARE, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, Nugget, Dust),
-    RedStone("redstone", TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, Nugget);
+    Diamond("diamond", UniformInts.RARE, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust, Gear, Rod),
+    Emerald("emerald", UniformInts.RARE, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust),
+    RedStone("redstone", TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget);
 
     private final String             oreName;
     private final String             resourceName;

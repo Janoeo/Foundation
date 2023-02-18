@@ -8,6 +8,7 @@ import fr.alasdiablo.janoeo.foundation.data.model.FoundationBlockModelProvider;
 import fr.alasdiablo.janoeo.foundation.data.model.FoundationBlockStateProvider;
 import fr.alasdiablo.janoeo.foundation.data.model.FoundationItemModelProvider;
 import fr.alasdiablo.janoeo.foundation.data.recipe.FoundationRecipeProvider;
+import fr.alasdiablo.janoeo.foundation.data.tag.FoundationBiomeTagsProvider;
 import fr.alasdiablo.janoeo.foundation.data.tag.FoundationBlockTagsProvider;
 import fr.alasdiablo.janoeo.foundation.data.tag.FoundationItemTagsProvider;
 import fr.alasdiablo.janoeo.foundation.data.world.FoundationBiomeModifierProvider;
@@ -33,7 +34,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 
 @Mod(Foundation.MOD_ID)
@@ -47,7 +47,7 @@ public class Foundation {
     public static CreativeModeTab MATERIALS_GROUP;
     public static CreativeModeTab ORES_GROUP;
 
-    public Foundation() throws IOException {
+    public Foundation() {
         FoundationConfig.init();
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         FoundationItems.init(modBus);
@@ -94,6 +94,7 @@ public class Foundation {
         final FoundationBlockTagsProvider blockTagsProvider = new FoundationBlockTagsProvider(output, lookup, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new FoundationItemTagsProvider(output, lookup, blockTagsProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new FoundationBiomeTagsProvider(output, lookup, existingFileHelper));
 
         Foundation.logger.debug("Add Recipes Provider");
         generator.addProvider(event.includeServer(), new FoundationRecipeProvider(output));

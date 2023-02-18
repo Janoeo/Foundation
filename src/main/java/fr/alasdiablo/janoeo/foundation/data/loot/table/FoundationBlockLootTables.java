@@ -35,9 +35,10 @@ public class FoundationBlockLootTables extends DioBlockLootSubProvider {
         this.registerOre(FoundationBlocks.STONE_ORES);
         this.registerOre(FoundationBlocks.DEEPSLATE_ORES);
 
-        this.registerTinyOre(FoundationBlocks.TINY_STONE_ORES);
-        this.registerTinyOre(FoundationBlocks.TINY_DEEPSLATE_ORES);
-        this.registerTinyOre(FoundationBlocks.NETHER_ORES);
+        this.registerTinyOre(FoundationBlocks.TINY_STONE_ORES, 1f);
+        this.registerTinyOre(FoundationBlocks.TINY_DEEPSLATE_ORES, 1f);
+        this.registerTinyOre(FoundationBlocks.NETHER_ORES, 1f);
+        this.registerTinyOre(FoundationBlocks.END_ORES, 2f);
 
         FoundationBlocks.GRAVEL_ORES.forEach((resource, block) -> {
             Item item = resource == Resource.RedStone ? Items.REDSTONE : FoundationItems.DUSTS.get(resource).get();
@@ -53,14 +54,14 @@ public class FoundationBlockLootTables extends DioBlockLootSubProvider {
         registryMap.forEach((resource, block) -> this.registerOreLootTable(FoundationItems.RAWS.get(resource).get(), ConstantValue.exactly(1.0F), block.get()));
     }
 
-    protected void registerTinyOre(@NotNull Map<Resource, RegistryObject<Block>> registryMap) {
+    protected void registerTinyOre(@NotNull Map<Resource, RegistryObject<Block>> registryMap, float factor) {
         registryMap.forEach((resource, block) -> {
             Item item = switch (resource) {
                 case Iron -> Items.IRON_NUGGET;
                 case Gold -> Items.GOLD_NUGGET;
                 default -> FoundationItems.NUGGETS.get(resource).get();
             };
-            this.registerOreLootTable(item, UniformGenerator.between(2.0F, 6.0F), block.get());
+            this.registerOreLootTable(item, UniformGenerator.between(2.0F, 6.0F * factor), block.get());
         });
     }
 
