@@ -51,6 +51,7 @@ ore, and now the part of the project is implemented as ***Janoeo Foundation***.
 ### Download | Mirror
 
 - [Curseforge](https://www.curseforge.com/minecraft/mc-mods/janoeo)
+- [Modrinth](https://modrinth.com/mod/janoeo)
 - [Planet Minecraft](https://www.planetminecraft.com/mod/janoeo-just-another-nether-overworld-end-ores/)
 - [NexusMods](https://www.nexusmods.com/minecraft/mods/121/)
 - [Github](https://github.com/Janoeo/Foundation/releases)
