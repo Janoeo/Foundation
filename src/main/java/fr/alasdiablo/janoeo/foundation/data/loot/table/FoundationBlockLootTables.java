@@ -32,6 +32,8 @@ public class FoundationBlockLootTables extends DioBlockLootTable {
         this.registerTinyOre(FoundationBlocks.TINY_STONE_ORES);
         this.registerTinyOre(FoundationBlocks.TINY_DEEPSLATE_ORES);
 
+        this.registerTinyOre(FoundationBlocks.NETHER_ORES);
+
         FoundationBlocks.GRAVEL_ORES.forEach((resource, block) -> {
             Item item = resource == Resource.RedStone ? Items.REDSTONE : FoundationItems.DUSTS.get(resource).get();
             this.registerOreLootTable(item, ConstantValue.exactly(1.0F), block.get());
