@@ -1,6 +1,6 @@
 # Janoeo Foundation Changelog
 
-### 8.12.0.90
+### 8.12.4.90 (Ingame version 8.12.0.90)
 
 #### Add
 + End ore
@@ -36,6 +36,11 @@
 #### General change
 + Update to Forge 41.1.0 and Minecraft 1.19
 + Update ore gen code base
+
+### 7.10.3.91
+
+#### Fix
++ Add missing nether ore loot tables
 
 ### 7.10.3.84
 
