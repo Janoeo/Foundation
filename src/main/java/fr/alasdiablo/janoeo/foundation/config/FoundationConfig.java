@@ -12,71 +12,78 @@ import java.util.Map;
 public class FoundationConfig {
 
     /* * * * * * * * * * * * * * * Ore * * *  * * * * * * * * * * */
-    public static final OreConfig BAUXITE_ORE_CONFIG = new OreConfig(Resource.Aluminium.getName(ResourceType.StoneOre), true).placementUniform(10, 8, 96, 6);
-    public static final OreConfig LEAD_ORE_CONFIG    = new OreConfig(Resource.Lead.getName(ResourceType.StoneOre), true).placementUniform(6, -16, 48, 6);
-    public static final OreConfig NICKEL_ORE_CONFIG  = new OreConfig(Resource.Nickel.getName(ResourceType.StoneOre), true).placementUniform(6, -24, 32, 4);
-    public static final OreConfig SILVER_ORE_CONFIG  = new OreConfig(Resource.Silver.getName(ResourceType.StoneOre), true).placementUniform(6, -56, 28, 6);
-    public static final OreConfig TIN_ORE_CONFIG     = new OreConfig(Resource.Tin.getName(ResourceType.StoneOre), true).placementUniform(10, 0, 96, 8);
-    public static final OreConfig URANIUM_ORE_CONFIG = new OreConfig(Resource.Uranium.getName(ResourceType.StoneOre), true).placementUniform(6, -56, 28, 6);
+    public static final OreConfig BAUXITE_ORE_CONFIG = new OreConfig(Resource.Aluminium.getName(ResourceType.StoneOre), true).placementUniform(
+            10, 8, 96, 6);
+    public static final OreConfig LEAD_ORE_CONFIG    = new OreConfig(Resource.Lead.getName(ResourceType.StoneOre), true).placementUniform(
+            6, -16, 48, 6);
+    public static final OreConfig NICKEL_ORE_CONFIG  = new OreConfig(Resource.Nickel.getName(ResourceType.StoneOre), true).placementUniform(
+            6, -24, 32, 4);
+    public static final OreConfig SILVER_ORE_CONFIG  = new OreConfig(Resource.Silver.getName(ResourceType.StoneOre), true).placementUniform(
+            6, -56, 28, 6);
+    public static final OreConfig TIN_ORE_CONFIG     = new OreConfig(Resource.Tin.getName(ResourceType.StoneOre), true).placementUniform(
+            10, 0, 96, 8);
+    public static final OreConfig URANIUM_ORE_CONFIG = new OreConfig(Resource.Uranium.getName(ResourceType.StoneOre), true).placementUniform(
+            6, -56, 28, 6);
 
     /* * * * * * * * * * * * * * * Tiny Ore * * *  * * * * * * * * * * */
     public static final OreConfig TINY_COAL_ORE_CONFIG     = new OreConfig(Resource.Coal.getName(ResourceType.TinyStoneOre), true).placementUniform(
-            17, -36, 180, 20);
+            17, -36, 180, 8);
     public static final OreConfig TINY_COPPER_ORE_CONFIG   = new OreConfig(Resource.Copper.getName(ResourceType.TinyStoneOre), true).placementUniform(
             10, -16, 112, 6);
     public static final OreConfig TINY_DIAMOND_ORE_CONFIG  = new OreConfig(Resource.Diamond.getName(ResourceType.TinyStoneOre), true).placementUniform(
-            8, -62, 16, 4);
+            8, -62, 16, 2);
     public static final OreConfig TINY_EMERALD_ORE_CONFIG  = new OreConfig(Resource.Emerald.getName(ResourceType.TinyStoneOre), true).placementUniform(
-            2, 24, 31, 4);
+            2, 24, 31, 2);
     public static final OreConfig TINY_GOLD_ORE_CONFIG     = new OreConfig(Resource.Gold.getName(ResourceType.TinyStoneOre), true).placementUniform(
-            9, -62, 32, 2);
+            9, -62, 32, 3);
     public static final OreConfig TINY_IRON_ORE_CONFIG     = new OreConfig(Resource.Iron.getName(ResourceType.TinyStoneOre), true).placementUniform(
-            9, -24, 180, 20);
+            9, -24, 180, 6);
     public static final OreConfig TINY_LAPIS_ORE_CONFIG    = new OreConfig(Resource.Lapis.getName(ResourceType.TinyStoneOre), true).placementTriangle(
-            7, 16, 16, 4);
+            7, -32, 32, 4);
     public static final OreConfig TINY_REDSTONE_ORE_CONFIG = new OreConfig(Resource.RedStone.getName(ResourceType.TinyStoneOre), true).placementUniform(
-            8, -62, 16, 8);
+            8, -62, 16, 5);
 
     public static final OreConfig TINY_BAUXITE_ORE_CONFIG = new OreConfig(Resource.Aluminium.getName(ResourceType.TinyStoneOre), true).placementUniform(
             10, 8, 96, 6);
     public static final OreConfig TINY_LEAD_ORE_CONFIG    = new OreConfig(Resource.Lead.getName(ResourceType.TinyStoneOre), true).placementUniform(
-            6, -16, 48, 6);
+            6, -16, 48, 5);
     public static final OreConfig TINY_NICKEL_ORE_CONFIG  = new OreConfig(Resource.Nickel.getName(ResourceType.TinyStoneOre), true).placementUniform(
-            6, -24, 32, 4);
+            6, -24, 32, 5);
     public static final OreConfig TINY_SILVER_ORE_CONFIG  = new OreConfig(Resource.Silver.getName(ResourceType.TinyStoneOre), true).placementUniform(
             6, -56, 28, 4);
-    public static final OreConfig TINY_TIN_ORE_CONFIG     = new OreConfig(Resource.Tin.getName(ResourceType.TinyStoneOre), true).placementUniform(10, 0, 96, 8);
+    public static final OreConfig TINY_TIN_ORE_CONFIG     = new OreConfig(Resource.Tin.getName(ResourceType.TinyStoneOre), true).placementUniform(
+            10, 0, 96, 6);
     public static final OreConfig TINY_URANIUM_ORE_CONFIG = new OreConfig(Resource.Uranium.getName(ResourceType.TinyStoneOre), true).placementUniform(
-            6, -56, 28, 6);
+            6, -56, 28, 4);
 
     /* * * * * * * * * * * * * * * Nether Ore * * *  * * * * * * * * * * */
     public static final OreConfig NETHER_COAL_ORE_CONFIG     = new OreConfig(Resource.Coal.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 6);
+            8, 4, 120, 6);
     public static final OreConfig NETHER_COPPER_ORE_CONFIG   = new OreConfig(Resource.Copper.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 6);
+            8, 4, 120, 5);
     public static final OreConfig NETHER_DIAMOND_ORE_CONFIG  = new OreConfig(Resource.Diamond.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 4);
+            4, 4, 120, 1);
     public static final OreConfig NETHER_EMERALD_ORE_CONFIG  = new OreConfig(Resource.Emerald.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 4);
+            4, 4, 120, 1);
     public static final OreConfig NETHER_IRON_ORE_CONFIG     = new OreConfig(Resource.Iron.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 6);
+            8, 4, 120, 5);
     public static final OreConfig NETHER_LAPIS_ORE_CONFIG    = new OreConfig(Resource.Lapis.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 4);
+            6, 4, 120, 3);
     public static final OreConfig NETHER_REDSTONE_ORE_CONFIG = new OreConfig(Resource.RedStone.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 4);
+            6, 4, 120, 3);
 
     public static final OreConfig NETHER_BAUXITE_ORE_CONFIG = new OreConfig(Resource.Aluminium.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 6);
+            6, 4, 120, 5);
     public static final OreConfig NETHER_LEAD_ORE_CONFIG    = new OreConfig(Resource.Lead.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 6);
+            6, 4, 120, 4);
     public static final OreConfig NETHER_NICKEL_ORE_CONFIG  = new OreConfig(Resource.Nickel.getName(ResourceType.NetherOre), true).placementUniform(
             6, 4, 120, 4);
     public static final OreConfig NETHER_SILVER_ORE_CONFIG  = new OreConfig(Resource.Silver.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 4);
+            6, 4, 120, 2);
     public static final OreConfig NETHER_TIN_ORE_CONFIG     = new OreConfig(Resource.Tin.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 6);
+            6, 4, 120, 5);
     public static final OreConfig NETHER_URANIUM_ORE_CONFIG = new OreConfig(Resource.Uranium.getName(ResourceType.NetherOre), true).placementUniform(
-            6, 4, 120, 4);
+            6, 4, 120, 2);
 
     /* * * * * * * * * * * * * * * Gravel Ore * * *  * * * * * * * * * * */
     public static final OreConfig GRAVEL_COAL_ORE_CONFIG     = new OreConfig(Resource.Coal.getName(ResourceType.GravelOre), true).placementUniform(

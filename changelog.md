@@ -1,5 +1,69 @@
 # Janoeo Foundation Changelog
 
+### 8.13.4.92
+
+#### Fix
+
++ Tiny Lapis Ore
+  + fix ore repartition from (bottom: 16, top: 16) to (bottom: -32, top: 32)
+
+#### Nerf and Buff
+
++ Tiny Coal Ore
+  + nerf ore count from 20 to 8
++ Tiny Diamond Ore
+  + nerf ore count from 4 to 2
++ Tiny Emerald Ore
+  + nerf ore count from 4 to 2
++ Tiny Gold Ore
+  + buff ore count from 2 to 3
++ Tiny Iron Ore
+  + nerf ore count from 20 to 6
++ Tiny Redstone Ore
+  + nerf ore count from 8 to 5
+
+
++ Tiny Lead Ore
+  + nerf ore count from 6 to 5
++ Tiny Nickel Ore
+  + buff ore count from 4 to 5
++ Tiny Tin Ore
+  + nerf ore count from 8 to 6
++ Tiny Uranium Ore
+  + nerf ore count from 6 to 4
+
+
++ Nether Coal Ore
+  + buff ore size from 6 to 8
++ Nether Copper Ore
+  + buff ore size from 6 to 8
+  + nerf ore count from 6 to 5
++ Nether Diamond Ore
+  + nerf ore size from 6 to 4
+  + nerf ore count from 4 to 1
++ Nether Emerald Ore
+  + nerf ore size from 6 to 4
+  + nerf ore count from 4 to 1
++ Nether Iron Ore
+  + buff ore size from 6 to 8
+  + nerf ore count from 6 to 5
++ Nether Lapis Ore
+  + nerf ore count from 4 to 3
++ Nether Redstone Ore
+  + nerf ore count from 4 to 3
+
+
++ Nether Bauxite Ore
+  + nerf ore count from 6 to 5
++ Nether Lead Ore
+  + buff ore count from 6 to 4
++ Nether Silver Ore
+  + buff ore count from 4 to 2
++ Nether Tin Ore
+  + buff ore count from 6 to 5
++ Nether Uranium Ore
+  + buff ore count from 4 to 2
+
 ### 8.12.4.90 (Ingame version 8.12.0.90)
 
 #### Add

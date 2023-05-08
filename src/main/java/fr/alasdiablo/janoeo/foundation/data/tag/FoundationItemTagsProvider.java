@@ -30,7 +30,7 @@ public class FoundationItemTagsProvider extends ItemTagsProvider {
             TagsProvider<Block> blockTagsProvider,
             @Nullable ExistingFileHelper existingFileHelper
     ) {
-        super(output, lookup, blockTagsProvider, Foundation.MOD_ID, existingFileHelper);
+        super(output, lookup, blockTagsProvider.contentsGetter(), Foundation.MOD_ID, existingFileHelper);
     }
 
     @Override

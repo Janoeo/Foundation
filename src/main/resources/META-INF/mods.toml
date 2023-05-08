@@ -1,36 +1,42 @@
 modLoader = "javafml"
-loaderVersion = "[43,)"
+loaderVersion = "[45,)"
 license = "LGPL-3.0 License"
 issueTrackerURL = "https://github.com/Janoeo/Foundation/issues"
 [[mods]]
-modId = "janoeo_foundation"
-version = "${file.jarVersion}"
-displayName = "Janoeo Foundation"
-displayURL = "https://www.curseforge.com/minecraft/mc-mods/janoeo"
-logoFile = "janoeo_foundation.png"
-itemIcon = "janoeo_foundation:iron_dust"
-authors = "AlasDiablo, Safyrus, SmartzyYY"
-description = '''
-This mod a lot of ore type and more!
-'''
+    modId = "janoeo_foundation"
+    version = "${file.jarVersion}"
+    displayName = "Janoeo Foundation"
+    displayURL = "https://www.curseforge.com/minecraft/mc-mods/janoeo"
+    itemIcon = "janoeo_foundation:iron_dust"
+    authors = "AlasDiablo, Safyrus, SmartzyYY"
+    description = '''
+    This mod a lot of ore type and more!
+    '''
 
 [[dependencies.janoeo_foundation]]
-modId = "forge"
-mandatory = true
-versionRange = "[43,)"
-ordering = "NONE"
-side = "BOTH"
+    modId = "forge"
+    mandatory = true
+    versionRange = "[45,)"
+    ordering = "NONE"
+    side = "BOTH"
 
 [[dependencies.janoeo_foundation]]
-modId = "minecraft"
-mandatory = true
-versionRange = "[1.19,1.20)"
-ordering = "NONE"
-side = "BOTH"
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.19.4,1.20)"
+    ordering = "NONE"
+    side = "BOTH"
 
 [[dependencies.janoeo_foundation]]
-modId = "diolib"
-mandatory = true
-versionRange = "[5.5.27,)"
-ordering = "NONE"
-side = "BOTH"
+    modId = "diolib"
+    mandatory = true
+    versionRange = "[5.7.31,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.janoeo_foundation]]
+    modId = "worldstripper"
+    mandatory = false
+    versionRange = "[3.3.0,)"
+    ordering = "NONE"
+    side = "BOTH"
