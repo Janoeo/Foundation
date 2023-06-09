@@ -1,5 +1,11 @@
 # Janoeo Foundation Changelog
 
+### 9.13.4.94
+
+#### Fix
++ Add missing creative tab title
+
+
 ### 9.13.4.93
 
 #### General change

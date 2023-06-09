@@ -27,7 +27,7 @@ public class FoundationCreativeTabs {
     public static RegistryObject<CreativeModeTab> ORES_GROUP = CREATIVE_TABS.register("ores", () -> {
         CreativeModeTab.Builder builder = CreativeModeTab.builder();
         GroundCreativeModeTab.createBaseBuilder(builder);
-        // builder.title(Component.translatable("item_group." + Foundation.MOD_ID + ".ores"));
+        builder.title(Component.translatable("item_group." + Foundation.MOD_ID + ".ores"));
         builder.icon(() -> new ItemStack(FoundationBlocks.STONE_ORES.get(Resource.Silver).get()));
         builder.displayItems(FoundationBlocks::displayItemsGenerator);
         return builder.build();
