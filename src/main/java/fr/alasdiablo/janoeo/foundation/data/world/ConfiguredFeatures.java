@@ -51,7 +51,8 @@ public class ConfiguredFeatures {
                 if (config.isEnable()) {
                     overworldOreTinyFeature.put(
                             resource,
-                            ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocations.of(Foundation.MOD_ID, resource.getName(ResourceType.TinyStoneOre)))
+                            ResourceKey.create(
+                                    Registries.CONFIGURED_FEATURE, ResourceLocations.of(Foundation.MOD_ID, resource.getName(ResourceType.TinyStoneOre)))
                     );
                 }
             }
@@ -95,11 +96,11 @@ public class ConfiguredFeatures {
     }
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> bootstrap) {
-        RuleTest STONE_ORE_REPLACEABLES = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest STONE_ORE_REPLACEABLES     = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest DEEPSLATE_ORE_REPLACEABLES = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
-        RuleTest NETHER_ORE_REPLACEABLES = new BlockMatchTest(Blocks.NETHERRACK);
-        RuleTest GRAVEL_ORE_REPLACEABLES = new BlockMatchTest(Blocks.GRAVEL);
-        RuleTest END_ORE_REPLACEABLES = new BlockMatchTest(Blocks.END_STONE);
+        RuleTest NETHER_ORE_REPLACEABLES    = new BlockMatchTest(Blocks.NETHERRACK);
+        RuleTest GRAVEL_ORE_REPLACEABLES    = new BlockMatchTest(Blocks.GRAVEL);
+        RuleTest END_ORE_REPLACEABLES       = new BlockMatchTest(Blocks.END_STONE);
 
         for (Resource resource: Resource.values()) {
             if (resource.has(ResourceType.StoneOre) && resource.has(ResourceType.DeepSlateOre)) {

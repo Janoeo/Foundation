@@ -1,7 +1,7 @@
 package fr.alasdiablo.janoeo.foundation.resource;
 
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -12,16 +12,16 @@ import static fr.alasdiablo.janoeo.foundation.resource.ResourceType.*;
 public enum Resource {
     Wooden("wooden", Gear),
     Coal("coal", UniformInts.COMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust),
-    Aluminium("bauxite", "aluminium", MaterialColor.METAL, UniformInts.COMMON, ALL_ORE_WITH_ITEM),
+    Aluminium("bauxite", "aluminium", MapColor.METAL, UniformInts.COMMON, ALL_ORE_WITH_ITEM),
     Copper("copper", UniformInts.COMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust, Gear, Rod),
-    Tin("tin", MaterialColor.METAL, UniformInts.COMMON, ALL),
+    Tin("tin", MapColor.METAL, UniformInts.COMMON, ALL),
     Iron("iron", UniformInts.COMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Dust, Gear, Rod),
-    Lead("lead", MaterialColor.COLOR_GRAY, UniformInts.COMMON, ALL_ORE_WITH_ITEM),
-    Nickel("nickel", MaterialColor.METAL, UniformInts.COMMON, ALL_ORE_WITH_ITEM),
-    Silver("silver", MaterialColor.SNOW, UniformInts.UNCOMMON, ALL),
+    Lead("lead", MapColor.COLOR_GRAY, UniformInts.COMMON, ALL_ORE_WITH_ITEM),
+    Nickel("nickel", MapColor.METAL, UniformInts.COMMON, ALL_ORE_WITH_ITEM),
+    Silver("silver", MapColor.SNOW, UniformInts.UNCOMMON, ALL),
     Lapis("lapis", UniformInts.UNCOMMON, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust),
     Gold("gold", UniformInts.UNCOMMON, TinyStoneOre, TinyDeepSlateOre, GravelOre, EndOre, Dust, Gear, Rod),
-    Uranium("uranium", MaterialColor.COLOR_YELLOW, UniformInts.UNCOMMON, ALL_ORE_WITH_ITEM),
+    Uranium("uranium", MapColor.COLOR_YELLOW, UniformInts.UNCOMMON, ALL_ORE_WITH_ITEM),
     Amethyst("amethyst", Dust),
     Diamond("diamond", UniformInts.RARE, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust, Gear, Rod),
     Emerald("emerald", UniformInts.RARE, TinyStoneOre, TinyDeepSlateOre, NetherOre, GravelOre, EndOre, Nugget, Dust),
@@ -29,19 +29,19 @@ public enum Resource {
 
     private final String             oreName;
     private final String             resourceName;
-    private final MaterialColor      materialColor;
+    private final MapColor           mapColor;
     private final UniformInt         xp;
     private final List<ResourceType> types;
 
-    Resource(String oreName, String resourceName, MaterialColor materialColor, UniformInt xp, ResourceType... types) {
-        this.resourceName  = resourceName;
-        this.oreName       = oreName;
-        this.materialColor = materialColor;
-        this.xp            = xp;
-        this.types         = List.of(types);
+    Resource(String oreName, String resourceName, MapColor mapColor, UniformInt xp, ResourceType... types) {
+        this.resourceName = resourceName;
+        this.oreName      = oreName;
+        this.mapColor     = mapColor;
+        this.xp           = xp;
+        this.types        = List.of(types);
     }
 
-    Resource(String name, MaterialColor materialColor, UniformInt xp, ResourceType... types) {
+    Resource(String name, MapColor materialColor, UniformInt xp, ResourceType... types) {
         this(name, name, materialColor, xp, types);
     }
 
@@ -63,8 +63,8 @@ public enum Resource {
         return type.format(name);
     }
 
-    public @Nullable MaterialColor getMaterialColor() {
-        return materialColor;
+    public @Nullable MapColor getMapColor() {
+        return mapColor;
     }
 
     public UniformInt getXp() {

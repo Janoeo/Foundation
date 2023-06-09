@@ -153,7 +153,7 @@ public class FoundationConfig {
     private static final JsonConfigBuilder OVERWORLD_ORE_TINY_CONFIG_BUILDER = new JsonConfigBuilder("janoeo", "foundation", "overworld", "tiny");
     private static final JsonConfigBuilder OVERWORLD_ORE_CONFIG_BUILDER      = new JsonConfigBuilder("janoeo", "foundation", "overworld");
     private static final JsonConfigBuilder NETHER_ORE_CONFIG_BUILDER         = new JsonConfigBuilder("janoeo", "foundation", "nether");
-    private static final JsonConfigBuilder END_ORE_CONFIG_BUILDER         = new JsonConfigBuilder("janoeo", "foundation", "end");
+    private static final JsonConfigBuilder END_ORE_CONFIG_BUILDER            = new JsonConfigBuilder("janoeo", "foundation", "end");
 
     /* * * * * * * * * * * * * * * Config Map * * *  * * * * * * * * * * */
     public static final Map<Resource, OreConfig> ALL_GRAVEL_ORE_CONFIG;

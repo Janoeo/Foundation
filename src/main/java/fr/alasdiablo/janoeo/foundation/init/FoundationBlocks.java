@@ -1,32 +1,25 @@
 package fr.alasdiablo.janoeo.foundation.init;
 
 import com.google.common.collect.ImmutableMap;
-import fr.alasdiablo.diolib.api.item.GroundCreativeModeTab;
-import fr.alasdiablo.diolib.api.util.ResourceLocations;
-import fr.alasdiablo.diolib.event.IEvent;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.block.*;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.RedStoneOreBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 import java.util.function.Supplier;
@@ -49,19 +42,26 @@ public class FoundationBlocks {
     private static final Item.Properties PROPERTIES_ITEM_BLOCK = new Item.Properties();
 
     /* * * * * * * * * * * * * * * Block Properties * * * * * * * * * * * * * */
-    private static final BlockBehaviour.Properties PROPERTIES_STONE_ORE     = BlockBehaviour.Properties.of(Material.STONE)
+    private static final BlockBehaviour.Properties PROPERTIES_STONE_ORE     = BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE)
+            .instrument(NoteBlockInstrument.BASEDRUM)
             .requiresCorrectToolForDrops()
             .strength(3.0F, 3.0F);
-    private static final BlockBehaviour.Properties PROPERTIES_DEEPSLATE_ORE = BlockBehaviour.Properties.of(Material.STONE)
+    private static final BlockBehaviour.Properties PROPERTIES_DEEPSLATE_ORE = BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASEDRUM)
             .requiresCorrectToolForDrops()
-            .color(MaterialColor.DEEPSLATE)
+            .mapColor(MapColor.DEEPSLATE)
             .strength(4.5F, 3.0F)
             .sound(SoundType.DEEPSLATE);
-    private static final BlockBehaviour.Properties PROPERTIES_NETHER_ORE    = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER)
+    private static final BlockBehaviour.Properties PROPERTIES_NETHER_ORE    = BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .mapColor(MapColor.NETHER)
             .requiresCorrectToolForDrops()
             .strength(3.0F, 3.0F)
             .sound(SoundType.NETHER_ORE);
-    private static final BlockBehaviour.Properties PROPERTIES_GRAVEL_ORE    = BlockBehaviour.Properties.of(Material.SAND, MaterialColor.STONE)
+    private static final BlockBehaviour.Properties PROPERTIES_GRAVEL_ORE    = BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.SNARE)
+            .mapColor(MapColor.STONE)
             .requiresCorrectToolForDrops()
             .strength(0.6F)
             .sound(SoundType.GRAVEL);
@@ -73,7 +73,7 @@ public class FoundationBlocks {
         var deepslateOres     = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var tinyDeepslateOres = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var netherOres        = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
-        var endOres        = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
+        var endOres           = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var gravelOres        = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var rawBlocks         = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
         var storageBlocks     = new ImmutableMap.Builder<Resource, RegistryObject<Block>>();
@@ -89,8 +89,8 @@ public class FoundationBlocks {
                 if (resource.has(type)) {
                     String name = resource.getName(type);
                     RegistryObject<Block> block = switch (type) {
-                        case RawMaterialBlock -> createRawBlock(name, resource.getMaterialColor());
-                        case StorageBlock -> createStorageBlock(name, resource.getMaterialColor());
+                        case RawMaterialBlock -> createRawBlock(name, resource.getMapColor());
+                        case StorageBlock -> createStorageBlock(name, resource.getMapColor());
                         case StoneOre, TinyStoneOre -> createOreBlock(PROPERTIES_STONE_ORE, name, resource.getXp());
                         case DeepSlateOre, TinyDeepSlateOre -> createOreBlock(PROPERTIES_DEEPSLATE_ORE, name, resource.getXp());
                         case NetherOre -> createNetherOreBlock(name, resource.getXp());
@@ -162,10 +162,12 @@ public class FoundationBlocks {
         return register(() -> new GravelRedStoneOre(PROPERTIES_GRAVEL_ORE), name);
     }
 
-    private static RegistryObject<Block> createStorageBlock(String name, MaterialColor color) {
+    private static RegistryObject<Block> createStorageBlock(String name, MapColor color) {
         return register(
                 () -> new Block(
-                        BlockBehaviour.Properties.of(Material.METAL, color)
+                        BlockBehaviour.Properties.of()
+                                .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                                .mapColor(color)
                                 .requiresCorrectToolForDrops()
                                 .strength(3.0F, 6.0F)
                                 .sound(SoundType.METAL)
@@ -174,10 +176,12 @@ public class FoundationBlocks {
         );
     }
 
-    private static RegistryObject<Block> createRawBlock(String name, MaterialColor color) {
+    private static RegistryObject<Block> createRawBlock(String name, MapColor color) {
         return register(
                 () -> new Block(
-                        BlockBehaviour.Properties.of(Material.STONE, color)
+                        BlockBehaviour.Properties.of()
+                                .instrument(NoteBlockInstrument.BASEDRUM)
+                                .mapColor(color)
                                 .requiresCorrectToolForDrops()
                                 .strength(5.0F, 6.0F)
                 ),
@@ -189,17 +193,15 @@ public class FoundationBlocks {
         BLOCKS.register(bus);
     }
 
-    public static void onCreativeModeTabEvent(@NotNull CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == Foundation.ORES_GROUP) {
-            FoundationBlocks.RAW_BLOCKS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
-            FoundationBlocks.STORAGE_BLOCKS.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
-            FoundationBlocks.STONE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
-            FoundationBlocks.TINY_STONE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
-            FoundationBlocks.GRAVEL_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
-            FoundationBlocks.DEEPSLATE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
-            FoundationBlocks.TINY_DEEPSLATE_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
-            FoundationBlocks.NETHER_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
-            FoundationBlocks.END_ORES.values().forEach(blockRegistryObject -> event.accept(blockRegistryObject.get()));
-        }
+    public static void displayItemsGenerator(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output output) {
+        FoundationBlocks.RAW_BLOCKS.values().forEach(blockRegistryObject -> output.accept(blockRegistryObject.get()));
+        FoundationBlocks.STORAGE_BLOCKS.values().forEach(blockRegistryObject -> output.accept(blockRegistryObject.get()));
+        FoundationBlocks.STONE_ORES.values().forEach(blockRegistryObject -> output.accept(blockRegistryObject.get()));
+        FoundationBlocks.TINY_STONE_ORES.values().forEach(blockRegistryObject -> output.accept(blockRegistryObject.get()));
+        FoundationBlocks.GRAVEL_ORES.values().forEach(blockRegistryObject -> output.accept(blockRegistryObject.get()));
+        FoundationBlocks.DEEPSLATE_ORES.values().forEach(blockRegistryObject -> output.accept(blockRegistryObject.get()));
+        FoundationBlocks.TINY_DEEPSLATE_ORES.values().forEach(blockRegistryObject -> output.accept(blockRegistryObject.get()));
+        FoundationBlocks.NETHER_ORES.values().forEach(blockRegistryObject -> output.accept(blockRegistryObject.get()));
+        FoundationBlocks.END_ORES.values().forEach(blockRegistryObject -> output.accept(blockRegistryObject.get()));
     }
 }

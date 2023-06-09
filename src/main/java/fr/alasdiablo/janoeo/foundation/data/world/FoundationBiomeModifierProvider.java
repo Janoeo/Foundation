@@ -8,9 +8,6 @@ import fr.alasdiablo.janoeo.foundation.resource.ResourceType;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BiomeTags;
-import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -22,8 +19,8 @@ public class FoundationBiomeModifierProvider implements DataProvider {
     private final PackOutput output;
 
     public FoundationBiomeModifierProvider(PackOutput output) {
-        this.modid = Foundation.MOD_ID;
-        this.output   = output;
+        this.modid  = Foundation.MOD_ID;
+        this.output = output;
     }
 
     @Override
@@ -41,11 +38,11 @@ public class FoundationBiomeModifierProvider implements DataProvider {
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
                     output.add(DataProvider.saveStable(cache, json,
-                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
-                                   .resolve(modid)
-                                   .resolve("forge")
-                                   .resolve("biome_modifier")
-                                   .resolve(name + ".json")
+                                                       this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                                               .resolve(modid)
+                                                               .resolve("forge")
+                                                               .resolve("biome_modifier")
+                                                               .resolve(name + ".json")
                     ));
                 }
             }
@@ -59,11 +56,11 @@ public class FoundationBiomeModifierProvider implements DataProvider {
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
                     output.add(DataProvider.saveStable(cache, json,
-                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
-                                   .resolve(modid)
-                                   .resolve("forge")
-                                   .resolve("biome_modifier")
-                                   .resolve(name + ".json")
+                                                       this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                                               .resolve(modid)
+                                                               .resolve("forge")
+                                                               .resolve("biome_modifier")
+                                                               .resolve(name + ".json")
                     ));
                 }
             }
@@ -77,11 +74,11 @@ public class FoundationBiomeModifierProvider implements DataProvider {
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
                     output.add(DataProvider.saveStable(cache, json,
-                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
-                                   .resolve(modid)
-                                   .resolve("forge")
-                                   .resolve("biome_modifier")
-                                   .resolve(name + ".json")
+                                                       this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                                               .resolve(modid)
+                                                               .resolve("forge")
+                                                               .resolve("biome_modifier")
+                                                               .resolve(name + ".json")
                     ));
                 }
             }
@@ -95,11 +92,11 @@ public class FoundationBiomeModifierProvider implements DataProvider {
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
                     output.add(DataProvider.saveStable(cache, json,
-                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
-                                   .resolve(modid)
-                                   .resolve("forge")
-                                   .resolve("biome_modifier")
-                                   .resolve(name + ".json")
+                                                       this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                                               .resolve(modid)
+                                                               .resolve("forge")
+                                                               .resolve("biome_modifier")
+                                                               .resolve(name + ".json")
                     ));
                 }
             }
@@ -114,11 +111,11 @@ public class FoundationBiomeModifierProvider implements DataProvider {
                     json.addProperty("step", "underground_ores");
                     json.addProperty("features", this.modid + ":" + name);
                     output.add(DataProvider.saveStable(cache, json,
-                           this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
-                                   .resolve(modid)
-                                   .resolve("forge")
-                                   .resolve("biome_modifier")
-                                   .resolve(name + ".json")
+                                                       this.output.getOutputFolder(PackOutput.Target.DATA_PACK)
+                                                               .resolve(modid)
+                                                               .resolve("forge")
+                                                               .resolve("biome_modifier")
+                                                               .resolve(name + ".json")
                     ));
                 }
             }

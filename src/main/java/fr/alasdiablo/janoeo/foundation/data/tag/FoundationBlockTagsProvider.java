@@ -3,7 +3,6 @@ package fr.alasdiablo.janoeo.foundation.data.tag;
 import fr.alasdiablo.janoeo.foundation.Foundation;
 import fr.alasdiablo.janoeo.foundation.resource.Resource;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
@@ -13,7 +12,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
-
 import java.util.concurrent.CompletableFuture;
 
 import static fr.alasdiablo.janoeo.foundation.init.FoundationBlocks.*;

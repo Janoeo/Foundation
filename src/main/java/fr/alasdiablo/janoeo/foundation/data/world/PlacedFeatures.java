@@ -96,18 +96,18 @@ public class PlacedFeatures {
     private static List<PlacementModifier> createPlacementModifier(@NotNull OreConfig config) {
         return switch (config.getPlacement()) {
             case "triangle" -> commonOrePlacement(
-                config.getCount(),
-                HeightRangePlacement.triangle(
-                        VerticalAnchor.absolute(config.getBottom()),
-                        VerticalAnchor.absolute(config.getTop())
-                )
+                    config.getCount(),
+                    HeightRangePlacement.triangle(
+                            VerticalAnchor.absolute(config.getBottom()),
+                            VerticalAnchor.absolute(config.getTop())
+                    )
             );
             case "uniform" -> commonOrePlacement(
-                config.getCount(),
-                HeightRangePlacement.uniform(
-                    VerticalAnchor.absolute(config.getBottom()),
-                    VerticalAnchor.absolute(config.getTop())
-                )
+                    config.getCount(),
+                    HeightRangePlacement.uniform(
+                            VerticalAnchor.absolute(config.getBottom()),
+                            VerticalAnchor.absolute(config.getTop())
+                    )
             );
             default -> throw new IllegalStateException("Undefined placement type");
         };
@@ -129,13 +129,14 @@ public class PlacedFeatures {
                 var config = FoundationConfig.OVERWORLD_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
                     var configuredFeature = ConfiguredFeatures.OVERWORLD_ORE_FEATURE.get(resource);
-                    var placedFeature = OVERWORLD_ORE_PLACED.get(resource);
+                    var placedFeature     = OVERWORLD_ORE_PLACED.get(resource);
 
-                    bootstrap.register(placedFeature,
-                       new PlacedFeature(
-                           configuredFeatures.getOrThrow(configuredFeature),
-                           createPlacementModifier(config)
-                       )
+                    bootstrap.register(
+                            placedFeature,
+                            new PlacedFeature(
+                                    configuredFeatures.getOrThrow(configuredFeature),
+                                    createPlacementModifier(config)
+                            )
                     );
                 }
             }
@@ -143,12 +144,13 @@ public class PlacedFeatures {
                 var config = FoundationConfig.OVERWORLD_ORE_TINY_CONFIG.get(resource);
                 if (config.isEnable()) {
                     var configuredFeature = ConfiguredFeatures.OVERWORLD_ORE_TINY_FEATURE.get(resource);
-                    var placedFeature = OVERWORLD_ORE_TINY_PLACED.get(resource);
-                    bootstrap.register(placedFeature,
-                       new PlacedFeature(
-                           configuredFeatures.getOrThrow(configuredFeature),
-                           createPlacementModifier(config)
-                       )
+                    var placedFeature     = OVERWORLD_ORE_TINY_PLACED.get(resource);
+                    bootstrap.register(
+                            placedFeature,
+                            new PlacedFeature(
+                                    configuredFeatures.getOrThrow(configuredFeature),
+                                    createPlacementModifier(config)
+                            )
                     );
                 }
             }
@@ -157,12 +159,13 @@ public class PlacedFeatures {
                 var config = FoundationConfig.ALL_GRAVEL_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
                     var configuredFeature = ConfiguredFeatures.ALL_GRAVEL_ORE_FEATURE.get(resource);
-                    var placedFeature = ALL_GRAVEL_ORE_PLACED.get(resource);
-                    bootstrap.register(placedFeature,
-                       new PlacedFeature(
-                           configuredFeatures.getOrThrow(configuredFeature),
-                           createPlacementModifier(config)
-                       )
+                    var placedFeature     = ALL_GRAVEL_ORE_PLACED.get(resource);
+                    bootstrap.register(
+                            placedFeature,
+                            new PlacedFeature(
+                                    configuredFeatures.getOrThrow(configuredFeature),
+                                    createPlacementModifier(config)
+                            )
                     );
                 }
             }
@@ -171,12 +174,13 @@ public class PlacedFeatures {
                 var config = FoundationConfig.NETHER_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
                     var configuredFeature = ConfiguredFeatures.NETHER_ORE_FEATURE.get(resource);
-                    var placedFeature = NETHER_ORE_PLACED.get(resource);
-                    bootstrap.register(placedFeature,
-                       new PlacedFeature(
-                           configuredFeatures.getOrThrow(configuredFeature),
-                           createPlacementModifier(config)
-                       )
+                    var placedFeature     = NETHER_ORE_PLACED.get(resource);
+                    bootstrap.register(
+                            placedFeature,
+                            new PlacedFeature(
+                                    configuredFeatures.getOrThrow(configuredFeature),
+                                    createPlacementModifier(config)
+                            )
                     );
                 }
             }
@@ -185,12 +189,13 @@ public class PlacedFeatures {
                 var config = FoundationConfig.END_ORE_CONFIG.get(resource);
                 if (config.isEnable()) {
                     var configuredFeature = ConfiguredFeatures.END_ORE_FEATURE.get(resource);
-                    var placedFeature = END_ORE_PLACED.get(resource);
-                    bootstrap.register(placedFeature,
-                                       new PlacedFeature(
-                                               configuredFeatures.getOrThrow(configuredFeature),
-                                               createPlacementModifier(config)
-                                       )
+                    var placedFeature     = END_ORE_PLACED.get(resource);
+                    bootstrap.register(
+                            placedFeature,
+                            new PlacedFeature(
+                                    configuredFeatures.getOrThrow(configuredFeature),
+                                    createPlacementModifier(config)
+                            )
                     );
                 }
             }

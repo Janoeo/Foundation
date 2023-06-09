@@ -1,5 +1,10 @@
 # Janoeo Foundation Changelog
 
+### 9.13.4.93
+
+#### General change
++ Update to Forge 46.0.2 and Minecraft 1.20
+
 ### 8.13.4.92
 
 #### Fix
