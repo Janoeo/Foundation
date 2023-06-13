@@ -1,14 +1,21 @@
 # Janoeo Foundation Changelog
 
+### 9.13.4.95
+
+#### Fix
+
++ Regenerate data-pack content to remove bad size value
+
 ### 9.13.4.94
 
 #### Fix
-+ Add missing creative tab title
 
++ Add missing creative tab title
 
 ### 9.13.4.93
 
 #### General change
+
 + Update to Forge 46.0.2 and Minecraft 1.20
 
 ### 8.13.4.92
