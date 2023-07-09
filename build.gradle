@@ -50,7 +50,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 def deobfSourceClassifier
 
 minecraft {
-    mappings channel: 'parchment', version: '1.19.3-2023.03.12-1.20'
+    mappings channel: 'parchment', version: '1.19.3-2023.06.25-1.20.1'
     deobfSourceClassifier = getMappings().get()
     runs {
         client {
@@ -119,9 +119,9 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.20-46.0.2'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.1.0'
     implementation fileTree(dir:'lib', include:'*.jar')
-    // implementation fg.deobf('curse.maven:world-stripper-250603:4504167')    // World Stripper (3.3.0)
+    implementation fg.deobf('curse.maven:world-stripper-250603:4578579')    // World Stripper (3.3.0)
     // implementation fg.deobf('curse.maven:catalogue-459701:3822882') // Catalogue (1.6.1)
     // implementation fg.deobf('curse.maven:jei-238222:3969039')       // JEI (11.3.0.262)
     // implementation fg.deobf('curse.maven:jer-240630:3951643')       // JER (1.1.0.179)

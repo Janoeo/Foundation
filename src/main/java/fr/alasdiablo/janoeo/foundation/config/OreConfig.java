@@ -45,6 +45,7 @@ public class OreConfig extends JsonConfig {
 
     @Override
     protected void read(final @NotNull JsonObject json) {
+        /* Currently disabled; TODO add a new system
         JsonElement type      = json.get("type");
         JsonElement enable    = json.get("enable");
         JsonObject  placement = json.get("placement").getAsJsonObject();
@@ -59,11 +60,14 @@ public class OreConfig extends JsonConfig {
             }
             default -> throw new IllegalArgumentException("Unknown placement type");
         }
+        */
     }
 
     @Override
     protected JsonObject write() {
         final JsonObject json = new JsonObject();
+        json.addProperty("__comment", "Currently disabled because now minecraft use json file in data folder");
+        /* Currently disabled; TODO add a new system
         json.addProperty("__comment", "Type: ['triangle', 'uniform']");
         json.addProperty("type", this.placement);
         json.addProperty("enable", this.enable);
@@ -77,6 +81,7 @@ public class OreConfig extends JsonConfig {
             }
         }
         json.add("placement", placement);
+        */
         return json;
     }
 
